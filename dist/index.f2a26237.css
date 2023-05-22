@@ -1,0 +1,19 @@
+*, :after, :before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom right, #81e981, #2b662b);
+  background-repeat: no-repeat;
+  padding: 1.6rem;
+}
+
+/*# sourceMappingURL=index.f2a26237.css.map */
