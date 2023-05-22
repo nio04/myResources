@@ -1,0 +1,17 @@
+@use "../abstract/var";
+
+.center-me-full {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-me-vertical {
+  display: flex;
+  align-items: center;
+}
+
+.center-me-horizontal {
+  display: flex;
+  justify-items: center;
+}

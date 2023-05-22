@@ -1,0 +1,36 @@
+@use "../abstract/var";
+/*
+0      -400px   -> mobile extra small
+400    -600px   -> mobile
+600    -900px   -> tab-port
+900    -1200px  -> tab-land
+1200   -1800px  -> laptop normal [develop stage]
+1800px+         -> big desktop
+*/
+@mixin mediaQuery($bp) {
+  @if $bp == big-desk {
+    @media only screen and (min-width: var.$bp-largest) {
+      @content;
+    }
+  }
+  @if $bp == tab-land {
+    @media only screen and (max-width: var.$bp-large) {
+      @content;
+    }
+  }
+  @if $bp == tab-port {
+    @media only screen and (max-width: var.$bp-medium) {
+      @content;
+    }
+  }
+  @if $bp == mobile {
+    @media only screen and (max-width: var.$bp-small) {
+      @content;
+    }
+  }
+  @if $bp == mob-small {
+    @media only screen and (max-width: var.$bp-small-extra) {
+      @content;
+    }
+  }
+}

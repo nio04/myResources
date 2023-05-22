@@ -1,3 +1,19 @@
+.center-me-full, .container .main-header {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.center-me-vertical, .resource-header {
+  align-items: center;
+  display: flex;
+}
+
+.center-me-horizontal {
+  justify-items: center;
+  display: flex;
+}
+
 *, :after, :before {
   box-sizing: inherit;
   margin: 0;
@@ -9,11 +25,211 @@ html {
   font-size: 62.5%;
 }
 
+@media only screen and (width >= 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media only screen and (width <= 75em) {
+  html {
+    font-size: 56%;
+  }
+}
+
+@media only screen and (width <= 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (width <= 37.5em) {
+  html {
+    font-size: 43%;
+  }
+}
+
+@media only screen and (width <= 25em) {
+  html {
+    font-size: 37%;
+  }
+}
+
 body {
-  min-height: 100vh;
   background-image: linear-gradient(to bottom right, #81e981, #2b662b);
   background-repeat: no-repeat;
+  background-size: cover;
   padding: 1.6rem;
+}
+
+header {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: .4rem;
+  background-color: green;
+}
+
+.resource-header {
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 53%, 0% 0%);
+  padding: 1.9rem 0 1.9rem 1.9rem;
+  font-size: 2.5rem;
+}
+
+.resource-header a:link, .resource-header a:visited {
+  width: 100%;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+}
+
+ul {
+  padding: 2rem 0;
+}
+
+ul li {
+  transition: all .5s;
+  box-shadow: 1px 4px 16px 7px #000;
+}
+
+ul li a:link, ul li a:visited {
+  height: 100%;
+  width: 100%;
+  text-transform: capitalize;
+  color: #000;
+  cursor: pointer;
+  text-shadow: 0 4px 9px #fff;
+  padding: .4em .2rem;
+  font-size: 2rem;
+  line-height: 2.9rem;
+  text-decoration: none;
+  transition: all .5s;
+  display: block;
+}
+
+ul li a:link:hover, ul li a:visited:hover {
+  height: 100%;
+  width: 100%;
+}
+
+ul li:hover {
+  background-color: #81e981;
+}
+
+.extra-nav {
+  grid-area: 2 / 1 / 3 / -1;
+  display: none;
+}
+
+.extra-nav ul li {
+  list-style-type: none;
+}
+
+.extra-nav ul li:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
+.extra-nav ul li .extra-nav-link:link, .extra-nav ul li .extra-nav-link:visited {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3.6rem;
+  text-decoration: none;
+}
+
+@media only screen and (width <= 37.5em) {
+  .extra-nav ul li .extra-nav-link:link, .extra-nav ul li .extra-nav-link:visited {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (width <= 25em) {
+  .extra-nav ul li .extra-nav-link:link, .extra-nav ul li .extra-nav-link:visited {
+    font-size: 2.5rem;
+  }
+}
+
+.container {
+  grid-template-rows: 15rem 1fr;
+  gap: 6rem;
+  display: grid;
+}
+
+@media only screen and (width <= 56.25em) {
+  .container {
+    grid-template-rows: 9rem min-content 1fr;
+  }
+
+  .container .extra-nav {
+    display: block;
+  }
+}
+
+.container .main-header {
+  text-shadow: -7px 7px 10px #cecece54;
+  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+  letter-spacing: .3em;
+  word-spacing: .2rem;
+  border: .4rem solid #ffffffc0;
+  grid-column: 1 / -1;
+  font-size: 6rem;
+  transform: skew(-30deg);
+  box-shadow: -2px -9px 201px 27px #000000f5;
+}
+
+@media only screen and (width <= 75em) {
+  .container .main-header {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (width <= 37.5em) {
+  .container .main-header {
+    font-size: 2rem;
+  }
+}
+
+.container .resource-container {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  display: grid;
+}
+
+@media only screen and (width <= 56.25em) {
+  .container .resource-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5rem;
+  }
+}
+
+.container .resource-container .resource ul {
+  grid-template-rows: repeat(auto-fit, minmax(10rem, min-content));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, max-content));
+  grid-auto-rows: minmax(100%, min-content);
+  gap: 1.3rem;
+  display: grid;
+}
+
+@media only screen and (width <= 75em) {
+  .container .resource-container .resource ul {
+    grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
+  }
+}
+
+@media only screen and (width <= 56.25em) {
+  .container .resource-container .resource ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (width <= 37.5em) {
+  .container .resource-container .resource ul {
+    grid-row-gap: 3rem;
+    grid-template-columns: 1fr;
+  }
+}
+
+.container .resource-container .resource ul li {
+  padding: .9rem;
+  list-style-type: none;
 }
 
 /*# sourceMappingURL=index.f2a26237.css.map */
