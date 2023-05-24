@@ -1,32 +1,40 @@
-@use "../abstract/extend";
-@use "../abstract/bp";
+@use "../abstract/" as abs;
 
-.extra-nav {
+.main-home-extra-nav {
   display: none;
   grid-row: 2 /3;
   grid-column: 1 / -1;
   ul {
     li {
       list-style-type: none;
+      padding: 1.5rem 0;
+      @extend .center-me-horizontal;
 
       &:not(:last-of-type) {
-        margin-bottom: 2rem;
+        margin-bottom: 2.9rem;
       }
 
       .extra-nav-link:link,
       .extra-nav-link:visited {
-        text-decoration: none;
+        display: block;
+        width: 100%;
         text-align: center;
+        text-decoration: none;
         text-transform: uppercase;
         font-size: 3.6rem;
+        color: abs.$color-white;
 
-        @include bp.mediaQuery(mobile) {
+        @include abs.mediaQuery(mobile) {
           font-size: 3rem;
         }
-        @include bp.mediaQuery(mob-small) {
+        @include abs.mediaQuery(mob-small) {
           font-size: 2.5rem;
         }
       }
     }
+  }
+
+  @include abs.mediaQuery(mobile) {
+    display: block;
   }
 }
