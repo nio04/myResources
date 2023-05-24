@@ -1,10 +1,10 @@
-@use "../abstract/var";
+@use "../abstract/" as abs;
 ul {
   padding: 2rem 0;
   li {
     transition: all 0.5s;
-    -webkit-box-shadow: 1px 4px 16px 7px #000000;
-    box-shadow: 1px 4px 16px 7px #000000;
+    box-shadow: -2px 2px 15px 0px #000;
+    border-radius: 12px 18px 18px 12px;
 
     .item-link:link,
     .item-link:visited {
@@ -14,21 +14,24 @@ ul {
       transition: all 0.5s;
       text-decoration: none;
       text-transform: capitalize;
-      color: var.$color-black;
+      color: abs.$color-black;
       font-size: 2rem;
       cursor: pointer;
       padding: 0.4em 0.2rem;
       line-height: 2.9rem;
-      text-shadow: 0px 4px 9px var.$color-white;
-
+      outline: 2px solid #00000061;
+      outline-offset: 11px;
+      text-decoration: underline dashed #3e2bc6;
       &:hover {
+        border-radius: 12px 18px 18px 12px;
         height: 100%;
         width: 100%;
       }
     }
 
     &:hover {
-      background-color: var.$color-primary-light;
+      box-shadow: 0px 0px 0px 0px #000;
+      transform: scaleY(1.2);
     }
   }
 }

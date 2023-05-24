@@ -242,36 +242,12 @@ ul li:hover {
   }
 }
 
-.main-home-container {
-  grid-template-rows: 15rem 1fr;
-  gap: 6rem;
+.page-content-container {
+  grid-template-rows: minmax(100vh, 1fr);
   display: grid;
 }
 
-@media only screen and (width <= 56.25em) {
-  .main-home-container {
-    grid-template-rows: 9rem min-content 1fr;
-  }
-
-  .main-home-container .extra-nav {
-    display: block;
-  }
-}
-
-.main-home-container .main-home-resource-container {
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  display: grid;
-}
-
-@media only screen and (width <= 56.25em) {
-  .main-home-container .main-home-resource-container {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 5rem;
-  }
-}
-
-.main-home-container .main-home-resource-container .main-home-resource ul {
+.page-content-container nav ul {
   grid-template-rows: repeat(auto-fit, minmax(10rem, min-content));
   grid-template-columns: repeat(auto-fit, minmax(25rem, max-content));
   grid-auto-rows: minmax(100%, min-content);
@@ -280,27 +256,27 @@ ul li:hover {
 }
 
 @media only screen and (width <= 75em) {
-  .main-home-container .main-home-resource-container .main-home-resource ul {
+  .page-content-container nav ul {
     grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
   }
 }
 
 @media only screen and (width <= 56.25em) {
-  .main-home-container .main-home-resource-container .main-home-resource ul {
+  .page-content-container nav ul {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media only screen and (width <= 37.5em) {
-  .main-home-container .main-home-resource-container .main-home-resource ul {
+  .page-content-container nav ul {
     grid-row-gap: 3rem;
     grid-template-columns: 1fr;
   }
 }
 
-.main-home-container .main-home-resource-container .main-home-resource ul li {
+.page-content-container nav ul li {
   padding: .9rem;
   list-style-type: none;
 }
 
-/*# sourceMappingURL=index.f2a26237.css.map */
+/*# sourceMappingURL=grid.51845d11.css.map */

@@ -53,15 +53,14 @@
 }
 
 .main-header {
-  color: #fff;
+  color: #000;
   text-transform: uppercase;
   letter-spacing: .4rem;
   text-shadow: -7px 7px 10px #cecece54;
   clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
   letter-spacing: .3em;
   word-spacing: .2rem;
-  background-color: green;
-  border: .4rem solid #ffffffc0;
+  border: 3rem solid #000;
   grid-column: 1 / -1;
   font-size: 6rem;
   transform: skew(-30deg);
@@ -81,9 +80,9 @@
 }
 
 .main-home-resource-header {
-  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 53%, 0% 0%);
-  background-color: #81e981;
-  padding: 1.9rem 0 1.9rem 1.9rem;
+  clip-path: polygon(2% 0, 100% 0, 98% 100%, 0% 100%);
+  background-color: #bbb7b7c0;
+  padding: 1.9rem 0 1.9rem 2.9rem;
 }
 
 .main-home-resource-header a:link, .main-home-resource-header a:visited {
@@ -92,8 +91,8 @@
   text-transform: uppercase;
   letter-spacing: .2rem;
   cursor: pointer;
-  color: #fff;
-  font-size: 2.5rem;
+  color: #000;
+  font-size: 3.5rem;
   text-decoration: none;
 }
 
@@ -123,8 +122,9 @@ ul {
 }
 
 ul li {
+  border-radius: 12px 18px 18px 12px;
   transition: all .5s;
-  box-shadow: 1px 4px 16px 7px #000;
+  box-shadow: -2px 2px 15px #000;
 }
 
 ul li .item-link:link, ul li .item-link:visited {
@@ -133,11 +133,13 @@ ul li .item-link:link, ul li .item-link:visited {
   text-transform: capitalize;
   color: #000;
   cursor: pointer;
-  text-shadow: 0 4px 9px #fff;
+  outline-offset: 11px;
+  outline: 2px solid #00000061;
   padding: .4em .2rem;
   font-size: 2rem;
   line-height: 2.9rem;
-  text-decoration: none;
+  -webkit-text-decoration: underline dashed #3e2bc6;
+  text-decoration: underline dashed #3e2bc6;
   transition: all .5s;
   display: block;
 }
@@ -145,10 +147,12 @@ ul li .item-link:link, ul li .item-link:visited {
 ul li .item-link:link:hover, ul li .item-link:visited:hover {
   height: 100%;
   width: 100%;
+  border-radius: 12px 18px 18px 12px;
 }
 
 ul li:hover {
-  background-color: #81e981;
+  transform: scaleY(1.2);
+  box-shadow: 0 0 #000;
 }
 
 .main-home-extra-nav {
@@ -235,9 +239,6 @@ html {
 }
 
 body {
-  background-image: linear-gradient(to bottom right, #81e981, #2b662b);
-  background-repeat: no-repeat;
-  background-size: cover;
   padding: 1.6rem;
 }
 
