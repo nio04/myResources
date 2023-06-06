@@ -17,8 +17,35 @@
 	 M192,426.667V320h106.667v106.667H192z M426.667,426.667H320V320h106.667V426.667z M426.667,298.667H320V192h106.667V298.667z"/>
     </symbol>
 
-    <symbol id="####"  viewBox="#########">
+    <symbol id="dot"  viewBox="0 0 29.107 29.107">
     <!-- second svg icon -->
+		<path d="M14.554,0C6.561,0,0,6.562,0,14.552c0,7.996,6.561,14.555,14.554,14.555c7.996,0,14.553-6.559,14.553-14.555
+				C29.106,6.562,22.55,0,14.554,0z"/>
+    </symbol>
+
+
+    <symbol id="home"  viewBox="0 0 682.66669 682.66669">
+    <!-- second svg icon -->
+     <g
+     id="g1095"
+     transform="matrix(1.3333333,0,0,-1.3333333,0,682.66667)"><g
+       id="g1097"><g
+         id="g1099"
+         clip-path="url(#clipPath1103)"><g
+           id="g1105"
+           transform="translate(20,332.0356)"><path
+             d="M 0,0 213.004,152.733 C 219.508,157.312 227.44,160 236,160 c 8.56,0 16.492,-2.688 22.996,-7.267 L 472,0"
+             style="fill:none;stroke:#000000;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1107" /></g><g
+           id="g1109"
+           transform="translate(278.9956,384.77)"><path
+             d="M 0,0 C -6.504,4.578 -14.436,7.266 -22.996,7.266 -31.555,7.266 -39.487,4.578 -45.991,0 l -156.027,-112.631 c -10.644,-7.492 -16.978,-19.694 -16.978,-32.71 v -179.393 c 0,-22.092 17.909,-40 40,-40 h 116 v 80 c 0,22.091 17.909,40 40,40 22.092,0 40,-17.909 40,-40 v -80 h 116 c 22.092,0 40,17.908 40,40 v 179.393 c 0,13.016 -6.333,25.218 -16.977,32.71 z"
+             style="fill:none;stroke:#000000;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1111" />
+    </symbol>
+    <symbol id="to-top"  viewBox="0 0 128 128">
+    <!-- second svg icon -->
+    <path d="m35.4 72 28.6-28.6 28.6 28.6-7.1 7.1-21.5-21.6-21.5 21.6zm28.6-58c27.6 0 50 22.4 50 50s-22.4 50-50 50-50-22.4-50-50 22.4-50 50-50zm0 10c-22.1 0-40 17.9-40 40s17.9 40 40 40 40-17.9 40-40-17.9-40-40-40z"/>
     </symbol>
   </defs>
 </svg>

@@ -50,6 +50,9 @@
         li {
           list-style-type: none;
           padding: 0.9rem;
+          a {
+            @extend .center-me-vertical;
+          }
         }
       }
     }

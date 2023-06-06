@@ -3,7 +3,6 @@
 .main-header {
   color: abs.$color-black;
   text-transform: uppercase;
-  // background-color: abs.$color-primary;
   letter-spacing: 0.4rem;
   grid-column: 1 / -1;
 
@@ -62,9 +61,11 @@
 .resource-home-header {
   grid-column: 1 / -1;
 
+  background-color: abs.$color-gray-light;
   font-size: 3rem;
   padding: 1.6rem 2.3rem;
-  border: 0.4rem solid abs.$color-white;
+  // border: 0.4rem solid abs.$color-white;
+  border-radius: 10px 10px 0px 0px;
   text-transform: uppercase;
   letter-spacing: 0.6rem;
   @extend .center-me-full;

@@ -1,0 +1,240 @@
+@use "../abstract/" as abs;
+@use "../base/reset";
+@use "../component/" as compo;
+
+.content-page-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100vh minmax(100vh, 1fr) 40rem;
+
+  position: relative;
+
+  .content-page-content-indexes {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 22rem 10rem 1fr;
+    header {
+      grid-column: 1 / -1;
+      font-size: 8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
+      word-spacing: 0.4rem;
+      font-style: italic;
+      padding-left: 8rem;
+      @extend .center-me-vertical;
+    }
+    svg {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      justify-self: center;
+      height: 10rem;
+      width: 10rem;
+    }
+    .section {
+      font-size: 5rem;
+      text-transform: uppercase;
+      align-self: center;
+      justify-self: center;
+      letter-spacing: 0.4rem;
+      font-style: italic;
+    }
+    .indexes {
+      display: flex;
+      flex-direction: column;
+      gap: 4.5rem;
+      a {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 3rem;
+        color: black;
+        padding-left: 10rem;
+        transition: all 1.4s;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        &::after {
+          content: "";
+          display: inline-block;
+          background-color: black;
+          margin-left: 1rem;
+          height: 3rem;
+          width: 3rem;
+          -webkit-mask-image: url("../../img/svg/pointRight.svg");
+          -webkit-mask-size: cover;
+          transition: all 0.6s;
+        }
+
+        &:hover::after {
+          background-color: gray;
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
+
+  .content-page-main {
+    .content-page-section {
+      font-size: 3rem;
+      margin-bottom: 15rem;
+      header {
+        text-transform: uppercase;
+        padding: 2.5rem 0;
+        margin-bottom: 6rem;
+        background-color: #0000001f;
+        @extend .center-me-full;
+        .content-page-section-header {
+          // color: abs.$content-page-header-txt;
+          letter-spacing: 0.6rem;
+          color: black;
+          position: relative;
+          z-index: 10;
+
+          &::before {
+            content: "";
+            background-color: #fff;
+            position: absolute;
+            top: -4rem;
+            left: -2rem;
+            bottom: -5rem;
+            height: 90%;
+            width: 120%;
+            padding: 5rem;
+            z-index: -1;
+          }
+        }
+      }
+      .content-page-header {
+        .content-header {
+          display: inline-block;
+          clip-path: polygon(5.14% 0px, 100% 0%, 96.46% 96.32%, 1.88% 100%);
+          background-color: #a2a2a299;
+          color: black;
+          padding: 1rem 5rem;
+          letter-spacing: 3px;
+          margin: 2rem 0;
+        }
+        border: 1px solid black;
+        margin-top: 1.5rem;
+        text-transform: lowercase;
+        padding: 1.5rem;
+        margin-left: 2rem;
+        // background-color: abs.$color-gray-light;
+      }
+      p ~ p {
+        border-top: 3px solid red;
+      }
+      .content {
+        // background-color: abs.$content-page-paragraph;
+        margin-left: 2rem;
+        margin-bottom: 4rem;
+        padding-left: 1rem;
+        padding-right: 5rem;
+        text-align: justify;
+        line-height: 5.5rem;
+        font-family: "IBM Plex Mono", monospace;
+
+        .code-template-left {
+          font-family: "Share Tech Mono", monospace;
+          font-size: 2.5rem;
+          background-color: #bebebe;
+          color: white;
+          padding: 0.8rem 1rem;
+        }
+        .code-template-right {
+          font-family: "Share Tech Mono", monospace;
+          font-size: 2.5rem;
+          background-color: #bebebe;
+          color: white;
+          padding: 0.8rem 1rem;
+        }
+        .code-explain {
+          &-header {
+            background-color: #d6d5d5e3;
+            color: black;
+            padding: 0 1.9rem;
+            text-transform: lowercase;
+            clip-path: polygon(3% 0, 100% 0%, 96% 100%, 0% 100%);
+          }
+          &--code {
+            text-transform: lowercase;
+            background-color: #a6a6a6;
+            color: black;
+            padding: 0 0.5rem;
+          }
+          &-list-wrap {
+            display: block;
+            svg {
+              height: 1rem;
+              width: 1rem;
+              fill: black;
+            }
+            &-list {
+              padding-left: 2rem;
+            }
+          }
+          .last-list-separate {
+            display: block;
+            height: 3.5rem;
+          }
+
+          // background-color: abs.$color-black;
+          // color: abs.$color-white;
+          padding: 0rem 5rem 1rem 5rem;
+          margin-left: 5rem;
+          margin-top: 6rem;
+          text-transform: capitalize;
+          line-height: 6rem;
+          display: block;
+          width: 100%;
+          position: relative;
+          &::after {
+            content: "code-explain";
+            text-transform: uppercase;
+            font-family: monospace;
+            margin: 0;
+            font-size: 1.9rem;
+            padding: 0 2rem;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: abs.$color-gray-light;
+            color: abs.$color-black;
+          }
+          &-sub-section {
+            display: block;
+            margin-top: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+  nav {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(25rem, max-content));
+      grid-template-rows: repeat(auto-fit, minmax(10rem, min-content));
+      grid-auto-rows: minmax(100%, min-content);
+      gap: 1.3rem;
+
+      @include abs.mediaQuery(tab-land) {
+        grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
+      }
+
+      @include abs.mediaQuery(tab-port) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include abs.mediaQuery(mobile) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 3rem;
+      }
+
+      li {
+        list-style-type: none;
+        padding: 0.9rem;
+      }
+    }
+  }
+}

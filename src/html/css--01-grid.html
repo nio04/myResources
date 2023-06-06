@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../sass/layout/contentPage.scss" />
+    <title>css : GRID</title>
+  </head>
+
+  <body>
+    <div class="content-page-container">
+      <div class="content-page-content-indexes">
+        <header>everything about grid</header>
+        <svg>
+          <use xlink:href="../img/sprite.svg#grid"></use>
+        </svg>
+        <div class="section">section</div>
+        <div class="indexes">
+          <a href="#content-index-unit">unit</a>
+          <a href="#content-index-keywords">keywords</a>
+          <a href="#content-index-parentContainer">parent container</a>
+          <a href="#content-index-childrenItems">children container</a>
+          <a href="#content-index-miscs">miscs</a>
+        </div>
+      </div>
+
+      <!-- main home button -->
+      <div class="content-page-home-button">
+        <a href="index.html">
+          <svg>
+            <use xlink:href="../img/sprite.svg#home"></use>
+          </svg>
+          <span>main home</span>
+        </a>
+      </div>
+
+      <!-- main post -->
+      <main class="content-page-main">
+        <section class="content-page-section" id="content-index-unit">
+          <header><span class="content-page-section-header">unit : </span></header>
+          <div class="content-page-header"><span class="content-header">fr :</span>
+            <p class="content">portion of the remaining space</p>
+          </div>
+        </section>
+        <!-- adding hover [go to top] button -->
+        <div class="content-page-go-to-top-button">
+          <a href="#">
+            <svg>
+              <use xlink:href="../img/sprite.svg#to-top"></use>
+            </svg>
+            <span>go to top</span>
+          </a>
+        </div>
+        <section class="content-page-section" id="content-index-keywords">
+          <header><span class="content-page-section-header">keywords:</span></header>
+          <div class="content-page-header"> <span class="content-header">repeat() : </span>
+            <p class="content">
+              <span class="code-template-left">grid-template-row</span> :
+              <span class="code-template-right">repeat(3, 1fr)</span>
+              <span class="code-explain">
+                repeat <span class="code-explain--code">1fr</span> in row side for 3 times </span>
+            </p>
+          </div>
+          <div class="content-page-header"><span class="content-header">min-content :</span>
+            <p class="content">
+              <span class="code-template-left">grid-template-row</span> :
+              <span class="code-template-right">repeat(3, min-content)</span>
+              <span class="code-explain">
+                <span class="code-explain-list-wrap">
+                  <svg>
+                    <use xlink:href="../img/sprite.svg#dot"></use>
+                  </svg><span class="code-explain-list-wrap-list">row flexible</span>
+                </span>
+                <span class="code-explain-list-wrap">
+                  <svg>
+                    <use xlink:href="../img/sprite.svg#dot"></use>
+                  </svg><span class="code-explain-list-wrap-list">makes line break</span>
+                </span>
+                <span class="code-explain-list-wrap">
+                  <svg>
+                    <use xlink:href="../img/sprite.svg#dot"></use>
+                  </svg><span class="code-explain-list-wrap-list">may overflow</span>
+                </span>
+                <span class="last-list-separate"></span>
+                fix overflow for <span class="code-explain--code">min-content</span> as applied on
+                <span class="code-explain--code">grid-template-column</span>,
+                makes the <span class="code-explain--code">grid-template-row</span> flexible as
+                having <span class="code-explain--code">min-content</span>
+              </span>
+            </p>
+          </div>
+          <div class="content-page-header"><span class="content-header">max-content :</span>
+            <p class="content">
+              <span class="code-template-left">grid-template-column</span> :
+              <span class="code-template-right">repeat(3, max-content)</span>
+              <span class="code-explain">
+                <span class="code-explain-list-wrap">
+                  <svg>
+                    <use xlink:href="../img/sprite.svg#dot"></use>
+                  </svg><span class="code-explain-list-wrap-list">column flexible</span>
+                </span>
+                <span class="code-explain-list-wrap">
+                  <svg>
+                    <use xlink:href="../img/sprite.svg#dot"></use>
+                  </svg><span class="code-explain-list-wrap-list">makes no line break </span>
+                </span>
+                <span class="code-explain-list-wrap">
+                  <svg>
+                    <use xlink:href="../img/sprite.svg#dot"></use>
+                  </svg><span class="code-explain-list-wrap-list">no overflow</span>
+                </span>
+              </span>
+            </p>
+          </div>
+          <div class="content-page-header"><span class="content-header">minmax() :</span>
+            <p class="content">
+              <span class="code-template-left">grid-template-column</span> :
+              <span class="code-template-right">repeat(min-content, minmax(10rem, 1fr))</span>
+              <span class="code-explain">
+                <span class="code-explain-header">minmax(first, second)</span>
+                <span class="code-explain-sub-section">
+                  it can not be more than the
+                  defined <span class="code-explain--code">max size</span> [initial element size] &
+                  it
+                  can not be less than the defined <span class="code-explain-code">min size</span>!
+                </span>
+              </span>
+            </p>
+          </div>
+          <div class="content-page-header"> <span class="content-header">fit-content() :</span>
+            <p class="content">
+              <span class="code-template-left">grid-template-column</span> :
+              <span class="code-template-right">repeat(fit-content, 10rem)</span>
+              <span class="code-explain">
+                <span class="code-explain-header">fit-content()</span>
+                <span class="code-explain-sub-section">
+                  uses the space available, but never less than
+                  <span class="code-explain--code">min-content</span> and never more than <span
+                    class="code-explain--code">max-content</span>
+                </span>
+              </span>
+            </p>
+          </div>
+          <div class="content-page-header"><span class="content-header">auto-fill :</span>
+            <p class="content">
+              <span class="code-template-left">grid-template-column</span> :
+              <span class="code-template-right">repeat(auto-fill, 5rem)</span>
+              <span class="code-explain">
+                <span class="code-explain-header">auto-fill</span>
+                <span class="code-explain-sub-section">
+                  Fit as many possible columns
+                  as possible on a row, even if they are empty
+                </span>
+              </span>
+            </p>
+          </div>
+          <div class="content-page-header"><span class="content-header">auto-fit :</span>
+            <p class="content">
+              <span class="code-template-left">grid-template-column </span> :
+              <span class="code-template-right">repeat(auto-fit, 5rem)</span>
+              <span class="code-explain">
+                <span class="code-explain-header">auto-fit</span>
+                <span class="code-explain-sub-section">
+                  Fit whatever columns there are
+                  into the space. Prefer expanding columns to fill space rather
+                  than empty columns
+                </span>
+              </span>
+            </p>
+          </div>
+        </section>
+        <section class="content-page-section" id="content-index-parentContainer">
+          <header><span class="content-page-section-header">parent container</span></header>
+          <div class="content-page-header"><span class="content-header">row side :</span>
+            <p class="content">
+              <span class="code-template-left">grid-template-row</span> :
+              <span class="code-template-right">[define row size]</span>
+              <span class="code-explain">
+                <span class="code-explain-header">grid-template-row</span>
+                <span class="code-explain-sub-section">
+                  define how many <span class="code-explain--code">row</span> needed
+                </span>
+              </span>
+            </p>
+            <p class="content">
+              <span class="code-template-left">grid-template-row</span> :
+              <span class="code-template-right">[first-start] 1fr [first-end second-start] 10rem
+                [second-end]</span>
+              <span class="code-explain">
+                grid-template-row [with naming grid cell]
+              </span>
+            </p>
+            <p class="content">
+              <span class="code-template-left">justify-items</span> :
+              <span class="code-template-right">stretch[default] center | end | start</span>
+              <span class="code-explain">
+                <span class="code-explain-header">justify-items</span>
+                <span class="code-explain-sub-section"> apply effects on <span
+                    class="code-explain--code">main
+                    axis </span></span>
+            </p>
+            <p class="content">
+              <span class="code-template-left">justify-content</span> :
+              <span class="code-template-right">stretch | start | end | center | space-around |
+                space-between | space-evenly</span>
+              <span class="code-explain">
+                <span class="code-explain-header">justify-content</span>
+                <span class="code-explain-sub-section">when the total size of grid is less
+                  than the container size... then this this property works for <span
+                    class="code-explain--code">main
+                    axis (x)</span></span>
+              </span>
+            </p>
+          </div>
+          <div class="content-page-header"><span class="content-header">column side :</span>
+            <p class="content">
+              <span class="code-template-left">grid-template-column</span> :
+              <span class="code-template-right">[define column size]</span>
+              <span class="code-explain">
+                <span class="code-explain-header">grid-template-column</span>
+                <span class="code-explain-sub-section">
+                  define how many <span class="code-explain--code">column</span> needed
+                </span>
+              </span>
+            </p>
+            <p class="content">
+              <span class="code-template-left">align-items</span> :
+              <span class="code-template-right">stretch [default] | start | end | center |
+                baseline</span>
+              <span class="code-explain">
+                <span class="code-explain-header">align-items</span>
+                <span class="code-explain-sub-section">
+                  apply effect on <span class="code-explain--code">cross axis / verticle side</span>
+                </span>
+              </span>
+            </p>
+            <p class="content">
+              <span class="code-template-left">align-content</span> :
+              <span class="code-template-right">stretch | start | end | center | space-between |
+                space-around | space-evenly</span>
+              <span class="code-explain">
+                <span class="code-explain-header">align-content</span>
+                <span class="code-explain-sub-section">when the total size of grid is less
+                  than the container size... then this this property works for <span
+                    class="code-explain--code">cross
+                    axis (y)</span> </span>
+              </span>
+            </p>
+          </div>
+          <div class="content-page-header"> <span class="content-header">other properties for
+              parent container :</span>
+            <p class="content">
+              <span class="code-template-left">gap</span> :
+              <span class="code-template-right">[row gap] [Column gap]</span>
+              <span class="code-explain">
+                <span class="code-explain-header">gap</span>
+                <span class="code-explain-sub-section"> shorthand property for
+                  <span class="code-explain--code">row-gap</span> and <span
+                    class="code-explain--code">column gap</span>
+                </span>
+              </span>
+            </p>
+            <p class="content">
+              <span class="code-template-left">grid-auto-rows</span> :
+              <span class="code-template-right">[size]</span>
+              <span class="code-explain">
+                <span class="code-explain-header">grid-auto-row</span>
+                <span class="code-explain-sub-section">
+                  define height for implicit cell for <span class="code-explain--code">row
+                    side</span>
+                </span>
+              </span>
+            </p>
+            <p class="content">
+              <span class="code-template-left">grid-auto-columns</span> :
+              <span class="code-template-right">[size]</span>
+              <span class="code-explain">
+                <span class="code-explain-header">grid-auto-columns</span>
+                <span class="code-explain-sub-section">
+                  define width for implicit cell for <span class="code-explain--code">column
+                    side</span>
+                </span>
+              </span>
+            </p>
+            <p class="content">
+              <span class="code-template-left">grid-auto-flow</span> :
+              <span class="code-template-right">row[default] | column | row dense | column
+                dense</span>
+              <span class="code-explain">
+                <span class="code-explain-header">grid-auto-flow</span>
+                <span class="code-explain-sub-section">
+                  shorthand for <span class="code-explain--code">grid-auto-row</span> property and
+                  <span class="code-explain--code">grid-auto-columns</span> property
+                </span>
+            </p>
+          </div>
+        </section>
+        <section class="content-page-section" id="content-index-childrenItems">
+          <header><span class="content-page-section-header">children items :</span></header>
+          <div class="content-page-header"><span class="content-header">children items :</span>
+            <p class="content">
+              <span class="code-template-left">grid-row</span> :
+              <span class="code-template-right">[row-start-line] / [row-end-line]</span>
+              <span class="code-explain">
+                <span class="code-explain-header">grid-row</span>
+                <span class="code-explain-sub-section">
+                  define <span class="code-explain--code">row height</span> for grid children
+                  item</span>
+              </span>
+            </p>
+            <p class="content">
+              <span class="code-template-left">grid-column</span> :
+              <span class="code-template-right">[col-start-line] / [col-end-line]</span>
+              <span class="code-explain">
+                <span class="code-explain-header">grid-column</span>
+                <span class="code-explain-sub-section">
+                  define <span class="code-expalin--code">column width</span> for grid children item
+                </span>
+              </span>
+            </p>
+            <p class="content">
+              <span class="code-template-left">justify-self</span> :
+              <span class="code-template-right">stretch [default] | start | end | center</span>
+              <span class="code-explain">
+                <span class="code-explain-header">justify-self</span>
+                <span class="code-explain-sub-section">
+                  override parent container <span class="code-explain--code">justify items</span>
+                  [main-axis] definition
+                </span>
+              </span>
+            </p>
+            <p class="content">
+              <span class="code-template-left">align-self</span> :
+              <span class="code-template-right">stretch [default] | start end center</span>
+              <span class="code-explain">
+                <span class="code-explain-header">align-self</span>
+                <span class="code-explain-sub-section">
+                  override parent container <span class="code-expalin--code">align-items</span>
+                  [cross-axis] definition
+                </span>
+              </span>
+            </p>
+          </div>
+        </section>
+        <section class="content-page-section" id="content-index-miscs">
+          <header><span class="content-page-section-header"> miscs :</span></header>
+          <div class="content-page-header"><span class="content-header">explaining useful
+              template :</span>
+            <p class="content">
+              <span class="code-template-left">grid-template-column</span> :
+              <span class="code-template-right">repeat(auto-fit, minmax(min-content, 25rem))</span>
+              <span class="code-explain">
+                <span class="code-explain-header">grid-template-column</span>
+                <span class="code-explain-sub-section">
+                  intially, if the parent container has enough space, the elements will
+                  defaultly have 25rem && as the container size decrease & the
+                  elements can not have 25rem... it will simply apply <span
+                    class="code-explain--code">min-content</span>
+                  which means, contents will have <span class="code-explain--code">flexible row
+                    size</span>
+                </span>
+              </span>
+            </p>
+          </div>
+          <div class="content-page-header"><span class="content-header">famous snippets</span>
+            <p class="content">
+              <span class="code-template-left">grid-template-columns</span> :
+              <span class="code-template-right">repeat(auto-fit, minmax(250px, 1fr))</span>
+            </p>
+          </div>
+          <div class="content-page-header"><span class="content-header">famous snippets</span>
+            <p class="content">
+              <span class="code-template-left">grid-template-columns</span>
+              <span class="code-template-right">repeat(auto-fill, minmax(200px, 1fr))</span>
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <!-- all the other css posts -->
+      <div class="content-page-indexes">
+        <header>css indexes</header>
+        <nav>
+          <ul>
+            <li class="item">
+              <a href="css--01-grid.html" class="item-link">everything about grid</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </body>
+
+</html>

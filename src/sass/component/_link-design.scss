@@ -3,11 +3,10 @@ ul {
   padding: 2rem 0;
   li {
     transition: all 0.5s;
-    box-shadow: -2px 2px 15px 0px #000;
+    // box-shadow: -2px 2px 15px 0px #000;
     border-radius: 12px 18px 18px 12px;
 
-    .item-link:link,
-    .item-link:visited {
+    .item-link:link {
       display: block;
       height: 100%;
       width: 100%;
@@ -21,17 +20,53 @@ ul {
       line-height: 2.9rem;
       outline: 2px solid #00000061;
       outline-offset: 11px;
-      text-decoration: underline dashed #3e2bc6;
       &:hover {
+        text-decoration: underline dashed #3e2bc6;
         border-radius: 12px 18px 18px 12px;
         height: 100%;
         width: 100%;
       }
     }
+    .item-link:visited {
+      color: abs.$color-black;
+    }
 
     &:hover {
       box-shadow: 0px 0px 0px 0px #000;
-      transform: scaleY(1.2);
+      transform: scaleY(1.1);
     }
+  }
+}
+
+.resource-home-go-back-button {
+  margin-right: auto;
+
+  box-shadow: 1px 4px 12px #000000;
+  padding: 1rem 4rem;
+  margin-left: 3rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: abs.$color-black;
+  font-size: 2rem;
+  text-transform: uppercase;
+  transition: all 0.4s;
+
+  @include abs.mediaQuery(mobile) {
+    padding: 0.5rem 2rem;
+  }
+  @include abs.mediaQuery(mob-small) {
+    padding: 0.5rem 1rem;
+  }
+
+  &:active {
+    box-shadow: 0px 0px 0px 0px #000000;
+  }
+  &:hover {
+    outline: none;
+    border: none;
+  }
+  svg {
+    height: 4rem;
+    width: 4rem;
   }
 }
