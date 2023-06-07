@@ -6,13 +6,12 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 100vh minmax(100vh, 1fr) 40rem;
-
   position: relative;
 
   .content-page-content-indexes {
     display: grid;
     grid-template-columns: 80% 20%;
-    grid-template-rows: 22rem 10rem 1fr;
+    grid-template-rows: 22rem 10rem minmax(10rem, 40rem);
     header {
       grid-column: 1 / -1;
       font-size: 8rem;
@@ -21,7 +20,18 @@
       word-spacing: 0.4rem;
       font-style: italic;
       padding-left: 8rem;
-      @extend .center-me-vertical;
+      @extend .center-me-full;
+
+      @include abs.mediaQuery(tab-land) {
+        font-size: 5rem;
+      }
+      @include abs.mediaQuery(tab-port) {
+        font-size: 4rem;
+      }
+      @include abs.mediaQuery(mobile) {
+        font-size: 3rem;
+        padding-left: 0;
+      }
     }
     svg {
       grid-column: 2 / 3;
@@ -37,6 +47,17 @@
       justify-self: center;
       letter-spacing: 0.4rem;
       font-style: italic;
+
+      @include abs.mediaQuery(tab-port) {
+        justify-self: start;
+        font-size: 3rem;
+        padding-left: 9.5rem;
+      }
+      @include abs.mediaQuery(mob-small) {
+        justify-self: start;
+        padding-left: 2rem;
+        margin-bottom: 15rem;
+      }
     }
     .indexes {
       display: flex;
@@ -49,6 +70,10 @@
         color: black;
         padding-left: 10rem;
         transition: all 1.4s;
+
+        @include abs.mediaQuery(mob-small) {
+          padding-left: 2rem;
+        }
 
         &:hover {
           text-decoration: underline;
@@ -131,9 +156,23 @@
         margin-bottom: 4rem;
         padding-left: 1rem;
         padding-right: 5rem;
-        text-align: justify;
         line-height: 5.5rem;
         font-family: "IBM Plex Mono", monospace;
+
+        @include abs.mediaQuery(tab-land) {
+          margin-left: 0;
+          padding-left: 0;
+          padding-right: 0;
+          line-height: 6.2rem;
+        }
+
+        // @include abs.mediaQuery(mobile) {
+        //   text-align: start;
+        // }
+
+        .codes {
+          //////////////////// overflow => scroll
+        }
 
         .code-template-left {
           font-family: "Share Tech Mono", monospace;
@@ -141,6 +180,7 @@
           background-color: #bebebe;
           color: white;
           padding: 0.8rem 1rem;
+          // white-space: nowrap;
         }
         .code-template-right {
           font-family: "Share Tech Mono", monospace;
@@ -148,8 +188,25 @@
           background-color: #bebebe;
           color: white;
           padding: 0.8rem 1rem;
+          // white-space: nowrap;
         }
         .code-explain {
+          padding: 0rem 5rem 1rem 5rem;
+          margin-left: 5rem;
+          margin-top: 6rem;
+          text-transform: capitalize;
+          line-height: 6rem;
+          display: block;
+          width: 100%;
+          position: relative;
+
+          @include abs.mediaQuery(tab-land) {
+            padding: 1rem 0.2rem;
+            margin-left: 0;
+            margin-top: 4rem;
+            line-height: 8rem;
+          }
+
           &-header {
             background-color: #d6d5d5e3;
             color: black;
@@ -159,7 +216,7 @@
           }
           &--code {
             text-transform: lowercase;
-            background-color: #a6a6a6;
+            background-color: #cbcbcb;
             color: black;
             padding: 0 0.5rem;
           }
@@ -179,28 +236,24 @@
             height: 3.5rem;
           }
 
-          // background-color: abs.$color-black;
-          // color: abs.$color-white;
-          padding: 0rem 5rem 1rem 5rem;
-          margin-left: 5rem;
-          margin-top: 6rem;
-          text-transform: capitalize;
-          line-height: 6rem;
-          display: block;
-          width: 100%;
-          position: relative;
           &::after {
             content: "code-explain";
             text-transform: uppercase;
             font-family: monospace;
-            margin: 0;
+            margin-top: -5rem;
+            margin-right: -5rem;
             font-size: 1.9rem;
             padding: 0 2rem;
+            transform: scale(0.6);
             position: absolute;
             top: 0;
             right: 0;
             background-color: abs.$color-gray-light;
             color: abs.$color-black;
+
+            @include abs.mediaQuery(tab-port) {
+              display: none;
+            }
           }
           &-sub-section {
             display: block;
@@ -229,11 +282,14 @@
       @include abs.mediaQuery(mobile) {
         grid-template-columns: 1fr;
         grid-row-gap: 3rem;
+        // justify-items: center;
+        // align-items: center;
       }
 
       li {
         list-style-type: none;
         padding: 0.9rem;
+        text-align: center;
       }
     }
   }

@@ -2,9 +2,9 @@
   "name": "myresources",
   "version": "1.0.0",
   "description": "",
-  "source": "src/html/index.html",
+  "source" : "src/html/index.html",
   "scripts": {
-    "dev": "parcel src/html/index.html",
+    "dev": "parcel src/html/*.html",
     "build": "parcel build --public-url ./"
   },
   "keywords": [],

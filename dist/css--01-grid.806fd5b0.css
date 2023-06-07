@@ -1,10 +1,10 @@
-.center-me-full, .content-page-container .content-page-main .content-page-section header, .content-page-indexes header, .main-header, .resource-home-header {
+.center-me-full, .content-page-container .content-page-content-indexes header, .content-page-container .content-page-main .content-page-section header, .content-page-indexes header, .main-header, .resource-home-header {
   justify-content: center;
   align-items: center;
   display: flex;
 }
 
-.center-me-vertical, .content-page-container .content-page-content-indexes header, .resorces-home-nav-bar ul li .post-date, .resorces-home-nav-bar ul li a:link header, .resorces-home-nav-bar ul li a:visited header, .main-home-resource-header, .content-page-go-to-top-button, .content-page-go-to-top-button a span {
+.center-me-vertical, .resorces-home-nav-bar ul li .post-date, .resorces-home-nav-bar ul li a:link header, .resorces-home-nav-bar ul li a:visited header, .main-home-resource-header, .content-page-go-to-top-button, .content-page-go-to-top-button a span {
   align-items: center;
   display: flex;
 }
@@ -61,15 +61,24 @@ body {
   position: relative;
 }
 
+@media only screen and (width <= 37.5em) {
+  body {
+    padding: 0;
+  }
+}
+
 .content-page-home-button {
   z-index: 100;
-  width: 93%;
-  height: 10%;
+  width: 98%;
   background-color: #fff5;
   border: 1px solid gray;
-  margin-left: 5rem;
-  padding-right: 2.5rem;
   position: fixed;
+}
+
+@media only screen and (width <= 37.5em) {
+  .content-page-home-button {
+    width: 100%;
+  }
 }
 
 .content-page-home-button a {
@@ -93,13 +102,14 @@ body {
   text-transform: uppercase;
   padding-top: 1.9rem;
   padding-left: 1.7rem;
+  padding-right: 2rem;
   font-size: 2.5rem;
   text-decoration: none;
 }
 
 .content-page-go-to-top-button {
   box-sizing: content-box;
-  z-index: 10;
+  z-index: 100;
   height: 3rem;
   width: 10rem;
   background-color: #636161ed;
@@ -468,7 +478,7 @@ ul li:hover {
 }
 
 .content-page-container .content-page-content-indexes {
-  grid-template-rows: 22rem 10rem 1fr;
+  grid-template-rows: 22rem 10rem minmax(10rem, 40rem);
   grid-template-columns: 80% 20%;
   display: grid;
 }
@@ -481,6 +491,25 @@ ul li:hover {
   padding-left: 8rem;
   font-size: 8rem;
   font-style: italic;
+}
+
+@media only screen and (width <= 75em) {
+  .content-page-container .content-page-content-indexes header {
+    font-size: 5rem;
+  }
+}
+
+@media only screen and (width <= 56.25em) {
+  .content-page-container .content-page-content-indexes header {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (width <= 37.5em) {
+  .content-page-container .content-page-content-indexes header {
+    padding-left: 0;
+    font-size: 3rem;
+  }
 }
 
 .content-page-container .content-page-content-indexes svg {
@@ -498,6 +527,22 @@ ul li:hover {
   font-style: italic;
 }
 
+@media only screen and (width <= 56.25em) {
+  .content-page-container .content-page-content-indexes .section {
+    justify-self: start;
+    padding-left: 9.5rem;
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (width <= 25em) {
+  .content-page-container .content-page-content-indexes .section {
+    justify-self: start;
+    margin-bottom: 15rem;
+    padding-left: 2rem;
+  }
+}
+
 .content-page-container .content-page-content-indexes .indexes {
   flex-direction: column;
   gap: 4.5rem;
@@ -511,6 +556,12 @@ ul li:hover {
   font-size: 3rem;
   text-decoration: none;
   transition: all 1.4s;
+}
+
+@media only screen and (width <= 25em) {
+  .content-page-container .content-page-content-indexes .indexes a {
+    padding-left: 2rem;
+  }
 }
 
 .content-page-container .content-page-content-indexes .indexes a:hover {
@@ -589,13 +640,21 @@ ul li:hover {
 }
 
 .content-page-container .content-page-main .content-page-section .content {
-  text-align: justify;
   margin-bottom: 4rem;
   margin-left: 2rem;
   padding-left: 1rem;
   padding-right: 5rem;
   font-family: IBM Plex Mono, monospace;
   line-height: 5.5rem;
+}
+
+@media only screen and (width <= 75em) {
+  .content-page-container .content-page-main .content-page-section .content {
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    line-height: 6.2rem;
+  }
 }
 
 .content-page-container .content-page-main .content-page-section .content .code-template-left, .content-page-container .content-page-main .content-page-section .content .code-template-right {
@@ -617,6 +676,15 @@ ul li:hover {
   position: relative;
 }
 
+@media only screen and (width <= 75em) {
+  .content-page-container .content-page-main .content-page-section .content .code-explain {
+    margin-top: 4rem;
+    margin-left: 0;
+    padding: 1rem .2rem;
+    line-height: 8rem;
+  }
+}
+
 .content-page-container .content-page-main .content-page-section .content .code-explain-header {
   color: #000;
   text-transform: lowercase;
@@ -628,7 +696,7 @@ ul li:hover {
 .content-page-container .content-page-main .content-page-section .content .code-explain--code {
   text-transform: lowercase;
   color: #000;
-  background-color: #a6a6a6;
+  background-color: #cbcbcb;
   padding: 0 .5rem;
 }
 
@@ -656,13 +724,21 @@ ul li:hover {
   text-transform: uppercase;
   color: #000;
   background-color: #cbc7c7ef;
-  margin: 0;
+  margin-top: -5rem;
+  margin-right: -5rem;
   padding: 0 2rem;
   font-family: monospace;
   font-size: 1.9rem;
   position: absolute;
   top: 0;
   right: 0;
+  transform: scale(.6);
+}
+
+@media only screen and (width <= 56.25em) {
+  .content-page-container .content-page-main .content-page-section .content .code-explain:after {
+    display: none;
+  }
 }
 
 .content-page-container .content-page-main .content-page-section .content .code-explain-sub-section {
@@ -698,6 +774,7 @@ ul li:hover {
 }
 
 .content-page-container nav ul li {
+  text-align: center;
   padding: .9rem;
   list-style-type: none;
 }

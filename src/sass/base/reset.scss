@@ -35,4 +35,8 @@ body {
   position: relative;
   color: abs.$color-black;
   padding: 1.6rem;
+
+  @include abs.mediaQuery(mobile) {
+    padding: 0;
+  }
 }

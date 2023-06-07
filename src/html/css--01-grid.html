@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../sass/layout/contentPage.scss" />
-    <title>css : GRID</title>
+    <title>css GRID</title>
   </head>
 
   <body>
@@ -39,8 +39,8 @@
       <!-- main post -->
       <main class="content-page-main">
         <section class="content-page-section" id="content-index-unit">
-          <header><span class="content-page-section-header">unit : </span></header>
-          <div class="content-page-header"><span class="content-header">fr :</span>
+          <header><span class="content-page-section-header">unit </span></header>
+          <div class="content-page-header"><span class="content-header">fr</span>
             <p class="content">portion of the remaining space</p>
           </div>
         </section>
@@ -54,18 +54,18 @@
           </a>
         </div>
         <section class="content-page-section" id="content-index-keywords">
-          <header><span class="content-page-section-header">keywords:</span></header>
-          <div class="content-page-header"> <span class="content-header">repeat() : </span>
+          <header><span class="content-page-section-header">keyword</span></header>
+          <div class="content-page-header"> <span class="content-header">repeat() </span>
             <p class="content">
-              <span class="code-template-left">grid-template-row</span> :
+              <span class="code-template-left">grid-template-row</span>
               <span class="code-template-right">repeat(3, 1fr)</span>
               <span class="code-explain">
                 repeat <span class="code-explain--code">1fr</span> in row side for 3 times </span>
             </p>
           </div>
-          <div class="content-page-header"><span class="content-header">min-content :</span>
+          <div class="content-page-header"><span class="content-header">min-content</span>
             <p class="content">
-              <span class="code-template-left">grid-template-row</span> :
+              <span class="code-template-left">grid-template-row</span>
               <span class="code-template-right">repeat(3, min-content)</span>
               <span class="code-explain">
                 <span class="code-explain-list-wrap">
@@ -91,9 +91,9 @@
               </span>
             </p>
           </div>
-          <div class="content-page-header"><span class="content-header">max-content :</span>
+          <div class="content-page-header"><span class="content-header">max-content</span>
             <p class="content">
-              <span class="code-template-left">grid-template-column</span> :
+              <span class="code-template-left">grid-template-column</span>
               <span class="code-template-right">repeat(3, max-content)</span>
               <span class="code-explain">
                 <span class="code-explain-list-wrap">
@@ -114,10 +114,12 @@
               </span>
             </p>
           </div>
-          <div class="content-page-header"><span class="content-header">minmax() :</span>
+          <div class="content-page-header"><span class="content-header">minmax()</span>
             <p class="content">
-              <span class="code-template-left">grid-template-column</span> :
-              <span class="code-template-right">repeat(min-content, minmax(10rem, 1fr))</span>
+              <span class="codes">
+                <span class="code-template-left">grid-template-column</span>
+                <span class="code-template-right">repeat(min-content, minmax(10rem, 1fr))</span>
+              </span>
               <span class="code-explain">
                 <span class="code-explain-header">minmax(first, second)</span>
                 <span class="code-explain-sub-section">
@@ -129,9 +131,9 @@
               </span>
             </p>
           </div>
-          <div class="content-page-header"> <span class="content-header">fit-content() :</span>
+          <div class="content-page-header"> <span class="content-header">fit-content()</span>
             <p class="content">
-              <span class="code-template-left">grid-template-column</span> :
+              <span class="code-template-left">grid-template-column</span>
               <span class="code-template-right">repeat(fit-content, 10rem)</span>
               <span class="code-explain">
                 <span class="code-explain-header">fit-content()</span>
@@ -143,9 +145,9 @@
               </span>
             </p>
           </div>
-          <div class="content-page-header"><span class="content-header">auto-fill :</span>
+          <div class="content-page-header"><span class="content-header">auto-fill</span>
             <p class="content">
-              <span class="code-template-left">grid-template-column</span> :
+              <span class="code-template-left">grid-template-column</span>
               <span class="code-template-right">repeat(auto-fill, 5rem)</span>
               <span class="code-explain">
                 <span class="code-explain-header">auto-fill</span>
@@ -156,9 +158,9 @@
               </span>
             </p>
           </div>
-          <div class="content-page-header"><span class="content-header">auto-fit :</span>
+          <div class="content-page-header"><span class="content-header">auto-fit</span>
             <p class="content">
-              <span class="code-template-left">grid-template-column </span> :
+              <span class="code-template-left">grid-template-column </span>
               <span class="code-template-right">repeat(auto-fit, 5rem)</span>
               <span class="code-explain">
                 <span class="code-explain-header">auto-fit</span>
@@ -173,9 +175,9 @@
         </section>
         <section class="content-page-section" id="content-index-parentContainer">
           <header><span class="content-page-section-header">parent container</span></header>
-          <div class="content-page-header"><span class="content-header">row side :</span>
+          <div class="content-page-header"><span class="content-header">row side</span>
             <p class="content">
-              <span class="code-template-left">grid-template-row</span> :
+              <span class="code-template-left">grid-template-row</span>
               <span class="code-template-right">[define row size]</span>
               <span class="code-explain">
                 <span class="code-explain-header">grid-template-row</span>
@@ -185,7 +187,7 @@
               </span>
             </p>
             <p class="content">
-              <span class="code-template-left">grid-template-row</span> :
+              <span class="code-template-left">grid-template-row</span>
               <span class="code-template-right">[first-start] 1fr [first-end second-start] 10rem
                 [second-end]</span>
               <span class="code-explain">
@@ -193,7 +195,7 @@
               </span>
             </p>
             <p class="content">
-              <span class="code-template-left">justify-items</span> :
+              <span class="code-template-left">justify-items</span>
               <span class="code-template-right">stretch[default] center | end | start</span>
               <span class="code-explain">
                 <span class="code-explain-header">justify-items</span>
@@ -202,7 +204,7 @@
                     axis </span></span>
             </p>
             <p class="content">
-              <span class="code-template-left">justify-content</span> :
+              <span class="code-template-left">justify-content</span>
               <span class="code-template-right">stretch | start | end | center | space-around |
                 space-between | space-evenly</span>
               <span class="code-explain">
@@ -214,9 +216,9 @@
               </span>
             </p>
           </div>
-          <div class="content-page-header"><span class="content-header">column side :</span>
+          <div class="content-page-header"><span class="content-header">column side</span>
             <p class="content">
-              <span class="code-template-left">grid-template-column</span> :
+              <span class="code-template-left">grid-template-column</span>
               <span class="code-template-right">[define column size]</span>
               <span class="code-explain">
                 <span class="code-explain-header">grid-template-column</span>
@@ -226,7 +228,7 @@
               </span>
             </p>
             <p class="content">
-              <span class="code-template-left">align-items</span> :
+              <span class="code-template-left">align-items</span>
               <span class="code-template-right">stretch [default] | start | end | center |
                 baseline</span>
               <span class="code-explain">
@@ -237,7 +239,7 @@
               </span>
             </p>
             <p class="content">
-              <span class="code-template-left">align-content</span> :
+              <span class="code-template-left">align-content</span>
               <span class="code-template-right">stretch | start | end | center | space-between |
                 space-around | space-evenly</span>
               <span class="code-explain">
@@ -250,9 +252,9 @@
             </p>
           </div>
           <div class="content-page-header"> <span class="content-header">other properties for
-              parent container :</span>
+              parent container</span>
             <p class="content">
-              <span class="code-template-left">gap</span> :
+              <span class="code-template-left">gap</span>
               <span class="code-template-right">[row gap] [Column gap]</span>
               <span class="code-explain">
                 <span class="code-explain-header">gap</span>
@@ -263,7 +265,7 @@
               </span>
             </p>
             <p class="content">
-              <span class="code-template-left">grid-auto-rows</span> :
+              <span class="code-template-left">grid-auto-rows</span>
               <span class="code-template-right">[size]</span>
               <span class="code-explain">
                 <span class="code-explain-header">grid-auto-row</span>
@@ -274,7 +276,7 @@
               </span>
             </p>
             <p class="content">
-              <span class="code-template-left">grid-auto-columns</span> :
+              <span class="code-template-left">grid-auto-columns</span>
               <span class="code-template-right">[size]</span>
               <span class="code-explain">
                 <span class="code-explain-header">grid-auto-columns</span>
@@ -285,7 +287,7 @@
               </span>
             </p>
             <p class="content">
-              <span class="code-template-left">grid-auto-flow</span> :
+              <span class="code-template-left">grid-auto-flow</span>
               <span class="code-template-right">row[default] | column | row dense | column
                 dense</span>
               <span class="code-explain">
@@ -298,10 +300,10 @@
           </div>
         </section>
         <section class="content-page-section" id="content-index-childrenItems">
-          <header><span class="content-page-section-header">children items :</span></header>
-          <div class="content-page-header"><span class="content-header">children items :</span>
+          <header><span class="content-page-section-header">children items</span></header>
+          <div class="content-page-header"><span class="content-header">children items</span>
             <p class="content">
-              <span class="code-template-left">grid-row</span> :
+              <span class="code-template-left">grid-row</span>
               <span class="code-template-right">[row-start-line] / [row-end-line]</span>
               <span class="code-explain">
                 <span class="code-explain-header">grid-row</span>
@@ -311,7 +313,7 @@
               </span>
             </p>
             <p class="content">
-              <span class="code-template-left">grid-column</span> :
+              <span class="code-template-left">grid-column</span>
               <span class="code-template-right">[col-start-line] / [col-end-line]</span>
               <span class="code-explain">
                 <span class="code-explain-header">grid-column</span>
@@ -321,7 +323,7 @@
               </span>
             </p>
             <p class="content">
-              <span class="code-template-left">justify-self</span> :
+              <span class="code-template-left">justify-self</span>
               <span class="code-template-right">stretch [default] | start | end | center</span>
               <span class="code-explain">
                 <span class="code-explain-header">justify-self</span>
@@ -332,7 +334,7 @@
               </span>
             </p>
             <p class="content">
-              <span class="code-template-left">align-self</span> :
+              <span class="code-template-left">align-self</span>
               <span class="code-template-right">stretch [default] | start end center</span>
               <span class="code-explain">
                 <span class="code-explain-header">align-self</span>
@@ -345,11 +347,11 @@
           </div>
         </section>
         <section class="content-page-section" id="content-index-miscs">
-          <header><span class="content-page-section-header"> miscs :</span></header>
+          <header><span class="content-page-section-header"> miscs</span></header>
           <div class="content-page-header"><span class="content-header">explaining useful
-              template :</span>
+              template</span>
             <p class="content">
-              <span class="code-template-left">grid-template-column</span> :
+              <span class="code-template-left">grid-template-column</span>
               <span class="code-template-right">repeat(auto-fit, minmax(min-content, 25rem))</span>
               <span class="code-explain">
                 <span class="code-explain-header">grid-template-column</span>
@@ -366,7 +368,7 @@
           </div>
           <div class="content-page-header"><span class="content-header">famous snippets</span>
             <p class="content">
-              <span class="code-template-left">grid-template-columns</span> :
+              <span class="code-template-left">grid-template-columns</span>
               <span class="code-template-right">repeat(auto-fit, minmax(250px, 1fr))</span>
             </p>
           </div>
