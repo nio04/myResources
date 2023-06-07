@@ -5,7 +5,7 @@
 // CONTENT - 01 : GRID
 .content-page-container {
   .content-page-content-indexes {
-    header {
+    .content-page-main-header {
       @include abs.mediaQuery(tab-land) {
         font-size: 5rem;
       }

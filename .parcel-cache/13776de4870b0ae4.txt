@@ -1,4 +1,4 @@
-6065
+6062
 67D:\website\myResources\node_modules\weak-lru-cache\rollup.config.js133291895028811091 0
 58D:\website\myResources\node_modules\@parcel\logger\LICENSE133291895026364336 0
 44D:\website\myResources\node_modules\mdn-data133291895035101143 1
@@ -31,8 +31,21 @@
 80D:\website\myResources\node_modules\csso\node_modules\css-tree\cjs\syntax\atrule133291895039001641 1
 72D:\website\myResources\node_modules\cosmiconfig\dist\ExplorerSync.js.map133291895032496279 0
 60D:\website\myResources\node_modules\node-addon-api\nothing.c133291895025957699 0
-27D:\website\myResources\dist133305942759137487 1
+27D:\website\myResources\dist133306304141300403 1
 70D:\website\myResources\node_modules\caniuse-lite\data\features\opus.js133291895045128353 0
+73D:\website\myResources\node_modules\@parcel\utils\src\progress-message.js133291895037236209 0
+43D:\website\myResources\src\img\svg\home.svg133294941274905793 0
+62D:\website\myResources\node_modules\nth-check\lib\compile.d.ts133291895033305326 0
+62D:\website\myResources\node_modules\entities\lib\maps\xml.json133291895031452717 0
+54D:\website\myResources\node_modules\is-json\.npmignore133291895026692638 0
+70D:\website\myResources\node_modules\cosmiconfig\dist\ExplorerBase.d.ts133291895035327131 0
+58D:\website\myResources\node_modules\update-browserslist-db133291895029849875 1
+115D:\website\myResources\node_modules\@parcel\source-map\parcel_sourcemap_wasm\dist-web\parcel_sourcemap_wasm_bg.wasm133291895038760557 0
+79D:\website\myResources\node_modules\caniuse-lite\data\features\css-boxshadow.js133291895039638608 0
+66D:\website\myResources\node_modules\source-map-js\lib\array-set.js133291895026889073 0
+61D:\website\myResources\node_modules\domutils\lib\stringify.js133291895030090418 0
+38D:\website\myResources\src\flexbox.txt133305963438476886 0
+67D:\website\myResources\node_modules\caniuse-lite\data\regions\PY.js133291895045664148 0
 116D:\website\myResources\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\syntax\node\TypeSelector.js133291895039477161 0
 79D:\website\myResources\node_modules\vscode-css-languageservice\lib\esm\services133291969818928779 1
 81D:\website\myResources\node_modules\@parcel\optimizer-svgo\node_modules\csso\dist133291895033957699 1
@@ -40,19 +53,12 @@
 108D:\website\myResources\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\lexer\prepare-tokens.js133291895038940465 0
 89D:\website\myResources\node_modules\@parcel\transformer-postcss\lib\PostCSSTransformer.js133291895030195852 0
 77D:\website\myResources\node_modules\csso\node_modules\css-tree\lib\version.js133291895041716077 0
-41D:\website\myResources\src\img\sprite.svg133301896260157445 0
+41D:\website\myResources\src\img\sprite.svg133306178777880924 0
 75D:\website\myResources\node_modules\caniuse-lite\data\features\audio-api.js133291895035955810 0
 99D:\website\myResources\node_modules\vscode-css-languageservice\lib\umd\languageFacts\dataManager.js133291969818352503 0
 40D:\website\myResources\package-lock.json133291975051556255 0
 53D:\website\myResources\node_modules\nth-check\LICENSE133291895026203457 0
 100D:\website\myResources\node_modules\css-select\node_modules\dom-serializer\lib\esm\foreignNames.d.ts133291895031372078 0
-51D:\website\myResources\node_modules\xxhash-wasm\esm133291895029448477 1
-50D:\website\myResources\node_modules\posthtml\types133291895029237567 1
-69D:\website\myResources\node_modules\css-select\lib\esm\compile.js.map133291895035649485 0
-67D:\website\myResources\node_modules\@parcel\bundler-default\LICENSE133291895026364336 0
-60D:\website\myResources\node_modules\abortcontroller-polyfill133291895031534829 1
-85D:\website\myResources\node_modules\css-select\node_modules\domhandler\lib\index.d.ts133291895031615446 0
-71D:\website\myResources\node_modules\css-tree\lib\syntax\node\AnPlusB.js133291895039718975 0
 112D:\website\myResources\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\node\SelectorList.js133291895039158192 0
 61D:\website\myResources\node_modules\css-tree\lib\syntax\scope133291895041824703 1
 63D:\website\myResources\node_modules\domelementtype\lib\index.js133291895027908681 0
@@ -64,13 +70,14 @@
 65D:\website\myResources\node_modules\weak-lru-cache\LRFUExpirer.js133291895028168193 0
 52D:\website\myResources\node_modules\msgpackr\pack.js133291895032414960 0
 88D:\website\myResources\node_modules\css-select\node_modules\domutils\lib\manipulation.js133291895030944062 0
-26D:\website\myResources\src133305209752507443 1
+26D:\website\myResources\src133305963634989418 1
 38D:\website\myResources\src\sass\layout133305941660219669 1
 72D:\website\myResources\node_modules\v8-compile-cache\v8-compile-cache.js133291895026889073 0
 81D:\website\myResources\node_modules\@swc\helpers\lib\_interop_require_wildcard.js133291895036594763 0
 63D:\website\myResources\node_modules\dom-serializer\lib\index.js133291895029211717 0
 58D:\website\myResources\node_modules\picomatch\CHANGELOG.md133291895030411149 0
 40D:\website\myResources\node_modules\.bin133291902829580210 1
+54D:\website\myResources\dist\css--main.fa069a70.css.map133306304141300403 0
 74D:\website\myResources\node_modules\@jridgewell\trace-mapping\node_modules133291895004327507 1
 73D:\website\myResources\node_modules\@parcel\core\src\public\Dependency.js133291895037160331 0
 67D:\website\myResources\node_modules\sass\types\util\promise_or.d.ts133291902829420189 0
@@ -102,7 +109,7 @@
 72D:\website\myResources\node_modules\csso\lib\replace\atrule\keyframes.js133291895038120227 0
 102D:\website\myResources\node_modules\@parcel\optimizer-svgo\node_modules\csso\lib\clean\TypeSelector.js133291895036179931 0
 50D:\website\myResources\src\sass\abstract\_var.scss133305866413689803 0
-52D:\website\myResources\src\sass\layout\mainHome.scss133305884160450455 0
+52D:\website\myResources\src\sass\layout\mainHome.scss133305953195874820 0
 31D:\website\myResources\src\sass133291898926907914 1
 102D:\website\myResources\node_modules\csso\node_modules\css-tree\cjs\syntax\node\PseudoClassSelector.cjs133291895038599784 0
 60D:\website\myResources\node_modules\terser\lib\propmangle.js133291895036704764 0
@@ -172,7 +179,7 @@
 92D:\website\myResources\node_modules\vscode-css-languageservice\lib\umd\parser\scssScanner.js133291969818928779 0
 95D:\website\myResources\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\mdb_copy.1133291895032496279 0
 77D:\website\myResources\node_modules\caniuse-lite\data\features\canvas-text.js133291895038440054 0
-59D:\website\myResources\src\sass\component\_link-design.scss133295315354481903 0
+59D:\website\myResources\src\sass\component\_link-design.scss133305954725390660 0
 85D:\website\myResources\node_modules\@parcel\optimizer-svgo\node_modules\svgo\bin\svgo133291895027020439 0
 49D:\website\myResources\src\sass\pages\_index.scss133292731476260731 0
 64D:\website\myResources\node_modules\css-tree\cjs\lexer\trace.cjs133291895039401528 0
@@ -180,7 +187,7 @@
 54D:\website\myResources\node_modules\json5\package.json133291895031215185 0
 48D:\website\myResources\src\sass\theme\_font.scss133296206663811847 0
 62D:\website\myResources\node_modules\utility-types\CHANGELOG.md133291895031049501 0
-46D:\website\myResources\src\sass\pages\css.scss133305942735508048 0
+46D:\website\myResources\src\sass\pages\css.scss133306187871410109 0
 88D:\website\myResources\node_modules\css-select\lib\esm\pseudo-selectors\pseudos.d.ts.map133291895036754962 0
 47D:\website\myResources\node_modules\xxhash-wasm133291895030574408 1
 81D:\website\myResources\node_modules\vscode-languageserver-types\lib\umd\main.d.ts133291969817620708 0
@@ -203,7 +210,7 @@
 86D:\website\myResources\node_modules\csso\node_modules\css-tree\cjs\syntax\node\CDC.cjs133291895031049501 0
 52D:\website\myResources\node_modules\stable\stable.js133291895027849454 0
 53D:\website\myResources\src\sass\pages\javaScript.scss133291898657986292 0
-55D:\website\myResources\src\sass\layout\contentPage.scss133305942421070810 0
+55D:\website\myResources\src\sass\layout\contentPage.scss133306186916337852 0
 80D:\website\myResources\node_modules\css-select\lib\pseudo-selectors\pseudos.d.ts133291895038196259 0
 55D:\website\myResources\src\sass\component\_buttons.scss133305842442236555 0
 91D:\website\myResources\node_modules\csso\node_modules\css-tree\cjs\syntax\node\Operator.cjs133291895038275281 0
@@ -229,7 +236,6 @@
 40D:\website\myResources\node_modules\svgo133291895038089946 1
 73D:\website\myResources\node_modules\@parcel\runtime-react-refresh\LICENSE133291895026364336 0
 59D:\website\myResources\node_modules\parent-module\readme.md133291895027849454 0
-64D:\website\myResources\node_modules\@parcel\utils\src\urlJoin.js133291895038039878 0
 77D:\website\myResources\node_modules\type-fest\source\require-exactly-one.d.ts133291895035101143 0
 77D:\website\myResources\node_modules\@parcel\transformer-posthtml\package.json133291895029373397 0
 42D:\website\myResources\node_modules\@babel133291895004243695 1
@@ -243,8 +249,19 @@
 74D:\website\myResources\node_modules\caniuse-lite\data\features\progress.js133291895045557878 0
 80D:\website\myResources\node_modules\@parcel\optimizer-svgo\node_modules\svgo\lib133291895038359726 1
 52D:\website\myResources\src\sass\abstract\_mixin.scss133292387341482837 0
-34D:\website\myResources\src\img\svg133301932091634955 1
+34D:\website\myResources\src\img\svg133306177573450325 1
 42D:\website\myResources\src\img\svg\dot.svg133294897607350857 0
+56D:\website\myResources\node_modules\json5\dist\index.mjs133291895032116885 0
+43D:\website\myResources\src\img\svg\grid.svg133293288490622258 0
+73D:\website\myResources\node_modules\terser\lib\compress\native-objects.js133291895036276731 0
+74D:\website\myResources\node_modules\caniuse-lite\data\features\svg-html.js133291895046492274 0
+93D:\website\myResources\node_modules\csso\node_modules\css-tree\lib\syntax\node\Parentheses.js133291895041184480 0
+78D:\website\myResources\node_modules\lmdb\dependencies\lz4\lib\liblz4-dll.rc.in133291895039371447 0
+63D:\website\myResources\node_modules\vscode-uri\lib\umd\uri.d.ts133291969817700935 0
+67D:\website\myResources\node_modules\update-browserslist-db\index.js133291895027908681 0
+54D:\website\myResources\node_modules\htmlnano\docs\docs133291895037555258 1
+46D:\website\myResources\src\img\svg\flexbox.svg133306177407674009 0
+98D:\website\myResources\node_modules\posthtml\node_modules\posthtml-parser\dist\location-tracker.js133291895028064279 0
 81D:\website\myResources\node_modules\vscode-languageserver-types\lib\esm\main.d.ts133291969817536027 0
 89D:\website\myResources\node_modules\@babel\highlight\node_modules\color-convert\README.md133291895029267633 0
 78D:\website\myResources\node_modules\svgo\plugins\removeUselessStrokeAndFill.js133291895036915365 0
@@ -258,22 +275,13 @@
 88D:\website\myResources\node_modules\csso\node_modules\css-tree\lib\syntax\scope\value.js133291895041716077 0
 44D:\website\myResources\src\img\svg\goTop.svg133301896135177559 0
 48D:\website\myResources\node_modules\terser\tools133291895037555258 1
-56D:\website\myResources\node_modules\json5\dist\index.mjs133291895032116885 0
-43D:\website\myResources\src\img\svg\grid.svg133293288490622258 0
-73D:\website\myResources\node_modules\terser\lib\compress\native-objects.js133291895036276731 0
-74D:\website\myResources\node_modules\caniuse-lite\data\features\svg-html.js133291895046492274 0
-93D:\website\myResources\node_modules\csso\node_modules\css-tree\lib\syntax\node\Parentheses.js133291895041184480 0
-78D:\website\myResources\node_modules\lmdb\dependencies\lz4\lib\liblz4-dll.rc.in133291895039371447 0
-63D:\website\myResources\node_modules\vscode-uri\lib\umd\uri.d.ts133291969817700935 0
-73D:\website\myResources\node_modules\@parcel\utils\src\progress-message.js133291895037236209 0
-43D:\website\myResources\src\img\svg\home.svg133294941274905793 0
 50D:\website\myResources\node_modules\tslib\tslib.js133291895028963766 0
 72D:\website\myResources\node_modules\dom-serializer\lib\foreignNames.d.ts133291895031534829 0
 49D:\website\myResources\src\img\svg\pointRight.svg133301931882378451 0
 55D:\website\myResources\node_modules\stable\package.json133291895026203457 0
 43D:\website\myResources\node_modules\@parcel133291902827160534 1
 86D:\website\myResources\node_modules\vscode-languageserver-textdocument\lib\esm\main.js133291969817292620 0
-49D:\website\myResources\src\html\css--01-grid.html133305939008188752 0
+49D:\website\myResources\src\html\css--01-grid.html133306303559423734 0
 90D:\website\myResources\node_modules\csso\node_modules\css-tree\lib\syntax\node\Operator.js133291895041184480 0
 95D:\website\myResources\node_modules\vscode-css-languageservice\lib\esm\parser\cssSymbolScope.js133291969818272110 0
 68D:\website\myResources\node_modules\term-size\vendor\macos\term-size133291895028383773 0
@@ -289,7 +297,7 @@
 55D:\website\myResources\node_modules\braces\package.json133291895026248531 0
 54D:\website\myResources\node_modules\.package-lock.json133291975052120304 0
 69D:\website\myResources\node_modules\postcss-value-parser\lib\parse.js133291895027424316 0
-52D:\website\myResources\src\html\css--02-flexbox.html133305853623784499 0
+52D:\website\myResources\src\html\css--02-flexbox.html133306182073648349 0
 73D:\website\myResources\node_modules\@parcel\transformer-html\package.json133291895030195852 0
 82D:\website\myResources\node_modules\@parcel\transformer-react-refresh-wrap\LICENSE133291895026354121 0
 56D:\website\myResources\node_modules\terser\lib\output.js133291895036490589 0
@@ -297,12 +305,12 @@
 44D:\website\myResources\node_modules\css-tree133291895041960210 1
 58D:\website\myResources\node_modules\lightningcss\README.md133291895030974426 0
 92D:\website\myResources\node_modules\css-select\node_modules\domutils\lib\manipulation.js.map133291895035649485 0
-46D:\website\myResources\src\html\css--main.html133305898551183114 0
+46D:\website\myResources\src\html\css--main.html133305960595331907 0
 70D:\website\myResources\node_modules\utility-types\dist\mapped-types.js133291895028640160 0
 66D:\website\myResources\node_modules\@parcel\optimizer-htmlnano\src133291895028811091 1
 105D:\website\myResources\node_modules\@parcel\package-manager\test\fixtures\has-foo\subpackage\package.json133291895036179931 0
 57D:\website\myResources\node_modules\@parcel\markdown-ansi133291895028811091 1
-42D:\website\myResources\src\html\index.html133305901210943204 0
+42D:\website\myResources\src\html\index.html133305961293184349 0
 88D:\website\myResources\node_modules\css-select\node_modules\domutils\lib\esm\querying.js133291895031157435 0
 56D:\website\myResources\node_modules\@parcel\hash\LICENSE133291895026354121 0
 67D:\website\myResources\node_modules\css-tree\lib\parser\sequence.js133291895041560693 0
@@ -322,6 +330,13 @@
 97D:\website\myResources\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\index.js133291895037555258 0
 43D:\website\myResources\node_modules\@vscode133291969816150013 1
 75D:\website\myResources\node_modules\caniuse-lite\data\features\dommatrix.js133291895042140625 0
+51D:\website\myResources\node_modules\xxhash-wasm\esm133291895029448477 1
+50D:\website\myResources\node_modules\posthtml\types133291895029237567 1
+69D:\website\myResources\node_modules\css-select\lib\esm\compile.js.map133291895035649485 0
+67D:\website\myResources\node_modules\@parcel\bundler-default\LICENSE133291895026364336 0
+60D:\website\myResources\node_modules\abortcontroller-polyfill133291895031534829 1
+85D:\website\myResources\node_modules\css-select\node_modules\domhandler\lib\index.d.ts133291895031615446 0
+71D:\website\myResources\node_modules\css-tree\lib\syntax\node\AnPlusB.js133291895039718975 0
 43D:\website\myResources\node_modules\js-yaml133291895035407316 1
 41D:\website\myResources\node_modules\acorn133291895030574408 1
 54D:\website\myResources\node_modules\css-tree\README.md133291895041960210 0
@@ -468,6 +483,7 @@
 67D:\website\myResources\node_modules\utility-types\dist\index.js.map133291895030411149 0
 98D:\website\myResources\node_modules\msgpackr-extract\node_modules\node-gyp-build-optional-packages133291895029529558 1
 73D:\website\myResources\node_modules\caniuse-lite\data\features\flexbox.js133291895042519731 0
+57D:\website\myResources\dist\css--01-grid.e6a09505.css.map133306304141300403 0
 70D:\website\myResources\node_modules\sass\types\legacy\plugin_this.d.ts133291902829420189 0
 50D:\website\myResources\node_modules\dom-serializer133291895030974426 1
 52D:\website\myResources\node_modules\csso\lib\replace133291895038624872 1
@@ -608,8 +624,6 @@
 61D:\website\myResources\node_modules\acorn\dist\acorn.mjs.d.ts133291895031900681 0
 68D:\website\myResources\node_modules\update-browserslist-db\README.md133291895029554640 0
 43D:\website\myResources\node_modules\is-glob133291895027742982 1
-84D:\website\myResources\node_modules\@jridgewell\resolve-uri\dist\resolve-uri.mjs.map133291895027989214 0
-57D:\website\myResources\node_modules\mdn-data\api\index.js133291895026889073 0
 43D:\website\myResources\node_modules\is-json133291895029292886 1
 54D:\website\myResources\node_modules\clone\package.json133291895026284046 0
 74D:\website\myResources\node_modules\caniuse-lite\data\features\webauthn.js133291895047384706 0
@@ -728,11 +742,11 @@
 49D:\website\myResources\node_modules\@parcel\graph133291895032542085 1
 116D:\website\myResources\node_modules\msgpackr-extract\node_modules\.bin\node-gyp-build-optional-packages-optional.cmd133291895048195684 0
 56D:\website\myResources\node_modules\postcss-value-parser133291895029980031 1
-100D:\website\myResources\node_modules\vscode-css-languageservice\lib\esm\languageFacts\dataProvider.js133291969818352503 0
-60D:\website\myResources\node_modules\terser\dist\package.json133291895037276277 0
 59D:\website\myResources\node_modules\terser\lib\transform.js133291895037160331 0
 87D:\website\myResources\node_modules\caniuse-lite\data\features\subresource-integrity.js133291895046408773 0
 44D:\website\myResources\node_modules\posthtml133291895028963766 1
+60D:\website\myResources\node_modules\terser\dist\package.json133291895037276277 0
+100D:\website\myResources\node_modules\vscode-css-languageservice\lib\esm\languageFacts\dataProvider.js133291969818352503 0
 55D:\website\myResources\node_modules\react-error-overlay133291895030254022 1
 79D:\website\myResources\node_modules\caniuse-lite\data\features\text-overflow.js133291895046653805 0
 68D:\website\myResources\node_modules\.bin\download-msgpackr-prebuilds133291895048115317 0
@@ -801,11 +815,6 @@
 41D:\website\myResources\node_modules\tslib133291895031296095 1
 45D:\website\myResources\node_modules\type-fest133291895032011770 1
 76D:\website\myResources\node_modules\csso\node_modules\css-tree\cjs\tokenizer133291895039320722 1
-62D:\website\myResources\node_modules\nth-check\lib\compile.d.ts133291895033305326 0
-62D:\website\myResources\node_modules\entities\lib\maps\xml.json133291895031452717 0
-54D:\website\myResources\node_modules\is-json\.npmignore133291895026692638 0
-70D:\website\myResources\node_modules\cosmiconfig\dist\ExplorerBase.d.ts133291895035327131 0
-58D:\website\myResources\node_modules\update-browserslist-db133291895029849875 1
 49D:\website\myResources\node_modules\utility-types133291895031615446 1
 76D:\website\myResources\node_modules\@parcel\source-map\parcel_sourcemap_wasm133291895031270815 1
 109D:\website\myResources\node_modules\@parcel\transformer-react-refresh-wrap\src\ReactRefreshWrapTransformer.js133291895029694357 0
@@ -1066,7 +1075,6 @@
 72D:\website\myResources\node_modules\node-addon-api\tools\clang-format.js133291895031372078 0
 93D:\website\myResources\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\mtest2.c133291895037634652 0
 75D:\website\myResources\node_modules\vscode-css-languageservice\lib\umd\data133291969819092974 1
-51D:\website\myResources\dist\pointRight.001ad4a8.svg133305942757936796 0
 87D:\website\myResources\node_modules\css-select\node_modules\domutils\lib\index.d.ts.map133291895034727221 0
 54D:\website\myResources\node_modules\@parcel\source-map133291895038515735 1
 60D:\website\myResources\node_modules\timsort\build\timsort.js133291895029448477 0
@@ -1270,7 +1278,6 @@
 60D:\website\myResources\node_modules\csso\cjs\clean\index.cjs133291895033715527 0
 55D:\website\myResources\node_modules\immutable\README.md133291902828940138 0
 60D:\website\myResources\node_modules\is-binary-path\readme.md133291902828713968 0
-52D:\website\myResources\dist\css--01-grid.8d4c5a08.js133305942757448721 0
 71D:\website\myResources\node_modules\@lmdb\lmdb-win32-x64\node.napi.node133291895035327131 0
 90D:\website\myResources\node_modules\vscode-css-languageservice\docs\customData.schema.json133291969819175517 0
 83D:\website\myResources\node_modules\abortcontroller-polyfill\src\abortcontroller.js133291895029554640 0
@@ -1337,7 +1344,6 @@
 66D:\website\myResources\node_modules\sass\types\legacy\options.d.ts133291902829340184 0
 109D:\website\myResources\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\removeXMLProcInst.js133291895037479445 0
 63D:\website\myResources\node_modules\htmlnano\lib\presets\max.js133291895031534829 0
-67D:\website\myResources\node_modules\update-browserslist-db\index.js133291895027908681 0
 69D:\website\myResources\node_modules\htmlnano\docs\docs\040-presets.md133291895037160331 0
 66D:\website\myResources\node_modules\update-browserslist-db\LICENSE133291895026284046 0
 71D:\website\myResources\node_modules\update-browserslist-db\package.json133291895029044502 0
@@ -1431,7 +1437,7 @@
 56D:\website\myResources\node_modules\terser\dist\.gitkeep133291895026284046 0
 103D:\website\myResources\node_modules\msgpackr-extract\node_modules\.bin\node-gyp-build-optional-packages133291895048115317 0
 56D:\website\myResources\node_modules\sass\sass.default.js133291902829020146 0
-45D:\website\myResources\dist\css--01-grid.html133305942759137487 0
+45D:\website\myResources\dist\css--01-grid.html133306304141219471 0
 76D:\website\myResources\node_modules\node-gyp-build-optional-packages\LICENSE133291895026268751 0
 49D:\website\myResources\node_modules\timsort\build133291895029769443 1
 67D:\website\myResources\node_modules\source-map\lib\binary-search.js133291895030090418 0
@@ -1568,7 +1574,6 @@
 87D:\website\myResources\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mdb_load.1133291895033957699 0
 92D:\website\myResources\node_modules\css-select\node_modules\entities\lib\esm\escape.d.ts.map133291895036345195 0
 75D:\website\myResources\node_modules\caniuse-lite\data\features\proximity.js133291895045557878 0
-57D:\website\myResources\dist\css--01-grid.4fcfceaf.css.map133305942758255663 0
 77D:\website\myResources\node_modules\electron-to-chromium\chromium-versions.js133291895026782808 0
 116D:\website\myResources\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\package-module\package.json133291895038836273 0
 73D:\website\myResources\node_modules\css-tree\cjs\syntax\scope\default.cjs133291895035528121 0
@@ -1793,9 +1798,6 @@
 62D:\website\myResources\node_modules\source-map-js\package.json133291895031452717 0
 65D:\website\myResources\node_modules\source-map-js\source-map.d.ts133291895032091783 0
 48D:\website\myResources\node_modules\mdn-data\css133291895034998225 1
-115D:\website\myResources\node_modules\@parcel\source-map\parcel_sourcemap_wasm\dist-web\parcel_sourcemap_wasm_bg.wasm133291895038760557 0
-79D:\website\myResources\node_modules\caniuse-lite\data\features\css-boxshadow.js133291895039638608 0
-66D:\website\myResources\node_modules\source-map-js\lib\array-set.js133291895026889073 0
 67D:\website\myResources\node_modules\source-map-js\lib\base64-vlq.js133291895027424316 0
 66D:\website\myResources\node_modules\nth-check\lib\esm\compile.d.ts133291895033397211 0
 68D:\website\myResources\node_modules\nth-check\lib\esm\compile.js.map133291895031215185 0
@@ -1973,8 +1975,6 @@
 58D:\website\myResources\node_modules\csso\cjs\clean\Raw.cjs133291895035210513 0
 67D:\website\myResources\node_modules\caniuse-lite\data\regions\SK.js133291895046197584 0
 100D:\website\myResources\node_modules\posthtml\node_modules\posthtml-parser\dist\location-tracker.d.ts133291895030015328 0
-54D:\website\myResources\node_modules\htmlnano\docs\docs133291895037555258 1
-98D:\website\myResources\node_modules\posthtml\node_modules\posthtml-parser\dist\location-tracker.js133291895028064279 0
 60D:\website\myResources\node_modules\postcss-value-parser\lib133291895030195852 1
 56D:\website\myResources\node_modules\csso\cjs\restructure133291895035851490 1
 69D:\website\myResources\node_modules\@parcel\workers\lib\WorkerFarm.js133291895036099602 0
@@ -2170,7 +2170,6 @@
 59D:\website\myResources\node_modules\node-addon-api\index.js133291895031796415 0
 73D:\website\myResources\node_modules\caniuse-lite\data\features\colr-v1.js133291895039001641 0
 67D:\website\myResources\node_modules\caniuse-lite\data\regions\HR.js133291895043100589 0
-65D:\website\myResources\node_modules\mdn-data\api\inheritance.json133291895031296095 0
 61D:\website\myResources\node_modules\node-addon-api\LICENSE.md133291895033076469 0
 71D:\website\myResources\node_modules\@swc\helpers\lib\_async_iterator.js133291895030195852 0
 72D:\website\myResources\node_modules\node-addon-api\napi-inl.deprecated.h133291895028913502 0
@@ -2213,7 +2212,6 @@
 93D:\website\myResources\node_modules\@parcel\workers\test\integration\workerfarm\master-sum.js133291895033469785 0
 64D:\website\myResources\node_modules\cosmiconfig\dist\Explorer.js133291895027424316 0
 112D:\website\myResources\node_modules\msgpackr-extract\node_modules\.bin\node-gyp-build-optional-packages-optional133291895048195684 0
-49D:\website\myResources\dist\css--main.8bba6e86.js133305942758759208 0
 87D:\website\myResources\node_modules\csso\node_modules\css-tree\cjs\generator\create.cjs133291895033397211 0
 54D:\website\myResources\node_modules\msgpackr\README.md133291895036754962 0
 88D:\website\myResources\node_modules\@babel\highlight\node_modules\supports-color\license133291895027989214 0
@@ -2307,6 +2305,9 @@
 66D:\website\myResources\node_modules\mdn-data\css\types.schema.json133291895034515924 0
 70D:\website\myResources\node_modules\@parcel\watcher\src\unix\legacy.cc133291895031049501 0
 59D:\website\myResources\node_modules\mdn-data\css\units.json133291895034727221 0
+84D:\website\myResources\node_modules\@jridgewell\resolve-uri\dist\resolve-uri.mjs.map133291895027989214 0
+57D:\website\myResources\node_modules\mdn-data\api\index.js133291895026889073 0
+65D:\website\myResources\node_modules\mdn-data\api\inheritance.json133291895031296095 0
 87D:\website\myResources\node_modules\@parcel\core\test\fixtures\custom-format-infer-type133291895040545082 1
 72D:\website\myResources\node_modules\mdn-data\api\inheritance.schema.json133291895031534829 0
 52D:\website\myResources\node_modules\lmdb\binding.gyp133291895038760557 0
@@ -2519,6 +2520,7 @@
 70D:\website\myResources\node_modules\lines-and-columns\build\index.d.ts133291895028594897 0
 71D:\website\myResources\node_modules\lightningcss-win32-x64-msvc\LICENSE133291895026284046 0
 85D:\website\myResources\node_modules\@swc\helpers\src\_is_native_reflect_construct.mjs133291895039876137 0
+47D:\website\myResources\dist\sprite.0cc5b441.svg133306304136418889 0
 81D:\website\myResources\node_modules\@parcel\package-manager\src\installPackage.js133291895033224606 0
 96D:\website\myResources\node_modules\lightningcss-win32-x64-msvc\lightningcss.win32-x64-msvc.node133291895039158192 0
 64D:\website\myResources\node_modules\@parcel\logger\src\Logger.js133291895027667386 0
@@ -2803,8 +2805,8 @@
 67D:\website\myResources\node_modules\caniuse-lite\data\regions\LK.js133291895044145826 0
 54D:\website\myResources\node_modules\globals\index.d.ts133291895029448477 0
 89D:\website\myResources\node_modules\@swc\helpers\src\_class_static_private_method_get.mjs133291895039401528 0
-62D:\website\myResources\node_modules\css-what\lib\es\types.d.ts133291895034283668 0
 74D:\website\myResources\node_modules\csso\cjs\restructure\1-mergeAtrule.cjs133291895027020439 0
+62D:\website\myResources\node_modules\css-what\lib\es\types.d.ts133291895034283668 0
 52D:\website\myResources\node_modules\globals\index.js133291895026782808 0
 94D:\website\myResources\node_modules\csso\node_modules\css-tree\cjs\definition-syntax\index.cjs133291895036995662 0
 51D:\website\myResources\node_modules\globals\license133291895026284046 0
@@ -2926,8 +2928,6 @@
 60D:\website\myResources\node_modules\domutils\lib\querying.js133291895029769443 0
 63D:\website\myResources\node_modules\domutils\lib\stringify.d.ts133291895033820291 0
 53D:\website\myResources\node_modules\csso\package.json133291895038730319 0
-61D:\website\myResources\node_modules\domutils\lib\stringify.js133291895030090418 0
-67D:\website\myResources\node_modules\caniuse-lite\data\regions\PY.js133291895045664148 0
 63D:\website\myResources\node_modules\domutils\lib\traversal.d.ts133291895033957699 0
 67D:\website\myResources\node_modules\domutils\lib\traversal.d.ts.map133291895032091783 0
 89D:\website\myResources\node_modules\csso\node_modules\mdn-data\css\properties.schema.json133291895033076469 0
@@ -3106,6 +3106,7 @@
 78D:\website\myResources\node_modules\csso\node_modules\css-tree\lib\syntax\node133291895041824703 1
 80D:\website\myResources\node_modules\csso\node_modules\css-tree\lib\syntax\pseudo133291895040860581 1
 79D:\website\myResources\node_modules\csso\node_modules\css-tree\lib\syntax\scope133291895041716077 1
+48D:\website\myResources\dist\css--02-flexbox.html133306304141219471 0
 96D:\website\myResources\node_modules\csso\node_modules\css-tree\lib\syntax\scope\atrulePrelude.js133291895039688681 0
 99D:\website\myResources\node_modules\csso\node_modules\css-tree\lib\syntax\node\AttributeSelector.js133291895039688681 0
 95D:\website\myResources\node_modules\@jridgewell\sourcemap-codec\dist\sourcemap-codec.umd.js.map133291895028883422 0
@@ -3306,6 +3307,7 @@
 98D:\website\myResources\node_modules\csso\node_modules\css-tree\cjs\definition-syntax\tokenizer.cjs133291895039082020 0
 46D:\website\myResources\node_modules\.bin\json5133291895048115317 0
 56D:\website\myResources\node_modules\csso\lib\compress.js133291895037236209 0
+50D:\website\myResources\dist\index.dfe468a5.css.map133306304141300403 0
 76D:\website\myResources\node_modules\csso\cjs\restructure\6-restructBlock.cjs133291895029554640 0
 54D:\website\myResources\node_modules\csso\lib\syntax.js133291895038409790 0
 67D:\website\myResources\node_modules\@parcel\plugin\src\PluginAPI.js133291895027667386 0
@@ -3923,7 +3925,6 @@
 67D:\website\myResources\node_modules\caniuse-lite\data\regions\BI.js133291895037479445 0
 68D:\website\myResources\node_modules\cosmiconfig\dist\ExplorerSync.js133291895028640160 0
 74D:\website\myResources\node_modules\cosmiconfig\dist\getDirectory.d.ts.map133291895032657638 0
-56D:\website\myResources\dist\css--01-grid.8d4c5a08.js.map133305942757529624 0
 68D:\website\myResources\node_modules\cosmiconfig\dist\getDirectory.js133291895029237567 0
 72D:\website\myResources\node_modules\cosmiconfig\dist\getDirectory.js.map133291895033076469 0
 75D:\website\myResources\node_modules\cosmiconfig\dist\getPropertyByPath.d.ts133291895035568418 0
@@ -4412,8 +4413,6 @@
 81D:\website\myResources\node_modules\caniuse-lite\data\features\form-validation.js133291895042675098 0
 76D:\website\myResources\node_modules\caniuse-lite\data\features\fullscreen.js133291895042675098 0
 87D:\website\myResources\node_modules\caniuse-lite\data\features\getboundingclientrect.js133291895042784387 0
-92D:\website\myResources\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\LICENSE133291895026447654 0
-65D:\website\myResources\node_modules\@parcel\utils\src\throttle.js133291895037982478 0
 82D:\website\myResources\node_modules\caniuse-lite\data\features\getcomputedstyle.js133291895042841796 0
 88D:\website\myResources\node_modules\caniuse-lite\data\features\getelementsbyclassname.js133291895042841796 0
 85D:\website\myResources\node_modules\caniuse-lite\data\features\hardwareconcurrency.js133291895043005319 0
@@ -4438,7 +4437,7 @@
 77D:\website\myResources\node_modules\caniuse-lite\data\features\input-color.js133291895043422571 0
 80D:\website\myResources\node_modules\caniuse-lite\data\features\input-datetime.js133291895043422571 0
 85D:\website\myResources\node_modules\caniuse-lite\data\features\input-file-multiple.js133291895043422571 0
-42D:\website\myResources\dist\css--main.html133305942758579055 0
+42D:\website\myResources\dist\css--main.html133306304141219471 0
 81D:\website\myResources\node_modules\caniuse-lite\data\features\input-inputmode.js133291895043491692 0
 78D:\website\myResources\node_modules\caniuse-lite\data\features\input-number.js133291895043491692 0
 79D:\website\myResources\node_modules\caniuse-lite\data\features\notifications.js133291895044957102 0
@@ -4597,7 +4596,6 @@
 86D:\website\myResources\node_modules\@swc\helpers\lib\_class_private_field_loose_key.js133291895033877306 0
 70D:\website\myResources\node_modules\@parcel\graph\src\AdjacencyList.js133291895029130655 0
 76D:\website\myResources\node_modules\caniuse-lite\data\features\web-serial.js133291895047384706 0
-46D:\website\myResources\dist\index.f2a26237.css133305942757610073 0
 75D:\website\myResources\node_modules\caniuse-lite\data\features\webcodecs.js133291895047384706 0
 89D:\website\myResources\node_modules\@parcel\utils\test\input\sourcemap\source-root.js.map133291895039001641 0
 71D:\website\myResources\node_modules\caniuse-lite\data\features\webgl.js133291895047384706 0
@@ -4881,6 +4879,9 @@
 68D:\website\myResources\node_modules\@parcel\utils\src\relativeUrl.js133291895037479445 0
 96D:\website\myResources\node_modules\@parcel\optimizer-htmlnano\node_modules\csso\lib\restructure133291895036505876 1
 80D:\website\myResources\node_modules\@parcel\utils\src\replaceBundleReferences.js133291895037555258 0
+92D:\website\myResources\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\LICENSE133291895026447654 0
+65D:\website\myResources\node_modules\@parcel\utils\src\throttle.js133291895037982478 0
+64D:\website\myResources\node_modules\@parcel\utils\src\urlJoin.js133291895038039878 0
 100D:\website\myResources\node_modules\@parcel\optimizer-svgo\node_modules\mdn-data\css\properties.json133291895032542085 0
 62D:\website\myResources\node_modules\@parcel\utils\lib\index.js133291895036425520 0
 61D:\website\myResources\node_modules\@parcel\types\build-ts.js133291895026782808 0
@@ -4949,6 +4950,7 @@
 64D:\website\myResources\node_modules\@lezer\common\dist\tree.d.ts133291895030625103 0
 78D:\website\myResources\node_modules\@parcel\transformer-image\lib\loadSharp.js133291895028233034 0
 83D:\website\myResources\node_modules\@parcel\transformer-image\lib\validateConfig.js133291895029448477 0
+50D:\website\myResources\dist\css--main.fa069a70.css133306304141219471 0
 64D:\website\myResources\node_modules\@parcel\transformer-html\lib133291895029373397 1
 72D:\website\myResources\node_modules\@parcel\source-map\dist\SourceMap.js133291895031615446 0
 68D:\website\myResources\node_modules\@parcel\transformer-html\LICENSE133291895026364336 0
@@ -4969,7 +4971,7 @@
 75D:\website\myResources\node_modules\@parcel\transformer-babel\src\config.js133291895030335534 0
 73D:\website\myResources\node_modules\@parcel\transformer-babel\src\flow.js133291895031296095 0
 72D:\website\myResources\node_modules\@parcel\transformer-babel\src\jsx.js133291895031615446 0
-38D:\website\myResources\dist\index.html133305942757448721 0
+38D:\website\myResources\dist\index.html133306304141219471 0
 86D:\website\myResources\node_modules\@parcel\transformer-babel\src\remapAstLocations.js133291895032011770 0
 85D:\website\myResources\node_modules\@parcel\transformer-babel\lib\BabelTransformer.js133291895029373397 0
 86D:\website\myResources\node_modules\@parcel\transformer-babel\lib\remapAstLocations.js133291895031796415 0
@@ -4990,7 +4992,6 @@
 114D:\website\myResources\node_modules\@parcel\source-map\parcel_sourcemap_node\artifacts\index.linux-arm64-musl.node133291895037398998 0
 93D:\website\myResources\node_modules\@parcel\package-manager\test\fixtures\packages\a\index.js133291895031296095 0
 111D:\website\myResources\node_modules\@parcel\source-map\parcel_sourcemap_node\artifacts\index.linux-x64-gnu.node133291895037796236 0
-48D:\website\myResources\dist\html.dad4b666.js.map133305942758415859 0
 112D:\website\myResources\node_modules\@parcel\source-map\parcel_sourcemap_node\artifacts\index.linux-x64-musl.node133291895038120227 0
 112D:\website\myResources\node_modules\@parcel\source-map\parcel_sourcemap_node\artifacts\index.win32-x64-msvc.node133291895038409790 0
 102D:\website\myResources\node_modules\@parcel\optimizer-svgo\node_modules\svgo\plugins\removeComments.js133291895036099602 0
@@ -5170,7 +5171,6 @@
 102D:\website\myResources\node_modules\@parcel\optimizer-svgo\node_modules\svgo\plugins\collapseGroups.js133291895032011770 0
 110D:\website\myResources\node_modules\@parcel\optimizer-svgo\node_modules\svgo\plugins\convertEllipseToCircle.js133291895032542085 0
 103D:\website\myResources\node_modules\@parcel\optimizer-svgo\node_modules\svgo\plugins\convertPathData.js133291895033061352 0
-53D:\website\myResources\dist\css--01-grid.4fcfceaf.css133305942758225310 0
 106D:\website\myResources\node_modules\@parcel\optimizer-svgo\node_modules\svgo\plugins\convertShapeToPath.js133291895033290032 0
 107D:\website\myResources\node_modules\@parcel\optimizer-svgo\node_modules\svgo\plugins\convertStyleToAttrs.js133291895033397211 0
 84D:\website\myResources\node_modules\@babel\highlight\node_modules\has-flag\readme.md133291895027989214 0
@@ -5755,7 +5755,6 @@
 59D:\website\myResources\node_modules\@parcel\core\src\public133291895039901812 1
 84D:\website\myResources\node_modules\@parcel\fs-search\fs-search.linux-arm64-gnu.node133291895034119940 0
 82D:\website\myResources\node_modules\@parcel\fs-search\fs-search.linux-x64-gnu.node133291895035745529 0
-50D:\website\myResources\dist\index.f2a26237.css.map133305942757610073 0
 83D:\website\myResources\node_modules\@parcel\fs-search\fs-search.linux-x64-musl.node133291895036179931 0
 83D:\website\myResources\node_modules\@parcel\fs-search\fs-search.win32-x64-msvc.node133291895036589685 0
 62D:\website\myResources\node_modules\@parcel\fs-search\index.js133291895026782808 0
@@ -6006,6 +6005,7 @@
 53D:\website\myResources\node_modules\@babel\code-frame133291895028594897 1
 70D:\website\myResources\node_modules\@babel\helper-validator-identifier133291895030411149 1
 60D:\website\myResources\node_modules\@babel\highlight\LICENSE133291895026203457 0
+46D:\website\myResources\dist\index.dfe468a5.css133306304141219471 0
 65D:\website\myResources\node_modules\@babel\highlight\package.json133291895027989214 0
 62D:\website\myResources\node_modules\@babel\highlight\README.md133291895026772742 0
 79D:\website\myResources\node_modules\@babel\highlight\node_modules\color-convert133291895029614051 1
@@ -6059,8 +6059,5 @@
 51D:\website\myResources\node_modules\.bin\terser.ps1133291895048195684 0
 63D:\website\myResources\node_modules\.bin\update-browserslist-db133291895048195684 0
 67D:\website\myResources\node_modules\.bin\update-browserslist-db.ps1133291895048195684 0
-53D:\website\myResources\dist\css--main.8bba6e86.js.map133305942758820033 0
-50D:\website\myResources\dist\css--main.fca15111.css133305942757448721 0
-54D:\website\myResources\dist\css--main.fca15111.css.map133305942757529624 0
-44D:\website\myResources\dist\html.dad4b666.js133305942758335759 0
-47D:\website\myResources\dist\sprite.e70822e0.svg133305942757936796 0
+53D:\website\myResources\dist\css--01-grid.e6a09505.css133306304141219471 0
+51D:\website\myResources\dist\pointRight.f9fbd17e.svg133306304136418889 0

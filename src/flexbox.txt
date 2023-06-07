@@ -1,0 +1,43 @@
+parent container :
+------------
+flex direction : row[] row-revers ecolumn column-reverse
+
+flex-wrap : nowrap [] wrap wrap-reverse
+
+justify-content : flex-start [] flex-end start end left right center space-between space-around space-evenly
+=> works on main axis (x)
+
+align-items : stretch [] flex-start flex-end start self-start end self-end center baseline
+=> works on cross axis (y) || baseline : items are aligned such as their baselines align
+
+align-content : normal [] flex-start flex-end start end space-between space-around space-evenly stretch
+=> only works if the contents in multi-line. works in cross axis (y) between row gap
+
+gap : [row gap] [column gap]
+
+
+----------------------
+
+children elements:
+--------------
+order : [positive integer]
+=> default is probably all to 0
+
+
+
+flex-grow : [positive integer]
+=> default 0 // give permission to particular child to have increase its size
+
+flex-shrink : [positive integer]
+=> default 0 // can be shrinked down
+
+flex-basis : [positive integer]
+=> defines the default size of an element before the remaining space is distributed
+
+[shortcut]
+flex : [flex-grow] [flex-shrink] [flex-basis]
+
+
+
+
+align-self : stretch [] flex-start flex-end start self-start end self-end center baseline

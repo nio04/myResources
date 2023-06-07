@@ -12,7 +12,7 @@
   <body>
     <div class="content-page-container">
       <div class="content-page-content-indexes">
-        <header>everything about grid</header>
+        <header class="content-page-main-header">everything about grid</header>
         <svg>
           <use xlink:href="../img/sprite.svg#grid"></use>
         </svg>
@@ -83,11 +83,11 @@
                     <use xlink:href="../img/sprite.svg#dot"></use>
                   </svg><span class="code-explain-list-wrap-list">may overflow</span>
                 </span>
-                <span class="last-list-separate"></span>
+                <!-- <span class="last-list-separate"></span>
                 fix overflow for <span class="code-explain--code">min-content</span> as applied on
                 <span class="code-explain--code">grid-template-column</span>,
                 makes the <span class="code-explain--code">grid-template-row</span> flexible as
-                having <span class="code-explain--code">min-content</span>
+                having <span class="code-explain--code">min-content</span>  -->
               </span>
             </p>
           </div>
@@ -123,15 +123,21 @@
               <span class="code-explain">
                 <span class="code-explain-header">minmax(first, second)</span>
                 <span class="code-explain-sub-section">
-                  it can not be more than the
+                  <!-- it can not be more than the
                   defined <span class="code-explain--code">max size</span> [initial element size] &
                   it
                   can not be less than the defined <span class="code-explain-code">min size</span>!
+                   -->
+                  usually used in column side. if the container have enough space, children items
+                  will have [second] size. and
+                  when the parent container size keeps decreasing, the children items size will
+                  never be less than the
+                  [first] size.
                 </span>
               </span>
             </p>
           </div>
-          <div class="content-page-header"> <span class="content-header">fit-content()</span>
+          <!-- <div class="content-page-header"> <span class="content-header">fit-content()</span>
             <p class="content">
               <span class="code-template-left">grid-template-column</span>
               <span class="code-template-right">repeat(fit-content, 10rem)</span>
@@ -144,7 +150,7 @@
                 </span>
               </span>
             </p>
-          </div>
+          </div> -->
           <div class="content-page-header"><span class="content-header">auto-fill</span>
             <p class="content">
               <span class="code-template-left">grid-template-column</span>
@@ -152,8 +158,13 @@
               <span class="code-explain">
                 <span class="code-explain-header">auto-fill</span>
                 <span class="code-explain-sub-section">
-                  Fit as many possible columns
-                  as possible on a row, even if they are empty
+                  <!-- Fit as many possible columns
+                  as possible on a row, even if they are empty.  -->
+
+                  used in column side. depends on the provided size, if the container
+                  have extra space than more empty coulmns will be created to fill up the full
+                  width.
+                  i think, its best to ignore this property
                 </span>
               </span>
             </p>
@@ -165,9 +176,11 @@
               <span class="code-explain">
                 <span class="code-explain-header">auto-fit</span>
                 <span class="code-explain-sub-section">
-                  Fit whatever columns there are
+                  <!-- Fit whatever columns there are
                   into the space. Prefer expanding columns to fill space rather
-                  than empty columns
+                  than empty columns  -->
+                  used in column side. with provided size, the children items try
+                  to fit per row
                 </span>
               </span>
             </p>
@@ -390,7 +403,7 @@
               <a href="css--01-grid.html" class="item-link">everything about grid</a>
             </li>
             <li class="item">
-              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+              <a href="css--02-flexbox.html" class="item-link">everything about flexbox</a>
             </li>
             <li class="item">
               <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
