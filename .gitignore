@@ -1,4 +1,6 @@
 .sass-cache/
+.parcel-cache/
+dist/
 *.css.map
 *.sass.map
 *.scss.map
