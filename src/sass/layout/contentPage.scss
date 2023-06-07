@@ -1,3 +1,4 @@
+// CONTENT PAGE
 @use "../abstract/" as abs;
 @use "../base/reset";
 @use "../component/" as compo;
@@ -21,17 +22,6 @@
       font-style: italic;
       padding-left: 8rem;
       @extend .center-me-full;
-
-      @include abs.mediaQuery(tab-land) {
-        font-size: 5rem;
-      }
-      @include abs.mediaQuery(tab-port) {
-        font-size: 4rem;
-      }
-      @include abs.mediaQuery(mobile) {
-        font-size: 3rem;
-        padding-left: 0;
-      }
     }
     svg {
       grid-column: 2 / 3;
@@ -47,17 +37,6 @@
       justify-self: center;
       letter-spacing: 0.4rem;
       font-style: italic;
-
-      @include abs.mediaQuery(tab-port) {
-        justify-self: start;
-        font-size: 3rem;
-        padding-left: 9.5rem;
-      }
-      @include abs.mediaQuery(mob-small) {
-        justify-self: start;
-        padding-left: 2rem;
-        margin-bottom: 15rem;
-      }
     }
     .indexes {
       display: flex;
@@ -70,10 +49,6 @@
         color: black;
         padding-left: 10rem;
         transition: all 1.4s;
-
-        @include abs.mediaQuery(mob-small) {
-          padding-left: 2rem;
-        }
 
         &:hover {
           text-decoration: underline;
@@ -109,8 +84,8 @@
         margin-bottom: 6rem;
         background-color: #0000001f;
         @extend .center-me-full;
+
         .content-page-section-header {
-          // color: abs.$content-page-header-txt;
           letter-spacing: 0.6rem;
           color: black;
           position: relative;
@@ -130,7 +105,14 @@
           }
         }
       }
+
       .content-page-header {
+        border: 1px solid black;
+        margin-top: 1.5rem;
+        text-transform: lowercase;
+        padding: 1.5rem;
+        margin-left: 2rem;
+
         .content-header {
           display: inline-block;
           clip-path: polygon(5.14% 0px, 100% 0%, 96.46% 96.32%, 1.88% 100%);
@@ -140,35 +122,19 @@
           letter-spacing: 3px;
           margin: 2rem 0;
         }
-        border: 1px solid black;
-        margin-top: 1.5rem;
-        text-transform: lowercase;
-        padding: 1.5rem;
-        margin-left: 2rem;
-        // background-color: abs.$color-gray-light;
       }
+
       p ~ p {
         border-top: 3px solid red;
       }
+
       .content {
-        // background-color: abs.$content-page-paragraph;
         margin-left: 2rem;
         margin-bottom: 4rem;
         padding-left: 1rem;
         padding-right: 5rem;
         line-height: 5.5rem;
         font-family: "IBM Plex Mono", monospace;
-
-        @include abs.mediaQuery(tab-land) {
-          margin-left: 0;
-          padding-left: 0;
-          padding-right: 0;
-          line-height: 6.2rem;
-        }
-
-        // @include abs.mediaQuery(mobile) {
-        //   text-align: start;
-        // }
 
         .codes {
           //////////////////// overflow => scroll
@@ -180,7 +146,6 @@
           background-color: #bebebe;
           color: white;
           padding: 0.8rem 1rem;
-          // white-space: nowrap;
         }
         .code-template-right {
           font-family: "Share Tech Mono", monospace;
@@ -188,7 +153,6 @@
           background-color: #bebebe;
           color: white;
           padding: 0.8rem 1rem;
-          // white-space: nowrap;
         }
         .code-explain {
           padding: 0rem 5rem 1rem 5rem;
@@ -199,13 +163,6 @@
           display: block;
           width: 100%;
           position: relative;
-
-          @include abs.mediaQuery(tab-land) {
-            padding: 1rem 0.2rem;
-            margin-left: 0;
-            margin-top: 4rem;
-            line-height: 8rem;
-          }
 
           &-header {
             background-color: #d6d5d5e3;
@@ -250,10 +207,6 @@
             right: 0;
             background-color: abs.$color-gray-light;
             color: abs.$color-black;
-
-            @include abs.mediaQuery(tab-port) {
-              display: none;
-            }
           }
           &-sub-section {
             display: block;
@@ -270,21 +223,6 @@
       grid-template-rows: repeat(auto-fit, minmax(10rem, min-content));
       grid-auto-rows: minmax(100%, min-content);
       gap: 1.3rem;
-
-      @include abs.mediaQuery(tab-land) {
-        grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
-      }
-
-      @include abs.mediaQuery(tab-port) {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      @include abs.mediaQuery(mobile) {
-        grid-template-columns: 1fr;
-        grid-row-gap: 3rem;
-        // justify-items: center;
-        // align-items: center;
-      }
 
       li {
         list-style-type: none;

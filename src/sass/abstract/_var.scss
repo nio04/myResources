@@ -18,8 +18,8 @@ $content-page-paragraph: #ada8a8;
 
 $color-black: black;
 
-$bp-largest: 112.5em; //1800px +
-$bp-large: 75em; //1200px
-$bp-medium: 56.25em; //900px
-$bp-small: 37.5em; //600px
-$bp-small-extra: 25em; //400px
+$bp-largest: 112.5em; //1800px +  [big-desk]
+$bp-large: 75em; //1200px  [tab-land]
+$bp-medium: 56.25em; //900px  [tab-port]
+$bp-small: 37.5em; //600px  [mobile]
+$bp-small-extra: 25em; //400px  [mobile-small]

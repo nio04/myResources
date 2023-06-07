@@ -4,7 +4,7 @@
   display: flex;
 }
 
-.center-me-vertical, .resorces-home-nav-bar ul li .post-date, .resorces-home-nav-bar ul li a:link header, .resorces-home-nav-bar ul li a:visited header, .main-home-resource-header, .content-page-go-to-top-button, .content-page-go-to-top-button a span {
+.center-me-vertical, .main-home-container .main-home-resource-container .main-home-resource ul li a, .resorces-home-nav-bar ul li .post-date, .resorces-home-nav-bar ul li a:link header, .resorces-home-nav-bar ul li a:visited header, .main-home-resource-header, .content-page-go-to-top-button, .content-page-go-to-top-button a span {
   align-items: center;
   display: flex;
 }
@@ -260,6 +260,9 @@ ul li:hover {
 
 @media only screen and (width <= 37.5em) {
   .resource-home-go-back-button {
+    box-shadow: none;
+    border: 1px solid #000;
+    margin-left: 0;
     padding: .5rem 2rem;
   }
 }
@@ -302,7 +305,6 @@ ul li:hover {
   width: 100%;
   text-align: center;
   text-transform: uppercase;
-  color: #fff;
   font-size: 3.6rem;
   text-decoration: none;
   display: block;
@@ -493,25 +495,6 @@ ul li:hover {
   font-style: italic;
 }
 
-@media only screen and (width <= 75em) {
-  .content-page-container .content-page-content-indexes header {
-    font-size: 5rem;
-  }
-}
-
-@media only screen and (width <= 56.25em) {
-  .content-page-container .content-page-content-indexes header {
-    font-size: 4rem;
-  }
-}
-
-@media only screen and (width <= 37.5em) {
-  .content-page-container .content-page-content-indexes header {
-    padding-left: 0;
-    font-size: 3rem;
-  }
-}
-
 .content-page-container .content-page-content-indexes svg {
   height: 10rem;
   width: 10rem;
@@ -527,22 +510,6 @@ ul li:hover {
   font-style: italic;
 }
 
-@media only screen and (width <= 56.25em) {
-  .content-page-container .content-page-content-indexes .section {
-    justify-self: start;
-    padding-left: 9.5rem;
-    font-size: 3rem;
-  }
-}
-
-@media only screen and (width <= 25em) {
-  .content-page-container .content-page-content-indexes .section {
-    justify-self: start;
-    margin-bottom: 15rem;
-    padding-left: 2rem;
-  }
-}
-
 .content-page-container .content-page-content-indexes .indexes {
   flex-direction: column;
   gap: 4.5rem;
@@ -556,12 +523,6 @@ ul li:hover {
   font-size: 3rem;
   text-decoration: none;
   transition: all 1.4s;
-}
-
-@media only screen and (width <= 25em) {
-  .content-page-container .content-page-content-indexes .indexes a {
-    padding-left: 2rem;
-  }
 }
 
 .content-page-container .content-page-content-indexes .indexes a:hover {
@@ -648,15 +609,6 @@ ul li:hover {
   line-height: 5.5rem;
 }
 
-@media only screen and (width <= 75em) {
-  .content-page-container .content-page-main .content-page-section .content {
-    margin-left: 0;
-    padding-left: 0;
-    padding-right: 0;
-    line-height: 6.2rem;
-  }
-}
-
 .content-page-container .content-page-main .content-page-section .content .code-template-left, .content-page-container .content-page-main .content-page-section .content .code-template-right {
   color: #fff;
   background-color: #bebebe;
@@ -674,15 +626,6 @@ ul li:hover {
   line-height: 6rem;
   display: block;
   position: relative;
-}
-
-@media only screen and (width <= 75em) {
-  .content-page-container .content-page-main .content-page-section .content .code-explain {
-    margin-top: 4rem;
-    margin-left: 0;
-    padding: 1rem .2rem;
-    line-height: 8rem;
-  }
 }
 
 .content-page-container .content-page-main .content-page-section .content .code-explain-header {
@@ -735,12 +678,6 @@ ul li:hover {
   transform: scale(.6);
 }
 
-@media only screen and (width <= 56.25em) {
-  .content-page-container .content-page-main .content-page-section .content .code-explain:after {
-    display: none;
-  }
-}
-
 .content-page-container .content-page-main .content-page-section .content .code-explain-sub-section {
   margin-top: 1.6rem;
   display: block;
@@ -752,6 +689,146 @@ ul li:hover {
   grid-auto-rows: minmax(100%, min-content);
   gap: 1.3rem;
   display: grid;
+}
+
+.content-page-container nav ul li {
+  text-align: center;
+  padding: .9rem;
+  list-style-type: none;
+}
+
+.main-home-container {
+  grid-template-rows: 15rem 1fr;
+  gap: 6rem;
+  display: grid;
+}
+
+@media only screen and (width <= 56.25em) {
+  .main-home-container {
+    grid-template-rows: 9rem min-content 1fr;
+  }
+
+  .main-home-container .extra-nav {
+    display: block;
+  }
+}
+
+.main-home-container .main-home-resource-container {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  display: grid;
+}
+
+@media only screen and (width <= 56.25em) {
+  .main-home-container .main-home-resource-container {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+}
+
+.main-home-container .main-home-resource-container .main-home-resource ul {
+  grid-template-rows: repeat(auto-fit, minmax(10rem, min-content));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, max-content));
+  gap: 1.3rem;
+  display: grid;
+}
+
+@media only screen and (width <= 75em) {
+  .main-home-container .main-home-resource-container .main-home-resource ul {
+    grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
+  }
+}
+
+@media only screen and (width <= 56.25em) {
+  .main-home-container .main-home-resource-container .main-home-resource ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (width <= 37.5em) {
+  .main-home-container .main-home-resource-container .main-home-resource ul {
+    grid-row-gap: 3rem;
+    grid-template-columns: 1fr;
+  }
+}
+
+.main-home-container .main-home-resource-container .main-home-resource ul li {
+  padding: .9rem;
+  list-style-type: none;
+}
+
+.resource-home-container {
+  grid-template-rows: 10rem 1fr;
+  padding: 1rem;
+  display: grid;
+}
+
+@media only screen and (width <= 56.25em) {
+  .resource-home-container {
+    padding: 0;
+  }
+}
+
+@media only screen and (width <= 75em) {
+  .content-page-container .content-page-content-indexes header {
+    font-size: 5rem;
+  }
+}
+
+@media only screen and (width <= 56.25em) {
+  .content-page-container .content-page-content-indexes header {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (width <= 37.5em) {
+  .content-page-container .content-page-content-indexes header {
+    padding-left: 0;
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (width <= 56.25em) {
+  .content-page-container .content-page-content-indexes .section {
+    justify-self: start;
+    padding-left: 9.5rem;
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (width <= 37.5em) {
+  .content-page-container .content-page-content-indexes .section {
+    justify-self: start;
+    margin-bottom: 15rem;
+    padding-left: 2rem;
+  }
+
+  .content-page-container .content-page-content-indexes .indexes a {
+    margin: 2rem 0;
+    padding-left: 2rem;
+  }
+}
+
+@media only screen and (width <= 75em) {
+  .content-page-container .content-page-main .content-page-section .content {
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    line-height: 6.2rem;
+  }
+
+  .content-page-container .content-page-main .content-page-section .content .code-explain {
+    margin-top: 4rem;
+    margin-left: 0;
+    padding: 1rem .2rem;
+    line-height: 8rem;
+  }
+}
+
+@media only screen and (width <= 56.25em) {
+  .content-page-container .content-page-main .content-page-section .content .code-explain:after {
+    display: none;
+  }
 }
 
 @media only screen and (width <= 75em) {
@@ -773,10 +850,4 @@ ul li:hover {
   }
 }
 
-.content-page-container nav ul li {
-  text-align: center;
-  padding: .9rem;
-  list-style-type: none;
-}
-
-/*# sourceMappingURL=css--01-grid.806fd5b0.css.map */
+/*# sourceMappingURL=css--01-grid.4fcfceaf.css.map */

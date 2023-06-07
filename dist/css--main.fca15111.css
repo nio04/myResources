@@ -207,6 +207,9 @@ ul li:hover {
 
 @media only screen and (width <= 37.5em) {
   .resource-home-go-back-button {
+    box-shadow: none;
+    border: 1px solid #000;
+    margin-left: 0;
     padding: .5rem 2rem;
   }
 }
@@ -249,7 +252,6 @@ ul li:hover {
   width: 100%;
   text-align: center;
   text-transform: uppercase;
-  color: #fff;
   font-size: 3.6rem;
   text-decoration: none;
   display: block;
@@ -482,4 +484,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=css--main.4fcfceaf.css.map */
+/*# sourceMappingURL=css--main.fca15111.css.map */

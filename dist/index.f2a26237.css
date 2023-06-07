@@ -260,6 +260,9 @@ ul li:hover {
 
 @media only screen and (width <= 37.5em) {
   .resource-home-go-back-button {
+    box-shadow: none;
+    border: 1px solid #000;
+    margin-left: 0;
     padding: .5rem 2rem;
   }
 }
@@ -302,7 +305,6 @@ ul li:hover {
   width: 100%;
   text-align: center;
   text-transform: uppercase;
-  color: #fff;
   font-size: 3.6rem;
   text-decoration: none;
   display: block;
@@ -494,7 +496,7 @@ ul li:hover {
 
 @media only screen and (width <= 56.25em) {
   .main-home-container .main-home-resource-container {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
     gap: 5rem;
   }
 }
@@ -502,7 +504,6 @@ ul li:hover {
 .main-home-container .main-home-resource-container .main-home-resource ul {
   grid-template-rows: repeat(auto-fit, minmax(10rem, min-content));
   grid-template-columns: repeat(auto-fit, minmax(25rem, max-content));
-  grid-auto-rows: minmax(100%, min-content);
   gap: 1.3rem;
   display: grid;
 }

@@ -53,6 +53,9 @@ ul {
 
   @include abs.mediaQuery(mobile) {
     padding: 0.5rem 2rem;
+    margin-left: 0;
+    box-shadow: none;
+    border: 1px solid black;
   }
   @include abs.mediaQuery(mob-small) {
     padding: 0.5rem 1rem;
