@@ -3,3 +3,65 @@
 @use "../abstract/" as abs;
 
 // CONTENT - 01 : git fundamental
+.content-page-container {
+  .content-page-content-indexes {
+    .content-page-main-header-01 {
+      @include abs.mediaQuery(tab-land) {
+        font-size: 5rem;
+      }
+      @include abs.mediaQuery(tab-port) {
+        padding-left: 0;
+      }
+      @include abs.mediaQuery(mob-small) {
+        font-size: 3.3rem;
+      }
+    }
+    svg {
+      @include abs.mediaQuery(tab-land) {
+        justify-self: end;
+      }
+    }
+    .section {
+      @include abs.mediaQuery(tab-land) {
+        margin-left: 4rem;
+        margin-bottom: 5rem;
+      }
+      @include abs.mediaQuery(tab-port) {
+        margin-left: 2rem;
+      }
+      @include abs.mediaQuery(mobile) {
+        font-size: 4rem;
+      }
+    }
+    .indexes {
+      @include abs.mediaQuery(mobile) {
+        justify-content: space-evenly;
+      }
+      a {
+        @include abs.mediaQuery(tab-land) {
+          padding-left: 4rem;
+        }
+        @include abs.mediaQuery(tab-port) {
+          padding-left: 2rem;
+        }
+      }
+    }
+  }
+
+  .content-page-main {
+    .content-page-section {
+      .content {
+        @include abs.mediaQuery(tab-port) {
+          margin-left: 1rem;
+          padding: 1.1rem;
+        }
+        .code-explain {
+          @include abs.mediaQuery(tab-port) {
+            margin-left: 0;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}

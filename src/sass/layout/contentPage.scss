@@ -12,7 +12,8 @@
   .content-page-content-indexes {
     display: grid;
     grid-template-columns: 80% 20%;
-    grid-template-rows: 22rem 10rem minmax(10rem, 40rem);
+    grid-template-rows: 22rem 10rem minmax(10rem, 100vh);
+
     .content-page-main-header {
       grid-column: 1 / -1;
       font-size: 8rem;
@@ -38,21 +39,20 @@
       font-size: 5rem;
       text-transform: uppercase;
       align-self: center;
-      justify-self: center;
+      justify-self: start;
+      margin-left: 10rem;
       letter-spacing: 0.4rem;
       font-style: italic;
     }
     .indexes {
       display: flex;
       flex-direction: column;
-      gap: 4.5rem;
-      &--02 {
-        justify-content: space-around;
-      }
+      // gap: 4.5rem;
+      justify-content: space-around;
       a {
         text-transform: uppercase;
         text-decoration: none;
-        font-size: 3rem;
+        font-size: 2.6rem;
         color: black;
         padding-left: 10rem;
         transition: all 1.4s;
@@ -84,7 +84,7 @@
   .content-page-main {
     .content-page-section {
       font-size: 3rem;
-      margin-bottom: 15rem;
+      margin-bottom: 6rem;
       header {
         text-transform: uppercase;
         padding: 2.5rem 0;

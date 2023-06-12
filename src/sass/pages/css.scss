@@ -5,6 +5,11 @@
 // CONTENT - 01 : GRID
 .content-page-container {
   .content-page-content-indexes {
+    svg {
+      @include abs.mediaQuery(tab-land) {
+        justify-self: end;
+      }
+    }
     .content-page-main-header {
       @include abs.mediaQuery(tab-land) {
         font-size: 5rem;
@@ -19,19 +24,31 @@
     }
 
     .section {
+      @include abs.mediaQuery(tab-land) {
+        margin-left: 4rem;
+      }
       @include abs.mediaQuery(tab-port) {
         justify-self: start;
         font-size: 3rem;
-        padding-left: 9.5rem;
+        margin-left: 0;
       }
       @include abs.mediaQuery(mobile) {
         justify-self: start;
         padding-left: 2rem;
-        margin-bottom: 15rem;
+        margin-bottom: 8rem;
       }
     }
     .indexes {
+      @include abs.mediaQuery(mobile) {
+        justify-content: space-evenly;
+      }
       a {
+        @include abs.mediaQuery(tab-land) {
+          padding-left: 4rem;
+        }
+        @include abs.mediaQuery(tab-port) {
+          padding-left: 0;
+        }
         @include abs.mediaQuery(mobile) {
           margin: 2rem 0;
           padding-left: 2rem;
