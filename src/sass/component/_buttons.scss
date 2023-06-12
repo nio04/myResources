@@ -37,7 +37,7 @@
 }
 
 .content-page-go-to-top-button {
-  background-color: rgba(159, 154, 154, 0.93);
+  background-color: rgba(159, 154, 154, 0.347);
   font-weight: 900;
   border: 5px solid #fff;
   box-sizing: content-box;
@@ -50,6 +50,21 @@
   position: fixed;
   @extend .center-me-vertical;
 
+  @include abs.mediaQuery(tab-land) {
+    font-weight: 400;
+  }
+  @include abs.mediaQuery(tab-port) {
+    width: 13rem;
+  }
+
+  @include abs.mediaQuery(mob-small) {
+    justify-content: center;
+    border-radius: 50%;
+    height: 6rem;
+    width: 6rem;
+    left: calc(100% - 10rem);
+  }
+
   a {
     text-decoration: none;
     display: flex;
@@ -58,12 +73,24 @@
       height: 2rem;
       width: 2rem;
       margin-right: 0.5rem;
+
+      @include abs.mediaQuery(mob-small) {
+        height: 4rem;
+        width: 4rem;
+      }
     }
     span {
       color: black;
       font-size: 1.3rem;
       text-transform: uppercase;
       @extend .center-me-vertical;
+
+      @include abs.mediaQuery(mobile) {
+        text-transform: capitalize;
+      }
+      @include abs.mediaQuery(mob-small) {
+        font-size: 0;
+      }
     }
   }
 }
