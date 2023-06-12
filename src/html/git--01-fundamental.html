@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../sass/pages/git.scss">
+    <title>git : fundamental</title>
+  </head>
+
+  <body>
+    <div class="content-page-container">
+      <div class="content-page-content-indexes">
+        <header class="content-page-main-header">everything about grid</header>
+        <svg>
+          <use xlink:href="../img/sprite.svg#grid"></use>
+        </svg>
+        <div class="section">section</div>
+        <div class="indexes">
+          <a href="#content-index-veryBasic">very basic</a>
+          <a href="#content-index-staging">staging</a>
+          <a href="#content-index-commit">committing</a>
+          <a href="#content-index-branch">branch</a>
+          <a href="#content-index-normalGitFlow">normal git flowing</a>
+        </div>
+      </div>
+
+      <!-- main home button -->
+      <div class="content-page-home-button">
+        <a href="index.html">
+          <svg>
+            <use xlink:href="../img/sprite.svg#home"></use>
+          </svg>
+          <span>main home</span>
+        </a>
+      </div>
+
+      <main class="content-page-main">
+        <section class="content-page-section" id="content-index-veryBasic">
+          <header><span class="content-page-section-header">very basic </span></header>
+          <div class="content-page-header"><span class="content-header">enable git</span>
+            <p class="content">
+              <span class="code-template-left">git init</span>
+            </p>
+          </div>
+          <div class="content-page-header"><span class="content-header">status checking git</span>
+            <p class="content">
+              <span class="code-template-left">git status</span>
+            </p>
+          </div>
+          <div class="content-page-header"><span class="content-header">log checking git</span>
+            <p class="content">
+              <span class="code-template-left">git log</span> or
+              <span class="code-template-left">git log --oneline</span>
+            </p>
+          </div>
+        </section>
+        <!-- adding hover [go to top] button -->
+        <div class="content-page-go-to-top-button">
+          <a href="#">
+            <svg>
+              <use xlink:href="../img/sprite.svg#to-top"></use>
+            </svg>
+            <span>go to top</span>
+          </a>
+        </div>
+
+        <section class="content-page-section" id="content-index-staging">
+          <header><span class="content-page-section-header">staging </span></header>
+          <p class="content">
+            <span class="code-template-left">git add [fileName]</span>
+            <span class="code-explain">
+              <span class="code-explain-sub-section">
+                staging the only provided file
+              </span>
+            </span>
+          </p>
+          <p class="content">
+            <span class="code-template-left">git add [fileName1] [fileName2]</span>
+            <span class="code-explain">
+              <span class="code-explain-sub-section">
+                staging multiple provided file
+              </span>
+            </span>
+          </p>
+          <p class="content">
+            <span class="code-template-left">git add *</span>
+            <span class="code-explain">
+              <span class="code-explain-sub-section">
+                stage all kinds of ustaged files
+              </span>
+            </span>
+          </p>
+          <p class="content">
+            <span class="code-template-left">git commit -am "commit message"</span>
+            <span class="code-explain">
+              <span class="code-explain-sub-section">
+                stage and commit at the same time!
+              </span>
+            </span>
+          </p>
+        </section>
+
+        <section class="content-page-section" id="content-index-commit">
+          <header><span class="content-page-section-header">commit</span></header>
+          <p class="content">
+            <span class="code-template-left">git commit -m "commit message"</span>
+            <span class="code-explain">
+              <span class="code-explain-sub-section">
+                commit the staged file with a message
+              </span>
+            </span>
+          </p>
+          <p class="content">
+            <span class="code-template-left">git commit -am "commit message"</span>
+            <span class="code-explain">
+              <span class="code-explain-sub-section">
+                stage and commit with message at the same time!
+              </span>
+            </span>
+          </p>
+        </section>
+
+        <section class="content-page-section" id="content-index-branch">
+          <header><span class="content-page-section-header">branch</span></header>
+          <div class="content-page-header"><span class="content-header">create branch</span>
+            <p class="content">
+              <span class="code-template-left">git branch [branch name]</span>
+              <span class="code-explain">
+                <span class="code-explain-sub-section">
+                  create a new branch without double quote
+                </span>
+              </span>
+            </p>
+          </div>
+          <div class="content-page-header"><span class="content-header">view all braches</span>
+            <p class="content">
+              <span class="code-template-left">git branch</span>
+            </p>
+          </div>
+          <div class="content-page-header"><span class="content-header">switching branch</span>
+            <p class="content">
+              <span class="code-template-left">git switch [branch name]</span>
+            </p>
+          </div>
+          <div class="content-page-header"><span class="content-header">delete branch : not
+              forcing</span>
+            <p class="content">
+              <span class="code-template-left">git branch -d [branch name]</span>
+              <span class="code-explain">
+                <span class="code-explain-sub-section">
+                  if the branch is not merged and get delete command, we will get a warning
+                </span>
+              </span>
+            </p>
+          </div>
+          <div class="content-page-header"><span class="content-header">delete branch :
+              forcing</span>
+            <p class="content">
+              <span class="code-template-left">git branch -D [branch name]</span>
+              <span class="code-explain">
+                <span class="code-explain-sub-section">
+                  ignore branch delete warning
+                </span>
+              </span>
+            </p>
+          </div>
+          <div class="content-page-header"><span class="content-header">rename branch</span>
+            <p class="content">
+              <span class="code-template-left">git branch -m [new branch name]</span>
+              <span class="code-explain">
+                <span class="code-explain-sub-section">
+                  stay on that branch, you are renaming to
+                </span>
+              </span>
+            </p>
+          </div>
+          <div class="content-page-header"><span class="content-header">Heads up!!!</span>
+            <p class="content">
+              <span class="code-explain">
+                <span class="code-explain-sub-section">
+                  make sure to check! before switching branch, if the base branch have any unstaged
+                  file that switching to branch doesnt have, then this unstaged file will follw to
+                  swiching branch. so, make sure to stage files, before switching branch
+                </span>
+              </span>
+            </p>
+          </div>
+        </section>
+
+
+
+        <section class="content-page-section" id="content-index-normalGitFlow">
+          <header><span class="content-page-section-header">normal git flowing</span></header>
+          <p class="content">
+            <span class="code-explain">
+              <span class="code-explain-list-wrap">
+                <svg>
+                  <use xlink:href="../img/sprite.svg#dot"></use>
+                </svg><span class="code-explain-list-wrap-list">very first, we check, if our working
+                  directory have a git repository with <span class="code-explain--code">git
+                    log</span></span>
+              </span>
+
+
+              <span class="code-explain-list-wrap">
+                <svg>
+                  <use xlink:href="../img/sprite.svg#dot"></use>
+                </svg><span class="code-explain-list-wrap-list">if no git repo is found, then create
+                  a repo by <span class="code-explain--code">git init</span></span>
+              </span>
+
+              <span class="code-explain-list-wrap">
+                <svg>
+                  <use xlink:href="../img/sprite.svg#dot"></use>
+                </svg><span class="code-explain-list-wrap-list">now there are three stages on git.
+                  (1) working directory. (2) staging area. (3) commit</span>
+              </span>
+
+              <span class="code-explain-list-wrap">
+                <svg>
+                  <use xlink:href="../img/sprite.svg#dot"></use>
+                </svg><span class="code-explain-list-wrap-list">for git to have track on the working
+                  directory files, we need to push our files to staging area by <span
+                    class="code-explain--code">git add *fileName*</span></span>
+              </span>
+              <span class="code-explain-list-wrap">
+                <svg>
+                  <use xlink:href="../img/sprite.svg#dot"></use>
+                </svg><span class="code-explain-list-wrap-list">after staging our working file, we
+                  will push this staged file to commit area. so that, git can keep tracks of all
+                  commited files. to commit file <span class="code-explain--code">git commit -m
+                    "commit message"</span> </span>
+              </span>
+              <span class="code-explain-list-wrap">
+                <svg>
+                  <use xlink:href="../img/sprite.svg#dot"></use>
+                </svg><span class="code-explain-list-wrap-list">now lets say, we want to have huge
+                  changes in our current working file or distributing works between team
+                  members. for that we need to have a branch!!! <span class="code-explain--code">git
+                    branch [branch name]</span></span>
+              </span>
+              <span class="code-explain-list-wrap">
+                <svg>
+                  <use xlink:href="../img/sprite.svg#dot"></use>
+                </svg><span class="code-explain-list-wrap-list">now lets switch to another branch!
+                  to get all the branches from the repo, <span class="code-explain--code">git
+                    branch</span> and to switch another branch <span class="code-explain--code">git
+                    switch [another branch name]</span></span>
+              </span>
+              <span class="code-explain-list-wrap">
+                <svg>
+                  <use xlink:href="../img/sprite.svg#dot"></use>
+                </svg><span class="code-explain-list-wrap-list">after working on new branch, lets
+                  say, we want to merge this new branch to our main branch. first switch to our main
+                  branch then <span class="code-explain--code">git merge [new branch name with new
+                    content]</span> - this process is known as fast-forward merge. to get all the
+                  info of merging, <a href="#">click here</a> </span>
+              </span>
+              <span class="code-explain-list-wrap">
+                <svg>
+                  <use xlink:href="../img/sprite.svg#dot"></use>
+                </svg><span class="code-explain-list-wrap-list">[[add info about how to push git
+                  repo to github repo]]</span>
+              </span>
+            </span>
+          </p>
+
+        </section>
+
+      </main>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,91 @@
+/// -- enable git
+## git init
+
+
+/// -- check git status
+## git status
+
+
+/// -- staging area :
+## git add file1
+## git add file1 file2
+## git add .
+## git commit -am "commit message"
+[shortcut of staging and commiting]
+
+
+/// -- commiting area :
+## git commit -m "commit msg"
+## git commit -am "commit message"
+[shortcut of staging and commiting]
+
+
+/// -- getting git log
+## git log
+## git log --oneline
+
+
+-----------------------------
+
+/// -- branch :::
+--before switching branch, if the base branch have a new file that the switching to branch doesnt have & if that file is not staged. then this unstaged file will follow to new branch
+
+
+__create a new branch
+## git branch [branch-name-withNoSpace]
+
+__view all existing branch
+## git branch
+
+__switch to another branch
+## git switch [exisiting branch name]
+
+__create a new branch & switch instantly
+## git switch -c [newBranchName]
+
+__delete a branch
+## git branch -d [branch name]
+-- if we hadn't merge this new branch with new contents to our base branch, then git wil popup a warning message
+
+
+## git branch -D [branch name]
+-- this -D property force delete a branch! you cant be on the branch, that you are deleting. go somewhere else
+
+__rename a branch
+## git branch -m [branch name]
+-- you have to be on that branch, you are renaming to!
+
+
+
+
+-----------------------------
+/*
+/// -- merging
+
+//### fast-forward : this fast-forward merge term is used when we want to merge our newly branch to our old branch & the old branch doesnt have any new commit from the moment the newly branch were created
+
+## git switch master
+## git merge [branch name]
+
+-- first, we switched to the branch we want to merged into and then we give the branch name to begin merge operation
+
+
+
+//###not-fast-forward[no conflict] : when our old branch have some more commit, that our new branch doesn't have and then if we want to merge our new branch to old branch :: its called not fast-forward merging operation
+
+## git switch master
+## git merge [branch name]
+
+-- first, we switched to the branch we want to merged into and then we give the branch name and then git will auto prompt us to give a commit message name and after the name has been given, then the merging operation will be successful
+
+
+//###not-fast-forward[conflict] : when we want to merge two branches that are conflicted. first, we have to fix the conflict issue manually and then stage and commit and lastly merge the branch again.
+
+[<<<<<<<<] :: this is our base branch content area. where we wanted to merged into
+[>>>>>>>>] :: this is the incoming branch content area. where the content we want to merge
+
+## git switch master
+## git merge [branch name]
+---conflict error popped up! we fixed it & staged it & commit it & merge again.
+
+*/
