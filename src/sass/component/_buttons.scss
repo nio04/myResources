@@ -48,16 +48,13 @@
   left: calc(100% - 15rem);
   right: 0;
   position: fixed;
-  @extend .center-me-vertical;
+  @extend .center-me-full;
 
   @include abs.mediaQuery(tab-land) {
     font-weight: 400;
   }
-  @include abs.mediaQuery(tab-port) {
-    width: 13rem;
-  }
-
-  @include abs.mediaQuery(mob-small) {
+  @include abs.mediaQuery(mobile) {
+    left: calc(100% - 12rem);
     justify-content: center;
     border-radius: 50%;
     height: 6rem;
@@ -74,21 +71,19 @@
       width: 2rem;
       margin-right: 0.5rem;
 
-      @include abs.mediaQuery(mob-small) {
+      @include abs.mediaQuery(mobile) {
         height: 4rem;
         width: 4rem;
+        margin: 0;
       }
     }
     span {
       color: black;
       font-size: 1.3rem;
       text-transform: uppercase;
-      @extend .center-me-vertical;
+      @extend .center-me-full;
 
       @include abs.mediaQuery(mobile) {
-        text-transform: capitalize;
-      }
-      @include abs.mediaQuery(mob-small) {
         font-size: 0;
       }
     }

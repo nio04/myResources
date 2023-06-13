@@ -228,8 +228,6 @@
     ul {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(25rem, max-content));
-      grid-template-rows: repeat(auto-fit, minmax(10rem, min-content));
-      // grid-auto-rows: minmax(100%, min-content);
       gap: 1.3rem;
 
       li {

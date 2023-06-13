@@ -85,11 +85,12 @@
   nav {
     ul {
       @include abs.mediaQuery(tab-land) {
-        grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
+        grid-template-columns: repeat(2, minmax(27rem, 1fr));
       }
 
       @include abs.mediaQuery(tab-port) {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        grid-row-gap: 3rem;
       }
 
       @include abs.mediaQuery(mobile) {
