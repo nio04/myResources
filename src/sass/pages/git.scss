@@ -6,6 +6,9 @@
 .content-page-container {
   .content-page-content-indexes {
     .content-page-main-header-01 {
+      padding-left: 0;
+      font-size: 7rem;
+
       @include abs.mediaQuery(tab-land) {
         font-size: 5rem;
       }

@@ -55,6 +55,8 @@
         color: black;
         padding-left: 10rem;
         transition: all 1.4s;
+        display: flex;
+        align-items: center;
 
         &:hover {
           text-decoration: underline;
