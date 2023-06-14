@@ -24,9 +24,6 @@
       padding-left: 8rem;
       @extend .center-me-full;
 
-      &-02 {
-        font-size: 4rem;
-      }
     }
     svg {
       grid-column: 2 / 3;
@@ -78,6 +75,10 @@
           background-color: gray;
           margin-left: 2rem;
         }
+
+        span{
+          letter-spacing: .1rem;
+        }
       }
     }
   }
@@ -89,7 +90,7 @@
       header {
         text-transform: uppercase;
         padding: 2.5rem 0;
-        margin-bottom: 6rem;
+        margin: 6rem 0;
         background-color: #0000001f;
         @extend .center-me-full;
 
@@ -103,12 +104,9 @@
             content: "";
             background-color: #fff;
             position: absolute;
-            top: -4rem;
-            left: -2rem;
-            bottom: -5rem;
-            height: 90%;
-            width: 120%;
-            padding: 5rem;
+            top: -2.5rem;
+            width: 100%;
+            padding-bottom: 8.5rem;
             z-index: -1;
           }
         }
@@ -202,6 +200,20 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(25rem, max-content));
       gap: 1.3rem;
+
+      @include abs.mediaQuery(tab-land) {
+        grid-template-columns: repeat(2, minmax(27rem, 1fr));
+      }
+
+      @include abs.mediaQuery(tab-port) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 3rem;
+      }
+
+      @include abs.mediaQuery(mobile) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 3rem;
+      }
 
       li {
         list-style-type: none;

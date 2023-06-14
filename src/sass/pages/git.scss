@@ -1,6 +1,7 @@
 // ALL git CONTENT PAGE DESIGN TABLE
 @use "../layout/" as layout;
 @use "../abstract/" as abs;
+@use "../component/" as comp;
 
 // CONTENT - 01 : git fundamental
 .content-page-container {
@@ -65,6 +66,17 @@
           }
         }
       }
+    }
+  }
+}
+
+
+// CONTENT :: 02 - MERGE
+.content-page-container {
+  .content-page-content-indexes {
+    .content-page-main-header-02 {
+      font-size: 3.9rem;
+      padding: 0;
     }
   }
 }
