@@ -1,0 +1,32 @@
+git stash hide our works from staged & unstaged area. so that we can switch to another branch, without having to worry about, conflict warning or unstaged works follow to another branch
+
+when we add works in a branch and if we switch to another branch before commit.two things will happen
+
+1/ if no conflict was found :: the new works will be follow to the switched branch
+
+2/ if conflict was found :: git wont let me switch branch
+
+
+
+////////
+when no conflict were found ::
+if there were no conflict and unstaged works exist. then when we switch branch, our unstaged works follow the branch. to prevent this 
+
+##//to stash
+## git stash
+##//to unstash
+## git stash pop
+
+// note :: the following works on branch is not permanent. when we commit the works from our working branch, all the follow up works will be gone!!!
+
+
+////////
+when conflict found ::
+we dont want to commit our current works but wanting to switch branch 
+
+## //to stash changes
+## git stash
+## //to unstash changes
+## git stash pop
+
+

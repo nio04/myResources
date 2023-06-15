@@ -1,0 +1,40 @@
+[----] means old file content [file name = a]
+[+++] means new file content [file name = ]
+
+
+/*
+////before stage & working directory 
+## git diff
+-- before staging (git add .) the file, we can compare codes from last commit & working directory
+@@ note, to see output from this code, the file needed to be commit at least once
+
+*/
+
+
+//// after stage & last commit
+## git diff HEAD
+-- after staging (git add .) the file, we can compare code from the staged area to last commit 
+@@ note : stage & unstage file both shows the output by this command from the HEAD (we can see the HEAD from [git log])
+
+
+
+/// only show staged changes
+## git diff --staged
+-- show difference between last commit & the staging area
+
+
+
+/// see changes in a specific file
+## git diff HEAD [file path/file name]
+-- by giving HEAD property, this will show us changes from last commit to staging & un-staging area on working directory
+
+
+/// compare changes across branches
+## git diff [first branch name]..[second branch name]
+-- ORDER MATTERS!!! here, [first branch] changes will have (-) && [second branch] changes fill will have (+)
+@@explain - [first branch] means, from where to look for changes. [second branch] means, which file to compare 
+
+
+/// compare changes across commits
+## git diff [first commit hash]..[second commit hash]
+-- ORDER MATTERS!!! [first commit] will be like a book, where we will compare our changes to current/another commit
