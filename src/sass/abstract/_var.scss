@@ -1,23 +1,22 @@
-$color-primary: green;
-$color-primary-light: rgb(129, 233, 129);
-$color-primary-dark: rgb(43, 102, 43);
+// font-family
+$primary : 'Phudu',
+serif; //300, 400
+$secondary: 'Hahmlet', serif; //500, 700
 
-$color-white: #fff;
-$color-white-gray: rgb(216, 211, 211);
-$color-white-transparent: rgba(255, 255, 255, 0.752);
+$tertiary : 'Oxanium',
+cursive; // 400, 600
 
-$color-gray: gray;
-$color-gray-light: rgba(203, 199, 199, 0.938);
-// $color-gray-transparent-dark: rgba(213, 211, 211, 0.389);
-$color-gray-transparent-dark: #3e383830;
-$color-gray-transparent-light: rgba(240, 240, 240, 0.426);
-$color-gray-dark: rgb(94, 93, 93);
+$content : 'Exo 2',
+sans-serif; //200, 400, 600, 900
 
-$content-page-header-txt: #e1b9b9;
-$content-page-paragraph: #ada8a8;
+$code : 'Source Code Pro',
+monospace; //600
 
-$color-black: black;
+$general : 'Pathway Extreme',
+sans-serif; //200, 400, 600
 
+//////////
+/// media query break point
 $bp-largest: 112.5em; //1800px +  [big-desk]
 $bp-large: 75em; //1200px  [tab-land]
 $bp-medium: 56.25em; //900px  [tab-port]

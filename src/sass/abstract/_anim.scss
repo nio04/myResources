@@ -1,0 +1,145 @@
+@keyframes slideToRight {
+  0% {
+    transform: translateX(-5rem);
+    opacity: 0;
+    color: gray;
+  }
+
+  80% {
+    transform: translateX(1.6rem);
+  }
+
+  100% {
+    transform: translate(0);
+    opacity: 1;
+    color: black;
+  }
+}
+
+@keyframes slideToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+
+  80% {
+    transform: translateX(-1.6rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  50% {
+    opacity: .6;
+    transform: scaleY(1.3);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes dropAndBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+
+  40% {
+    transform: translate(0);
+  }
+
+  60% {
+    transform: translateY(-1.5rem);
+  }
+
+  70% {
+    transform: translate(0);
+  }
+
+  80% {
+    transform: translateY(-.5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rainbowZoomIn {
+  0% {
+    color: gray;
+    opacity: .17;
+  }
+
+  17% {
+    color: blue;
+    opacity: .34;
+  }
+
+  34% {
+    color: green;
+    opacity: .51;
+  }
+
+  51% {
+    color: yellow;
+    opacity: .68;
+  }
+
+  68% {
+    color: white;
+    opacity: .85;
+  }
+
+  85% {
+    color: red;
+    opacity: .95;
+  }
+
+  100% {
+    color: black;
+    opacity: 1;
+  }
+}
+
+@keyframes flip {
+  0% {
+    opacity: 0.1;
+  }
+
+  10% {
+    opacity: .4;
+    transform: skewY(180deg);
+  }
+
+  90% {
+    opacity: .8;
+  }
+
+  100% {
+    opacity: 1;
+    transform: skew(0);
+  }
+}

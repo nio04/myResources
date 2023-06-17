@@ -31,7 +31,7 @@
         text-decoration: none;
         text-transform: uppercase;
         font-size: 3.6rem;
-        color: abs.$color-black;
+        color: black;
 
         @include abs.mediaQuery(mobile) {
           font-size: 3rem;
@@ -110,7 +110,7 @@
       grid-row-gap: 1.9rem;
       grid-column-gap: 1.3rem;
 
-      background-color: abs.$color-gray-transparent-dark;
+      background-color: gray;
       list-style-type: none;
       padding: 2rem 1.2rem;
 
@@ -134,7 +134,7 @@
 
         height: 5rem;
         width: 5rem;
-        fill: abs.$color-black;
+        fill: black;
         border-radius: 50%;
 
         @include abs.mediaQuery(tab-port) {
@@ -154,8 +154,8 @@
         font-size: 1rem;
         padding: 0.8rem 1.2rem;
         text-transform: uppercase;
-        background-color: abs.$color-gray-transparent-dark;
-        color: abs.$color-black;
+        background-color: gray;
+        color: black;
         clip-path: polygon(3% 0, 100% 0%, 97% 100%, 0% 100%);
 
         @include abs.mediaQuery(tab-port) {
@@ -176,8 +176,8 @@
         font-size: 1.6rem;
         padding: 0.2rem 0.6rem;
         word-spacing: 0.4rem;
-        background-color: abs.$color-gray-transparent-dark;
-        color: abs.$color-black;
+        background-color: gray;
+        color: black;
         clip-path: polygon(3% 0, 100% 0%, 97% 100%, 0% 100%);
         @extend .center-me-vertical;
       }
@@ -188,8 +188,8 @@
         grid-row: 2 / 3;
 
         text-decoration: none;
-        background-color: abs.$color-gray-transparent-dark;
-        color: abs.$color-black;
+        background-color: gray;
+        color: black;
         font-size: 2.2rem;
         padding-left: 1.6rem;
         line-height: 3.5rem;
@@ -212,16 +212,15 @@
 
         padding: 0.3rem 1.7rem;
         text-align: justify;
-        // color: abs.$color-white;
         font-size: 2rem;
         text-transform: capitalize;
         line-height: 3rem;
-        background-color: abs.$color-gray-transparent-dark;
-        color: abs.$color-black;
+        background-color: gray;
+        color: black;
       }
 
       &:hover {
-        background-color: abs.$color-gray-transparent-light;
+        background-color: gray;
       }
     }
   }
@@ -236,6 +235,9 @@
   position: fixed;
   border: 1px solid gray;
   background-color: rgba(255, 255, 255, 0.332);
+  animation-name: fadeIn;
+  animation-duration: 4s;
+  animation-delay: .1s;
 
   @include abs.mediaQuery(mobile) {
     width: 100%;
@@ -246,9 +248,14 @@
     font-weight: 900;
     color: black;
     background-color: rgba(255, 255, 255, 0.332);
+    transition: all .4s;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    &:hover {
+      background-color: rgba(231, 231, 231, 0.251);
+    }
 
     svg {
       height: 3rem;
@@ -271,6 +278,15 @@
       font-size: 2.5rem;
       padding-right: 2rem;
       text-decoration: none;
+      transition: all .4s ease-in-out;
+
+      &:hover {
+        transform: translateY(-2px) scale(1.2);
+      }
+
+      &:active {
+        transform: translate(0);
+      }
 
       @include abs.mediaQuery(mobile) {
         font-size: 0;
@@ -288,14 +304,21 @@
   grid-template-rows: 22rem 10rem minmax(10rem, 100vh);
 
   header {
+    font-family: abs.$primary;
     grid-column: 1 / -1;
     font-size: 8rem;
     text-transform: uppercase;
-    letter-spacing: 0.3rem;
-    word-spacing: 0.4rem;
-    font-style: italic;
+    letter-spacing: 0.8rem;
+    word-spacing: 0.7rem;
+    // font-style: italic;
     padding-left: 8rem;
     @extend .center-me-full;
+
+    animation-name: rainbowZoomIn;
+    animation-duration: 4s;
+    animation-delay: .2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
 
   }
 
@@ -305,6 +328,9 @@
     justify-self: center;
     height: 10rem;
     width: 10rem;
+    animation-name: slideToLeft;
+    animation-duration: 2s;
+    animation-delay: .2s;
   }
 
   .section {
@@ -315,12 +341,20 @@
     margin-left: 10rem;
     letter-spacing: 0.4rem;
     font-style: italic;
+
+    animation-name: slideToLeft;
+    animation-duration: 2s;
+    animation-delay: .2s;
   }
 
   .indexes {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
+    animation-name: slideToRight;
+    animation-duration: 2s;
+    animation-delay: .2s;
 
     a {
       text-transform: uppercase;
@@ -332,9 +366,9 @@
       display: flex;
       align-items: center;
 
-      &:hover {
-        text-decoration: underline;
-      }
+      // &:hover {
+      //   text-decoration: underline;
+      // }
 
       &::after {
         content: "";
@@ -357,6 +391,13 @@
 
       span {
         letter-spacing: .1rem;
+        transition: all .4s;
+
+        &:hover {
+          opacity: .6s;
+          color: gray;
+          transform: scale(1.1);
+        }
       }
     }
   }
@@ -376,7 +417,7 @@
     word-spacing: 2.5rem;
     letter-spacing: 0.5rem;
     clip-path: polygon(3% 0, 100% 0%, 97% 100%, 0% 100%);
-    background-color: abs.$color-gray-transparent-dark;
+    background-color: gray;
     @extend .center-me-full;
   }
 
@@ -389,7 +430,7 @@
 
     ul {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(25rem, max-content));
+      grid-template-columns: repeat(auto-fit, minmax(35rem, max-content));
       gap: 1.3rem;
 
       @include abs.mediaQuery(tab-land) {

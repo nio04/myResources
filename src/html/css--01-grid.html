@@ -208,7 +208,7 @@
                 grid-template-row : [define row size]
               </code>
             </pre>
-            <span class="code-explain">
+            <span class="code-explain util-split-bottom">
               <!-- <span class="code-explain-header">grid-template-row</span> -->
               <span class="code-explain-sub-section">
                 define how many <span class="code-explain--code">row</span> needed
@@ -220,7 +220,7 @@
               grid-template-row : [first-start] 1fr [first-end second-start] 10rem [second-end];
                 </code>
             </pre>
-            <span class="code-explain">
+            <span class="code-explain  util-split-bottom">
               <span class="code-explain-sub-section">naming grid template rows</span>
             </span>
             <span class="content-header">justify-items</span>
@@ -229,7 +229,7 @@
               justify-items : stretch[default] center | end | start;
               </code>
             </pre>
-            <span class="code-explain">
+            <span class="code-explain  util-split-bottom">
               <!-- <span class="code-explain-header"></span> -->
               <span class="code-explain-sub-section"> apply effects on <span class="code-explain--code">main
                   axis </span></span>
@@ -240,7 +240,7 @@
                 justify-content : stretch | start | end | center | space-around | space-between |space-evenly;
                   </code>
             </pre>
-            <span class="code-explain">
+            <span class="code-explain ">
               <span class="code-explain-sub-section">when the total size of grid is less
                 than the container size... then this this property works for <span class="code-explain--code">main
                   axis (x)</span></span>
@@ -254,7 +254,7 @@
               grid-template-column : [define column size];
                 </code>
             </pre>
-            <span class="code-explain">
+            <span class="code-explain  util-split-bottom">
               <span class="code-explain-sub-section">
                 define how many <span class="code-explain--code">column</span> needed
               </span>
@@ -265,7 +265,7 @@
               align-items : stretch [default] | start | end | center | baseline;
               </code>
             </pre>
-            <span class="code-explain">
+            <span class="code-explain  util-split-bottom">
               <span class="code-explain-sub-section">
                 apply effect on <span class="code-explain--code">cross axis / verticle side</span>
               </span>
@@ -277,14 +277,14 @@
               align-content : stretch | start | end | center | space-between | space-around | space-evenly
                 </code>
             </pre>
-            <span class="code-explain">
+            <span class="code-explain ">
               <span class="code-explain-sub-section">when the total size of grid is less
                 than the container size... then this this property works for <span class="code-explain--code">cross
                   axis (y)</span> </span>
             </span>
           </div>
 
-          <div class="content-area"> <span class="content-header">other properties for
+          <div class="content-area"> <span class="content-header util-center">other properties for
               parent container</span>
             <br>
             <span class="content-header">gap</span>
@@ -293,8 +293,8 @@
                 gap : [row gap] [Column gap];
                 </code>
             </pre>
-            <span class="code-explain">
-              <span class="code-explain-sub-section"> shorthand property for
+            <span class="code-explain util-split-bottom">
+              <span class="code-explain-sub-section "> shorthand property for
                 <span class="code-explain--code">row-gap</span> and <span class="code-explain--code">column gap</span>
               </span>
             </span>
@@ -304,7 +304,7 @@
               grid-auto-rows : [size];
                 </code>
             </pre>
-            <span class="code-explain">
+            <span class="code-explain util-split-bottom">
               <span class="code-explain-sub-section">
                 define height for implicit cell for <span class="code-explain--code">row
                   side</span>
@@ -316,7 +316,7 @@
               grid-auto-columns : [size];
                 </code>
             </pre>
-            <span class="code-explain">
+            <span class="code-explain util-split-bottom">
               <span class="code-explain-sub-section">
                 define width for implicit cell for <span class="code-explain--code">column
                   side</span>
@@ -328,7 +328,7 @@
               grid-auto-flow : row[default] | column | row dense | column dense
                 </code>
             </pre>
-            <span class="code-explain">
+            <span class="code-explain ">
               <span class="code-explain-sub-section">
                 shorthand for <span class="code-explain--code">grid-auto-row</span> property and
                 <span class="code-explain--code">grid-auto-columns</span> property
@@ -338,7 +338,7 @@
         </section>
         <section id="content-index-childrenItems">
           <header><span>children items</span></header>
-          <div class="content-area"><span class="content-header">children items</span>
+          <div class="content-area">
             <br>
             <span class="content-header">grid-row</span>
             <pre>
@@ -346,7 +346,7 @@
               grid-row : [row-start-line] / [row-end-line]
                 </code>
             </pre>
-            <span class="code-explain">
+            <span class="code-explain util-split-bottom">
               <span class="code-explain-sub-section">
                 define <span class="code-explain--code">row height</span> for grid children
                 item</span>
@@ -357,7 +357,7 @@
               grid-column : [col-start-line] / [col-end-line];
                 </code>
             </pre>
-            <span class="code-explain">
+            <span class="code-explain util-split-bottom">
               <span class="code-explain-sub-section">
                 define <span class="code-expalin--code">column width</span> for grid children item
               </span>
@@ -368,7 +368,7 @@
               justify-self : stretch [default] | start | end | center;
                 </code>
             </pre>
-            <span class="code-explain">
+            <span class="code-explain util-split-bottom">
               <span class="code-explain-sub-section">
                 override parent container <span class="code-explain--code">justify items</span>
                 [main-axis] definition
@@ -395,7 +395,7 @@
           <div class="content-area"><span class="content-header">explaining useful
               template</span>
             <br>
-            <span class="content-header">grid-template-column</span>
+            <!-- <span class="content-header">grid-template-column</span> -->
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
               grid-template-column : repeat(auto-fit, minmax(min-content, 25rem));
@@ -420,7 +420,7 @@
             </pre>
 
           </div>
-          <div class="content-area"><span class="content-header">famous snippets</span>
+          <div class="content-area util-split-bottom"><span class="content-header">famous snippets</span>
             <pre>
               <code class="language-css match-braces rainbow-braces">
               grid-template-columns : repeat(auto-fill, minmax(200px, 1fr));
@@ -432,7 +432,7 @@
 
 
       <!-- all the other css posts -->
-      <div class="content-page-indexes" id="bottom-side">
+      <div class="content-page-indexes util-margin-top" id="bottom-side">
         <header>css indexes</header>
         <nav>
           <ul>

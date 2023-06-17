@@ -1,7 +1,7 @@
 @use "../abstract/" as abs;
 
 .main-header {
-  color: abs.$color-black;
+  color: black;
   text-transform: uppercase;
   grid-column: 1 / -1;
 
@@ -20,7 +20,7 @@
       15% 100%,
       15% 85%,
       0% 85%);
-  border: 3rem solid abs.$color-black;
+  border: 3rem solid black;
 
   letter-spacing: 0.3em;
   word-spacing: 0.2rem;
@@ -36,7 +36,7 @@
 }
 
 .main-home-resource-header {
-  background-color: abs.$color-gray-light;
+  background-color: gray;
   padding: 1.9rem 0;
   padding-left: 2.9rem;
   clip-path: polygon(2% 0, 100% 0, 98% 100%, 0% 100%);
@@ -51,17 +51,16 @@
     letter-spacing: 0.2rem;
     cursor: pointer;
     text-decoration: none;
-    color: abs.$color-black;
+    color: black;
   }
 }
 
 .resource-home-header {
   grid-column: 1 / -1;
 
-  background-color: abs.$color-gray-light;
+  background-color: gray;
   font-size: 3rem;
   padding: 1.6rem 2.3rem;
-  // border: 0.4rem solid abs.$color-white;
   border-radius: 10px 10px 0px 0px;
   text-transform: uppercase;
   letter-spacing: 0.6rem;

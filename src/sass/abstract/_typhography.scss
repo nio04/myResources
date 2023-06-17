@@ -1,5 +1,5 @@
 @use "extend" as ext;
-@use "var";
+@use "var" as var;
 @use "utility" as util;
 @use "mixin";
 @use "anim";
@@ -10,16 +10,28 @@
   main {
     section {
       font-size: 3rem;
-      margin-bottom: 6rem;
+      // margin-bottom: 6rem;
 
       header {
         text-transform: uppercase;
         padding: 2.5rem 0;
         margin: 3rem 0;
         background-color: #0000001f;
+        transition: transform .7s ease-in-out;
         @extend .center-me-full;
+        animation-name: slideToLeft;
+        animation-duration: 4s;
+        animation-delay: .1s;
+
+        // &:hover {
+        //   animation-name: flip;
+        //   animation-duration: 6s;
+        //   animation-delay: .2s;
+        // }
 
         span {
+          font-family: var.$secondary;
+          font-weight: 700;
           letter-spacing: 0.6rem;
           color: black;
           position: relative;
@@ -29,7 +41,7 @@
             content: "";
             background-color: #fff;
             position: absolute;
-            top: -2.5rem;
+            top: -2rem;
             width: 100%;
             padding-bottom: 8.5rem;
             z-index: -1;
@@ -49,6 +61,8 @@
         }
 
         .content-header {
+          font-family: var.$tertiary;
+          font-weight: 600;
           display: inline-block;
           clip-path: polygon(5.14% 0px, 100% 0%, 96.46% 96.32%, 1.88% 100%);
           background-color: #a2a2a299;
@@ -61,14 +75,20 @@
 
       .code-explain {
         padding: 0rem 5rem 1rem 5rem;
-        margin-top: 6rem;
+        margin-top: 3rem;
         text-transform: capitalize;
-        line-height: 6rem;
+        line-height: 9rem;
         display: block;
         position: relative;
-        font-family: "IBM Plex Mono", monospace;
+        font-size: 3.2rem;
+        font-family: var.$content;
+        font-weight: 400;
+        letter-spacing: .2rem;
+        word-spacing: .5rem;
 
         &-header {
+          font-family: var.$tertiary;
+          font-weight: 600;
           background-color: #d6d5d5e3;
           color: black;
           padding: .8rem 1.9rem;
@@ -77,8 +97,13 @@
         }
 
         &--code {
+          font-family: var.$code;
+          font-weight: 600;
           text-transform: lowercase;
-          background-color: #cbcbcb;
+          background-color: #cbcbcb41;
+          outline: 1px solid gray;
+          outline-offset: 1px;
+          border-radius: 4px;
           color: black;
           padding: 0 0.5rem;
         }
@@ -90,7 +115,10 @@
 
         .list-wrap {
           display: block;
-          margin-bottom: 4rem;
+
+          &:not(:last-child) {
+            margin-bottom: 4rem;
+          }
 
           svg {
             height: 1rem;

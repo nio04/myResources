@@ -1,11 +1,31 @@
-////////////
-// LINE SPLITTER [CONTENT-DIVIDER]
-.split-top {
+.util-split-top {
   border-top: 1px solid gray;
   padding: 4rem 0.6rem;
 }
 
-.split-bottom {
-  border-top: 1px solid gray;
+.util-split-bottom {
+  border-bottom: 1px solid gray;
   padding: 4rem 0.6rem;
+  margin: 3rem 0;
+}
+
+.util-center {
+  display: block !important;
+  text-align: center !important;
+}
+
+.util-margin-top {
+  margin-top: 5rem !important;
+}
+
+.util-margin-bottom {
+  margin-bottom: 5rem !important;
+}
+
+.util-padding-top {
+  padding-top: 5rem !important;
+}
+
+.util-padding-bottom {
+  padding-bottom: 5rem !important;
 }

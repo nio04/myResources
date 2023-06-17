@@ -35,8 +35,10 @@ html {
 
 body {
   position: relative;
-  color: abs.$color-black;
+  color: black;
   padding: 1.6rem;
+  font-family: abs.$general;
+  font-weight: 400;
 
   @include abs.mediaQuery(mobile) {
     padding: 0;
