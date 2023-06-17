@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../sass/pages/git.scss">
+    <link rel="stylesheet" href="../sass/theme/prism-light.css">
+    <script src="../js/prism.js" defer></script>
+    <title>git : stash</title>
+  </head>
+
+  <body>
+    <div class="content-page-container">
+      <div class="nav">
+        <header class="main-header-04">git stash : everything
+          about git stash change
+        </header>
+        <svg>
+          <use xlink:href="../img/sprite.svg#git"></use>
+        </svg>
+        <div class="section">section</div>
+        <div class="indexes">
+          <a href="#content-index-01">
+            <span>
+              stash information
+            </span>
+          </a>
+          <a href="#content-index-02">
+            <span>
+              no conflict
+            </span>
+          </a>
+          <a href="#content-index-03">
+            <span>
+              conflict
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- main home button -->
+      <div class="content-page-home-button">
+        <a href="index.html">
+          <svg>
+            <use xlink:href="../img/sprite.svg#home"></use>
+          </svg>
+          <span>main home</span>
+        </a>
+      </div>
+
+      <main>
+        <section>
+          <header><span>stash : information</span></header>
+          <div class="content-area" id="content-index-01"><span class="content-header">diff :
+              important information</span>
+            <span class="code-explain">
+              by <span class="code-explain--code">git diff</span> command, we can get various
+              types of differences from our working file from different timeline.
+              <br>
+              <br>
+              <span class="code-explain--code">----</span> old file content [file name = a]
+              <br>
+              <span class="code-explain--code">++++</span> new file content [file name = b]
+            </span>
+          </div>
+        </section>
+
+        <section>
+          <header><span>stash : operation</span></header>
+          <div class="content-area" id="content-index-02"><span class="content-header">unstaged ::
+              last commit</span>
+            <pre>
+              <code class="language-git match-braces rainbow-braces">
+                git diff
+              </code>
+            </pre>
+          </div>
+        </section>
+
+        <!-- adding hover [go to top] button -->
+        <div class="content-page-go-to-top-button">
+          <a href="#">
+            <svg>
+              <use xlink:href="../img/sprite.svg#to-top"></use>
+            </svg>
+            <span>go to top</span>
+          </a>
+        </div>
+        <div class="float-btn to-bottom-btn">
+          <a href="bottom-side">
+            <svg>
+              <use xlink:href="../img/sprite.svg#to-bottom"></use>
+            </svg>
+            <span>bottom</span>
+          </a>
+        </div>
+      </main>
+
+      <!-- indexes -->
+      <div class="content-page-indexes" id="bottom-side">
+        <header>git indexes</header>
+        <nav>
+          <ul>
+            <li class="item">
+              <a href="git--01-fundamental.html" class="item-link">FUNDAMENTAL : basics,
+                staging, commiting, branch
+              </a>
+            </li>
+            <li class="item">
+              <a href="git--02-merge.html" class="item-link">MERGEING : everything about git
+                merging</a>
+            </li>
+            <li class="item">
+              <a href="git--03-diff.html" class="item-link">diff : find the differnce</a>
+            </li>
+            <li class="item link-active">
+              <a href="git--04-stash.html" class="item-link">STASH : everything about stash changes</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </body>
+
+</html>

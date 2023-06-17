@@ -13,8 +13,8 @@
 
   <body>
     <div class="content-page-container">
-      <div class="content-page-content-indexes">
-        <header class="content-page-main-header content-page-main-header-02">everything about
+      <div class="nav">
+        <header class="content-page-main-header-02">everything about
           flexbox</header>
         <svg>
           <use xlink:href="../img/sprite.svg#flexbox"></use>
@@ -35,7 +35,7 @@
       </div>
 
       <!-- main home button -->
-      <div class="content-page-home-button">
+      <div class="sticky-nav">
         <a href="index.html">
           <svg>
             <use xlink:href="../img/sprite.svg#home"></use>
@@ -45,21 +45,29 @@
       </div>
 
       <!-- main post -->
-      <main class="content-page-main line-numbers">
-
+      <main class="line-numbers">
         <!-- adding hover [go to top] button -->
-        <div class="content-page-go-to-top-button">
+        <div class="float-btn to-top-btn">
           <a href="#">
             <svg>
               <use xlink:href="../img/sprite.svg#to-top"></use>
             </svg>
-            <span>go to top</span>
+            <span>top</span>
+          </a>
+        </div>
+        <!-- adding hover [go to bottom] button -->
+        <div class="float-btn to-bottom-btn">
+          <a href="#bottom-side">
+            <svg>
+              <use xlink:href="../img/sprite.svg#to-bottom"></use>
+            </svg>
+            <span>bottom</span>
           </a>
         </div>
 
-        <section class="content-page-section" id="content-index-parent">
-          <header><span class="content-page-section-header">parent container</span></header>
-          <div class="content-page-header"><span class="content-header">flex-direction</span>
+        <section id="content-index-parent">
+          <header><span>parent container</span></header>
+          <div class="content-area"><span class="content-header">flex-direction</span>
             <pre>
               <code class="language-css rainbow-braces match-braces">
             flex-direction : row[default] | row-reverse | column | column-reverse;
@@ -131,9 +139,9 @@
           </div>
         </section>
 
-        <section class="content-page-section" id="content-index-children">
-          <header><span class="content-page-section-header">children items</span></header>
-          <div class="content-page-header"><span class="content-header">flex-grow</span>
+        <section id="content-index-children">
+          <header><span>children items</span></header>
+          <div class="content-area"><span class="content-header">flex-grow</span>
             <pre>
               <code class="language-css rainbow-braces match-braces">
               flex-grow : [positive integer]
@@ -212,14 +220,14 @@
         </section>
 
         <!-- all the other css posts -->
-        <div class="content-page-indexes">
+        <div class="content-page-indexes" id="bottom-side">
           <header>css indexes</header>
           <nav>
             <ul>
               <li class="item">
                 <a href="css--01-grid.html" class="item-link">GRID : everything about grid</a>
               </li>
-              <li class="item">
+              <li class="item link-active">
                 <a href="css--02-flexbox.html" class="item-link">FLEXBOX : everything about
                   flexbox</a>
               </li>

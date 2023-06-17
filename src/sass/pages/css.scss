@@ -4,19 +4,22 @@
 
 // CONTENT - 01 : GRID
 .content-page-container {
-  .content-page-content-indexes {
-    svg {
-      @include abs.mediaQuery(tab-land) {
-        justify-self: end;
-      }
-    }
-    .content-page-main-header {
+  .nav {
+    // svg {
+    //   @include abs.mediaQuery(tab-land) {
+    //     justify-self: end;
+    //   }
+    // }
+
+    header {
       @include abs.mediaQuery(tab-land) {
         font-size: 5rem;
       }
+
       @include abs.mediaQuery(tab-port) {
         font-size: 4rem;
       }
+
       @include abs.mediaQuery(mobile) {
         font-size: 3rem;
         padding-left: 0;
@@ -27,28 +30,34 @@
       @include abs.mediaQuery(tab-land) {
         margin-left: 4rem;
       }
+
       @include abs.mediaQuery(tab-port) {
         justify-self: start;
         font-size: 3rem;
         margin-left: 0;
       }
+
       @include abs.mediaQuery(mobile) {
         justify-self: start;
         padding-left: 2rem;
         margin-bottom: 8rem;
       }
     }
+
     .indexes {
       @include abs.mediaQuery(mobile) {
         justify-content: space-evenly;
       }
+
       a {
         @include abs.mediaQuery(tab-land) {
           padding-left: 4rem;
         }
+
         @include abs.mediaQuery(tab-port) {
           padding-left: 0;
         }
+
         @include abs.mediaQuery(mobile) {
           margin: 2rem 0;
           padding-left: 2rem;
@@ -56,9 +65,10 @@
       }
     }
   }
-  .content-page-main {
-    .content-page-section {
-      .content {
+
+  main {
+    section {
+      .content-area {
         @include abs.mediaQuery(tab-land) {
           margin-left: 0;
           padding-left: 0;
@@ -73,15 +83,17 @@
             margin-top: 4rem;
             line-height: 8rem;
           }
-          &::after {
-            @include abs.mediaQuery(tab-port) {
-              display: none;
-            }
-          }
+
+          // &::after {
+          //   @include abs.mediaQuery(tab-port) {
+          //     display: none;
+          //   }
+          // }
         }
       }
     }
   }
+
   nav {
     ul {
       @include abs.mediaQuery(tab-land) {

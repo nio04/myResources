@@ -13,35 +13,50 @@
 
   <body>
     <div class="content-page-container">
-      <div class="content-page-content-indexes">
-        <header class="content-page-main-header content-page-main-header-02">git merge :
-          fast-forward, non:fast-forward
+      <div class="nav">
+        <header class="main-header-03">git diff : find the
+          works changes
         </header>
         <svg>
           <use xlink:href="../img/sprite.svg#git"></use>
         </svg>
         <div class="section">section</div>
-        <div class="indexes">
-          <a href="#content-index-fastForward">
+        <div class="indexes indexes-03">
+          <a href="#content-index-01">
             <span>
-              fast - forward
+              diff information
             </span>
           </a>
-          <a href="#content-index-nonFastForwardNonConflict">
+          <a href="#content-index-02">
             <span>
-              non : fast - forward [non : conflict]
+              unstaged :: last commit
             </span>
           </a>
-          <a href="#content-index-nonFastForwardConflict">
+          <a href="#content-index-03">
             <span>
-              non : fast-forward [conflict]
+              staged :: last commit
+            </span>
+          </a>
+          <a href="#content-index-04">
+            <span>
+              specific file on unstaged & staged :: last commit
+            </span>
+          </a>
+          <a href="#content-index-05">
+            <span>
+              accross braches :: last commit
+            </span>
+          </a>
+          <a href="#content-index-06">
+            <span>
+              accross commits
             </span>
           </a>
         </div>
       </div>
 
       <!-- main home button -->
-      <div class="content-page-home-button">
+      <div class="sticky-nav">
         <a href="index.html">
           <svg>
             <use xlink:href="../img/sprite.svg#home"></use>
@@ -50,22 +65,166 @@
         </a>
       </div>
 
-      <main class="content-page-main line-numbers">
-        <section class="content-page-section" id="content-index-veryBasic">
-          <header><span class="content-page-section-header">MERGING : fast-forward</span></header>
-          <div class="content-page-header"><span class="content-header">fast-forward merge</span>
+      <main class=" line-numbers">
+        <section>
+          <header><span>diff : information</span></header>
+          <div class="content-area" id="content-index-01"><span class="content-header">diff :
+              important information</span>
+            <span class="code-explain">
+              by <span class="code-explain--code">git diff</span> command, we can get various
+              types of differences from our working file from different timeline.
+              <br>
+              <br>
+              <span class="code-explain--code">----</span> old file content [file name = a]
+              <br>
+              <span class="code-explain--code">++++</span> new file content [file name = b]
+            </span>
           </div>
         </section>
 
-        <section class="content-page-section" id="content-index-veryBasic">
-          <header><span class="content-page-section-header">MERGING : fast-forward</span></header>
-          <div class="content-page-header"><span class="content-header">fast-forward merge</span>
+        <!-- adding hover [go to top] button -->
+        <div class="float-btn to-top-btn">
+          <a href="#">
+            <svg>
+              <use xlink:href="../img/sprite.svg#to-top"></use>
+            </svg>
+            <span>top</span>
+          </a>
+        </div>
+        <!-- adding hover [go to bottom] button -->
+        <div class="float-btn to-bottom-btn">
+          <a href="#bottom-side">
+            <svg>
+              <use xlink:href="../img/sprite.svg#to-bottom"></use>
+            </svg>
+            <span>bottom</span>
+          </a>
+        </div>
+
+        <section>
+          <header><span>diff : operation</span></header>
+          <div class="content-area" id="content-index-02"><span class="content-header">unstaged ::
+              last commit</span>
+            <pre>
+              <code class="language-git">
+              git diff
+                </code>
+            </pre>
+            <span class="code-explain">
+              compare codes from last commit to current unstaged works
+            </span>
+          </div>
+          <div class="content-area" id="content-index-03"><span class="content-header">staged
+              :: last commit</span>
+            <pre>
+              <code class="language-git">
+              git diff HEAD
+                </code>
+            </pre>
+            <span class="code-explain">
+              compare codes from last commit to current staged and unstaged works
+            </span>
+          </div>
+          <div class="content-area" id="content-index-04"><span class="content-header">see
+              changes in a specific
+              file</span>
+            <pre>
+              <code class="language-git">
+              git diff HEAD [file path/file name]
+              </code>
+            </pre>
+            <span class="code-explain">
+              comapre code from last commit to staged and unstaged area for a specific file
+            </span>
+          </div>
+          <div class="content-area" id="content-index-05"><span class="content-header">
+              diff for branches</span>
+            <pre>
+              <code class="language-git">
+              git diff [first branch name]..[second branch name]
+            </code>
+            </pre>
+            <span class="code-explain">
+              ORDER MATTERS!!! [first branch] changes will have (-) sign && [second branch]
+              changes fill will have (+) sign.
+              <br>
+              <br>
+              <span class="list-wrap">
+                <svg>
+                  <use xlink:href="../img/sprite.svg#dot"></use>
+                </svg>
+                <span class="list">
+                  [first branch] (+) means, from where to look up for changes
+                </span>
+              </span>
+              <span class="list-wrap">
+                <svg>
+                  <use xlink:href="../img/sprite.svg#dot"></use>
+                </svg>
+                <span class="list">
+                  [second branch] (-) is kinda like, where we test the difference
+                </span>
+              </span>
+            </span>
+          </div>
+
+          <div class="content-area" id="content-index-06"><span class="content-header">diff
+              for commit</span>
+            <pre>
+              <code class="language-git">
+              git diff [first commit hash]..[second commit hash]
+            </code>
+            </pre>
+            <span class="code-explain">
+              ORDER MATTERS!!! [first commit] will be like a book, where we will compare our
+              changes to another commit
+            </span>
           </div>
         </section>
-
-
       </main>
 
+      <!-- indexes -->
+      <div class="content-page-indexes" id="bottom-side">
+        <header>git indexes</header>
+        <nav>
+          <ul>
+            <li class="item">
+              <a href="git--01-fundamental.html" class="item-link">FUNDAMENTAL : basics,
+                staging, commiting, branch
+              </a>
+            </li>
+            <li class="item">
+              <a href="git--02-merge.html" class="item-link">MERGEING : everything about git
+                merging</a>
+            </li>
+            <li class="item link-active">
+              <a href="git--03-diff.html" class="item-link">DIFF : find the differnce</a>
+            </li>
+            <li class="item">
+              <a href="git--04-stash.html" class="item-link">STASH : everything about stash
+                changes</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
 
   </body>

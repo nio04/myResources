@@ -1,7 +1,6 @@
 // CONTENT PAGE
 @use "../abstract/" as abs;
 @use "../base/reset";
-@use "../component/" as compo;
 
 .content-page-container {
   display: grid;
@@ -9,216 +8,54 @@
   grid-template-rows: 100vh minmax(100vh, 1fr);
   position: relative;
 
-  .content-page-content-indexes {
-    display: grid;
-    grid-template-columns: 80% 20%;
-    grid-template-rows: 22rem 10rem minmax(10rem, 100vh);
-
-    .content-page-main-header {
-      grid-column: 1 / -1;
-      font-size: 8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.3rem;
-      word-spacing: 0.4rem;
-      font-style: italic;
-      padding-left: 8rem;
-      @extend .center-me-full;
-
-    }
-    svg {
-      grid-column: 2 / 3;
-      grid-row: 2 / 3;
-      justify-self: center;
-      height: 10rem;
-      width: 10rem;
-    }
-    .section {
-      font-size: 5rem;
-      text-transform: uppercase;
-      align-self: center;
-      justify-self: start;
-      margin-left: 10rem;
-      letter-spacing: 0.4rem;
-      font-style: italic;
-    }
-    .indexes {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      a {
-        text-transform: uppercase;
-        text-decoration: none;
-        font-size: 2.6rem;
-        color: black;
-        padding-left: 10rem;
-        transition: all 1.4s;
-        display: flex;
-        align-items: center;
-
-        &:hover {
-          text-decoration: underline;
-        }
-
-        &::after {
-          content: "";
-          display: inline-block;
-          background-color: black;
-          margin-left: 1rem;
-          height: 3rem;
-          width: 3rem;
-          -webkit-mask-image: url("../../img/svg/pointRight.svg");
-          -webkit-mask-size: cover;
-          transition: all 0.6s;
-        }
-
-        &:hover::after {
-          background-color: gray;
-          margin-left: 2rem;
-        }
-
-        span{
-          letter-spacing: .1rem;
-        }
-      }
-    }
-  }
-
-  .content-page-main {
-    .content-page-section {
-      font-size: 3rem;
-      margin-bottom: 6rem;
+  main {
+    section {
       header {
-        text-transform: uppercase;
-        padding: 2.5rem 0;
-        margin: 6rem 0;
-        background-color: #0000001f;
-        @extend .center-me-full;
+        @include abs.mediaQuery(mobile) {
+          border: 1px solid rgba(0, 0, 0, 0.66);
+        }
 
-        .content-page-section-header {
-          letter-spacing: 0.6rem;
-          color: black;
-          position: relative;
-          z-index: 10;
+        span {
 
-          &::before {
-            content: "";
-            background-color: #fff;
-            position: absolute;
-            top: -2.5rem;
-            width: 100%;
-            padding-bottom: 8.5rem;
-            z-index: -1;
+          @include abs.mediaQuery(mobile) {
+            letter-spacing: 0;
           }
+
         }
       }
 
-      .content-page-header {
-        border: 1px solid black;
-        margin-top: 1.5rem;
-        text-transform: lowercase;
-        padding: 1.5rem;
-        margin-left: 2rem;
-
+      .content-area {
         .content-header {
-          display: inline-block;
-          clip-path: polygon(5.14% 0px, 100% 0%, 96.46% 96.32%, 1.88% 100%);
-          background-color: #a2a2a299;
-          color: black;
-          padding: 1rem 5rem;
-          letter-spacing: 3px;
-          margin: 2rem 0;
-        }
-      }
-
-        .code-explain {
-          padding: 0rem 5rem 1rem 5rem;
-          margin-top: 6rem;
-          text-transform: capitalize;
-          line-height: 6rem;
-          display: block;
-          width: 100%;
-          position: relative;
-          font-family: "IBM Plex Mono", monospace;
-
-          &:not(:last-of-type){
-            border-bottom: 1px solid gray;
-            margin-bottom: 4rem;
-          }
-
-          &-header {
-            background-color: #d6d5d5e3;
-            color: black;
-            padding: .8rem 1.9rem;
-            text-transform: lowercase;
-            clip-path: polygon(3% 0, 100% 0%, 96% 100%, 0% 100%);
-          }
-          &--code {
-            text-transform: lowercase;
-            background-color: #cbcbcb;
-            color: black;
-            padding: 0 0.5rem;
-          }
-          &-list-wrap {
-            display: block;
-            margin-bottom: 4rem;
-            svg {
-              height: 1rem;
-              width: 1rem;
-              fill: black;
-            }
-            &-list {
-              padding-left: 2rem;
-            }
-          }
-          .last-list-separate {
-            display: block;
-            height: 3.5rem;
-          }
-
-          &::after {
-            content: "code-explain";
-            text-transform: uppercase;
-            margin-top: -5rem;
-            font-size: 1.9rem;
-            padding: 0 2rem;
-            transform: scale(0.6);
-            position: absolute;
-            top: 0;
-            right: 0;
-            background-color: abs.$color-gray-light;
-            color: abs.$color-black;
-          }
-          &-sub-section {
-            display: block;
-            margin-top: 1.6rem;
+          @include abs.mediaQuery(mobile) {
+            letter-spacing: 0;
+            padding: 1rem 2.8rem;
           }
         }
-    }
-  }
-  nav {
-    ul {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(25rem, max-content));
-      gap: 1.3rem;
-
-      @include abs.mediaQuery(tab-land) {
-        grid-template-columns: repeat(2, minmax(27rem, 1fr));
       }
 
-      @include abs.mediaQuery(tab-port) {
-        grid-template-columns: 1fr;
-        grid-row-gap: 3rem;
-      }
+      .code-explain {
 
-      @include abs.mediaQuery(mobile) {
-        grid-template-columns: 1fr;
-        grid-row-gap: 3rem;
-      }
+        @include abs.mediaQuery(tab-port) {
+          padding: .8rem;
+        }
 
-      li {
-        list-style-type: none;
-        padding: 0.9rem;
-        text-align: center;
+        //  &::after {
+        //   content: "code-explain";
+        //   text-transform: uppercase;
+        //   margin-top: -5rem;
+        //   font-size: 1.9rem;
+        //   padding: 0 2rem;
+        //   transform: scale(0.6) translateX(4rem);
+        //   position: absolute;
+        //   top: 0;
+        //   right: 0;
+        //   background-color: abs.$color-gray-light;
+        //   color: abs.$color-black;
+
+        //   @include abs.mediaQuery(tab-port){
+        //     display: none;
+        //   }
+        // }
       }
     }
   }

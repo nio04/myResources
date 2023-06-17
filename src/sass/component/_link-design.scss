@@ -1,75 +1,112 @@
 @use "../abstract/" as abs;
-ul {
-  padding: 2rem 0;
-  li {
-    transition: all 0.5s;
-    // box-shadow: -2px 2px 15px 0px #000;
-    border-radius: 12px 18px 18px 12px;
 
-    .item-link:link {
-      display: block;
-      height: 100%;
-      width: 100%;
+.link-active {
+  background-color: #d3cccc;
+
+  a {
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+}
+
+@mixin page-indexes-design() {
+  ul {
+    padding: 2rem 0;
+
+    li {
       transition: all 0.5s;
-      text-decoration: none;
-      text-transform: capitalize;
-      color: abs.$color-black;
-      font-size: 2rem;
-      cursor: pointer;
-      padding: 0.4em 0.2rem;
-      line-height: 2.9rem;
+      // box-shadow: -2px 2px 15px 0px #000;
+      border-radius: 12px 18px 18px 12px;
       outline: 2px solid #00000061;
-      outline-offset: 11px;
+
+      // outline-offset: 11px;
       &:hover {
-        text-decoration: underline dashed #3e2bc6;
+        // text-decoration: underline dashed #3e2bc6;
+        opacity: .6;
         border-radius: 12px 18px 18px 12px;
         height: 100%;
         width: 100%;
       }
-    }
-    .item-link:visited {
-      color: abs.$color-black;
-    }
 
-    &:hover {
-      box-shadow: 0px 0px 0px 0px #000;
-      transform: scaleY(1.1);
+      .item-link:link,
+      .item-link:visited {
+        display: block;
+        height: 100%;
+        width: 100%;
+        transition: all 0.5s;
+        text-decoration: none;
+        text-transform: capitalize;
+        color: abs.$color-black;
+        font-size: 2rem;
+        cursor: pointer;
+        // padding: 0.4em 0.2rem;
+        line-height: 2.9rem;
+
+      }
+
+      &:hover {
+        box-shadow: 0px 0px 0px 0px #000;
+        transform: scaleY(1.1);
+      }
     }
   }
 }
 
-.resource-home-go-back-button {
-  margin-right: auto;
+//////////
+/// main home resources indexes
+.main-home-resource-container {
 
-  box-shadow: 1px 4px 12px #000000;
-  padding: 1rem 4rem;
-  margin-left: 3rem;
-  cursor: pointer;
-  text-decoration: none;
-  color: abs.$color-black;
-  font-size: 2rem;
-  text-transform: uppercase;
-  transition: all 0.4s;
+  .main-home-resource {
+    @include page-indexes-design();
+  }
+}
 
-  @include abs.mediaQuery(mobile) {
-    padding: 0.5rem 2rem;
-    margin-left: 0;
-    box-shadow: none;
-    border: 1px solid black;
-  }
-  @include abs.mediaQuery(mob-small) {
-    padding: 0.5rem 1rem;
-  }
+/////////////
+/// resource home go back button
+.resource-home-container {
+  a {
+    margin-right: auto;
 
-  &:active {
-    box-shadow: 0px 0px 0px 0px #000000;
+    box-shadow: 1px 4px 12px #000000;
+    padding: 1rem 4rem;
+    margin-left: 3rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: abs.$color-black;
+    font-size: 2rem;
+    text-transform: uppercase;
+    transition: all 0.4s;
+
+    @include abs.mediaQuery(mobile) {
+      padding: 0.5rem 2rem;
+      margin-left: 0;
+      box-shadow: none;
+      border: 1px solid black;
+    }
+
+    @include abs.mediaQuery(mob-small) {
+      padding: 0.5rem 1rem;
+    }
+
+    &:active {
+      box-shadow: 0px 0px 0px 0px #000000;
+    }
+
+    &:hover {
+      outline: none;
+      border: none;
+    }
+
+    svg {
+      height: 4rem;
+      width: 4rem;
+    }
   }
-  &:hover {
-    outline: none;
-    border: none;
-  }
-  svg {
-    height: 4rem;
-    width: 4rem;
+}
+
+.content-page-indexes {
+  nav {
+    @include page-indexes-design();
   }
 }

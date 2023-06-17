@@ -5,46 +5,62 @@
 
 // CONTENT - 01 : git fundamental
 .content-page-container {
-  .content-page-content-indexes {
-    .content-page-main-header-01 {
+  .nav {
+    .main-header-01 {
       padding-left: 0;
       font-size: 7rem;
 
       @include abs.mediaQuery(tab-land) {
-        font-size: 5rem;
+        font-size: 4.5rem;
       }
+
       @include abs.mediaQuery(tab-port) {
         padding-left: 0;
+        font-size: 3.1rem;
       }
+
+      @include abs.mediaQuery(mobile) {
+        font-size: 2.4rem;
+      }
+
       @include abs.mediaQuery(mob-small) {
-        font-size: 3.3rem;
+        font-size: 2rem;
       }
     }
+
     svg {
       @include abs.mediaQuery(tab-land) {
         justify-self: end;
       }
     }
+
     .section {
       @include abs.mediaQuery(tab-land) {
         margin-left: 4rem;
         margin-bottom: 5rem;
       }
+
       @include abs.mediaQuery(tab-port) {
         margin-left: 2rem;
+        font-size: 4.2rem;
       }
+
       @include abs.mediaQuery(mobile) {
         font-size: 4rem;
+        margin-bottom: 0;
       }
     }
+
     .indexes {
       @include abs.mediaQuery(mobile) {
         justify-content: space-evenly;
       }
+
       a {
         @include abs.mediaQuery(tab-land) {
           padding-left: 4rem;
         }
+
         @include abs.mediaQuery(tab-port) {
           padding-left: 2rem;
         }
@@ -52,13 +68,14 @@
     }
   }
 
-  .content-page-main {
-    .content-page-section {
-      .content {
+  main {
+    section {
+      .content-area {
         @include abs.mediaQuery(tab-port) {
           margin-left: 1rem;
           padding: 1.1rem;
         }
+
         .code-explain {
           @include abs.mediaQuery(tab-port) {
             margin-left: 0;
@@ -70,13 +87,72 @@
   }
 }
 
-
 // CONTENT :: 02 - MERGE
 .content-page-container {
-  .content-page-content-indexes {
-    .content-page-main-header-02 {
+  .nav {
+    .main-header-02 {
       font-size: 3.9rem;
       padding: 0;
+
+      @include abs.mediaQuery(tab-land) {
+        font-size: 3.5rem;
+      }
+
+      @include abs.mediaQuery(tab-port) {
+        font-size: 2.3rem;
+      }
+
+      @include abs.mediaQuery(mobile) {
+        font-size: 1.8rem;
+      }
+
+      @include abs.mediaQuery(mob-small) {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+// CONTENT :: 03 : DIFF
+.content-page-container {
+  .nav {
+    .main-header-03 {
+      font-size: 5rem;
+      padding: 0;
+
+      @include abs.mediaQuery(tab-land) {
+        font-size: 4.6rem;
+      }
+
+      @include abs.mediaQuery(tab-port) {
+        font-size: 3.3rem;
+      }
+
+      @include abs.mediaQuery(mobile) {
+        font-size: 2.4rem;
+      }
+
+      @include abs.mediaQuery(mob-small) {
+        font-size: 1.9rem;
+      }
+    }
+
+    .indexes-03 {
+      grid-column: 1 / -1;
+
+      a {
+        padding-right: 2rem;
+
+        &:nth-child(4) {
+          margin-left: 0;
+
+          &::after {
+            width: 4rem;
+            transform: translateX(-3rem);
+          }
+        }
+      }
+
     }
   }
 }

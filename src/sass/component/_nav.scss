@@ -1,9 +1,18 @@
 @use "../abstract/" as abs;
 
+//////////
+/// main home extra nav
 .main-home-extra-nav {
   display: none;
   grid-row: 2 /3;
   grid-column: 1 / -1;
+
+  @include abs.mediaQuery(tab-port) {
+    .main-home-extra-nav {
+      display: block;
+    }
+  }
+
   ul {
     li {
       list-style-type: none;
@@ -14,19 +23,20 @@
         margin-bottom: 2.9rem;
       }
 
-      .extra-nav-link:link,
-      .extra-nav-link:visited {
+      .nav-link:link,
+      .nav-link:visited {
         display: block;
         width: 100%;
         text-align: center;
         text-decoration: none;
         text-transform: uppercase;
         font-size: 3.6rem;
-        // color: abs.$color-white;
+        color: abs.$color-black;
 
         @include abs.mediaQuery(mobile) {
           font-size: 3rem;
         }
+
         @include abs.mediaQuery(mob-small) {
           font-size: 2.5rem;
         }
@@ -36,6 +46,48 @@
 
   @include abs.mediaQuery(mobile) {
     display: block;
+  }
+}
+
+///////////////
+/// main home indexes nav
+.main-home-resource {
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(25rem, max-content));
+    // grid-template-rows: repeat(auto-fit, minmax(10rem, min-content));
+    align-items: stretch;
+    gap: 1.3rem;
+
+    @include abs.mediaQuery(tab-land) {
+      grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
+    }
+
+    @include abs.mediaQuery(tab-port) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include abs.mediaQuery(mobile) {
+      grid-template-columns: 1fr;
+      grid-row-gap: 3rem;
+    }
+
+    li {
+      list-style-type: none;
+      padding: 0.9rem;
+
+      @include abs.mediaQuery(tab-land) {
+        margin: 0.5rem 0.1rem;
+      }
+
+      @include abs.mediaQuery(tab-port) {
+        margin: 0.3rem 1.1rem;
+      }
+
+      a {
+        @extend .center-me-vertical;
+      }
+    }
   }
 }
 
@@ -92,6 +144,7 @@
           width: 3rem;
         }
       }
+
       .post-author {
         grid-column: 1 / 2;
         grid-row: 2 / 3;
@@ -112,6 +165,7 @@
           margin-top: 1rem;
         }
       }
+
       .post-date {
         grid-column: 2 / -1;
         grid-row: 1 / 2;
@@ -127,6 +181,7 @@
         clip-path: polygon(3% 0, 100% 0%, 97% 100%, 0% 100%);
         @extend .center-me-vertical;
       }
+
       a:link,
       a:visited {
         grid-column: 2 / -1;
@@ -150,19 +205,21 @@
           @extend .center-me-vertical;
         }
       }
+
       .post-summary {
         grid-column: 1 / -1;
         grid-row: 3 / -1;
 
         padding: 0.3rem 1.7rem;
         text-align: justify;
-        color: abs.$color-white;
+        // color: abs.$color-white;
         font-size: 2rem;
         text-transform: capitalize;
         line-height: 3rem;
         background-color: abs.$color-gray-transparent-dark;
         color: abs.$color-black;
       }
+
       &:hover {
         background-color: abs.$color-gray-transparent-light;
       }
@@ -170,7 +227,143 @@
   }
 }
 
-// CONTENT PAGE INDEX NAV BAR
+/////////////
+/// content-page-stcky-nav
+.sticky-nav {
+  box-sizing: border-box;
+  z-index: 100;
+  width: 98%;
+  position: fixed;
+  border: 1px solid gray;
+  background-color: rgba(255, 255, 255, 0.332);
+
+  @include abs.mediaQuery(mobile) {
+    width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: 900;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.332);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    svg {
+      height: 3rem;
+      width: 3rem;
+      fill: #fff;
+      transform: translateY(0.4rem);
+
+      @include abs.mediaQuery(mobile) {
+        height: 4.5rem;
+        width: 4.5rem;
+        margin: 1rem 0;
+        transform: translate(0);
+      }
+    }
+
+    span {
+      text-transform: uppercase;
+      padding-left: 1.7rem;
+      padding-top: 1.9rem;
+      font-size: 2.5rem;
+      padding-right: 2rem;
+      text-decoration: none;
+
+      @include abs.mediaQuery(mobile) {
+        font-size: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+////////
+/// content-page-index [first]
+.nav {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 22rem 10rem minmax(10rem, 100vh);
+
+  header {
+    grid-column: 1 / -1;
+    font-size: 8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    word-spacing: 0.4rem;
+    font-style: italic;
+    padding-left: 8rem;
+    @extend .center-me-full;
+
+  }
+
+  svg {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    justify-self: center;
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .section {
+    font-size: 5rem;
+    text-transform: uppercase;
+    align-self: center;
+    justify-self: start;
+    margin-left: 10rem;
+    letter-spacing: 0.4rem;
+    font-style: italic;
+  }
+
+  .indexes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    a {
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 2.6rem;
+      color: black;
+      padding-left: 10rem;
+      transition: all 1.4s;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &::after {
+        content: "";
+        display: inline-block;
+        background-color: black;
+        margin-left: 1rem;
+        height: 3rem;
+        width: 3rem;
+        -webkit-mask-image: url("../../img/svg/pointRight.svg");
+        -webkit-mask-size: cover;
+        mask-image: url("../../img/svg/pointRight.svg");
+        mask-size: cover;
+        transition: all 0.6s;
+      }
+
+      &:hover::after {
+        background-color: gray;
+        margin-left: 2rem;
+      }
+
+      span {
+        letter-spacing: .1rem;
+      }
+    }
+  }
+}
+
+///////////////
+// CONTENT PAGE INDEX NAV BAR [last one]
 .content-page-indexes {
   display: grid;
   grid-template-rows: 5rem 1fr;
@@ -186,11 +379,38 @@
     background-color: abs.$color-gray-transparent-dark;
     @extend .center-me-full;
   }
+
   nav {
     padding: 2rem 6rem;
 
     @include abs.mediaQuery(tab-port) {
       padding: 0.6rem 2rem;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(25rem, max-content));
+      gap: 1.3rem;
+
+      @include abs.mediaQuery(tab-land) {
+        grid-template-columns: repeat(2, minmax(27rem, 1fr));
+      }
+
+      @include abs.mediaQuery(tab-port) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 3rem;
+      }
+
+      @include abs.mediaQuery(mobile) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 3rem;
+      }
+
+      li {
+        list-style-type: none;
+        padding: 0.9rem;
+        text-align: center;
+      }
     }
   }
 }

@@ -487,7 +487,21 @@ pre[class*="language-"].line-numbers > code {
 
 div.code-toolbar {
 	position: relative;
-	width: 65rem;
+	width: 85rem;
+}
+
+@media only screen and (width <=60.625em) {
+	div.code-toolbar {
+		width: 55rem;
+		margin-left: 3rem;
+	}
+}
+
+@media only screen and (width <=30.625em) {
+	div.code-toolbar {
+		width: 49rem;
+		margin-left: 2rem;
+	}
 }
 
 div.code-toolbar > .toolbar {
@@ -497,6 +511,13 @@ div.code-toolbar > .toolbar {
 	right: .2em;
 	transition: opacity 0.3s ease-in-out;
 	opacity: 0;
+}
+
+@media only screen and (width <=30.625em) {
+	div.code-toolbar > .toolbar {
+		top: 1.4em;
+		right: 1.3em;
+	}
 }
 
 div.code-toolbar:hover > .toolbar {

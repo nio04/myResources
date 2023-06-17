@@ -12,10 +12,10 @@
   "license": "ISC",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.8.3",
-    "parcel": "^2.8.3"
+    "parcel": "^2.8.3",
+    "prettier": "2.8.8"
   },
   "dependencies": {
-    "prism-material-themes": "^1.0.4",
     "prismjs": "^1.29.0",
     "vscode-css-languageservice": "^6.2.5"
   }
