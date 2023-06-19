@@ -1,13 +1,13 @@
 @use "../abstract/" as abs;
 
 .main-header {
-  color: black;
+  color: abs.$color-accent;
   text-transform: uppercase;
   grid-column: 1 / -1;
 
   @extend .center-me-full;
-  box-shadow: -2px -9px 201px 27px rgba(0, 0, 0, 0.96);
-  text-shadow: -7px 7px 10px #cecece54;
+  box-shadow: -2px -9px 201px 27px abs.$color-accent;
+  text-shadow: -7px 7px 10px abs.$color-secondary;
   clip-path: polygon(0% 15%,
       15% 15%,
       15% 0%,
@@ -20,7 +20,7 @@
       15% 100%,
       15% 85%,
       0% 85%);
-  border: 3rem solid black;
+  border: 3rem solid abs.$color-accent;
 
   letter-spacing: 0.3em;
   word-spacing: 0.2rem;
@@ -36,7 +36,7 @@
 }
 
 .main-home-resource-header {
-  background-color: gray;
+  background-image: radial-gradient(circle, abs.$color-secondary, abs.$color-primary);
   padding: 1.9rem 0;
   padding-left: 2.9rem;
   clip-path: polygon(2% 0, 100% 0, 98% 100%, 0% 100%);
@@ -51,14 +51,14 @@
     letter-spacing: 0.2rem;
     cursor: pointer;
     text-decoration: none;
-    color: black;
+    color: abs.$color-accent;
   }
 }
 
 .resource-home-header {
   grid-column: 1 / -1;
 
-  background-color: gray;
+  background-color: abs.$color-secondary;
   font-size: 3rem;
   padding: 1.6rem 2.3rem;
   border-radius: 10px 10px 0px 0px;

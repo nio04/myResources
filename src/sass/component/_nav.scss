@@ -1,4 +1,5 @@
 @use "../abstract/" as abs;
+@use 'sass:color';
 
 //////////
 /// main home extra nav
@@ -31,7 +32,7 @@
         text-decoration: none;
         text-transform: uppercase;
         font-size: 3.6rem;
-        color: black;
+        color: abs.$color-accent;
 
         @include abs.mediaQuery(mobile) {
           font-size: 3rem;
@@ -110,7 +111,7 @@
       grid-row-gap: 1.9rem;
       grid-column-gap: 1.3rem;
 
-      background-color: gray;
+      background-color: abs.$color-secondary;
       list-style-type: none;
       padding: 2rem 1.2rem;
 
@@ -134,7 +135,7 @@
 
         height: 5rem;
         width: 5rem;
-        fill: black;
+        fill: abs.$color-accent;
         border-radius: 50%;
 
         @include abs.mediaQuery(tab-port) {
@@ -154,8 +155,8 @@
         font-size: 1rem;
         padding: 0.8rem 1.2rem;
         text-transform: uppercase;
-        background-color: gray;
-        color: black;
+        background-color: abs.$color-secondary;
+        color: abs.$color-accent;
         clip-path: polygon(3% 0, 100% 0%, 97% 100%, 0% 100%);
 
         @include abs.mediaQuery(tab-port) {
@@ -176,8 +177,8 @@
         font-size: 1.6rem;
         padding: 0.2rem 0.6rem;
         word-spacing: 0.4rem;
-        background-color: gray;
-        color: black;
+        background-color: abs.$color-secondary;
+        color: abs.$color-accent;
         clip-path: polygon(3% 0, 100% 0%, 97% 100%, 0% 100%);
         @extend .center-me-vertical;
       }
@@ -188,8 +189,8 @@
         grid-row: 2 / 3;
 
         text-decoration: none;
-        background-color: gray;
-        color: black;
+        background-color: abs.$color-secondary;
+        color: abs.$color-accent;
         font-size: 2.2rem;
         padding-left: 1.6rem;
         line-height: 3.5rem;
@@ -215,12 +216,12 @@
         font-size: 2rem;
         text-transform: capitalize;
         line-height: 3rem;
-        background-color: gray;
-        color: black;
+        background-color: abs.$color-secondary;
+        color: abs.$color-accent;
       }
 
       &:hover {
-        background-color: gray;
+        background-color: abs.$color-secondary;
       }
     }
   }
@@ -233,8 +234,8 @@
   z-index: 100;
   width: 98%;
   position: fixed;
-  border: 1px solid gray;
-  background-color: rgba(255, 255, 255, 0.332);
+  border: 1px solid abs.$color-secondary;
+  background-color: abs.$color-transparent-high;
   animation-name: fadeIn;
   animation-duration: 4s;
   animation-delay: .1s;
@@ -246,21 +247,22 @@
   a {
     text-decoration: none;
     font-weight: 900;
-    color: black;
-    background-color: rgba(255, 255, 255, 0.332);
+    color: abs.$color-secondary;
     transition: all .4s;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 
     &:hover {
-      background-color: rgba(231, 231, 231, 0.251);
+      background-color: abs.$color-transparent-high;
+      color: abs.$color-accent;
+      fill: abs.$color-secondary-dark;
     }
 
     svg {
       height: 3rem;
       width: 3rem;
-      fill: #fff;
+      fill: abs.$color-primary;
       transform: translateY(0.4rem);
 
       @include abs.mediaQuery(mobile) {
@@ -360,7 +362,7 @@
       text-transform: uppercase;
       text-decoration: none;
       font-size: 2.6rem;
-      color: black;
+      color: abs.$color-accent;
       padding-left: 10rem;
       transition: all 1.4s;
       display: flex;
@@ -373,7 +375,7 @@
       &::after {
         content: "";
         display: inline-block;
-        background-color: black;
+        background-color: abs.$color-accent;
         margin-left: 1rem;
         height: 3rem;
         width: 3rem;
@@ -385,7 +387,7 @@
       }
 
       &:hover::after {
-        background-color: gray;
+        background-color: abs.$color-secondary;
         margin-left: 2rem;
       }
 
@@ -395,7 +397,7 @@
 
         &:hover {
           opacity: .6s;
-          color: gray;
+          color: abs.$color-secondary;
           transform: scale(1.1);
         }
       }
@@ -417,7 +419,7 @@
     word-spacing: 2.5rem;
     letter-spacing: 0.5rem;
     clip-path: polygon(3% 0, 100% 0%, 97% 100%, 0% 100%);
-    background-color: gray;
+    background-image: linear-gradient(to top left, abs.$color-primary, abs.$color-secondary);
     @extend .center-me-full;
   }
 

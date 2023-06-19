@@ -3,16 +3,31 @@
 ////////////////
 // float btn for content page
 .float-btn {
-  opacity: .6;
+  // opacity: .6;
   position: fixed;
-  background-color: rgba(159, 154, 154, 0.347);
+  background-color: abs.$color-secondary-light;
   font-weight: 900;
-  border: 5px solid #fff;
+  border: 5px solid abs.$color-primary;
   box-sizing: content-box;
   z-index: 100;
   height: 3rem;
   transition: all .2s ease-in-out;
   @extend .center-me-full;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    left: 0;
+    top: 0;
+    transition: all .5s;
+    background-image: linear-gradient(to right, abs.$color-primary, abs.$color-secondary);
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
 
   &:active,
   &:focus {
@@ -21,15 +36,16 @@
 
   &:hover {
     // opacity: 1;
-    animation-name: rainbowZoomIn;
-    animation-delay: .1;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
+    // animation-name: rainbowZoomIn;
+    // animation-delay: .1;
+    // animation-duration: 3s;
+    // animation-iteration-count: infinite;
   }
 
   a {
     text-decoration: none;
     display: flex;
+    z-index: 1;
 
     svg {
       height: 2rem;
@@ -44,16 +60,16 @@
     }
 
     span {
-      color: black;
+      color: abs.$color-accent;
       font-size: 1.3rem;
       text-transform: uppercase;
       @extend .center-me-full;
 
       &:hover {
-        animation-name: rainbowZoomIn;
-        animation-delay: .1;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
+        // animation-name: rainbowZoomIn;
+        // animation-delay: .1;
+        // animation-duration: 3s;
+        // animation-iteration-count: infinite;
       }
 
       @include abs.mediaQuery(mobile) {
@@ -69,8 +85,6 @@
   top: calc(100% - 8%);
   left: calc(100% - 12rem);
   right: 0;
-
-  &:hover {}
 
   @include abs.mediaQuery(tab-land) {
     font-weight: 400;

@@ -1,19 +1,23 @@
 // font-family
-$primary : 'Phudu',
-serif; //300, 400
+$primary : 'Phudu', serif; //300, 400
 $secondary: 'Hahmlet', serif; //500, 700
+$tertiary : 'Oxanium', cursive; // 400, 600
+$content : 'Exo 2', sans-serif; //200, 400, 600, 900
+$code : 'Source Code Pro', monospace; //600
+$general : 'Pathway Extreme', sans-serif; //200, 400, 600
 
-$tertiary : 'Oxanium',
-cursive; // 400, 600
-
-$content : 'Exo 2',
-sans-serif; //200, 400, 600, 900
-
-$code : 'Source Code Pro',
-monospace; //600
-
-$general : 'Pathway Extreme',
-sans-serif; //200, 400, 600
+////////////
+/// colors;
+$color-primary: hsl(0, 0%, 100%);
+$color-primary-dark: hsl(0, 5%, 89%);
+$color-secondary: gray;
+$color-secondary-light: hsl(0, 0%, 76%);
+$color-secondary-dark: hsl(0, 1%, 27%);
+$color-accent: black;
+$color-accent-light: hsl(0, 0%, 24%);
+$color-transparent-high: rgba(0, 0, 0, 0.2);
+$color-transparent-mid: rgba(0, 0, 0, 0.4);
+$color-transparent-low: rgba(0, 0, 0, 0.6);
 
 //////////
 /// media query break point

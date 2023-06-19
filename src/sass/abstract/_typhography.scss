@@ -10,13 +10,12 @@
   main {
     section {
       font-size: 3rem;
-      // margin-bottom: 6rem;
 
       header {
         text-transform: uppercase;
         padding: 2.5rem 0;
         margin: 3rem 0;
-        background-color: #0000001f;
+        background-color: var.$color-secondary-light;
         transition: transform .7s ease-in-out;
         @extend .center-me-full;
         animation-name: slideToLeft;
@@ -33,18 +32,18 @@
           font-family: var.$secondary;
           font-weight: 700;
           letter-spacing: 0.6rem;
-          color: black;
           position: relative;
           z-index: 10;
 
           &::before {
             content: "";
-            background-color: #fff;
+            background-image: linear-gradient(to top left, var.$color-primary, var.$color-secondary);
             position: absolute;
             top: -2rem;
             width: 100%;
-            padding-bottom: 8.5rem;
+            padding-bottom: 8.4rem;
             z-index: -1;
+            box-shadow: 0 3px 4px var.$color-transparent-high;
           }
         }
       }
@@ -54,22 +53,27 @@
         text-transform: lowercase;
         padding: 1.5rem;
         margin-left: 2rem;
+        border: 1px solid var.$color-accent;
 
         &:not(:first-of-type) {
-          border-top: 1px solid gray;
-          padding: 4rem 0.6rem;
+          border-top: 1px solid var.$color-accent;
+          // padding: 4rem 0.6rem;
         }
 
         .content-header {
           font-family: var.$tertiary;
           font-weight: 600;
-          display: inline-block;
           clip-path: polygon(5.14% 0px, 100% 0%, 96.46% 96.32%, 1.88% 100%);
-          background-color: #a2a2a299;
-          color: black;
           padding: 1rem 5rem;
           letter-spacing: 3px;
-          margin: 2rem 0;
+          margin: 1rem 0 2.2rem 0;
+          display: inline-block;
+          -webkit-background-clip: text;
+          background-clip: text;
+          background-image: linear-gradient(to right bottom, var.$color-primary, var.$color-accent);
+          color: transparent;
+          // outline-offset: 1.9rem;
+
         }
       }
 
@@ -89,8 +93,8 @@
         &-header {
           font-family: var.$tertiary;
           font-weight: 600;
-          background-color: #d6d5d5e3;
-          color: black;
+          background-image: linear-gradient(to right bottom, var.$color-primary, var.$color-secondary);
+          color: var.$color-accent;
           padding: .8rem 1.9rem;
           text-transform: lowercase;
           clip-path: polygon(3% 0, 100% 0%, 96% 100%, 0% 100%);
@@ -100,12 +104,13 @@
           font-family: var.$code;
           font-weight: 600;
           text-transform: lowercase;
-          background-color: #cbcbcb41;
-          outline: 1px solid gray;
+          background-color: var.$color-secondary-light;
+          outline: 1px solid var.$color-secondary;
+          box-shadow: 2px 2px 3px var.$color-transparent-mid;
           outline-offset: 1px;
           border-radius: 4px;
-          color: black;
-          padding: 0 0.5rem;
+          color: var.$color-accent;
+          padding: 0 0.8rem;
         }
 
         &-sub-section {
@@ -123,7 +128,7 @@
           svg {
             height: 1rem;
             width: 1rem;
-            fill: black;
+            fill: var.$color-accent;
           }
 
           .list {

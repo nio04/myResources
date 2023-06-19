@@ -1,0 +1,43 @@
+@use "var";
+
+@mixin page-indexes-design() {
+  ul {
+    padding: 2rem 0;
+
+    li {
+      animation-name: zoomIn;
+      animation-duration: 3s;
+      animation-delay: .2s;
+      border-radius: 12px 18px 18px 12px;
+      outline: 2px solid var.$color-accent;
+
+      &:hover {
+        opacity: .6;
+        border-radius: 12px 18px 18px 12px;
+        height: 100%;
+        width: 100%;
+      }
+
+      .item-link:link,
+      .item-link:visited {
+        display: block;
+        height: 100%;
+        width: 100%;
+        transition: all 0.5s;
+        text-decoration: none;
+        text-transform: capitalize;
+        color: var.$color-accent;
+        font-size: 2rem;
+        cursor: pointer;
+        // padding: 0.4em 0.2rem;
+        line-height: 2.9rem;
+
+      }
+
+      &:hover {
+        box-shadow: 0px 0px 0px 0px var.$color-accent;
+        transform: scaleY(1.1);
+      }
+    }
+  }
+}

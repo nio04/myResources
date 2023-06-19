@@ -12,7 +12,7 @@
     section {
       header {
         @include abs.mediaQuery(mobile) {
-          border: 1px solid rgba(0, 0, 0, 0.66);
+          border: 1px solid abs.$color-accent;
         }
 
         span {
