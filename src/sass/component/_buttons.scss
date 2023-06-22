@@ -1,9 +1,9 @@
 @use "../abstract/" as abs;
 
 ////////////////
-// float btn for content page
-.float-btn {
-  // opacity: .6;
+// contet page -- go top & go bottom buttons
+.content-page-container main .float-btn {
+  opacity: .6;
   position: fixed;
   background-color: abs.$color-secondary-light;
   font-weight: 900;
@@ -35,11 +35,11 @@
   }
 
   &:hover {
-    // opacity: 1;
-    // animation-name: rainbowZoomIn;
-    // animation-delay: .1;
-    // animation-duration: 3s;
-    // animation-iteration-count: infinite;
+    opacity: 1;
+    animation-name: rainbowZoomIn;
+    animation-delay: .1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
   }
 
   a {
@@ -66,10 +66,10 @@
       @extend .center-me-full;
 
       &:hover {
-        // animation-name: rainbowZoomIn;
-        // animation-delay: .1;
-        // animation-duration: 3s;
-        // animation-iteration-count: infinite;
+        animation-name: rainbowZoomIn;
+        animation-delay: .1;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
       }
 
       @include abs.mediaQuery(mobile) {
@@ -78,8 +78,16 @@
     }
   }
 
+  @include abs.mediaQuery(mobile) {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+  }
+
 }
 
+///////////
+/// content page -nav to top
 .to-top-btn {
   width: 10rem;
   top: calc(100% - 8%);
@@ -92,7 +100,7 @@
 
   @include abs.mediaQuery(mobile) {
     justify-content: center;
-    border-radius: 50%;
+    // border-radius: 50%;
     height: 6rem;
     width: 6rem;
     top: calc(100% - 9%);
@@ -100,6 +108,8 @@
   }
 }
 
+///////////
+/// content page -nav to bottom
 .to-bottom-btn {
   width: 10rem;
   top: calc(100% - 8%);
@@ -114,8 +124,8 @@
     top: calc(100% - 9%);
     left: calc(100% - 14.4rem);
     justify-content: center;
-    border-radius: 50%;
-    height: 6rem;
-    width: 6rem;
+    // border-radius: 50%;
+    // height: 6rem;
+    // width: 6rem;
   }
 }

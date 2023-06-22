@@ -55,3 +55,23 @@
 .util-caplock {
   text-transform: uppercase !important;
 }
+
+.util-bold {
+  font-weight: 600;
+}
+
+.util-underline {
+  text-decoration: underline;
+  text-decoration-color: var.$color-transparent-mid;
+  text-underline-offset: .7rem;
+}
+
+.util-flex-x {
+  display: flex;
+  justify-content: center;
+}
+
+.util-flex-y {
+  display: flex;
+  align-items: center;
+}

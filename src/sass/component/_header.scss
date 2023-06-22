@@ -1,63 +1,105 @@
 @use "../abstract/" as abs;
 
-.main-header {
-  color: abs.$color-accent;
-  text-transform: uppercase;
-  grid-column: 1 / -1;
-
-  @extend .center-me-full;
-  box-shadow: -2px -9px 201px 27px abs.$color-accent;
-  text-shadow: -7px 7px 10px abs.$color-secondary;
-  clip-path: polygon(0% 15%,
-      15% 15%,
-      15% 0%,
-      85% 0%,
-      85% 15%,
-      100% 15%,
-      100% 85%,
-      85% 85%,
-      85% 100%,
-      15% 100%,
-      15% 85%,
-      0% 85%);
-  border: 3rem solid abs.$color-accent;
-
-  letter-spacing: 0.3em;
-  word-spacing: 0.2rem;
-  font-size: 6rem;
-
-  @include abs.mediaQuery(tab-land) {
-    font-size: 3rem;
-  }
-
-  @include abs.mediaQuery(mobile) {
-    font-size: 2rem;
-  }
-}
-
-.main-home-resource-header {
-  background-image: radial-gradient(circle, abs.$color-secondary, abs.$color-primary);
-  padding: 1.9rem 0;
-  padding-left: 2.9rem;
-  clip-path: polygon(2% 0, 100% 0, 98% 100%, 0% 100%);
-  @extend .center-me-vertical;
-
-  a:link,
-  a:visited {
-    width: 100%;
-    height: 100%;
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    cursor: pointer;
-    text-decoration: none;
+///////////
+/// index.html --headers
+.main-home-container {
+  .main-header {
     color: abs.$color-accent;
+    text-transform: uppercase;
+    grid-column: 1 / -1;
+
+    box-shadow: -2px -9px 201px 27px abs.$color-accent;
+    text-shadow: -7px 7px 10px abs.$color-secondary;
+    clip-path: polygon(0% 15%,
+        15% 15%,
+        15% 0%,
+        85% 0%,
+        85% 15%,
+        100% 15%,
+        100% 85%,
+        85% 85%,
+        85% 100%,
+        15% 100%,
+        15% 85%,
+        0% 85%);
+    border: 3rem solid abs.$color-accent;
+
+    letter-spacing: 0.3em;
+    word-spacing: 0.2rem;
+    font-size: 6rem;
+    font-family: abs.$primary;
+    font-weight: 600;
+    @extend .center-me-full;
+
+    @include abs.mediaQuery(tab-land) {
+      font-size: 3rem;
+    }
+
+    @include abs.mediaQuery(mobile) {
+      font-size: 3.5rem;
+      border: 3rem solid abs.$color-transparent-high;
+    }
+
+    span {
+      animation-name: moveAndJump;
+      animation-delay: .2s;
+      animation-duration: 3s;
+      animation-fill-mode: both;
+      // animation-timing-function: ease-out;
+    }
+  }
+
+  .main-home-extra-nav header {
+    height: 6rem;
+    font-family: abs.$secondary;
+    font-weight: 600;
+    font-size: 3.6rem;
+    background-color: abs.$color-secondary;
+    color: abs.$color-primary;
+    letter-spacing: .5rem;
+
+    animation-name: dropAndBounce;
+    animation-delay: 0;
+    animation-duration: 4s;
+
+    @extend .center-me-full;
+    @extend .util-caplock;
+  }
+
+  .main-home-resource-container {
+    .main-home-resource .main-home-resource-header {
+      background-image: radial-gradient(circle, abs.$color-secondary, abs.$color-primary);
+      padding: 1.9rem 0;
+      padding-left: 2.9rem;
+      @extend .center-me-vertical;
+
+      a:link,
+      a:visited {
+        width: 100%;
+        height: 100%;
+        font-family: abs.$primary;
+        font-weight: 400;
+        font-size: 5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.3rem;
+        cursor: pointer;
+        text-decoration: none;
+        color: abs.$color-accent;
+
+        @include abs.mediaQuery(tab-port) {
+          text-align: center;
+          color: abs.$color-primary;
+          letter-spacing: .5rem;
+        }
+      }
+    }
   }
 }
 
-.resource-home-header {
+/////////////
+/// resource page [second page]
+.resource-home-container .resource-home-header {
   grid-column: 1 / -1;
-
   background-color: abs.$color-secondary;
   font-size: 3rem;
   padding: 1.6rem 2.3rem;
@@ -72,5 +114,152 @@
 
   @include abs.mediaQuery(mob-small) {
     font-size: 1.6rem;
+  }
+}
+
+//////////////
+/// content page [third page]
+.content-page-container {
+  .nav {
+    header {
+      font-family: abs.$primary;
+      font-weight: 600;
+      grid-column: 1 / -1;
+      font-size: 8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.8rem;
+      word-spacing: 0.7rem;
+      @extend .center-me-full;
+
+      animation-name: rainbowZoomIn;
+      animation-duration: 4s;
+      animation-delay: .2s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate-reverse;
+    }
+
+    .section {
+      font-size: 5rem;
+      font-family: abs.$secondary;
+      font-weight: 700;
+      text-transform: uppercase;
+      align-self: center;
+      justify-self: start;
+      margin-left: 10rem;
+      letter-spacing: 0.4rem;
+      font-style: italic;
+
+      animation-name: slideToLeft;
+      animation-duration: 2s;
+      animation-delay: .2s;
+
+      @include abs.mediaQuery(tab-land) {
+        margin-left: 4rem;
+        margin-bottom: 5rem;
+      }
+
+      @include abs.mediaQuery(tab-port) {
+        margin-left: 1rem;
+        font-size: 4.2rem;
+      }
+
+      @include abs.mediaQuery(mobile) {
+        font-size: 4rem;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  main section {
+    header {
+      text-transform: uppercase;
+      padding: 2.5rem 0;
+      margin: 3rem 0;
+      background-color: abs.$color-secondary-light-transparent-high;
+      transition: transform .7s ease-in-out;
+      @extend .center-me-full;
+      animation-name: slideToLeft;
+      animation-duration: 4s;
+      animation-delay: .1s;
+
+      @include abs.mediaQuery(mobile) {
+        border: 1px solid abs.$color-accent;
+      }
+
+      span {
+        font-family: abs.$secondary;
+        font-weight: 700;
+        letter-spacing: 0.6rem;
+        position: relative;
+        z-index: 10;
+
+        @include abs.mediaQuery(mobile) {
+          letter-spacing: 0;
+        }
+
+        &::before {
+          content: "";
+          background-image: linear-gradient(to top left, abs.$color-primary, abs.$color-secondary);
+          position: absolute;
+          top: -2rem;
+          width: 100%;
+          padding-bottom: 8.4rem;
+          z-index: -1;
+          box-shadow: inset 0px -5px 2px 0px abs.$color-transparent-high;
+          border-radius: 3px;
+
+          @include abs.mediaQuery(tab-port) {
+            padding-bottom: 9.3rem;
+            box-shadow: none;
+            top: -2.5rem;
+          }
+        }
+      }
+    }
+
+    .content-area {
+      .content-header {
+        font-family: abs.$tertiary;
+        font-weight: 600;
+        // clip-path: polygon(5.14% 0px, 100% 0%, 96.46% 96.32%, 1.88% 100%);
+        padding: 1rem 5rem;
+        letter-spacing: 3px;
+        margin: 1rem 0 2.2rem 0;
+        display: inline-block;
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-image: linear-gradient(to right bottom, abs.$color-primary, abs.$color-accent);
+        color: transparent;
+        text-shadow: 0px 0px 2px abs.$color-accent;
+        @extend .util-margin-bottom;
+
+        @include abs.mediaQuery(tab-port) {
+          display: block !important;
+          text-align: center !important;
+        }
+
+        @include abs.mediaQuery(tab-land) {
+          padding: 0;
+          margin-bottom: 5rem !important;
+        }
+
+        @include abs.mediaQuery(mobile) {
+          letter-spacing: 0;
+          padding: 1rem 2.8rem;
+        }
+      }
+
+      .code-explain {
+        &-header {
+          font-family: abs.$tertiary;
+          font-weight: 600;
+          background-image: linear-gradient(to right bottom, abs.$color-primary, abs.$color-secondary);
+          color: abs.$color-accent;
+          padding: .8rem 1.9rem;
+          text-transform: lowercase;
+          clip-path: polygon(3% 0, 100% 0%, 96% 100%, 0% 100%);
+        }
+      }
+    }
   }
 }

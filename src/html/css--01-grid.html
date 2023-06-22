@@ -14,7 +14,7 @@
   <body>
     <div class="content-page-container">
       <div class="nav">
-        <header>everything about grid</header>
+        <header class="content-page-main-header-01">everything about grid</header>
         <svg>
           <use xlink:href="../img/sprite.svg#grid"></use>
         </svg>
@@ -231,7 +231,8 @@
             </pre>
             <span class="code-explain  util-split-bottom">
               <!-- <span class="code-explain-header"></span> -->
-              <span class="code-explain-sub-section"> apply effects on <span class="code-explain--code">main
+              <span class="code-explain-sub-section"> apply effects on <span
+                  class="code-explain--code">main
                   axis </span></span>
             </span>
             <span class="content-header">justify-content</span>
@@ -242,7 +243,8 @@
             </pre>
             <span class="code-explain ">
               <span class="code-explain-sub-section">when the total size of grid is less
-                than the container size... then this this property works for <span class="code-explain--code">main
+                than the container size... then this this property works for <span
+                  class="code-explain--code">main
                   axis (x)</span></span>
             </span>
 
@@ -279,7 +281,8 @@
             </pre>
             <span class="code-explain ">
               <span class="code-explain-sub-section">when the total size of grid is less
-                than the container size... then this this property works for <span class="code-explain--code">cross
+                than the container size... then this this property works for <span
+                  class="code-explain--code">cross
                   axis (y)</span> </span>
             </span>
           </div>
@@ -287,7 +290,8 @@
           <div class="content-area"> <span class="content-header util-center">other properties
               for
               parent container</span>
-            <div class="util-border-bottom-double util-margin-top-negative-small util-opacity-high"></div>
+            <div class="util-border-bottom-double util-margin-top-negative-small util-opacity-high">
+            </div>
             <br>
             <span class="content-header">gap</span>
             <pre>
@@ -297,7 +301,8 @@
             </pre>
             <span class="code-explain util-split-bottom">
               <span class="code-explain-sub-section "> shorthand property for
-                <span class="code-explain--code">row-gap</span> and <span class="code-explain--code">column gap</span>
+                <span class="code-explain--code">row-gap</span> and <span
+                  class="code-explain--code">column gap</span>
               </span>
             </span>
             <span class="content-header">grid-auto-row</span>
@@ -396,7 +401,9 @@
           <header><span> miscs</span></header>
           <div class="content-area"><span class="content-header util-center">explaining useful
               template</span>
-            <div class="util-border-bottom-double util-margin-top-negative-small util-margin-bottom"></div>
+            <div
+              class="util-border-bottom-double util-margin-top-negative-small util-margin-bottom">
+            </div>
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
               grid-template-column : repeat(auto-fit, minmax(min-content, 25rem));
@@ -406,7 +413,8 @@
               <span class="code-explain-sub-section">
                 intially, if the parent container has enough space, the elements will
                 defaultly have 25rem && as the container size decrease & the
-                elements can not have 25rem... it will simply apply <span class="code-explain--code">min-content</span>
+                elements can not have 25rem... it will simply apply <span
+                  class="code-explain--code">min-content</span>
                 which means, contents will have <span class="code-explain--code">flexible row
                   size</span>
               </span>
@@ -421,7 +429,8 @@
             </pre>
 
           </div>
-          <div class="content-area util-split-bottom"><span class="content-header">famous snippets</span>
+          <div class="content-area util-split-bottom"><span class="content-header">famous
+              snippets</span>
             <pre>
               <code class="language-css match-braces rainbow-braces">
               grid-template-columns : repeat(auto-fill, minmax(200px, 1fr));

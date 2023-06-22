@@ -1,4 +1,4 @@
-// MAIN PAGE
+// first PAGE
 @use "../abstract/" as abs;
 @use "../base/reset";
 @use "../component/" as compo;
@@ -9,7 +9,7 @@
   gap: 6rem;
 
   @include abs.mediaQuery(tab-port) {
-    grid-template-rows: 9rem min-content 1fr;
+    grid-template-rows: 9rem 80vh min-content 1fr;
   }
 
   .main-home-resource-container {

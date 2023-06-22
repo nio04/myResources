@@ -1,5 +1,4 @@
 @use "../abstract/" as abs;
-@use 'sass:color';
 
 //////////
 /// main home extra nav
@@ -9,19 +8,42 @@
   grid-column: 1 / -1;
 
   @include abs.mediaQuery(tab-port) {
-    .main-home-extra-nav {
-      display: block;
-    }
+    display: block;
   }
 
   ul {
+    height: 88%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
     li {
       list-style-type: none;
-      padding: 1.5rem 0;
+      padding: .8rem 0;
+      border-radius: 3px;
       @extend .center-me-horizontal;
 
-      &:not(:last-of-type) {
-        margin-bottom: 2.9rem;
+      @include abs.mediaQuery(tab-land) {
+        &:not(:last-of-type) {
+          margin-bottom: 2.9rem;
+        }
+      }
+
+      @include abs.mediaQuery(tab-port) {
+        &:not(:last-of-type) {
+          margin-bottom: 0;
+        }
+      }
+
+      &:nth-child(even) {
+        background-color: abs.$color-transparent-high;
+        animation-name: slideToLeft;
+        animation-duration: 3s;
+      }
+
+      &:nth-child(odd) {
+        animation-name: slideToRight;
+        animation-duration: 3s;
       }
 
       .nav-link:link,
@@ -31,8 +53,11 @@
         text-align: center;
         text-decoration: none;
         text-transform: uppercase;
+        letter-spacing: .3rem;
         font-size: 3.6rem;
+        font-family: abs.$tertiary;
         color: abs.$color-accent;
+        transition: all .4s;
 
         @include abs.mediaQuery(mobile) {
           font-size: 3rem;
@@ -41,12 +66,13 @@
         @include abs.mediaQuery(mob-small) {
           font-size: 2.5rem;
         }
-      }
-    }
-  }
 
-  @include abs.mediaQuery(mobile) {
-    display: block;
+        &:hover {
+          color: abs.$color-secondary;
+        }
+      }
+
+    }
   }
 }
 
@@ -66,6 +92,7 @@
 
     @include abs.mediaQuery(tab-port) {
       grid-template-columns: repeat(2, 1fr);
+      column-gap: .1rem;
     }
 
     @include abs.mediaQuery(mobile) {
@@ -235,7 +262,7 @@
   width: 98%;
   position: fixed;
   border: 1px solid abs.$color-secondary;
-  background-color: abs.$color-transparent-high;
+  background-color: abs.$color-secondary-light-transparent-high;
   animation-name: fadeIn;
   animation-duration: 4s;
   animation-delay: .1s;
@@ -299,30 +326,11 @@
 }
 
 ////////
-/// content-page-index [first]
+/// content-page-index [first nav]
 .nav {
   display: grid;
   grid-template-columns: 80% 20%;
-  grid-template-rows: 22rem 10rem minmax(10rem, 100vh);
-
-  header {
-    font-family: abs.$primary;
-    grid-column: 1 / -1;
-    font-size: 8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.8rem;
-    word-spacing: 0.7rem;
-    // font-style: italic;
-    padding-left: 8rem;
-    @extend .center-me-full;
-
-    animation-name: rainbowZoomIn;
-    animation-duration: 4s;
-    animation-delay: .2s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
-
-  }
+  grid-template-rows: 22rem 10rem minmax(55rem, 100vh);
 
   svg {
     grid-column: 2 / 3;
@@ -330,20 +338,6 @@
     justify-self: center;
     height: 10rem;
     width: 10rem;
-    animation-name: slideToLeft;
-    animation-duration: 2s;
-    animation-delay: .2s;
-  }
-
-  .section {
-    font-size: 5rem;
-    text-transform: uppercase;
-    align-self: center;
-    justify-self: start;
-    margin-left: 10rem;
-    letter-spacing: 0.4rem;
-    font-style: italic;
-
     animation-name: slideToLeft;
     animation-duration: 2s;
     animation-delay: .2s;
@@ -358,61 +352,22 @@
     animation-duration: 2s;
     animation-delay: .2s;
 
-    a {
-      text-transform: uppercase;
-      text-decoration: none;
-      font-size: 2.6rem;
-      color: abs.$color-accent;
-      padding-left: 10rem;
-      transition: all 1.4s;
-      display: flex;
-      align-items: center;
-
-      // &:hover {
-      //   text-decoration: underline;
-      // }
-
-      &::after {
-        content: "";
-        display: inline-block;
-        background-color: abs.$color-accent;
-        margin-left: 1rem;
-        height: 3rem;
-        width: 3rem;
-        -webkit-mask-image: url("../../img/svg/pointRight.svg");
-        -webkit-mask-size: cover;
-        mask-image: url("../../img/svg/pointRight.svg");
-        mask-size: cover;
-        transition: all 0.6s;
-      }
-
-      &:hover::after {
-        background-color: abs.$color-secondary;
-        margin-left: 2rem;
-      }
-
-      span {
-        letter-spacing: .1rem;
-        transition: all .4s;
-
-        &:hover {
-          opacity: .6s;
-          color: abs.$color-secondary;
-          transform: scale(1.1);
-        }
-      }
+    @include abs.mediaQuery(mobile) {
+      justify-content: space-evenly;
     }
   }
 }
 
 ///////////////
-// CONTENT PAGE INDEX NAV BAR [last one]
-.content-page-indexes {
+// CONTENT PAGE INDEX NAV BAR [last nav]
+.content-page-container .content-page-indexes {
   display: grid;
   grid-template-rows: 5rem 1fr;
   grid-row-gap: 3rem;
 
   header {
+    font-family: abs.$secondary;
+    font-weight: 700;
     font-size: 3rem;
     padding: 3.5rem 0;
     text-transform: uppercase;
@@ -424,6 +379,7 @@
   }
 
   nav {
+    @include abs.page-indexes-design();
     padding: 2rem 6rem;
 
     @include abs.mediaQuery(tab-port) {

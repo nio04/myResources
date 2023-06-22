@@ -2,113 +2,106 @@
 @use "../layout/" as layout;
 @use "../abstract/" as abs;
 
+// OVERALL RULES
+// .content-page-container {
+//   .nav {
+//     .section {
+//       @include abs.mediaQuery(tab-land) {
+//         margin-left: 4rem;
+//       }
+
+//       @include abs.mediaQuery(tab-port) {
+//         justify-self: start;
+//         font-size: 3rem;
+//         margin-left: 0;
+//       }
+
+//       @include abs.mediaQuery(mobile) {
+//         justify-self: start;
+//         padding-left: 2rem;
+//         margin-bottom: 8rem;
+//       }
+//     }
+
+//     .indexes {
+//       @include abs.mediaQuery(mobile) {
+//         justify-content: space-evenly;
+//       }
+
+//       a {
+//         @include abs.mediaQuery(tab-land) {
+//           padding-left: 4rem;
+//         }
+
+//         @include abs.mediaQuery(tab-port) {
+//           padding-left: 0;
+//         }
+
+//         @include abs.mediaQuery(mobile) {
+//           margin: 2rem 0;
+//           padding-left: 2rem;
+//         }
+//       }
+//     }
+//   }
+
+//   main section .content-area {
+//     @include abs.mediaQuery(tab-land) {
+//       margin-left: 0;
+//       padding-left: 0;
+//       padding-right: 0;
+//       line-height: 6.2rem;
+//     }
+
+//     .code-explain {
+//       @include abs.mediaQuery(tab-land) {
+//         padding: 1rem 0.2rem;
+//         margin-left: 0;
+//         margin-top: 4rem;
+//         line-height: 8rem;
+//       }
+//     }
+//   }
+// }
+
 // CONTENT - 01 : GRID
-.content-page-container {
-  .nav {
-    // svg {
-    //   @include abs.mediaQuery(tab-land) {
-    //     justify-self: end;
-    //   }
-    // }
-
-    header {
-      @include abs.mediaQuery(tab-land) {
-        font-size: 5rem;
-      }
-
-      @include abs.mediaQuery(tab-port) {
-        font-size: 4rem;
-      }
-
-      @include abs.mediaQuery(mobile) {
-        font-size: 3rem;
-        padding-left: 0;
-      }
+.content-page-container .nav {
+  .content-page-main-header-01 {
+    @include abs.mediaQuery(tab-land) {
+      font-size: 5.5rem;
     }
 
-    .section {
-      @include abs.mediaQuery(tab-land) {
-        margin-left: 4rem;
-      }
-
-      @include abs.mediaQuery(tab-port) {
-        justify-self: start;
-        font-size: 3rem;
-        margin-left: 0;
-      }
-
-      @include abs.mediaQuery(mobile) {
-        justify-self: start;
-        padding-left: 2rem;
-        margin-bottom: 8rem;
-      }
+    @include abs.mediaQuery(tab-port) {
+      font-size: 4.9rem;
     }
 
-    .indexes {
-      @include abs.mediaQuery(mobile) {
-        justify-content: space-evenly;
-      }
+    @include abs.mediaQuery(mobile) {
+      font-size: 3.4rem;
+    }
 
-      a {
-        @include abs.mediaQuery(tab-land) {
-          padding-left: 4rem;
-        }
-
-        @include abs.mediaQuery(tab-port) {
-          padding-left: 0;
-        }
-
-        @include abs.mediaQuery(mobile) {
-          margin: 2rem 0;
-          padding-left: 2rem;
-        }
-      }
+    @include abs.mediaQuery(mob-small) {
+      font-size: 3.9rem;
     }
   }
+}
 
-  main {
-    section {
-      .content-area {
-        @include abs.mediaQuery(tab-land) {
-          margin-left: 0;
-          padding-left: 0;
-          padding-right: 0;
-          line-height: 6.2rem;
-        }
-
-        .code-explain {
-          @include abs.mediaQuery(tab-land) {
-            padding: 1rem 0.2rem;
-            margin-left: 0;
-            margin-top: 4rem;
-            line-height: 8rem;
-          }
-
-          // &::after {
-          //   @include abs.mediaQuery(tab-port) {
-          //     display: none;
-          //   }
-          // }
-        }
-      }
+// CONTENT - 01 : GRID
+.content-page-container .nav {
+  .content-page-main-header-02 {
+    @include abs.mediaQuery(tab-land) {
+      font-size: 5.9rem;
     }
-  }
 
-  nav {
-    ul {
-      @include abs.mediaQuery(tab-land) {
-        grid-template-columns: repeat(2, minmax(27rem, 1fr));
-      }
+    @include abs.mediaQuery(tab-port) {
+      font-size: 4.3rem;
+    }
 
-      @include abs.mediaQuery(tab-port) {
-        grid-template-columns: 1fr;
-        grid-row-gap: 3rem;
-      }
+    @include abs.mediaQuery(mobile) {
+      font-size: 3rem;
+    }
 
-      @include abs.mediaQuery(mobile) {
-        grid-template-columns: 1fr;
-        grid-row-gap: 3rem;
-      }
+    @include abs.mediaQuery(mob-small) {
+      font-size: 3.4rem;
     }
   }
 }

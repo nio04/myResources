@@ -3,6 +3,33 @@
 @use "../abstract/" as abs;
 @use "../component/" as comp;
 
+// OVERALL RULES
+// .content-page-container {
+//   .nav {
+//     svg {
+//       @include abs.mediaQuery(tab-land) {
+//         justify-self: end;
+//       }
+//     }
+
+//     .indexes {
+
+//       a {
+
+//       }
+//     }
+//   }
+
+//   main section {
+//     .content-area {
+
+//       .code-explain {
+
+//       }
+//     }
+//   }
+// }
+
 // CONTENT - 01 : git fundamental
 .content-page-container {
   .nav {
@@ -11,148 +38,120 @@
       font-size: 4rem;
 
       @include abs.mediaQuery(tab-land) {
-        font-size: 3.1rem;
+        font-size: 3.8rem;
       }
 
       @include abs.mediaQuery(tab-port) {
-        padding-left: 0;
-        font-size: 2rem;
+        font-size: 4.4rem;
+        letter-spacing: 0rem;
+        word-spacing: 0rem;
       }
 
       @include abs.mediaQuery(mobile) {
-        font-size: 1.3rem;
+        font-size: 3.7rem;
       }
 
       @include abs.mediaQuery(mob-small) {
-        font-size: 1.5rem;
-      }
-    }
-
-    svg {
-      @include abs.mediaQuery(tab-land) {
-        justify-self: end;
-      }
-    }
-
-    .section {
-      @include abs.mediaQuery(tab-land) {
-        margin-left: 4rem;
-        margin-bottom: 5rem;
-      }
-
-      @include abs.mediaQuery(tab-port) {
-        margin-left: 2rem;
-        font-size: 4.2rem;
-      }
-
-      @include abs.mediaQuery(mobile) {
-        font-size: 4rem;
-        margin-bottom: 0;
-      }
-    }
-
-    .indexes {
-      @include abs.mediaQuery(mobile) {
-        justify-content: space-evenly;
-      }
-
-      a {
-        @include abs.mediaQuery(tab-land) {
-          padding-left: 4rem;
-        }
-
-        @include abs.mediaQuery(tab-port) {
-          padding-left: 2rem;
-        }
-      }
-    }
-  }
-
-  main {
-    section {
-      .content-area {
-        @include abs.mediaQuery(tab-port) {
-          margin-left: 1rem;
-          padding: 1.1rem;
-        }
-
-        .code-explain {
-          @include abs.mediaQuery(tab-port) {
-            margin-left: 0;
-            padding: 0;
-          }
-        }
+        font-size: 3.5rem;
       }
     }
   }
 }
 
 // CONTENT :: 02 - MERGE
-.content-page-container {
-  .nav {
-    .main-header-02 {
-      font-size: 3.9rem;
-      padding: 0;
+.content-page-container .nav {
+  .main-header-02 {
+    font-size: 3.9rem;
+    padding: 0;
 
-      @include abs.mediaQuery(tab-land) {
-        font-size: 3.5rem;
-      }
+    @include abs.mediaQuery(tab-land) {
+      font-size: 2.8rem;
+    }
 
-      @include abs.mediaQuery(tab-port) {
-        font-size: 2.3rem;
-      }
+    @include abs.mediaQuery(tab-port) {
+      font-size: 3.4rem;
+      letter-spacing: 0rem;
+      word-spacing: 0rem;
+    }
 
-      @include abs.mediaQuery(mobile) {
-        font-size: 1.8rem;
-      }
+    @include abs.mediaQuery(mobile) {
+      font-size: 2.8rem;
+    }
 
-      @include abs.mediaQuery(mob-small) {
-        font-size: 1.3rem;
-      }
+    @include abs.mediaQuery(mob-small) {
+      font-size: 3rem;
     }
   }
 }
 
 // CONTENT :: 03 : DIFF
+.content-page-container .nav {
+  .main-header-03 {
+    font-size: 5rem;
+    padding: 0;
+
+    @include abs.mediaQuery(tab-land) {
+      font-size: 4rem;
+    }
+
+    @include abs.mediaQuery(tab-port) {
+      font-size: 4.8rem;
+      letter-spacing: 0rem;
+      word-spacing: 0rem;
+    }
+
+    @include abs.mediaQuery(mobile) {
+      font-size: 3.7rem;
+    }
+
+    @include abs.mediaQuery(mob-small) {
+      font-size: 4rem;
+    }
+  }
+
+  .indexes-03 {
+    grid-column: 1 / -1;
+
+    a {
+      padding-right: 2rem;
+
+      &:nth-child(4) {
+        margin-left: 0;
+
+        &::after {
+          width: 4rem;
+          transform: translateX(-3rem);
+        }
+      }
+    }
+
+  }
+}
+
+// CONTENT :: 04 : STASH
 .content-page-container {
   .nav {
-    .main-header-03 {
-      font-size: 5rem;
+    .main-header-04 {
+      font-size: 3.6rem;
       padding: 0;
 
       @include abs.mediaQuery(tab-land) {
-        font-size: 4.6rem;
+        font-size: 2.7rem;
       }
 
       @include abs.mediaQuery(tab-port) {
         font-size: 3.3rem;
+        letter-spacing: 0rem;
+        word-spacing: 0rem;
       }
 
       @include abs.mediaQuery(mobile) {
-        font-size: 2.4rem;
+        font-size: 2.7rem;
       }
 
       @include abs.mediaQuery(mob-small) {
-        font-size: 1.9rem;
+        font-size: 2.9rem;
       }
-    }
-
-    .indexes-03 {
-      grid-column: 1 / -1;
-
-      a {
-        padding-right: 2rem;
-
-        &:nth-child(4) {
-          margin-left: 0;
-
-          &::after {
-            width: 4rem;
-            transform: translateX(-3rem);
-          }
-        }
-      }
-
     }
   }
 }

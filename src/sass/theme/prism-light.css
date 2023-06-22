@@ -493,7 +493,6 @@ div.code-toolbar {
 @media only screen and (width <=60.625em) {
 	div.code-toolbar {
 		width: 55rem;
-		margin-left: 3rem;
 	}
 }
 

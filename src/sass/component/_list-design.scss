@@ -1,0 +1,21 @@
+@use "../abstract/" as abs;
+
+.content-page-container main section .code-explain {
+  .list-wrap {
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+
+    svg {
+      height: 1rem;
+      width: 1rem;
+      fill: abs.$color-accent;
+    }
+
+    .list {
+      padding-left: 2rem;
+    }
+  }
+}

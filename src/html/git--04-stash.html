@@ -22,17 +22,17 @@
         </svg>
         <div class="section">section</div>
         <div class="indexes">
-          <a href="#content-index-01">
+          <a href="#content-index-information">
             <span>
               stash information
             </span>
           </a>
-          <a href="#content-index-02">
+          <a href="#content-index-noConflict">
             <span>
               no conflict
             </span>
           </a>
-          <a href="#content-index-03">
+          <a href="#content-index-conflict">
             <span>
               conflict
             </span>
@@ -41,7 +41,7 @@
       </div>
 
       <!-- main home button -->
-      <div class="content-page-home-button">
+      <div class="sticky-nav">
         <a href="index.html">
           <svg>
             <use xlink:href="../img/sprite.svg#home"></use>
@@ -50,46 +50,96 @@
         </a>
       </div>
 
-      <main>
+      <main class="line-numbers">
         <section>
           <header><span>stash : information</span></header>
-          <div class="content-area" id="content-index-01"><span class="content-header">diff :
+          <div class="content-area" id="content-index-information"><span
+              class="content-header">stash changes
+              :
               important information</span>
             <span class="code-explain">
-              by <span class="code-explain--code">git diff</span> command, we can get various
-              types of differences from our working file from different timeline.
-              <br>
-              <br>
-              <span class="code-explain--code">----</span> old file content [file name = a]
-              <br>
-              <span class="code-explain--code">++++</span> new file content [file name = b]
+              <span class="code-explain--code">git stash</span> hide our works from staged &
+              unstaged area. so that we
+              can switch to <span class="util-bold util-underline">another branch</span>, without
+              having to worry about, conflict warning or unstaged works follow to another branch
+            </span>
+            <span class="code-explain">
+              when we add works in a branch and if we switch to another branch, before commit. two
+              things will happen
+              <span class="list-wrap">
+                <svg>
+                  <use xlink:href="../img/sprite.svg#dot"></use>
+                </svg><span class="list">if no conflict was found :: the new works will be follow to
+                  the switched
+                  branch</span>
+              </span>
+              <span class="list-wrap">
+                <svg>
+                  <use xlink:href="../img/sprite.svg#dot"></use>
+                </svg><span class="list">if conflict was found :: git wont let me switch
+                  branch</span>
+              </span>
             </span>
           </div>
         </section>
 
         <section>
           <header><span>stash : operation</span></header>
-          <div class="content-area" id="content-index-02"><span class="content-header">unstaged ::
-              last commit</span>
+          <div class="content-area" id="content-index-noConflict"><span class="content-header">no
+              conflict</span>
             <pre>
               <code class="language-git match-braces rainbow-braces">
-                git diff
+                // to stash changes
+                git stash
+                // to un-stash changes
+                git stash pop
               </code>
             </pre>
+            <span class="code-explain">
+              if there were <span class="util-bold util-underline">no conflict</span> and <span
+                class="util-bold util-underline">unstaged</span> works exist.
+              then when we <span class="util-underline">switch branch, our unstaged works follow the
+                branch</span>. to prevent this behavior, we <span
+                class="code-explain--code">stash</span> the changes
+            </span>
+            <span class="code-explain">
+              note :: the following works on branch is not permanent. when we commit the works from
+              our working branch,
+              all the follow up works will be gone!!!
+            </span>
+          </div>
+          <div class="content-area" id="content-index-conflict"><span
+              class="content-header">conflict</span>
+            <pre>
+              <code class="language-git match-braces rainbow-braces">
+                // to stash changes
+                git stash
+                // to un-stash changes
+                git stash pop
+              </code>
+            </pre>
+            <span class="code-explain">
+              we don't want to commit our current works, but wanting to switch branch. and if there
+              is conflict warning, then we stash the changes, to bypass the warning
+            </span>
+            <span class="code-explain">
+
+            </span>
           </div>
         </section>
 
         <!-- adding hover [go to top] button -->
-        <div class="content-page-go-to-top-button">
+        <div class="float-btn to-top-btn">
           <a href="#">
             <svg>
               <use xlink:href="../img/sprite.svg#to-top"></use>
             </svg>
-            <span>go to top</span>
+            <span>top</span>
           </a>
         </div>
+        <!-- adding hover [go to bottom] button -->
         <div class="float-btn to-bottom-btn">
-          <a href="bottom-side">
+          <a href="#bottom-side">
             <svg>
               <use xlink:href="../img/sprite.svg#to-bottom"></use>
             </svg>
@@ -116,7 +166,8 @@
               <a href="git--03-diff.html" class="item-link">diff : find the differnce</a>
             </li>
             <li class="item link-active">
-              <a href="git--04-stash.html" class="item-link">STASH : everything about stash changes</a>
+              <a href="git--04-stash.html" class="item-link">STASH : everything about stash
+                changes</a>
             </li>
             <li class="item">
               <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
