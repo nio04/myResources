@@ -3,25 +3,24 @@
 
 @mixin page-indexes-design() {
   ul {
-    padding: 2rem 0;
+    padding: 0 2rem;
 
     li {
       transition: all 0.6s;
       animation-name: zoomIn;
       animation-duration: 3s;
-      animation-delay: .2s;
+      animation-delay: 0.2s;
       border-radius: 12px 18px 18px 12px;
       outline: 2px solid var.$color-accent;
 
       &:hover {
-        opacity: .6;
+        opacity: 0.6;
         border-radius: 12px 18px 18px 12px;
         height: 100%;
         width: 100%;
       }
 
-      .item-link:link,
-      .item-link:visited {
+      .item-link:link {
         display: block;
         height: 100%;
         width: 100%;
@@ -29,7 +28,7 @@
         text-transform: capitalize;
         color: var.$color-accent;
         font-family: var.$tertiary;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 2rem;
         cursor: pointer;
         line-height: 2.9rem;
@@ -45,12 +44,12 @@
         box-shadow: 0px 0px 0px 0px var.$color-accent;
         transform: scaleY(1.1) scaleX(1.01);
         line-height: 3rem;
-        letter-spacing: .1rem;
+        letter-spacing: 0.1rem;
       }
     }
 
     &:hover li:not(:hover) {
-      transform: scale(.96);
+      transform: scale(0.96);
     }
   }
 }

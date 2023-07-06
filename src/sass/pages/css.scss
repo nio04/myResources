@@ -2,68 +2,6 @@
 @use "../layout/" as layout;
 @use "../abstract/" as abs;
 
-// OVERALL RULES
-// .content-page-container {
-//   .nav {
-//     .section {
-//       @include abs.mediaQuery(tab-land) {
-//         margin-left: 4rem;
-//       }
-
-//       @include abs.mediaQuery(tab-port) {
-//         justify-self: start;
-//         font-size: 3rem;
-//         margin-left: 0;
-//       }
-
-//       @include abs.mediaQuery(mobile) {
-//         justify-self: start;
-//         padding-left: 2rem;
-//         margin-bottom: 8rem;
-//       }
-//     }
-
-//     .indexes {
-//       @include abs.mediaQuery(mobile) {
-//         justify-content: space-evenly;
-//       }
-
-//       a {
-//         @include abs.mediaQuery(tab-land) {
-//           padding-left: 4rem;
-//         }
-
-//         @include abs.mediaQuery(tab-port) {
-//           padding-left: 0;
-//         }
-
-//         @include abs.mediaQuery(mobile) {
-//           margin: 2rem 0;
-//           padding-left: 2rem;
-//         }
-//       }
-//     }
-//   }
-
-//   main section .content-area {
-//     @include abs.mediaQuery(tab-land) {
-//       margin-left: 0;
-//       padding-left: 0;
-//       padding-right: 0;
-//       line-height: 6.2rem;
-//     }
-
-//     .code-explain {
-//       @include abs.mediaQuery(tab-land) {
-//         padding: 1rem 0.2rem;
-//         margin-left: 0;
-//         margin-top: 4rem;
-//         line-height: 8rem;
-//       }
-//     }
-//   }
-// }
-
 // CONTENT - 01 : GRID
 .content-page-container .nav {
   .content-page-main-header-01 {

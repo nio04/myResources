@@ -19,7 +19,7 @@
 
     li {
       list-style-type: none;
-      padding: .8rem 0;
+      padding: 0.8rem 0;
       border-radius: 3px;
       @extend .center-me-horizontal;
 
@@ -53,11 +53,11 @@
         text-align: center;
         text-decoration: none;
         text-transform: uppercase;
-        letter-spacing: .3rem;
+        letter-spacing: 0.3rem;
         font-size: 3.6rem;
         font-family: abs.$tertiary;
         color: abs.$color-accent;
-        transition: all .4s;
+        transition: all 0.4s;
 
         @include abs.mediaQuery(mobile) {
           font-size: 3rem;
@@ -71,7 +71,6 @@
           color: abs.$color-secondary;
         }
       }
-
     }
   }
 }
@@ -92,7 +91,7 @@
 
     @include abs.mediaQuery(tab-port) {
       grid-template-columns: repeat(2, 1fr);
-      column-gap: .1rem;
+      column-gap: 0.1rem;
     }
 
     @include abs.mediaQuery(mobile) {
@@ -265,7 +264,7 @@
   background-color: abs.$color-secondary-light-transparent-high;
   animation-name: fadeIn;
   animation-duration: 4s;
-  animation-delay: .1s;
+  animation-delay: 0.1s;
 
   @include abs.mediaQuery(mobile) {
     width: 100%;
@@ -275,7 +274,7 @@
     text-decoration: none;
     font-weight: 900;
     color: abs.$color-secondary;
-    transition: all .4s;
+    transition: all 0.4s;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -307,7 +306,7 @@
       font-size: 2.5rem;
       padding-right: 2rem;
       text-decoration: none;
-      transition: all .4s ease-in-out;
+      transition: all 0.4s ease-in-out;
 
       &:hover {
         transform: translateY(-2px) scale(1.2);
@@ -330,7 +329,23 @@
 .nav {
   display: grid;
   grid-template-columns: 80% 20%;
-  grid-template-rows: 22rem 10rem minmax(55rem, 100vh);
+  grid-template-rows: 17rem 8rem minmax(50rem, 50vh);
+
+  @include abs.mediaQuery(tab-land) {
+    grid-template-rows: 17rem 8rem minmax(65rem, 50vh);
+  }
+
+  // @include abs.mediaQuery(tab-port) {
+  //   grid-template-rows: 17rem 8rem minmax(46rem, 50vh);
+  // }
+
+  @include abs.mediaQuery(mobile) {
+    grid-template-rows: 17rem 8rem minmax(80rem, 50vh);
+  }
+
+  @include abs.mediaQuery(mob-small) {
+    grid-template-rows: 17rem 8rem minmax(90rem, 50vh);
+  }
 
   svg {
     grid-column: 2 / 3;
@@ -340,7 +355,7 @@
     width: 10rem;
     animation-name: slideToLeft;
     animation-duration: 2s;
-    animation-delay: .2s;
+    animation-delay: 0.2s;
   }
 
   .indexes {
@@ -350,7 +365,7 @@
 
     animation-name: slideToRight;
     animation-duration: 2s;
-    animation-delay: .2s;
+    animation-delay: 0.2s;
 
     @include abs.mediaQuery(mobile) {
       justify-content: space-evenly;
@@ -374,7 +389,11 @@
     word-spacing: 2.5rem;
     letter-spacing: 0.5rem;
     clip-path: polygon(3% 0, 100% 0%, 97% 100%, 0% 100%);
-    background-image: linear-gradient(to top left, abs.$color-primary, abs.$color-secondary);
+    background-image: linear-gradient(
+      to top left,
+      abs.$color-primary,
+      abs.$color-secondary
+    );
     @extend .center-me-full;
   }
 
