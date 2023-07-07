@@ -9,6 +9,13 @@
   border-bottom: 1px solid var.$color-secondary !important;
   padding: 4rem 0.6rem !important;
   margin: 3rem 0 !important;
+  display: block !important;
+}
+.util-split-bottom-low {
+  border-bottom: 1px solid var.$color-secondary !important;
+  // padding: 4rem 0.6rem !important;
+  margin: 3rem 0 !important;
+  display: block !important;
 }
 
 .util-center {
@@ -41,15 +48,15 @@
 }
 
 .util-opacity-low {
-  opacity: .8 !important;
+  opacity: 0.8 !important;
 }
 
 .util-opacity-mid {
-  opacity: .6 !important;
+  opacity: 0.6 !important;
 }
 
 .util-opacity-high {
-  opacity: .4 !important;
+  opacity: 0.4 !important;
 }
 
 .util-caplock {
@@ -63,7 +70,7 @@
 .util-underline {
   text-decoration: underline;
   text-decoration-color: var.$color-transparent-mid;
-  text-underline-offset: .7rem;
+  text-underline-offset: 0.7rem;
 }
 
 .util-flex-x {

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../sass/pages/git.scss">
+    <link rel="stylesheet" href="../sass/theme/prism-light.css">
+    <script src="../js/prism.js" defer></script>
+    <title>git : reset - restore - revert</title>
+  </head>
+  <body>
+    <div class="content-page-container">
+      <div class="nav">
+        <header class="main-header-04">git -- travel - reset - restore - revert
+        </header>
+        <svg>
+          <use xlink:href="../img/sprite.svg#git"></use>
+        </svg>
+        <div class="section">section</div>
+        <div class="indexes">
+          <a href="#content-index-travel">
+            <span>
+              time machine
+            </span>
+          </a>
+          <a href="#content-index-reset">
+            <span>
+              reset
+            </span>
+          </a>
+          <a href="#content-index-restore">
+            <span>
+              restore
+            </span>
+          </a>
+          <a href="#content-index-revert">
+            <span>
+              revert
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- main home button -->
+      <div class="sticky-nav">
+        <a href="index.html">
+          <svg>
+            <use xlink:href="../img/sprite.svg#home"></use>
+          </svg>
+          <span>main home</span>
+        </a>
+      </div>
+
+
+      <main class="line-numbers">
+        <section id="content-index-travel">
+          <header><span>stash : operation</span></header>
+          <div class="content-area"><span class="content-header"> time travel</span>
+            <pre>
+              <code class="language-git match-braces rainbow-braces">
+                /////////travel back to PAST/////////
+              git checkout [particular commit hash]
+              or
+              git restore --source [any commit hash] [file name]
+
+
+              /////////travel back to preset/////////
+              git switch [current branch name]
+              or
+              git restore [file name]
+            </code>
+            </pre>
+            <span class="code-explain">
+              *AFTER TIME TRAVEL TO PAST, that particular commit hash will be our new HEAD. time
+              travel doesn't make loose our works!
+            </span>
+            <span class="code-explain">
+              tips : travel back to a specific commits. create a new branch from there :) now you
+              can eliminate unnecessary works from your working branch
+            </span>
+          </div>
+        </section>
+
+        <section id="content-index-reset">
+          <header><span>git restore</span></header>
+          <div class="content-area"><span class="content-header">git reset for unstaged works</span>
+            <pre>
+              <code class="language-git match-braces rainbow-braces">
+                git restore [file name]
+                or
+                git checkout HEAD [file name]
+                or
+                git checkout -- [file name]
+              </code>
+            </pre>
+            <span class="code-explain">
+              unstaged works revert back to the last commit / HEAD
+            </span>
+          </div>
+
+          <div class="content-area"><span class="content-header">git reset to unstaged file</span>
+            <pre>
+              <code class="language-git match-braces rainbow-braces">
+              git restore --staged [file name]
+              </code>
+            </pre>
+            <span class="code-explain">
+              to unsatged a staged file, we provide <span class="code-explain--code">--staged</span>
+              segement
+            </span>
+          </div>
+        </section>
+
+        <section>
+          <header><span>git reset</span></header>
+          <div class="content-area"><span class="content-header">git reset</span>
+            <pre>
+              <code class="language-git match-braces rainbow-braces">
+               git reset [any commit hash]
+              </code>
+            </pre>
+            <span class="code-explain">
+              keeps the changes but removes the commit history
+              <span class="util-split-bottom-low"></span>
+              tip -- now, you can move the unnecessary changes to another backup branch, if you need
+              them
+            </span>
+          </div>
+          <div class="content-area"><span class="content-header">git reset --hard</span>
+            <pre>
+              <code class="language-git match-braces rainbow-braces">
+               git reset --hard [any commit hash]
+              </code>
+            </pre>
+            <span class="code-explain">
+              removes the changes and removes the commit log also
+            </span>
+          </div>
+        </section>
+
+        <section>
+          <header><span>git revert</span></header>
+          <div class="content-area"><span class="content-header">git revert</span>
+            <pre>
+              <code class="language-git match-braces rainbow-braces">
+             git revert [any commit hash]
+            </code>
+            </pre>
+            <span class="code-explain">
+              takes the unnecessary changes and make a new commit and remove the unnecessary changes
+              but keep the previous unnecessary commit history/histories available
+            </span>
+            <span class="code-explain">
+              note -- it may throw a confliction error while merging. since, we removed some content
+            </span>
+            <span class="code-explain">
+              know - <span class="code-explain--code">git revert</span> is notmally used when
+              collaborating with multiple people
+            </span>
+          </div>
+        </section>
+
+        <!-- adding hover [go to top] button -->
+        <div class="float-btn to-top-btn">
+          <a href="#">
+            <svg>
+              <use xlink:href="../img/sprite.svg#to-top"></use>
+            </svg>
+            <span>top</span>
+          </a>
+        </div>
+        <!-- adding hover [go to bottom] button -->
+        <div class="float-btn to-bottom-btn">
+          <a href="#bottom-side">
+            <svg>
+              <use xlink:href="../img/sprite.svg#to-bottom"></use>
+            </svg>
+            <span>bottom</span>
+          </a>
+        </div>
+      </main>
+
+      <!-- indexes -->
+      <div class="content-page-indexes util-margin-top" id="bottom-side">
+        <header>git indexes</header>
+        <nav>
+          <ul>
+            <li class="item">
+              <a href="git--01-fundamental.html" class="item-link">FUNDAMENTAL : basics,
+                staging, commiting, branch
+              </a>
+            </li>
+            <li class="item">
+              <a href="git--02-merge.html" class="item-link">MERGEING : everything about git
+                merging</a>
+            </li>
+            <li class="item">
+              <a href="git--03-diff.html" class="item-link">diff : find the differnce</a>
+            </li>
+            <li class="item ">
+              <a href="git--04-stash.html" class="item-link">STASH : everything about stash
+                changes</a>
+            </li>
+            <li class="item link-active">
+              <a href="git--05-resetRestore.html" class="item-link">git -- time travel - reset -
+                restore - revert</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+  </body>
+
+</html>

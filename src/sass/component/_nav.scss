@@ -329,22 +329,18 @@
 .nav {
   display: grid;
   grid-template-columns: 80% 20%;
-  grid-template-rows: 17rem 8rem minmax(50rem, 50vh);
+  grid-template-rows: 17rem 8rem minmax(40rem, 1fr);
 
   @include abs.mediaQuery(tab-land) {
-    grid-template-rows: 17rem 8rem minmax(65rem, 50vh);
+    grid-template-rows: 17rem 8rem minmax(50rem, 1fr);
   }
 
-  // @include abs.mediaQuery(tab-port) {
-  //   grid-template-rows: 17rem 8rem minmax(46rem, 50vh);
-  // }
-
   @include abs.mediaQuery(mobile) {
-    grid-template-rows: 17rem 8rem minmax(80rem, 50vh);
+    grid-template-rows: 17rem 8rem minmax(80rem, 1fr);
   }
 
   @include abs.mediaQuery(mob-small) {
-    grid-template-rows: 17rem 8rem minmax(90rem, 50vh);
+    grid-template-rows: 17rem 8rem minmax(90rem, 1fr);
   }
 
   svg {
