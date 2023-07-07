@@ -129,3 +129,31 @@
     }
   }
 }
+
+// CONTENT :: 05 : reset - restore - revert
+.content-page-container {
+  .nav {
+    .main-header-05 {
+      font-size: 4.5rem;
+      padding: 0;
+
+      @include abs.mediaQuery(tab-land) {
+        font-size: 3rem;
+      }
+
+      @include abs.mediaQuery(tab-port) {
+        font-size: 4rem;
+        letter-spacing: 0rem;
+        word-spacing: 0rem;
+      }
+
+      @include abs.mediaQuery(mobile) {
+        font-size: 3rem;
+      }
+
+      @include abs.mediaQuery(mob-small) {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}

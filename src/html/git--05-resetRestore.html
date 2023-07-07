@@ -12,7 +12,7 @@
   <body>
     <div class="content-page-container">
       <div class="nav">
-        <header class="main-header-04">git -- travel - reset - restore - revert
+        <header class="main-header-05">git -- travel - reset - restore - revert
         </header>
         <svg>
           <use xlink:href="../img/sprite.svg#git"></use>
@@ -24,14 +24,14 @@
               time machine
             </span>
           </a>
-          <a href="#content-index-reset">
-            <span>
-              reset
-            </span>
-          </a>
           <a href="#content-index-restore">
             <span>
               restore
+            </span>
+          </a>
+          <a href="#content-index-reset">
+            <span>
+              reset
             </span>
           </a>
           <a href="#content-index-revert">
@@ -82,9 +82,10 @@
           </div>
         </section>
 
-        <section id="content-index-reset">
+        <section id="content-index-restore">
           <header><span>git restore</span></header>
-          <div class="content-area"><span class="content-header">git reset for unstaged works</span>
+          <div class="content-area"><span class="content-header">git restore for unstaged
+              works</span>
             <pre>
               <code class="language-git match-braces rainbow-braces">
                 git restore [file name]
@@ -99,7 +100,7 @@
             </span>
           </div>
 
-          <div class="content-area"><span class="content-header">git reset to unstaged file</span>
+          <div class="content-area"><span class="content-header">git restore to unstaged file</span>
             <pre>
               <code class="language-git match-braces rainbow-braces">
               git restore --staged [file name]
@@ -112,7 +113,7 @@
           </div>
         </section>
 
-        <section>
+        <section id="content-index-reset">
           <header><span>git reset</span></header>
           <div class="content-area"><span class="content-header">git reset</span>
             <pre>
@@ -139,7 +140,7 @@
           </div>
         </section>
 
-        <section>
+        <section id="content-index-revert">
           <header><span>git revert</span></header>
           <div class="content-area"><span class="content-header">git revert</span>
             <pre>
