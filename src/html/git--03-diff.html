@@ -14,14 +14,14 @@
   <body>
     <div class="content-page-container">
       <div class="nav">
-        <header class="main-header-03">git diff : find the
+        <h1 class="main-header-03">git diff : find the
           works changes
-        </header>
+        </h1>
         <svg>
           <use xlink:href="../img/sprite.svg#git"></use>
         </svg>
         <div class="section">section</div>
-        <div class="indexes indexes-03">
+        <nav class="indexes indexes-03">
           <a href="#content-index-01">
             <span>
               diff information
@@ -52,24 +52,26 @@
               accross commits
             </span>
           </a>
-        </div>
+        </nav>
       </div>
 
       <!-- main home button -->
-      <div class="sticky-nav">
+      <nav class="sticky-nav">
         <a href="index.html">
           <svg>
             <use xlink:href="../img/sprite.svg#home"></use>
           </svg>
           <span>main home</span>
         </a>
-      </div>
+      </nav>
 
       <main class=" line-numbers">
         <section>
-          <header><span>diff : information</span></header>
-          <div class="content-area" id="content-index-01"><span class="content-header">diff :
-              important information</span>
+          <header>
+            <h2>diff : information</h2>
+          </header>
+          <div class="content-area" id="content-index-01">
+            <h3>diff : important information</h3>
             <span class="code-explain">
               by <span class="code-explain--code">git diff</span> command, we can get various
               types of differences from our working file from different timeline.
@@ -102,47 +104,53 @@
         </div>
 
         <section>
-          <header><span>diff : operation</span></header>
-          <div class="content-area" id="content-index-02"><span class="content-header">unstaged ::
-              last commit</span>
+          <header>
+            <h2>diff : operation</h2>
+          </header>
+          <div class="content-area" id="content-index-02">
+            <h3>unstaged ::
+              last commit</h3>
             <pre>
               <code class="language-git">
-              git diff
-                </code>
+                git diff
+              </code>
             </pre>
             <span class="code-explain">
               compare codes from last commit to current unstaged works
             </span>
           </div>
-          <div class="content-area" id="content-index-03"><span class="content-header">staged
-              :: last commit</span>
+          <div class="content-area" id="content-index-03">
+            <h3>staged
+              :: last commit</h3>
             <pre>
               <code class="language-git">
-              git diff HEAD
-                </code>
+                git diff HEAD
+              </code>
             </pre>
             <span class="code-explain">
               compare codes from last commit to current staged and unstaged works
             </span>
           </div>
-          <div class="content-area" id="content-index-04"><span class="content-header">see
+          <div class="content-area" id="content-index-04">
+            <h3>see
               changes in a specific
-              file</span>
+              file</h3>
             <pre>
               <code class="language-git">
-              git diff HEAD [file path/file name]
+                git diff HEAD [file path/file name]
               </code>
             </pre>
             <span class="code-explain">
               comapre code from last commit to staged and unstaged area for a specific file
             </span>
           </div>
-          <div class="content-area" id="content-index-05"><span class="content-header">
-              diff for branches</span>
+          <div class="content-area" id="content-index-05">
+            <h3>
+              diff for branches</h3>
             <pre>
               <code class="language-git">
-              git diff [first branch name]..[second branch name]
-            </code>
+                git diff [first branch name]..[second branch name]
+              </code>
             </pre>
             <span class="code-explain">
               ORDER MATTERS!!! [first branch] changes will have (-) sign && [second branch]
@@ -168,8 +176,9 @@
             </span>
           </div>
 
-          <div class="content-area" id="content-index-06"><span class="content-header">diff
-              for commit</span>
+          <div class="content-area" id="content-index-06">
+            <h3>diff
+              for commit</h3>
             <pre>
               <code class="language-git">
               git diff [first commit hash]..[second commit hash]
@@ -185,7 +194,9 @@
 
       <!-- indexes -->
       <div class="content-page-indexes util-margin-top" id="bottom-side">
-        <header>git indexes</header>
+        <header>
+          <h2>git indexes</h2>
+        </header>
         <nav>
           <ul>
             <li class="item">

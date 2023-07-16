@@ -14,15 +14,15 @@
   <body>
     <div class="content-page-container">
       <div class="nav">
-        <header class="main-header-01">git : basic, staging,
+        <h1 class="main-header-01">git : basic, staging,
           commit, branch
-        </header>
+        </h1>
         <svg>
           <use xlink:href="../img/sprite.svg#git"></use>
         </svg>
 
         <div class="section">section</div>
-        <div class="indexes">
+        <nav class="indexes">
           <a href="#content-index-veryBasic">
             <span>
               very basic
@@ -51,46 +51,46 @@
           <a href="#content-index-normalGitFlow">
             normal git flowing
           </a>
-        </div>
+        </nav>
       </div>
 
       <!-- main home button -->
-      <div class="sticky-nav">
+      <nav class="sticky-nav">
         <a href="index.html">
           <svg>
             <use xlink:href="../img/sprite.svg#home"></use>
           </svg>
           <span>main home</span>
         </a>
-      </div>
+      </nav>
 
       <main class="line-numbers">
         <section id="content-index-veryBasic">
-          <header><span>very basic </span></header>
-          <div class="content-area"><span class="content-header">enable git</span>
+          <h2>very basic</h2>
+          <div class="content-area">
+            <h3>enable git</h3>
             <pre>
               <code class="language-git">
-              git init
-            </code>
-            </pre>
-          </div>
-          <div class="content-area"><span class="content-header">status checking git</span>
-            <pre>
-              <code class="language-git">
-            git status
-            </code>
-            </pre>
-          </div>
-          <div class="content-area"><span class="content-header">log checking git</span>
-            <pre>
-              <code class="language-git">
-            git log
-            </code>
-            </pre>
-            <pre>
-              <code class="language-git">
-              git log --oneline
+                git init
               </code>
+            </pre>
+          </div>
+          <div class="content-area">
+            <h3>status checking git</h3>
+            <pre>
+              <code class="language-git">
+                git status
+              </code>
+            </pre>
+          </div>
+          <div class="content-area">
+            <h3>log checking git</h3></span>
+            <pre>
+              <code class="language-git">
+                git log
+                //or
+                git log --oneline
+            </code>
             </pre>
           </div>
         </section>
@@ -115,31 +115,37 @@
         </div>
 
         <section id="content-index-staging">
-          <header><span>staging </span></header>
-          <div class="content-area"><span class="content-header"> stage a file</span>
+          <header>
+            <h2>staging </h2>
+          </header>
+          <div class="content-area">
+            <h3>stage a file</h3>
             <pre>
               <code class="language-git">
-            git add [fileName]
-            </code>
+                git add [fileName]
+              </code>
             </pre>
           </div>
-          <div class="content-area"><span class="content-header">stage multiple file</span>
+          <div class="content-area">
+            <h3>stage multiple file</h3>
             <pre>
               <code class="language-git">
-            git add [fileName1] [fileName2]
-            </code>
+                git add [fileName1] [fileName2]
+              </code>
             </pre>
 
           </div>
-          <div class="content-area"><span class="content-header">stage all files</span>
+          <div class="content-area">
+            <h3>stage all files</h3>
             <pre>
               <code class="language-git">
-            git add *
-            </code>
+                git add *
+              </code>
             </pre>
           </div>
-          <div class="content-area"><span class="content-header">stage and commit :
-              shortcut</span>
+          <div class="content-area">
+            <h3>stage and commit :
+              shortcut</h3>
             <pre>
               <code class="language-git">
             git commit -am "commit message"
@@ -152,16 +158,20 @@
         </section>
 
         <section id="content-index-commit">
-          <header><span>commit</span></header>
-          <div class="content-area"><span class="content-header">commit file </span>
+          <header>
+            <h2>commit</h2>
+          </header>
+          <div class="content-area">
+            <h3>commit file</h3>
             <pre>
               <code class="language-git">
-            git commit -m "commit message"
-            </code>
+                git commit -m "commit message"
+              </code>
             </pre>
           </div>
-          <div class="content-area"><span class="content-header">stage and commit :
-              shortcut</span>
+          <div class="content-area">
+            <h3>stage and commit :
+              shortcut</h3>
             <pre>
               <code class="language-git">
             git commit -am "commit message"
@@ -171,33 +181,36 @@
         </section>
 
         <section id="content-index-branch">
-          <header><span>branch</span></header>
-          <div class="content-area"><span class="content-header">create branch</span>
+          <header>
+            <h2>branch</h2>
+          </header>
+          <div class="content-area">
+            <h3>create branch</h3>
             <pre>
               <code class="language-git">
-              git branch [branch name]
-            </code>
+                git branch [branch name]
+              </code>
             </pre>
-            <span class="code-explain">
-              create a new branch without double quote
-            </span>
           </div>
-          <div class="content-area"><span class="content-header">view all braches</span>
+          <div class="content-area">
+            <h3>view all braches</h3>
             <pre>
               <code class="language-git">
-              git branch
-            </code>
+                git branch
+              </code>
             </pre>
           </div>
-          <div class="content-area"><span class="content-header">switching branch</span>
+          <div class="content-area">
+            <h3>switching branch</h3>
             <pre>
               <code class="language-git">
               git switch [branch name]
             </code>
             </pre>
           </div>
-          <div class="content-area"><span class="content-header">delete branch : not
-              forcing</span>
+          <div class="content-area">
+            <h3>delete branch : not
+              forcing</h3>
             <pre>
               <code class="language-git">
                 git branch -d [branch name]
@@ -207,8 +220,9 @@
               if the branch is not merged and get delete command, we will get a warning
             </span>
           </div>
-          <div class="content-area"><span class="content-header">delete branch :
-              forcing</span>
+          <div class="content-area">
+            <h3>delete branch :
+              forcing</h3>
             <pre>
               <code class="language-git">
                 git branch -D [branch name]
@@ -218,7 +232,8 @@
               ignore branch delete warning
             </span>
           </div>
-          <div class="content-area"><span class="content-header">rename branch</span>
+          <div class="content-area">
+            <h3>rename branch</h3>
             <pre>
               <code class="language-git">
               git branch -m [new branch name]
@@ -228,7 +243,8 @@
               stay on that branch, you are renaming to
             </span>
           </div>
-          <div class="content-area"><span class="content-header util-center">Heads up!!!</span>
+          <div class="content-area">
+            <h3 class="util-center util-caplock">Heads up!!!</h3>
             <div class="util-border-bottom-double util-margin-top-negative-small"></div>
             <span class="code-explain">
               make sure to check! before switching branch, if the base branch have any unstaged
@@ -239,7 +255,9 @@
         </section>
 
         <section id="content-index-gitaInformation">
-          <header><span>git information</span></header>
+          <header>
+            <h2>git information</h2>
+          </header>
           <span class="code-explain">
             <span class="list-wrap">
               <svg>
@@ -253,7 +271,9 @@
         </section>
 
         <section id="content-index-normalGitFlow">
-          <header><span>normal git flowing</span></header>
+          <header>
+            <h2>normal git flowing</h2>
+          </header>
           <span class="code-explain util-split-bottom">
             <span class="list-wrap">
               <svg>
@@ -326,9 +346,12 @@
           </span>
         </section>
       </main>
+
       <!-- indexes -->
       <div class="content-page-indexes util-margin-top" id="bottom-side">
-        <header>git indexes</header>
+        <header>
+          <h2>git indexes</h2>
+        </header>
         <nav>
           <ul>
             <li class="item link-active">
@@ -349,8 +372,7 @@
             </li>
             <li class="item">
               <a href="git--05-resetRestore.html" class="item-link">git -- time travel - reset -
-                restore -
-                revert</a>
+                restore - revert</a>
             </li>
             <li class="item">
               <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>

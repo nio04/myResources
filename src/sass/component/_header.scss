@@ -150,7 +150,7 @@
 /// content page [third page]
 .content-page-container {
   .nav {
-    header {
+    h1 {
       font-family: abs.$primary;
       font-weight: 600;
       grid-column: 1 / -1;
@@ -200,58 +200,29 @@
   }
 
   main section {
-    header {
+    h2 {
       text-transform: uppercase;
       padding: 2.5rem 0;
       margin: 3rem 0;
       background-color: abs.$color-secondary-light-transparent-high;
       transition: transform 0.7s ease-in-out;
-      @extend .center-me-full;
       animation-name: slideToLeft;
       animation-duration: 4s;
       animation-delay: 0.1s;
+      @extend .center-me-full;
+      font-family: abs.$secondary;
+      font-weight: 700;
+      letter-spacing: 0.6rem;
+      position: relative;
 
       @include abs.mediaQuery(mobile) {
         border: 1px solid abs.$color-accent;
-      }
-
-      span {
-        font-family: abs.$secondary;
-        font-weight: 700;
-        letter-spacing: 0.6rem;
-        position: relative;
-        z-index: 10;
-
-        @include abs.mediaQuery(mobile) {
-          letter-spacing: 0;
-        }
-
-        &::before {
-          content: "";
-          background-image: linear-gradient(
-            to top left,
-            abs.$color-primary,
-            abs.$color-secondary
-          );
-          position: absolute;
-          top: -2rem;
-          width: 100%;
-          padding-bottom: 8.4rem;
-          z-index: -1;
-          box-shadow: inset 0px -5px 2px 0px abs.$color-transparent-high;
-          border-radius: 3px;
-
-          @include abs.mediaQuery(tab-port) {
-            padding-bottom: 9.3rem;
-            box-shadow: none;
-            top: -2.5rem;
-          }
-        }
+        letter-spacing: 0;
       }
     }
 
     .content-area {
-      .content-header {
+      h3 {
         font-family: abs.$tertiary;
         font-weight: 600;
         // clip-path: polygon(5.14% 0px, 100% 0%, 96.46% 96.32%, 1.88% 100%);

@@ -14,14 +14,14 @@
   <body>
     <div class="content-page-container">
       <div class="nav">
-        <header class="main-header-04">git stash : everything
+        <h1 class="main-header-04">git stash : everything
           about git stash change
-        </header>
+        </h1>
         <svg>
           <use xlink:href="../img/sprite.svg#git"></use>
         </svg>
         <div class="section">section</div>
-        <div class="indexes">
+        <nav class="indexes">
           <a href="#content-index-information">
             <span>
               stash information
@@ -37,24 +37,26 @@
               conflict
             </span>
           </a>
-        </div>
+        </nav>
       </div>
 
       <!-- main home button -->
-      <div class="sticky-nav">
+      <nav class="sticky-nav">
         <a href="index.html">
           <svg>
             <use xlink:href="../img/sprite.svg#home"></use>
           </svg>
           <span>main home</span>
         </a>
-      </div>
+      </nav>
 
       <main class="line-numbers">
         <section>
-          <header><span>stash : information</span></header>
-          <div class="content-area" id="content-index-information"><span
-              class="content-header">stash changes : important information</span>
+          <header>
+            <h2>stash : information</h2>
+          </header>
+          <div class="content-area" id="content-index-information">
+            <h3>stash changes : important information</h3>
             <span class="code-explain">
               <span class="code-explain--code">git stash</span> hide our works from staged &
               unstaged area. so that we
@@ -82,9 +84,12 @@
         </section>
 
         <section>
-          <header><span>stash : operation</span></header>
-          <div class="content-area" id="content-index-noConflict"><span class="content-header">no
-              conflict</span>
+          <header>
+            <h2>stash : operation</h2>
+          </header>
+          <div class="content-area" id="content-index-noConflict">
+            <h3>no
+              conflict</h3>
             <pre>
               <code class="language-git match-braces rainbow-braces">
                 // to stash changes
@@ -106,8 +111,8 @@
               all the follow up works will be gone!!!
             </span>
           </div>
-          <div class="content-area" id="content-index-conflict"><span
-              class="content-header">conflict</span>
+          <div class="content-area" id="content-index-conflict">
+            <h3>conflict</h3>
             <pre>
               <code class="language-git match-braces rainbow-braces">
                 // to stash changes
@@ -145,7 +150,9 @@
 
       <!-- indexes -->
       <div class="content-page-indexes util-margin-top" id="bottom-side">
-        <header>git indexes</header>
+        <header>
+          <h2>git indexes</h2>
+        </header>
         <nav>
           <ul>
             <li class="item">

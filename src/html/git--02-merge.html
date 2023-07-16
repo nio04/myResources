@@ -14,14 +14,14 @@
   <body>
     <div class="content-page-container">
       <div class="nav">
-        <header class="main-header-02">git merge :
+        <h1 class="main-header-02">git merge :
           fast-forward, non:fast-forward
-        </header>
+        </h1>
         <svg>
           <use xlink:href="../img/sprite.svg#git"></use>
         </svg>
         <div class="section">section</div>
-        <div class="indexes">
+        <nav class="indexes">
           <a href="#content-index-fastForward">
             <span>
               fast - forward
@@ -37,28 +37,31 @@
               non : fast-forward [conflict]
             </span>
           </a>
-        </div>
+        </nav>
       </div>
 
       <!-- main home button -->
-      <div class="sticky-nav">
+      <nav class="sticky-nav">
         <a href="index.html">
           <svg>
             <use xlink:href="../img/sprite.svg#home"></use>
           </svg>
           <span>main home</span>
         </a>
-      </div>
+      </nav>
 
       <!-- main story begins!!! -->
       <main class="line-numbers">
         <section id="content-index-veryBasic">
-          <header><span>MERGING : fast-forward</span></header>
-          <div class="content-area"><span class="content-header">fast-forward merge</span>
+          <header>
+            <h2>MERGING : fast-forward</h2>
+          </header>
+          <div class="content-area">
+            <h3>fast-forward merge</h3> </span>
             <pre>
               <code class="language-git">
-              git switch master
-              git merge [branch name]
+                git switch master
+                git merge [branch name]
               </code>
             </pre>
             <span class="code-explain">
@@ -111,10 +114,12 @@
         </div>
 
         <section id="content-index-nonFastForwardNonConflict">
-          <header><span>MERGING : non - fast-forward</span>
+          <header>
+            <h2>MERGING : non - fast-forward</h2>
           </header>
-          <div class="content-area"><span class="content-header util-center">non : fast-forward
-              merge :: [no-conflict]</span>
+          <div class="content-area">
+            <h3 class=" util-center">non : fast-forward
+              merge :: [no-conflict]</h3>
             <div
               class="util-border-bottom-double util-margin-top-negative-small util-margin-bottom">
             </div>
@@ -172,9 +177,10 @@
           </div>
         </section>
         <section id="content-index-nonFastForwardConflict">
-          <div class="content-area split-top"><span class="content-header util-center">non :
+          <div class="content-area split-top">
+            <h3 class=" util-center">non :
               fast-forward
-              merge :: [conflict]</span>
+              merge :: [conflict]</h3>
             <div
               class="util-border-bottom-double util-margin-top-negative-small util-margin-bottom">
             </div>
@@ -246,9 +252,9 @@
                   <span class="code-explain--code">merge</span> file
                 </span>
               </span>
-              <div class="util-split-bottom"></div>
-              <span class="code-explain-header util-center">heads up!</span>
-              <br>
+              <div class="util-split-bottom-low"></div>
+              <h4 class="util-caplock util-center">heads up!</h4>
+              <div class="util-split-bottom-low"></div>
               <span class="code-explain--code">
                 <<<<<<<< </span> &nbsp;:: this is our <span class="code-explain--code">base
                     branch</span>
@@ -264,7 +270,9 @@
 
       <!-- indexes -->
       <div class="content-page-indexes util-margin-top" id="bottom-side">
-        <header>git indexes</header>
+        <header>
+          <h2>git indexes</h2>
+        </header>
         <nav>
           <ul>
             <li class="item">

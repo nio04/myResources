@@ -12,13 +12,13 @@
   <body>
     <div class="content-page-container">
       <div class="nav">
-        <header class="main-header-05">git -- travel - reset - restore - revert
-        </header>
+        <h1 class="main-header-05">git -- travel - reset - restore - revert
+        </h1>
         <svg>
           <use xlink:href="../img/sprite.svg#git"></use>
         </svg>
         <div class="section">section</div>
-        <div class="indexes">
+        <nav class="indexes">
           <a href="#content-index-travel">
             <span>
               time machine
@@ -39,37 +39,39 @@
               revert
             </span>
           </a>
-        </div>
+        </nav>
       </div>
 
       <!-- main home button -->
-      <div class="sticky-nav">
+      <nav class="sticky-nav">
         <a href="index.html">
           <svg>
             <use xlink:href="../img/sprite.svg#home"></use>
           </svg>
           <span>main home</span>
         </a>
-      </div>
+      </nav>
 
 
       <main class="line-numbers">
         <section id="content-index-travel">
-          <header><span>stash : operation</span></header>
-          <div class="content-area"><span class="content-header"> time travel</span>
+          <header>
+            <h2>stash : operation</h2>
+          </header>
+          <div class="content-area">
+            <h3> time travel</h3>
             <pre>
               <code class="language-git match-braces rainbow-braces">
                 /////////travel back to PAST/////////
-              git checkout [particular commit hash]
-              or
-              git restore --source [any commit hash] [file name]
+                git checkout [particular commit hash]
+                or
+                git restore --source [any commit hash] [file name]
 
-
-              /////////travel back to preset/////////
-              git switch [current branch name]
-              or
-              git restore [file name]
-            </code>
+                /////////travel back to preset/////////
+                git switch [current branch name]
+                or
+                git restore [file name]
+              </code>
             </pre>
             <span class="code-explain">
               *AFTER TIME TRAVEL TO PAST, that particular commit hash will be our new HEAD. time
@@ -83,9 +85,12 @@
         </section>
 
         <section id="content-index-restore">
-          <header><span>git restore</span></header>
-          <div class="content-area"><span class="content-header">git restore for unstaged
-              works</span>
+          <header>
+            <h2>git restore</h2>
+          </header>
+          <div class="content-area">
+            <h3>git restore for unstaged
+              works</h3>
             <pre>
               <code class="language-git match-braces rainbow-braces">
                 git restore [file name]
@@ -100,10 +105,11 @@
             </span>
           </div>
 
-          <div class="content-area"><span class="content-header">git restore to unstaged file</span>
+          <div class="content-area">
+            <h3>git restore to unstaged file</h3>
             <pre>
               <code class="language-git match-braces rainbow-braces">
-              git restore --staged [file name]
+                git restore --staged [file name]
               </code>
             </pre>
             <span class="code-explain">
@@ -114,8 +120,11 @@
         </section>
 
         <section id="content-index-reset">
-          <header><span>git reset</span></header>
-          <div class="content-area"><span class="content-header">git reset</span>
+          <header>
+            <h2>git reset</h2>
+          </header>
+          <div class="content-area">
+            <h3>git reset</h3>
             <pre>
               <code class="language-git match-braces rainbow-braces">
                git reset [any commit hash]
@@ -128,7 +137,8 @@
               them
             </span>
           </div>
-          <div class="content-area"><span class="content-header">git reset --hard</span>
+          <div class="content-area">
+            <h3>git reset --hard</h3>
             <pre>
               <code class="language-git match-braces rainbow-braces">
                git reset --hard [any commit hash]
@@ -141,8 +151,11 @@
         </section>
 
         <section id="content-index-revert">
-          <header><span>git revert</span></header>
-          <div class="content-area"><span class="content-header">git revert</span>
+          <header>
+            <h2>git revert</h2>
+          </header>
+          <div class="content-area">
+            <h3>git revert</h3>
             <pre>
               <code class="language-git match-braces rainbow-braces">
              git revert [any commit hash]
@@ -184,7 +197,9 @@
 
       <!-- indexes -->
       <div class="content-page-indexes util-margin-top" id="bottom-side">
-        <header>git indexes</header>
+        <header>
+          <h2>git indexes</h2>
+        </header>
         <nav>
           <ul>
             <li class="item">
