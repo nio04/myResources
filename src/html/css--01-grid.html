@@ -14,12 +14,13 @@
   <body>
     <div class="content-page-container">
       <div class="nav">
-        <header class="content-page-main-header-01">everything about grid</header>
+        <h1 class="main-header-01">everything about grid</h1>
         <svg>
           <use xlink:href="../img/sprite.svg#grid"></use>
         </svg>
+
         <div class="section">section</div>
-        <div class="indexes">
+        <nav class="indexes">
           <a href="#content-index-unit">
             <span>
               unit
@@ -45,24 +46,27 @@
               miscs
             </span>
           </a>
-        </div>
+        </nav>
       </div>
 
       <!-- main home button -->
-      <div class="sticky-nav">
+      <nav class="sticky-nav">
         <a href="index.html">
           <svg>
             <use xlink:href="../img/sprite.svg#home"></use>
           </svg>
           <span>main home</span>
         </a>
-      </div>
+      </nav>
 
       <!-- main post -->
       <main class=" line-numbers">
         <section id="content-index-unit">
-          <header><span>unit </span></header>
-          <div class="content-area"><span class="content-header">fr</span>
+          <header>
+            <h2>unit</h2>
+          </header>
+          <div class="content-area">
+            <h3>fr</h3>
             <span class="code-explain">
               portion of the remaining space
             </span>
@@ -87,9 +91,13 @@
           </a>
         </div>
 
+        <!-- story begin -->
         <section id="content-index-keywords">
-          <header><span>keyword</span></header>
-          <div class="content-area"> <span class="content-header">repeat() </span>
+          <header>
+            <h2>keyword</h2>
+          </header>
+          <div class="content-area">
+            <h3>repeat() </h3>
             <pre>
               <code class="language-css match-braces rainbow-braces">
                 grid-template-column : repeat(3, 1fr);
@@ -99,11 +107,12 @@
               repeat <span class="code-explain--code">1fr</span> in row side for 3 times </span>
           </div>
 
-          <div class="content-area"><span class="content-header">min-content</span>
+          <div class="content-area">
+            <h3>min-content</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces">
-              grid-template-row : repeat(3, min-content)
-                </code>
+                grid-template-row : repeat(3, min-content)
+              </code>
             </pre>
             <span class="code-explain">
               <span class="list-wrap">
@@ -124,11 +133,12 @@
             </span>
 
           </div>
-          <div class="content-area"><span class="content-header">max-content</span>
+          <div class="content-area">
+            <h3>max-content</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
                   grid-template-column : repeat(3, max-content);
-                </code>
+              </code>
             </pre>
             <span class="code-explain">
               <span class="list-wrap">
@@ -149,8 +159,8 @@
             </span>
 
           </div>
-          <div class="content-area"><span class="content-header">minmax()</span>
-
+          <div class="content-area">
+            <h3>minmax()</h3>
             <pre>
               <code class="language-css brace-selected rainbow-braces match-braces">
                 grid-template-column : repeat(min-content, minmax(10rem, 1fr));
@@ -158,292 +168,271 @@
             </pre>
             <span class="code-explain">
               <span class="code-explain-header">minmax(first, second)</span>
-              <span class="code-explain-sub-section">
-                usually used in column side. if the container have enough space, children items will
-                have [second] size. and when the parent container size keeps decreasing, the
-                children items size will never be less than the
-                [first] size.
-              </span>
+              usually used in column side. if the container have enough space, children items
+              will have [second] size. and when the parent container size keeps decreasing, the
+              children items size will never be less than the
+              [first] size.
             </span>
 
           </div>
-          <div class="content-area"><span class="content-header">auto-fill</span>
-
+          <div class="content-area">
+            <h3>auto-fill</h3>
             <pre>
               <code class="language-css brace-selected rainbow-braces match-braces">
-                grid-template-column : repeat(auto-fill, 5rem);
+                  grid-template-column : repeat(auto-fill, 5rem);
                 </code>
             </pre>
             <span class="code-explain">
-              <!-- <span class="code-explain-header">auto-fill</span> -->
-              <span class="code-explain-sub-section">
-                used in column side. depends on the provided size, if the container
-                have extra space than more empty coulmns will be created to fill up the full
-                width.
-                i think, its best to ignore this property
-              </span>
+              used in column side. depends on the provided size, if the container
+              have extra space than more empty coulmns will be created to fill up the full
+              width. i think, its best to ignore this property
             </span>
 
           </div>
-          <div class="content-area"><span class="content-header">auto-fit</span>
+          <div class="content-area">
+            <h3>auto-fit</h3>
             <pre>
               <code class="language-css brace-selected rainbow-braces match-braces">
-                grid-template-column : repeat(auto-fit, 5rem);
+                  grid-template-column : repeat(auto-fit, 5rem);
               </code>
             </pre>
             <span class="code-explain">
-              <!-- <span class="code-explain-header">auto-fit</span> -->
-              <span class="code-explain-sub-section">
-                used in column side. with provided size, the children items try
-                to fit per row
-              </span>
+              used in column side. with provided size, the children items try
+              to fit per row
             </span>
           </div>
         </section>
         <section id="content-index-parentContainer">
-          <header><span>parent container</span></header>
-          <div class="content-area"><span class="content-header">row side defining</span>
+          <header>
+            <h2>parent container</h2>
+          </header>
+          <div class="content-area">
+            <h3>row side defining</h3>
             <pre>
               <code class="language-css brace-selected rainbow-braces match-braces">
                 grid-template-row : [define row size]
               </code>
             </pre>
             <span class="code-explain util-split-bottom">
-              <!-- <span class="code-explain-header">grid-template-row</span> -->
-              <span class="code-explain-sub-section">
-                define how many <span class="code-explain--code">row</span> needed
-              </span>
+              define how many <span class="code-explain--code">row</span> needed
             </span>
-            <span class="content-header">naming template</span>
+            <h3>naming template</h3>
             <pre>
               <code class="language-css brace-selected rainbow-braces match-braces">
-              grid-template-row : [first-start] 1fr [first-end second-start] 10rem [second-end];
+                  grid-template-row : [first-start] 1fr [first-end second-start] 10rem [second-end];
                 </code>
             </pre>
             <span class="code-explain  util-split-bottom">
-              <span class="code-explain-sub-section">naming grid template rows</span>
+              naming grid template rows
             </span>
-            <span class="content-header">justify-items</span>
+            <h3>justify-items</h3>
             <pre>
               <code class="language-css brace-selected rainbow-braces match-braces">
-              justify-items : stretch[default] center | end | start;
+                  justify-items : stretch[default] center | end | start;
               </code>
             </pre>
             <span class="code-explain  util-split-bottom">
-              <!-- <span class="code-explain-header"></span> -->
-              <span class="code-explain-sub-section"> apply effects on <span
-                  class="code-explain--code">main
-                  axis </span></span>
+              class="code-explain--code">main
+              axis </span>
             </span>
-            <span class="content-header">justify-content</span>
+            <h3>justify-content</h3>
             <pre>
               <code class="language-css brace-selected rainbow-braces match-braces">
-                justify-content : stretch | start | end | center | space-around | space-between |space-evenly;
-                  </code>
+                  justify-content : stretch | start | end | center | space-around | space-between |space-evenly;
+                </code>
             </pre>
             <span class="code-explain ">
-              <span class="code-explain-sub-section">when the total size of grid is less
-                than the container size... then this this property works for <span
-                  class="code-explain--code">main
-                  axis (x)</span></span>
+              when the total size of grid is less
+              than the container size... then this this property works for <span
+                class="code-explain--code">main
+                axis (x)</span>
             </span>
-
           </div>
-          <div class="content-area"><span class="content-header">column side defining</span>
 
+          <div class="content-area">
+            <h3>column side defining</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
-              grid-template-column : [define column size];
-                </code>
-            </pre>
-            <span class="code-explain  util-split-bottom">
-              <span class="code-explain-sub-section">
-                define how many <span class="code-explain--code">column</span> needed
-              </span>
-            </span>
-            <span class="content-header">align-items</span>
-            <pre>
-              <code class="language-css match-braces rainbow-braces brace-hover">
-              align-items : stretch [default] | start | end | center | baseline;
+                grid-template-column : [define column size];
               </code>
             </pre>
             <span class="code-explain  util-split-bottom">
-              <span class="code-explain-sub-section">
-                apply effect on <span class="code-explain--code">cross axis / verticle side</span>
-              </span>
+              define how many <span class="code-explain--code">column</span> needed
+            </span>
+            <h3>align-items</h3>
+            <pre>
+              <code class="language-css match-braces rainbow-braces brace-hover">
+                  align-items : stretch [default] | start | end | center | baseline;
+              </code>
+            </pre>
+            <span class="code-explain  util-split-bottom">
+              apply effect on <span class="code-explain--code">cross axis / verticle side</span>
             </span>
 
-            <span class="content-header">align-content</span>
+            <h3>align-content</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
               align-content : stretch | start | end | center | space-between | space-around | space-evenly
                 </code>
             </pre>
             <span class="code-explain ">
-              <span class="code-explain-sub-section">when the total size of grid is less
-                than the container size... then this this property works for <span
-                  class="code-explain--code">cross
-                  axis (y)</span> </span>
+              when the total size of grid is less
+              than the container size... then this this property works for <span
+                class="code-explain--code">cross
+                axis (y)</span>
             </span>
           </div>
 
-          <div class="content-area"> <span class="content-header util-center">other properties
-              for
-              parent container</span>
+          <div class="content-area">
+            <h3 class="util-center">other properties
+              for parent container</h3>
             <div class="util-border-bottom-double util-margin-top-negative-small util-opacity-high">
             </div>
             <br>
-            <span class="content-header">gap</span>
+            <h3>gap</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
-                gap : [row gap] [Column gap];
+                  gap : [row gap] [Column gap];
                 </code>
             </pre>
             <span class="code-explain util-split-bottom">
-              <span class="code-explain-sub-section "> shorthand property for
-                <span class="code-explain--code">row-gap</span> and <span
-                  class="code-explain--code">column gap</span>
+              shorthand property for
+              <span class="code-explain--code">row-gap</span> and <span
+                class="code-explain--code">column gap
               </span>
             </span>
-            <span class="content-header">grid-auto-row</span>
+            <h3>grid-auto-row</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
-              grid-auto-rows : [size];
+                  grid-auto-rows : [size];
                 </code>
             </pre>
             <span class="code-explain util-split-bottom">
-              <span class="code-explain-sub-section">
-                define height for implicit cell for <span class="code-explain--code">row
-                  side</span>
-              </span>
+              define height for implicit cell for <span class="code-explain--code">row
+                side</span>
             </span>
-            <span class="content-header">grid-auto-columns</span>
+            <h3>grid-auto-columns</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
-              grid-auto-columns : [size];
+                  grid-auto-columns : [size];
                 </code>
             </pre>
             <span class="code-explain util-split-bottom">
-              <span class="code-explain-sub-section">
-                define width for implicit cell for <span class="code-explain--code">column
-                  side</span>
-              </span>
+              define width for implicit cell for < class="code-explain--code">column
+                side
             </span>
-            <span class="content-header">grid-auto-flow</span>
+            </span>
+            <h3 class="content-header">grid-auto-flow</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
-              grid-auto-flow : row[default] | column | row dense | column dense
+                  grid-auto-flow : row[default] | column | row dense | column dense
                 </code>
             </pre>
             <span class="code-explain ">
-              <span class="code-explain-sub-section">
-                shorthand for <span class="code-explain--code">grid-auto-row</span> property and
-                <span class="code-explain--code">grid-auto-columns</span> property
-              </span>
+              shorthand for <span class="code-explain--code">grid-auto-row</span> property and
+              <span class="code-explain--code">grid-auto-columns</span> property </span>
           </div>
 
         </section>
         <section id="content-index-childrenItems">
-          <header><span>children items</span></header>
+          <header>
+            <h2>children items</h2>
+          </header>
           <div class="content-area">
             <br>
-            <span class="content-header">grid-row</span>
+            <h3>grid-row</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
-              grid-row : [row-start-line] / [row-end-line]
+                  grid-row : [row-start-line] / [row-end-line]
                 </code>
             </pre>
             <span class="code-explain util-split-bottom">
-              <span class="code-explain-sub-section">
-                define <span class="code-explain--code">row height</span> for grid children
-                item</span>
+              define <span class="code-explain--code">row height</span> for grid children
+              item
             </span>
-            <span class="content-header">grid-column</span>
+            <h3>grid-column</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
-              grid-column : [col-start-line] / [col-end-line];
+                  grid-column : [col-start-line] / [col-end-line];
                 </code>
             </pre>
             <span class="code-explain util-split-bottom">
-              <span class="code-explain-sub-section">
-                define <span class="code-expalin--code">column width</span> for grid children item
-              </span>
+              define <span class="code-expalin--code">column width</span> for grid children item
             </span>
-            <span class="content-header">justify-self</span>
+            <h3>justify-self</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
-              justify-self : stretch [default] | start | end | center;
+                  justify-self : stretch [default] | start | end | center;
                 </code>
             </pre>
             <span class="code-explain util-split-bottom">
-              <span class="code-explain-sub-section">
-                override parent container <span class="code-explain--code">justify items</span>
-                [main-axis] definition
-              </span>
+              override parent container <span class="code-explain--code">justify items</span>
+              [main-axis] definition
             </span>
 
-            <span class="content-header">align-self</span>
+            <h3>align-self</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
-              align-self : stretch [default] | start end center
+                  align-self : stretch [default] | start end center
                 </code>
             </pre>
             <span class="code-explain">
-              <span class="code-explain-sub-section">
-                override parent container <span class="code-expalin--code">align-items</span>
-                [cross-axis] definition
-              </span>
+              override parent container <span class="code-expalin--code">align-items</span>
+              [cross-axis] definition
             </span>
-
           </div>
         </section>
+
         <section id="content-index-miscs">
-          <header><span> miscs</span></header>
-          <div class="content-area"><span class="content-header util-center">explaining useful
-              template</span>
+          <header>
+            <h2> miscs</span>
+          </header>
+          <div class="content-area">
+            <h3 class="util-center">explaining useful template</h3>
             <div
               class="util-border-bottom-double util-margin-top-negative-small util-margin-bottom">
             </div>
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
-              grid-template-column : repeat(auto-fit, minmax(min-content, 25rem));
+                  grid-template-column : repeat(auto-fit, minmax(min-content, 25rem));
                 </code>
             </pre>
             <span class="code-explain">
-              <span class="code-explain-sub-section">
-                intially, if the parent container has enough space, the elements will
-                defaultly have 25rem && as the container size decrease & the
-                elements can not have 25rem... it will simply apply <span
-                  class="code-explain--code">min-content</span>
-                which means, contents will have <span class="code-explain--code">flexible row
-                  size</span>
-              </span>
+              intially, if the parent container has enough space, the elements will
+              defaultly have 25rem && as the container size decrease & the
+              elements can not have 25rem... it will simply apply <span
+                class="code-explain--code">min-content</span>
+              which means, contents will have <span class="code-explain--code">flexible row
+                size</span>
             </span>
           </div>
 
-          <div class="content-area"><span class="content-header">famous snippets</span>
+          <div class="content-area">
+            <h3>famous snippets</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
-              grid-template-columns : repeat(auto-fit, minmax(250px, 1fr));
+                  grid-template-columns : repeat(auto-fit, minmax(250px, 1fr));
                 </code>
             </pre>
 
           </div>
-          <div class="content-area util-split-bottom"><span class="content-header">famous
-              snippets</span>
+          <div class="content-area util-split-bottom">
+            <h3>famous
+              snippets</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces">
-              grid-template-columns : repeat(auto-fill, minmax(200px, 1fr));
+                  grid-template-columns : repeat(auto-fill, minmax(200px, 1fr));
               </code>
             </pre>
           </div>
         </section>
       </main>
 
-
       <!-- all the other css posts -->
       <div class="content-page-indexes util-margin-top" id="bottom-side">
-        <header>css indexes</header>
+        <header>
+          <h2>css indexes</h2>
+        </header>
         <nav>
           <ul>
             <li class="item link-active">

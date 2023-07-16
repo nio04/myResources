@@ -14,13 +14,13 @@
   <body>
     <div class="content-page-container">
       <div class="nav">
-        <header class="content-page-main-header-02">everything about
-          flexbox</header>
+        <h1 class="content-page-main-header-02">everything about
+          flexbox</h1>
         <svg>
           <use xlink:href="../img/sprite.svg#flexbox"></use>
         </svg>
         <div class="section">section</div>
-        <div class="indexes indexes--02">
+        <nav class="indexes indexes--02">
           <a href="#content-index-parent">
             <span>
               parent conainer
@@ -31,18 +31,18 @@
               children container
             </span>
           </a>
-        </div>
+        </nav>
       </div>
 
       <!-- main home button -->
-      <div class="sticky-nav">
+      <nav class="sticky-nav">
         <a href="index.html">
           <svg>
             <use xlink:href="../img/sprite.svg#home"></use>
           </svg>
           <span>main home</span>
         </a>
-      </div>
+      </nav>
 
       <!-- main post -->
       <main class="line-numbers">
@@ -66,162 +66,156 @@
         </div>
 
         <section id="content-index-parent">
-          <header><span>parent container</span></header>
-          <div class="content-area"><span class="content-header">flex-direction</span>
+          <header>
+            <h2>parent container</h2>
+          </header>
+          <div class="content-area">
+            <h3>flex-direction</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
-            flex-direction : row[default] | row-reverse | column | column-reverse;
-            </code>
-            </pre>
-            <span class="code-explain util-split-bottom">
-              <span class="code-explain-sub-section">
-                controls flex direction flow. defaultly, its row. but when its set to column, then
-                the main-axis become align-content and cross-axis become justify-content
-              </span>
-            </span>
-
-            <span class="content-header">flex-wrap</span>
-            <pre>
-              <code class="language-css rainbow-braces match-braces">
-              flex-wrap : nowrap [default] | wrap | wrap-reverse;
-            </code>
-            </pre>
-            <span class="code-explain util-split-bottom">
-              <span class="code-explain-sub-section">
-                defines contents wrap behavior
-              </span>
-            </span>
-            <span class="content-header">justify-content</span>
-            <pre>
-              <code class="language-css rainbow-braces match-braces">
-              justify-content : flex-start [default] | flex-end | start | end | left| right | center | space-between | space-around | space-evenly
+                flex-direction : row[default] | row-reverse | column | column-reverse;
               </code>
             </pre>
             <span class="code-explain util-split-bottom">
-              <span class="code-explain-sub-section">
-                defines content flow on main-axis or horizontal side
-              </span>
+              controls flex direction flow. defaultly, its row. but when its set to column, then
+              the main-axis become align-content and cross-axis become justify-content
             </span>
-            <span class="content-header">align-items</span>
+
+            <h3>flex-wrap</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
-              align-items : stretch [default] | flex-start | flex-end | start | self-start | end | self-end | center | baseline;
-            </code>
+                flex-wrap : nowrap [default] | wrap | wrap-reverse;
+              </code>
             </pre>
             <span class="code-explain util-split-bottom">
-              <span class="code-explain-sub-section">
-                defines content flow on cross-axis or verticle side
-              </span>
+              defines contents wrap behavior
             </span>
-            <span class="content-header">align-content</span>
+
+            <h3>justify-content</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
-              align-content : normal [default] | flex-start | flex-end | start | end | space-between | space-around | space-evenly | stretch
-            </code>
+                justify-content : flex-start [default] | flex-end | start | end | left| right | center | space-between | space-around | space-evenly
+              </code>
+            </pre>
+
+            <span class="code-explain util-split-bottom">
+              defines content flow on main-axis or horizontal side
+            </span>
+
+            <h3>align-items</h3>
+            <pre>
+              <code class="language-css rainbow-braces match-braces">
+                align-items : stretch [default] | flex-start | flex-end | start | self-start | end | self-end | center | baseline;
+              </code>
             </pre>
             <span class="code-explain util-split-bottom">
-              <span class="code-explain-sub-section">
-                this property only applied, if the contents in multi-line. works in cross axis (y)
-                - between row gap
-              </span>
+              defines content flow on cross-axis or verticle side
             </span>
-            <span class="content-header">gap</span>
+            <h3>align-content</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
-              gap : [row gap] [column gap]
-            </code>
+                align-content : normal [default] | flex-start | flex-end | start | end | space-between | space-around | space-evenly | stretch
+              </code>
+            </pre>
+            <span class="code-explain util-split-bottom">
+              this property only applied, if the contents in multi-line. works in cross axis
+              (y)
+              - between row gap
+            </span>
+
+            <h3>gap</h3>
+            <pre>
+              <code class="language-css rainbow-braces match-braces">
+                gap : [row gap] [column gap]
+              </code>
             </pre>
             <span class="code-explain ">
-              <span class="code-explain-sub-section">
-                this property set gap between children items
-              </span>
+              this property set gap between children items
             </span>
           </div>
         </section>
 
         <section id="content-index-children">
-          <header><span>children items</span></header>
-          <div class="content-area"><span class="content-header">flex-grow</span>
+          <header>
+            <h2>children items</h2>
+          </header>
+          <div class="content-area">
+            <h3>flex-grow</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
-              flex-grow : [positive integer]
-            </code>
+                flex-grow : [positive integer]
+              </code>
             </pre>
             </span>
             <span class="code-explain util-split-bottom">
-              <span class="code-explain-sub-section">
-                default 0. give permission to particular child to have increase its size according
-                to the flex-grow property
-              </span>
+              default 0. give permission to particular child to have increase its size according
+              to the flex-grow property
             </span>
-            <span class="content-header">flex-shrink</span>
+
+            <h3>flex-shrink</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
-              flex-shrink : [positive integer]
-            </code>
+                flex-shrink : [positive integer]
+              </code>
             </pre>
             </span>
             <span class="code-explain util-split-bottom">
-              <span class="code-explain-sub-section">
-                default 0. give permission to particular child to have decrease its size according
-                to the flex-shrink property
-              </span>
+              default 0. give permission to particular child to have decrease its size according
+              to the flex-shrink property
             </span>
-            <span class="content-header">flex-basis</span>
+
+            <h3>flex-basis</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
-              flex-basis : [positive integer]
-            </code>
+                  flex-basis : [positive integer]
+                </code>
             </pre>
             </span>
             <span class="code-explain util-split-bottom">
-              <span class="code-explain-sub-section">
-                defines the default size of an element before the remaining space is distributed
-              </span>
+              defines the default size of an element before the remaining space is distributed
             </span>
-            <span class="content-header">flex</span>
+
+            <h3>flex</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
-              flex : [flex-grow] [flex-shrink] [flex-basis]
-            </code>
+                  flex : [flex-grow] [flex-shrink] [flex-basis]
+                </code>
             </pre>
             </span>
             <span class="code-explain util-split-bottom">
-              <span class="code-explain-sub-section">
-                flex is shorthand for flex-grow, flex-shrink, flex-basis
-              </span>
+              flex is shorthand for flex-grow, flex-shrink, flex-basis
             </span>
-            <span class="content-header">order</span>
+
+            <h3>order</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
-              order : [positive integer]
-            </code>
+                  order : [positive integer]
+                </code>
             </pre>
             </span>
             <span class="code-explain util-split-bottom">
-              <span class="code-explain-sub-section">
-                default is probably all to 0. set any higher positive numbers to mess up the order
-                system
-              </span>
+              default is probably all to 0. set any higher positive numbers to mess up the order
+              system
             </span>
-            <span class="content-header">align-self</span>
+
+            <h3>align-self</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
-              align-self : stretch [default] | flex-start | flex-end | start | self-start | end | self-end | center | baseline
-            </code>
+                  align-self : stretch [default] | flex-start | flex-end | start | self-start | end | self-end | center | baseline
+                </code>
             </pre>
             </span>
             <span class="code-explain util-split-bottom">
-              <span class="code-explain-sub-section">
-                override parent container's align-items property for per selected children
-              </span>
+              override parent container's align-items property for per selected children
             </span>
           </div>
         </section>
 
         <!-- all the other css posts -->
         <div class="content-page-indexes util-margin-top" id="bottom-side">
-          <header>css indexes</header>
+          <header>
+            <h2>css indexes</h2>
+          </header>
           <nav>
             <ul>
               <li class="item">

@@ -4,7 +4,7 @@
 
 // CONTENT - 01 : GRID
 .content-page-container .nav {
-  .content-page-main-header-01 {
+  .main-header-01 {
     @include abs.mediaQuery(tab-land) {
       font-size: 5.5rem;
     }
