@@ -1,46 +1,46 @@
-@use "../abstract/" as abs;
+@use '../abstract/' as abs;
 
 *,
 *::after,
 *::before {
-  padding: 0;
-  margin: 0;
-  box-sizing: inherit;
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
 }
 
 html {
-  box-sizing: border-box;
-  font-size: 62.5%;
+	box-sizing: border-box;
+	font-size: 62.5%;
 
-  @include abs.mediaQuery(big-desk) {
-    font-size: 75%; //12px
-  }
+	@include abs.mediaQuery(big-desk) {
+		font-size: 75%; //12px
+	}
 
-  @include abs.mediaQuery(tab-land) {
-    font-size: 56%; //9px
-  }
+	@include abs.mediaQuery(tab-land) {
+		font-size: 56%; //9px
+	}
 
-  @include abs.mediaQuery(tab-port) {
-    font-size: 50%; //8px
-  }
+	@include abs.mediaQuery(tab-port) {
+		font-size: 50%; //8px
+	}
 
-  @include abs.mediaQuery(mobile) {
-    font-size: 43%; //7px
-  }
+	@include abs.mediaQuery(mobile) {
+		font-size: 43%; //7px
+	}
 
-  @include abs.mediaQuery(mob-small) {
-    font-size: 31%; //5px
-  }
+	@include abs.mediaQuery(mob-small) {
+		font-size: 31%; //5px
+	}
 }
 
 body {
-  position: relative;
-  color: abs.$color-accent;
-  padding: 1.6rem;
-  font-family: abs.$general;
-  font-weight: 400;
+	position: relative;
+	color: var(--color-accent);
+	padding: 1.6rem;
+	font-family: var(--font-general);
+	font-weight: 400;
 
-  @include abs.mediaQuery(mobile) {
-    padding: 0;
-  }
+	@include abs.mediaQuery(mobile) {
+		padding: 0;
+	}
 }

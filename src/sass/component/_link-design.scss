@@ -1,128 +1,128 @@
-@use "../abstract/" as abs;
+@use '../abstract/' as abs;
 
 .link-active {
-  background-color: abs.$color-secondary-light;
+	background-color: var(--color-secondary-light);
 
-  a {
-    font-style: italic;
-    font-weight: 600;
-    letter-spacing: 1px;
-  }
+	a {
+		font-style: italic;
+		font-weight: 600;
+		letter-spacing: 1px;
+	}
 }
 
 //////////
 /// main home resources indexes
 .main-home-resource-container .main-home-resource {
-  @include abs.page-indexes-design();
+	@include abs.page-indexes-design();
 
-  header {
-    animation-name: slideToLeft;
-    animation-duration: .7s;
-    animation-delay: 2.2s;
+	header {
+		animation-name: slideToLeft;
+		animation-duration: 0.7s;
+		animation-delay: 2.2s;
 
-    a {
-      // opacity: 0;
-      animation-name: dropAndBounce;
-      animation-duration: 2s;
-      animation-delay: .2s;
-    }
-  }
+		a {
+			// opacity: 0;
+			animation-name: dropAndBounce;
+			animation-duration: 2s;
+			animation-delay: 0.2s;
+		}
+	}
 }
 
 /////////////
 /// resource home go back button
 .resource-home-container {
-  a {
-    margin-right: auto;
+	a {
+		margin-right: auto;
 
-    box-shadow: 1px 4px 12px abs.$color-accent;
-    padding: 1rem 4rem;
-    margin-left: 3rem;
-    cursor: pointer;
-    text-decoration: none;
-    color: abs.$color-accent;
-    font-size: 2rem;
-    text-transform: uppercase;
-    transition: all 0.4s;
+		box-shadow: 1px 4px 12px var(--color-accent);
+		padding: 1rem 4rem;
+		margin-left: 3rem;
+		cursor: pointer;
+		text-decoration: none;
+		color: var(--color-accent);
+		font-size: 2rem;
+		text-transform: uppercase;
+		transition: all 0.4s;
 
-    @include abs.mediaQuery(mobile) {
-      padding: 0.5rem 2rem;
-      margin-left: 0;
-      box-shadow: none;
-      border: 1px solid abs.$color-accent;
-    }
+		@include abs.mediaQuery(mobile) {
+			padding: 0.5rem 2rem;
+			margin-left: 0;
+			box-shadow: none;
+			border: 1px solid var(--color-accent);
+		}
 
-    @include abs.mediaQuery(mob-small) {
-      padding: 0.5rem 1rem;
-    }
+		@include abs.mediaQuery(mob-small) {
+			padding: 0.5rem 1rem;
+		}
 
-    &:active {
-      box-shadow: 0px 0px 0px 0px abs.$color-accent;
-    }
+		&:active {
+			box-shadow: 0px 0px 0px 0px var(--color-accent);
+		}
 
-    &:hover {
-      outline: none;
-      border: none;
-    }
+		&:hover {
+			outline: none;
+			border: none;
+		}
 
-    svg {
-      height: 4rem;
-      width: 4rem;
-    }
-  }
+		svg {
+			height: 4rem;
+			width: 4rem;
+		}
+	}
 }
 
 ////////////
 /// content page
 .nav .indexes {
-  a {
-    text-transform: uppercase;
-    text-decoration: none;
-    font-family: abs.$tertiary;
-    font-weight: 600;
-    font-size: 2.6rem;
-    color: abs.$color-accent;
-    padding-left: 10rem;
-    transition: all 1.4s;
-    display: flex;
-    align-items: center;
+	a {
+		text-transform: uppercase;
+		text-decoration: none;
+		font-family: var(--font-tertiary);
+		font-weight: 600;
+		font-size: 2.6rem;
+		color: var(--color-accent);
+		padding-left: 10rem;
+		transition: all 1.4s;
+		display: flex;
+		align-items: center;
 
-    @include abs.mediaQuery(tab-land) {
-      padding-left: 4rem;
-    }
+		@include abs.mediaQuery(tab-land) {
+			padding-left: 4rem;
+		}
 
-    @include abs.mediaQuery(tab-port) {
-      padding-left: 1rem;
-    }
+		@include abs.mediaQuery(tab-port) {
+			padding-left: 1rem;
+		}
 
-    &::after {
-      content: "";
-      display: inline-block;
-      background-color: abs.$color-accent;
-      margin-left: 1rem;
-      height: 3rem;
-      width: 3rem;
-      -webkit-mask-image: url("../../img/svg/pointRight.svg");
-      -webkit-mask-size: cover;
-      mask-image: url("../../img/svg/pointRight.svg");
-      mask-size: cover;
-      transition: all 0.6s;
-    }
+		&::after {
+			content: '';
+			display: inline-block;
+			background-color: var(--color-accent);
+			margin-left: 1rem;
+			height: 3rem;
+			width: 3rem;
+			-webkit-mask-image: url('../../img/svg/pointRight.svg');
+			-webkit-mask-size: cover;
+			mask-image: url('../../img/svg/pointRight.svg');
+			mask-size: cover;
+			transition: all 0.6s;
+		}
 
-    &:hover::after {
-      background-color: abs.$color-secondary;
-      margin-left: 2rem;
-    }
+		&:hover::after {
+			background-color: var(--color-secondary);
+			margin-left: 2rem;
+		}
 
-    span {
-      letter-spacing: .1rem;
-      transition: all .4s;
+		span {
+			letter-spacing: 0.1rem;
+			transition: all 0.4s;
 
-      &:hover {
-        opacity: .6s;
-        color: abs.$color-secondary;
-        transform: scale(1.1);
-      }
-    }
-  }
+			&:hover {
+				opacity: 0.6s;
+				color: var(--color-secondary);
+				transform: scale(1.1);
+			}
+		}
+	}
 }

@@ -1,10 +1,10 @@
 // font-family
-$primary: "Phudu", serif; //300, 400 600
-$secondary: "Hahmlet", serif; //500, 700
-$tertiary: "Oxanium", sans-serif; // 400, 500, 600
-$content: "Exo 2", sans-serif; //200, 400, 600, 900
-$code: "Source Code Pro", monospace; //600
-$general: "Pathway Extreme", sans-serif; //200, 400, 600
+$primary: 'Phudu', serif; //300, 400 600
+$secondary: 'Hahmlet', serif; //500, 700
+$tertiary: 'Oxanium', sans-serif; // 400, 500, 600
+$content: 'Exo 2', sans-serif; //200, 400, 600, 900
+$code: 'Source Code Pro', monospace; //600
+$general: 'Pathway Extreme', sans-serif; //200, 400, 600
 
 ////////////
 /// colors;
@@ -28,3 +28,31 @@ $bp-large: 75em; //1200px  [tab-land]  count to -> 901px
 $bp-medium: 56.25em; //900px  [tab-port] count to -> 601px
 $bp-small: 37.5em; //600px  [mobile]  count to -> 401px
 $bp-small-extra: 25em; //400px  [mobile-small]   count to -> 320px
+
+:root {
+	--font-primary: #{$primary};
+	--font-secondary: #{$secondary};
+	--font-tertiary: #{$tertiary};
+	--font-content: #{$content};
+	--font-code: #{$code};
+	--font-general: #{$general};
+
+	--color-primary: #{$color-primary};
+	--color-primary-dark: #{$color-primary-dark};
+	--color-secondary: #{$color-secondary};
+	--color-secondary-light: #{$color-secondary-light};
+	--color-secondary-light-transparent-high: #{$color-secondary-light-transparent-high};
+	--color-secondary-dark: #{$color-secondary-dark};
+	--color-accent: #{$color-accent};
+	--color-accenet-light: #{$color-accent-light};
+	--color-transparent-high: #{$color-transparent-high};
+	--color-transparent-mid: #{$color-transparent-mid};
+	--color-transparent-low: #{$color-transparent-low};
+	--color-link-visited: #{$color-visited};
+
+	--bp-largest: #{$bp-largest};
+	--bp-large: #{$bp-large};
+	--bp-medium: #{$bp-medium};
+	--bp-small: #{$bp-small};
+	--bp-small-x: #{$bp-small-extra};
+}

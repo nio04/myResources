@@ -1,4 +1,4 @@
-@use "../abstract/var";
+@use '../abstract/var';
 
 /*
 ****** breakPoint for media query
@@ -23,33 +23,33 @@ MOB-SMALL  -> 320 X 108
 */
 
 @mixin mediaQuery($bp) {
-  @if $bp ==big-desk {
-    @media only screen and (min-width: var.$bp-largest) {
-      @content;
-    }
-  }
+	@if $bp ==big-desk {
+		@media only screen and (min-width: var.$bp-largest) {
+			@content;
+		}
+	}
 
-  @if $bp ==tab-land {
-    @media only screen and (max-width: var.$bp-large) {
-      @content;
-    }
-  }
+	@if $bp ==tab-land {
+		@media only screen and (max-width: var.$bp-large) {
+			@content;
+		}
+	}
 
-  @if $bp ==tab-port {
-    @media only screen and (max-width: var.$bp-medium) {
-      @content;
-    }
-  }
+	@if $bp ==tab-port {
+		@media only screen and (max-width: var.$bp-medium) {
+			@content;
+		}
+	}
 
-  @if $bp ==mobile {
-    @media only screen and (max-width: var.$bp-small) {
-      @content;
-    }
-  }
+	@if $bp ==mobile {
+		@media only screen and (max-width: var.$bp-small) {
+			@content;
+		}
+	}
 
-  @if $bp ==mob-small {
-    @media only screen and (max-width: var.$bp-small-extra) {
-      @content;
-    }
-  }
+	@if $bp ==mob-small {
+		@media only screen and (max-width: var.$bp-small-extra) {
+			@content;
+		}
+	}
 }

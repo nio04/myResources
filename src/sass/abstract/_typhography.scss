@@ -1,72 +1,71 @@
-@use "extend" as ext;
-@use "var";
-@use "utility" as util;
-@use "mixin";
-@use "anim";
-@use "bp";
+@use 'extend' as ext;
+@use 'var';
+@use 'utility' as util;
+@use 'mixin';
+@use 'anim';
+@use 'bp';
 
 ////////////
 /// content-page
 .content-page-container {
-  main {
-    section {
-      font-size: 3rem;
+	main {
+		section {
+			font-size: 3rem;
 
-      .content-area {
-        margin-top: 1.5rem;
-        text-transform: lowercase;
-        padding: 1.5rem;
-        margin-left: 2rem;
-        border: 1px solid var.$color-accent;
+			.content-area {
+				margin-top: 1.5rem;
+				text-transform: lowercase;
+				padding: 1.5rem;
+				margin-left: 2rem;
+				border: 1px solid var(--color-accent);
 
-        &:not(:first-of-type) {
-          border-top: 1px solid var.$color-accent;
-        }
+				&:not(:first-of-type) {
+					border-top: 1px solid var(--color-accent);
+				}
 
-        @include bp.mediaQuery(tab-port) {
-          margin-left: 1rem;
-          padding: 1.1rem;
-        }
+				@include bp.mediaQuery(tab-port) {
+					margin-left: 1rem;
+					padding: 1.1rem;
+				}
+			}
 
-      }
+			.code-explain {
+				padding: 0rem 5rem 1rem 5rem;
+				margin-top: 3rem;
+				text-transform: capitalize;
+				line-height: 9rem;
+				display: block;
+				position: relative;
+				font-size: 3.2rem;
+				font-family: var(--font-content);
+				font-weight: 400;
+				letter-spacing: 0.2rem;
+				word-spacing: 0.5rem;
+				box-shadow: 0px 0px 1px 1px var(--color-transparent-high) inset;
 
-      .code-explain {
-        padding: 0rem 5rem 1rem 5rem;
-        margin-top: 3rem;
-        text-transform: capitalize;
-        line-height: 9rem;
-        display: block;
-        position: relative;
-        font-size: 3.2rem;
-        font-family: var.$content;
-        font-weight: 400;
-        letter-spacing: .2rem;
-        word-spacing: .5rem;
-        box-shadow: 0px 0px 1px 1px var.$color-transparent-high inset;
+				@include bp.mediaQuery(tab-port) {
+					margin-left: 0;
+					padding: 0.8rem;
+				}
 
-        @include bp.mediaQuery(tab-port) {
-          margin-left: 0;
-          padding: .8rem;
-        }
+				&--code {
+					font-family: var(--font-code);
+					font-weight: 600;
+					text-transform: lowercase;
+					background-color: var(--color-secondary-light);
+					outline: 1px solid var(--color-secondary);
+					box-shadow: 2px 2px 3px var(--color-transparent-mid);
+					outline-offset: 1px;
+					border-radius: 4px;
+					color: var(--color-accent);
+					padding: 0 0.8rem;
+				}
 
-        &--code {
-          font-family: var.$code;
-          font-weight: 600;
-          text-transform: lowercase;
-          background-color: var.$color-secondary-light;
-          outline: 1px solid var.$color-secondary;
-          box-shadow: 2px 2px 3px var.$color-transparent-mid;
-          outline-offset: 1px;
-          border-radius: 4px;
-          color: var.$color-accent;
-          padding: 0 0.8rem;
-        }
-
-        &-sub-section {
-          display: block;
-          margin-top: 1.6rem;
-        }
-      }
-    }
-  }
+				&-sub-section {
+					display: block;
+					margin-top: 1.6rem;
+				}
+			}
+		}
+	}
 }
