@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <div class="content-page-container">
+    <article class="content-page-container">
       <div class="nav">
         <h1 class="main-header-01">git : basic, staging,
           commit, branch
@@ -67,32 +67,34 @@
       <main class="line-numbers">
         <section id="content-index-veryBasic">
           <h2>very basic</h2>
-          <div class="content-area">
+          <article class="content-area">
             <h3>enable git</h3>
             <pre>
               <code class="language-git">
                 git init
               </code>
             </pre>
-          </div>
-          <div class="content-area">
+          </article>
+
+          <article class="content-area">
             <h3>status checking git</h3>
             <pre>
               <code class="language-git">
                 git status
               </code>
             </pre>
-          </div>
-          <div class="content-area">
+          </article>
+
+          <article class="content-area">
             <h3>log checking git</h3></span>
             <pre>
               <code class="language-git">
                 git log
                 //or
                 git log --oneline
-            </code>
+              </code>
             </pre>
-          </div>
+          </article>
         </section>
 
         <!-- adding hover [go to top] button -->
@@ -118,58 +120,61 @@
           <header>
             <h2>staging </h2>
           </header>
-          <div class="content-area">
+          <article class="content-area">
             <h3>stage a file</h3>
             <pre>
               <code class="language-git">
                 git add [fileName]
               </code>
             </pre>
-          </div>
-          <div class="content-area">
+          </article>
+
+          <article class="content-area">
             <h3>stage multiple file</h3>
             <pre>
               <code class="language-git">
                 git add [fileName1] [fileName2]
               </code>
             </pre>
+          </article>
 
-          </div>
-          <div class="content-area">
+          <article class="content-area">
             <h3>stage all files</h3>
             <pre>
               <code class="language-git">
                 git add *
               </code>
             </pre>
-          </div>
-          <div class="content-area">
+          </article>
+
+          <article class="content-area">
             <h3>stage and commit :
               shortcut</h3>
             <pre>
               <code class="language-git">
-            git commit -am "commit message"
-            </code>
+                git commit -am "commit message"
+              </code>
             </pre>
-            <span class="code-explain">
+            <details class="code-explain util-cursor-pointer">
               stage and commit at the same time! (only works for atleast once commited file)
-            </span>
-          </div>
+            </details>
+          </article>
         </section>
 
         <section id="content-index-commit">
           <header>
             <h2>commit</h2>
           </header>
-          <div class="content-area">
+          <article class="content-area">
             <h3>commit file</h3>
             <pre>
               <code class="language-git">
                 git commit -m "commit message"
               </code>
             </pre>
-          </div>
-          <div class="content-area">
+          </article>
+
+          <article class="content-area">
             <h3>stage and commit :
               shortcut</h3>
             <pre>
@@ -177,88 +182,93 @@
             git commit -am "commit message"
             </code>
             </pre>
-          </div>
+          </article>
         </section>
 
         <section id="content-index-branch">
           <header>
             <h2>branch</h2>
           </header>
-          <div class="content-area">
+          <article class="content-area">
             <h3>create branch</h3>
             <pre>
               <code class="language-git">
                 git branch [branch name]
               </code>
             </pre>
-          </div>
-          <div class="content-area">
+          </article>
+
+          <article class="content-area">
             <h3>view all braches</h3>
             <pre>
               <code class="language-git">
                 git branch
               </code>
             </pre>
-          </div>
-          <div class="content-area">
+          </article>
+
+          <article class="content-area">
             <h3>switching branch</h3>
             <pre>
               <code class="language-git">
               git switch [branch name]
             </code>
             </pre>
-          </div>
-          <div class="content-area">
+          </article>
+
+          <article class="content-area">
             <h3>delete branch : not
               forcing</h3>
             <pre>
               <code class="language-git">
                 git branch -d [branch name]
-                </code>
+              </code>
             </pre>
-            <span class="code-explain">
+            <details class="code-explain util-cursor-pointer">
               if the branch is not merged and get delete command, we will get a warning
-            </span>
-          </div>
-          <div class="content-area">
+            </details>
+          </article>
+
+          <article class="content-area">
             <h3>delete branch :
               forcing</h3>
             <pre>
               <code class="language-git">
                 git branch -D [branch name]
-                </code>
+              </code>
             </pre>
-            <span class="code-explain">
+            <details class="code-explain util-cursor-pointer">
               ignore branch delete warning
-            </span>
-          </div>
-          <div class="content-area">
+            </details>
+          </article>
+
+          <article class="content-area">
             <h3>rename branch</h3>
             <pre>
               <code class="language-git">
               git branch -m [new branch name]
             </code>
             </pre>
-            <span class="code-explain">
+            <details class="code-explain util-cursor-pointer">
               stay on that branch, you are renaming to
-            </span>
-          </div>
-          <div class="content-area">
+            </details>
+          </article>
+
+          <article class="content-area">
             <h3 class="util-center util-caplock">Heads up!!!</h3>
-            <div class="util-border-bottom-double util-margin-top-negative-small"></div>
-            <span class="code-explain">
+            <details class="code-explain util-cursor-pointer">
               make sure to check! before switching branch, if the base branch have any unstaged
               file that switching to branch doesnt have, then this unstaged file will follw to
               swiching branch. so, make sure to stage files, before switching branch
-            </span>
-          </div>
+            </details>
+          </article>
         </section>
 
         <section id="content-index-gitaInformation">
           <header>
             <h2>git information</h2>
           </header>
-          <span class="code-explain">
+          <details class="code-explain util-cursor-pointer">
             <span class="list-wrap">
               <svg>
                 <use xlink:href="../img/sprite.svg#dot"></use>
@@ -266,15 +276,15 @@
                 <span class="code-explain--code">HEAD</span> refers to the current branch, its not
                 have to be the last commit
               </span>
-            </span>
-          </span>
+          </details>
         </section>
 
         <section id="content-index-normalGitFlow">
           <header>
             <h2>normal git flowing</h2>
           </header>
-          <span class="code-explain util-split-bottom">
+          <!-- <article class="content-area"> -->
+          <details class="code-explain util-cursor-pointer">
             <span class="list-wrap">
               <svg>
                 <use xlink:href="../img/sprite.svg#dot"></use>
@@ -343,7 +353,7 @@
               </svg><span class="list">[[add info about how to push git
                 repo to github repo]]</span>
             </span>
-          </span>
+          </details>
         </section>
       </main>
 
@@ -392,7 +402,7 @@
           </ul>
         </nav>
       </div>
-    </div>
+      </div>
   </body>
 
 </html>

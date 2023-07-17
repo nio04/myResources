@@ -10,7 +10,7 @@
     <title>git : reset - restore - revert</title>
   </head>
   <body>
-    <div class="content-page-container">
+    <ar class="content-page-container">
       <div class="nav">
         <h1 class="main-header-05">git -- travel - reset - restore - revert
         </h1>
@@ -58,7 +58,7 @@
           <header>
             <h2>stash : operation</h2>
           </header>
-          <div class="content-area">
+          <article class="content-area">
             <h3> time travel</h3>
             <pre>
               <code class="language-git match-braces rainbow-braces">
@@ -73,22 +73,22 @@
                 git restore [file name]
               </code>
             </pre>
-            <span class="code-explain">
+            <details class="code-explain util-cursor-pointer util-cursor-pointer">
               *AFTER TIME TRAVEL TO PAST, that particular commit hash will be our new HEAD. time
               travel doesn't make loose our works!
-            </span>
-            <span class="code-explain">
+              <br>
+              <br>
               tips : travel back to a specific commits. create a new branch from there :) now you
               can eliminate unnecessary works from your working branch
-            </span>
-          </div>
+            </details>
+          </article>
         </section>
 
         <section id="content-index-restore">
           <header>
             <h2>git restore</h2>
           </header>
-          <div class="content-area">
+          <article class="content-area">
             <h3>git restore for unstaged
               works</h3>
             <pre>
@@ -100,79 +100,81 @@
                 git checkout -- [file name]
               </code>
             </pre>
-            <span class="code-explain">
+            <details class="code-explain util-cursor-pointer">
               unstaged works revert back to the last commit / HEAD
-            </span>
-          </div>
+            </details>
+          </article>
 
-          <div class="content-area">
+          <article class="content-area">
             <h3>git restore to unstaged file</h3>
             <pre>
               <code class="language-git match-braces rainbow-braces">
                 git restore --staged [file name]
               </code>
             </pre>
-            <span class="code-explain">
+            <details class="code-explain util-cursor-pointer">
               to unsatged a staged file, we provide <span class="code-explain--code">--staged</span>
               segement
-            </span>
-          </div>
+            </details>
+          </article>
         </section>
 
         <section id="content-index-reset">
           <header>
             <h2>git reset</h2>
           </header>
-          <div class="content-area">
+          <article class="content-area">
             <h3>git reset</h3>
             <pre>
               <code class="language-git match-braces rainbow-braces">
                git reset [any commit hash]
               </code>
             </pre>
-            <span class="code-explain">
+            <details class="code-explain util-cursor-pointer">
               keeps the changes but removes the commit history
-              <span class="util-split-bottom-low"></span>
+              <br>
+              <br>
               tip -- now, you can move the unnecessary changes to another backup branch, if you need
               them
-            </span>
-          </div>
-          <div class="content-area">
+            </details>
+          </article>
+
+          <article class="content-area">
             <h3>git reset --hard</h3>
             <pre>
               <code class="language-git match-braces rainbow-braces">
                git reset --hard [any commit hash]
               </code>
             </pre>
-            <span class="code-explain">
+            <details class="code-explain util-cursor-pointer">
               removes the changes and removes the commit log also
-            </span>
-          </div>
+            </details>
+          </article>
         </section>
 
         <section id="content-index-revert">
           <header>
             <h2>git revert</h2>
           </header>
-          <div class="content-area">
+          <article class="content-area">
             <h3>git revert</h3>
             <pre>
               <code class="language-git match-braces rainbow-braces">
              git revert [any commit hash]
             </code>
             </pre>
-            <span class="code-explain">
+            <details class="code-explain util-cursor-pointer util-cursor-pointer">
               takes the unnecessary changes and make a new commit and remove the unnecessary changes
-              but keep the previous unnecessary commit history/histories available
-            </span>
-            <span class="code-explain">
+              from workplace but keep the previous unnecessary commit history/histories available
+              <br>
+              <br>
               note -- it may throw a confliction error while merging. since, we removed some content
-            </span>
-            <span class="code-explain">
-              know - <span class="code-explain--code">git revert</span> is notmally used when
+              <br>
+              <br>
+              know that - <span class="code-explain--code">git revert</span> is notmally used when
               collaborating with multiple people
-            </span>
-          </div>
+            </details>
+          </article>
         </section>
 
         <!-- adding hover [go to top] button -->
@@ -240,7 +242,7 @@
           </ul>
         </nav>
       </div>
-    </div>
+      </div>
 
   </body>
 

@@ -1,84 +1,88 @@
-@use "var";
+@use 'var';
 
 .util-split-top {
-  border-top: 1px solid var.$color-secondary !important;
-  padding: 4rem 0.6rem !important;
+	border-top: 1px solid var.$color-secondary !important;
+	padding: 4rem 0.6rem !important;
 }
 
 .util-split-bottom {
-  border-bottom: 1px solid var.$color-secondary !important;
-  padding: 4rem 0.6rem !important;
-  margin: 3rem 0 !important;
-  display: block !important;
+	border-bottom: 1px solid var.$color-secondary !important;
+	padding: 4rem 0.6rem !important;
+	margin: 3rem 0 !important;
+	display: block !important;
 }
 .util-split-bottom-low {
-  border-bottom: 1px solid var.$color-secondary !important;
-  // padding: 4rem 0.6rem !important;
-  margin: 1rem 0 !important;
-  display: block !important;
+	border-bottom: 1px solid var.$color-secondary !important;
+	// padding: 4rem 0.6rem !important;
+	margin: 1rem 0 !important;
+	display: block !important;
 }
 
 .util-center {
-  display: block !important;
-  text-align: center !important;
+	display: block !important;
+	text-align: center !important;
 }
 
 .util-margin-top {
-  margin-top: 5rem !important;
+	margin-top: 5rem !important;
 }
 
 .util-margin-top-negative-small {
-  margin-top: -2rem;
+	margin-top: -2rem;
 }
 
 .util-margin-bottom {
-  margin-bottom: 5rem !important;
+	margin-bottom: 5rem !important;
 }
 
 .util-padding-top {
-  padding-top: 5rem !important;
+	padding-top: 5rem !important;
 }
 
 .util-padding-bottom {
-  padding-bottom: 5rem !important;
+	padding-bottom: 5rem !important;
 }
 
 .util-border-bottom-double {
-  border-bottom: 3px double var.$color-accent !important;
+	border-bottom: 3px double var.$color-accent !important;
 }
 
 .util-opacity-low {
-  opacity: 0.8 !important;
+	opacity: 0.8 !important;
 }
 
 .util-opacity-mid {
-  opacity: 0.6 !important;
+	opacity: 0.6 !important;
 }
 
 .util-opacity-high {
-  opacity: 0.4 !important;
+	opacity: 0.4 !important;
 }
 
 .util-caplock {
-  text-transform: uppercase !important;
+	text-transform: uppercase !important;
 }
 
 .util-bold {
-  font-weight: 600;
+	font-weight: 600 !important;
 }
 
 .util-underline {
-  text-decoration: underline;
-  text-decoration-color: var.$color-transparent-mid;
-  text-underline-offset: 0.7rem;
+	text-decoration: underline !important;
+	text-decoration-color: var.$color-transparent-mid !important;
+	text-underline-offset: 0.7rem !important;
 }
 
 .util-flex-x {
-  display: flex;
-  justify-content: center;
+	display: flex !important;
+	justify-content: center !important;
 }
 
 .util-flex-y {
-  display: flex;
-  align-items: center;
+	display: flex !important;
+	align-items: center !important;
+}
+
+.util-cursor-pointer {
+	cursor: pointer !important;
 }

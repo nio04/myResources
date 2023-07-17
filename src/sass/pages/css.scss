@@ -1,45 +1,45 @@
 // ALL CSS CONTENT PAGE DESIGN TABLE
-@use "../layout/" as layout;
-@use "../abstract/" as abs;
+@use '../layout/' as layout;
+@use '../abstract/' as abs;
 
 // CONTENT - 01 : GRID
 .content-page-container .nav {
-  .main-header-01 {
-    @include abs.mediaQuery(tab-land) {
-      font-size: 5.5rem;
-    }
+	.main-header-01 {
+		@include abs.mediaQuery(tab-land) {
+			font-size: 5.5rem;
+		}
 
-    @include abs.mediaQuery(tab-port) {
-      font-size: 4.9rem;
-    }
+		@include abs.mediaQuery(tab-port) {
+			font-size: 4.9rem;
+		}
 
-    @include abs.mediaQuery(mobile) {
-      font-size: 3.4rem;
-    }
+		@include abs.mediaQuery(mobile) {
+			font-size: 3.4rem;
+		}
 
-    @include abs.mediaQuery(mob-small) {
-      font-size: 3.9rem;
-    }
-  }
+		@include abs.mediaQuery(mob-small) {
+			font-size: 3.9rem;
+		}
+	}
 }
 
 // CONTENT - 01 : GRID
 .content-page-container .nav {
-  .content-page-main-header-02 {
-    @include abs.mediaQuery(tab-land) {
-      font-size: 5.9rem;
-    }
+	.main-header-02 {
+		@include abs.mediaQuery(tab-land) {
+			font-size: 5.9rem;
+		}
 
-    @include abs.mediaQuery(tab-port) {
-      font-size: 4.3rem;
-    }
+		@include abs.mediaQuery(tab-port) {
+			font-size: 4.3rem;
+		}
 
-    @include abs.mediaQuery(mobile) {
-      font-size: 3rem;
-    }
+		@include abs.mediaQuery(mobile) {
+			font-size: 3rem;
+		}
 
-    @include abs.mediaQuery(mob-small) {
-      font-size: 3.4rem;
-    }
-  }
+		@include abs.mediaQuery(mob-small) {
+			font-size: 3.4rem;
+		}
+	}
 }

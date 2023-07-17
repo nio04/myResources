@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <div class="content-page-container">
+    <ar class="content-page-container">
       <div class="nav">
         <h1 class="main-header-03">git diff : find the
           works changes
@@ -70,9 +70,9 @@
           <header>
             <h2>diff : information</h2>
           </header>
-          <div class="content-area" id="content-index-01">
+          <article class="content-area" id="content-index-01">
             <h3>diff : important information</h3>
-            <span class="code-explain">
+            <details class="code-explain util-cursor-pointer">
               by <span class="code-explain--code">git diff</span> command, we can get various
               types of differences from our working file from different timeline.
               <br>
@@ -80,8 +80,8 @@
               <span class="code-explain--code">----</span> old file content [file name = a]
               <br>
               <span class="code-explain--code">++++</span> new file content [file name = b]
-            </span>
-          </div>
+            </details>
+          </article>
         </section>
 
         <!-- adding hover [go to top] button -->
@@ -107,7 +107,7 @@
           <header>
             <h2>diff : operation</h2>
           </header>
-          <div class="content-area" id="content-index-02">
+          <article class="content-area" id="content-index-02">
             <h3>unstaged ::
               last commit</h3>
             <pre>
@@ -115,11 +115,12 @@
                 git diff
               </code>
             </pre>
-            <span class="code-explain">
+            <details class="code-explain util-cursor-pointer">
               compare codes from last commit to current unstaged works
-            </span>
-          </div>
-          <div class="content-area" id="content-index-03">
+            </details>
+          </article>
+
+          <article class="content-area" id="content-index-03">
             <h3>staged
               :: last commit</h3>
             <pre>
@@ -127,24 +128,24 @@
                 git diff HEAD
               </code>
             </pre>
-            <span class="code-explain">
+            <details class="code-explain util-cursor-pointer">
               compare codes from last commit to current staged and unstaged works
-            </span>
-          </div>
-          <div class="content-area" id="content-index-04">
-            <h3>see
-              changes in a specific
-              file</h3>
+            </details>
+          </article>
+
+          <article class="content-area" id="content-index-04">
+            <h3>see changes in a specific file</h3>
             <pre>
               <code class="language-git">
                 git diff HEAD [file path/file name]
               </code>
             </pre>
-            <span class="code-explain">
+            <details class="code-explain util-cursor-pointer">
               comapre code from last commit to staged and unstaged area for a specific file
-            </span>
-          </div>
-          <div class="content-area" id="content-index-05">
+            </details>
+          </article>
+
+          <article class="content-area" id="content-index-05">
             <h3>
               diff for branches</h3>
             <pre>
@@ -152,7 +153,7 @@
                 git diff [first branch name]..[second branch name]
               </code>
             </pre>
-            <span class="code-explain">
+            <details class="code-explain util-cursor-pointer">
               ORDER MATTERS!!! [first branch] changes will have (-) sign && [second branch]
               changes fill will have (+) sign.
               <br>
@@ -173,10 +174,10 @@
                   [second branch] (-) is kinda like, where we test the difference
                 </span>
               </span>
-            </span>
-          </div>
+            </details>
+          </article>
 
-          <div class="content-area" id="content-index-06">
+          <article class="content-area" id="content-index-06">
             <h3>diff
               for commit</h3>
             <pre>
@@ -184,11 +185,11 @@
               git diff [first commit hash]..[second commit hash]
             </code>
             </pre>
-            <span class="code-explain util-split-bottom">
+            <details class="code-explain util-cursor-pointer util-split-bottom">
               ORDER MATTERS!!! [first commit] will be like a book, where we will compare our
               changes to another commit
-            </span>
-          </div>
+            </details>
+          </article>
         </section>
       </main>
 
@@ -237,7 +238,7 @@
           </ul>
         </nav>
       </div>
-    </div>
+      </div>
 
   </body>
 
