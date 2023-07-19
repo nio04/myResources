@@ -86,3 +86,12 @@
 .util-cursor-pointer {
 	cursor: pointer !important;
 }
+
+.util-remove-col-grid {
+	display: grid !important;
+	grid-template-columns: none !important;
+}
+.util-remove-row-grid {
+	display: grid !important;
+	grid-template-rows: none !important;
+}
