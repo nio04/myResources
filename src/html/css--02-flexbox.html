@@ -12,13 +12,15 @@
   </head>
 
   <body>
-    <div class="content-page-container">
-      <div class="nav">
+    <div class="content-page__container">
+      <div class="nav__container">
         <h1 class="main-header-02">everything about flexbox</h1>
         <svg>
           <use xlink:href="../img/sprite.svg#flexbox"></use>
         </svg>
-        <div class="section">section</div>
+        <header class="section">
+          <h2>section</h2>
+        </header>
         <nav class="indexes indexes--02">
           <a href="#content-index-parent">
             <span>
@@ -34,7 +36,7 @@
       </div>
 
       <!-- main home button -->
-      <nav class="sticky-nav">
+      <nav class="sticky-nav__container">
         <a href="index.html">
           <svg>
             <use xlink:href="../img/sprite.svg#home"></use>
@@ -46,7 +48,7 @@
       <!-- main post -->
       <main class="line-numbers">
         <!-- adding hover [go to top] button -->
-        <div class="float-btn to-top-btn">
+        <div class="float-btn__container to-top-btn">
           <a href="#">
             <svg>
               <use xlink:href="../img/sprite.svg#to-top"></use>
@@ -55,7 +57,7 @@
           </a>
         </div>
         <!-- adding hover [go to bottom] button -->
-        <div class="float-btn to-bottom-btn">
+        <div class="float-btn__container to-bottom-btn">
           <a href="#bottom-side">
             <svg>
               <use xlink:href="../img/sprite.svg#to-bottom"></use>
@@ -68,77 +70,77 @@
           <header>
             <h2>parent container</h2>
           </header>
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>flex-direction</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
                 flex-direction : row[default] | row-reverse | column | column-reverse;
               </code>
             </pre>
-            <details class="code-explain util-cursor-pointer util-split-bottom">
+            <details class="content__post util-cursor-pointer util-split-bottom">
               controls flex direction flow. defaultly, its row. but when its set to column, then
               the main-axis become align-content and cross-axis become justify-content
             </details>
           </article>
 
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>flex-wrap</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
                 flex-wrap : nowrap [default] | wrap | wrap-reverse;
               </code>
             </pre>
-            <details class="code-explain util-cursor-pointer util-split-bottom">
+            <details class="content__post util-cursor-pointer util-split-bottom">
               defines contents wrap behavior
             </details>
           </article>
 
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>justify-content</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
                 justify-content : flex-start [default] | flex-end | start | end | left| right | center | space-between | space-around | space-evenly
               </code>
             </pre>
-            <details class="code-explain util-cursor-pointer util-split-bottom">
+            <details class="content__post util-cursor-pointer util-split-bottom">
               defines content flow on main-axis or horizontal side
             </details>
           </article>
 
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>align-items</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
                 align-items : stretch [default] | flex-start | flex-end | start | self-start | end | self-end | center | baseline;
               </code>
             </pre>
-            <details class="code-explain util-cursor-pointer util-split-bottom">
+            <details class="content__post util-cursor-pointer util-split-bottom">
               defines content flow on cross-axis or verticle side
             </details>
           </article>
 
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>align-content</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
                 align-content : normal [default] | flex-start | flex-end | start | end | space-between | space-around | space-evenly | stretch
               </code>
             </pre>
-            <details class="code-explain util-cursor-pointer util-split-bottom">
+            <details class="content__post util-cursor-pointer util-split-bottom">
               this property only applied, if the contents in multi-line. works in cross axis
               (y)
               - between row gap
             </details>
           </article>
 
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>gap</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
                 gap : [row gap] [column gap]
               </code>
             </pre>
-            <details class="code-explain util-cursor-pointer ">
+            <details class="content__post util-cursor-pointer ">
               this property set gap between children items
             </details>
           </article>
@@ -148,84 +150,84 @@
           <header>
             <h2>children items</h2>
           </header>
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>flex-grow</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
                 flex-grow : [positive integer]
               </code>
             </pre>
-            <details class="code-explain util-cursor-pointer util-split-bottom">
+            <details class="content__post util-cursor-pointer util-split-bottom">
               default 0. give permission to particular child to have increase its size according
               to the flex-grow property
             </details>
           </article>
 
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>flex-shrink</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
                 flex-shrink : [positive integer]
               </code>
             </pre>
-            <details class="code-explain util-cursor-pointer util-split-bottom">
+            <details class="content__post util-cursor-pointer util-split-bottom">
               default 0. give permission to particular child to have decrease its size according
               to the flex-shrink property
             </details>
           </article>
 
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>flex-basis</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
                 flex-basis : [positive integer]
                 </code>
             </pre>
-            <details class="code-explain util-cursor-pointer util-split-bottom">
+            <details class="content__post util-cursor-pointer util-split-bottom">
               defines the default size of an element before the remaining space is distributed
             </details>
           </article>
 
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>flex</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
                 flex : [flex-grow] [flex-shrink] [flex-basis]
               </code>
             </pre>
-            <details class="code-explain util-cursor-pointer util-split-bottom">
+            <details class="content__post util-cursor-pointer util-split-bottom">
               flex is shorthand for flex-grow, flex-shrink, flex-basis
             </details>
           </article>
 
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>order</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
                 order : [positive integer]
               </code>
             </pre>
-            <details class="code-explain util-cursor-pointer util-split-bottom">
+            <details class="content__post util-cursor-pointer util-split-bottom">
               default is probably all to 0. set any higher positive numbers to mess up the order
               system
             </details>
           </article>
 
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>align-self</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
                   align-self : stretch [default] | flex-start | flex-end | start | self-start | end | self-end | center | baseline
                 </code>
             </pre>
-            <details class="code-explain util-cursor-pointer util-split-bottom">
+            <details class="content__post util-cursor-pointer util-split-bottom">
               override parent container's align-items property for per selected children
             </details>
           </article>
         </section>
 
         <!-- all the other css posts -->
-        <div class="content-page-indexes util-margin-top" id="bottom-side">
+        <div class="content-page-indexes__container util-margin-top" id="bottom-side">
           <header>
             <h2>css indexes</h2>
           </header>

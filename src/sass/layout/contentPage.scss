@@ -1,10 +1,10 @@
 // CONTENT PAGE
-@use "../abstract/" as abs;
-@use "../base/reset";
+@use '../abstract/' as abs;
+@use '../base/reset';
 
-.content-page-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 100vh minmax(100vh, 1fr);
-  position: relative;
+.content-page__container {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 100vh minmax(100vh, 1fr);
+	position: relative;
 }

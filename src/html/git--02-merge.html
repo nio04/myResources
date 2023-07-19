@@ -12,15 +12,17 @@
   </head>
 
   <body>
-    <div class="content-page-container">
-      <div class="nav">
+    <div class="content-page__container">
+      <div class="nav__container">
         <h1 class="main-header-02">git merge :
           fast-forward, non:fast-forward
         </h1>
         <svg>
           <use xlink:href="../img/sprite.svg#git"></use>
         </svg>
-        <div class="section">section</div>
+        <header class="section">
+          <h2>section</h2>
+        </header>
         <nav class="indexes">
           <a href="#content-index-fastForward">
             <span>
@@ -41,7 +43,7 @@
       </div>
 
       <!-- main home button -->
-      <nav class="sticky-nav">
+      <nav class="sticky-nav__container">
         <a href="index.html">
           <svg>
             <use xlink:href="../img/sprite.svg#home"></use>
@@ -56,7 +58,7 @@
           <header>
             <h2>MERGING : fast-forward</h2>
           </header>
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>fast-forward merge</h3> </span>
             <pre>
               <code class="language-git">
@@ -64,8 +66,8 @@
                 git merge [branch name]
               </code>
             </pre>
-            <details class="code-explain util-cursor-pointer">
-              <span class="list-wrap">
+            <details class="content__post util-cursor-pointer">
+              <span class="list-wrap__container">
                 <svg>
                   <use xlink:href="../img/sprite.svg#dot"></use>
                 </svg>
@@ -74,28 +76,28 @@
                 </span>
               </span>
 
-              <span class="list-wrap">
+              <span class="list-wrap__container">
                 <svg>
                   <use xlink:href="../img/sprite.svg#dot"></use>
                 </svg>
                 <span class="list">
-                  then we give the branch name <span class="code-explain--code">git merge
+                  then we give the branch name <span class="post__code">git merge
                     [branch
                     name]</span> (other brach, which works we want to merge)
                 </span>
               </span>
 
-              this <span class="code-explain--code">fast-forward</span> merge term is used, when
+              this <span class="post__code">fast-forward</span> merge term is used, when
               we
-              want to merge our <span class="code-explain--code">newly branch works file</span> -
-              to our base branch & the base branch <span class="code-explain--code">does not have
+              want to merge our <span class="post__code">newly branch works file</span> -
+              to our base branch & the base branch <span class="post__code">does not have
                 any new commit</span> from the moment, newly branch were created
             </details>
           </article>
         </section>
 
         <!-- adding hover [go to top] button -->
-        <div class="float-btn to-top-btn">
+        <div class="float-btn__container to-top-btn">
           <a href="#">
             <svg>
               <use xlink:href="../img/sprite.svg#to-top"></use>
@@ -104,7 +106,7 @@
           </a>
         </div>
         <!-- adding hover [go to bottom] button -->
-        <div class="float-btn to-bottom-btn">
+        <div class="float-btn__container to-bottom-btn">
           <a href="#bottom-side">
             <svg>
               <use xlink:href="../img/sprite.svg#to-bottom"></use>
@@ -117,7 +119,7 @@
           <header>
             <h2>MERGING : non - fast-forward</h2>
           </header>
-          <article class="content-area">
+          <article class="content-area__container">
             <h3 class=" util-center">non : fast-forward
               merge :: [no-conflict]</h3>
             <!-- <div
@@ -129,8 +131,9 @@
                 git merge [branch name]
               </code>
             </pre>
-            <details class="code-explain util-cursor-pointer util-split-bottom util-padding-bottom">
-              <span class="list-wrap">
+            <details
+              class="content__post util-cursor-pointer util-split-bottom util-padding-bottom">
+              <span class="list-wrap__container">
                 <svg>
                   <use xlink:href="../img/sprite.svg#dot"></use>
                 </svg>
@@ -138,17 +141,17 @@
                   first, we switched to the branch, we want to merged into
                 </span>
               </span>
-              <span class="list-wrap">
+              <span class="list-wrap__container">
                 <svg>
                   <use xlink:href="../img/sprite.svg#dot"></use>
                 </svg>
                 <span class="list">
-                  then we give the branch name <span class="code-explain--code">git merge
+                  then we give the branch name <span class="post__code">git merge
                     [branch
                     name]</span> (other brach, which works we want to merge)
                 </span>
               </span>
-              <span class="list-wrap">
+              <span class="list-wrap__container">
                 <svg>
                   <use xlink:href="../img/sprite.svg#dot"></use>
                 </svg>
@@ -156,7 +159,7 @@
                   then git will auto prompt us to give a commit message name
                 </span>
               </span>
-              <span class="list-wrap">
+              <span class="list-wrap__container">
                 <svg>
                   <use xlink:href="../img/sprite.svg#dot"></use>
                 </svg>
@@ -167,15 +170,14 @@
               </span>
               when our old branch have some more commit, that our new branch doesn't have and then
               if we want to
-              merge our new branch - to old branch :: its called <span
-                class="code-explain--code">not
+              merge our new branch - to old branch :: its called <span class="post__code">not
                 fast-forward</span> merging operation
             </details>
           </article>
         </section>
 
         <section id="content-index-nonFastForwardConflict">
-          <article class="content-area split-top">
+          <article class="content-area__container split-top">
             <h3 class=" util-center">non : fast-forward merge :: [conflict]</h3>
             <!-- <div
               class="util-border-bottom-double util-margin-top-negative-small util-margin-bottom">
@@ -191,8 +193,8 @@
                   //merge again
                 </code>
             </pre>
-            <details class="code-explain util-cursor-pointer util-split-bottom">
-              <span class="list-wrap">
+            <details class="content__post util-cursor-pointer util-split-bottom">
+              <span class="list-wrap__container">
                 <svg>
                   <use xlink:href="../img/sprite.svg#dot"></use>
                 </svg>
@@ -200,15 +202,15 @@
                   first, we switched to the branch, we want to merged into
                 </span>
               </span>
-              <span class="list-wrap">
+              <span class="list-wrap__container">
                 <svg>
                   <use xlink:href="../img/sprite.svg#dot"></use>
                 </svg>
                 <span class="list">
-                  we give the <span class="code-explain--code">merge</span> command
+                  we give the <span class="post__code">merge</span> command
                 </span>
               </span>
-              <span class="list-wrap">
+              <span class="list-wrap__container">
                 <svg>
                   <use xlink:href="../img/sprite.svg#dot"></use>
                 </svg>
@@ -216,7 +218,7 @@
                   now git will show us a error of confliction
                 </span>
               </span>
-              <span class="list-wrap">
+              <span class="list-wrap__container">
                 <svg>
                   <use xlink:href="../img/sprite.svg#dot"></use>
                 </svg>
@@ -224,40 +226,40 @@
                   we manually fix the error
                 </span>
               </span>
-              <span class="list-wrap">
+              <span class="list-wrap__container">
                 <svg>
                   <use xlink:href="../img/sprite.svg#dot"></use>
                 </svg>
                 <span class="list">
-                  <span class="code-explain--code">stage</span> the file
+                  <span class="post__code">stage</span> the file
                 </span>
               </span>
-              <span class="list-wrap">
+              <span class="list-wrap__container">
                 <svg>
                   <use xlink:href="../img/sprite.svg#dot"></use>
                 </svg>
                 <span class="list">
-                  <span class="code-explain--code">commit</span> file
+                  <span class="post__code">commit</span> file
                 </span>
               </span>
-              <span class="list-wrap">
+              <span class="list-wrap__container">
                 <svg>
                   <use xlink:href="../img/sprite.svg#dot"></use>
                 </svg>
                 <span class="list">
-                  <span class="code-explain--code">merge</span> file
+                  <span class="post__code">merge</span> file
                 </span>
               </span>
               <div class="util-split-bottom-low"></div>
               <h4 class="util-caplock util-center">heads up!</h4>
               <div class="util-split-bottom-low"></div>
-              <span class="code-explain--code">
-                <<<<<<<< </span> &nbsp;:: this is our <span class="code-explain--code">base
+              <span class="post__code">
+                <<<<<<<< </span> &nbsp;:: this is our <span class="post__code">base
                     branch</span>
                   content area
                   <br>
-                  <span class="code-explain--code"> >>>>>>>> </span> &nbsp;::
-                  this is the <span class="code-explain--code">incoming branch</span> content
+                  <span class="post__code"> >>>>>>>> </span> &nbsp;::
+                  this is the <span class="post__code">incoming branch</span> content
                   area
               </span>
             </details>
@@ -266,7 +268,7 @@
       </main>
 
       <!-- indexes -->
-      <div class="content-page-indexes util-margin-top" id="bottom-side">
+      <div class="content-page-indexes__container util-margin-top" id="bottom-side">
         <header>
           <h2>git indexes</h2>
         </header>

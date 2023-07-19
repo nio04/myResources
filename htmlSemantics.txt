@@ -1,0 +1,57 @@
+<article>   The <article> element specifies independent, self-contained content.
+
+
+
+<nav>     The <nav> element defines a set of navigation links.
+
+
+
+
+<aside>      	
+The <aside> element defines some content aside from the content it is placed in (like a sidebar).
+
+
+
+<section>     It represents the section of the document.
+
+
+
+
+<details>      It specifies the tag for additional details.
+
+
+
+
+<header>     The <header> element represents a container for introductory content or a set of navigational links.
+
+
+
+<footer>         The <footer> element defines a footer for a document or section
+
+
+
+
+<main>            This specifies the main page content and should be unique
+
+
+
+<summary>        This specifies a header for the <details> element.
+
+
+
+
+<mark>        This specifies the text that is highlighted.
+
+
+
+
+
+<figure>       use to wrap img element
+
+
+
+
+
+<figcaption>       adding a caption to the image, use the <figcaption>
+
+

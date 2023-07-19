@@ -1,9 +1,9 @@
 @use '../abstract/' as abs;
 
 ///////////
-/// index.html --headers
-.main-home-container {
-	.main-header {
+/// MAIN HOME PAGE [1ST PAGE]
+.main-home__container {
+	.main-home__header h1 {
 		color: var(--color-accent);
 		text-transform: uppercase;
 		grid-column: 1 / -1;
@@ -33,6 +33,11 @@
 		font-weight: 600;
 		@extend .center-me-full;
 
+		animation-name: moveAndJump;
+		animation-delay: 0.2s;
+		animation-duration: 3s;
+		animation-fill-mode: both;
+
 		@include abs.mediaQuery(tab-land) {
 			font-size: 3rem;
 		}
@@ -41,16 +46,9 @@
 			font-size: 3.5rem;
 			border: 3rem solid var(--color-transparent-high);
 		}
-
-		span {
-			animation-name: moveAndJump;
-			animation-delay: 0.2s;
-			animation-duration: 3s;
-			animation-fill-mode: both;
-		}
 	}
 
-	.main-home-extra-nav header {
+	.main-home-extra-nav__container header h2 {
 		height: 6rem;
 		font-family: var(--font-secondary);
 		font-weight: 600;
@@ -66,59 +64,59 @@
 		@extend .center-me-full;
 		@extend .util-caplock;
 	}
+	.main-home-resource__container
+		.main-home-resource__contents
+		.main-home-resource__header
+		h2 {
+		border: 2px inset rgba(0, 0, 0, 0.5);
+		border-radius: 2rem;
+		margin-bottom: 2rem;
+		font-family: var(--font-primary);
+		font-weight: 500;
+		text-align: center;
+		text-shadow: 2px 4px 7px;
+		box-shadow: inset 1px -3px 20px 8px rgba(0, 0, 0, 0.5);
+		padding: 1.9rem 0;
+		padding-left: 2.9rem;
+		transition: all 0.8s;
+		@extend .center-me-vertical;
 
-	.main-home-resource-container {
-		.main-home-resource .main-home-resource-header {
-			border: 2px inset rgba(0, 0, 0, 0.5);
-			border-radius: 2rem;
-			margin-bottom: 2rem;
+		&:hover {
+			font-weight: 600;
+			text-shadow: none;
+			box-shadow: none;
+			border: none;
+			border-radius: 0;
+			transform: translateY(-1rem);
+		}
+
+		&:active {
+			transform: translate(0) scale(0.98);
+		}
+
+		a:link {
+			width: 100%;
+			height: 100%;
+			color: var(--color-accent);
 			font-family: var(--font-primary);
-			font-weight: 500;
-			text-align: center;
-			text-shadow: 2px 4px 7px;
-			box-shadow: inset 1px -3px 20px 8px rgba(0, 0, 0, 0.5);
-			padding: 1.9rem 0;
-			padding-left: 2.9rem;
-			transition: all 0.8s;
-			@extend .center-me-vertical;
-
+			font-weight: 400;
+			font-size: 5rem;
+			text-transform: uppercase;
+			letter-spacing: 0.3rem;
+			cursor: pointer;
+			text-decoration: none;
+			transition: all 0.6s 0.2s;
+			&:visited {
+				color: var(--color-visited);
+			}
 			&:hover {
-				font-weight: 600;
-				text-shadow: none;
-				box-shadow: none;
-				border: none;
-				border-radius: 0;
-				transform: translateY(-1rem);
+				transform: translateY(-2rem);
+				letter-spacing: 8px;
 			}
 
-			&:active {
-				transform: translate(0) scale(0.98);
-			}
-
-			a:link {
-				width: 100%;
-				height: 100%;
-				color: var(--color-accent);
-				font-family: var(--font-primary);
-				font-weight: 400;
-				font-size: 5rem;
-				text-transform: uppercase;
-				letter-spacing: 0.3rem;
-				cursor: pointer;
-				text-decoration: none;
-				transition: all 0.6s 0.2s;
-				&:visited {
-					color: var(--color-visited);
-				}
-				&:hover {
-					transform: translateY(-2rem);
-					letter-spacing: 8px;
-				}
-
-				@include abs.mediaQuery(tab-port) {
-					text-align: center;
-					letter-spacing: 0.5rem;
-				}
+			@include abs.mediaQuery(tab-port) {
+				text-align: center;
+				letter-spacing: 0.5rem;
 			}
 		}
 	}
@@ -146,9 +144,9 @@
 }
 
 //////////////
-/// content page [third page]
-.content-page-container {
-	.nav {
+/// CONTENT PAGE [3RD PAGE]
+.content-page__container {
+	.nav__container {
 		h1 {
 			grid-column: 1 / -1;
 			font-family: var(--font-primary);
@@ -165,8 +163,7 @@
 			animation-iteration-count: infinite;
 			animation-direction: alternate-reverse;
 		}
-
-		.section {
+		.section h2 {
 			font-size: 5rem;
 			font-family: var(--font-secondary);
 			font-weight: 700;
@@ -197,7 +194,6 @@
 			}
 		}
 	}
-
 	main section {
 		h2 {
 			text-transform: uppercase;
@@ -219,58 +215,39 @@
 				letter-spacing: 0;
 			}
 		}
+	}
+	.content-area__container h3 {
+		font-family: var(--font-tertiary);
+		font-weight: 600;
+		// clip-path: polygon(5.14% 0px, 100% 0%, 96.46% 96.32%, 1.88% 100%);
+		padding: 1rem 5rem;
+		letter-spacing: 3px;
+		margin: 1rem 0 2.2rem 0;
+		display: inline-block;
+		-webkit-background-clip: text;
+		background-clip: text;
+		background-image: linear-gradient(
+			to right bottom,
+			var(--color-primary),
+			var(--color-accent)
+		);
+		color: transparent;
+		text-shadow: 0px 0px 2px var(--color-accent);
+		@extend .util-margin-bottom;
 
-		.content-area {
-			h3 {
-				font-family: var(--font-tertiary);
-				font-weight: 600;
-				// clip-path: polygon(5.14% 0px, 100% 0%, 96.46% 96.32%, 1.88% 100%);
-				padding: 1rem 5rem;
-				letter-spacing: 3px;
-				margin: 1rem 0 2.2rem 0;
-				display: inline-block;
-				-webkit-background-clip: text;
-				background-clip: text;
-				background-image: linear-gradient(
-					to right bottom,
-					var(--color-primary),
-					var(--color-accent)
-				);
-				color: transparent;
-				text-shadow: 0px 0px 2px var(--color-accent);
-				@extend .util-margin-bottom;
+		@include abs.mediaQuery(tab-port) {
+			display: block !important;
+			text-align: center !important;
+		}
 
-				@include abs.mediaQuery(tab-port) {
-					display: block !important;
-					text-align: center !important;
-				}
+		@include abs.mediaQuery(tab-land) {
+			padding: 0;
+			margin-bottom: 5rem !important;
+		}
 
-				@include abs.mediaQuery(tab-land) {
-					padding: 0;
-					margin-bottom: 5rem !important;
-				}
-
-				@include abs.mediaQuery(mobile) {
-					letter-spacing: 0;
-					padding: 1rem 2.8rem;
-				}
-			}
-
-			.code-explain {
-				&-header {
-					font-family: var(--font-tertiary);
-					font-weight: 600;
-					background-image: linear-gradient(
-						to right bottom,
-						var(--color-primary),
-						var(--color-secondary)
-					);
-					color: var(--color-accent);
-					padding: 0.8rem 1.9rem;
-					text-transform: lowercase;
-					clip-path: polygon(3% 0, 100% 0%, 96% 100%, 0% 100%);
-				}
-			}
+		@include abs.mediaQuery(mobile) {
+			letter-spacing: 0;
+			padding: 1rem 2.8rem;
 		}
 	}
 }

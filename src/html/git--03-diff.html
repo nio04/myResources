@@ -12,15 +12,17 @@
   </head>
 
   <body>
-    <ar class="content-page-container">
-      <div class="nav">
+    <ar class="content-page__container">
+      <div class="nav__container">
         <h1 class="main-header-03">git diff : find the
           works changes
         </h1>
         <svg>
           <use xlink:href="../img/sprite.svg#git"></use>
         </svg>
-        <div class="section">section</div>
+        <header class="section">
+          <h2>section</h2>
+        </header>
         <nav class="indexes indexes-03">
           <a href="#content-index-01">
             <span>
@@ -56,7 +58,7 @@
       </div>
 
       <!-- main home button -->
-      <nav class="sticky-nav">
+      <nav class="sticky-nav__container">
         <a href="index.html">
           <svg>
             <use xlink:href="../img/sprite.svg#home"></use>
@@ -70,22 +72,22 @@
           <header>
             <h2>diff : information</h2>
           </header>
-          <article class="content-area" id="content-index-01">
+          <article class="content-area__container" id="content-index-01">
             <h3>diff : important information</h3>
-            <details class="code-explain util-cursor-pointer">
-              by <span class="code-explain--code">git diff</span> command, we can get various
+            <details class="content__post util-cursor-pointer">
+              by <span class="post__code">git diff</span> command, we can get various
               types of differences from our working file from different timeline.
               <br>
               <br>
-              <span class="code-explain--code">----</span> old file content [file name = a]
+              <span class="post__code">----</span> old file content [file name = a]
               <br>
-              <span class="code-explain--code">++++</span> new file content [file name = b]
+              <span class="post__code">++++</span> new file content [file name = b]
             </details>
           </article>
         </section>
 
         <!-- adding hover [go to top] button -->
-        <div class="float-btn to-top-btn">
+        <div class="float-btn__container to-top-btn">
           <a href="#">
             <svg>
               <use xlink:href="../img/sprite.svg#to-top"></use>
@@ -94,7 +96,7 @@
           </a>
         </div>
         <!-- adding hover [go to bottom] button -->
-        <div class="float-btn to-bottom-btn">
+        <div class="float-btn__container to-bottom-btn">
           <a href="#bottom-side">
             <svg>
               <use xlink:href="../img/sprite.svg#to-bottom"></use>
@@ -107,7 +109,7 @@
           <header>
             <h2>diff : operation</h2>
           </header>
-          <article class="content-area" id="content-index-02">
+          <article class="content-area__container" id="content-index-02">
             <h3>unstaged ::
               last commit</h3>
             <pre>
@@ -115,12 +117,12 @@
                 git diff
               </code>
             </pre>
-            <details class="code-explain util-cursor-pointer">
+            <details class="content__post util-cursor-pointer">
               compare codes from last commit to current unstaged works
             </details>
           </article>
 
-          <article class="content-area" id="content-index-03">
+          <article class="content-area__container" id="content-index-03">
             <h3>staged
               :: last commit</h3>
             <pre>
@@ -128,24 +130,24 @@
                 git diff HEAD
               </code>
             </pre>
-            <details class="code-explain util-cursor-pointer">
+            <details class="content__post util-cursor-pointer">
               compare codes from last commit to current staged and unstaged works
             </details>
           </article>
 
-          <article class="content-area" id="content-index-04">
+          <article class="content-area__container" id="content-index-04">
             <h3>see changes in a specific file</h3>
             <pre>
               <code class="language-git">
                 git diff HEAD [file path/file name]
               </code>
             </pre>
-            <details class="code-explain util-cursor-pointer">
+            <details class="content__post util-cursor-pointer">
               comapre code from last commit to staged and unstaged area for a specific file
             </details>
           </article>
 
-          <article class="content-area" id="content-index-05">
+          <article class="content-area__container" id="content-index-05">
             <h3>
               diff for branches</h3>
             <pre>
@@ -153,12 +155,12 @@
                 git diff [first branch name]..[second branch name]
               </code>
             </pre>
-            <details class="code-explain util-cursor-pointer">
+            <details class="content__post util-cursor-pointer">
               ORDER MATTERS!!! [first branch] changes will have (-) sign && [second branch]
               changes fill will have (+) sign.
               <br>
               <br>
-              <span class="list-wrap">
+              <span class="list-wrap__container">
                 <svg>
                   <use xlink:href="../img/sprite.svg#dot"></use>
                 </svg>
@@ -166,7 +168,7 @@
                   [first branch] (+) means, from where to look up for changes
                 </span>
               </span>
-              <span class="list-wrap">
+              <span class="list-wrap__container">
                 <svg>
                   <use xlink:href="../img/sprite.svg#dot"></use>
                 </svg>
@@ -177,7 +179,7 @@
             </details>
           </article>
 
-          <article class="content-area" id="content-index-06">
+          <article class="content-area__container" id="content-index-06">
             <h3>diff
               for commit</h3>
             <pre>
@@ -185,7 +187,7 @@
               git diff [first commit hash]..[second commit hash]
             </code>
             </pre>
-            <details class="code-explain util-cursor-pointer util-split-bottom">
+            <details class="content__post util-cursor-pointer util-split-bottom">
               ORDER MATTERS!!! [first commit] will be like a book, where we will compare our
               changes to another commit
             </details>
@@ -194,7 +196,7 @@
       </main>
 
       <!-- indexes -->
-      <div class="content-page-indexes util-margin-top" id="bottom-side">
+      <div class="content-page-indexes__container util-margin-top" id="bottom-side">
         <header>
           <h2>git indexes</h2>
         </header>

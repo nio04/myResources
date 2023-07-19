@@ -1,25 +1,25 @@
 // first PAGE
-@use "../abstract/" as abs;
-@use "../base/reset";
-@use "../component/" as compo;
+@use '../abstract/' as abs;
+@use '../base/reset';
+@use '../component/' as compo;
 
-.main-home-container {
-  display: grid;
-  grid-template-rows: 15rem 1fr;
-  gap: 6rem;
+.main-home__container {
+	display: grid;
+	grid-template-rows: 15rem 1fr;
+	gap: 6rem;
 
-  @include abs.mediaQuery(tab-port) {
-    grid-template-rows: 9rem 80vh min-content 1fr;
-  }
+	@include abs.mediaQuery(tab-port) {
+		grid-template-rows: 9rem 80vh min-content 1fr;
+	}
 
-  .main-home-resource-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+	.main-home-resource__container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
 
-    @include abs.mediaQuery(tab-port) {
-      grid-template-columns: 1fr;
-      gap: 5rem;
-    }
-  }
+		@include abs.mediaQuery(tab-port) {
+			grid-template-columns: 1fr;
+			gap: 5rem;
+		}
+	}
 }

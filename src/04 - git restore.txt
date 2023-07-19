@@ -1,0 +1,85 @@
+///add in --git info
+-- "HEAD" refers to the current branch, its not have to be the last commit
+
+
+
+
+/// travel back to past [specific commit]
+
+## git checkout [particular commit hash]
+or
+# git restore --source [any commit hash] [file name]
+
+-- that particular commit hash will be our new HEAD. this time travel doesn't make loose our works!
+
+
+
+/// to travel back to present again
+
+## git switch [current branch name]
+or
+# git restore [file name]
+
+
+
+-- tips : travel back to a specific commits. create a new branch from there :) now you won't have latest works from your working branch
+
+
+
+//// revert changes back to HEAD [un-staged]
+
+## git restore [file name]
+or
+## git checkout HEAD [file name]
+or
+## git checkout -- [file name]
+
+--- our unstaged works revert back to the last commit
+
+
+//// un-staged a file
+## git restore --staged [file name]
+
+
+
+
+////////
+[GIT RESET]
+/////////
+
+--- #git reset without #--hard segment, keeps the unnecessary changes but removes the commit history
+
+--- # git reset with #--hard segment removes the changes and also removes the commit history
+
+
+
+////////// regular reset
+
+#git reset [any commit hash]
+
+keeps the changes but removes the commit log
+
+: tip -- now, you can move the unnecessary changes to another backup branch, if you need them
+
+
+///////// hard reset
+
+#git reset --hard [any commit hash]
+
+removes the changes && removes the commit log also
+
+
+
+
+/////////////// git revert
+
+#git revert takes the unnecessary changes and make a new commit and remove the unnecessary changes but keep the previous unnecessary commit history/histories available
+
+: note -- it may throw a confliction error while merging. since, we removed some content
+
+: tip - git revert is notmally used when collaborating with multiple people
+
+
+# git revert [any commit hash]
+
+after #git revert it, #git will give you a option modify commit message > #git revert operation complete

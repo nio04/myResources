@@ -1,159 +1,159 @@
 // ALL git CONTENT PAGE DESIGN TABLE
-@use "../layout/" as layout;
-@use "../abstract/" as abs;
-@use "../component/" as comp;
+@use '../layout/' as layout;
+@use '../abstract/' as abs;
+@use '../component/' as comp;
 
 // CONTENT - 01 : git fundamental
-.content-page-container {
-  .nav {
-    .main-header-01 {
-      padding-left: 0;
-      font-size: 4rem;
+.content-page__container {
+	.nav__container {
+		.main-header-01 {
+			padding-left: 0;
+			font-size: 4rem;
 
-      @include abs.mediaQuery(tab-land) {
-        font-size: 3.8rem;
-      }
+			@include abs.mediaQuery(tab-land) {
+				font-size: 3.8rem;
+			}
 
-      @include abs.mediaQuery(tab-port) {
-        font-size: 4.4rem;
-        letter-spacing: 0rem;
-        word-spacing: 0rem;
-      }
+			@include abs.mediaQuery(tab-port) {
+				font-size: 4.4rem;
+				letter-spacing: 0rem;
+				word-spacing: 0rem;
+			}
 
-      @include abs.mediaQuery(mobile) {
-        font-size: 3.7rem;
-      }
+			@include abs.mediaQuery(mobile) {
+				font-size: 3.7rem;
+			}
 
-      @include abs.mediaQuery(mob-small) {
-        font-size: 3.5rem;
-      }
-    }
-  }
+			@include abs.mediaQuery(mob-small) {
+				font-size: 3.5rem;
+			}
+		}
+	}
 }
 
 // CONTENT :: 02 - MERGE
-.content-page-container .nav {
-  .main-header-02 {
-    font-size: 3.9rem;
-    padding: 0;
+.content-page__container .nav__container {
+	.main-header-02 {
+		font-size: 3.9rem;
+		padding: 0;
 
-    @include abs.mediaQuery(tab-land) {
-      font-size: 2.8rem;
-    }
+		@include abs.mediaQuery(tab-land) {
+			font-size: 2.8rem;
+		}
 
-    @include abs.mediaQuery(tab-port) {
-      font-size: 3.4rem;
-      letter-spacing: 0rem;
-      word-spacing: 0rem;
-    }
+		@include abs.mediaQuery(tab-port) {
+			font-size: 3.4rem;
+			letter-spacing: 0rem;
+			word-spacing: 0rem;
+		}
 
-    @include abs.mediaQuery(mobile) {
-      font-size: 2.8rem;
-    }
+		@include abs.mediaQuery(mobile) {
+			font-size: 2.8rem;
+		}
 
-    @include abs.mediaQuery(mob-small) {
-      font-size: 3rem;
-    }
-  }
+		@include abs.mediaQuery(mob-small) {
+			font-size: 3rem;
+		}
+	}
 }
 
 // CONTENT :: 03 : DIFF
-.content-page-container .nav {
-  .main-header-03 {
-    font-size: 5rem;
-    padding: 0;
+.content-page__container .nav__container {
+	.main-header-03 {
+		font-size: 5rem;
+		padding: 0;
 
-    @include abs.mediaQuery(tab-land) {
-      font-size: 4rem;
-    }
+		@include abs.mediaQuery(tab-land) {
+			font-size: 4rem;
+		}
 
-    @include abs.mediaQuery(tab-port) {
-      font-size: 4.8rem;
-      letter-spacing: 0rem;
-      word-spacing: 0rem;
-    }
+		@include abs.mediaQuery(tab-port) {
+			font-size: 4.8rem;
+			letter-spacing: 0rem;
+			word-spacing: 0rem;
+		}
 
-    @include abs.mediaQuery(mobile) {
-      font-size: 3.7rem;
-    }
+		@include abs.mediaQuery(mobile) {
+			font-size: 3.7rem;
+		}
 
-    @include abs.mediaQuery(mob-small) {
-      font-size: 4rem;
-    }
-  }
+		@include abs.mediaQuery(mob-small) {
+			font-size: 4rem;
+		}
+	}
 
-  .indexes-03 {
-    grid-column: 1 / -1;
+	.indexes-03 {
+		grid-column: 1 / -1;
 
-    a {
-      padding-right: 2rem;
+		a {
+			padding-right: 2rem;
 
-      &:nth-child(4) {
-        margin-left: 0;
-        &:hover {
-          transform: scaleX(0.92);
-        }
+			&:nth-child(4) {
+				margin-left: 0;
+				&:hover {
+					transform: scaleX(0.92);
+				}
 
-        &:hover::after {
-          margin-left: 7rem;
-        }
-      }
-    }
-  }
+				&:hover::after {
+					margin-left: 7rem;
+				}
+			}
+		}
+	}
 }
 
 // CONTENT :: 04 : STASH
-.content-page-container {
-  .nav {
-    .main-header-04 {
-      font-size: 3.6rem;
-      padding: 0;
+.content-page__container {
+	.nav__container {
+		.main-header-04 {
+			font-size: 3.6rem;
+			padding: 0;
 
-      @include abs.mediaQuery(tab-land) {
-        font-size: 2.7rem;
-      }
+			@include abs.mediaQuery(tab-land) {
+				font-size: 2.7rem;
+			}
 
-      @include abs.mediaQuery(tab-port) {
-        font-size: 3.3rem;
-        letter-spacing: 0rem;
-        word-spacing: 0rem;
-      }
+			@include abs.mediaQuery(tab-port) {
+				font-size: 3.3rem;
+				letter-spacing: 0rem;
+				word-spacing: 0rem;
+			}
 
-      @include abs.mediaQuery(mobile) {
-        font-size: 2.7rem;
-      }
+			@include abs.mediaQuery(mobile) {
+				font-size: 2.7rem;
+			}
 
-      @include abs.mediaQuery(mob-small) {
-        font-size: 2.9rem;
-      }
-    }
-  }
+			@include abs.mediaQuery(mob-small) {
+				font-size: 2.9rem;
+			}
+		}
+	}
 }
 
 // CONTENT :: 05 : reset - restore - revert
-.content-page-container {
-  .nav {
-    .main-header-05 {
-      font-size: 4.5rem;
-      padding: 0;
+.content-page__container {
+	.nav__container {
+		.main-header-05 {
+			font-size: 4.5rem;
+			padding: 0;
 
-      @include abs.mediaQuery(tab-land) {
-        font-size: 3rem;
-      }
+			@include abs.mediaQuery(tab-land) {
+				font-size: 3rem;
+			}
 
-      @include abs.mediaQuery(tab-port) {
-        font-size: 4rem;
-        letter-spacing: 0rem;
-        word-spacing: 0rem;
-      }
+			@include abs.mediaQuery(tab-port) {
+				font-size: 4rem;
+				letter-spacing: 0rem;
+				word-spacing: 0rem;
+			}
 
-      @include abs.mediaQuery(mobile) {
-        font-size: 3rem;
-      }
+			@include abs.mediaQuery(mobile) {
+				font-size: 3rem;
+			}
 
-      @include abs.mediaQuery(mob-small) {
-        font-size: 3.5rem;
-      }
-    }
-  }
+			@include abs.mediaQuery(mob-small) {
+				font-size: 3.5rem;
+			}
+		}
+	}
 }

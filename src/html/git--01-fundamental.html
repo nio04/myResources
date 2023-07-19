@@ -12,8 +12,8 @@
   </head>
 
   <body>
-    <article class="content-page-container">
-      <div class="nav">
+    <article class="content-page__container">
+      <div class="nav__container">
         <h1 class="main-header-01">git : basic, staging,
           commit, branch
         </h1>
@@ -21,7 +21,9 @@
           <use xlink:href="../img/sprite.svg#git"></use>
         </svg>
 
-        <div class="section">section</div>
+        <header class="section">
+          <h2>section</h2>
+        </header>
         <nav class="indexes">
           <a href="#content-index-veryBasic">
             <span>
@@ -55,7 +57,7 @@
       </div>
 
       <!-- main home button -->
-      <nav class="sticky-nav">
+      <nav class="sticky-nav__container">
         <a href="index.html">
           <svg>
             <use xlink:href="../img/sprite.svg#home"></use>
@@ -67,7 +69,7 @@
       <main class="line-numbers">
         <section id="content-index-veryBasic">
           <h2>very basic</h2>
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>enable git</h3>
             <pre>
               <code class="language-git">
@@ -76,7 +78,7 @@
             </pre>
           </article>
 
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>status checking git</h3>
             <pre>
               <code class="language-git">
@@ -85,7 +87,7 @@
             </pre>
           </article>
 
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>log checking git</h3></span>
             <pre>
               <code class="language-git">
@@ -98,7 +100,7 @@
         </section>
 
         <!-- adding hover [go to top] button -->
-        <div class="float-btn to-top-btn">
+        <div class="float-btn__container to-top-btn">
           <a href="#">
             <svg>
               <use xlink:href="../img/sprite.svg#to-top"></use>
@@ -107,7 +109,7 @@
           </a>
         </div>
         <!-- adding hover [go to bottom] button -->
-        <div class="float-btn to-bottom-btn">
+        <div class="float-btn__container to-bottom-btn">
           <a href="#bottom-side">
             <svg>
               <use xlink:href="../img/sprite.svg#to-bottom"></use>
@@ -120,7 +122,7 @@
           <header>
             <h2>staging </h2>
           </header>
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>stage a file</h3>
             <pre>
               <code class="language-git">
@@ -129,7 +131,7 @@
             </pre>
           </article>
 
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>stage multiple file</h3>
             <pre>
               <code class="language-git">
@@ -138,7 +140,7 @@
             </pre>
           </article>
 
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>stage all files</h3>
             <pre>
               <code class="language-git">
@@ -147,7 +149,7 @@
             </pre>
           </article>
 
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>stage and commit :
               shortcut</h3>
             <pre>
@@ -155,7 +157,7 @@
                 git commit -am "commit message"
               </code>
             </pre>
-            <details class="code-explain util-cursor-pointer">
+            <details class="content__post util-cursor-pointer">
               stage and commit at the same time! (only works for atleast once commited file)
             </details>
           </article>
@@ -165,7 +167,7 @@
           <header>
             <h2>commit</h2>
           </header>
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>commit file</h3>
             <pre>
               <code class="language-git">
@@ -174,7 +176,7 @@
             </pre>
           </article>
 
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>stage and commit :
               shortcut</h3>
             <pre>
@@ -189,7 +191,7 @@
           <header>
             <h2>branch</h2>
           </header>
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>create branch</h3>
             <pre>
               <code class="language-git">
@@ -198,7 +200,7 @@
             </pre>
           </article>
 
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>view all braches</h3>
             <pre>
               <code class="language-git">
@@ -207,7 +209,7 @@
             </pre>
           </article>
 
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>switching branch</h3>
             <pre>
               <code class="language-git">
@@ -216,7 +218,7 @@
             </pre>
           </article>
 
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>delete branch : not
               forcing</h3>
             <pre>
@@ -224,12 +226,12 @@
                 git branch -d [branch name]
               </code>
             </pre>
-            <details class="code-explain util-cursor-pointer">
+            <details class="content__post util-cursor-pointer">
               if the branch is not merged and get delete command, we will get a warning
             </details>
           </article>
 
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>delete branch :
               forcing</h3>
             <pre>
@@ -237,26 +239,26 @@
                 git branch -D [branch name]
               </code>
             </pre>
-            <details class="code-explain util-cursor-pointer">
+            <details class="content__post util-cursor-pointer">
               ignore branch delete warning
             </details>
           </article>
 
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>rename branch</h3>
             <pre>
               <code class="language-git">
               git branch -m [new branch name]
             </code>
             </pre>
-            <details class="code-explain util-cursor-pointer">
+            <details class="content__post util-cursor-pointer">
               stay on that branch, you are renaming to
             </details>
           </article>
 
-          <article class="content-area">
+          <article class="content-area__container">
             <h3 class="util-center util-caplock">Heads up!!!</h3>
-            <details class="code-explain util-cursor-pointer">
+            <details class="content__post util-cursor-pointer">
               make sure to check! before switching branch, if the base branch have any unstaged
               file that switching to branch doesnt have, then this unstaged file will follw to
               swiching branch. so, make sure to stage files, before switching branch
@@ -268,12 +270,12 @@
           <header>
             <h2>git information</h2>
           </header>
-          <details class="code-explain util-cursor-pointer">
-            <span class="list-wrap">
+          <details class="content__post util-cursor-pointer">
+            <span class="list-wrap__container">
               <svg>
                 <use xlink:href="../img/sprite.svg#dot"></use>
               </svg><span class="list">
-                <span class="code-explain--code">HEAD</span> refers to the current branch, its not
+                <span class="post__code">HEAD</span> refers to the current branch, its not
                 have to be the last commit
               </span>
           </details>
@@ -283,71 +285,71 @@
           <header>
             <h2>normal git flowing</h2>
           </header>
-          <!-- <article class="content-area"> -->
-          <details class="code-explain util-cursor-pointer">
-            <span class="list-wrap">
+          <!-- <article class="content-area__container"> -->
+          <details class="content__post util-cursor-pointer">
+            <span class="list-wrap__container">
               <svg>
                 <use xlink:href="../img/sprite.svg#dot"></use>
               </svg><span class="list">very first, we check, if our working
-                directory have a git repository with <span class="code-explain--code">git
+                directory have a git repository with <span class="post__code">git
                   log</span></span>
             </span>
-            <span class="list-wrap">
+            <span class="list-wrap__container">
               <svg>
                 <use xlink:href="../img/sprite.svg#dot"></use>
               </svg><span class="list">if no git repo is found, then create
-                a repo by <span class="code-explain--code">git init</span></span>
+                a repo by <span class="post__code">git init</span></span>
             </span>
 
-            <span class="list-wrap">
+            <span class="list-wrap__container">
               <svg>
                 <use xlink:href="../img/sprite.svg#dot"></use>
               </svg><span class="list">now there are three stages on git.
                 (1) working directory. (2) staging area. (3) commit</span>
             </span>
 
-            <span class="list-wrap">
+            <span class="list-wrap__container">
               <svg>
                 <use xlink:href="../img/sprite.svg#dot"></use>
               </svg><span class="list">for git to have track on the working
                 directory files, we need to push our files to staging area by <span
-                  class="code-explain--code">git add
+                  class="post__code">git add
                   *fileName*</span></span>
             </span>
-            <span class="list-wrap">
+            <span class="list-wrap__container">
               <svg>
                 <use xlink:href="../img/sprite.svg#dot"></use>
               </svg><span class="list">after staging our working file, we
                 will push this staged file to commit area. so that, git can keep tracks of all
-                commited files. to commit file <span class="code-explain--code">git commit -m
+                commited files. to commit file <span class="post__code">git commit -m
                   "commit message"</span> </span>
             </span>
-            <span class="list-wrap">
+            <span class="list-wrap__container">
               <svg>
                 <use xlink:href="../img/sprite.svg#dot"></use>
               </svg><span class="list">now lets say, we want to have huge
                 changes in our current working file or distributing works between team
-                members. for that we need to have a branch!!! <span class="code-explain--code">git
+                members. for that we need to have a branch!!! <span class="post__code">git
                   branch [branch name]</span></span>
             </span>
-            <span class="list-wrap">
+            <span class="list-wrap__container">
               <svg>
                 <use xlink:href="../img/sprite.svg#dot"></use>
               </svg><span class="list">now lets switch to another branch!
-                to get all the branches from the repo, <span class="code-explain--code">git
-                  branch</span> and to switch another branch <span class="code-explain--code">git
+                to get all the branches from the repo, <span class="post__code">git
+                  branch</span> and to switch another branch <span class="post__code">git
                   switch [another branch name]</span></span>
             </span>
-            <span class="list-wrap">
+            <span class="list-wrap__container">
               <svg>
                 <use xlink:href="../img/sprite.svg#dot"></use>
               </svg><span class="list">after working on new branch, lets
                 say, we want to merge this new branch to our main branch. first switch to our main
-                branch then <span class="code-explain--code">git merge [new branch name with new
+                branch then <span class="post__code">git merge [new branch name with new
                   content]</span> - this process is known as fast-forward merge. to get all the
                 info of merging, <a href="#" class="link">click here</a> </span>
             </span>
-            <span class="list-wrap">
+            <span class="list-wrap__container">
               <svg>
                 <use xlink:href="../img/sprite.svg#dot"></use>
               </svg><span class="list">[[add info about how to push git
@@ -358,7 +360,7 @@
       </main>
 
       <!-- indexes -->
-      <div class="content-page-indexes util-margin-top" id="bottom-side">
+      <div class="content-page-indexes__container util-margin-top" id="bottom-side">
         <header>
           <h2>git indexes</h2>
         </header>

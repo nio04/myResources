@@ -1,7 +1,7 @@
 @use '../abstract/' as abs;
 
-.content-page-container main section .code-explain {
-	.list-wrap {
+.content-page__container {
+	main section .content__post .list-wrap__container {
 		display: block;
 		margin-left: 3rem;
 

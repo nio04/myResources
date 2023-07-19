@@ -10,14 +10,17 @@
     <title>git : reset - restore - revert</title>
   </head>
   <body>
-    <ar class="content-page-container">
-      <div class="nav">
+    <ar class="content-page__container">
+      <div class="nav__container">
         <h1 class="main-header-05">git -- travel - reset - restore - revert
         </h1>
         <svg>
           <use xlink:href="../img/sprite.svg#git"></use>
         </svg>
-        <div class="section">section</div>
+        <header class="section">
+          <h2>section</h2>
+        </header>
+
         <nav class="indexes">
           <a href="#content-index-travel">
             <span>
@@ -43,7 +46,7 @@
       </div>
 
       <!-- main home button -->
-      <nav class="sticky-nav">
+      <nav class="sticky-nav__container">
         <a href="index.html">
           <svg>
             <use xlink:href="../img/sprite.svg#home"></use>
@@ -58,7 +61,7 @@
           <header>
             <h2>stash : operation</h2>
           </header>
-          <article class="content-area">
+          <article class="content-area__container">
             <h3> time travel</h3>
             <pre>
               <code class="language-git match-braces rainbow-braces">
@@ -73,7 +76,7 @@
                 git restore [file name]
               </code>
             </pre>
-            <details class="code-explain util-cursor-pointer util-cursor-pointer">
+            <details class="content__post util-cursor-pointer util-cursor-pointer">
               *AFTER TIME TRAVEL TO PAST, that particular commit hash will be our new HEAD. time
               travel doesn't make loose our works!
               <br>
@@ -88,7 +91,7 @@
           <header>
             <h2>git restore</h2>
           </header>
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>git restore for unstaged
               works</h3>
             <pre>
@@ -100,20 +103,20 @@
                 git checkout -- [file name]
               </code>
             </pre>
-            <details class="code-explain util-cursor-pointer">
+            <details class="content__post util-cursor-pointer">
               unstaged works revert back to the last commit / HEAD
             </details>
           </article>
 
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>git restore to unstaged file</h3>
             <pre>
               <code class="language-git match-braces rainbow-braces">
                 git restore --staged [file name]
               </code>
             </pre>
-            <details class="code-explain util-cursor-pointer">
-              to unsatged a staged file, we provide <span class="code-explain--code">--staged</span>
+            <details class="content__post util-cursor-pointer">
+              to unsatged a staged file, we provide <span class="post__code">--staged</span>
               segement
             </details>
           </article>
@@ -123,14 +126,14 @@
           <header>
             <h2>git reset</h2>
           </header>
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>git reset</h3>
             <pre>
               <code class="language-git match-braces rainbow-braces">
                git reset [any commit hash]
               </code>
             </pre>
-            <details class="code-explain util-cursor-pointer">
+            <details class="content__post util-cursor-pointer">
               keeps the changes but removes the commit history
               <br>
               <br>
@@ -139,14 +142,14 @@
             </details>
           </article>
 
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>git reset --hard</h3>
             <pre>
               <code class="language-git match-braces rainbow-braces">
                git reset --hard [any commit hash]
               </code>
             </pre>
-            <details class="code-explain util-cursor-pointer">
+            <details class="content__post util-cursor-pointer">
               removes the changes and removes the commit log also
             </details>
           </article>
@@ -156,14 +159,14 @@
           <header>
             <h2>git revert</h2>
           </header>
-          <article class="content-area">
+          <article class="content-area__container">
             <h3>git revert</h3>
             <pre>
               <code class="language-git match-braces rainbow-braces">
              git revert [any commit hash]
             </code>
             </pre>
-            <details class="code-explain util-cursor-pointer util-cursor-pointer">
+            <details class="content__post util-cursor-pointer util-cursor-pointer">
               takes the unnecessary changes and make a new commit and remove the unnecessary changes
               from workplace but keep the previous unnecessary commit history/histories available
               <br>
@@ -171,14 +174,14 @@
               note -- it may throw a confliction error while merging. since, we removed some content
               <br>
               <br>
-              know that - <span class="code-explain--code">git revert</span> is notmally used when
+              know that - <span class="post__code">git revert</span> is notmally used when
               collaborating with multiple people
             </details>
           </article>
         </section>
 
         <!-- adding hover [go to top] button -->
-        <div class="float-btn to-top-btn">
+        <div class="float-btn__container to-top-btn">
           <a href="#">
             <svg>
               <use xlink:href="../img/sprite.svg#to-top"></use>
@@ -187,7 +190,7 @@
           </a>
         </div>
         <!-- adding hover [go to bottom] button -->
-        <div class="float-btn to-bottom-btn">
+        <div class="float-btn__container to-bottom-btn">
           <a href="#bottom-side">
             <svg>
               <use xlink:href="../img/sprite.svg#to-bottom"></use>
@@ -198,7 +201,7 @@
       </main>
 
       <!-- indexes -->
-      <div class="content-page-indexes util-margin-top" id="bottom-side">
+      <div class="content-page-indexes__container util-margin-top" id="bottom-side">
         <header>
           <h2>git indexes</h2>
         </header>

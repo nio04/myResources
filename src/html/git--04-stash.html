@@ -12,15 +12,17 @@
   </head>
 
   <body>
-    <div class="content-page-container">
-      <div class="nav">
+    <div class="content-page__container">
+      <div class="nav__container">
         <h1 class="main-header-04">git stash : everything
           about git stash change
         </h1>
         <svg>
           <use xlink:href="../img/sprite.svg#git"></use>
         </svg>
-        <div class="section">section</div>
+        <header class="section">
+          <h2>section</h2>
+        </header>
         <nav class="indexes">
           <a href="#content-index-information">
             <span>
@@ -41,7 +43,7 @@
       </div>
 
       <!-- main home button -->
-      <nav class="sticky-nav">
+      <nav class="sticky-nav__container">
         <a href="index.html">
           <svg>
             <use xlink:href="../img/sprite.svg#home"></use>
@@ -55,10 +57,10 @@
           <header>
             <h2>stash : information</h2>
           </header>
-          <article class="content-area" id="content-index-information">
+          <article class="content-area__container" id="content-index-information">
             <h3>stash changes : important information</h3>
-            <details class="code-explain util-cursor-pointer">
-              <span class="code-explain--code">git stash</span> hide our works from staged &
+            <details class="content__post util-cursor-pointer">
+              <span class="post__code">git stash</span> hide our works from staged &
               unstaged area. so that we
               can switch to <span class="util-bold util-underline">another branch</span>, without
               having to worry about, conflict warning or unstaged works follow to another branch
@@ -66,14 +68,14 @@
               <br>
               when we add works in a branch and if we switch to another branch, before commit. two
               things will happen
-              <span class="list-wrap">
+              <span class="list-wrap__container">
                 <svg>
                   <use xlink:href="../img/sprite.svg#dot"></use>
                 </svg><span class="list">if no conflict was found :: the new works will be follow to
                   the switched
                   branch</span>
               </span>
-              <span class="list-wrap">
+              <span class="list-wrap__container">
                 <svg>
                   <use xlink:href="../img/sprite.svg#dot"></use>
                 </svg><span class="list">if conflict was found :: git wont let me switch
@@ -87,7 +89,7 @@
           <header>
             <h2>stash : operation</h2>
           </header>
-          <article class="content-area" id="content-index-noConflict">
+          <article class="content-area__container" id="content-index-noConflict">
             <h3>no
               conflict</h3>
             <pre>
@@ -98,12 +100,12 @@
                 git stash pop
               </code>
             </pre>
-            <details class="code-explain util-cursor-pointer">
+            <details class="content__post util-cursor-pointer">
               if there were <span class="util-bold util-underline">no conflict</span> and <span
                 class="util-bold util-underline">unstaged</span> works exist.
               then when we <span class="util-underline">switch branch, our unstaged works follow the
-                branch</span>. to prevent this behavior, we <span
-                class="code-explain--code">stash</span> the changes
+                branch</span>. to prevent this behavior, we <span class="post__code">stash</span>
+              the changes
               <br>
               <br>
               note :: the following works on branch is not permanent. when we commit the works from
@@ -112,7 +114,7 @@
             </details>
           </article>
 
-          <article class="content-area" id="content-index-conflict">
+          <article class="content-area__container" id="content-index-conflict">
             <h3>conflict</h3>
             <pre>
               <code class="language-git match-braces rainbow-braces">
@@ -122,7 +124,7 @@
                 git stash pop
               </code>
             </pre>
-            <details class="code-explain util-cursor-pointer">
+            <details class="content__post util-cursor-pointer">
               we don't want to commit our current works, but wanting to switch branch. and if there
               is conflict warning, then we stash the changes, to bypass the warning
             </details>
@@ -130,7 +132,7 @@
         </section>
 
         <!-- adding hover [go to top] button -->
-        <div class="float-btn to-top-btn">
+        <div class="float-btn__container to-top-btn">
           <a href="#">
             <svg>
               <use xlink:href="../img/sprite.svg#to-top"></use>
@@ -139,7 +141,7 @@
           </a>
         </div>
         <!-- adding hover [go to bottom] button -->
-        <div class="float-btn to-bottom-btn">
+        <div class="float-btn__container to-bottom-btn">
           <a href="#bottom-side">
             <svg>
               <use xlink:href="../img/sprite.svg#to-bottom"></use>
@@ -150,7 +152,7 @@
       </main>
 
       <!-- indexes -->
-      <div class="content-page-indexes util-margin-top" id="bottom-side">
+      <div class="content-page-indexes__container util-margin-top" id="bottom-side">
         <header>
           <h2>git indexes</h2>
         </header>
@@ -174,8 +176,7 @@
             </li>
             <li class="item">
               <a href="git--05-resetRestore.html" class="item-link">git -- time travel - reset -
-                restore -
-                revert</a>
+                restore - revert</a>
             </li>
             <li class="item">
               <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
