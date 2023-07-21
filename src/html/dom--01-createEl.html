@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../sass/pages/dom.scss">
+    <link rel="stylesheet" href="../sass/theme/prism-light.css">
+    <script src="../js/prism.js" defer></script>
+    <title>dom : create & show</title>
+  </head>
+  <body>
+    <div class="content-page__container">
+      <div class="nav__container">
+        <h1 class="main-header-01">create html and insert and show</h1>
+        <svg>
+          <use xlink:href="../img/sprite.svg#grid"></use>
+        </svg>
+
+        <header class="section">
+          <h2>section</h2>
+        </header>
+        <nav class="indexes">
+          <a href="#content-index-targetParent">
+            <span>
+              target parent
+            </span>
+          </a>
+          <a href="#content-index-createEl">
+            <span>
+              cooking incgredients for element
+            </span>
+          </a>
+          <a href="#content-index-insertShow">
+            <span>
+              insert and show it in document
+            </span>
+          </a>
+        </nav>
+      </div>
+
+      <!-- main home button -->
+      <nav class="sticky-nav__container">
+        <a href="index.html">
+          <svg>
+            <use xlink:href="../img/sprite.svg#home"></use>
+          </svg>
+          <span>main home</span>
+        </a>
+      </nav>
+
+      <!-- main post -->
+      <main class="line-numbers">
+        <!-- adding hover [go to top] button -->
+        <div class="float-btn__container to-top-btn">
+          <a href="#">
+            <svg>
+              <use xlink:href="../img/sprite.svg#to-top"></use>
+            </svg>
+            <span>top</span>
+          </a>
+        </div>
+        <!-- adding hover [go to bottom] button -->
+        <div class="float-btn__container to-bottom-btn">
+          <a href="#bottom-side">
+            <svg>
+              <use xlink:href="../img/sprite.svg#to-bottom"></use>
+            </svg>
+            <span>bottom</span>
+          </a>
+        </div>
+
+        <section id="content-index-targetParent">
+          <header>
+            <h2>target parent element</h2>
+          </header>
+          <article class="content-area__container">
+            <h3>target parent</h3>
+            <pre>
+              <code class="util-no-cap language-js match-braces rainbow-braces">
+               const parent = document.querySelector("parentElementClassName")
+              </code>
+            </pre>
+            <details class="content__post util-cursor-pointer">
+              target any element for inserting javscript - html code
+            </details>
+            </artcle>
+        </section>
+
+        <section id="content-index-createEl">
+          <header>
+            <h2>create ingredients for new element</h2>
+          </header>
+          <article class="content-area__container">
+            <h3>for new html element</h3>
+            <details class="content__post util-cursor-pointer">
+              <span class="list-wrap__container">
+                <svg>
+                  <use xlink:href="../img/sprite.svg#dot"></use>
+                </svg><span class="list">now create a container for element</span>
+              </span>
+              <pre>
+                <code class="util-no-cap language-js match-braces rainbow-braces">
+                  const child = document.createElement("div")
+                </code>
+              </pre>
+              <br>
+              <span class="list-wrap__container">
+                <svg>
+                  <use xlink:href="../img/sprite.svg#dot"></use>
+                </svg><span class="list">add one or multiple className to the element</span>
+              </span>
+              <pre>
+                <code class="util-no-cap language-js match-braces rainbow-braces">
+                  child.classList.add("className1", "className2")
+                </code>
+              </pre>
+              <br>
+              <span class="list-wrap__container">
+                <svg>
+                  <use xlink:href="../img/sprite.svg#dot"></use>
+                </svg><span class="list">add text content to the element</span>
+              </span>
+              <pre>
+                <code class="util-no-cap language-js match-braces rainbow-braces">
+                  child.textContent = "our message";
+                </code>
+              </pre>
+              <br>
+              <span class="list-wrap__container">
+                <svg>
+                  <use xlink:href="../img/sprite.svg#dot"></use>
+                </svg><span class="list">[alternatively] add html content to the element</span>
+              </span>
+              <pre>
+                <code class="util-no-cap language-js match-braces rainbow-braces">
+                  child.innerHTML = `hardcode full html codes`
+                </code>
+              </pre>
+              <br>
+            </details>
+            </artcle>
+        </section>
+
+        <section id="content-index-insertShow">
+          <header>
+            <h2>add element and show </h2>
+          </header>
+          <article class="content-area__container">
+            <h3>adding element and show it in document</h3>
+
+            <details class="content__post util-cursor-pointer">
+              <span class="list-wrap__container">
+                <svg>
+                  <use xlink:href="../img/sprite.svg#dot"></use>
+                </svg><span class="list">add the child element as a last child</span>
+              </span>
+              <pre>
+                <code class="util-no-cap language-js match-braces rainbow-braces">
+                  parent.append(child)
+                </code>
+              </pre>
+              <span class="list-wrap__container">
+                <svg>
+                  <use xlink:href="../img/sprite.svg#dot"></use>
+                </svg><span class="list">add the child element as a first child</span>
+              </span>
+              <pre>
+                <code class="util-no-cap language-js match-braces rainbow-braces">
+                  parent.prepend(child)
+                </code>
+              </pre>
+              <span class="list-wrap__container">
+                <svg>
+                  <use xlink:href="../img/sprite.svg#dot"></use>
+                </svg><span class="list">just before parent as sibling position</span>
+              </span>
+              <pre>
+                <code class="util-no-cap language-js match-braces rainbow-braces">
+                  parent.before(child)
+                </code>
+              </pre>
+              <span class="list-wrap__container">
+                <svg>
+                  <use xlink:href="../img/sprite.svg#dot"></use>
+                </svg><span class="list">just after parent as sibling position</span>
+              </span>
+              <pre>
+                <code class="util-no-cap language-js match-braces rainbow-braces">
+                  parent.after(child)
+                </code>
+              </pre>
+            </details>
+            </artcle>
+        </section>
+      </main>
+
+      <!-- all the other DOM posts -->
+      <div class="content-page-indexes__container util-margin-top" id="bottom-side">
+        <header>
+          <h2>dom indexes</h2>
+        </header>
+        <nav>
+          <ul>
+            <li class="item link-active">
+              <a href="dom--01-createEl.html" class="item-link">create html element</a>
+            </li>
+            <li class="item">
+              <a href="dom--02-delete.html" class="item-link">delete html element</a>
+            </li>
+            <li class="item">
+              <a href="dom--03-attribute.html" class="item-link">attribute read from html</a>
+            </li>
+            <li class="item">
+              <a href="dom--04-setCSS.html" class="item-link">css style set</a>
+            </li>
+            <li class="item">
+              <a href="dom--05-readCSS.html" class="item-link">css style read and set</a>
+            </li>
+            <li class="item">
+              <a href="dom--06-cssClass.html" class="item-link">css class manipulation</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </body>
+
+</html>

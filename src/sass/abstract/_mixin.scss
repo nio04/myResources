@@ -1,6 +1,13 @@
 @use 'var';
 @use 'bp';
 
+@mixin grid-area-mix($row-start: 2, $col-start: 3, $row-end: 2, $col-end: 3) {
+	grid-row-start: $row-start;
+	grid-row-end: $row-end;
+	grid-column-start: $col-start;
+	grid-column-end: $col-end;
+}
+
 @mixin page-indexes-design() {
 	ul {
 		padding: 0 2rem;

@@ -1,0 +1,58 @@
+@use '../layout/' as layout;
+@use '../abstract/' as abs;
+
+.content-page__container {
+	.nav__container {
+		.main-header-01 {
+			font-size: 7.8rem;
+			letter-spacing: -1;
+
+			@include abs.mediaQuery(tab-land) {
+				font-size: 6.1rem;
+				letter-spacing: 1;
+			}
+			@include abs.mediaQuery(tab-port) {
+				font-size: 4.4rem;
+				letter-spacing: 1;
+			}
+			@include abs.mediaQuery(mobile) {
+				font-size: 3.7rem;
+				letter-spacing: 0;
+			}
+			@include abs.mediaQuery(mob-small) {
+				font-size: 4rem;
+				letter-spacing: 0;
+			}
+		}
+	}
+}
+
+.content-page__container {
+	.nav__container {
+		.main-header-02 {
+			@include abs.grid-area-mix(3, 1, 4, 2);
+			font-size: 7.8rem;
+			letter-spacing: -1;
+
+			@include abs.mediaQuery(tab-land) {
+				font-size: 6.1rem;
+				letter-spacing: 1;
+			}
+			@include abs.mediaQuery(tab-port) {
+				font-size: 4.4rem;
+				letter-spacing: 1;
+			}
+			@include abs.mediaQuery(mobile) {
+				font-size: 3.7rem;
+				letter-spacing: 0;
+			}
+			@include abs.mediaQuery(mob-small) {
+				font-size: 4rem;
+				letter-spacing: 0;
+			}
+		}
+		.main-header-svg {
+			@include abs.grid-area-mix(3, 2, 4, 3);
+		}
+	}
+}

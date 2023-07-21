@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../sass/pages/dom.scss">
+    <link rel="stylesheet" href="../sass/theme/prism-light.css">
+    <script src="../js/prism.js" defer></script>
+    <title>dom : delete element</title>
+  </head>
+  <body>
+    <div class="content-page__container">
+      <div class=" nav__container ">
+        <h1 class="main-header-02 util-align-self-start-grid">delete element</h1>
+        <svg class="util-align-self-start-grid main-header-svg">
+          <use xlink:href="../img/sprite.svg#grid"></use>
+        </svg>
+      </div>
+
+      <!-- main home button -->
+      <nav class="sticky-nav__container">
+        <a href="index.html">
+          <svg>
+            <use xlink:href="../img/sprite.svg#home"></use>
+          </svg>
+          <span>main home</span>
+        </a>
+      </nav>
+
+      <!-- main post -->
+      <main class="line-numbers">
+        <!-- adding hover [go to top] button -->
+        <div class="float-btn__container to-top-btn">
+          <a href="#">
+            <svg>
+              <use xlink:href="../img/sprite.svg#to-top"></use>
+            </svg>
+            <span>top</span>
+          </a>
+        </div>
+        <!-- adding hover [go to bottom] button -->
+        <div class="float-btn__container to-bottom-btn">
+          <a href="#bottom-side">
+            <svg>
+              <use xlink:href="../img/sprite.svg#to-bottom"></use>
+            </svg>
+            <span>bottom</span>
+          </a>
+        </div>
+        <section>
+          <header>
+            <h2>delete element</h2>
+          </header>
+          <article class="content-area__container">
+            <!-- <h3>target parent</h3> -->
+            <pre>
+              <code class="util-no-cap language-js match-braces rainbow-braces">
+              const selectForDelete = document.querySelector("element");
+              selectForDelete.remove();
+            </code>
+            </pre>
+            <details class="content__post util-cursor-pointer">
+              target the element and remove it from the dom tree
+            </details>
+            </artcle>
+        </section>
+      </main>
+
+      <!-- all the other DOM posts -->
+      <div class="content-page-indexes__container util-margin-top" id="bottom-side">
+        <header>
+          <h2>dom indexes</h2>
+        </header>
+        <nav>
+          <ul>
+            <li class="item">
+              <a href="dom--01-createEl.html" class="item-link">create html element</a>
+            </li>
+            <li class="item link-active">
+              <a href="dom--02-delete.html" class="item-link">delete html element</a>
+            </li>
+            <li class="item">
+              <a href="dom--03-attribute.html" class="item-link">attribute read from html</a>
+            </li>
+            <li class="item">
+              <a href="dom--04-setCSS.html" class="item-link">css style set</a>
+            </li>
+            <li class="item">
+              <a href="dom--05-readCSS.html" class="item-link">css style read and set</a>
+            </li>
+            <li class="item">
+              <a href="dom--06-cssClass.html" class="item-link">css class manipulation</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </body>
+
+</html>
