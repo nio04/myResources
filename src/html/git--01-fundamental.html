@@ -271,13 +271,11 @@
             <h2>git information</h2>
           </header>
           <details class="content__post util-cursor-pointer">
-            <span class="list-wrap__container">
-              <svg>
-                <use xlink:href="../img/sprite.svg#dot"></use>
-              </svg><span class="list">
-                <span class="post__code">HEAD</span> refers to the current branch, its not
-                have to be the last commit
-              </span>
+            <ul class="list-wrap__container">
+              <li class="list"><span class="post__code">HEAD</span> refers to the current branch,
+                its not
+                have to be the last commit</li>
+            </ul>
           </details>
         </section>
 
@@ -285,76 +283,37 @@
           <header>
             <h2>normal git flowing</h2>
           </header>
-          <!-- <article class="content-area__container"> -->
           <details class="content__post util-cursor-pointer">
-            <span class="list-wrap__container">
-              <svg>
-                <use xlink:href="../img/sprite.svg#dot"></use>
-              </svg><span class="list">very first, we check, if our working
-                directory have a git repository with <span class="post__code">git
-                  log</span></span>
-            </span>
-            <span class="list-wrap__container">
-              <svg>
-                <use xlink:href="../img/sprite.svg#dot"></use>
-              </svg><span class="list">if no git repo is found, then create
-                a repo by <span class="post__code">git init</span></span>
-            </span>
-
-            <span class="list-wrap__container">
-              <svg>
-                <use xlink:href="../img/sprite.svg#dot"></use>
-              </svg><span class="list">now there are three stages on git.
-                (1) working directory. (2) staging area. (3) commit</span>
-            </span>
-
-            <span class="list-wrap__container">
-              <svg>
-                <use xlink:href="../img/sprite.svg#dot"></use>
-              </svg><span class="list">for git to have track on the working
+            <ul class="list-wrap__container">
+              <li class="list">very first, we check, if our working directory have a git repository
+                with <span class="post__code">git log</span></li>
+              <li class="list">if no git repo is found, then create a repo by <span
+                  class="post__code">git init</span></li>
+              <li class="list">now there are three stages on git.
+                (1) working directory. (2) staging area. (3) commit</li>
+              <li class="list">for git to have track on the working
                 directory files, we need to push our files to staging area by <span
-                  class="post__code">git add
-                  *fileName*</span></span>
-            </span>
-            <span class="list-wrap__container">
-              <svg>
-                <use xlink:href="../img/sprite.svg#dot"></use>
-              </svg><span class="list">after staging our working file, we
+                  class="post__code">git add 'fileName'</span></li>
+              <li class="list">after staging our working file, we
                 will push this staged file to commit area. so that, git can keep tracks of all
                 commited files. to commit file <span class="post__code">git commit -m
-                  "commit message"</span> </span>
-            </span>
-            <span class="list-wrap__container">
-              <svg>
-                <use xlink:href="../img/sprite.svg#dot"></use>
-              </svg><span class="list">now lets say, we want to have huge
+                  "commit message"</span></li>
+              <li class="list">now lets say, we want to have huge
                 changes in our current working file or distributing works between team
                 members. for that we need to have a branch!!! <span class="post__code">git
-                  branch [branch name]</span></span>
-            </span>
-            <span class="list-wrap__container">
-              <svg>
-                <use xlink:href="../img/sprite.svg#dot"></use>
-              </svg><span class="list">now lets switch to another branch!
+                  branch [branch name]</span></li>
+              <li class="list">now lets switch to another branch!
                 to get all the branches from the repo, <span class="post__code">git
                   branch</span> and to switch another branch <span class="post__code">git
-                  switch [another branch name]</span></span>
-            </span>
-            <span class="list-wrap__container">
-              <svg>
-                <use xlink:href="../img/sprite.svg#dot"></use>
-              </svg><span class="list">after working on new branch, lets
+                  switch [another branch name]</span></li>
+              <li class="list">after working on new branch, lets
                 say, we want to merge this new branch to our main branch. first switch to our main
                 branch then <span class="post__code">git merge [new branch name with new
                   content]</span> - this process is known as fast-forward merge. to get all the
-                info of merging, <a href="#" class="link">click here</a> </span>
-            </span>
-            <span class="list-wrap__container">
-              <svg>
-                <use xlink:href="../img/sprite.svg#dot"></use>
-              </svg><span class="list">[[add info about how to push git
-                repo to github repo]]</span>
-            </span>
+                info of merging, <a href="#" class="link">click here</a></li>
+              <li class="list">[[add info about how to push git
+                repo to github repo]]</li>
+            </ul>
           </details>
         </section>
       </main>

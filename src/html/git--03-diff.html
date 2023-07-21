@@ -75,7 +75,7 @@
           <article class="content-area__container" id="content-index-01">
             <h3>diff : important information</h3>
             <details class="content__post util-cursor-pointer">
-              by <span class="post__code">git diff</span> command, we can get various
+              by <span class="post__code">git diff</span> command, we can see various
               types of differences from our working file from different timeline.
               <br>
               <br>
@@ -152,44 +152,39 @@
               diff for branches</h3>
             <pre>
               <code class="language-git">
-                git diff [first branch name]..[second branch name]
+                git diff [first branch name..second branch name]
               </code>
             </pre>
             <details class="content__post util-cursor-pointer">
-              ORDER MATTERS!!! [first branch] changes will have (-) sign && [second branch]
-              changes fill will have (+) sign.
+              ORDER MATTERS!!! [only works for commited changes]
+              <br>
+              if conflict exist, [first branch] content will have (-) sign && [second branch]
+              changes will have (+) sign
               <br>
               <br>
-              <span class="list-wrap__container">
-                <svg>
-                  <use xlink:href="../img/sprite.svg#dot"></use>
-                </svg>
-                <span class="list">
-                  [first branch] (+) means, from where to look up for changes
-                </span>
-              </span>
-              <span class="list-wrap__container">
-                <svg>
-                  <use xlink:href="../img/sprite.svg#dot"></use>
-                </svg>
-                <span class="list">
-                  [second branch] (-) is kinda like, where we test the difference
-                </span>
-              </span>
+              if no conflict exist, content from <span class="post__code">second branch</span> which
+              does not exist in <span class="post__code">first branch</span> will have (+) sign.
+              meaning, we dont have these (+) sign contents
             </details>
           </article>
 
           <article class="content-area__container" id="content-index-06">
-            <h3>diff
-              for commit</h3>
+            <h3>diff for commit hash</h3>
             <pre>
               <code class="language-git">
-              git diff [first commit hash]..[second commit hash]
+              git diff [first commit hash..second commit hash]
             </code>
             </pre>
-            <details class="content__post util-cursor-pointer util-split-bottom">
+            <details class="content__post util-cursor-pointer">
               ORDER MATTERS!!! [first commit] will be like a book, where we will compare our
-              changes to another commit
+              changes to [second commit hash]
+              <span class="util-split-bottom-low"></span>
+              <span class="util-margin-bottom"></span>
+              if some changes does not exist in [second commit] comparing from [first commit] they
+              will be shown as (-) sign
+              <span class="util-margin-bottom"></span>
+              if some content doe not exist in [first commit] comparing from [second commit] they
+              will be shown as (+) sign
             </details>
           </article>
         </section>

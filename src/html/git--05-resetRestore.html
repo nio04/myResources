@@ -81,8 +81,9 @@
               travel doesn't make loose our works!
               <br>
               <br>
-              tips : travel back to a specific commits. create a new branch from there :) now you
-              can eliminate unnecessary works from your working branch
+              tips : travel back to a specific commit. create a new branch from there. now you
+              can eliminate unnecessary/error works from your working branch. or merge changes from
+              new branch to our working branch
             </details>
           </article>
         </section>
@@ -92,8 +93,7 @@
             <h2>git restore</h2>
           </header>
           <article class="content-area__container">
-            <h3>git restore for unstaged
-              works</h3>
+            <h3>unsatged :: last commit</h3>
             <pre>
               <code class="language-git match-braces rainbow-braces">
                 git restore [file name]
@@ -104,20 +104,19 @@
               </code>
             </pre>
             <details class="content__post util-cursor-pointer">
-              unstaged works revert back to the last commit / HEAD
+              unstaged works revert back to the last commit
             </details>
           </article>
 
           <article class="content-area__container">
-            <h3>git restore to unstaged file</h3>
+            <h3>staged :: unstaged</h3>
             <pre>
               <code class="language-git match-braces rainbow-braces">
                 git restore --staged [file name]
               </code>
             </pre>
             <details class="content__post util-cursor-pointer">
-              to unsatged a staged file, we provide <span class="post__code">--staged</span>
-              segement
+              to unsatged a staged file
             </details>
           </article>
         </section>
@@ -134,11 +133,18 @@
               </code>
             </pre>
             <details class="content__post util-cursor-pointer">
-              keeps the changes but removes the commit history
-              <br>
-              <br>
-              tip -- now, you can move the unnecessary changes to another backup branch, if you need
-              them
+              keeps the changes in working directory but removes all the commit histories from the
+              latest commit till the specific commit hash!
+              <span class="util-margin-bottom-small"></span>
+              <span class="util-bold">NO GOING BACK!!!</span>
+              <span class="util-margin-bottom-small"></span>
+              tip -- only use this delete some commit history from log
+              <span class="util-split-bottom-low"></span>
+              tip -- if you dont want to keep deleting commits from the latest commit. then first,
+              <span class="post__code">git checkout [commit hash]</span> to any particular commit
+              (then that commit will be our new -head). second, then do normal or --hard <span
+                class="post__code">reset</span> then, only few commits from the middle will be
+              removed
             </details>
           </article>
 
@@ -150,7 +156,14 @@
               </code>
             </pre>
             <details class="content__post util-cursor-pointer">
-              removes the changes and removes the commit log also
+              removes the changes from working directory and removes the commit log
+              <br>
+              <br>
+              tip -- if you dont want to keep deleting commits from the latest commit. then first,
+              <span class="post__code">git checkout [commit hash]</span> to any particular commit
+              (then that commit will be our new -head). second, then do normal or --hard <span
+                class="post__code">reset</span> then, only few commits from the middle will be
+              removed
             </details>
           </article>
         </section>
@@ -167,43 +180,17 @@
             </code>
             </pre>
             <details class="content__post util-cursor-pointer util-cursor-pointer">
-              <span class="list-wrap__container">
-                <svg>
-                  <use xlink:href="../img/sprite.svg#dot"></use>
-                </svg><span class="list">
-                  takes the unnecessary changes by <span class="post__code">commit hash</span>
-                </span>
-              </span>
-
-              <span class="list-wrap__container">
-                <svg>
-                  <use xlink:href="../img/sprite.svg#dot"></use>
-                </svg><span class="list">
-                  make a new auto commit
-                </span>
-              </span>
-              <span class="list-wrap__container">
-                <svg>
-                  <use xlink:href="../img/sprite.svg#dot"></use>
-                </svg><span class="list">
-                  remove the unnecessary changes from workplace
-                </span>
-              </span>
-              <span class="list-wrap__container">
-                <svg>
-                  <use xlink:href="../img/sprite.svg#dot"></use>
-                </svg><span class="list">
-                  keep the previous unnecessary commit history/histories available
-                </span>
-              </span>
-              <br>
-              note -- it may throw a confliction error while merging. since, we removed
-              some
-              content
-              <br>
-              <br>
-              know that - <span class="post__code">git revert</span> is notmally used
-              when
+              <ul class="list-wrap__container">
+                <li class="list">takes the unnecessary changes by <span class="post__code">commit
+                    hash</span>
+                </li>
+                <li class="list">make a new auto commit</li>
+                <li class="list">remove the unnecessary changes from workplace</li>
+                <li class="list">keep the previous unnecessary/unwanted commit history/histories
+                  available</li>
+              </ul>
+              <span class="util-split-bottom-low"></span>
+              know that - <span class="post__code">git revert</span> is notmally used when
               collaborating with multiple people
             </details>
           </article>
