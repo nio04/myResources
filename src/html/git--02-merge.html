@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="../sass/pages/git.scss">
     <link rel="stylesheet" href="../sass/theme/prism-light.css">
     <script src="../js/prism.js" defer></script>
+    <script src="../js/app.js" defer></script>
     <title>git : merge</title>
   </head>
 
   <body>
     <div class="content-page__container">
-      <div class="nav__container">
+      <header class="nav__container">
         <h1 class="main-header-02">git merge :
           fast-forward, non:fast-forward
         </h1>
@@ -40,7 +41,7 @@
             </span>
           </a>
         </nav>
-      </div>
+      </header>
 
       <!-- main home button -->
       <nav class="sticky-nav__container">
@@ -53,34 +54,7 @@
       </nav>
 
       <!-- main story begins!!! -->
-      <main class="line-numbers">
-        <section id="content-index-veryBasic">
-          <header>
-            <h2>MERGING : fast-forward</h2>
-          </header>
-          <article class="content-area__container">
-            <h3>fast-forward merge</h3> </span>
-            <pre>
-              <code class="language-git">
-                git switch master
-                git merge [branch name]
-              </code>
-            </pre>
-            <details class="content__post util-cursor-pointer">
-              <ul class="list-wrap__container">
-                <li class="lists">first, we switched to the branch, we want to merged into</li>
-                <li class="list">then we give the branch name <span class="post__code">git merge
-                    [branch name]</span> (other brach, which works we want to merge)</li>
-              </ul>
-
-              this <span class="post__code">fast-forward</span> merge term is used, when
-              we want to merge our <span class="post__code">newly branch works file</span> -
-              to our base branch & the base branch <span class="post__code">does not have
-                any new commit</span> from the moment, newly branch were created
-            </details>
-          </article>
-        </section>
-
+      <main class="line-numbers util-margin-top-high util-margin-ottom-high">
         <!-- adding hover [go to top] button -->
         <div class="float-btn__container to-top-btn">
           <a href="#">
@@ -100,18 +74,51 @@
           </a>
         </div>
 
+        <section id="content-index-veryBasic" class="util-margin-bottom-high">
+          <header>
+            <h2>MERGING : fast-forward</h2>
+          </header>
+          <article class="content-area__container">
+            <h3>fast-forward merge</h3>
+            <figure>
+              <pre>
+                <code class="language-git">
+                git switch master
+                git merge [branch name]
+              </code>
+              </pre>
+            </figure>
+
+            <details class="content__post util-cursor-pointer">
+              <ul class="list-wrap__container">
+                <li class="lists">first, we switched to the branch, we want to merged into</li>
+                <li class="list">then we give the branch name <span class="post__code">git merge
+                    [branch name]</span> (other brach, which works we want to merge)</li>
+              </ul>
+
+              this <span class="post__code">fast-forward</span> merge term is used, when
+              we want to merge our <span class="post__code">newly branch works file</span> -
+              to our base branch & the base branch <span class="post__code">does not have
+                any new commit</span> from the moment, newly branch were created
+            </details>
+          </article>
+        </section>
+
         <section id="content-index-nonFastForwardNonConflict">
           <header>
             <h2>MERGING : non - fast-forward</h2>
           </header>
           <article class="content-area__container">
             <h3 class=" util-center">non : fast-forward merge :: [no-conflict]</h3>
-            <pre>
-              <code class="language-git">
+            <figure>
+              <pre>
+                <code class="language-git">
                 git switch master
                 git merge [branch name]
               </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer">
               <ul class="list-wrap__container">
                 <li class="list">first, we switched to the branch, we want to merged into</li>
@@ -127,70 +134,22 @@
                 fast-forward</span> merging operation
             </details>
           </article>
-        </section>
-
-        <section id="content-index-nonFastForwardConflict">
           <article class="content-area__container split-top">
             <h3 class=" util-center">non : fast-forward merge :: [conflict]</h3>
-            <pre>
-              <code class="language-git">
-                  git switch master
-                  git merge [branch name]
-                  //get an error
-                  //manually fix it
-                  //stage
-                  //commit
-                </code>
-            </pre>
+            <figure>
+              <pre>
+                <code class="language-git">
+                git switch master
+                git merge [branch name]
+                //get an error
+                //manually fix it
+                //stage
+                //commit
+              </code>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer">
-              <!-- <span class="list-wrap__container">
-                <svg>
-                  <use xlink:href="../img/sprite.svg#dot"></use>
-                </svg>
-                <span class="list">
-
-                </span>
-              </span>
-              <span class="list-wrap__container">
-                <svg>
-                  <use xlink:href="../img/sprite.svg#dot"></use>
-                </svg>
-                <span class="list">
-
-                </span>
-              </span>
-              <span class="list-wrap__container">
-                <svg>
-                  <use xlink:href="../img/sprite.svg#dot"></use>
-                </svg>
-                <span class="list">
-
-                </span>
-              </span>
-              <span class="list-wrap__container">
-                <svg>
-                  <use xlink:href="../img/sprite.svg#dot"></use>
-                </svg>
-                <span class="list">
-
-                </span>
-              </span>
-              <span class="list-wrap__container">
-                <svg>
-                  <use xlink:href="../img/sprite.svg#dot"></use>
-                </svg>
-                <span class="list">
-
-                </span>
-              </span>
-              <span class="list-wrap__container">
-                <svg>
-                  <use xlink:href="../img/sprite.svg#dot"></use>
-                </svg>
-                <span class="list">
-
-                </span>
-              </span> -->
               <ul class="list-wrap__container">
                 <li class="list">first, we switched to the branch, we want to merged into</li>
                 <li class="list">we give the <span class="post__code">merge</span> command</li>
@@ -216,7 +175,7 @@
       </main>
 
       <!-- indexes -->
-      <div class="content-page-indexes__container util-margin-top" id="bottom-side">
+      <footer class="content-page-indexes__container util-margin-top-high" id="bottom-side">
         <header>
           <h2>git indexes</h2>
         </header>
@@ -259,7 +218,7 @@
             </li>
           </ul>
         </nav>
-      </div>
+      </footer>
     </div>
   </body>
 

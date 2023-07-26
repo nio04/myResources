@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="../sass/pages/git.scss">
     <link rel="stylesheet" href="../sass/theme/prism-light.css">
     <script src="../js/prism.js" defer></script>
+    <script src="../js/app.js" defer></script>
     <title>git : reset - restore - revert</title>
   </head>
   <body>
     <div class="content-page__container">
-      <div class="nav__container">
+      <header class="nav__container">
         <h1 class="main-header-05">git -- travel - reset - restore - revert
         </h1>
         <svg>
@@ -43,7 +44,7 @@
             </span>
           </a>
         </nav>
-      </div>
+      </header>
 
       <!-- main home button -->
       <nav class="sticky-nav__container">
@@ -56,146 +57,7 @@
       </nav>
 
 
-      <main class="line-numbers">
-        <section id="content-index-travel">
-          <header>
-            <h2>stash : operation</h2>
-          </header>
-          <article class="content-area__container">
-            <h3> time travel</h3>
-            <pre>
-              <code class="language-git match-braces rainbow-braces">
-                /////////travel back to PAST/////////
-                git checkout [particular commit hash]
-                or
-                git restore --source [any commit hash] [file name]
-
-                /////////travel back to preset/////////
-                git switch [current branch name]
-                or
-                git restore [file name]
-              </code>
-            </pre>
-            <details class="content__post util-cursor-pointer util-cursor-pointer">
-              *AFTER TIME TRAVEL TO PAST, that particular commit hash will be our new HEAD. time
-              travel doesn't make loose our works!
-              <br>
-              <br>
-              tips : travel back to a specific commit. create a new branch from there. now you
-              can eliminate unnecessary/error works from your working branch. or merge changes from
-              new branch to our working branch
-            </details>
-          </article>
-        </section>
-
-        <section id="content-index-restore">
-          <header>
-            <h2>git restore</h2>
-          </header>
-          <article class="content-area__container">
-            <h3>unsatged :: last commit</h3>
-            <pre>
-              <code class="language-git match-braces rainbow-braces">
-                git restore [file name]
-                or
-                git checkout HEAD [file name]
-                or
-                git checkout -- [file name]
-              </code>
-            </pre>
-            <details class="content__post util-cursor-pointer">
-              unstaged works revert back to the last commit
-            </details>
-          </article>
-
-          <article class="content-area__container">
-            <h3>staged :: unstaged</h3>
-            <pre>
-              <code class="language-git match-braces rainbow-braces">
-                git restore --staged [file name]
-              </code>
-            </pre>
-            <details class="content__post util-cursor-pointer">
-              to unsatged a staged file
-            </details>
-          </article>
-        </section>
-
-        <section id="content-index-reset">
-          <header>
-            <h2>git reset</h2>
-          </header>
-          <article class="content-area__container">
-            <h3>git reset</h3>
-            <pre>
-              <code class="language-git match-braces rainbow-braces">
-               git reset [any commit hash]
-              </code>
-            </pre>
-            <details class="content__post util-cursor-pointer">
-              keeps the changes in working directory but removes all the commit histories from the
-              latest commit till the specific commit hash!
-              <span class="util-margin-bottom-small"></span>
-              <span class="util-bold">NO GOING BACK!!!</span>
-              <span class="util-margin-bottom-small"></span>
-              tip -- only use this delete some commit history from log
-              <span class="util-split-bottom-low"></span>
-              tip -- if you dont want to keep deleting commits from the latest commit. then first,
-              <span class="post__code">git checkout [commit hash]</span> to any particular commit
-              (then that commit will be our new -head). second, then do normal or --hard <span
-                class="post__code">reset</span> then, only few commits from the middle will be
-              removed
-            </details>
-          </article>
-
-          <article class="content-area__container">
-            <h3>git reset --hard</h3>
-            <pre>
-              <code class="language-git match-braces rainbow-braces">
-               git reset --hard [any commit hash]
-              </code>
-            </pre>
-            <details class="content__post util-cursor-pointer">
-              removes the changes from working directory and removes the commit log
-              <br>
-              <br>
-              tip -- if you dont want to keep deleting commits from the latest commit. then first,
-              <span class="post__code">git checkout [commit hash]</span> to any particular commit
-              (then that commit will be our new -head). second, then do normal or --hard <span
-                class="post__code">reset</span> then, only few commits from the middle will be
-              removed
-            </details>
-          </article>
-        </section>
-
-        <section id="content-index-revert">
-          <header>
-            <h2>git revert</h2>
-          </header>
-          <article class="content-area__container">
-            <h3>git revert</h3>
-            <pre>
-              <code class="language-git match-braces rainbow-braces">
-             git revert [any commit hash]
-            </code>
-            </pre>
-            <details class="content__post util-cursor-pointer util-cursor-pointer">
-              <ul class="list-wrap__container">
-                <li class="list">takes the unnecessary changes by <span class="post__code">commit
-                    hash</span>
-                </li>
-                <li class="list">make a new auto commit</li>
-                <li class="list">remove the unnecessary changes from workplace</li>
-                <li class="list">keep the previous unnecessary/unwanted commit history/histories
-                  available</li>
-              </ul>
-              <span class="util-split-bottom-low"></span>
-              know that - <span class="post__code">git revert</span> is notmally used when
-              collaborating with multiple people
-            </details>
-          </article>
-        </section>
-
+      <main class="line-numbers util-margin-top-high util-margin-bottom-high">
         <!-- adding hover [go to top] button -->
         <div class="float-btn__container to-top-btn">
           <a href="#">
@@ -214,10 +76,168 @@
             <span>bottom</span>
           </a>
         </div>
+
+        <section id="content-index-travel" class="util-margin-bottom-high">
+          <header>
+            <h2>stash : operation</h2>
+          </header>
+          <article class="content-area__container">
+            <h3> time travel</h3>
+            <figure>
+              <pre>
+                <code class="language-git match-braces rainbow-braces">
+                /////////travel back to PAST/////////
+                git checkout [particular commit hash]
+                or
+                git restore --source [any commit hash] [file name]
+
+                /////////travel back to preset/////////
+                git switch [current branch name]
+                or
+                git restore [file name]
+              </code>
+              </pre>
+            </figure>
+
+            <details class="content__post util-cursor-pointer util-cursor-pointer">
+              *AFTER TIME TRAVEL TO PAST, that particular commit hash will be our new HEAD. time
+              travel doesn't make loose our works!
+              <br>
+              <br>
+              tips : travel back to a specific commit. create a new branch from there. now you
+              can eliminate unnecessary/error works from your working branch. or merge changes from
+              new branch to our working branch
+            </details>
+          </article>
+        </section>
+
+        <section id="content-index-restore" class="util-margin-bottom-high">
+          <header>
+            <h2>git restore</h2>
+          </header>
+          <article class="content-area__container">
+            <h3>unsatged :: last commit</h3>
+            <figure>
+              <pre>
+                <code class="language-git match-braces rainbow-braces">
+                git restore [file name]
+                or
+                git checkout HEAD [file name]
+                or
+                git checkout -- [file name]
+              </code>
+              </pre>
+            </figure>
+
+            <details class="content__post util-cursor-pointer">
+              unstaged works revert back to the last commit
+            </details>
+          </article>
+
+          <article class="content-area__container">
+            <h3>staged :: unstaged</h3>
+            <figure>
+              <pre>
+                <code class="language-git match-braces rainbow-braces">
+                git restore --staged [file name]
+              </code>
+              </pre>
+            </figure>
+
+            <details class="content__post util-cursor-pointer">
+              to unsatged a staged file
+            </details>
+          </article>
+        </section>
+
+        <section id="content-index-reset" class="util-margin-bottom-high">
+          <header>
+            <h2>git reset</h2>
+          </header>
+          <article class="content-area__container">
+            <h3>git reset</h3>
+            <figure>
+              <pre>
+                <code class="language-git match-braces rainbow-braces">
+               git reset [any commit hash]
+              </code>
+              </pre>
+            </figure>
+
+            <details class="content__post util-cursor-pointer">
+              keeps the changes in working directory but removes all the commit histories from the
+              latest commit till the specific commit hash!
+              <span class="util-margin-bottom-small"></span>
+              <span class="util-bold">NO GOING BACK!!!</span>
+              <span class="util-margin-bottom-small"></span>
+              tip -- only use this delete some commit history from log
+              <span class="util-split-bottom-low"></span>
+              tip -- if you dont want to keep deleting commits from the latest commit. then first,
+              <span class="post__code">git checkout [commit hash]</span> to any particular commit
+              (then that commit will be our new -head). second, then do normal or --hard <span
+                class="post__code">reset</span> then, only few commits from the middle will be
+              removed
+            </details>
+          </article>
+
+          <article class="content-area__container">
+            <h3>git reset --hard</h3>
+            <figure>
+
+              <pre>
+                <code class="language-git match-braces rainbow-braces">
+               git reset --hard [any commit hash]
+              </code>
+              </pre>
+            </figure>
+
+            <details class="content__post util-cursor-pointer">
+              removes the changes from working directory and removes the commit log
+              <br>
+              <br>
+              tip -- if you dont want to keep deleting commits from the latest commit. then first,
+              <span class="post__code">git checkout [commit hash]</span> to any particular commit
+              (then that commit will be our new -head). second, then do normal or --hard <span
+                class="post__code">reset</span> then, only few commits from the middle will be
+              removed
+            </details>
+          </article>
+        </section>
+
+        <section id="content-index-revert" class="util-margin-bottom-high">
+          <header>
+            <h2>git revert</h2>
+          </header>
+          <article class="content-area__container">
+            <h3>git revert</h3>
+            <figure>
+              <pre>
+                <code class="language-git match-braces rainbow-braces">
+             git revert [any commit hash]
+            </code>
+              </pre>
+            </figure>
+
+            <details class="content__post util-cursor-pointer util-cursor-pointer">
+              <ul class="list-wrap__container">
+                <li class="list">takes the unnecessary changes by <span class="post__code">commit
+                    hash</span>
+                </li>
+                <li class="list">make a new auto commit</li>
+                <li class="list">remove the unnecessary changes from workplace</li>
+                <li class="list">keep the previous unnecessary/unwanted commit history/histories
+                  available</li>
+              </ul>
+              <span class="util-split-bottom-low"></span>
+              know that - <span class="post__code">git revert</span> is notmally used when
+              collaborating with multiple people
+            </details>
+          </article>
+        </section>
       </main>
 
       <!-- indexes -->
-      <div class="content-page-indexes__container util-margin-top" id="bottom-side">
+      <footer class="content-page-indexes__container util-margin-top-high" id="bottom-side">
         <header>
           <h2>git indexes</h2>
         </header>
@@ -260,7 +280,7 @@
             </li>
           </ul>
         </nav>
-      </div>
+      </footer>
     </div>
 
   </body>

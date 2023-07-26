@@ -7,15 +7,16 @@
     <link rel="stylesheet" href="../sass/pages/dom.scss">
     <link rel="stylesheet" href="../sass/theme/prism-light.css">
     <script src="../js/prism.js" defer></script>
+    <script src="../js/app.js" defer></script>
     <title>dom : create & show</title>
   </head>
   <body>
     <div class="content-page__container">
-      <div class="nav__container">
+      <header class="nav__container">
         <h1 class="main-header-01">create html and insert and show</h1>
-        <svg>
+        <!-- <svg>
           <use xlink:href="../img/sprite.svg#grid"></use>
-        </svg>
+        </svg> -->
 
         <header class="section">
           <h2>section</h2>
@@ -37,7 +38,7 @@
             </span>
           </a>
         </nav>
-      </div>
+      </header>
 
       <!-- main home button -->
       <nav class="sticky-nav__container">
@@ -50,7 +51,7 @@
       </nav>
 
       <!-- main post -->
-      <main class="line-numbers">
+      <main class="line-numbers util-margin-bottom-high util-margin-top-high">
         <!-- adding hover [go to top] button -->
         <div class="float-btn__container to-top-btn">
           <a href="#">
@@ -70,133 +71,143 @@
           </a>
         </div>
 
-        <section id="content-index-targetParent">
+        <section id="content-index-targetParent" class="util-margin-bottom-high">
           <header>
             <h2>target parent element</h2>
           </header>
           <article class="content-area__container">
             <h3>target parent</h3>
-            <pre>
-              <code class="util-no-cap language-js match-braces rainbow-braces">
+            <figure>
+              <pre>
+                <code class="util-no-cap language-js match-braces rainbow-braces">
                const parent = document.querySelector("parentElementClassName")
               </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer">
               target any element for inserting javscript - html code
             </details>
             </artcle>
         </section>
 
-        <section id="content-index-createEl">
+        <section id="content-index-createEl" class="util-margin-bottom-high">
           <header>
             <h2>create ingredients for new element</h2>
           </header>
           <article class="content-area__container">
             <h3>for new html element</h3>
             <details class="content__post util-cursor-pointer">
-              <span class="list-wrap__container">
-                <svg>
-                  <use xlink:href="../img/sprite.svg#dot"></use>
-                </svg><span class="list">now create a container for element</span>
-              </span>
-              <pre>
-                <code class="util-no-cap language-js match-braces rainbow-braces">
+              <ul class="list-wrap__container">
+                <li class="list">now create a container for element</li>
+              </ul>
+              <figure>
+                <pre>
+                  <code class="util-no-cap language-js match-braces rainbow-braces">
                   const child = document.createElement("div")
                 </code>
-              </pre>
+                </pre>
+              </figure>
+
               <br>
-              <span class="list-wrap__container">
-                <svg>
-                  <use xlink:href="../img/sprite.svg#dot"></use>
-                </svg><span class="list">add one or multiple className to the element</span>
-              </span>
-              <pre>
-                <code class="util-no-cap language-js match-braces rainbow-braces">
+              <ul class="list-wrap__container">
+                <li class="list">add one or multiple className to the element</li>
+              </ul>
+              <figure>
+                <pre>
+                  <code class="util-no-cap language-js match-braces rainbow-braces">
                   child.classList.add("className1", "className2")
                 </code>
-              </pre>
+                </pre>
+              </figure>
+
               <br>
-              <span class="list-wrap__container">
-                <svg>
-                  <use xlink:href="../img/sprite.svg#dot"></use>
-                </svg><span class="list">add text content to the element</span>
-              </span>
-              <pre>
-                <code class="util-no-cap language-js match-braces rainbow-braces">
+              <ul class="list-wrap__container">
+                <li class="list">add text content to the element</li>
+              </ul>
+              <figure>
+                <pre>
+                  <code class="util-no-cap language-js match-braces rainbow-braces">
                   child.textContent = "our message";
                 </code>
-              </pre>
+                </pre>
+              </figure>
+
               <br>
-              <span class="list-wrap__container">
-                <svg>
-                  <use xlink:href="../img/sprite.svg#dot"></use>
-                </svg><span class="list">[alternatively] add html content to the element</span>
-              </span>
-              <pre>
-                <code class="util-no-cap language-js match-braces rainbow-braces">
+              <ul class="list-wrap__container">
+                <li class="list">[alternatively] add html content to the element</li>
+              </ul>
+              <figure>
+                <pre>
+                  <code class="util-no-cap language-js match-braces rainbow-braces">
                   child.innerHTML = `hardcode full html codes`
                 </code>
-              </pre>
+                </pre>
+              </figure>
+
               <br>
             </details>
             </artcle>
         </section>
 
-        <section id="content-index-insertShow">
+        <section id="content-index-insertShow" class="util-margin-bottom-high">
           <header>
             <h2>add element and show </h2>
           </header>
           <article class="content-area__container">
             <h3>adding element and show it in document</h3>
-
             <details class="content__post util-cursor-pointer">
-              <span class="list-wrap__container">
-                <svg>
-                  <use xlink:href="../img/sprite.svg#dot"></use>
-                </svg><span class="list">add the child element as a last child</span>
-              </span>
-              <pre>
-                <code class="util-no-cap language-js match-braces rainbow-braces">
+              <ul class="list-wrap__container">
+                <li class="list">add the child element as a last child</li>
+              </ul>
+              <figure>
+                <pre>
+                  <code class="util-no-cap language-js match-braces rainbow-braces">
                   parent.append(child)
                 </code>
-              </pre>
-              <span class="list-wrap__container">
-                <svg>
-                  <use xlink:href="../img/sprite.svg#dot"></use>
-                </svg><span class="list">add the child element as a first child</span>
-              </span>
-              <pre>
-                <code class="util-no-cap language-js match-braces rainbow-braces">
+                </pre>
+              </figure>
+
+              <ul class="list-wrap__container">
+                <li class="list">add the child element as a first child</li>
+              </ul>
+              <figure>
+                <pre>
+                  <code class="util-no-cap language-js match-braces rainbow-braces">
                   parent.prepend(child)
                 </code>
-              </pre>
-              <span class="list-wrap__container">
-                <svg>
-                  <use xlink:href="../img/sprite.svg#dot"></use>
-                </svg><span class="list">just before parent as sibling position</span>
-              </span>
-              <pre>
-                <code class="util-no-cap language-js match-braces rainbow-braces">
+                </pre>
+              </figure>
+
+              <ul class="list-wrap__container">
+                <li class="list">just before parent as sibling position</li>
+              </ul>
+              <figure>
+                <pre>
+                  <code class="util-no-cap language-js match-braces rainbow-braces">
                   parent.before(child)
                 </code>
-              </pre>
-              <span class="list-wrap__container">
-                <svg>
-                  <use xlink:href="../img/sprite.svg#dot"></use>
-                </svg><span class="list">just after parent as sibling position</span>
-              </span>
-              <pre>
-                <code class="util-no-cap language-js match-braces rainbow-braces">
+                </pre>
+              </figure>
+
+              <ul class="list-wrap__container">
+                <li class="list">just after parent as sibling position</li>
+              </ul>
+              <figure>
+                <pre>
+                  <code class="util-no-cap language-js match-braces rainbow-braces">
                   parent.after(child)
                 </code>
-              </pre>
+                </pre>
+              </figure>
+
             </details>
             </artcle>
         </section>
       </main>
 
       <!-- all the other DOM posts -->
-      <div class="content-page-indexes__container util-margin-top" id="bottom-side">
+      <footer class="content-page-indexes__container util-margin-top-high" id="bottom-side">
         <header>
           <h2>dom indexes</h2>
         </header>
@@ -234,7 +245,7 @@
             </li>
           </ul>
         </nav>
-      </div>
+      </footer>
     </div>
   </body>
 

@@ -4,22 +4,19 @@
 .content-page__container {
 	.nav__container {
 		.main-header-01 {
-			font-size: 5.1rem;
+			font-size: 7rem;
+
 			@include abs.mediaQuery(tab-land) {
-				font-size: 5.1rem;
-				letter-spacing: 2;
+				font-size: 6rem;
 			}
 			@include abs.mediaQuery(tab-port) {
-				font-size: 3.6rem;
-				letter-spacing: 2;
+				font-size: 4.5rem;
 			}
 			@include abs.mediaQuery(mobile) {
-				font-size: 2.4rem;
-				letter-spacing: 3;
+				font-size: 3.5rem;
 			}
 			@include abs.mediaQuery(mob-small) {
-				font-size: 3.2rem;
-				letter-spacing: 1;
+				font-size: 4.3rem;
 			}
 		}
 	}

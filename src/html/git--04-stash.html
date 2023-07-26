@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="../sass/pages/git.scss">
     <link rel="stylesheet" href="../sass/theme/prism-light.css">
     <script src="../js/prism.js" defer></script>
+    <script src="../js/app.js" defer></script>
     <title>git : stash</title>
   </head>
 
   <body>
     <div class="content-page__container">
-      <div class="nav__container">
+      <header class="nav__container">
         <h1 class="main-header-04">git stash : everything
           about git stash change
         </h1>
@@ -40,7 +41,7 @@
             </span>
           </a>
         </nav>
-      </div>
+      </header>
 
       <!-- main home button -->
       <nav class="sticky-nav__container">
@@ -52,8 +53,27 @@
         </a>
       </nav>
 
-      <main class="line-numbers">
-        <section>
+      <main class="line-numbers util-margin-top-high util-margin-bottom-high">
+        <!-- adding hover [go to top] button -->
+        <div class="float-btn__container to-top-btn">
+          <a href="#">
+            <svg>
+              <use xlink:href="../img/sprite.svg#to-top"></use>
+            </svg>
+            <span>top</span>
+          </a>
+        </div>
+        <!-- adding hover [go to bottom] button -->
+        <div class="float-btn__container to-bottom-btn">
+          <a href="#bottom-side">
+            <svg>
+              <use xlink:href="../img/sprite.svg#to-bottom"></use>
+            </svg>
+            <span>bottom</span>
+          </a>
+        </div>
+
+        <section class="util-margin-bottom-high">
           <header>
             <h2>stash : information</h2>
           </header>
@@ -73,20 +93,23 @@
           </article>
         </section>
 
-        <section>
+        <section class="util-margin-bottom-high">
           <header>
             <h2>stash : operation</h2>
           </header>
           <article class="content-area__container" id="content-index-conflict">
             <h3>stash o/p</h3>
-            <pre>
-              <code class="language-git match-braces rainbow-braces">
+            <figure>
+              <pre>
+                <code class="language-git match-braces rainbow-braces">
                 // to stash changes
                 git stash
                 // to un-stash changes
                 git stash pop
               </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer">
               git wont allow to switch branch, when we have un-commited changes in our current
               branch. if we still want to switch branch, we stash them (because we dont want to
@@ -94,29 +117,10 @@
             </details>
           </article>
         </section>
-
-        <!-- adding hover [go to top] button -->
-        <div class="float-btn__container to-top-btn">
-          <a href="#">
-            <svg>
-              <use xlink:href="../img/sprite.svg#to-top"></use>
-            </svg>
-            <span>top</span>
-          </a>
-        </div>
-        <!-- adding hover [go to bottom] button -->
-        <div class="float-btn__container to-bottom-btn">
-          <a href="#bottom-side">
-            <svg>
-              <use xlink:href="../img/sprite.svg#to-bottom"></use>
-            </svg>
-            <span>bottom</span>
-          </a>
-        </div>
       </main>
 
       <!-- indexes -->
-      <div class="content-page-indexes__container util-margin-top" id="bottom-side">
+      <footer class="content-page-indexes__container util-margin-top-high" id="bottom-side">
         <header>
           <h2>git indexes</h2>
         </header>
@@ -159,7 +163,7 @@
             </li>
           </ul>
         </nav>
-      </div>
+      </footer>
     </div>
   </body>
 

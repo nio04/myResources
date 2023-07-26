@@ -7,16 +7,17 @@
     <link rel="stylesheet" href="../sass/pages/dom.scss">
     <link rel="stylesheet" href="../sass/theme/prism-light.css">
     <script src="../js/prism.js" defer></script>
+    <script src="../js/app.js" defer></script>
     <title>dom : delete element</title>
   </head>
   <body>
     <div class="content-page__container">
-      <div class=" nav__container ">
+      <header class="nav__container">
         <h1 class="main-header-02 util-align-self-start-grid">delete element</h1>
-        <svg class="util-align-self-start-grid main-header-svg">
+        <!-- <svg class="util-align-self-start-grid main-header-svg">
           <use xlink:href="../img/sprite.svg#grid"></use>
-        </svg>
-      </div>
+        </svg> -->
+      </header>
 
       <!-- main home button -->
       <nav class="sticky-nav__container">
@@ -29,7 +30,7 @@
       </nav>
 
       <!-- main post -->
-      <main class="line-numbers">
+      <main class="line-numbers util-margin-top-high util-margin-bottom-high">
         <!-- adding hover [go to top] button -->
         <div class="float-btn__container to-top-btn">
           <a href="#">
@@ -48,18 +49,21 @@
             <span>bottom</span>
           </a>
         </div>
-        <section>
+
+        <section class="util-margin-bottom-high">
           <header>
             <h2>delete element</h2>
           </header>
           <article class="content-area__container">
-            <!-- <h3>target parent</h3> -->
-            <pre>
-              <code class="util-no-cap language-js match-braces rainbow-braces">
+            <figure>
+              <pre>
+                <code class="util-no-cap language-js match-braces rainbow-braces">
               const selectForDelete = document.querySelector("element");
               selectForDelete.remove();
             </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer">
               target the element and remove it from the dom tree
             </details>
@@ -68,7 +72,7 @@
       </main>
 
       <!-- all the other DOM posts -->
-      <div class="content-page-indexes__container util-margin-top" id="bottom-side">
+      <footer class="content-page-indexes__container util-margin-top-high" id="bottom-side">
         <header>
           <h2>dom indexes</h2>
         </header>
@@ -106,7 +110,7 @@
             </li>
           </ul>
         </nav>
-      </div>
+      </footer>
     </div>
   </body>
 

@@ -5,54 +5,111 @@
 	.nav__container {
 		.main-header-01 {
 			font-size: 7.8rem;
-			letter-spacing: -1;
 
 			@include abs.mediaQuery(tab-land) {
 				font-size: 6.1rem;
-				letter-spacing: 1;
 			}
 			@include abs.mediaQuery(tab-port) {
 				font-size: 4.4rem;
-				letter-spacing: 1;
 			}
 			@include abs.mediaQuery(mobile) {
 				font-size: 3.7rem;
-				letter-spacing: 0;
 			}
 			@include abs.mediaQuery(mob-small) {
 				font-size: 4rem;
-				letter-spacing: 0;
 			}
 		}
-	}
-}
 
-.content-page__container {
-	.nav__container {
+		.indexes {
+			grid-column: 1 / 2;
+		}
+
+		////////////
+		/// second page
 		.main-header-02 {
-			@include abs.grid-area-mix(3, 1, 4, 2);
-			font-size: 7.8rem;
-			letter-spacing: -1;
+			@include abs.grid-area-mix(3, 1, 4, -1);
+			font-size: 9rem;
 
-			@include abs.mediaQuery(tab-land) {
-				font-size: 6.1rem;
-				letter-spacing: 1;
-			}
 			@include abs.mediaQuery(tab-port) {
-				font-size: 4.4rem;
-				letter-spacing: 1;
+				font-size: 7rem;
 			}
 			@include abs.mediaQuery(mobile) {
-				font-size: 3.7rem;
-				letter-spacing: 0;
+				font-size: 6rem;
 			}
 			@include abs.mediaQuery(mob-small) {
-				font-size: 4rem;
-				letter-spacing: 0;
+				font-size: 5rem;
 			}
 		}
-		.main-header-svg {
-			@include abs.grid-area-mix(3, 2, 4, 3);
+
+		///////////////
+		/// THIRD PAGE
+		.main-header-03 {
+			font-size: 10rem;
+
+			@include abs.mediaQuery(tab-land) {
+				font-size: 8rem;
+			}
+			@include abs.mediaQuery(tab-port) {
+				font-size: 6rem;
+			}
+			@include abs.mediaQuery(mobile) {
+				font-size: 5.5rem;
+			}
+			@include abs.mediaQuery(mob-small) {
+				font-size: 6rem;
+			}
+		}
+		/////////////
+		/// FOUR PAGE
+		.main-header-04 {
+			@include abs.grid-area-mix(3, 1, 4, -1);
+			font-size: 10rem;
+
+			@include abs.mediaQuery(tab-port) {
+				font-size: 8rem;
+			}
+			@include abs.mediaQuery(mobile) {
+				font-size: 7rem;
+			}
+			@include abs.mediaQuery(mob-small) {
+				font-size: 8rem;
+			}
+		}
+		//////////////
+		/// FIVE PAGE
+		.main-header-05 {
+			font-size: 10rem;
+
+			@include abs.mediaQuery(tab-port) {
+				font-size: 8rem;
+			}
+
+			@include abs.mediaQuery(mobile) {
+				font-size: 6.5rem;
+			}
+			@include abs.mediaQuery(mob-small) {
+				font-size: 7rem;
+			}
+		}
+		/////////////
+		/// SEX PAGE
+		.main-header-06 {
+			font-size: 10rem;
+
+			@include abs.mediaQuery(tab-land) {
+				font-size: 9rem;
+			}
+
+			@include abs.mediaQuery(tab-port) {
+				font-size: 6.5rem;
+			}
+
+			@include abs.mediaQuery(mobile) {
+				font-size: 5.2rem;
+			}
+			@include abs.mediaQuery(mob-small) {
+				font-size: 6rem;
+			}
 		}
 	}
 }

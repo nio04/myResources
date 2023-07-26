@@ -147,13 +147,29 @@
 /// CONTENT PAGE [3RD PAGE]
 .content-page__container {
 	.nav__container {
+		display: grid;
+		grid-template-columns: 80% 20%;
+		grid-template-rows: 17rem 8rem minmax(40rem, 1fr);
+
+		@include abs.mediaQuery(tab-land) {
+			grid-template-rows: 17rem 8rem 1fr;
+		}
+
+		@include abs.mediaQuery(mobile) {
+			grid-template-rows: 17rem 8rem 1fr;
+		}
+
+		@include abs.mediaQuery(mob-small) {
+			grid-template-rows: 17rem 8rem 1fr;
+		}
+
 		h1 {
 			grid-column: 1 / -1;
 			font-family: var(--font-primary);
 			font-weight: 600;
 			font-size: 8rem;
 			text-transform: uppercase;
-			letter-spacing: 0.8rem;
+			letter-spacing: -2;
 			word-spacing: 0.7rem;
 			@extend .center-me-full;
 
@@ -163,6 +179,18 @@
 			animation-iteration-count: infinite;
 			animation-direction: alternate-reverse;
 		}
+
+		svg {
+			grid-column: 2 / 3;
+			grid-row: 2 / 3;
+			justify-self: center;
+			height: 10rem;
+			width: 10rem;
+			animation-name: slideToLeft;
+			animation-duration: 2s;
+			animation-delay: 0.2s;
+		}
+
 		.section h2 {
 			font-size: 5rem;
 			font-family: var(--font-secondary);
@@ -193,7 +221,22 @@
 				margin-bottom: 0;
 			}
 		}
+
+		.indexes {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+
+			animation-name: slideToRight;
+			animation-duration: 2s;
+			animation-delay: 0.2s;
+
+			@include abs.mediaQuery(mobile) {
+				justify-content: space-evenly;
+			}
+		}
 	}
+
 	main section {
 		h2 {
 			text-transform: uppercase;
@@ -211,7 +254,6 @@
 			position: relative;
 
 			@include abs.mediaQuery(mobile) {
-				border: 1px solid var(--color-accent);
 				letter-spacing: 0;
 			}
 		}

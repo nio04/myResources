@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="../sass/pages/git.scss">
     <link rel="stylesheet" href="../sass/theme/prism-light.css">
     <script src="../js/prism.js" defer></script>
+    <script src="../js/app.js" defer></script>
     <title>git : diff</title>
   </head>
 
   <body>
     <div class="content-page__container">
-      <div class="nav__container">
-        <h1 class="main-header-03">git diff : find the
-          works changes
+      <header class="nav__container">
+        <h1 class="main-header-03">git diff : find the works changes
         </h1>
         <svg>
           <use xlink:href="../img/sprite.svg#git"></use>
@@ -24,38 +24,38 @@
           <h2>section</h2>
         </header>
         <nav class="indexes indexes-03">
-          <a href="#content-index-01">
+          <a href="#content-index-diffInformation">
             <span>
               diff information
             </span>
           </a>
-          <a href="#content-index-02">
+          <a href="#content-index-unstagedToLastCommit">
             <span>
               unstaged :: last commit
             </span>
           </a>
-          <a href="#content-index-03">
+          <a href="#content-index-stagedToLastCommit">
             <span>
               staged :: last commit
             </span>
           </a>
-          <a href="#content-index-04">
+          <a href="#content-index-specificFileToLastCommit">
             <span>
               specific file on unstaged & staged :: last commit
             </span>
           </a>
-          <a href="#content-index-05">
+          <a href="#content-index-branchToLastCommit">
             <span>
               accross braches :: last commit
             </span>
           </a>
-          <a href="#content-index-06">
+          <a href="#content-index-Commits">
             <span>
               accross commits
             </span>
           </a>
         </nav>
-      </div>
+      </header>
 
       <!-- main home button -->
       <nav class="sticky-nav__container">
@@ -67,25 +67,7 @@
         </a>
       </nav>
 
-      <main class=" line-numbers">
-        <section>
-          <header>
-            <h2>diff : information</h2>
-          </header>
-          <article class="content-area__container" id="content-index-01">
-            <h3>diff : important information</h3>
-            <details class="content__post util-cursor-pointer">
-              by <span class="post__code">git diff</span> command, we can see various
-              types of differences from our working file from different timeline.
-              <br>
-              <br>
-              <span class="post__code">----</span> old file content [file name = a]
-              <br>
-              <span class="post__code">++++</span> new file content [file name = b]
-            </details>
-          </article>
-        </section>
-
+      <main class=" line-numbers util-margin-bottom-high util-margin-top-high">
         <!-- adding hover [go to top] button -->
         <div class="float-btn__container to-top-btn">
           <a href="#">
@@ -105,56 +87,83 @@
           </a>
         </div>
 
-        <section>
+        <section class="util-margin-bottom-high" id="content-index-diffInformation">
+          <header>
+            <h2>diff : information</h2>
+          </header>
+          <article class="content-area__container">
+            <h3>diff : important information</h3>
+            <details class="content__post util-cursor-pointer">
+              by <span class="post__code">git diff</span> command, we can see various
+              types of differences from our working file from different timeline.
+              <br>
+              <br>
+              <span class="post__code">----</span> old file content [file name = a]
+              <br>
+              <span class="post__code">++++</span> new file content [file name = b]
+            </details>
+          </article>
+        </section>
+
+        <section class="util-margin-bottom-high" id="content-index-unstagedToLastCommit">
           <header>
             <h2>diff : operation</h2>
           </header>
-          <article class="content-area__container" id="content-index-02">
-            <h3>unstaged ::
-              last commit</h3>
-            <pre>
-              <code class="language-git">
+          <article class="content-area__container">
+            <h3>unstaged :: last commit</h3>
+            <figure>
+              <pre>
+                <code class="language-git">
                 git diff
               </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer">
               compare codes from last commit to current unstaged works
             </details>
           </article>
 
-          <article class="content-area__container" id="content-index-03">
-            <h3>staged
-              :: last commit</h3>
-            <pre>
-              <code class="language-git">
+          <article class="content-area__container" id="content-index-stagedToLastCommit">
+            <h3>staged :: last commit</h3>
+            <figure>
+              <pre>
+                <code class="language-git">
                 git diff HEAD
               </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer">
               compare codes from last commit to current staged and unstaged works
             </details>
           </article>
 
-          <article class="content-area__container" id="content-index-04">
+          <article class="content-area__container" id="content-index-specificFileToLastCommit">
             <h3>see changes in a specific file</h3>
-            <pre>
-              <code class="language-git">
+            <figure>
+              <pre>
+                <code class="language-git">
                 git diff HEAD [file path/file name]
               </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer">
               comapre code from last commit to staged and unstaged area for a specific file
             </details>
           </article>
 
-          <article class="content-area__container" id="content-index-05">
-            <h3>
-              diff for branches</h3>
-            <pre>
-              <code class="language-git">
+          <article class="content-area__container" id="content-index-branchToLastCommit">
+            <h3>diff for branches</h3>
+            <figure>
+              <pre>
+                <code class="language-git">
                 git diff [first branch name..second branch name]
               </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer">
               ORDER MATTERS!!! [only works for commited changes]
               <br>
@@ -168,13 +177,16 @@
             </details>
           </article>
 
-          <article class="content-area__container" id="content-index-06">
+          <article class="content-area__container" id="content-index-Commits">
             <h3>diff for commit hash</h3>
-            <pre>
-              <code class="language-git">
+            <figure>
+              <pre>
+                <code class="language-git">
               git diff [first commit hash..second commit hash]
             </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer">
               ORDER MATTERS!!! [first commit] will be like a book, where we will compare our
               changes to [second commit hash]
@@ -191,7 +203,7 @@
       </main>
 
       <!-- indexes -->
-      <div class="content-page-indexes__container util-margin-top" id="bottom-side">
+      <footer class="content-page-indexes__container util-margin-top-high" id="bottom-side">
         <header>
           <h2>git indexes</h2>
         </header>
@@ -234,7 +246,7 @@
             </li>
           </ul>
         </nav>
-      </div>
+      </footer>
     </div>
 
   </body>

@@ -7,15 +7,16 @@
     <link rel="stylesheet" href="../sass/pages/dom.scss">
     <link rel="stylesheet" href="../sass/theme/prism-light.css">
     <script src="../js/prism.js" defer></script>
+    <script src="../js/app.js" defer></script>
     <title>dom : css classList</title>
   </head>
   <body>
     <div class="content-page__container">
-      <div class="nav__container">
+      <nav class="nav__container">
         <h1 class="main-header-06">css class List manipulate</h1>
-        <svg>
+        <!-- <svg>
           <use xlink:href="../img/sprite.svg#grid"></use>
-        </svg>
+        </svg> -->
 
         <header class="section">
           <h2>section</h2>
@@ -47,7 +48,7 @@
             </span>
           </a>
         </nav>
-      </div>
+      </nav>
 
       <!-- main home button -->
       <nav class="sticky-nav__container">
@@ -60,7 +61,7 @@
       </nav>
 
       <!-- main post -->
-      <main class="line-numbers">
+      <main class="line-numbers util-margin-top-high util-margin-bottom-high">
         <!-- adding hover [go to top] button -->
         <div class="float-btn__container to-top-btn">
           <a href="#">
@@ -80,54 +81,63 @@
           </a>
         </div>
 
-        <section id="content-index-add">
+        <section id="content-index-add" class="util-margin-bottom-high">
           <header>
             <h2>adding css class</h2>
           </header>
           <article class="content-area__container">
             <h3>adding css stylesheet class</h3>
-            <pre>
-              <code class="util-no-cap language-js match-braces rainbow-braces">
+            <figure>
+              <pre>
+                <code class="util-no-cap language-js match-braces rainbow-braces">
                 const element = document.querySelector("elementClassName")
                 element.classList.add("cssClassName", "anotherCSSclass")
               </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer">
               add one or multiple css classes
             </details>
             </artcle>
         </section>
 
-        <section id="content-index-remove">
+        <section id="content-index-remove" class="util-margin-bottom-high">
           <header>
             <h2>removing css class</h2>
           </header>
           <article class="content-area__container">
             <h3>removing existing css stylesheet class</h3>
-            <pre>
-              <code class="util-no-cap language-js match-braces rainbow-braces">
+            <figure>
+              <pre>
+                <code class="util-no-cap language-js match-braces rainbow-braces">
                 const element = document.querySelector("elementClassName")
                 element.classList.remove("cssClassName")
               </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer">
               remove css class
             </details>
             </artcle>
         </section>
 
-        <section id="content-index-toggle">
+        <section id="content-index-toggle" class="util-margin-bottom-high">
           <header>
             <h2>toggle css class</h2>
           </header>
           <article class="content-area__container">
             <h3>toggle css classes</h3>
-            <pre>
-              <code class="util-no-cap language-js match-braces rainbow-braces">
+            <figure>
+              <pre>
+                <code class="util-no-cap language-js match-braces rainbow-braces">
                 const element = document.querySelector("elementClassName")
                 element.classList.toggle("cssClassName")
               </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer">
               toggle css classes.
               <br>
@@ -136,36 +146,42 @@
             </artcle>
         </section>
 
-        <section id="content-index-existance">
+        <section id="content-index-existance" class="util-margin-bottom-high">
           <header>
             <h2>check class existance</h2>
           </header>
           <article class="content-area__container">
             <h3>checking class existance</h3>
-            <pre>
-              <code class="util-no-cap language-js match-braces rainbow-braces">
+            <figure>
+              <pre>
+                <code class="util-no-cap language-js match-braces rainbow-braces">
                 const element = document.querySelector("elementClassName")
                 element.classList.contains("cssClassName")
               </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer">
               return a boolean value, for specific class existance
             </details>
             </artcle>
         </section>
 
-        <section id="content-index-override">
+        <section id="content-index-override" class="util-margin-bottom-high">
           <header>
             <h2>override all other css classes</h2>
           </header>
           <article class="content-area__container">
             <h3>override all other existing css class</h3>
-            <pre>
-              <code class="util-no-cap language-js match-braces rainbow-braces">
+            <figure>
+              <pre>
+                <code class="util-no-cap language-js match-braces rainbow-braces">
                 const element = document.querySelector("elementClassName")
                 element.className = "cssClassName"
               </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer">
               override all previous css classes with spcified new class
             </details>
@@ -174,7 +190,7 @@
       </main>
 
       <!-- all the other DOM posts -->
-      <div class="content-page-indexes__container util-margin-top" id="bottom-side">
+      <footer class="content-page-indexes__container util-margin-top-high" id="bottom-side">
         <header>
           <h2>dom indexes</h2>
         </header>
@@ -212,7 +228,7 @@
             </li>
           </ul>
         </nav>
-      </div>
+      </footer>
     </div>
   </body>
 

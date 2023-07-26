@@ -7,15 +7,16 @@
     <link rel="stylesheet" href="../sass/pages/dom.scss">
     <link rel="stylesheet" href="../sass/theme/prism-light.css">
     <script src="../js/prism.js" defer></script>
+    <script src="../js/app.js" defer></script>
     <title>dom : rw css styles</title>
   </head>
   <body>
     <div class="content-page__container">
-      <div class="nav__container">
+      <header class="nav__container">
         <h1 class="main-header-05">read write css styles</h1>
-        <svg>
+        <!-- <svg>
           <use xlink:href="../img/sprite.svg#grid"></use>
-        </svg>
+        </svg> -->
 
         <header class="section">
           <h2>section</h2>
@@ -32,7 +33,7 @@
             </span>
           </a>
         </nav>
-      </div>
+      </header>
 
       <!-- main home button -->
       <nav class="sticky-nav__container">
@@ -45,7 +46,7 @@
       </nav>
 
       <!-- main post -->
-      <main class="line-numbers">
+      <main class="line-numbers util-margin-bottom-high util-margin-top-high">
         <!-- adding hover [go to top] button -->
         <div class="float-btn__container to-top-btn">
           <a href="#">
@@ -65,18 +66,21 @@
           </a>
         </div>
 
-        <section id="content-index-read">
+        <section id="content-index-read" class="util-margin-bottom-high">
           <header>
             <h2>read css styles </h2>
           </header>
           <article class="content-area__container">
             <h3>read inline css styles </h3>
-            <pre>
-              <code class="util-no-cap language-js match-braces rainbow-braces">
+            <figure>
+              <pre>
+                <code class="util-no-cap language-js match-braces rainbow-braces">
                 const element = document.querySelector("elementClassName")
                 console.log(element.style.propertyName)
               </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer">
               read inline css styles. can not get styles value from "stylesheet"
             </details>
@@ -84,30 +88,36 @@
 
             <article class="content-area__container">
               <h3>read non-inline css styles</h3>
-              <pre>
-                <code class="util-no-cap language-js match-braces rainbow-braces">
+              <figure>
+                <pre>
+                  <code class="util-no-cap language-js match-braces rainbow-braces">
                 const element = document.querySelector("elementClassName")
                 console.log(getComputedStyle(element).cssStylePropertyName)
               </code>
-              </pre>
+                </pre>
+              </figure>
+
               <details class="content__post util-cursor-pointer">
                 read non-inline css styles and get css styles from 'stylesheet'
               </details>
               </artcle>
         </section>
 
-        <section id="content-index-write">
+        <section id="content-index-write" class="util-margin-bottom-high">
           <header>
             <h2>write css styles </h2>
           </header>
           <article class="content-area__container">
             <h3>write inline css styles </h3>
-            <pre>
-              <code class="util-no-cap language-js match-braces rainbow-braces">
+            <figure>
+              <pre>
+                <code class="util-no-cap language-js match-braces rainbow-braces">
                 const element = document.querySelector("elementClassName")
                 element.style.propertyName = "cssStyleValue"
               </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer">
               write css styles as inline-css
             </details>
@@ -115,8 +125,9 @@
 
             <article class="content-area__container">
               <h3>write :root element from css styles</h3>
-              <pre>
-                <code class="util-no-cap language-js match-braces rainbow-braces">
+              <figure>
+                <pre>
+                  <code class="util-no-cap language-js match-braces rainbow-braces">
                   //css
                   :root{
                     --primary-color : red;
@@ -125,7 +136,9 @@
                   //js
                   document.documentElement.style.setProperty("--primary-color, "white")
               </code>
-              </pre>
+                </pre>
+              </figure>
+
               <details class="content__post util-cursor-pointer">
                 write :root property values
               </details>
@@ -134,7 +147,7 @@
       </main>
 
       <!-- all the other DOM posts -->
-      <div class="content-page-indexes__container util-margin-top" id="bottom-side">
+      <footer class="content-page-indexes__container util-margin-top-high" id="bottom-side">
         <header>
           <h2>dom indexes</h2>
         </header>
@@ -172,7 +185,7 @@
             </li>
           </ul>
         </nav>
-      </div>
+      </footer>
     </div>
   </body>
 

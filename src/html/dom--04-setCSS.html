@@ -7,16 +7,17 @@
     <link rel="stylesheet" href="../sass/pages/dom.scss">
     <link rel="stylesheet" href="../sass/theme/prism-light.css">
     <script src="../js/prism.js" defer></script>
+    <script src="../js/app.js" defer></script>
     <title>dom : set css </title>
   </head>
   <body>
     <div class="content-page__container">
-      <div class="nav__container">
-        <h1 class="main-header-04">set css property </h1>
-        <svg>
+      <header class="nav__container">
+        <h1 class="main-header-04 util-align-self-start-grid">set css property </h1>
+        <!-- <svg>
           <use xlink:href="../img/sprite.svg#grid"></use>
-        </svg>
-      </div>
+        </svg> -->
+      </header>
 
       <!-- main home button -->
       <nav class="sticky-nav__container">
@@ -49,26 +50,30 @@
           </a>
         </div>
 
-        <section>
+        <section class="util-margin-bottom-high">
           <header>
             <h2>target and design</h2>
           </header>
           <article class="content-area__container">
             <h3>target and design element</h3>
-            <pre>
-              <code class="util-no-cap language-js match-braces rainbow-braces">
+            <figure>
+              <pre>
+                <code class="util-no-cap language-js match-braces rainbow-braces">
               const element = document.querySelector("parentElementClassName");
               element.style.cssStyleProperty = "css style value";
             </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer">
               target any elemenet to add css style
             </details>
             </artcle>
         </section>
       </main>
+
       <!-- all the other DOM posts -->
-      <div class="content-page-indexes__container util-margin-top" id="bottom-side">
+      <footer class="content-page-indexes__container util-margin-top-high" id="bottom-side">
         <header>
           <h2>dom indexes</h2>
         </header>
@@ -106,7 +111,7 @@
             </li>
           </ul>
         </nav>
-      </div>
+    </div>
     </div>
 
   </body>

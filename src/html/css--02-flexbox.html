@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="../sass/pages/css.scss">
     <link rel="stylesheet" href="../sass/theme/prism-light.css">
     <script src="../js/prism.js" defer></script>
+    <script src="../js/app.js" defer></script>
     <title>css : flexbox</title>
   </head>
 
   <body>
     <div class="content-page__container">
-      <div class="nav__container">
+      <header class="nav__container">
         <h1 class="main-header-02">everything about flexbox</h1>
         <svg>
           <use xlink:href="../img/sprite.svg#flexbox"></use>
@@ -33,7 +34,7 @@
             </span>
           </a>
         </nav>
-      </div>
+      </header>
 
       <!-- main home button -->
       <nav class="sticky-nav__container">
@@ -46,7 +47,7 @@
       </nav>
 
       <!-- main post -->
-      <main class="line-numbers">
+      <main class="line-numbers util-margin-top-high util-margin-bottom-high">
         <!-- adding hover [go to top] button -->
         <div class="float-btn__container to-top-btn">
           <a href="#">
@@ -66,17 +67,19 @@
           </a>
         </div>
 
-        <section id="content-index-parent">
+        <section id="content-index-parent" class="util-margin-bottom-high">
           <header>
             <h2>parent container</h2>
           </header>
           <article class="content-area__container">
             <h3>flex-direction</h3>
-            <pre>
-              <code class="language-css rainbow-braces match-braces">
+            <figure>
+              <pre>
+                <code class="language-css rainbow-braces match-braces">
                 flex-direction : row[default] | row-reverse | column | column-reverse;
               </code>
-            </pre>
+              </pre>
+            </figure>
             <details class="content__post util-cursor-pointer util-split-bottom">
               controls flex direction flow. defaultly, its row. but when its set to column, then
               the main-axis become align-content and cross-axis become justify-content
@@ -85,11 +88,13 @@
 
           <article class="content-area__container">
             <h3>flex-wrap</h3>
-            <pre>
-              <code class="language-css rainbow-braces match-braces">
+            <figure>
+              <pre>
+                <code class="language-css rainbow-braces match-braces">
                 flex-wrap : nowrap [default] | wrap | wrap-reverse;
               </code>
-            </pre>
+              </pre>
+            </figure>
             <details class="content__post util-cursor-pointer util-split-bottom">
               defines contents wrap behavior
             </details>
@@ -97,11 +102,14 @@
 
           <article class="content-area__container">
             <h3>justify-content</h3>
-            <pre>
-              <code class="language-css rainbow-braces match-braces">
+            <figure>
+              <pre>
+                <code class="language-css rainbow-braces match-braces">
                 justify-content : flex-start [default] | flex-end | start | end | left| right | center | space-between | space-around | space-evenly
               </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer util-split-bottom">
               defines content flow on main-axis or horizontal side
             </details>
@@ -109,11 +117,14 @@
 
           <article class="content-area__container">
             <h3>align-items</h3>
-            <pre>
-              <code class="language-css rainbow-braces match-braces">
+            <figure>
+              <pre>
+                <code class="language-css rainbow-braces match-braces">
                 align-items : stretch [default] | flex-start | flex-end | start | self-start | end | self-end | center | baseline;
               </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer util-split-bottom">
               defines content flow on cross-axis or verticle side
             </details>
@@ -121,11 +132,14 @@
 
           <article class="content-area__container">
             <h3>align-content</h3>
-            <pre>
-              <code class="language-css rainbow-braces match-braces">
+            <figure>
+              <pre>
+                <code class="language-css rainbow-braces match-braces">
                 align-content : normal [default] | flex-start | flex-end | start | end | space-between | space-around | space-evenly | stretch
               </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer util-split-bottom">
               this property only applied, if the contents in multi-line. works in cross axis
               (y)
@@ -135,28 +149,34 @@
 
           <article class="content-area__container">
             <h3>gap</h3>
-            <pre>
-              <code class="language-css rainbow-braces match-braces">
+            <figure>
+              <pre>
+                <code class="language-css rainbow-braces match-braces">
                 gap : [row gap] [column gap]
               </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer ">
               this property set gap between children items
             </details>
           </article>
         </section>
 
-        <section id="content-index-children">
+        <section id="content-index-children" class="util-margin-bottom-high">
           <header>
             <h2>children items</h2>
           </header>
           <article class="content-area__container">
             <h3>flex-grow</h3>
-            <pre>
-              <code class="language-css rainbow-braces match-braces">
+            <figure>
+              <pre>
+                <code class="language-css rainbow-braces match-braces">
                 flex-grow : [positive integer]
               </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer util-split-bottom">
               default 0. give permission to particular child to have increase its size according
               to the flex-grow property
@@ -165,11 +185,14 @@
 
           <article class="content-area__container">
             <h3>flex-shrink</h3>
-            <pre>
-              <code class="language-css rainbow-braces match-braces">
+            <figure>
+              <pre>
+                <code class="language-css rainbow-braces match-braces">
                 flex-shrink : [positive integer]
               </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer util-split-bottom">
               default 0. give permission to particular child to have decrease its size according
               to the flex-shrink property
@@ -178,11 +201,14 @@
 
           <article class="content-area__container">
             <h3>flex-basis</h3>
-            <pre>
-              <code class="language-css rainbow-braces match-braces">
+            <figure>
+              <pre>
+                <code class="language-css rainbow-braces match-braces">
                 flex-basis : [positive integer]
                 </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer util-split-bottom">
               defines the default size of an element before the remaining space is distributed
             </details>
@@ -190,11 +216,14 @@
 
           <article class="content-area__container">
             <h3>flex</h3>
-            <pre>
-              <code class="language-css rainbow-braces match-braces">
+            <figure>
+              <pre>
+                <code class="language-css rainbow-braces match-braces">
                 flex : [flex-grow] [flex-shrink] [flex-basis]
               </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer util-split-bottom">
               flex is shorthand for flex-grow, flex-shrink, flex-basis
             </details>
@@ -202,11 +231,14 @@
 
           <article class="content-area__container">
             <h3>order</h3>
-            <pre>
-              <code class="language-css rainbow-braces match-braces">
+            <figure>
+              <pre>
+                <code class="language-css rainbow-braces match-braces">
                 order : [positive integer]
               </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer util-split-bottom">
               default is probably all to 0. set any higher positive numbers to mess up the order
               system
@@ -215,58 +247,62 @@
 
           <article class="content-area__container">
             <h3>align-self</h3>
-            <pre>
-              <code class="language-css rainbow-braces match-braces">
+            <figure>
+              <pre>
+                <code class="language-css rainbow-braces match-braces">
                   align-self : stretch [default] | flex-start | flex-end | start | self-start | end | self-end | center | baseline
                 </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer util-split-bottom">
               override parent container's align-items property for per selected children
             </details>
           </article>
         </section>
+      </main>
 
-        <!-- all the other css posts -->
-        <div class="content-page-indexes__container util-margin-top" id="bottom-side">
-          <header>
-            <h2>css indexes</h2>
-          </header>
-          <nav>
-            <ul>
-              <li class="item">
-                <a href="css--01-grid.html" class="item-link">GRID : everything about grid</a>
-              </li>
-              <li class="item link-active">
-                <a href="css--02-flexbox.html" class="item-link">FLEXBOX : everything about
-                  flexbox</a>
-              </li>
-              <li class="item">
-                <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
-              </li>
-              <li class="item">
-                <a href="#" class="item-link">Lorem ipsum dolor sit amet.</a>
-              </li>
-              <li class="item">
-                <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
-              </li>
-              <li class="item">
-                <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
-              </li>
-              <li class="item">
-                <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
-              </li>
-              <li class="item">
-                <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
-              </li>
-              <li class="item">
-                <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
-              </li>
-              <li class="item">
-                <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+      <!-- all the other css posts -->
+      <footer class="content-page-indexes__container util-margin-top-high" id="bottom-side">
+        <header>
+          <h2>css indexes</h2>
+        </header>
+        <nav>
+          <ul>
+            <li class="item">
+              <a href="css--01-grid.html" class="item-link">GRID : everything about grid</a>
+            </li>
+            <li class="item link-active">
+              <a href="css--02-flexbox.html" class="item-link">FLEXBOX : everything about
+                flexbox</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Lorem ipsum dolor sit amet consectetur.</a>
+            </li>
+          </ul>
+        </nav>
+      </footer>
     </div>
   </body>
 

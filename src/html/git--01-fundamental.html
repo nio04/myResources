@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="../sass/pages/git.scss">
     <link rel="stylesheet" href="../sass/theme/prism-light.css">
     <script src="../js/prism.js" defer></script>
+    <script src="../js/app.js" defer></script>
     <title>git : fundamental</title>
   </head>
 
   <body>
     <div class="content-page__container">
-      <div class="nav__container">
+      <header class="nav__container">
         <h1 class="main-header-01">git : basic, staging,
           commit, branch
         </h1>
@@ -54,7 +55,7 @@
             normal git flowing
           </a>
         </nav>
-      </div>
+      </header>
 
       <!-- main home button -->
       <nav class="sticky-nav__container">
@@ -66,39 +67,7 @@
         </a>
       </nav>
 
-      <main class="line-numbers">
-        <section id="content-index-veryBasic">
-          <h2>very basic</h2>
-          <article class="content-area__container">
-            <h3>enable git</h3>
-            <pre>
-              <code class="language-git">
-                git init
-              </code>
-            </pre>
-          </article>
-
-          <article class="content-area__container">
-            <h3>status checking git</h3>
-            <pre>
-              <code class="language-git">
-                git status
-              </code>
-            </pre>
-          </article>
-
-          <article class="content-area__container">
-            <h3>log checking git</h3></span>
-            <pre>
-              <code class="language-git">
-                git log
-                //or
-                git log --oneline
-              </code>
-            </pre>
-          </article>
-        </section>
-
+      <main class="line-numbers util-margin-top-high util-margin-bottom-high">
         <!-- adding hover [go to top] button -->
         <div class="float-btn__container to-top-btn">
           <a href="#">
@@ -118,127 +87,196 @@
           </a>
         </div>
 
-        <section id="content-index-staging">
+        <section id="content-index-veryBasic" class="util-margin-bottom-high">
+          <h2>very basic</h2>
+          <article class="content-area__container">
+            <h3>enable git</h3>
+            <figure>
+              <pre>
+                <code class="language-git">
+                git init
+              </code>
+              </pre>
+            </figure>
+
+          </article>
+
+          <article class="content-area__container">
+            <h3>status checking git</h3>
+            <figure>
+              <pre>
+                <code class="language-git">
+                git status
+              </code>
+              </pre>
+            </figure>
+
+          </article>
+
+          <article class="content-area__container">
+            <h3>log checking git</h3>
+            <figure>
+              <pre>
+                <code class="language-git">
+                git log
+                //or
+                git log --oneline
+              </code>
+              </pre>
+            </figure>
+
+          </article>
+        </section>
+
+        <section id="content-index-staging" class="util-margin-bottom-high">
           <header>
             <h2>staging </h2>
           </header>
           <article class="content-area__container">
             <h3>stage a file</h3>
-            <pre>
-              <code class="language-git">
+            <figure>
+              <pre>
+                <code class="language-git">
                 git add [fileName]
               </code>
-            </pre>
+              </pre>
+            </figure>
+
           </article>
 
           <article class="content-area__container">
             <h3>stage multiple file</h3>
-            <pre>
-              <code class="language-git">
+            <figure>
+              <pre>
+                <code class="language-git">
                 git add [fileName1] [fileName2]
               </code>
-            </pre>
+              </pre>
+            </figure>
+
           </article>
 
           <article class="content-area__container">
             <h3>stage all files</h3>
-            <pre>
-              <code class="language-git">
+            <figure>
+              <pre>
+                <code class="language-git">
                 git add *
               </code>
-            </pre>
+              </pre>
+            </figure>
+
           </article>
 
           <article class="content-area__container">
-            <h3>stage and commit :
-              shortcut</h3>
-            <pre>
-              <code class="language-git">
+            <h3>stage and commit : shortcut</h3>
+            <figure>
+              <pre>
+                <code class="language-git">
                 git commit -am "commit message"
               </code>
-            </pre>
+              </pre>
+            </figure>
             <details class="content__post util-cursor-pointer">
               stage and commit at the same time! (only works for atleast once commited file)
             </details>
           </article>
         </section>
 
-        <section id="content-index-commit">
+        <section id="content-index-commit" class="util-margin-bottom-high">
           <header>
             <h2>commit</h2>
           </header>
           <article class="content-area__container">
             <h3>commit file</h3>
-            <pre>
-              <code class="language-git">
+            <figure>
+              <pre>
+                <code class="language-git">
                 git commit -m "commit message"
               </code>
-            </pre>
+              </pre>
+            </figure>
+
           </article>
 
           <article class="content-area__container">
-            <h3>stage and commit :
-              shortcut</h3>
-            <pre>
-              <code class="language-git">
-            git commit -am "commit message"
+            <h3>stage and commit : shortcut</h3>
+            <figure>
+              <pre>
+                <code class="language-git">
+                 git commit -am "commit message"
             </code>
-            </pre>
+              </pre>
+            </figure>
+
           </article>
         </section>
 
-        <section id="content-index-branch">
+        <section id="content-index-branch" class="util-margin-bottom-high">
           <header>
             <h2>branch</h2>
           </header>
           <article class="content-area__container">
             <h3>create branch</h3>
-            <pre>
-              <code class="language-git">
+            <figure>
+              <pre>
+                <code class="language-git">
                 git branch [branch name]
               </code>
-            </pre>
+              </pre>
+            </figure>
+
           </article>
 
           <article class="content-area__container">
             <h3>view all braches</h3>
-            <pre>
-              <code class="language-git">
+            <figure>
+              <pre>
+                <code class="language-git">
                 git branch
               </code>
-            </pre>
+              </pre>
+            </figure>
+
           </article>
 
           <article class="content-area__container">
             <h3>switching branch</h3>
-            <pre>
-              <code class="language-git">
+            <figure>
+              <pre>
+                <code class="language-git">
               git switch [branch name]
             </code>
-            </pre>
+              </pre>
+            </figure>
+
           </article>
 
           <article class="content-area__container">
-            <h3>delete branch : not
-              forcing</h3>
-            <pre>
-              <code class="language-git">
+            <h3>delete branch : not forcing</h3>
+            <figure>
+              <pre>
+                <code class="language-git">
                 git branch -d [branch name]
               </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer">
               if the branch is not merged and get delete command, we will get a warning
             </details>
           </article>
 
           <article class="content-area__container">
-            <h3>delete branch :
-              forcing</h3>
-            <pre>
-              <code class="language-git">
+            <h3>delete branch : forcing</h3>
+            <figure>
+              <pre>
+                <code class="language-git">
                 git branch -D [branch name]
               </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer">
               ignore branch delete warning
             </details>
@@ -246,11 +284,14 @@
 
           <article class="content-area__container">
             <h3>rename branch</h3>
-            <pre>
-              <code class="language-git">
+            <figure>
+              <pre>
+                <code class="language-git">
               git branch -m [new branch name]
             </code>
-            </pre>
+              </pre>
+            </figure>
+
             <details class="content__post util-cursor-pointer">
               stay on that branch, you are renaming to
             </details>
@@ -266,20 +307,19 @@
           </article>
         </section>
 
-        <section id="content-index-gitaInformation">
+        <section id="content-index-gitaInformation" class="util-margin-bottom-high">
           <header>
             <h2>git information</h2>
           </header>
           <details class="content__post util-cursor-pointer">
             <ul class="list-wrap__container">
               <li class="list"><span class="post__code">HEAD</span> refers to the current branch,
-                its not
-                have to be the last commit</li>
+                its not have to be the last commit</li>
             </ul>
           </details>
         </section>
 
-        <section id="content-index-normalGitFlow">
+        <section id="content-index-normalGitFlow" class="util-margin-bottom-high">
           <header>
             <h2>normal git flowing</h2>
           </header>
@@ -319,7 +359,7 @@
       </main>
 
       <!-- indexes -->
-      <div class="content-page-indexes__container util-margin-top" id="bottom-side">
+      <footer class="content-page-indexes__container util-margin-top-high" id="bottom-side">
         <header>
           <h2>git indexes</h2>
         </header>
@@ -362,7 +402,7 @@
             </li>
           </ul>
         </nav>
-      </div>
+      </footer>
     </div>
   </body>
 

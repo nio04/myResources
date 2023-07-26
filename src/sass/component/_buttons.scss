@@ -4,7 +4,6 @@
 // CONTENT PAGE [3RD PAGE]
 .content-page__container {
 	main .float-btn__container {
-		opacity: 0.6;
 		position: fixed;
 		background-color: var(--color-secondary-light);
 		font-weight: 900;
@@ -37,14 +36,6 @@
 		&:active,
 		&:focus {
 			transform: scale(0.8);
-		}
-
-		&:hover {
-			opacity: 1;
-			animation-name: rainbowZoomIn;
-			animation-delay: 0.1;
-			animation-duration: 3s;
-			animation-iteration-count: infinite;
 		}
 
 		a:link {
