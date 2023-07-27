@@ -28,10 +28,10 @@
 		///////////////
 		/// SECOND PAGE
 		.main-header-02 {
-			font-size: 10rem;
+			font-size: 8.4rem;
 
 			@include abs.mediaQuery(tab-land) {
-				font-size: 8rem;
+				font-size: 7.5rem;
 			}
 
 			@include abs.mediaQuery(tab-port) {
@@ -43,12 +43,8 @@
 			}
 
 			@include abs.mediaQuery(mob-small) {
-				font-size: 5.5rem;
+				font-size: 5.3rem;
 			}
 		}
 	}
-}
-
-// CONTENT - 01 : FLEXBOX
-.content-page__container .nav__container {
 }

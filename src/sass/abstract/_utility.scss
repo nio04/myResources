@@ -1,19 +1,25 @@
 @use 'var';
 
+.util-border-bottom-double {
+	border-bottom: 3px double var(--color-accent) !important;
+}
+
+.util-underline {
+	text-decoration: underline !important;
+	text-decoration-color: var(--color-transparent-mid) !important;
+	text-underline-offset: 0.7rem !important;
+}
+
 .util-split-top {
 	border-top: 1px solid var(--color-secondary) !important;
-	padding: 4rem 0.6rem !important;
 }
 
 .util-split-bottom {
 	border-bottom: 1px solid var(--color-secondary) !important;
-	margin: 3rem 0 !important;
-	display: block !important;
 }
+
 .util-split-bottom-low {
 	border-bottom: 1px solid var(--color-secondary) !important;
-	margin: 1rem 0 !important;
-	display: block !important;
 }
 
 .util-center {
@@ -24,6 +30,11 @@
 .util-margin-top-high {
 	display: block !important;
 	margin-top: 30rem !important;
+}
+
+.util-margin-top-mid {
+	display: block !important;
+	margin-top: 13rem !important;
 }
 
 .util-margin-top {
@@ -37,16 +48,18 @@
 }
 
 .util-margin-bottom-high {
+	display: block !important;
 	margin-bottom: 30rem !important;
+}
+
+.util-margin-bottom-mid {
+	display: block !important;
+	margin-bottom: 13rem !important;
 }
 
 .util-margin-bottom {
 	display: block !important;
 	margin-bottom: 5rem !important;
-}
-.util-margin-bottom-small {
-	display: block !important;
-	margin-bottom: 2rem !important;
 }
 
 .util-padding-top {
@@ -57,10 +70,6 @@
 .util-padding-bottom {
 	display: block !important;
 	padding-bottom: 5rem !important;
-}
-
-.util-border-bottom-double {
-	border-bottom: 3px double var(--color-accent) !important;
 }
 
 .util-opacity-low {
@@ -75,20 +84,6 @@
 	opacity: 0.4 !important;
 }
 
-.util-caplock {
-	text-transform: uppercase !important;
-}
-
-.util-bold {
-	font-weight: 600 !important;
-}
-
-.util-underline {
-	text-decoration: underline !important;
-	text-decoration-color: var(--color-transparent-mid) !important;
-	text-underline-offset: 0.7rem !important;
-}
-
 .util-flex-x {
 	display: flex !important;
 	justify-content: center !important;
@@ -99,21 +94,20 @@
 	align-items: center !important;
 }
 
-.util-cursor-pointer {
-	cursor: pointer !important;
-}
-
 .util-grid-col-remove {
 	display: grid !important;
 	grid-template-columns: none !important;
 }
+
 .util-grid-row-remove {
 	display: grid !important;
 	grid-template-rows: none !important;
 }
+
 .util-align-self-end-grid {
 	align-self: end !important;
 }
+
 .util-align-self-start-grid {
 	align-self: start !important;
 }
@@ -140,4 +134,16 @@
 
 .util-opacity-1 {
 	opacity: 1 !important;
+}
+
+.util-cursor-pointer {
+	cursor: pointer !important;
+}
+
+.util-caplock {
+	text-transform: uppercase !important;
+}
+
+.util-bold {
+	font-weight: 600 !important;
 }

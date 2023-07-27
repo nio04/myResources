@@ -47,17 +47,12 @@
 					animation-duration: 3s;
 				}
 
-				.nav-link:link,
-				.nav-link:visited {
+				.nav-link:link {
 					display: block;
 					width: 100%;
 					text-align: center;
 					text-decoration: none;
-					text-transform: uppercase;
-					letter-spacing: 0.3rem;
-					font-size: 3.6rem;
-					font-family: var(--font-tertiary);
-					color: var(--color-accent);
+
 					transition: all 0.4s;
 
 					@include abs.mediaQuery(mobile) {
@@ -70,6 +65,19 @@
 
 					&:hover {
 						color: var(--color-secondary);
+					}
+
+					&:visited {
+						color: var(--color-visited);
+					}
+
+					span {
+						text-transform: uppercase;
+						letter-spacing: 0.3rem;
+						font-size: 4rem;
+						font-weight: 500;
+						font-family: var(--font-tertiary);
+						color: var(--color-accent);
 					}
 				}
 			}

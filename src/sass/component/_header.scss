@@ -26,11 +26,11 @@
 		);
 		border: 3rem solid var(--color-accent);
 
-		letter-spacing: 0.3em;
-		word-spacing: 0.2rem;
-		font-size: 6rem;
+		font-size: 8rem;
 		font-family: var(--font-primary);
 		font-weight: 600;
+		letter-spacing: -3;
+		word-spacing: 1rem;
 		@extend .center-me-full;
 
 		animation-name: moveAndJump;
@@ -39,12 +39,17 @@
 		animation-fill-mode: both;
 
 		@include abs.mediaQuery(tab-land) {
-			font-size: 3rem;
+			font-size: 8rem;
+		}
+		@include abs.mediaQuery(tab-port) {
+			font-size: 6rem;
 		}
 
 		@include abs.mediaQuery(mobile) {
-			font-size: 3.5rem;
-			border: 3rem solid var(--color-transparent-high);
+			font-size: 5rem;
+		}
+		@include abs.mediaQuery(mob-small) {
+			font-size: 5.8rem;
 		}
 	}
 
@@ -58,57 +63,36 @@
 		letter-spacing: 0.5rem;
 
 		animation-name: dropAndBounce;
-		animation-delay: 0;
+		animation-delay: 0s;
 		animation-duration: 4s;
 
 		@extend .center-me-full;
 		@extend .util-caplock;
 	}
+
 	.main-home-resource__container
 		.main-home-resource__contents
 		.main-home-resource__header
 		h2 {
-		border: 2px inset rgba(0, 0, 0, 0.5);
-		border-radius: 2rem;
-		margin-bottom: 2rem;
-		font-family: var(--font-primary);
-		font-weight: 500;
-		text-align: center;
-		text-shadow: 2px 4px 7px;
-		box-shadow: inset 1px -3px 20px 8px rgba(0, 0, 0, 0.5);
-		padding: 1.9rem 0;
-		padding-left: 2.9rem;
-		transition: all 0.8s;
+		margin: 5rem 0;
+		transition: all 0.4s;
 		@extend .center-me-vertical;
 
 		&:hover {
-			font-weight: 600;
-			text-shadow: none;
-			box-shadow: none;
-			border: none;
-			border-radius: 0;
-			transform: translateY(-1rem);
+			background-color: var(--color-secondary-light);
 		}
 
 		&:active {
-			transform: translate(0) scale(0.98);
+			transform: scale(0.9);
 		}
 
 		a:link {
 			width: 100%;
 			height: 100%;
-			color: var(--color-accent);
-			font-family: var(--font-primary);
-			font-weight: 400;
-			font-size: 5rem;
-			text-transform: uppercase;
-			letter-spacing: 0.3rem;
 			cursor: pointer;
 			text-decoration: none;
 			transition: all 0.6s 0.2s;
-			&:visited {
-				color: var(--color-visited);
-			}
+
 			&:hover {
 				transform: translateY(-2rem);
 				letter-spacing: 8px;
@@ -117,6 +101,15 @@
 			@include abs.mediaQuery(tab-port) {
 				text-align: center;
 				letter-spacing: 0.5rem;
+			}
+
+			span {
+				color: var(--color-accent);
+				font-family: var(--font-primary);
+				font-weight: 600;
+				font-size: 8rem;
+				letter-spacing: -2;
+				text-transform: uppercase;
 			}
 		}
 	}
@@ -261,20 +254,19 @@
 	.content-area__container h3 {
 		font-family: var(--font-tertiary);
 		font-weight: 600;
-		// clip-path: polygon(5.14% 0px, 100% 0%, 96.46% 96.32%, 1.88% 100%);
+		line-height: 2.6rem;
 		padding: 1rem 5rem;
-		letter-spacing: 3px;
+		letter-spacing: -1;
 		margin: 1rem 0 2.2rem 0;
-		display: inline-block;
+		display: block;
 		-webkit-background-clip: text;
 		background-clip: text;
 		background-image: linear-gradient(
 			to right bottom,
-			var(--color-primary),
-			var(--color-accent)
+			var(--color-accent),
+			var(--color-secondary)
 		);
 		color: transparent;
-		text-shadow: 0px 0px 2px var(--color-accent);
 		@extend .util-margin-bottom;
 
 		@include abs.mediaQuery(tab-port) {
@@ -288,7 +280,6 @@
 		}
 
 		@include abs.mediaQuery(mobile) {
-			letter-spacing: 0;
 			padding: 1rem 2.8rem;
 		}
 	}

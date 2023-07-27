@@ -9,7 +9,10 @@
 	gap: 6rem;
 
 	@include abs.mediaQuery(tab-port) {
-		grid-template-rows: 9rem 80vh min-content 1fr;
+		grid-template-rows: 17rem calc(100vh - 28rem) min-content 1fr;
+	}
+	@include abs.mediaQuery(mobile) {
+		grid-template-rows: 15rem calc(100vh - 25rem) min-content 1fr;
 	}
 
 	.main-home-resource__container {

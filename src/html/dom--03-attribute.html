@@ -101,7 +101,7 @@
           <header>
             <h2>standard - non-standard attribute -- r/w</h2>
           </header>
-          <article class="content-area__container">
+          <article class="content-area__container util-border-bottom-double util-padding-bottom">
             <h3>target standard & non-standard attribute for read only</h3>
             <figure>
               <pre>
@@ -112,28 +112,27 @@
               </code>
               </pre>
             </figure>
-
             <details class="content__post util-cursor-pointer">
               get attribute value for standard and non standard
             </details>
-            </artcle>
+          </article>
 
-            <article class="content-area__container">
-              <h3>target standard & non-standard attribute for write only</h3>
-              <figure>
-                <pre>
-                  <code class="util-no-cap language-js match-braces rainbow-braces">
+          <article class="content-area__container util-margin-top">
+            <h3>target standard & non-standard attribute for write only</h3>
+            <figure>
+              <pre>
+                <code class="util-no-cap language-js match-braces rainbow-braces">
                 const target = document.querySelector("parentElementClassName")
                 const getInfo = target.setAttribute("attributeName", "modifyValue")
                 console.log(getInfo);
               </code>
-                </pre>
-              </figure>
+              </pre>
+            </figure>
 
-              <details class="content__post util-cursor-pointer">
-                set attribute value for standard and non standard
-              </details>
-              </artcle>
+            <details class="content__post util-cursor-pointer">
+              set attribute value for standard and non standard
+            </details>
+            </artcle>
         </section>
 
         <section id="content-index-rwDataSet" class="util-margin-bottom-high">

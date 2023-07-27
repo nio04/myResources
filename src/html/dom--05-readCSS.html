@@ -70,7 +70,7 @@
           <header>
             <h2>read css styles </h2>
           </header>
-          <article class="content-area__container">
+          <article class="content-area__container util-border-bottom-double util-padding-bottom">
             <h3>read inline css styles </h3>
             <figure>
               <pre>
@@ -84,30 +84,30 @@
             <details class="content__post util-cursor-pointer">
               read inline css styles. can not get styles value from "stylesheet"
             </details>
-            </artcle>
+          </article>
 
-            <article class="content-area__container">
-              <h3>read non-inline css styles</h3>
-              <figure>
-                <pre>
-                  <code class="util-no-cap language-js match-braces rainbow-braces">
+          <article class="content-area__container util-margin-top">
+            <h3>read non-inline css styles</h3>
+            <figure>
+              <pre>
+                <code class="util-no-cap language-js match-braces rainbow-braces">
                 const element = document.querySelector("elementClassName")
                 console.log(getComputedStyle(element).cssStylePropertyName)
               </code>
-                </pre>
-              </figure>
+              </pre>
+            </figure>
 
-              <details class="content__post util-cursor-pointer">
-                read non-inline css styles and get css styles from 'stylesheet'
-              </details>
-              </artcle>
+            <details class="content__post util-cursor-pointer">
+              read non-inline css styles and get css styles from 'stylesheet'
+            </details>
+          </article>
         </section>
 
         <section id="content-index-write" class="util-margin-bottom-high">
           <header>
             <h2>write css styles </h2>
           </header>
-          <article class="content-area__container">
+          <article class="content-area__container util-border-bottom-double util-padding-bottom">
             <h3>write inline css styles </h3>
             <figure>
               <pre>
@@ -121,13 +121,13 @@
             <details class="content__post util-cursor-pointer">
               write css styles as inline-css
             </details>
-            </artcle>
+          </article>
 
-            <article class="content-area__container">
-              <h3>write :root element from css styles</h3>
-              <figure>
-                <pre>
-                  <code class="util-no-cap language-js match-braces rainbow-braces">
+          <article class="content-area__container util-margin-top">
+            <h3>write :root element from css styles</h3>
+            <figure>
+              <pre>
+                <code class="util-no-cap language-js match-braces rainbow-braces">
                   //css
                   :root{
                     --primary-color : red;
@@ -136,13 +136,13 @@
                   //js
                   document.documentElement.style.setProperty("--primary-color, "white")
               </code>
-                </pre>
-              </figure>
+              </pre>
+            </figure>
 
-              <details class="content__post util-cursor-pointer">
-                write :root property values
-              </details>
-              </artcle>
+            <details class="content__post util-cursor-pointer">
+              write :root property values
+            </details>
+            </artcle>
         </section>
       </main>
 
