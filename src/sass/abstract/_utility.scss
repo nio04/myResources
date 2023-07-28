@@ -147,3 +147,16 @@
 .util-bold {
 	font-weight: 600 !important;
 }
+
+.link-active {
+	background-color: var(--color-secondary-300);
+
+	a {
+		box-sizing: content-box;
+		font-style: italic;
+		font-weight: 600;
+		letter-spacing: 1px;
+		outline: 4px solid var(--color-secondary-400);
+		outline-offset: 0.8rem;
+	}
+}

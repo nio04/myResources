@@ -6,44 +6,44 @@
 .content-page__container {
 	.nav__container {
 		.main-header-01 {
-			font-size: 11rem;
+			font-size: 8rem;
 
 			@include abs.mediaQuery(tab-land) {
-				font-size: 9rem;
+				font-size: 7rem;
 			}
 
 			@include abs.mediaQuery(tab-port) {
-				font-size: 7.5rem;
+				font-size: 5rem;
 			}
 
 			@include abs.mediaQuery(mobile) {
-				font-size: 5.5rem;
+				font-size: 4.2rem;
 			}
 
 			@include abs.mediaQuery(mob-small) {
-				font-size: 6rem;
+				font-size: 4.6rem;
 			}
 		}
 
 		///////////////
 		/// SECOND PAGE
 		.main-header-02 {
-			font-size: 8.4rem;
+			font-size: 7rem;
 
 			@include abs.mediaQuery(tab-land) {
-				font-size: 7.5rem;
-			}
-
-			@include abs.mediaQuery(tab-port) {
 				font-size: 6rem;
 			}
 
+			@include abs.mediaQuery(tab-port) {
+				font-size: 4.5rem;
+			}
+
 			@include abs.mediaQuery(mobile) {
-				font-size: 5rem;
+				font-size: 3.6rem;
 			}
 
 			@include abs.mediaQuery(mob-small) {
-				font-size: 5.3rem;
+				font-size: 4rem;
 			}
 		}
 	}

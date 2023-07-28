@@ -3,6 +3,7 @@ const mainHomeContainer = document.querySelector('.main-home__container');
 const mainHomeAllSection = document.querySelectorAll(
 	'.main-home-resource__contents'
 );
+
 const contentPageContainer = document.querySelector('.content-page__container');
 const contentMainHeader = document.querySelector('.nav__container');
 const contentNav = document.querySelector('.sticky-nav__container');
@@ -13,9 +14,12 @@ const contentGoBottom = document.querySelector('.to-bottom-btn');
 const contentArticles = document.querySelectorAll('.content-area__container');
 const contentFooter = document.querySelector('footer');
 
+const mainHomeObsChecker =
+	contentPageContainer ??
+	getComputedStyle(document.querySelector('.main-home__container')).width;
 ///////////////
 // MAIN HOME PAGE --NAV LIST SHOW ON 20% VIEW
-if (mainHomeContainer) {
+if (mainHomeContainer && parseFloat(mainHomeObsChecker) <= 872) {
 	mainHomeAllSection.forEach((el) => {
 		el.classList.add('util-opacity-0');
 	});
@@ -34,11 +38,7 @@ if (mainHomeContainer) {
 		threshold: 0.2,
 	});
 
-	const mainHomeObsChecker = getComputedStyle(
-		document.querySelector('.main-home__container')
-	).width;
-
-	if (mainHomeObsChecker <= '872px') {
+	if (parseFloat(mainHomeObsChecker) <= 872) {
 		mainHomeAllSection.forEach((el) => {
 			mainHomeSectionsObs.observe(el);
 		});

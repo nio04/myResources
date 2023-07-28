@@ -16,11 +16,6 @@
 			text-transform: lowercase;
 			padding: 1.5rem;
 			margin-left: 2rem;
-			// border: 1px solid var(--color-accent);
-
-			// &:not(:first-of-type) {
-			// 	border-top: 1px solid var(--color-accent);
-			// }
 
 			@include bp.mediaQuery(tab-port) {
 				margin-left: 1rem;
@@ -50,12 +45,9 @@
 				font-family: var(--font-code);
 				font-weight: 600;
 				text-transform: lowercase;
-				background-color: var(--color-secondary-light);
-				outline: 1px solid var(--color-secondary);
-				box-shadow: 2px 2px 3px var(--color-transparent-mid);
-				outline-offset: 1px;
+				background-color: var(--color-secondary-200);
 				border-radius: 4px;
-				color: var(--color-accent);
+				color: var(--color-accent-600);
 				padding: 0 0.8rem;
 			}
 		}
