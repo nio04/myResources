@@ -1,10 +1,3 @@
-/// media query break point
-$bp-largest: 112.5em; //1800px +  [big-desk]
-$bp-large: 75em; //1200px  [tab-land]  count to -> 901px
-$bp-medium: 56.25em; //900px  [tab-port] count to -> 601px
-$bp-small: 37.5em; //600px  [mobile]  count to -> 401px
-$bp-small-extra: 25em; //400px  [mobile-small]   count to -> 320px
-
 :root {
 	--font-primary: 'Arvo', serif; //300, 400 600
 	--font-secondary: 'Hahmlet', serif; //500, 700
@@ -30,6 +23,7 @@ $bp-small-extra: 25em; //400px  [mobile-small]   count to -> 320px
 	--color-secondary-600: #4b5563;
 
 	--color-black: #000000;
+	--color-white: #fff;
 
 	--color-accent-600: #57534e;
 	--color-accent-700: #44403c;
@@ -37,4 +31,20 @@ $bp-small-extra: 25em; //400px  [mobile-small]   count to -> 320px
 	--color-accent-900: #1c1917;
 
 	--color-visited: #b91c1c;
+
+	--color-black-replace: #000;
+
+	///////////////////
+	// DARK MODE COLOR
+	///////////////////
+	// PRIMARY(CYAN)
+	// secondary(sky)
+	// ACCENT(violet)
+	// visited: #f97316;
 }
+/// media query break point
+$bp-largest: 112.5em; //1800px +  [big-desk]
+$bp-large: 75em; //1200px  [tab-land]  count to -> 901px
+$bp-medium: 56.25em; //900px  [tab-port] count to -> 601px
+$bp-small: 37.5em; //600px  [mobile]  count to -> 401px
+$bp-small-extra: 25em; //400px  [mobile-small]   count to -> 320px

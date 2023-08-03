@@ -1,5 +1,6 @@
-@use '../layout/' as layout;
 @use '../abstract/' as abs;
+@use '../base/' as base;
+@use '../layout/' as layout;
 
 // CONTENT - 01 : git fundamental
 .content-page__container {

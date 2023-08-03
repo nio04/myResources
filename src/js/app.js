@@ -1,4 +1,5 @@
 'use strict';
+
 const mainHomeContainer = document.querySelector('.main-home__container');
 const mainHomeAllSection = document.querySelectorAll(
 	'.main-home-resource__contents'
@@ -7,6 +8,7 @@ const mainHomeAllSection = document.querySelectorAll(
 const contentPageContainer = document.querySelector('.content-page__container');
 const contentMainHeader = document.querySelector('.nav__container');
 const contentNav = document.querySelector('.sticky-nav__container');
+const contentStickyNavBtn = document.querySelector('.mode__changer_btn');
 const contentMainSection = document.querySelector('main');
 const contentFloatButtons = document.querySelectorAll('.float-btn__container');
 const contentGoTop = document.querySelector('.to-top-btn');
@@ -14,11 +16,16 @@ const contentGoBottom = document.querySelector('.to-bottom-btn');
 const contentArticles = document.querySelectorAll('.content-area__container');
 const contentFooter = document.querySelector('footer');
 
+///////////////////
+////// OPERATON STARTS /////
+////////////////////
+
+/////////////////////
+// MAIN HOME PAGE --NAV LIST SHOW ON 20% VIEW
 const mainHomeObsChecker =
 	contentPageContainer ??
 	getComputedStyle(document.querySelector('.main-home__container')).width;
 ///////////////
-// MAIN HOME PAGE --NAV LIST SHOW ON 20% VIEW
 if (mainHomeContainer && parseFloat(mainHomeObsChecker) <= 872) {
 	mainHomeAllSection.forEach((el) => {
 		el.classList.add('util-opacity-0');
@@ -68,6 +75,35 @@ if (contentPageContainer) {
 	});
 	contentStickyNavObs.observe(contentMainHeader);
 }
+
+/////////////
+// CONTENT PAGE -- STICKY NAV - DAY/NIGHT MODE CHANGER
+if (contentPageContainer) {
+	let savedModeState;
+	const allSiblings = [];
+	for (const child of contentStickyNavBtn.children) {
+		allSiblings.push(child);
+	}
+
+	const modeChanger = () => {
+		if (allSiblings[0].classList[0] === 'day') {
+			document.querySelector('body').classList.add('nightTheme');
+			allSiblings[0].innerHTML = `<use xlink:href="/sprite.e70822e0.svg#dayMode"></use>`;
+			savedModeState = 'night';
+			allSiblings[0].classList.value = 'night';
+		} else if (allSiblings[0].classList[0] === 'night') {
+			allSiblings[0].innerHTML = `<use xlink:href="/sprite.e70822e0.svg#nightMode"></use>`;
+			savedModeState = 'day';
+			allSiblings[0].classList.value = 'day';
+			document.querySelector('body').classList.remove('nightTheme');
+		}
+	};
+	contentStickyNavBtn.addEventListener('click', (ev) => {
+		ev.preventDefault();
+		modeChanger();
+	});
+}
+
 /////////////
 //CONTENT PAGE --SMOOTH SCROLL [TOP, BOTTOM] BUTTON
 if (contentPageContainer) {

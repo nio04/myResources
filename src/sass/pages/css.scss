@@ -1,6 +1,7 @@
 // ALL CSS CONTENT PAGE DESIGN TABLE
-@use '../layout/' as layout;
 @use '../abstract/' as abs;
+@use '../base/' as base;
+@use '../layout/' as layout;
 
 // FIRST PAGE
 .content-page__container {

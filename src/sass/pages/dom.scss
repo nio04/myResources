@@ -1,5 +1,6 @@
-@use '../layout/' as layout;
 @use '../abstract/' as abs;
+@use '../base/' as base;
+@use '../layout/' as layout;
 
 .content-page__container {
 	.nav__container {

@@ -24,12 +24,13 @@
 		}
 
 		.content__post {
+			display: block;
+			position: relative;
+			color: var(--color-black-replace);
 			padding: 0rem 5rem 1rem 5rem;
 			margin-top: 3rem;
 			text-transform: capitalize;
 			line-height: 9rem;
-			display: block;
-			position: relative;
 			font-size: 3.2rem;
 			font-family: var(--font-content);
 			font-weight: 400;

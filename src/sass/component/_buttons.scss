@@ -46,11 +46,13 @@
 			svg {
 				height: 2rem;
 				width: 2rem;
+				fill: var(--color-accent-900);
 				margin-right: 0.5rem;
 
 				@include abs.mediaQuery(mobile) {
 					height: 4rem;
 					width: 4rem;
+					fill: var(--color-accent-900);
 					margin: 0;
 				}
 			}

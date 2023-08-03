@@ -1,22 +1,23 @@
-@use '../layout/' as layout;
 @use '../abstract/' as abs;
+@use '../base/' as base;
+@use '../layout/' as layout;
 
 .content-page__container {
 	.nav__container {
 		.main-header-01 {
-			font-size: 7rem;
+			font-size: 5rem;
 
 			@include abs.mediaQuery(tab-land) {
-				font-size: 6rem;
+				font-size: 4.1rem;
 			}
 			@include abs.mediaQuery(tab-port) {
-				font-size: 4.5rem;
+				font-size: 3.2rem;
 			}
 			@include abs.mediaQuery(mobile) {
-				font-size: 3.5rem;
+				font-size: 2.6rem;
 			}
 			@include abs.mediaQuery(mob-small) {
-				font-size: 4.3rem;
+				font-size: 3rem;
 			}
 		}
 	}
