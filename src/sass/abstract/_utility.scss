@@ -162,3 +162,8 @@
 		outline-offset: 0.8rem;
 	}
 }
+
+.util-remove-header-svg {
+	grid-template-columns: 1fr !important;
+	grid-template-rows: 17rem 8rem 1fr !important;
+}

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../sass/pages/miscs.scss" />
+    <link rel="stylesheet" href="../sass/theme/prism-light.css">
+    <script src="../js/prism.js" defer></script>
+    <script src="../js/app.js" defer></script>
+    <title>markDown : related</title>
+  </head>
+  <body>
+    <div class="content-page__container">
+      <header class="nav__container util-remove-header-svg">
+        <h1 class="main-header-01">markdown syntax guide</h1>
+        <header class="section">
+          <h2>section</h2>
+        </header>
+        <nav class="indexes">
+          <a href="#content-index-escape">
+            <span>
+              escape special character
+            </span>
+          </a>
+          <a href="#content-index-heading">
+            <span>
+              heading
+            </span>
+          </a>
+          <a href="#content-index-textFormat">
+            <span>
+              text format [italic, strong, strike-through, horizontal-line, blockquote]
+            </span>
+          </a>
+          <a href="#content-index-ul">
+            <span>
+              unorder list
+            </span>
+          </a>
+          <a href="#content-index-ol">
+            <span>
+              order list
+            </span>
+          </a>
+          <a href="#content-index-inCode">
+            <span>
+              inline code
+            </span>
+          </a>
+          <a href="#content-index-link">
+            <span>
+              link [href, image]
+            </span>
+          </a>
+          <a href="#content-index-github">
+            <span>
+              github special
+            </span>
+          </a>
+        </nav>
+      </header>
+
+      <!-- main home button -->
+      <nav class="sticky-nav__container">
+        <a href="index.html" class="mode__changer_btn">
+          <svg class="day">
+            <use xlink:href="../img/sprite.svg#nightMode"></use>
+          </svg>
+          <span>change mode</span>
+        </a>
+        <a href="index.html">
+          <svg>
+            <use xlink:href="../img/sprite.svg#home"></use>
+          </svg>
+          <span>main home</span>
+        </a>
+      </nav>
+
+      <!-- main post -->
+      <main class=" line-numbers util-margin-bottom-high util-margin-top-high">
+        <!-- adding hover [go to top] button -->
+        <div class="float-btn__container to-top-btn">
+          <a href="#">
+            <svg>
+              <use xlink:href="../img/sprite.svg#to-top"></use>
+            </svg>
+            <span>top</span>
+          </a>
+        </div>
+        <!-- adding hover [go to bottom] button -->
+        <div class="float-btn__container to-bottom-btn">
+          <a href="#bottom-side">
+            <svg>
+              <use xlink:href="../img/sprite.svg#to-bottom"></use>
+            </svg>
+            <span>bottom</span>
+          </a>
+        </div>
+
+        <!-- STORY BEGINS -->
+        <section id="content-index-escape" class="util-margin-bottom-high">
+          <header>
+            <h2>escape special character</h2>
+          </header>
+          <figure>
+            <pre>
+              <code class="language-md match-braces rainbow-braces">
+                \*escaping astric character*\
+            </code>
+            </pre>
+          </figure>
+          <article class="content-area__container">
+            <h3>escape special character</h3>
+            <details class="content__post util-cursor-pointer">
+              escape special character by adding " \ "
+            </details>
+          </article>
+        </section>
+
+        <section id="content-index-heading" class="util-margin-bottom-high">
+          <header>
+            <h2>heading specifier</h2>
+          </header>
+          <figure>
+            <pre>
+              <code class="language-md match-braces rainbow-braces">
+                # this is heading 1
+                ## this is heading 2
+                ### this is heading 3
+                #### this is heading 4
+                ##### this is heading 5
+                ###### this is heading 6
+            </code>
+            </pre>
+          </figure>
+          <article class="content-area__container">
+            <h3>heading</h3>
+            <details class="content__post util-cursor-pointer">
+              specifiy heading tag with " # " [space] [content]
+            </details>
+          </article>
+        </section>
+
+        <section id="content-index-textFormat" class="util-margin-bottom-high">
+          <header>
+            <h2>format typhography</h2>
+          </header>
+          <figure>
+            <pre>
+              <code class="language-md match-braces rainbow-braces">
+               _this is italic text_
+              **this is strong text**
+              ~~ //STRIKE-THROUGH
+              --- //this is horizontal line
+              > this is block-quote
+            </code>
+            </pre>
+          </figure>
+          <article class="content-area__container">
+            <h3>text formatting</h3>
+            <details class="content__post util-cursor-pointer">
+              <ul class="list-wrap__container">
+                <li class="list">italic text : " _ "</li>
+                <li class="list">stong text : " ** "</li>
+                <li class="list">strike through : " ~~ "</li>
+                <li class="list">horizontal line : " --- "</li>
+                <li class="list">block-qute : " > "</li>
+              </ul>
+            </details>
+          </article>
+        </section>
+
+        <section id="content-index-ul" class="util-margin-bottom-high">
+          <header>
+            <h2>unorder list</h2>
+          </header>
+          <figure>
+            <pre>
+              <code class="language-md match-braces rainbow-braces">
+                - unorder list item1
+                - unorder list item2
+                  - unorder nested list item1
+                  - unorder nested list item2
+              </code>
+            </pre>
+          </figure>
+          <article class="content-area__container">
+            <h3>unorder list</h3>
+            <details class="content__post util-cursor-pointer">
+              specifiy unorder list items by " - " [space]
+              <br>
+              specifiy nested unorder list items by [tab]- [space] [content]
+            </details>
+          </article>
+        </section>
+
+        <section id="content-index-ol" class="util-margin-bottom-high">
+          <header>
+            <h2>order list</h2>
+          </header>
+          <figure>
+            <pre>
+              <code class="language-md match-braces rainbow-braces">
+                1. order list item1
+                2. order list item2
+              </code>
+            </pre>
+          </figure>
+          <article class="content-area__container">
+            <h3>order list</h3>
+            <details class="content__post util-cursor-pointer">
+              specifiy unorder list items by "[counter]." [space]
+            </details>
+          </article>
+        </section>
+
+        <section id="content-index-inCode" class="util-margin-bottom-high">
+          <header>
+            <h2>inline code block</h2>
+          </header>
+          <figure>
+            <pre>
+              <code class="language-md match-braces rainbow-braces">
+                `this is inline code block`
+              </code>
+            </pre>
+          </figure>
+          <article class="content-area__container">
+            <h3>inline code block</h3>
+            <details class="content__post util-cursor-pointer">
+              specifiy inline code block by " ` " (backtique)
+            </details>
+          </article>
+        </section>
+
+        <section id="content-index-link" class="util-margin-bottom-high">
+          <header>
+            <h2>image & href links</h2>
+          </header>
+          <figure>
+            <pre>
+              <code class="language-md match-braces rainbow-braces">
+                [hrefLinkText](hrefLinkURL)
+                ![imgType](imgLink)
+              </code>
+            </pre>
+          </figure>
+          <article class="content-area__container">
+            <h3>image & href links</h3>
+            <details class="content__post util-cursor-pointer">
+              specify <span class="util-bold">href</span> link by "[linkText](absoluteLink)"
+              <br>
+              <br>
+              specify <span class="util-bold">image</span> by "![imageType](absoluteLink)"
+              <br>
+              Note : "imageType" for image, is just like "alt" attribute for image
+            </details>
+          </article>
+        </section>
+
+        <section id="content-index-github" class="util-margin-bottom-high">
+          <header>
+            <h2>github special</h2>
+          </header>
+          <article class="content-area__container">
+            <h3>block type code-blocks</h3>
+            <figure>
+              <pre>
+                <code class="language-md match-braces rainbow-braces">
+                ```js
+                this is multi-line code block for github
+                ```
+                </code>
+              </pre>
+            </figure>
+            <details class="content__post util-cursor-pointer">
+              specify multi line code block for github by " ``` "
+            </details>
+          </article>
+
+          <article class="content-area__container">
+            <h3>table</h3>
+            <figure>
+              <pre>
+                <code class="language-md match-braces rainbow-braces">
+                    | name | value |
+                    | ------ | ----- |
+                    | nishat | 26 |
+                    | hrdita | 00 |
+                  </code>
+              </pre>
+            </figure>
+          </article>
+
+          <article class="content-area__container">
+            <h3>task list</h3>
+            <figure>
+              <pre>
+                <code class="language-md match-braces rainbow-braces">
+                    - [x] TASK 1 -COMPLETE
+                    - [ ] TASK2 -INCOMPLETE
+                  </code>
+              </pre>
+            </figure>
+          </article>
+        </section>
+      </main>
+    </div>
+
+  </body>
+
+</html>

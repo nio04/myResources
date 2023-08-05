@@ -265,7 +265,7 @@
 			@extend %center-me-full;
 			font-family: var(--font-secondary);
 			font-weight: 700;
-			letter-spacing: 0.6rem;
+			letter-spacing: -1;
 			position: relative;
 
 			@include abs.mediaQuery(mobile) {
