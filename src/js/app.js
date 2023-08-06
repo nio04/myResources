@@ -14,6 +14,7 @@ const contentFloatButtons = document.querySelectorAll('.float-btn__container');
 const contentGoTop = document.querySelector('.to-top-btn');
 const contentGoBottom = document.querySelector('.to-bottom-btn');
 const contentArticles = document.querySelectorAll('.content-area__container');
+const postContainer = document.querySelectorAll('details');
 const contentFooter = document.querySelector('footer');
 
 ///////////////////
@@ -147,21 +148,29 @@ if (contentPageContainer) {
 //////////////////
 // CONTENT PAGE --show ARTICLES ON 20% VIEW
 if (contentPageContainer) {
+	// HIDE ALL THE CONTENTS AT THE BEGIN
 	contentArticles.forEach((el) => {
 		el.classList.add('util-opacity-0');
 	});
 
+	// CONTENT OBSERVER CALL-BACK
 	const contentArticlesCallback = ([entries]) => {
 		if (entries.isIntersecting) entries.target.classList.remove('util-opacity-0');
 		if (!entries.isIntersecting) entries.target.classList.add('util-opacity-0');
 	};
 
+	// CREATE INTERSECTION OBSERVER OBJECT
 	const contentArticlesObs = new IntersectionObserver(contentArticlesCallback, {
 		root: null,
-		threshold: 0.6,
+		threshold: 0.4,
 	});
 
+	// PASS ALL THE CONTENTS FOR OBSERVE
 	contentArticles.forEach((el) => {
+		// AUTO ADD [OPEN] ATTRIBUTE TO THE DETAILS TAG
+		postContainer.forEach((el) => {
+			el.open = true;
+		});
 		contentArticlesObs.observe(el);
 	});
 }
