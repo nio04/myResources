@@ -4,7 +4,11 @@ const mainHomeContainer = document.querySelector('.main-home__container');
 const mainHomeAllSection = document.querySelectorAll(
 	'.main-home-resource__contents'
 );
-
+const mainHomeSideNavContainer = document.querySelector('.side-nav__container');
+const mainHomeSideNavButton = document.querySelectorAll('.side-nav__container svg');
+const mainHomeAllListContainer = document.querySelector(
+	'.main-home-resource__container'
+);
 const contentPageContainer = document.querySelector('.content-page__container');
 const contentMainHeader = document.querySelector('.nav__container');
 const contentNav = document.querySelector('.sticky-nav__container');
@@ -21,24 +25,63 @@ const contentFooter = document.querySelector('footer');
 ////// OPERATON STARTS /////
 ////////////////////
 
+////////////////////////
+// MAIN HOME PAGE - NAVIGATION BUTTON
+if (mainHomeContainer) {
+	const sideNavCallback = ([entries]) => {
+		if (entries.isIntersecting)
+			mainHomeSideNavContainer.classList.add('util-opacity-1', 'util-sticky');
+		if (!entries.isIntersecting)
+			mainHomeSideNavContainer.classList.remove('util-opacity-1', 'util-sticky');
+	};
+
+	const mainHomeSideNavObserver = new IntersectionObserver(sideNavCallback, {
+		root: null,
+		threshold: 0.1,
+	});
+
+	mainHomeSideNavObserver.observe(mainHomeAllListContainer);
+
+	// BOTH NAVIGATION BUTTON [navOpen, navClose]
+	mainHomeSideNavButton.forEach((svg) => {
+		svg.addEventListener('click', (ev) => {
+			if (ev.target.classList.value === 'open') {
+				// ADD CLASS IF [navOpen] BUTTON IS OPEN
+				ev.target.classList.add('util-hide-element-transform');
+				ev.target.nextElementSibling.classList.add('util-show-element-transform');
+			} else {
+				// REMOVE CLASS IF [navOpen] BUTTON IS NOT OPEN
+				document
+					.querySelector('.side-nav__container .open')
+					.classList.remove('util-hide-element-transform');
+
+				document
+					.querySelector('.side-nav__container .close')
+					.classList.remove('util-show-element-transform');
+			}
+
+			// TOGGLE NAVIGATION LISTS
+			document
+				.querySelector('.side-nav__container ul')
+				.classList.toggle('util-show-element-transform');
+		});
+	});
+}
 /////////////////////
-// MAIN HOME PAGE --NAV LIST SHOW ON 20% VIEW
+// MAIN HOME PAGE -- CONTENT LIST SHOW ON 20% VIEW && APPLY ONLY ON LESS TAHN 872px
 const mainHomeObsChecker =
 	contentPageContainer ??
 	getComputedStyle(document.querySelector('.main-home__container')).width;
 ///////////////
-if (mainHomeContainer && parseFloat(mainHomeObsChecker) <= 872) {
+if (mainHomeContainer && parseInt(mainHomeObsChecker) <= 870) {
+	// AUTO HIDE ALL SECTIONS
 	mainHomeAllSection.forEach((el) => {
 		el.classList.add('util-opacity-0');
 	});
 
 	const mainHomeSectionsCallback = ([entries]) => {
-		if (entries.isIntersecting) {
-			entries.target.classList.remove('util-opacity-0');
-		}
-		if (!entries.isIntersecting) {
-			entries.target.classList.add('util-opacity-0');
-		}
+		if (entries.isIntersecting) entries.target.classList.remove('util-opacity-0');
+		if (!entries.isIntersecting) entries.target.classList.add('util-opacity-0');
 	};
 
 	const mainHomeSectionsObs = new IntersectionObserver(mainHomeSectionsCallback, {
@@ -108,11 +151,13 @@ if (contentPageContainer) {
 /////////////
 //CONTENT PAGE --SMOOTH SCROLL [TOP, BOTTOM] BUTTON
 if (contentPageContainer) {
+	// TOP BUTTON
 	contentGoTop.addEventListener('click', (ev) => {
 		ev.preventDefault();
 		contentMainHeader.scrollIntoView({ behavior: 'smooth' });
 	});
 
+	// BOTTOM BUTTON
 	contentGoBottom.addEventListener('click', (ev) => {
 		ev.preventDefault();
 		contentFooter.scrollIntoView({ behavior: 'smooth' });
@@ -122,6 +167,7 @@ if (contentPageContainer) {
 ////////////////
 // CONTENT PAGE --HIDE NAV BUTTON [GO TOP, GO BOTTOM] FROM <HEADER>
 if (contentPageContainer) {
+	// HIDE FLOAT BUTTON CONTAINER
 	contentFloatButtons.forEach((el) => {
 		el.classList.add('util-opacity-0');
 	});
@@ -145,6 +191,7 @@ if (contentPageContainer) {
 
 	contentNavigatorButton.observe(contentMainSection);
 }
+
 //////////////////
 // CONTENT PAGE --show ARTICLES ON 20% VIEW
 if (contentPageContainer) {

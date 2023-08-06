@@ -86,6 +86,13 @@
 	opacity: 0.4 !important;
 }
 
+.util-opacity-0 {
+	opacity: 0 !important;
+}
+
+.util-opacity-1 {
+	opacity: 1 !important;
+}
 .util-flex-x {
 	display: flex !important;
 	justify-content: center !important;
@@ -130,14 +137,6 @@
 	display: block !important;
 }
 
-.util-opacity-0 {
-	opacity: 0 !important;
-}
-
-.util-opacity-1 {
-	opacity: 1 !important;
-}
-
 .util-cursor-pointer {
 	cursor: pointer !important;
 }
@@ -166,4 +165,11 @@
 .util-remove-header-svg {
 	grid-template-columns: 1fr !important;
 	grid-template-rows: 17rem 8rem 1fr !important;
+}
+
+.util-hide-element-transform {
+	transform: translateX(-200rem) !important;
+}
+.util-show-element-transform {
+	transform: translateX(0) !important;
 }

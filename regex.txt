@@ -1,0 +1,144 @@
+//FLAGS
+
+1) g -- global flags :: enable regex for full content
+
+
+2) i -- case insensitive :: capture both capital & small character
+
+
+
+
+//////////
+//modifier
+1) + :: [regex]+
+
+__ex : /[0-9]+/ --- this will keep matching any digits from at least 1 times to unlimited times!
+
+
+
+////////////
+//meta-character
+
+1) \d --- matches digits
+
+2) \w --- matches <a-z><A-Z><0-9><_>
+
+3) \s --- matches whitespace && tab
+
+4) \t --- matches tab only
+
+
+
+////////////////
+// special characters
+
+1) + --- matches one or more 
+
+
+2) \ ---- escape character
+
+__ ex : /nio\./  --- match <nio.> will not match <nio>
+
+
+
+3) [] --- character set
+
+4) [^] --- match anything except specified in character set
+
+
+5) ?  --- match 0 or 1
+
+__ ex : /helo?/  -- match <hel>, will also match <helo>
+
+
+
+6) .  --- match any character except newLine
+
+__ ex : /ni./  -- match <nio>, not match <ni>
+
+
+
+7) *  --- match 0 or more
+
+
+8) | --- means alternative matches
+
+__ ex : /(n|m)io/  -- will match <nio>, match <mio>, will not match <pio>
+
+
+9)  () --- means evaluate expression within this bracket first. then calculate the rest later
+
+
+
+
+/////////
+// character set
+
+1) match multiple character for single position :: [nm](rest of words)
+
+__ ex : /[nm]io/ --- will capture both ... <nio>and <mio>
+__this will not capture <bio> 
+
+
+2) match everything except specified characters :: [^nm](rest of words)
+
+__ex : /[^nm]io/ --- will capture <bio>
+__this will not capture <nio> or <mio>
+
+
+//////////////
+//range
+
+1) range for alphabet :: [a-z](rest words)
+
+__ex : /[a-z]io/ --- will select all the words containing <io> which starts with <a> to <z>
+
+__this will not select any words starts with anything else <other than alphabet> containing <io>
+
+
+2) range match without <i> (insensitive) flag :: [smallCharRangeCapitalCharRange](rest words)
+
+__ex : /[a-zA-Z]io/ -- will select both upper & lower case for first character - containing with <io>
+
+__this will not select any words starting with anything else than alphabets containing <io>
+
+
+3) range match for digits :: [0-9](rest words)
+
+__ex : /[0-9]io/ -- will select any words starting with digit range containing<io>
+
+__ this will not select any words that does not starts with specified digit range
+
+
+
+//////////
+//repeat
+
+1)  repeating specific :: [regex]{times}
+
+__ ex : /[0-9]{11}/ --- will select any digits from 0 to 9 repeating only for 11 times!
+
+__ this will not select any words that does have 10 digits!
+
+
+2)  repeating range :: [range]{startCount, endCount}
+
+__ ex : /[a-z]{5,8}/ --- this will select any words that contains 5 to 8 numers character from specified range
+
+__ this will not select any words that does not have more than 5 && less than 8 numbers characters from range
+
+3) repeating range LEAST :: [regex]{leastCount, }
+
+__ ex : /[a-z]{5, }/  --- will select any words from a to z which contains at least 5 characters 
+
+__ will not select if the character words contains 4 characters only!
+
+
+
+//////////////
+// start ending pattern
+
+1) start and ending pattern :: ^match$
+
+__ ex : /^[0-9]{5}$/  -- will match <12345>, will not match <123456>
+

@@ -76,46 +76,108 @@
 			}
 		}
 	}
+	.main-home-resource__container {
+		position: relative;
 
-	.main-home-resource__contents ul {
-		display: grid;
-		grid-template-columns: repeat(2, minmax(25rem, max-content));
-		align-items: stretch;
-		gap: 1.3rem;
+		.side-nav__container {
+			opacity: 0;
+			position: absolute;
+			top: 3rem;
+			left: 2rem;
+			z-index: 1;
+			display: inline-block;
 
-		@include abs.mediaQuery(tab-land) {
-			grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
+			cursor: pointer;
+
+			svg {
+				height: 5rem;
+				width: 5rem;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.close {
+				transform: translateX(-200rem);
+			}
+			ul {
+				// display: none;
+				margin-top: 6rem;
+				background-color: var(--color-secondary-200);
+				list-style-type: none;
+				height: 50rem;
+				width: 20vw;
+				transform: translateX(-200rem);
+
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				li {
+					a {
+						text-decoration: none;
+						font-size: 2.1rem;
+
+						span {
+							display: block;
+							text-align: center;
+							padding: 5px 0;
+							text-transform: uppercase;
+							color: var(--color-accent-900);
+							transition: all 0.4s;
+
+							&:active {
+								outline: 1px solid var(--color-accent-600);
+							}
+							&:hover {
+								display: block;
+								width: 100%;
+								color: var(--color-visited);
+								background-color: var(--color-primary-100);
+							}
+						}
+					}
+				}
+			}
 		}
 
-		@include abs.mediaQuery(tab-port) {
-			grid-template-columns: repeat(2, 1fr);
-			column-gap: 0.1rem;
-		}
-
-		@include abs.mediaQuery(mobile) {
-			grid-template-columns: 1fr;
-			grid-row-gap: 3rem;
-		}
-
-		li {
-			list-style-type: none;
-			padding: 0.9rem;
+		.main-home-resource__contents ul {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(25rem, max-content));
+			align-items: stretch;
+			gap: 1.3rem;
 
 			@include abs.mediaQuery(tab-land) {
-				margin: 0.5rem 0.1rem;
+				grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
 			}
 
 			@include abs.mediaQuery(tab-port) {
-				margin: 0.3rem 1.1rem;
+				grid-template-columns: repeat(2, 1fr);
+				column-gap: 0.1rem;
 			}
 
-			a {
-				@extend %center-me-vertical;
+			@include abs.mediaQuery(mobile) {
+				grid-template-columns: 1fr;
+				grid-row-gap: 3rem;
+			}
+
+			li {
+				list-style-type: none;
+				padding: 0.9rem;
+
+				@include abs.mediaQuery(tab-land) {
+					margin: 0.5rem 0.1rem;
+				}
+
+				@include abs.mediaQuery(tab-port) {
+					margin: 0.3rem 1.1rem;
+				}
+
+				a {
+					@extend %center-me-vertical;
+				}
 			}
 		}
 	}
 }
-
 // RESOURCE HOME NAV BAR
 .resorces-home-nav-bar {
 	ul {
