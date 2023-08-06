@@ -47,8 +47,12 @@ if (mainHomeContainer) {
 		svg.addEventListener('click', (ev) => {
 			if (ev.target.classList.value === 'open') {
 				// ADD CLASS IF [navOpen] BUTTON IS OPEN
-				ev.target.classList.add('util-hide-element-transform');
-				ev.target.nextElementSibling.classList.add('util-show-element-transform');
+				document
+					.querySelector('.side-nav__container .open')
+					.classList.add('util-hide-element-transform');
+				document
+					.querySelector('.side-nav__container .close')
+					.classList.add('util-show-element-transform');
 			} else {
 				// REMOVE CLASS IF [navOpen] BUTTON IS NOT OPEN
 				document
