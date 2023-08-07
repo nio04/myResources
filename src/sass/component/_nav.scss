@@ -317,6 +317,52 @@
 /// CONTENT PAGE [3RD PAGE]
 .content-page__container {
 	.sticky-nav__container {
+		.post__navigation__container {
+			height: 100%;
+			width: 30rem;
+			margin-right: auto;
+			z-index: 1;
+			button {
+				display: flex;
+				align-items: center;
+				height: 9.5rem;
+				width: 28rem;
+				padding: 2px 4px;
+				border: 0;
+				font-size: 1.9rem;
+				background-color: var(--color-primary-200);
+				svg {
+					height: 3rem;
+					width: 3.8rem;
+					fill: var(--color-accent-900);
+					margin-left: auto;
+					cursor: pointer;
+
+					&:active {
+						fill: var(--color-visited);
+					}
+				}
+				span {
+					color: var(--color-secondary-400);
+					font-size: 2.3rem;
+					text-transform: uppercase;
+				}
+			}
+			.nav__element-wrap {
+				display: none;
+				border: 1px solid var(--color-accent-600);
+				background-color: var(--color-primary-100);
+				.nav__item {
+					&:not(:last-child) {
+						margin-bottom: 1.6rem;
+						border-bottom: 2px solid var(--color-primary-300);
+					}
+					a {
+						padding-right: 0;
+					}
+				}
+			}
+		}
 		display: flex;
 		justify-content: flex-end;
 		box-sizing: content-box;

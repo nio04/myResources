@@ -15,6 +15,9 @@ const contentNav = document.querySelector('.sticky-nav__container');
 const contentStickyNavBtn = document.querySelector('.mode__changer_btn');
 const contentMainSection = document.querySelector('main');
 const contentFloatButtons = document.querySelectorAll('.float-btn__container');
+const postsNavigationButton = document.querySelector(
+	'.post__navigation__container button svg'
+);
 const contentGoTop = document.querySelector('.to-top-btn');
 const contentGoBottom = document.querySelector('.to-bottom-btn');
 const contentArticles = document.querySelectorAll('.content-area__container');
@@ -101,7 +104,7 @@ if (mainHomeContainer && parseInt(mainHomeObsChecker) <= 870) {
 }
 
 /////////////////
-// CONTENT PAGE --STICKY NAV IMPLEMENT --FOR <MAIN> TAG ONLY
+// CONTENT PAGE --STICKY NAV IMPLEMENT
 if (contentPageContainer) {
 	const stickyNav = ([entries]) => {
 		if (!entries.isIntersecting) {
@@ -149,6 +152,14 @@ if (contentPageContainer) {
 	contentStickyNavBtn.addEventListener('click', (ev) => {
 		ev.preventDefault();
 		modeChanger();
+	});
+}
+
+///////////////////
+// CONTENT-PAGE : SHOW POST NAVIGATION LISTS
+if (contentPageContainer) {
+	postsNavigationButton.addEventListener('click', () => {
+		document.querySelector('.nav__element-wrap').classList.toggle('util-display-y');
 	});
 }
 
