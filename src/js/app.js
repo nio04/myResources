@@ -104,13 +104,13 @@ if (mainHomeContainer && parseInt(mainHomeObsChecker) <= 870) {
 }
 
 /////////////////
-// CONTENT PAGE --STICKY NAV IMPLEMENT
+// CONTENT PAGE --STICKY NAV LAYOUT IMPLEMENT
 if (contentPageContainer) {
 	const stickyNav = ([entries]) => {
 		if (!entries.isIntersecting) {
 			contentNav.classList.remove('util-opacity-0');
 			contentNav.classList.add('util-opacity-1');
-			contentNav.style.height = '9.8rem';
+			contentNav.style.height = '6rem';
 			contentNav.classList.add('util-sticky');
 		}
 		if (entries.isIntersecting) {
@@ -122,13 +122,13 @@ if (contentPageContainer) {
 	const contentStickyNavObs = new IntersectionObserver(stickyNav, {
 		root: null,
 		threshold: 0,
-		rootMargin: '200px',
+		rootMargin: '100px',
 	});
 	contentStickyNavObs.observe(contentMainHeader);
 }
 
 /////////////
-// CONTENT PAGE -- STICKY NAV - DAY/NIGHT MODE CHANGER
+// CONTENT PAGE -- STICKY NAV - [DAY/NIGHT] MODE CHANGER
 if (contentPageContainer) {
 	let savedModeState;
 	const allSiblings = [];

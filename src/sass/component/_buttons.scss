@@ -4,13 +4,13 @@
 // CONTENT PAGE [3RD PAGE]
 .content-page__container {
 	main .float-btn__container {
+		height: 4rem;
 		position: fixed;
-		background-color: var(--color-secondary-200);
+		box-sizing: content-box;
 		font-weight: 900;
 		border: 5px solid var(--color-secondary-100);
-		box-sizing: content-box;
+		background-color: var(--color-secondary-200);
 		z-index: 100;
-		height: 3rem;
 		transition: all 0.2s ease-in-out;
 		@extend %center-me-full;
 
@@ -38,10 +38,12 @@
 			transform: scale(0.8);
 		}
 
-		a:link {
+		a:link,
+		a:visited {
 			text-decoration: none;
 			display: flex;
 			z-index: 1;
+			color: var(--color-accent-900);
 
 			svg {
 				height: 2rem;
@@ -67,7 +69,7 @@
 
 				&:hover {
 					animation-name: rainbowZoomIn;
-					animation-delay: 0.1;
+					animation-delay: 0.1s;
 					animation-duration: 3s;
 					animation-iteration-count: infinite;
 				}

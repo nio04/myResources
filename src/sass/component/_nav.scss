@@ -319,33 +319,37 @@
 	.sticky-nav__container {
 		.post__navigation__container {
 			height: 100%;
-			width: 30rem;
+			width: auto;
 			margin-right: auto;
 			z-index: 1;
 			button {
+				height: 95%;
+				width: 100%;
 				display: flex;
 				align-items: center;
-				height: 9.5rem;
-				width: 28rem;
 				padding: 2px 4px;
-				border: 0;
 				font-size: 1.9rem;
+				border: 0;
 				background-color: var(--color-primary-200);
 				svg {
 					height: 3rem;
 					width: 3.8rem;
-					fill: var(--color-accent-900);
 					margin-left: auto;
 					cursor: pointer;
+					fill: var(--color-accent-900);
 
 					&:active {
 						fill: var(--color-visited);
 					}
 				}
 				span {
-					color: var(--color-secondary-400);
-					font-size: 2.3rem;
+					height: 100%;
+					display: flex;
+					align-items: center;
+					padding-top: 1rem;
+					font-size: 2rem;
 					text-transform: uppercase;
+					color: var(--color-secondary-400);
 				}
 			}
 			.nav__element-wrap {
