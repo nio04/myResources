@@ -1,5 +1,7 @@
 'use strict';
 
+import icons from 'url:../img/sprite.svg';
+
 const mainHomeContainer = document.querySelector('.main-home__container');
 const mainHomeAllSection = document.querySelectorAll(
 	'.main-home-resource__contents'
@@ -104,13 +106,13 @@ if (mainHomeContainer && parseInt(mainHomeObsChecker) <= 870) {
 }
 
 /////////////////
-// CONTENT PAGE --STICKY NAV LAYOUT IMPLEMENT
+// CONTENT PAGE --STICKY NAV IMPLEMENT
 if (contentPageContainer) {
 	const stickyNav = ([entries]) => {
 		if (!entries.isIntersecting) {
 			contentNav.classList.remove('util-opacity-0');
 			contentNav.classList.add('util-opacity-1');
-			contentNav.style.height = '6rem';
+			contentNav.style.height = '9.8rem';
 			contentNav.classList.add('util-sticky');
 		}
 		if (entries.isIntersecting) {
@@ -122,13 +124,13 @@ if (contentPageContainer) {
 	const contentStickyNavObs = new IntersectionObserver(stickyNav, {
 		root: null,
 		threshold: 0,
-		rootMargin: '100px',
+		rootMargin: '200px',
 	});
 	contentStickyNavObs.observe(contentMainHeader);
 }
 
 /////////////
-// CONTENT PAGE -- STICKY NAV - [DAY/NIGHT] MODE CHANGER
+// CONTENT PAGE -- STICKY NAV - DAY/NIGHT MODE CHANGER
 if (contentPageContainer) {
 	let savedModeState;
 	const allSiblings = [];
@@ -139,11 +141,11 @@ if (contentPageContainer) {
 	const modeChanger = () => {
 		if (allSiblings[0].classList[0] === 'day') {
 			document.querySelector('body').classList.add('nightTheme');
-			allSiblings[0].innerHTML = `<use xlink:href="/sprite.e70822e0.svg#dayMode"></use>`;
+			allSiblings[0].innerHTML = `<use xlink:href="${icons}#dayMode"></use>`;
 			savedModeState = 'night';
 			allSiblings[0].classList.value = 'night';
 		} else if (allSiblings[0].classList[0] === 'night') {
-			allSiblings[0].innerHTML = `<use xlink:href="/sprite.e70822e0.svg#nightMode"></use>`;
+			allSiblings[0].innerHTML = `<use xlink:href="${icons}#nightMode"></use>`;
 			savedModeState = 'day';
 			allSiblings[0].classList.value = 'day';
 			document.querySelector('body').classList.remove('nightTheme');
