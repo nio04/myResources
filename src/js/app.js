@@ -4,7 +4,7 @@ import icons from 'url:../img/sprite.svg';
 
 const mainHomeContainer = document.querySelector('.main-home__container');
 const mainHomeSideNavContainer = document.querySelector('.side-nav__container');
-const mainHomeSideNavButton = document.querySelectorAll('.side-nav__container svg');
+const mainHomeSideNavBtn = document.querySelector('.sideNav__Btn svg');
 const mainHomeAllListContainer = document.querySelector(
 	'.main-home-resource__container'
 );
@@ -28,11 +28,14 @@ const contentFooter = document.querySelector('footer');
 // MAIN HOME PAGE - NAVIGATION BUTTON
 if (mainHomeContainer) {
 	const sideNavCallback = ([entries]) => {
+		const btnContainer = mainHomeSideNavBtn.closest('button');
 		if (entries.isIntersecting) {
-			mainHomeSideNavContainer.classList.add('util-opacity-1', 'util-sticky');
+			btnContainer.classList.add('util-sticky');
+			btnContainer.classList.remove('util-display-n');
 		}
 		if (!entries.isIntersecting) {
-			mainHomeSideNavContainer.classList.remove('util-opacity-1', 'util-sticky');
+			btnContainer.classList.remove('util-sticky');
+			btnContainer.classList.add('util-display-n');
 		}
 	};
 
@@ -42,27 +45,31 @@ if (mainHomeContainer) {
 	});
 	mainHomeSideNavObserver.observe(mainHomeAllListContainer);
 
-	// BOTH NAVIGATION BUTTON [navOpen, navClose] --> mainHomePage
-	mainHomeSideNavButton.forEach((svg) => {
-		svg.addEventListener('click', (ev) => {
-			const svgContainer = ev.target;
-			const ul = document.querySelector('.side-nav__container ul');
+	// MAIN HOME PAGE -- SIDE-NAV-BAR MANAGER
+	mainHomeSideNavBtn.addEventListener('click', () => {
+		const svgBtnOpen = () => {
+			mainHomeSideNavBtn.classList.remove('close');
+			mainHomeSideNavBtn.classList.add('open');
+			mainHomeSideNavBtn.innerHTML = `<use xlink:href="${icons}#navOpen"></use>`;
+			mainHomeSideNavContainer.classList.remove('contentPage-noTransform--js');
+		};
 
-			if (ev.target.classList.value === 'open') {
-				svgContainer.classList.remove('open');
-				svgContainer.classList.add('close');
-				ul.classList.add('util-display-y');
-				svgContainer.innerHTML = `<use xlink:href="${icons}#navClose"></use>`;
-			} else {
-				svgContainer.classList.add('open');
-				svgContainer.classList.remove('close');
-				svgContainer.innerHTML = `<use xlink:href="${icons}#navOpen"></use>`;
-				ul.classList.remove('util-display-y');
-			}
+		const svgBtnClose = () => {
+			mainHomeSideNavBtn.classList.remove('open');
+			mainHomeSideNavBtn.classList.add('close');
+			mainHomeSideNavBtn.innerHTML = `<use xlink:href="${icons}#navClose"></use>`;
+			mainHomeSideNavContainer.classList.add('contentPage-noTransform--js');
+		};
 
-			// TOGGLE NAVIGATION LISTS [show-hide]
-			ul.classList.toggle('util-show-element-transform');
-		});
+		if (mainHomeSideNavBtn.classList.value === 'open') {
+			svgBtnClose();
+
+			document.addEventListener('keydown', (ev) => {
+				if (ev.key === 'Escape') svgBtnOpen();
+			});
+		} else {
+			svgBtnOpen();
+		}
 	});
 }
 
@@ -70,31 +77,49 @@ if (mainHomeContainer) {
 // CONTENT PAGE --STICKY NAV IMPLEMENT
 if (contentPageContainer) {
 	const stickyNav = ([entries]) => {
-		if (!entries.isIntersecting) {
-			// contentNav.classList.remove('util-opacity-0');
+		const navStickOn = () => {
 			contentNav.classList.add('contentPage-stickyNav__js');
 			contentNavBtn.classList.add('util-opacity-1');
 			contentNavBtn.classList.remove('util-opacity-0');
+		};
+		const navStickOff = () => {
+			contentNav.classList.remove('contentPage-stickyNav__js');
+			contentNavBtn.classList.add('util-opacity-0');
+			contentNavBtn.classList.remove('util-opacity-1');
+		};
+
+		if (!entries.isIntersecting) {
+			navStickOn();
 
 			const btnState = document.querySelector('.contentNav__btn svg');
+			const navOpen = () => {
+				contentNav.classList.remove('contentPage-noTransform--js');
+				btnState.classList.remove('close');
+				btnState.classList.add('open');
+				btnState.innerHTML = `<use xlink:href="${icons}#navOpen"></use>`;
+			};
+
+			const navClose = () => {
+				btnState.classList.remove('open');
+				btnState.classList.add('close');
+				btnState.innerHTML = `<use xlink:href="${icons}#navClose"></use>`;
+				contentNav.classList.add('contentPage-noTransform--js');
+			};
+
 			contentNavBtn.addEventListener('click', () => {
 				if (btnState.classList.value === 'open') {
-					btnState.classList.remove('open');
-					btnState.classList.add('close');
-					btnState.innerHTML = `<use xlink:href="${icons}#navClose"></use>`;
-					contentNav.classList.add('contentPage-noTransform--js');
+					navClose();
+
+					document.addEventListener('keydown', (ev) => {
+						if (ev.key === 'Escape') navOpen();
+					});
 				} else {
-					btnState.classList.remove('close');
-					btnState.classList.add('open');
-					btnState.innerHTML = `<use xlink:href="${icons}#navOpen"></use>`;
-					contentNav.classList.remove('contentPage-noTransform--js');
+					navOpen();
 				}
 			});
 		}
 		if (entries.isIntersecting) {
-			contentNav.classList.remove('contentPage-stickyNav__js');
-			contentNavBtn.classList.add('util-opacity-0');
-			contentNavBtn.classList.remove('util-opacity-1');
+			navStickOff();
 		}
 	};
 	const contentStickyNavObs = new IntersectionObserver(stickyNav, {
@@ -109,16 +134,21 @@ if (contentPageContainer) {
 if (contentPageContainer) {
 	contentPostMenuBtn.addEventListener('click', () => {
 		const button = document.querySelector('.dropdownMenu svg');
-
-		// CHANGE BUTTON + CLASS NAME
-		if (button.classList.contains('arrowDown')) {
+		const arrUp = () => {
 			button.innerHTML = `<use xlink:href="${icons}#arrowUp"></use>`;
 			button.classList.remove('arrowDown');
 			button.classList.add('arrowUp');
-		} else {
+		};
+		const arrDown = () => {
 			button.innerHTML = `<use xlink:href="${icons}#arrowDown"></use>`;
 			button.classList.remove('arrowUp');
 			button.classList.add('arrowDown');
+		};
+		// CHANGE BUTTON + CLASS NAME
+		if (button.classList.contains('arrowDown')) {
+			arrUp();
+		} else {
+			arrDown();
 		}
 
 		// FOR NAV ELEMENET SMOOTH TRANSITION
@@ -136,16 +166,23 @@ if (contentPageContainer) {
 	const modeChanger = () => {
 		const svgMode = document.querySelector(`.mode__changer_btn svg`);
 		const bodyEl = document.querySelector('body');
-		if (svgMode.classList.contains('day')) {
-			svgMode.classList.remove('day');
-			svgMode.classList.add('night');
-			svgMode.innerHTML = `<use xlink:href="${icons}#dayMode"></use>`;
-			bodyEl.classList.add('nightTheme');
-		} else {
+		const dayMode = () => {
 			svgMode.classList.remove('night');
 			svgMode.classList.add('day');
 			svgMode.innerHTML = `<use xlink:href="${icons}#nightMode"></use>`;
 			bodyEl.classList.remove('nightTheme');
+		};
+
+		const nightMode = () => {
+			svgMode.classList.remove('day');
+			svgMode.classList.add('night');
+			svgMode.innerHTML = `<use xlink:href="${icons}#dayMode"></use>`;
+			bodyEl.classList.add('nightTheme');
+		};
+		if (svgMode.classList.contains('day')) {
+			nightMode();
+		} else {
+			dayMode();
 		}
 	};
 	contentStickyNavBtn.addEventListener('click', (ev) => {

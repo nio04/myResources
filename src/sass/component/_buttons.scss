@@ -1,4 +1,22 @@
 @use '../abstract/' as abs;
+////////////////
+/// MAIN HOME PAGE
+.main-home__container main .sideNav__Btn {
+	border: 0;
+	z-index: 5000;
+	top: 2rem;
+	left: 2rem;
+	svg {
+		height: 5rem;
+		width: 5rem;
+		position: absolute;
+
+		border-radius: 50%;
+		outline: 2px solid var(--color-accent-900);
+		outline-offset: 1rem;
+		cursor: pointer;
+	}
+}
 
 ////////////////
 // CONTENT PAGE [3RD PAGE]
