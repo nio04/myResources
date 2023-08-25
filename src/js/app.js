@@ -44,32 +44,23 @@ if (mainHomeContainer) {
 	// BOTH NAVIGATION BUTTON [navOpen, navClose]
 	mainHomeSideNavButton.forEach((svg) => {
 		svg.addEventListener('click', (ev) => {
+			const svgContainer = ev.target;
 			const ul = document.querySelector('.side-nav__container ul');
-			if (ev.target.classList.value === 'open') {
-				// ADD CLASS IF [navOpen] BUTTON IS OPEN
-				ul.classList.add('util-display-y');
-				document
-					.querySelector('.side-nav__container .open')
-					.classList.add('util-hide-element-transform');
-				document
-					.querySelector('.side-nav__container .close')
-					.classList.add('util-show-element-transform');
-			} else {
-				// REMOVE CLASS IF [navOpen] BUTTON IS NOT OPEN
-				ul.classList.remove('util-display-y');
-				document
-					.querySelector('.side-nav__container .open')
-					.classList.remove('util-hide-element-transform');
 
-				document
-					.querySelector('.side-nav__container .close')
-					.classList.remove('util-show-element-transform');
+			if (ev.target.classList.value === 'open') {
+				svgContainer.classList.remove('open');
+				svgContainer.classList.add('close');
+				ul.classList.add('util-display-y');
+				svgContainer.innerHTML = `<use xlink:href="${icons}#navClose"></use>`;
+			} else {
+				svgContainer.classList.add('open');
+				svgContainer.classList.remove('close');
+				svgContainer.innerHTML = `<use xlink:href="${icons}#navOpen"></use>`;
+				ul.classList.remove('util-display-y');
 			}
 
-			// TOGGLE NAVIGATION LISTS
-			document
-				.querySelector('.side-nav__container ul')
-				.classList.toggle('util-show-element-transform');
+			// TOGGLE NAVIGATION LISTS [show-hide]
+			ul.classList.toggle('util-show-element-transform');
 		});
 	});
 }
@@ -81,13 +72,13 @@ if (contentPageContainer) {
 		if (!entries.isIntersecting) {
 			contentNav.classList.remove('util-opacity-0');
 			contentNav.classList.add('util-opacity-1');
-			contentNav.style.height = '5.8rem';
 			contentNav.classList.add('util-sticky');
+			contentNav.classList.add('contentPage-stickyNav--js');
 		}
 		if (entries.isIntersecting) {
 			contentNav.classList.add('util-opacity-0');
-			contentNav.style.height = 0;
 			contentNav.classList.remove('util-opacity-1');
+			contentNav.classList.remove('contentPage-stickyNav--js');
 		}
 	};
 	const contentStickyNavObs = new IntersectionObserver(stickyNav, {
