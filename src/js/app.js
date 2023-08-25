@@ -10,6 +10,7 @@ const mainHomeAllListContainer = document.querySelector(
 );
 const contentPageContainer = document.querySelector('.content-page__container');
 const contentMainHeader = document.querySelector('.nav__container');
+const contentNavBtn = document.querySelector('.contentNav__btn');
 const contentNav = document.querySelector('.sticky-nav__container');
 const contentPostMenuBtn = document.querySelector('.post__navigation__container');
 const contentStickyNavBtn = document.querySelector('.mode__changer_btn');
@@ -41,7 +42,7 @@ if (mainHomeContainer) {
 	});
 	mainHomeSideNavObserver.observe(mainHomeAllListContainer);
 
-	// BOTH NAVIGATION BUTTON [navOpen, navClose]
+	// BOTH NAVIGATION BUTTON [navOpen, navClose] --> mainHomePage
 	mainHomeSideNavButton.forEach((svg) => {
 		svg.addEventListener('click', (ev) => {
 			const svgContainer = ev.target;
@@ -70,21 +71,36 @@ if (mainHomeContainer) {
 if (contentPageContainer) {
 	const stickyNav = ([entries]) => {
 		if (!entries.isIntersecting) {
-			contentNav.classList.remove('util-opacity-0');
-			contentNav.classList.add('util-opacity-1');
-			contentNav.classList.add('util-sticky');
-			contentNav.classList.add('contentPage-stickyNav--js');
+			// contentNav.classList.remove('util-opacity-0');
+			contentNav.classList.add('contentPage-stickyNav__js');
+			contentNavBtn.classList.add('util-opacity-1');
+			contentNavBtn.classList.remove('util-opacity-0');
+
+			const btnState = document.querySelector('.contentNav__btn svg');
+			contentNavBtn.addEventListener('click', () => {
+				if (btnState.classList.value === 'open') {
+					btnState.classList.remove('open');
+					btnState.classList.add('close');
+					btnState.innerHTML = `<use xlink:href="${icons}#navClose"></use>`;
+					contentNav.classList.add('contentPage-noTransform--js');
+				} else {
+					btnState.classList.remove('close');
+					btnState.classList.add('open');
+					btnState.innerHTML = `<use xlink:href="${icons}#navOpen"></use>`;
+					contentNav.classList.remove('contentPage-noTransform--js');
+				}
+			});
 		}
 		if (entries.isIntersecting) {
-			contentNav.classList.add('util-opacity-0');
-			contentNav.classList.remove('util-opacity-1');
-			contentNav.classList.remove('contentPage-stickyNav--js');
+			contentNav.classList.remove('contentPage-stickyNav__js');
+			contentNavBtn.classList.add('util-opacity-0');
+			contentNavBtn.classList.remove('util-opacity-1');
 		}
 	};
 	const contentStickyNavObs = new IntersectionObserver(stickyNav, {
 		root: null,
 		threshold: 0,
-		rootMargin: '200px',
+		rootMargin: '100px',
 	});
 	contentStickyNavObs.observe(contentMainHeader);
 }
@@ -94,20 +110,23 @@ if (contentPageContainer) {
 	contentPostMenuBtn.addEventListener('click', () => {
 		const button = document.querySelector('.dropdownMenu svg');
 
+		// CHANGE BUTTON + CLASS NAME
 		if (button.classList.contains('arrowDown')) {
 			button.innerHTML = `<use xlink:href="${icons}#arrowUp"></use>`;
 			button.classList.remove('arrowDown');
 			button.classList.add('arrowUp');
-			document
-				.querySelector('.nav__element-wrap')
-				.classList.toggle('util-display-y');
 		} else {
 			button.innerHTML = `<use xlink:href="${icons}#arrowDown"></use>`;
 			button.classList.remove('arrowUp');
 			button.classList.add('arrowDown');
-			document
-				.querySelector('.nav__element-wrap')
-				.classList.toggle('util-display-y');
+		}
+
+		// FOR NAV ELEMENET SMOOTH TRANSITION
+		const navElements = document.querySelector('.nav__element-wrap');
+		if (button.classList.contains('arrowUp')) {
+			navElements.classList.add('contentPage-noTransform--js');
+		} else {
+			navElements.classList.remove('contentPage-noTransform--js');
 		}
 	});
 }
@@ -116,17 +135,17 @@ if (contentPageContainer) {
 if (contentPageContainer) {
 	const modeChanger = () => {
 		const svgMode = document.querySelector(`.mode__changer_btn svg`);
-
+		const bodyEl = document.querySelector('body');
 		if (svgMode.classList.contains('day')) {
 			svgMode.classList.remove('day');
 			svgMode.classList.add('night');
 			svgMode.innerHTML = `<use xlink:href="${icons}#dayMode"></use>`;
-			document.querySelector('body').classList.add('nightTheme');
+			bodyEl.classList.add('nightTheme');
 		} else {
 			svgMode.classList.remove('night');
 			svgMode.classList.add('day');
 			svgMode.innerHTML = `<use xlink:href="${icons}#nightMode"></use>`;
-			document.querySelector('body').classList.remove('nightTheme');
+			bodyEl.classList.remove('nightTheme');
 		}
 	};
 	contentStickyNavBtn.addEventListener('click', (ev) => {
@@ -154,20 +173,15 @@ if (contentPageContainer) {
 ////////////////
 // CONTENT PAGE --HIDE NAV BUTTON [GO TOP, GO BOTTOM] FROM <HEADER>
 if (contentPageContainer) {
-	// HIDE FLOAT BUTTON CONTAINER
-	contentFloatButtons.forEach((el) => {
-		el.classList.add('util-opacity-0');
-	});
-
 	const contentNavigatorCallback = ([entries]) => {
 		if (entries.isIntersecting) {
 			contentFloatButtons.forEach((el) => {
-				el.classList.remove('util-opacity-0');
+				el.classList.add('contentPage-noTransform--js');
 			});
 		}
 		if (!entries.isIntersecting) {
 			contentFloatButtons.forEach((el) => {
-				el.classList.add('util-opacity-0');
+				el.classList.remove('contentPage-noTransform--js');
 			});
 		}
 	};

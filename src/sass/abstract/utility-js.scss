@@ -1,5 +1,10 @@
-// ALL THE JS CLASSES WILL BE HERE
-.contentPage-stickyNav--js {
-	height: 10rem;
-	width: 97%;
+.contentPage-stickyNav__js {
+	position: sticky !important;
+	height: 80vh !important;
+	width: 100% !important;
+	top: 5rem !important;
+}
+
+.contentPage-noTransform--js {
+	transform: translate(0) !important;
 }

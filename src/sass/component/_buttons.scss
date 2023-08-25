@@ -3,6 +3,19 @@
 ////////////////
 // CONTENT PAGE [3RD PAGE]
 .content-page__container {
+	.contentNav__btn {
+		height: 10rem;
+		width: 10rem;
+		z-index: 200;
+		border: 1px solid var(--color-accent-600);
+		border-radius: 50%;
+		background-color: transparent;
+		cursor: pointer;
+		svg {
+			height: 4rem;
+			width: 4rem;
+		}
+	}
 	main .float-btn__container {
 		height: 4rem;
 		position: fixed;
@@ -10,8 +23,9 @@
 		font-weight: 900;
 		border: 5px solid var(--color-secondary-100);
 		background-color: var(--color-secondary-200);
-		z-index: 100;
+		z-index: 10;
 		transition: all 0.2s ease-in-out;
+		transform: translateX(200rem);
 		@extend %center-me-full;
 
 		&::before {
