@@ -14,6 +14,7 @@ const mainHomeAllListContainer = document.querySelector(
 const contentPageContainer = document.querySelector('.content-page__container');
 const contentMainHeader = document.querySelector('.nav__container');
 const contentNav = document.querySelector('.sticky-nav__container');
+const contentPostMenuBtn = document.querySelector('.post__navigation__container');
 const contentStickyNavBtn = document.querySelector('.mode__changer_btn');
 const contentMainSection = document.querySelector('main');
 const contentFloatButtons = document.querySelectorAll('.float-btn__container');
@@ -34,24 +35,27 @@ const contentFooter = document.querySelector('footer');
 // MAIN HOME PAGE - NAVIGATION BUTTON
 if (mainHomeContainer) {
 	const sideNavCallback = ([entries]) => {
-		if (entries.isIntersecting)
+		if (entries.isIntersecting) {
 			mainHomeSideNavContainer.classList.add('util-opacity-1', 'util-sticky');
-		if (!entries.isIntersecting)
+		}
+		if (!entries.isIntersecting) {
 			mainHomeSideNavContainer.classList.remove('util-opacity-1', 'util-sticky');
+		}
 	};
 
 	const mainHomeSideNavObserver = new IntersectionObserver(sideNavCallback, {
 		root: null,
 		threshold: 0.1,
 	});
-
 	mainHomeSideNavObserver.observe(mainHomeAllListContainer);
 
 	// BOTH NAVIGATION BUTTON [navOpen, navClose]
 	mainHomeSideNavButton.forEach((svg) => {
 		svg.addEventListener('click', (ev) => {
+			const ul = document.querySelector('.side-nav__container ul');
 			if (ev.target.classList.value === 'open') {
 				// ADD CLASS IF [navOpen] BUTTON IS OPEN
+				ul.classList.add('util-display-y');
 				document
 					.querySelector('.side-nav__container .open')
 					.classList.add('util-hide-element-transform');
@@ -60,6 +64,7 @@ if (mainHomeContainer) {
 					.classList.add('util-show-element-transform');
 			} else {
 				// REMOVE CLASS IF [navOpen] BUTTON IS NOT OPEN
+				ul.classList.remove('util-display-y');
 				document
 					.querySelector('.side-nav__container .open')
 					.classList.remove('util-hide-element-transform');
@@ -129,25 +134,43 @@ if (contentPageContainer) {
 	contentStickyNavObs.observe(contentMainHeader);
 }
 
+// CONTENT PAGE - STICKY NAV - POST DROP DOWN MENU
+if (contentPageContainer) {
+	contentPostMenuBtn.addEventListener('click', () => {
+		const button = document.querySelector('.dropdownMenu svg');
+
+		if (button.classList.contains('arrowDown')) {
+			button.innerHTML = `<use xlink:href="${icons}#arrowUp"></use>`;
+			button.classList.remove('arrowDown');
+			button.classList.add('arrowUp');
+			document
+				.querySelector('.nav__element-wrap')
+				.classList.toggle('util-display-y');
+		} else {
+			button.innerHTML = `<use xlink:href="${icons}#arrowDown"></use>`;
+			button.classList.remove('arrowUp');
+			button.classList.add('arrowDown');
+			document
+				.querySelector('.nav__element-wrap')
+				.classList.toggle('util-display-y');
+		}
+	});
+}
 /////////////
 // CONTENT PAGE -- STICKY NAV - DAY/NIGHT MODE CHANGER
 if (contentPageContainer) {
-	let savedModeState;
-	const allSiblings = [];
-	for (const child of contentStickyNavBtn.children) {
-		allSiblings.push(child);
-	}
-
 	const modeChanger = () => {
-		if (allSiblings[0].classList[0] === 'day') {
+		const svgMode = document.querySelector(`.mode__changer_btn svg`);
+
+		if (svgMode.classList.contains('day')) {
+			svgMode.classList.remove('day');
+			svgMode.classList.add('night');
+			svgMode.innerHTML = `<use xlink:href="${icons}#dayMode"></use>`;
 			document.querySelector('body').classList.add('nightTheme');
-			allSiblings[0].innerHTML = `<use xlink:href="${icons}#dayMode"></use>`;
-			savedModeState = 'night';
-			allSiblings[0].classList.value = 'night';
-		} else if (allSiblings[0].classList[0] === 'night') {
-			allSiblings[0].innerHTML = `<use xlink:href="${icons}#nightMode"></use>`;
-			savedModeState = 'day';
-			allSiblings[0].classList.value = 'day';
+		} else {
+			svgMode.classList.remove('night');
+			svgMode.classList.add('day');
+			svgMode.innerHTML = `<use xlink:href="${icons}#nightMode"></use>`;
 			document.querySelector('body').classList.remove('nightTheme');
 		}
 	};
@@ -159,11 +182,11 @@ if (contentPageContainer) {
 
 ///////////////////
 // CONTENT-PAGE : SHOW POST NAVIGATION LISTS
-if (contentPageContainer) {
-	postsNavigationButton.addEventListener('click', () => {
-		document.querySelector('.nav__element-wrap').classList.toggle('util-display-y');
-	});
-}
+// if (contentPageContainer) {
+// 	postsNavigationButton.addEventListener('click', () => {
+// 		document.querySelector('.nav__element-wrap').classList.toggle('util-display-y');
+// 	});
+// }
 
 /////////////
 //CONTENT PAGE --SMOOTH SCROLL [TOP, BOTTOM] BUTTON

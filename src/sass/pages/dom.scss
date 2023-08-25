@@ -116,4 +116,56 @@
 			}
 		}
 	}
+	.sticky-nav__container {
+		@include abs.mediaQuery(tab-land) {
+			:nth-child(2) {
+				span {
+					font-size: 1.5rem;
+				}
+			}
+		}
+		@include abs.mediaQuery(tab-port) {
+			.post__navigation__container button,
+			button,
+			button a {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+
+				span {
+					margin-top: -1rem;
+					line-height: 1.9rem;
+					font-size: 1.3rem;
+					padding-left: 0;
+					padding-right: 0;
+				}
+
+				svg {
+					height: 4rem;
+					width: 100%;
+					margin: 1rem 0;
+				}
+			}
+
+			:nth-child(1) {
+				width: 30%;
+			}
+			:nth-child(3) {
+				a {
+					width: 100%;
+				}
+			}
+			:nth-child(2),
+			:nth-child(3) {
+				span {
+					order: 1;
+					font-size: 1.4rem;
+				}
+				svg {
+					order: 2;
+					width: 100%;
+				}
+			}
+		}
+	}
 }
