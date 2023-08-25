@@ -3,9 +3,6 @@
 import icons from 'url:../img/sprite.svg';
 
 const mainHomeContainer = document.querySelector('.main-home__container');
-const mainHomeAllSection = document.querySelectorAll(
-	'.main-home-resource__contents'
-);
 const mainHomeSideNavContainer = document.querySelector('.side-nav__container');
 const mainHomeSideNavButton = document.querySelectorAll('.side-nav__container svg');
 const mainHomeAllListContainer = document.querySelector(
@@ -18,13 +15,8 @@ const contentPostMenuBtn = document.querySelector('.post__navigation__container'
 const contentStickyNavBtn = document.querySelector('.mode__changer_btn');
 const contentMainSection = document.querySelector('main');
 const contentFloatButtons = document.querySelectorAll('.float-btn__container');
-const postsNavigationButton = document.querySelector(
-	'.post__navigation__container button svg'
-);
 const contentGoTop = document.querySelector('.to-top-btn');
 const contentGoBottom = document.querySelector('.to-bottom-btn');
-const contentArticles = document.querySelectorAll('.content-area__container');
-const postContainer = document.querySelectorAll('details');
 const contentFooter = document.querySelector('footer');
 
 ///////////////////
@@ -81,34 +73,6 @@ if (mainHomeContainer) {
 		});
 	});
 }
-/////////////////////
-// MAIN HOME PAGE -- CONTENT LIST SHOW ON 20% VIEW && APPLY ONLY ON LESS TAHN 872px
-const mainHomeObsChecker =
-	contentPageContainer ??
-	getComputedStyle(document.querySelector('.main-home__container')).width;
-///////////////
-if (mainHomeContainer && parseInt(mainHomeObsChecker) <= 870) {
-	// AUTO HIDE ALL SECTIONS
-	mainHomeAllSection.forEach((el) => {
-		el.classList.add('util-opacity-0');
-	});
-
-	const mainHomeSectionsCallback = ([entries]) => {
-		if (entries.isIntersecting) entries.target.classList.remove('util-opacity-0');
-		if (!entries.isIntersecting) entries.target.classList.add('util-opacity-0');
-	};
-
-	const mainHomeSectionsObs = new IntersectionObserver(mainHomeSectionsCallback, {
-		root: null,
-		threshold: 0.2,
-	});
-
-	if (parseFloat(mainHomeObsChecker) <= 872) {
-		mainHomeAllSection.forEach((el) => {
-			mainHomeSectionsObs.observe(el);
-		});
-	}
-}
 
 /////////////////
 // CONTENT PAGE --STICKY NAV IMPLEMENT
@@ -117,7 +81,7 @@ if (contentPageContainer) {
 		if (!entries.isIntersecting) {
 			contentNav.classList.remove('util-opacity-0');
 			contentNav.classList.add('util-opacity-1');
-			contentNav.style.height = '9.8rem';
+			contentNav.style.height = '5.8rem';
 			contentNav.classList.add('util-sticky');
 		}
 		if (entries.isIntersecting) {
@@ -180,14 +144,6 @@ if (contentPageContainer) {
 	});
 }
 
-///////////////////
-// CONTENT-PAGE : SHOW POST NAVIGATION LISTS
-// if (contentPageContainer) {
-// 	postsNavigationButton.addEventListener('click', () => {
-// 		document.querySelector('.nav__element-wrap').classList.toggle('util-display-y');
-// 	});
-// }
-
 /////////////
 //CONTENT PAGE --SMOOTH SCROLL [TOP, BOTTOM] BUTTON
 if (contentPageContainer) {
@@ -230,34 +186,4 @@ if (contentPageContainer) {
 	});
 
 	contentNavigatorButton.observe(contentMainSection);
-}
-
-//////////////////
-// CONTENT PAGE --show ARTICLES ON 20% VIEW
-if (contentPageContainer) {
-	// HIDE ALL THE CONTENTS AT THE BEGIN
-	contentArticles.forEach((el) => {
-		el.classList.add('util-opacity-0');
-	});
-
-	// CONTENT OBSERVER CALL-BACK
-	const contentArticlesCallback = ([entries]) => {
-		if (entries.isIntersecting) entries.target.classList.remove('util-opacity-0');
-		if (!entries.isIntersecting) entries.target.classList.add('util-opacity-0');
-	};
-
-	// CREATE INTERSECTION OBSERVER OBJECT
-	const contentArticlesObs = new IntersectionObserver(contentArticlesCallback, {
-		root: null,
-		threshold: 0.4,
-	});
-
-	// PASS ALL THE CONTENTS FOR OBSERVE
-	contentArticles.forEach((el) => {
-		// AUTO ADD [OPEN] ATTRIBUTE TO THE DETAILS TAG
-		postContainer.forEach((el) => {
-			el.open = true;
-		});
-		contentArticlesObs.observe(el);
-	});
 }
