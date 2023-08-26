@@ -82,7 +82,7 @@
 		.side-nav__container {
 			position: sticky;
 			top: 4rem;
-			left: 10rem;
+			left: 3rem;
 			z-index: 1;
 			display: inline-block;
 			transition: all 0.5s;
@@ -359,7 +359,7 @@
 					position: absolute;
 					top: 1rem;
 					right: 2rem;
-					border: 2rem solid var(--color--accent-900);
+					fill: var(--color-black-replace);
 					cursor: pointer;
 				}
 
