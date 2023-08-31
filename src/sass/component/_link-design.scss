@@ -73,24 +73,28 @@
 			font-family: var(--font-tertiary);
 			font-weight: 600;
 			font-size: 2.6rem;
-			color: var(--color-black);
-			padding-left: 10rem;
+			color: var(--color-black-replace);
 			transition: all 1.4s;
 			display: flex;
 			align-items: center;
+			justify-content: center;
+			flex: 0 0 50%;
+
+			&:nth-of-type(even){
+				border-bottom: 1px solid var(--color-black-replace);
+			}
+			&:nth-of-type(odd){
+				border-bottom: 1px solid var(--color-black-replace);
+				border-right: 1px solid var(--color-black-replace);
+				border-left: 1px solid var(--color-black-replace);
+			}
 
 			&:hover {
-				opacity: 0.6s;
+				opacity: 0.6;
 				color: var(--color-secondary-600);
 			}
 
-			@include abs.mediaQuery(tab-land) {
-				padding-left: 4rem;
-			}
 
-			@include abs.mediaQuery(tab-port) {
-				padding-left: 1rem;
-			}
 
 			&::after {
 				content: '';
@@ -104,6 +108,10 @@
 				mask-image: url('../../img/svg/pointRight.svg');
 				mask-size: cover;
 				transition: all 0.6s;
+
+				@include abs.mediaQuery(mobile){
+					display: none;
+				}
 			}
 
 			&:hover::after {
@@ -115,6 +123,13 @@
 				letter-spacing: 0;
 				transition: all 0.4s;
 				line-height: 1.4;
+
+				&:active{
+				background-color: var(--color-secondary-300);
+				color: var(--color-primary-50);
+				padding: .8rem;
+				border-radius: 1rem;
+			  }
 			}
 		}
 	}

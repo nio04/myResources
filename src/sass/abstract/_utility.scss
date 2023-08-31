@@ -170,3 +170,12 @@
 .util-show-element-transform {
 	transform: translateX(0) !important;
 }
+
+.overlay{
+	display: none;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	background-color:rgba(128, 128, 128, 0.58);
+}

@@ -77,7 +77,7 @@
 
 				&:nth-child(4) {
 					&:hover {
-						transform: scaleX(0.92);
+						transform: scaleX(0.98);
 					}
 					span {
 						letter-spacing: 0;
@@ -85,7 +85,6 @@
 					&::after {
 						position: absolute;
 						right: 0;
-						bottom: 0;
 					}
 				}
 			}

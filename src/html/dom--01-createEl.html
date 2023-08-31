@@ -47,53 +47,75 @@
         </svg>
       </button>
       <nav class="sticky-nav__container">
-        <div class="post__navigation__container">
-          <button class="dropdownMenu">
-            <span>navigate posts</span>
+        <!-- <div class="overlay"></div> -->
+        <section class="sticky-nav__el post__navigation__container">
+          <button class="dropdownMenu__btn">
             <svg class="arrowDown">
               <use xlink:href="../img/sprite.svg#arrowDown"></use>
             </svg>
+            <span>navigate posts</span>
           </button>
-          <div class="nav__element-wrap">
+
+          <ul class="nav__element-wrap">
             <svg class="navClose__btn">
               <use xlink:href="../img/sprite.svg#navClose"></use>
             </svg>
-            <div class="nav__item"><a href="index.html#html__section"><span>navigate to
-                  html</span></a>
-            </div>
-            <div class="nav__item"><a href="index.html#css__section"><span>navigate to
-                  css</span></a>
-            </div>
-            <div class="nav__item"><a href="index.html#sass__section"><span>navigate to
-                  sass</span></a>
-            </div>
-            <div class="nav__item"><a href="index.html#js__section"><span>navigate to
-                  javascript</span></a></div>
-            <div class="nav__item link-active"><a href="index.html#dom__section"><span>navigate to
-                  dom</span></a>
-            </div>
-            <div class="nav__item"><a href="index.html#git__section"><span>navigate to
-                  git</span></a>
-            </div>
-            <div class="nav__item"><a href="index.html#miscs__section"><span>navigate to
-                  miscs</span></a></div>
-          </div>
-        </div>
-        <button href="" class="mode__changer_btn">
-          <svg class="day">
-            <use xlink:href="../img/sprite.svg#nightMode"></use>
-          </svg>
-          <span>change mode</span>
-        </button>
-        <button>
-          <a href="index.html">
-            <svg>
-              <use xlink:href="../img/sprite.svg#home"></use>
+            <li class="nav__item"><a href="index.html#html__section">navigate to
+                html</a>
+            </li>
+            <li class="nav__item link-active"><a href="index.html#css__section">navigate to
+                css</a>
+            </li>
+            <li class="nav__item"><a href="index.html#sass__section">navigate to
+                sass</a>
+            </li>
+            <li class="nav__item"><a href="index.html#js__section">navigate to
+                javascript</a></li>
+            <li class="nav__item"><a href="index.html#dom__section">navigate to
+                dom</a>
+            </li>
+            <li class="nav__item"><a href="index.html#git__section">navigate to
+                git</a>
+            </li>
+            <li class="nav__item"><a href="index.html#miscs__section">navigate to
+                miscs</a></li>
+          </ul>
+        </section>
+
+        <section class="sticky-nav__el">
+          <button class="mode__changer_btn">
+            <svg class="day">
+              <use xlink:href="../img/sprite.svg#nightMode"></use>
             </svg>
-            <span>main home</span>
-          </a>
-        </button>
+            <span>change mode</span>
+          </button>
+        </section>
+
+        <section class="sticky-nav__el">
+          <button>
+            <a href="index.html">
+              <svg>
+                <use xlink:href="../img/sprite.svg#home"></use>
+              </svg>
+              <span>main home</span>
+            </a>
+          </button>
+        </section>
+
+        <section class="sticky-nav__el">
+          <button>reserved</button>
+        </section>
+
+        <section class="sticky-nav__el">
+          <button>reserved</button>
+        </section>
+
+        <section class="sticky-nav__el">
+          <button>reserved</button>
+        </section>
       </nav>
+      <div class="overlay"></div>
+
 
       <!-- main post -->
       <main class="line-numbers util-margin-bottom-high util-margin-top-high">

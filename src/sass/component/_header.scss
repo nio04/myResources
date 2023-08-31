@@ -156,7 +156,8 @@
 	.nav__container {
 		display: grid;
 		grid-template-columns: 80% 20%;
-		grid-template-rows: 17rem 8rem minmax(40rem, 1fr);
+		grid-template-rows: 10rem 8rem 1fr;
+		gap: 3rem 0;
 
 		@include abs.mediaQuery(tab-land) {
 			grid-template-rows: 17rem 8rem 1fr;
@@ -196,6 +197,16 @@
 			animation-name: slideToLeft;
 			animation-duration: 2s;
 			animation-delay: 0.2s;
+
+			@include abs.mediaQuery(mobile){
+				height: 5rem;
+				width: 5rem;
+			}
+		}
+
+		.section{
+			display: flex;
+			align-items: flex-end;
 		}
 
 		.section h2 {
@@ -207,7 +218,8 @@
 			align-self: center;
 			justify-self: start;
 			margin-left: 10rem;
-			letter-spacing: 0.4rem;
+			margin-top: 3rem;
+			letter-spacing: -2;
 			font-style: italic;
 
 			animation-name: slideToLeft;
@@ -232,8 +244,13 @@
 
 		.indexes {
 			display: flex;
-			flex-direction: column;
+			flex-wrap: wrap;
 			justify-content: space-around;
+
+			grid-column: 1 / -1;
+
+			border: 1px solid var(--color-accent-900);
+			margin: 3rem;
 
 			animation-name: slideToRight;
 			animation-duration: 2s;
