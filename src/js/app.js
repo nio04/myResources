@@ -5,13 +5,12 @@ import icons from 'url:../img/sprite.svg';
 const mainHomeContainer = document.querySelector('.main-home__container');
 const mainHomeSideNavContainer = document.querySelector('.side-nav__container');
 const mainHomeSideNavBtn = document.querySelector('.sideNav__Btn svg');
-const mainHomeAllListContainer = document.querySelector(
-	'.main-home-resource__container'
-);
+const mainHomeMainSection = document.querySelector('.main-home-resource__container');
 const overlays = document.querySelectorAll('.overlay');
 const contentPageContainer = document.querySelector('.content-page__container');
 const contentMainHeader = document.querySelector('.nav__container');
-const contentNavBtn = document.querySelector('.contentNav__btn');
+const contentPageIndexes = document.querySelectorAll('.indexes a');
+const contentNavBtn = document.querySelector('.contentNav__btn svg');
 const contentNav = document.querySelector('.sticky-nav__container');
 const contentPostMenuBtn = document.querySelector('.post__navigation__container');
 const contentStickyNavBtn = document.querySelector('.mode__changer_btn');
@@ -20,6 +19,38 @@ const contentFloatButtons = document.querySelectorAll('.float-btn__container');
 const contentGoTop = document.querySelector('.to-top-btn');
 const contentGoBottom = document.querySelector('.to-bottom-btn');
 const contentFooter = document.querySelector('footer');
+
+//////////////////
+// OPERATION START
+/////////////////
+
+// general OVERLAY creater
+// const overlayRender = (parent, overlayShow, handler = null, handlerVal = null) => {
+// 	const overlayEl = document.createElement('div');
+// 	overlayEl.classList.add('overlay');
+// 	parent.append(overlayEl);
+
+// 	const overlaySelector = document.querySelectorAll('.overlay');
+// 	if (overlayShow === 'overlayShow') {
+// 		overlaySelector.forEach((el) => {
+// 			el.classList.add('util-display-y');
+
+// 			if (handlerVal === 'open') {
+// 				el.addEventListener('click', () => {
+// 					handler('open');
+// 				});
+// 			} else {
+// 				el.addEventListener('click', () => {
+// 					handler('close');
+// 				});
+// 			}
+// 		});
+// 	} else {
+// 		overlaySelector.forEach((el) => {
+// 			el.classList.remove('util-display-y');
+// 		});
+// 	}
+// };
 
 ////////////////////////
 // MAIN HOME PAGE - NAVIGATION BUTTON
@@ -47,19 +78,20 @@ if (mainHomeContainer) {
 
 	const mainHomeSideNavObserver = new IntersectionObserver(sideNavCallback, {
 		root: null,
-		threshold: 0.1,
+		threshold: 0,
 	});
-	mainHomeSideNavObserver.observe(mainHomeAllListContainer);
+	mainHomeSideNavObserver.observe(mainHomeMainSection);
 
 	// MAIN HOME PAGE -- SIDE-NAV-BAR MANAGER
 	mainHomeSideNavBtn.addEventListener('click', () => {
-		const changeButtonState = (input) => {
-			if (input === 'open') {
+		const showNavButton = (input) => {
+			if (input === 'close') {
 				mainHomeSideNavBtn.classList.remove('close');
 				mainHomeSideNavBtn.classList.add('open');
 				mainHomeSideNavBtn.innerHTML = `<use xlink:href="${icons}#navOpen"></use>`;
 				mainHomeSideNavContainer.classList.remove('noTransform--js');
 
+				// overlayRender(mainHomeContainer, 'overlayRemove');
 				overlays.forEach((el) => {
 					el.classList.remove('util-display-y');
 				});
@@ -69,23 +101,24 @@ if (mainHomeContainer) {
 				mainHomeSideNavBtn.innerHTML = `<use xlink:href="${icons}#navClose"></use>`;
 				mainHomeSideNavContainer.classList.add('noTransform--js');
 
+				// overlayRender(mainHomeContainer, 'overlayShow', showNavButton, 'close');
 				overlays.forEach((el) => {
 					el.classList.add('util-display-y');
 					el.addEventListener('click', () => {
-						changeButtonState('open');
+						showNavButton('close');
 					});
 				});
 			}
 		};
 
 		if (mainHomeSideNavBtn.classList.value === 'open') {
-			changeButtonState('close');
+			showNavButton('open');
 
 			document.addEventListener('keydown', (ev) => {
-				if (ev.key === 'Escape') changeButtonState('open');
+				if (ev.key === 'Escape') showNavButton('close');
 			});
 		} else {
-			changeButtonState('open');
+			showNavButton('close');
 		}
 	});
 }
@@ -94,20 +127,21 @@ if (mainHomeContainer) {
 // CONTENT PAGE --STICKY NAV IMPLEMENT
 if (contentPageContainer) {
 	const stickyNav = ([entries]) => {
-		const navManager = (input) => {
+		const contentNavParent = contentNavBtn.closest('.contentNav__btn');
+		const navButtonMananger = (input) => {
 			if (input === 'open') {
 				contentNav.classList.add('stickyNav--js');
-				contentNavBtn.classList.add('util-opacity-1');
-				contentNavBtn.classList.remove('util-opacity-0');
+				contentNavParent.classList.add('util-opacity-1');
+				contentNavParent.classList.remove('util-opacity-0');
 			} else {
 				contentNav.classList.remove('stickyNav--js');
-				contentNavBtn.classList.add('util-opacity-0');
-				contentNavBtn.classList.remove('util-opacity-1');
+				contentNavParent.classList.add('util-opacity-0');
+				contentNavParent.classList.remove('util-opacity-1');
 			}
 		};
 
 		if (!entries.isIntersecting) {
-			navManager('open');
+			navButtonMananger('open');
 
 			const btnState = document.querySelector('.contentNav__btn svg');
 
@@ -118,6 +152,7 @@ if (contentPageContainer) {
 					btnState.classList.add('open');
 					btnState.innerHTML = `<use xlink:href="${icons}#navOpen"></use>`;
 
+					// overlayRender(contentPageContainer, 'overlayRemove');
 					overlays.forEach((el) => {
 						el.classList.remove('util-display-y');
 					});
@@ -131,8 +166,12 @@ if (contentPageContainer) {
 					btnState.innerHTML = `<use xlink:href="${icons}#navClose"></use>`;
 					contentNav.classList.add('noTransform--js');
 
+					// overlayRender(contentPageContainer, 'overlayShow', navShowManager, 'open');
 					overlays.forEach((el) => {
 						el.classList.add('util-display-y');
+						el.addEventListener('click', () => {
+							navShowManager('open');
+						});
 					});
 
 					contentFloatButtons.forEach((el) => {
@@ -141,7 +180,7 @@ if (contentPageContainer) {
 				}
 			};
 
-			contentNavBtn.addEventListener('click', () => {
+			contentNavParent.addEventListener('click', () => {
 				if (btnState.classList.value === 'open') {
 					navShowManager('close');
 
@@ -153,6 +192,7 @@ if (contentPageContainer) {
 				}
 			});
 
+			// overlayRender(contentPageContainer, 'overlayShow', 'navShowManager', 'open');
 			overlays.forEach((el) => {
 				el.addEventListener('click', () => {
 					navShowManager('open');
@@ -160,7 +200,7 @@ if (contentPageContainer) {
 			});
 		}
 		if (entries.isIntersecting) {
-			navManager('off');
+			navButtonMananger('off');
 		}
 	};
 	const contentStickyNavObs = new IntersectionObserver(stickyNav, {
@@ -246,6 +286,18 @@ if (contentPageContainer) {
 		ev.preventDefault();
 		contentFooter.scrollIntoView({ behavior: 'smooth' });
 	});
+}
+
+///////////////////
+// CONTENT PAGE -- RE-FINE POST INDEXES BORDER
+if (contentPageContainer) {
+	// IF OUR INDEX IS ODD
+	const beforeLast = contentPageIndexes[contentPageIndexes.length - 2];
+	if (contentPageIndexes.length % 2 !== 0) {
+		beforeLast.style.borderBottom = '1px solid var(--color-black-replace)';
+	} else {
+		beforeLast.style.borderBottom = 'none';
+	}
 }
 
 ////////////////

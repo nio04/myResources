@@ -17,6 +17,40 @@
 	justify-items: center;
 }
 
+%stickyNav-postList-list {
+	li:nth-child(even) {
+		border-left: 1px solid var(--color-black-replace);
+		border-bottom: 1px solid var(--color-black-replace);
+		border-right: 1px solid var(--color-black-replace);
+	}
+	li:nth-child(odd) {
+		border-bottom: 1px solid var(--color-black-replace);
+		border-right: 1px solid var(--color-black-replace);
+	}
+	li:nth-child(2) {
+		border-top: 1px solid var(--color-black-replace);
+	}
+	li:nth-child(3) {
+		border-top: 1px solid var(--color-black-replace);
+	}
+}
+
+%postIndexes-list-border {
+	a:nth-child(even) {
+		border-left: 1px solid var(--color-black-replace);
+		border-bottom: 1px solid var(--color-black-replace);
+	}
+	a:nth-child(odd) {
+		border-bottom: 1px solid var(--color-black-replace);
+	}
+	a:last-of-type {
+		border-bottom: none;
+	}
+	a:nth-last-of-type(2) {
+		border-bottom: none;
+	}
+}
+
 %page-indexes-design {
 	ul {
 		padding: 0 2rem;

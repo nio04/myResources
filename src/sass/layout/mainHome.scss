@@ -11,7 +11,7 @@
 	position: relative;
 
 	@include abs.mediaQuery(tab-port) {
-		grid-template-rows: 100vh 100vh 1fr;
+		grid-template-rows: 100vh 1fr;
 	}
 
 	.main-home-resource__container {

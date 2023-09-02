@@ -11,7 +11,7 @@
 			animation-duration: 0.7s;
 			animation-delay: 2.2s;
 
-			a {
+			a:link {
 				animation-name: dropAndBounce;
 				animation-duration: 2s;
 				animation-delay: 0.2s;
@@ -40,7 +40,7 @@
 			padding: 0.5rem 2rem;
 			margin-left: 0;
 			box-shadow: none;
-			border: 1px solid var(--color-accent);
+			@include abs.border(1, --color-accent);
 		}
 
 		@include abs.mediaQuery(mob-small) {
@@ -66,70 +66,65 @@
 ////////////
 /// CONTENT PAGE [3RD PAGE]
 .content-page__container {
-	.nav__container .indexes {
-		a:link {
-			text-transform: uppercase;
-			text-decoration: none;
-			font-family: var(--font-tertiary);
-			font-weight: 600;
-			font-size: 2.6rem;
-			color: var(--color-black-replace);
-			transition: all 1.4s;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex: 0 0 50%;
+	.nav__container {
+		.indexes {
+			@extend %postIndexes-list-border;
+			a:link {
+				text-transform: uppercase;
+				text-decoration: none;
+				font-family: var(--font-tertiary);
+				font-weight: 600;
+				font-size: 2.6rem;
+				color: var(--color-black-replace);
+				transition: all 1.4s;
+				flex: 0 0 50%;
+				@extend %center-me-full;
 
-			&:nth-of-type(even){
-				border-bottom: 1px solid var(--color-black-replace);
-			}
-			&:nth-of-type(odd){
-				border-bottom: 1px solid var(--color-black-replace);
-				border-right: 1px solid var(--color-black-replace);
-				border-left: 1px solid var(--color-black-replace);
-			}
-
-			&:hover {
-				opacity: 0.6;
-				color: var(--color-secondary-600);
-			}
-
-
-
-			&::after {
-				content: '';
-				display: inline-block;
-				background-color: var(--color-accent-900);
-				margin-left: 1rem;
-				height: 3rem;
-				width: 3rem;
-				-webkit-mask-image: url('../../img/svg/pointRight.svg');
-				-webkit-mask-size: cover;
-				mask-image: url('../../img/svg/pointRight.svg');
-				mask-size: cover;
-				transition: all 0.6s;
-
-				@include abs.mediaQuery(mobile){
-					display: none;
+				&:hover {
+					opacity: 0.6;
+					color: var(--color-secondary-600);
 				}
-			}
 
-			&:hover::after {
-				background-color: var(--color-secondary-400);
-				margin-left: 2rem;
-			}
+				&::after {
+					content: '';
+					display: inline-block;
+					background-color: var(--color-accent-900);
+					margin-left: 1rem;
+					height: 2rem;
+					width: 2rem;
+					-webkit-mask-image: url('../../img/svg/pointRight.svg');
+					-webkit-mask-size: cover;
+					mask-image: url('../../img/svg/pointRight.svg');
+					mask-size: cover;
+					transition: all 0.6s;
 
-			span {
-				letter-spacing: 0;
-				transition: all 0.4s;
-				line-height: 1.4;
+					@include abs.mediaQuery(tab-port) {
+						display: none;
+					}
+				}
 
-				&:active{
-				background-color: var(--color-secondary-300);
-				color: var(--color-primary-50);
-				padding: .8rem;
-				border-radius: 1rem;
-			  }
+				&:hover::after {
+					background-color: var(--color-secondary-400);
+					margin-left: 2rem;
+				}
+
+				span {
+					letter-spacing: 0;
+					transition: all 0.4s;
+					line-height: 1.4;
+					font-size: 1.5rem;
+
+					@include abs.mediaQuery(mobile) {
+						font-size: 1.8rem;
+					}
+
+					&:active {
+						background-color: var(--color-secondary-300);
+						color: var(--color-primary-50);
+						padding: 0.8rem;
+						@include abs.border(0, --color-transparent, 15);
+					}
+				}
 			}
 		}
 	}

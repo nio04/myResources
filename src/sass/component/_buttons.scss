@@ -2,16 +2,15 @@
 ////////////////
 /// MAIN HOME PAGE
 .main-home__container main .sideNav__Btn {
-	border: 0;
+	@include abs.border(0, --color-transparent);
 	z-index: 5000;
 	top: 2rem;
 	left: 2rem;
-	svg {
-		height: 5rem;
-		width: 5rem;
-		position: absolute;
 
-		border-radius: 50%;
+	svg {
+		@include abs.svg-size(4, 4);
+		position: absolute;
+		@include abs.border(0, --color-transparent, 50);
 		outline: 2px solid var(--color-accent-900);
 		outline-offset: 1rem;
 		cursor: pointer;
@@ -25,46 +24,25 @@
 		height: 10rem;
 		width: 10rem;
 		z-index: 200;
-		border: 1px solid var(--color-accent-600);
-		border-radius: 50%;
+		@include abs.border(1, --color-accent-600, 50);
 		background-color: transparent;
 		cursor: pointer;
+
 		svg {
-			height: 4rem;
-			width: 4rem;
-			fill: var(--color-accent-900);
+			@include abs.svg-size(3, 3);
 		}
 	}
 	main .float-btn__container {
+		box-sizing: content-box;
 		height: 4rem;
 		position: fixed;
-		box-sizing: content-box;
 		font-weight: 900;
-		border: 5px solid var(--color-secondary-100);
+		@include abs.border(5, --color-secondary-100);
 		background-color: var(--color-secondary-200);
-		z-index: 10;
 		transition: all 0.2s ease-in-out;
 		transform: translateX(200rem);
+		z-index: 10;
 		@extend %center-me-full;
-
-		&::before {
-			content: '';
-			position: absolute;
-			height: 100%;
-			width: 0%;
-			left: 0;
-			top: 0;
-			transition: all 0.5s;
-			background-image: linear-gradient(
-				to right,
-				var(--color-primary-100),
-				var(--color-secondary-500)
-			);
-		}
-
-		&:hover::before {
-			width: 100%;
-		}
 
 		&:active,
 		&:focus {
@@ -79,15 +57,10 @@
 			color: var(--color-accent-900);
 
 			svg {
-				height: 2rem;
-				width: 2rem;
-				fill: var(--color-accent-900);
+				@include abs.svg-size(2, 2);
 				margin-right: 0.5rem;
 
 				@include abs.mediaQuery(mobile) {
-					height: 4rem;
-					width: 4rem;
-					fill: var(--color-accent-900);
 					margin: 0;
 				}
 			}

@@ -47,7 +47,7 @@
 				font-weight: 600;
 				text-transform: lowercase;
 				background-color: var(--color-secondary-200);
-				border-radius: 4px;
+				@include mixin.border(0, --color-transparent, 4);
 				color: var(--color-accent-600);
 				padding: 0 0.8rem;
 			}

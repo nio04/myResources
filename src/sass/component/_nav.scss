@@ -2,169 +2,99 @@
 
 //////////
 /// main home extra nav
-.main-home__container {
-	.main-home-extra-nav__container {
-		display: none;
-		grid-row: 2 /3;
-		grid-column: 1 / -1;
+.main-home__container .main-home-resource__container {
+	position: relative;
 
-		@include abs.mediaQuery(tab-port) {
-			display: block;
-		}
+	.side-nav__container {
+		display: inline-block;
+		position: sticky;
+		top: 4rem;
+		left: 3rem;
+		z-index: 1;
+		transition: all 0.5s;
+		transform: translateX(-200rem);
+		width: 0;
+		cursor: pointer;
 
 		ul {
-			height: 88%;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-around;
-
+			height: 50rem;
+			width: 40vw;
+			margin-top: 6rem;
+			background-color: var(--color-secondary-200);
+			list-style-type: none;
+			overflow: scroll;
 			li {
-				list-style-type: none;
-				padding: 0.8rem 0;
-				border-radius: 3px;
-				@extend %center-me-horizontal;
+				@include abs.border(1, --color-black-replace);
 
-				@include abs.mediaQuery(tab-land) {
-					&:not(:last-of-type) {
-						margin-bottom: 2.9rem;
-					}
-				}
-
-				@include abs.mediaQuery(tab-port) {
-					&:not(:last-of-type) {
-						margin-bottom: 0;
-					}
-				}
-
-				&:nth-child(even) {
-					background-color: var(--color-secondary-100);
-					animation-name: slideToLeft;
-					animation-duration: 3s;
-				}
-
-				&:nth-child(odd) {
-					background-color: var(--color-primary-50);
-					animation-name: slideToRight;
-					animation-duration: 3s;
-				}
-
-				.nav-link:link {
-					display: block;
-					width: 100%;
-					text-align: center;
+				a:link {
 					text-decoration: none;
-
-					transition: all 0.4s;
-
-					@include abs.mediaQuery(mobile) {
-						font-size: 3rem;
-					}
-
-					@include abs.mediaQuery(mob-small) {
-						font-size: 2.5rem;
-					}
+					font-size: 2.1rem;
+					display: block;
+					padding: 10% 0;
+					// display: ;
 
 					span {
+						display: block;
+						text-align: center;
+						padding: 5px 0;
 						text-transform: uppercase;
-						letter-spacing: 0.3rem;
-						font-size: 4rem;
-						font-weight: 500;
-						font-family: var(--font-tertiary);
-						color: var(--color-black);
-					}
-				}
-			}
-		}
-	}
-	.main-home-resource__container {
-		position: relative;
+						color: var(--color-accent-900);
+						transition: all 0.4s;
 
-		.side-nav__container {
-			display: inline-block;
-			position: sticky;
-			top: 4rem;
-			left: 3rem;
-			z-index: 1;
-			transition: all 0.5s;
-			transform: translateX(-200rem);
-			width: 0;
-			cursor: pointer;
-
-			ul {
-				margin-top: 6rem;
-				background-color: var(--color-secondary-200);
-				list-style-type: none;
-				height: 50rem;
-				width: 20vw;
-				overflow: scroll;
-				li {
-					padding: 3rem 0;
-					a {
-						text-decoration: none;
-						font-size: 2.1rem;
-
-						span {
+						&:active {
+							outline: 1px solid var(--color-accent-600);
+						}
+						&:hover {
 							display: block;
-							text-align: center;
-							padding: 5px 0;
-							text-transform: uppercase;
-							color: var(--color-accent-900);
-							transition: all 0.4s;
-
-							&:active {
-								outline: 1px solid var(--color-accent-600);
-							}
-							&:hover {
-								display: block;
-								width: 100%;
-								color: var(--color-visited);
-								background-color: var(--color-primary-100);
-							}
+							width: 100%;
+							color: var(--color-visited);
+							background-color: var(--color-primary-100);
 						}
 					}
 				}
 			}
 		}
+	}
 
-		.main-home-resource__contents ul {
-			display: grid;
-			grid-template-columns: repeat(2, minmax(25rem, max-content));
-			align-items: stretch;
-			gap: 1.3rem;
+	.main-home-resource__contents ul {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(25rem, max-content));
+		align-items: stretch;
+		gap: 1.3rem;
+
+		@include abs.mediaQuery(tab-land) {
+			grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
+		}
+
+		@include abs.mediaQuery(tab-port) {
+			grid-template-columns: repeat(2, 1fr);
+			column-gap: 0.1rem;
+		}
+
+		@include abs.mediaQuery(mobile) {
+			grid-template-columns: 1fr;
+			grid-row-gap: 3rem;
+		}
+
+		li {
+			list-style-type: none;
+			padding: 0.9rem;
 
 			@include abs.mediaQuery(tab-land) {
-				grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
+				margin: 0.5rem 0.1rem;
 			}
 
 			@include abs.mediaQuery(tab-port) {
-				grid-template-columns: repeat(2, 1fr);
-				column-gap: 0.1rem;
+				margin: 0.3rem 1.1rem;
 			}
 
-			@include abs.mediaQuery(mobile) {
-				grid-template-columns: 1fr;
-				grid-row-gap: 3rem;
-			}
-
-			li {
-				list-style-type: none;
-				padding: 0.9rem;
-
-				@include abs.mediaQuery(tab-land) {
-					margin: 0.5rem 0.1rem;
-				}
-
-				@include abs.mediaQuery(tab-port) {
-					margin: 0.3rem 1.1rem;
-				}
-
-				a {
-					@extend %center-me-vertical;
-				}
+			a {
+				@extend %center-me-vertical;
 			}
 		}
 	}
 }
+
 // RESOURCE HOME NAV BAR
 .resorces-home-nav-bar {
 	ul {
@@ -206,11 +136,8 @@
 				align-self: center;
 				justify-self: center;
 
-				height: 5rem;
-				width: 5rem;
-				fill: var(--color-accent);
-				border-radius: 50%;
-
+				@include abs.border(0, --color-transparent, 50);
+				@include abs.svg-size(4, 4);
 				@include abs.mediaQuery(tab-port) {
 					justify-self: start;
 					transform: translateX(3rem);
@@ -304,9 +231,29 @@
 /// CONTENT PAGE [3RD PAGE]
 .content-page__container {
 	.sticky-nav__container {
+		display: flex;
+		flex-wrap: wrap;
+
+		z-index: 100;
+		background-color: var(--color-secondary-100);
+		transition: all 0.7s;
+		transform: translateX(-300rem);
+
+		section:nth-child(3) {
+			button {
+				width: 24rem;
+				a:link {
+					padding: 5% 20% !important;
+
+					span {
+						white-space: pre;
+					}
+				}
+			}
+		}
 		.sticky-nav__el {
 			flex: 0 0 50%;
-			height: calc(100% / 6);
+			// height: calc(100% / 6);
 
 			display: flex;
 			align-items: center;
@@ -320,16 +267,17 @@
 
 			button {
 				display: flex;
-				align-content: center;
+				align-items: center;
+				justify-content: center;
 
-				padding: 1rem 10rem;
+				padding: 5% 10%;
 				background-color: var(--color--primary-200);
-				border: 1px solid var(--color-black-replace);
 				color: currentColor;
 				cursor: pointer;
 				transform: translateY(-0.5rem);
 				box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
 				transition: all 0.3s;
+				@include abs.border(1, --color-black-replace);
 
 				&:hover {
 					box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
@@ -342,9 +290,7 @@
 				}
 
 				svg {
-					height: 4rem;
-					width: 4rem;
-					fill: var(--color-accent-900);
+					@include abs.svg-size(3, 3);
 
 					@include abs.mediaQuery(mobile) {
 						height: 4.5rem;
@@ -358,7 +304,7 @@
 					text-transform: uppercase;
 					padding-left: 1.7rem;
 					padding-top: 1.9rem;
-					font-size: 1.9rem;
+					font-size: 1.9rem !important;
 					padding-right: 2rem;
 					text-decoration: none;
 					transition: all 0.4s ease-in-out;
@@ -378,38 +324,34 @@
 			a:visited {
 				text-decoration: none;
 				color: var(--color--accent-900);
+				@extend %center-me-full;
 			}
 		}
-
-		.post__navigation__container .dropdownMenu__btn {
-			display: flex;
-		}
 		.nav__element-wrap {
-			height: 500%;
-			border: 1px solid var(--color-accent-600);
+			display: flex;
+			align-items: stretch;
+			flex-wrap: wrap;
+
+			height: 200%;
 			background-color: var(--color-primary-50);
 			position: absolute;
 			top: 7rem;
 			right: 0rem;
-			overflow-x: scroll;
+			overflow: auto;
 			z-index: 50000;
 			transition: all 0.5s;
 			padding-top: 6rem;
-			display: flex;
-			flex-wrap: wrap;
 			list-style-type: none;
 			transform: translateX(-300rem);
+			@extend %stickyNav-postList-list;
 
 			.navClose__btn {
 				display: inline-block;
-				height: 4rem;
-				width: 4rem;
 				position: absolute;
 				top: 1rem;
 				right: 2rem;
-				fill: red;
-				border: 3px solid red;
-				border-radius: 50%;
+				@include abs.svg-size(4, 4, --color-red);
+				@include abs.border(3, --color-red, 50);
 				padding: 0.8rem;
 				cursor: pointer;
 				overflow: visible;
@@ -419,7 +361,6 @@
 			.nav__item {
 				flex: 0 0 50%;
 				padding: 3rem 0;
-				border: 1px solid var(--color-black-replace);
 
 				a:link,
 				a:visited {
@@ -440,12 +381,6 @@
 				}
 			}
 		}
-		display: flex;
-		flex-wrap: wrap;
-		z-index: 100;
-		background-color: var(--color-secondary-100);
-		transition: all 0.7s;
-		transform: translateX(-300rem);
 	}
 	.content-page-indexes__container {
 		display: grid;
