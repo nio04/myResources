@@ -4,9 +4,9 @@ import icons from 'url:../img/sprite.svg';
 
 const mainHomeContainer = document.querySelector('.main-home__container');
 const mainHomeSideNavContainer = document.querySelector('.side-nav__container');
-const mainHomeSideNavBtn = document.querySelector('.sideNav__Btn svg');
+const mainHomeSideNavBtn = document.querySelector('.sideNav__Btn');
 const mainHomeMainSection = document.querySelector('.main-home-resource__container');
-const overlays = document.querySelectorAll('.overlay');
+const overlay = document.querySelector('.overlay');
 const contentPageContainer = document.querySelector('.content-page__container');
 const contentMainHeader = document.querySelector('.nav__container');
 const contentPageIndexes = document.querySelectorAll('.indexes a');
@@ -56,15 +56,15 @@ const contentFooter = document.querySelector('footer');
 // MAIN HOME PAGE - NAVIGATION BUTTON
 if (mainHomeContainer) {
 	const sideNavCallback = ([entries]) => {
-		const btnContainer = mainHomeSideNavBtn.closest('button');
+		// const btnContainer = mainHomeSideNavBtn.closest('button');
 
 		const showButtonManager = (input) => {
 			if (input === 'show') {
-				btnContainer.classList.add('util-sticky');
-				btnContainer.classList.remove('util-display-n');
+				mainHomeSideNavBtn.classList.add('util-sticky');
+				mainHomeSideNavBtn.classList.remove('util-display-n');
 			} else {
-				btnContainer.classList.remove('util-sticky');
-				btnContainer.classList.add('util-display-n');
+				mainHomeSideNavBtn.classList.remove('util-sticky');
+				mainHomeSideNavBtn.classList.add('util-display-n');
 			}
 		};
 
@@ -83,42 +83,42 @@ if (mainHomeContainer) {
 	mainHomeSideNavObserver.observe(mainHomeMainSection);
 
 	// MAIN HOME PAGE -- SIDE-NAV-BAR MANAGER
-	mainHomeSideNavBtn.addEventListener('click', () => {
-		const showNavButton = (input) => {
+	mainHomeSideNavBtn.addEventListener('click', (ev) => {
+		let btn = document.querySelector('.sideNav__Btn svg');
+		if (!(ev.target.nodeName === 'svg' || ev.target.nodeName === 'use')) return;
+		else if (ev.target.nodeName === 'use') {
+			btn = ev.target.closest('svg');
+		}
+
+		const openNav = (input) => {
 			if (input === 'close') {
-				mainHomeSideNavBtn.classList.remove('close');
-				mainHomeSideNavBtn.classList.add('open');
-				mainHomeSideNavBtn.innerHTML = `<use xlink:href="${icons}#navOpen"></use>`;
+				btn.classList.remove('close');
+				btn.classList.add('open');
+				btn.innerHTML = `<use xlink:href="${icons}#navOpen"></use>`;
 				mainHomeSideNavContainer.classList.remove('noTransform--js');
 
-				// overlayRender(mainHomeContainer, 'overlayRemove');
-				overlays.forEach((el) => {
-					el.classList.remove('util-display-y');
-				});
+				overlay.classList.remove('util-display-y');
 			} else {
-				mainHomeSideNavBtn.classList.remove('open');
-				mainHomeSideNavBtn.classList.add('close');
-				mainHomeSideNavBtn.innerHTML = `<use xlink:href="${icons}#navClose"></use>`;
+				btn.classList.remove('open');
+				btn.classList.add('close');
+				btn.innerHTML = `<use xlink:href="${icons}#navClose"></use>`;
 				mainHomeSideNavContainer.classList.add('noTransform--js');
 
-				// overlayRender(mainHomeContainer, 'overlayShow', showNavButton, 'close');
-				overlays.forEach((el) => {
-					el.classList.add('util-display-y');
-					el.addEventListener('click', () => {
-						showNavButton('close');
-					});
+				overlay.classList.add('util-display-y');
+				overlay.addEventListener('click', () => {
+					openNav('close');
 				});
 			}
 		};
 
-		if (mainHomeSideNavBtn.classList.value === 'open') {
-			showNavButton('open');
+		if (btn.classList.value === 'open') {
+			openNav('open');
 
 			document.addEventListener('keydown', (ev) => {
-				if (ev.key === 'Escape') showNavButton('close');
+				if (ev.key === 'Escape') openNav('close');
 			});
 		} else {
-			showNavButton('close');
+			openNav('close');
 		}
 	});
 }
@@ -153,9 +153,10 @@ if (contentPageContainer) {
 					btnState.innerHTML = `<use xlink:href="${icons}#navOpen"></use>`;
 
 					// overlayRender(contentPageContainer, 'overlayRemove');
-					overlays.forEach((el) => {
-						el.classList.remove('util-display-y');
-					});
+					// overlays.forEach((el) => {
+					// 	el.classList.remove('util-display-y');
+					// });
+					overlay.classList.remove('util-display-y');
 
 					contentFloatButtons.forEach((el) => {
 						el.classList.remove('util-display-n');
@@ -167,11 +168,15 @@ if (contentPageContainer) {
 					contentNav.classList.add('noTransform--js');
 
 					// overlayRender(contentPageContainer, 'overlayShow', navShowManager, 'open');
-					overlays.forEach((el) => {
-						el.classList.add('util-display-y');
-						el.addEventListener('click', () => {
-							navShowManager('open');
-						});
+					// overlays.forEach((el) => {
+					// 	el.classList.add('util-display-y');
+					// 	el.addEventListener('click', () => {
+					// 		navShowManager('open');
+					// 	});
+					// });
+					el.classList.add('util-display-y');
+					overlay.addEventListener('click', () => {
+						navShowManager('open');
 					});
 
 					contentFloatButtons.forEach((el) => {
@@ -193,10 +198,13 @@ if (contentPageContainer) {
 			});
 
 			// overlayRender(contentPageContainer, 'overlayShow', 'navShowManager', 'open');
-			overlays.forEach((el) => {
-				el.addEventListener('click', () => {
-					navShowManager('open');
-				});
+			// overlays.forEach((el) => {
+			// 	el.addEventListener('click', () => {
+			// 		navShowManager('open');
+			// 	});
+			// });
+			overlay.addEventListener('clck', () => {
+				navShowManager('open');
 			});
 		}
 		if (entries.isIntersecting) {
