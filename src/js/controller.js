@@ -7,17 +7,17 @@ const mainHomeSideNavContainer = document.querySelector('.side-nav__container');
 const mainHomeSideNavBtn = document.querySelector('.sideNav__Btn');
 const mainHomeMainSection = document.querySelector('.main-home-resource__container');
 const overlay = document.querySelector('.overlay');
-const contentPageContainer = document.querySelector('.content-page__container');
-const contentMainHeader = document.querySelector('.nav__container');
-const contentPageIndexes = document.querySelectorAll('.indexes a');
-const contentNavBtn = document.querySelector('.contentNav__btn svg');
-const contentNav = document.querySelector('.sticky-nav__container');
-const contentPostMenuBtn = document.querySelector('.post__navigation__container');
-const contentStickyNavBtn = document.querySelector('.mode__changer_btn');
+const contentPageContainer = document.querySelector('.content__page--container');
+const contentMainHeader = document.querySelector('.nav--container');
+const contentPageIndexes = document.querySelectorAll('.nav--indexes a');
+const contentNavBtn = document.querySelector('.content__nav--btn svg');
+const contentNav = document.querySelector('.sticky__nav--container');
+const contentPostMenuBtn = document.querySelector('.post__navigation--container');
+const contentStickyNavBtn = document.querySelector('#mode__changer--btn');
 const contentMainSection = document.querySelector('main');
-const contentFloatButtons = document.querySelectorAll('.float-btn__container');
-const contentGoTop = document.querySelector('.to-top-btn');
-const contentGoBottom = document.querySelector('.to-bottom-btn');
+const contentFloatButtons = document.querySelectorAll('.float__btn--container');
+const contentGoTop = document.querySelector('#nav__top--btn');
+const contentGoBottom = document.querySelector('#nav__bottom--btn');
 const contentFooter = document.querySelector('footer');
 
 //////////////////
@@ -127,7 +127,7 @@ if (mainHomeContainer) {
 // CONTENT PAGE --STICKY NAV IMPLEMENT
 if (contentPageContainer) {
 	const stickyNav = ([entries]) => {
-		const contentNavParent = contentNavBtn.closest('.contentNav__btn');
+		const contentNavParent = contentNavBtn.closest('.content__nav--btn');
 		const navButtonMananger = (input) => {
 			if (input === 'open') {
 				contentNav.classList.add('stickyNav--js');
@@ -143,7 +143,7 @@ if (contentPageContainer) {
 		if (!entries.isIntersecting) {
 			navButtonMananger('open');
 
-			const btnState = document.querySelector('.contentNav__btn svg');
+			const btnState = document.querySelector('.content__nav--btn svg');
 
 			const navShowManager = (input) => {
 				if (input === 'open') {
@@ -174,7 +174,7 @@ if (contentPageContainer) {
 					// 		navShowManager('open');
 					// 	});
 					// });
-					el.classList.add('util-display-y');
+					contentNavBtn.classList.add('util-display-y');
 					overlay.addEventListener('click', () => {
 						navShowManager('open');
 					});
@@ -297,14 +297,12 @@ if (contentPageContainer) {
 }
 
 ///////////////////
-// CONTENT PAGE -- RE-FINE POST INDEXES BORDER
+// CONTENT PAGE -- center last odd element
 if (contentPageContainer) {
 	// IF OUR INDEX IS ODD
-	const beforeLast = contentPageIndexes[contentPageIndexes.length - 2];
+	const lastEl = contentPageIndexes[contentPageIndexes.length - 1];
 	if (contentPageIndexes.length % 2 !== 0) {
-		beforeLast.style.borderBottom = '1px solid var(--color-black-replace)';
-	} else {
-		beforeLast.style.borderBottom = 'none';
+		lastEl.classList.add('flexbox-grow');
 	}
 }
 
@@ -316,10 +314,12 @@ if (contentPageContainer) {
 			if (input === 'show') {
 				contentFloatButtons.forEach((el) => {
 					el.classList.add('noTransform--js');
+					el.classList.remove('show__me--js');
 				});
 			} else {
 				contentFloatButtons.forEach((el) => {
 					el.classList.remove('noTransform--js');
+					el.classList.add('show__me--js');
 				});
 			}
 		};

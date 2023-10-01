@@ -8,76 +8,159 @@
     <link rel="stylesheet" href="../sass/pages/git.scss">
     <link rel="stylesheet" href="../sass/theme/prism-light.css">
     <script src="../js/prism.js" defer></script>
-    <script type="module" src="../js/app.js" defer></script>
+    <script type="module" src="../js/controller.js" defer></script>
     <title>git : fundamental</title>
   </head>
 
   <body>
-    <div class="content-page__container">
-      <header class="nav__container">
-        <h1 class="main-header-01">git : basic, staging,
-          commit, branch
-        </h1>
-        <svg>
-          <use xlink:href="../img/sprite.svg#git"></use>
+    <div class="content__page--container">
+      <header class="nav--container">
+        <h1 class="main__header--01">git : basic, staging,commit, branch</h1>
+        <svg fill="none" height="512" viewBox="0 0 24 24" width="512"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <clipPath id="clip0_1_1298">
+            <path d="m0 0h24v24h-24z" />
+          </clipPath>
+          <g clip-path="url(#clip0_1_1298)">
+            <path
+              d="m7.10495 15.21c.65365.2591 1.19556.7395 1.53118 1.3574.33562.6178.44362 1.3339.30517 2.0233s-.51457 1.3082-1.06272 1.7486-1.23353.6743-1.93654.6609c-.70301-.0133-1.37901-.2731-1.91004-.734-.53102-.4609-.88336-1.0936-.99552-1.7877s.02297-1.4056.38182-2.0103.91862-1.0641 1.58165-1.2982v-6.34002c-.6675-.2359-1.2301-.7002-1.58836-1.3108-.35827-.61061-.48913-1.32822-.36946-2.02599.11968-.69776.48218-1.33075 1.02344-1.78708s1.22642-.70662 1.93438-.70662c.70795 0 1.39311.25029 1.93437.70662s.90376 1.08932 1.02344 1.78708c.11967.69777-.01119 1.41538-.36945 2.02599-.35827.6106-.92087 1.0749-1.58836 1.3108v3.17002c.836-.628 1.874-1 3-1h3.99995c.6582 0 1.298-.2163 1.8211-.6156.5231-.39936.9005-.95958 1.0739-1.59442-.6568-.26009-1.2008-.74357-1.5362-1.36531-.3354-.62173-.4408-1.34187-.2975-2.03363s.5261-1.3108 1.0809-1.74812 1.2461-.66489 1.9522-.64265 1.3817.29286 1.9079.76423.8692 1.11326.9687 1.81267-.0509 1.41149-.4248 2.01089c-.3739.59939-.9473 1.04768-1.6192 1.26592-.2014 1.16072-.806 2.21302-1.7074 2.97152-.9013.7585-2.0415 1.1744-3.2196 1.1745h-3.99995c-.65811 0-1.29799.2163-1.8211.6156-.5231.3993-.90044.9595-1.0739 1.5944zm-1.105 1.79c-.26522 0-.51957.1053-.70711.2929-.18754.1875-.29289.4419-.29289.7071s.10535.5196.29289.7071.44189.2929.70711.2929c.26521 0 .51957-.1054.7071-.2929.18754-.1875.2929-.4419.2929-.7071s-.10536-.5196-.2929-.7071c-.18753-.1876-.44189-.2929-.7071-.2929zm0-12.00002c-.26522 0-.51957.10536-.70711.2929-.18754.18753-.29289.44189-.29289.7071 0 .26522.10535.51957.29289.70711.18754.18753.44189.29289.70711.29289.26521 0 .51957-.10536.7071-.29289.18754-.18754.2929-.44189.2929-.70711 0-.26521-.10536-.51957-.2929-.7071-.18753-.18754-.44189-.2929-.7071-.2929zm11.99995 0c-.2652 0-.5195.10536-.7071.2929-.1875.18753-.2929.44189-.2929.7071 0 .26522.1054.51957.2929.70711.1876.18753.4419.29289.7071.29289.2653 0 .5196-.10536.7072-.29289.1875-.18754.2928-.44189.2928-.70711 0-.26521-.1053-.51957-.2928-.7071-.1876-.18754-.4419-.2929-.7072-.2929z"
+              fill="rgb(0,0,0)" />
+          </g>
         </svg>
 
-        <header class="section">
-          <h2>section</h2>
-        </header>
-        <nav class="indexes">
-          <a href="#content-index-veryBasic">
-            <span>
-              very basic
-            </span>
-          </a>
-          <a href="#content-index-staging">
-            <span>
-              staging
-            </span>
-          </a>
-          <a href="#content-index-commit">
-            <span>
-              committing
-            </span>
-          </a>
-          <a href="#content-index-branch">
-            <span>
-              branch
-            </span>
-          </a>
-          <a href="#content-index-gitaInformation">
-            <span>
-              git information
-            </span>
-          </a>
-          <a href="#content-index-normalGitFlow">
-            <span>normal git flowing</span>
-          </a>
+
+        <h2 class="section">section</h2>
+        <nav class="nav--indexes">
+          <a href="#content-index-veryBasic">very basic</a>
+          <a href="#content-index-staging">staging</a>
+          <a href="#content-index-commit">committing</a>
+          <a href="#content-index-branch">branch</a>
+          <a href="#content-index-gitaInformation">git information</a>
+          <a href="#content-index-normalGitFlow">normal git flowing </a>
         </nav>
       </header>
 
-      <!-- main home button -->
-      <button class="contentNav__btn util-sticky">
-        <svg class="open">
-          <use xlink:href="../img/sprite.svg#navOpen"></use>
+      <!-- navigation button -->
+      <button class="content__nav--btn util-sticky">
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 294.843 294.843"
+          style="enable-background:new 0 0 294.843 294.843;" xml:space="preserve" class="open">
+          <g>
+            <path d="M147.421,0C66.133,0,0,66.133,0,147.421c0,40.968,17.259,80.425,47.351,108.255c2.433,2.25,6.229,2.101,8.479-0.331
+      		c2.25-2.434,2.102-6.229-0.332-8.479C27.854,221.3,12,185.054,12,147.421C12,72.75,72.75,12,147.421,12
+      		s135.421,60.75,135.421,135.421s-60.75,135.421-135.421,135.421c-3.313,0-6,2.687-6,6s2.687,6,6,6
+      		c81.289,0,147.421-66.133,147.421-147.421S228.71,0,147.421,0z" />
+            <path
+              d="M84.185,90.185h126.473c3.313,0,6-2.687,6-6s-2.687-6-6-6H84.185c-3.313,0-6,2.687-6,6S80.872,90.185,84.185,90.185z" />
+            <path
+              d="M84.185,153.421h126.473c3.313,0,6-2.687,6-6s-2.687-6-6-6H84.185c-3.313,0-6,2.687-6,6S80.872,153.421,84.185,153.421z" />
+            <path d="M216.658,210.658c0-3.313-2.687-6-6-6H84.185c-3.313,0-6,2.687-6,6s2.687,6,6,6h126.473
+      		C213.971,216.658,216.658,213.971,216.658,210.658z" />
         </svg>
       </button>
 
-      <nav class="sticky-nav__container">
-        <!-- <div class="overlay"></div> -->
-        <section class="sticky-nav__el post__navigation__container">
-          <button class="dropdownMenu__btn">
-            <span>navigate posts</span>
-            <svg class="arrowDown">
-              <use xlink:href="../img/sprite.svg#arrowDown"></use>
-            </svg>
-          </button>
+      <nav class="sticky__nav--container">
+        <section class="sticky__nav--el post__navigation--container">
+          <span>navigate posts</span>
+          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 490.4 490.4"
+            style="enable-background:new 0 0 490.4 490.4;" xml:space="preserve" class="arrowDown"
+            id="dropdownMenu__btn">
+            <g>
+              <g>
+                <path
+                  d="M490.4,245.2C490.4,110,380.4,0,245.2,0S0,110,0,245.2s110,245.2,245.2,245.2S490.4,380.4,490.4,245.2z M24.5,245.2
+            			c0-121.7,99-220.7,220.7-220.7s220.7,99,220.7,220.7s-99,220.7-220.7,220.7S24.5,366.9,24.5,245.2z" />
+                <path d="M253.9,360.4l68.9-68.9c4.8-4.8,4.8-12.5,0-17.3s-12.5-4.8-17.3,0l-48,48V138.7c0-6.8-5.5-12.3-12.3-12.3
+            			s-12.3,5.5-12.3,12.3v183.4l-48-48c-4.8-4.8-12.5-4.8-17.3,0s-4.8,12.5,0,17.3l68.9,68.9c2.4,2.4,5.5,3.6,8.7,3.6
+            			S251.5,362.8,253.9,360.4z" />
+              </g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+          </svg>
 
-          <ul class="nav__element-wrap">
-            <svg class="navClose__btn">
-              <use xlink:href="../img/sprite.svg#navClose"></use>
+          <ul class="nav__el--wrap">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 294.843 294.843" style="enable-background:new 0 0 294.843 294.843;"
+              xml:space="preserve" id="nav__close--btn">
+              <g>
+                <path d="M147.421,0C66.133,0,0,66.133,0,147.421s66.133,147.421,147.421,147.421c38.287,0,74.567-14.609,102.159-41.136
+          		c2.389-2.296,2.464-6.095,0.167-8.483c-2.295-2.388-6.093-2.464-8.483-0.167c-25.345,24.367-58.672,37.786-93.842,37.786
+          		C72.75,282.843,12,222.093,12,147.421S72.75,12,147.421,12s135.421,60.75,135.421,135.421c0,16.842-3.052,33.273-9.071,48.835
+          		c-1.195,3.091,0.341,6.565,3.432,7.761c3.092,1.193,6.565-0.341,7.761-3.432c6.555-16.949,9.879-34.836,9.879-53.165
+          		C294.843,66.133,228.71,0,147.421,0z" />
+                <path
+                  d="M167.619,160.134c-2.37-2.319-6.168-2.277-8.485,0.09c-2.318,2.368-2.277,6.167,0.09,8.485l47.236,46.236
+          		c1.168,1.143,2.683,1.712,4.197,1.712c1.557,0,3.113-0.603,4.288-1.803c2.318-2.368,2.277-6.167-0.09-8.485L167.619,160.134z" />
+                <path
+                  d="M125.178,133.663c1.171,1.171,2.707,1.757,4.243,1.757s3.071-0.586,4.243-1.757c2.343-2.343,2.343-6.142,0-8.485
+          		L88.428,79.942c-2.343-2.343-6.143-2.343-8.485,0c-2.343,2.343-2.343,6.142,0,8.485L125.178,133.663z" />
+                <path
+                  d="M214.9,79.942c-2.343-2.343-6.143-2.343-8.485,0L79.942,206.415c-2.343,2.343-2.343,6.142,0,8.485
+          		c1.171,1.171,2.707,1.757,4.243,1.757s3.071-0.586,4.243-1.757L214.9,88.428C217.243,86.084,217.243,82.286,214.9,79.942z" />
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
             </svg>
+
             <li class="nav__item"><a href="index.html#html__section">navigate to
                 html</a>
             </li>
@@ -100,337 +183,308 @@
           </ul>
         </section>
 
-        <section class="sticky-nav__el">
-          <button class="mode__changer_btn">
-            <svg class="day">
-              <use xlink:href="../img/sprite.svg#nightMode"></use>
+        <section class="sticky__nav--el">
+          <span>change mode</span>
+          <svg height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg"
+            class="day" id="mode__changer--btn">
+            <g id="Layer_2" data-name="Layer 2">
+              <path
+                d="m12 22.75a10.75 10.75 0 0 1 -1.085-21.45.754.754 0 0 1 .7.332.746.746 0 0 1 .033.774 7.387 7.387 0 0 0 -.898 3.594 7.021 7.021 0 0 0 6.75 7.25 6.385 6.385 0 0 0 4.021-1.436.75.75 0 0 1 1.218.615 10.713 10.713 0 0 1 -10.739 10.321zm-2.261-19.724a9.252 9.252 0 1 0 11.317 10.868 7.771 7.771 0 0 1 -3.556.856 8.521 8.521 0 0 1 -8.25-8.75 9.045 9.045 0 0 1 .489-2.974z" />
+            </g>
+          </svg>
+        </section>
+
+        <section class="sticky__nav--el">
+          <a href="index.html">
+            <span>main home</span>
+            <svg id="Layer_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512"
+              width="512" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <path
+                  d="m426 495.983h-340c-25.364 0-46-20.635-46-46v-242.02c0-8.836 7.163-16 16-16s16 7.164 16 16v242.02c0 7.72 6.28 14 14 14h340c7.72 0 14-6.28 14-14v-242.02c0-8.836 7.163-16 16-16s16 7.164 16 16v242.02c0 25.364-20.635 46-46 46z" />
+                <path
+                  d="m496 263.958c-4.095 0-8.189-1.562-11.313-4.687l-198.989-198.987c-16.375-16.376-43.02-16.376-59.396 0l-198.988 198.988c-6.248 6.249-16.379 6.249-22.627 0-6.249-6.248-6.249-16.379 0-22.627l198.988-198.989c28.852-28.852 75.799-28.852 104.65 0l198.988 198.988c6.249 6.249 6.249 16.379 0 22.627-3.123 3.125-7.218 4.687-11.313 4.687z" />
+                <path
+                  d="m320 495.983h-128c-8.837 0-16-7.164-16-16v-142c0-27.57 22.43-50 50-50h60c27.57 0 50 22.43 50 50v142c0 8.836-7.163 16-16 16zm-112-32h96v-126c0-9.925-8.075-18-18-18h-60c-9.925 0-18 8.075-18 18z" />
+              </g>
             </svg>
-            <span>change mode</span>
-          </button>
+          </a>
         </section>
 
-        <section class="sticky-nav__el">
-          <button>
-            <a href="index.html">
-              <svg>
-                <use xlink:href="../img/sprite.svg#home"></use>
-              </svg>
-              <span>main home</span>
-            </a>
-          </button>
-        </section>
-
-        <section class="sticky-nav__el">
+        <section class="stcky__nav--el">
           <button>reserved</button>
         </section>
 
-        <section class="sticky-nav__el">
+        <section class="stcky__nav--el">
           <button>reserved</button>
         </section>
 
-        <section class="sticky-nav__el">
+        <section class="stcky__nav--el">
           <button>reserved</button>
         </section>
       </nav>
       <div class="overlay"></div>
 
-
       <main class="line-numbers util-margin-top-high util-margin-bottom-high">
         <!-- adding hover [go to top] button -->
-        <div class="float-btn__container to-top-btn">
-          <a href="#">
-            <svg>
-              <use xlink:href="../img/sprite.svg#to-top"></use>
+        <button class="float__btn--container" id="nav__top--btn">
+          <a href="#top-side">
+            <svg enable-background="new 0 0 512 512" viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg">
+              <g id="_x30_7_Arrow_Up">
+                <g>
+                  <path
+                    d="m255.002 505.976h2.145c36.463 0 66.131-29.668 66.131-66.131v-206.932l29.575 29.569c25.841 25.853 67.677 25.85 93.515 0l.017-.017c25.845-25.833 25.849-67.695-.012-93.532l-143.671-143.592c-25.785-25.762-67.735-25.756-93.509.017l-143.574 143.58c-25.853 25.841-25.85 67.677 0 93.515 25.824 25.824 67.712 25.851 93.55-.035l29.703-29.744v207.171c-.001 36.463 29.667 66.131 66.13 66.131zm-112.679-260.38c-16.516 16.54-43.32 16.574-59.871.023-16.511-16.511-16.572-43.275 0-59.848l143.574-143.58c16.496-16.496 43.345-16.491 59.842-.006l143.673 143.591c16.518 16.494 16.584 43.281.012 59.853l-.017.017c-15.985 15.997-43.863 15.997-59.848 0l-49.896-49.89c-3.418-3.412-8.521-4.441-12.974-2.581-4.447 1.843-7.347 6.185-7.347 10.998v235.67c0 23.338-18.984 42.322-42.322 42.322h-2.145c-23.338 0-42.322-18.984-42.322-42.322v-235.942c0-4.819-2.901-9.161-7.353-10.998-1.471-.61-3.017-.907-4.551-.907-3.098 0-6.144 1.209-8.423 3.493z" />
+                </g>
+              </g>
+              <g id="Layer_1" />
             </svg>
             <span>top</span>
           </a>
-        </div>
+        </button>
         <!-- adding hover [go to bottom] button -->
-        <div class="float-btn__container to-bottom-btn">
+        <button class="float__btn--container" id="nav__bottom--btn">
           <a href="#bottom-side">
-            <svg>
-              <use xlink:href="../img/sprite.svg#to-bottom"></use>
+            <svg enable-background="new 0 0 512 512" viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg">
+              <g id="_x30_9_Arrow_Down">
+                <g>
+                  <path
+                    d="m257.001 6.022h-2.151c-36.469 0-66.137 29.668-66.137 66.131v206.926l-29.563-29.563c-25.785-25.774-67.753-25.779-93.538.017-25.84 25.828-25.856 67.689.012 93.532l143.678 143.585c25.781 25.769 67.717 25.774 93.503-.012l143.574-143.58c25.857-25.833 25.861-67.677 0-93.515-25.812-25.824-67.724-25.851-93.561.035l-29.691 29.744v-207.169c-.001-36.463-29.669-66.131-66.126-66.131zm112.673 260.38c16.514-16.55 43.32-16.562 59.871-.023s16.551 43.308 0 59.848l-143.574 143.58c-16.508 16.496-43.351 16.502-59.836.006l-143.678-143.593c-16.534-16.51-16.563-43.314-.012-59.853l.012-.017c16.501-16.489 43.351-16.497 59.859 0l49.885 49.89c3.418 3.412 8.533 4.435 12.974 2.581 4.441-1.843 7.347-6.185 7.347-10.998v-235.67c0-23.338 18.984-42.322 42.328-42.322h2.151c23.332 0 42.316 18.984 42.316 42.322v235.943c0 4.819 2.906 9.161 7.359 10.998 4.429 1.837 9.579.82 12.974-2.587z" />
+                </g>
+              </g>
+              <g id="Layer_1" />
             </svg>
             <span>bottom</span>
           </a>
-        </div>
+        </button>
 
         <section id="content-index-veryBasic" class="util-margin-bottom-high">
           <h2>very basic</h2>
           <article class="content-area__container util-border-bottom-double util-padding-bottom">
             <h3>enable git</h3>
-            <figure>
-              <pre>
-                <code class="language-git">
+            <pre>
+              <code class="language-git">
                 git init
               </code>
-              </pre>
-            </figure>
+            </pre>
           </article>
 
           <article
             class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom">
             <h3>status checking git</h3>
-            <figure>
-              <pre>
-                <code class="language-git">
+            <pre>
+              <code class="language-git">
                 git status
               </code>
-              </pre>
-            </figure>
+            </pre>
           </article>
 
           <article class="content-area__container util-margin-top">
             <h3>log checking git</h3>
-            <figure>
-              <pre>
-                <code class="language-git">
+            <pre>
+              <code class="language-git">
                 git log
                 //or
                 git log --oneline
               </code>
-              </pre>
-            </figure>
+            </pre>
           </article>
         </section>
 
         <section id="content-index-staging" class="util-margin-bottom-high">
-          <header>
-            <h2>staging </h2>
-          </header>
+          <h2>staging </h2>
           <article class="content-area__container util-border-bottom-double util-padding-bottom">
             <h3>stage a file</h3>
-            <figure>
-              <pre>
-                <code class="language-git">
+            <pre>
+              <code class="language-git">
                 git add [fileName]
               </code>
-              </pre>
-            </figure>
+            </pre>
           </article>
 
           <article
             class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom">
             <h3>stage multiple file</h3>
-            <figure>
-              <pre>
-                <code class="language-git">
+            <pre>
+              <code class="language-git">
                 git add [fileName1] [fileName2]
               </code>
-              </pre>
-            </figure>
+            </pre>
           </article>
 
           <article
             class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom">
             <h3>stage all files</h3>
-            <figure>
-              <pre>
-                <code class="language-git">
+            <pre>
+              <code class="language-git">
                 git add *
               </code>
-              </pre>
-            </figure>
+            </pre>
           </article>
 
           <article class="content-area__container util-margin-top">
             <h3>stage and commit : shortcut</h3>
-            <figure>
-              <pre>
-                <code class="language-git">
+            <pre>
+              <code class="language-git">
                 git commit -am "commit message"
               </code>
-              </pre>
-            </figure>
-            <details class="content__post util-cursor-pointer">
+            </pre>
+            <p class="content__post">
               stage and commit at the same time! (only works for atleast once commited file)
-            </details>
+            </p>
           </article>
         </section>
 
         <section id="content-index-commit" class="util-margin-bottom-high">
-          <header>
-            <h2>commit</h2>
-          </header>
+          <h2>commit</h2>
           <article class="content-area__container util-border-bottom-double util-padding-bottom">
             <h3>commit file</h3>
-            <figure>
-              <pre>
-                <code class="language-git">
+            <pre>
+              <code class="language-git">
                 git commit -m "commit message"
               </code>
-              </pre>
-            </figure>
+            </pre>
           </article>
 
           <article class="content-area__container util-margin-top">
             <h3>stage and commit : shortcut</h3>
-            <figure>
-              <pre>
-                <code class="language-git">
+            <pre>
+              <code class="language-git">
                  git commit -am "commit message"
-            </code>
-              </pre>
-            </figure>
+                </code>
+            </pre>
           </article>
         </section>
 
         <section id="content-index-branch" class="util-margin-bottom-high">
-          <header>
-            <h2>branch</h2>
-          </header>
+          <h2>branch</h2>
           <article class="content-area__container util-border-bottom-double util-padding-bottom">
             <h3>create branch</h3>
-            <figure>
-              <pre>
-                <code class="language-git">
+            <pre>
+              <code class="language-git">
                 git branch [branch name]
               </code>
-              </pre>
-            </figure>
-
+            </pre>
           </article>
 
           <article
             class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom">
             <h3>view all braches</h3>
-            <figure>
-              <pre>
-                <code class="language-git">
+            <pre>
+              <code class="language-git">
                 git branch
               </code>
-              </pre>
-            </figure>
-
+            </pre>
           </article>
 
           <article
             class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom">
             <h3>switching branch</h3>
-            <figure>
-              <pre>
-                <code class="language-git">
+            <pre>
+              <code class="language-git">
               git switch [branch name]
             </code>
-              </pre>
-            </figure>
-
+            </pre>
           </article>
 
           <article
             class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom">
             <h3>delete branch : not forcing</h3>
-            <figure>
-              <pre>
-                <code class="language-git">
+            <pre>
+              <code class="language-git">
                 git branch -d [branch name]
               </code>
-              </pre>
-            </figure>
-
-            <details class="content__post util-cursor-pointer">
+            </pre>
+            <p class="content__post">
               if the branch is not merged and get delete command, we will get a warning
-            </details>
+            </p>
           </article>
 
           <article
             class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom">
             <h3>delete branch : forcing</h3>
-            <figure>
-              <pre>
-                <code class="language-git">
+            <pre>
+              <code class="language-git">
                 git branch -D [branch name]
               </code>
-              </pre>
-            </figure>
-
-            <details class="content__post util-cursor-pointer">
+            </pre>
+            <p class="content__post">
               ignore branch delete warning
-            </details>
+            </p>
           </article>
 
           <article
             class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom">
             <h3>rename branch</h3>
-            <figure>
-              <pre>
-                <code class="language-git">
+            <pre>
+              <code class="language-git">
               git branch -m [new branch name]
             </code>
-              </pre>
-            </figure>
-
-            <details class="content__post util-cursor-pointer">
+            </pre>
+            <p class="content__post">
               stay on that branch, you are renaming to
-            </details>
+            </p>
           </article>
 
           <article class="content-area__container util-margin-top">
             <h3 class="util-center util-caplock">Heads up!!!</h3>
-            <details class="content__post util-cursor-pointer">
+            <p class="content__post">
               make sure to check! before switching branch, if the base branch have any unstaged
               file that switching to branch doesnt have, then this unstaged file will follw to
               swiching branch. so, make sure to stage files, before switching branch
-            </details>
+            </p>
           </article>
         </section>
 
         <section id="content-index-gitaInformation" class="util-margin-bottom-high">
-          <header>
-            <h2>git information</h2>
-          </header>
-          <details class="content__post util-cursor-pointer">
-            <ul class="list-wrap__container">
-              <li class="list"><span class="post__code">HEAD</span> refers to the current branch,
-                its not have to be the last commit</li>
-            </ul>
-          </details>
+          <h2>git information</h2>
+          <ul class="list__wrap--container">
+            <li class="list"><span class="post__code">HEAD</span> refers to the current branch,
+              its not have to be the last commit</li>
+          </ul>
         </section>
 
         <section id="content-index-normalGitFlow" class="util-margin-bottom-high">
-          <header>
-            <h2>normal git flowing</h2>
-          </header>
-          <details class="content__post util-cursor-pointer">
-            <ul class="list-wrap__container">
-              <li class="list">very first, we check, if our working directory have a git repository
-                with <span class="post__code">git log</span></li>
-              <li class="list">if no git repo is found, then create a repo by <span
-                  class="post__code">git init</span></li>
-              <li class="list">now there are three stages on git.
-                (1) working directory. (2) staging area. (3) commit</li>
-              <li class="list">for git to have track on the working
-                directory files, we need to push our files to staging area by <span
-                  class="post__code">git add 'fileName'</span></li>
-              <li class="list">after staging our working file, we
-                will push this staged file to commit area. so that, git can keep tracks of all
-                commited files. to commit file <span class="post__code">git commit -m
-                  "commit message"</span></li>
-              <li class="list">now lets say, we want to have huge
-                changes in our current working file or distributing works between team
-                members. for that we need to have a branch!!! <span class="post__code">git
-                  branch [branch name]</span></li>
-              <li class="list">now lets switch to another branch!
-                to get all the branches from the repo, <span class="post__code">git
-                  branch</span> and to switch another branch <span class="post__code">git
-                  switch [another branch name]</span></li>
-              <li class="list">after working on new branch, lets
-                say, we want to merge this new branch to our main branch. first switch to our main
-                branch then <span class="post__code">git merge [new branch name with new
-                  content]</span> - this process is known as fast-forward merge. to get all the
-                info of merging, <a href="#" class="link">click here</a></li>
-              <li class="list">[[add info about how to push git
-                repo to github repo]]</li>
-            </ul>
-          </details>
+          <h2>normal git flowing</h2>
+          <p class="content__post">
+          <ul class="list__wrap--container">
+            <li class="list">very first, we check, if our working directory have a git repository
+              with <span class="post__code">git log</span></li>
+            <li class="list">if no git repo is found, then create a repo by <span
+                class="post__code">git init</span></li>
+            <li class="list">now there are three stages on git.
+              (1) working directory. (2) staging area. (3) commit</li>
+            <li class="list">for git to have track on the working
+              directory files, we need to push our files to staging area by <span
+                class="post__code">git add 'fileName'</span></li>
+            <li class="list">after staging our working file, we
+              will push this staged file to commit area. so that, git can keep tracks of all
+              commited files. to commit file <span class="post__code">git commit -m
+                "commit message"</span></li>
+            <li class="list">now lets say, we want to have huge
+              changes in our current working file or distributing works between team
+              members. for that we need to have a branch!!! <span class="post__code">git
+                branch [branch name]</span></li>
+            <li class="list">now lets switch to another branch!
+              to get all the branches from the repo, <span class="post__code">git
+                branch</span> and to switch another branch <span class="post__code">git
+                switch [another branch name]</span></li>
+            <li class="list">after working on new branch, lets
+              say, we want to merge this new branch to our main branch. first switch to our main
+              branch then <span class="post__code">git merge [new branch name with new
+                content]</span> - this process is known as fast-forward merge. to get all the
+              info of merging, <a href="#" class="link">click here</a></li>
+            <li class="list">[[add info about how to push git
+              repo to github repo]]</li>
+          </ul>
+          </p>
         </section>
       </main>
 
       <!-- indexes -->
-      <footer class="content-page-indexes__container util-margin-top-high" id="bottom-side">
-        <header>
-          <h2>git indexes</h2>
-        </header>
+      <footer class="contentpage__indexes--container util-margin-top-high" id="bottom-side">
+        <h4>git indexes</h4>
         <nav>
           <ul>
             <li class="item link-active">

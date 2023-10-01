@@ -19,26 +19,31 @@
 
 ////////////////
 // CONTENT PAGE [3RD PAGE]
-.content-page__container {
-	.contentNav__btn {
-		height: 10rem;
-		width: 10rem;
+.content__page--container {
+	.content__nav--btn {
+		height: auto;
+		width: auto;
 		z-index: 200;
-		@include abs.border(1, --color-accent-600, 50);
-		background-color: transparent;
+		border: none;
 		cursor: pointer;
+		border-radius: 50%;
+		transform: translateX(-2.6rem) translateY(-3rem) scale(1.1);
+
+		&:focus {
+			outline: none;
+		}
 
 		svg {
-			@include abs.svg-size(3, 3);
+			@include abs.svg-size(8, 8);
 		}
 	}
-	main .float-btn__container {
+	main .float__btn--container {
 		box-sizing: content-box;
 		height: 4rem;
 		position: fixed;
 		font-weight: 900;
 		@include abs.border(5, --color-secondary-100);
-		background-color: var(--color-secondary-200);
+		background-color: var(--color-secondary-300);
 		transition: all 0.2s ease-in-out;
 		transform: translateX(200rem);
 		z-index: 10;
@@ -81,7 +86,7 @@
 				}
 
 				@include abs.mediaQuery(mobile) {
-					font-size: 0;
+					display: none;
 				}
 			}
 		}
@@ -89,14 +94,13 @@
 		@include abs.mediaQuery(mobile) {
 			height: 5rem;
 			width: 5rem;
-			border-radius: 50%;
+			border-radius: 20%;
 		}
 	}
-	.to-top-btn {
+	#nav__top--btn {
 		width: 10rem;
-		top: calc(100% - 8%);
-		left: calc(100% - 12rem);
-		right: 0;
+		bottom: 0.5rem;
+		right: 1rem;
 
 		@include abs.mediaQuery(tab-land) {
 			font-weight: 400;
@@ -104,26 +108,24 @@
 
 		@include abs.mediaQuery(mobile) {
 			justify-content: center;
-			height: 6rem;
-			width: 6rem;
-			top: calc(100% - 9%);
-			left: calc(100% - 7.5rem);
+			width: 8rem;
+			right: -4;
 		}
 	}
-	.to-bottom-btn {
+	#nav__bottom--btn {
 		width: 10rem;
-		top: calc(100% - 8%);
-		left: calc(100% - 22rem);
-		right: 0;
+		bottom: 0.5rem;
+		right: 12rem;
 
 		@include abs.mediaQuery(tab-land) {
 			font-weight: 400;
 		}
 
 		@include abs.mediaQuery(mobile) {
-			top: calc(100% - 9%);
-			left: calc(100% - 14.4rem);
+			width: 8rem;
 			justify-content: center;
+			bottom: 0.5rem;
+			right: 9rem;
 		}
 	}
 }

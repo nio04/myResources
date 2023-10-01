@@ -1,17 +1,15 @@
 @use '../abstract/' as abs;
 
-.content-page__container {
-	main section .content__post .list-wrap__container {
-		display: block;
-		margin-left: 3rem;
+.content__page--container .list__wrap--container {
+	display: block;
+	margin-left: 10rem;
 
-		&:not(:last-child) {
-			margin-bottom: 4rem;
-		}
+	&:not(:last-child) {
+		margin-bottom: 4rem;
+	}
 
-		.list {
-			padding-left: 2rem;
-			line-height: 3;
-		}
+	.list {
+		padding-left: 2rem;
+		line-height: 3;
 	}
 }

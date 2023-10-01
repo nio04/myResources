@@ -7,18 +7,19 @@
 
 ////////////
 /// content-page
-.content-page__container {
+.content__page--container {
 	main section {
 		font-size: 3rem;
 
-		.content-area__container {
+		article {
 			margin-top: 1.5rem;
 			text-transform: lowercase;
 			padding: 1.5rem;
-			margin-left: 2rem;
+			margin-left: 7rem;
+			display: block;
 
 			@include bp.mediaQuery(tab-port) {
-				margin-left: 1rem;
+				margin-left: 6rem;
 				padding: 1.1rem;
 			}
 		}
@@ -27,19 +28,17 @@
 			display: block;
 			position: relative;
 			color: var(--color-black-replace);
-			padding: 0rem 5rem 1rem 5rem;
+			padding: 0rem 15rem 1rem 5rem;
 			margin-top: 3rem;
-			text-transform: capitalize;
-			line-height: 9rem;
-			font-size: 3.2rem;
+			line-height: 7rem;
+			font-size: 3.4rem;
 			font-family: var(--font-content);
 			font-weight: 400;
-			letter-spacing: 0.2rem;
 			word-spacing: 0.5rem;
 
 			@include bp.mediaQuery(tab-port) {
 				margin-left: 0;
-				padding: 0.8rem;
+				padding: 2rem;
 			}
 
 			.post__code {

@@ -1,10 +1,18 @@
 .stickyNav--js {
 	position: sticky !important;
 	height: 80vh !important;
-	width: 100% !important;
-	top: 5rem !important;
+	width: 85% !important;
+	top: 10rem !important;
 }
 
 .noTransform--js {
 	transform: translate(0) !important;
+}
+
+.flexbox-grow {
+	flex: 1 !important;
+}
+
+.show__me--js {
+	display: block;
 }

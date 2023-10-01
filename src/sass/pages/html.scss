@@ -2,9 +2,9 @@
 @use '../base/' as base;
 @use '../layout/' as layout;
 
-.content-page__container {
-	.nav__container {
-		.main-header-01 {
+.content__page--container {
+	.nav--container {
+		.main__header--01 {
 			font-size: 5rem;
 
 			@include abs.mediaQuery(tab-land) {
@@ -21,7 +21,7 @@
 			}
 		}
 	}
-	.sticky-nav__container {
+	.sticky__nav--container {
 		@include abs.mediaQuery(tab-land) {
 			:nth-child(2) {
 				span {
@@ -29,39 +29,39 @@
 				}
 			}
 		}
-		@include abs.mediaQuery(tab-port) {
-			.post__navigation__container button,
-			button,
-			button a {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
+		// @include abs.mediaQuery(tab-port) {
+		// 	.post__navigation__container button,
+		// 	button,
+		// 	button a {
+		// 		display: flex;
+		// 		flex-direction: column;
+		// 		justify-content: center;
 
-				span {
-					margin-top: -1rem;
-					line-height: 1.9rem;
-					font-size: 1.3rem;
-					padding-left: 0;
-					padding-right: 0;
-				}
+		// 		span {
+		// 			margin-top: -1rem;
+		// 			line-height: 1.9rem;
+		// 			font-size: 1.3rem;
+		// 			padding-left: 0;
+		// 			padding-right: 0;
+		// 		}
 
-				svg {
-					height: 5rem;
-					width: 100%;
-					margin: 1.6rem 0;
-				}
-			}
+		// 		svg {
+		// 			height: 5rem;
+		// 			width: 100%;
+		// 			margin: 1.6rem 0;
+		// 		}
+		// 	}
 
-			:nth-child(2),
-			:nth-child(3) {
-				span {
-					order: 1;
-					font-size: 1.4rem;
-				}
-				svg {
-					order: 2;
-				}
-			}
-		}
+		// 	:nth-child(2),
+		// 	:nth-child(3) {
+		// 		span {
+		// 			order: 1;
+		// 			font-size: 1.4rem;
+		// 		}
+		// 		svg {
+		// 			order: 2;
+		// 		}
+		// 	}
+		// }
 	}
 }

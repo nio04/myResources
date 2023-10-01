@@ -2,9 +2,14 @@
 @use '../abstract/' as abs;
 @use '../base/reset';
 
-.content-page__container {
+.content__page--container {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 100vh 1fr;
 	position: relative;
+
+	main {
+		position: relative;
+		overflow-x: hidden;
+	}
 }

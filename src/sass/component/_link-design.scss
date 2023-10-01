@@ -65,11 +65,12 @@
 
 ////////////
 /// CONTENT PAGE [3RD PAGE]
-.content-page__container {
-	.nav__container {
-		.indexes {
+.content__page--container {
+	.nav--container {
+		.nav--indexes {
 			@extend %postIndexes-list-border;
 			a:link {
+				flex: 0 0 50%;
 				text-transform: uppercase;
 				text-decoration: none;
 				font-family: var(--font-tertiary);
@@ -77,7 +78,6 @@
 				font-size: 2.6rem;
 				color: var(--color-black-replace);
 				transition: all 1.4s;
-				flex: 0 0 50%;
 				@extend %center-me-full;
 
 				&:hover {

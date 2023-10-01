@@ -3,9 +3,9 @@
 @use '../layout/' as layout;
 
 // CONTENT - 01 : git fundamental
-.content-page__container {
-	.nav__container {
-		.main-header-01 {
+.content__page--container {
+	.nav--container {
+		.main__header--01 {
 			font-size: 5rem;
 
 			@include abs.mediaQuery(tab-land) {
@@ -26,7 +26,7 @@
 		}
 		///////////
 		/// second page
-		.main-header-02 {
+		.main__header--02 {
 			font-size: 4.5em;
 
 			@include abs.mediaQuery(tab-land) {
@@ -48,7 +48,7 @@
 
 		///////////
 		/// THIRD PAGE
-		.main-header-03 {
+		.main__header--03 {
 			font-size: 5.6rem;
 
 			@include abs.mediaQuery(tab-land) {
@@ -68,7 +68,7 @@
 			}
 		}
 
-		.indexes-03 {
+		.indexes--03 {
 			grid-column: 1 / -1;
 
 			a {
@@ -92,7 +92,7 @@
 
 		////////////
 		/// FOUR PAGE
-		.main-header-04 {
+		.main__header--04 {
 			font-size: 4.2rem;
 
 			@include abs.mediaQuery(tab-land) {
@@ -108,13 +108,13 @@
 			}
 
 			@include abs.mediaQuery(mob-small) {
-				font-size: 3.6rem;
+				font-size: 2.6rem;
 			}
 		}
 
 		//////////////
 		/// FIVE PAGE
-		.main-header-05 {
+		.main__header--05 {
 			font-size: 5rem;
 
 			@include abs.mediaQuery(tab-land) {
@@ -134,7 +134,7 @@
 			}
 		}
 	}
-	.sticky-nav__container {
+	.sticky__nav--container {
 		@include abs.mediaQuery(tab-land) {
 			:nth-child(2) {
 				span {
@@ -142,39 +142,39 @@
 				}
 			}
 		}
-		@include abs.mediaQuery(tab-port) {
-			.post__navigation__container button,
-			button,
-			button a {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
+		// @include abs.mediaQuery(tab-port) {
+		// 	.post__navigation__container button,
+		// 	button,
+		// 	button a {
+		// 		display: flex;
+		// 		flex-direction: column;
+		// 		justify-content: center;
 
-				span {
-					margin-top: -1rem;
-					line-height: 1.9rem;
-					font-size: 1.3rem;
-					padding-left: 0;
-					padding-right: 0;
-				}
+		// 		span {
+		// 			margin-top: -1rem;
+		// 			line-height: 1.9rem;
+		// 			font-size: 1.3rem;
+		// 			padding-left: 0;
+		// 			padding-right: 0;
+		// 		}
 
-				svg {
-					height: 5rem;
-					width: 100%;
-					margin: 1.6rem 0;
-				}
-			}
+		// 		svg {
+		// 			height: 5rem;
+		// 			width: 100%;
+		// 			margin: 1.6rem 0;
+		// 		}
+		// 	}
 
-			:nth-child(2),
-			:nth-child(3) {
-				span {
-					order: 1;
-					font-size: 1.4rem;
-				}
-				svg {
-					order: 2;
-				}
-			}
-		}
+		// 	:nth-child(2),
+		// 	:nth-child(3) {
+		// 		span {
+		// 			order: 1;
+		// 			font-size: 1.4rem;
+		// 		}
+		// 		svg {
+		// 			order: 2;
+		// 		}
+		// 	}
+		// }
 	}
 }
