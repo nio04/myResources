@@ -19,19 +19,17 @@
 
 %stickyNav-postList-list {
 	li:nth-child(even) {
-		border-left: 1px solid var(--color-black-replace);
-		border-bottom: 1px solid var(--color-black-replace);
-		border-right: 1px solid var(--color-black-replace);
+		border-bottom: 2px solid var(--color-black-replace);
+		border-right: 2px solid var(--color-black-replace);
 	}
 	li:nth-child(odd) {
-		border-bottom: 1px solid var(--color-black-replace);
-		border-right: 1px solid var(--color-black-replace);
+		border-left: 2px solid var(--color-black-replace);
+		border-bottom: 2px solid var(--color-black-replace);
+		border-right: 2px solid var(--color-black-replace);
 	}
+	li:nth-child(1),
 	li:nth-child(2) {
-		border-top: 1px solid var(--color-black-replace);
-	}
-	li:nth-child(3) {
-		border-top: 1px solid var(--color-black-replace);
+		border-top: 2px solid var(--color-black-replace);
 	}
 }
 

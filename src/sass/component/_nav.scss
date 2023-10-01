@@ -2,17 +2,17 @@
 
 //////////
 /// main home extra nav
-.main-home__container .main-home-resource__container {
+.main__home--container .main__home__resource--container {
 	position: relative;
 
-	.side-nav__container {
+	.sticky__nav--container {
 		display: inline-block;
-		position: sticky;
+		position: fixed;
 		top: 4rem;
 		left: 3rem;
 		z-index: 1;
 		transition: all 0.5s;
-		transform: translateX(-200rem);
+		transform: translateX(-100vw);
 		width: 0;
 		cursor: pointer;
 
@@ -31,7 +31,6 @@
 					font-size: 2.1rem;
 					display: block;
 					padding: 10% 0;
-					// display: ;
 
 					span {
 						display: block;
@@ -56,7 +55,7 @@
 		}
 	}
 
-	.main-home-resource__contents ul {
+	.main__home__resource--contents ul {
 		display: grid;
 		grid-template-columns: repeat(2, minmax(25rem, max-content));
 		align-items: stretch;
@@ -231,25 +230,35 @@
 /// CONTENT PAGE [3RD PAGE]
 .content__page--container {
 	.sticky__nav--container {
+		height: 80vh;
+		max-height: 80vh;
+		width: 90vw;
+		max-width: 95vw;
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-		gap: 1.6rem;
+		justify-content: space-around;
+		align-content: space-evenly;
+		gap: 1rem;
+		position: fixed;
+		top: 10rem;
+		left: 2.5rem;
 		padding: 5rem;
 		background-color: var(--color-secondary-200);
 		transition: all 0.7s;
-		transform: translateX(-300rem);
+		transform: translateX(-100vw);
 		z-index: 100;
 		overflow: scroll;
+		overflow-x: hidden;
 
 		.sticky__nav--el {
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			position: relative;
-			flex: 0 0 40%;
+			flex: 0 0 30%;
 			height: 10rem;
+			max-height: 12rem;
+			padding: 0 2rem;
 			outline: 1px solid var(--color-accent-900);
 			background-color: var(--color-secondary-300);
 			color: var(--color-black-replace);
@@ -300,23 +309,35 @@
 				color: var(--color--accent-900);
 				@extend %center-me-full;
 			}
-		}
-		.nav__el-wrap {
-			display: flex;
-			align-items: stretch;
-			flex-wrap: wrap;
 
-			height: 200%;
+			#nav__dd__close--icon {
+				position: absolute;
+				top: 8rem;
+				right: -20rem;
+				height: 4rem;
+				width: 4rem;
+				z-index: 10;
+				fill: red;
+				transform: translateX(-100vw);
+			}
+		}
+		.nav__el--wrap {
+			display: flex;
+			flex-wrap: wrap;
+			height: 28rem;
+			max-height: 30rem;
+			width: 40rem;
+			max-width: 40rem;
 			background-color: var(--color-primary-50);
 			position: absolute;
 			top: 7rem;
-			right: 0rem;
+			left: 0;
 			overflow: auto;
-			z-index: 50000;
+			z-index: 5;
 			transition: all 0.5s;
-			padding-top: 6rem;
+			padding: 6rem 3rem;
 			list-style-type: none;
-			transform: translateX(-300rem);
+			transform: translateX(-100vw);
 			@extend %stickyNav-postList-list;
 
 			#nav__close--btn {

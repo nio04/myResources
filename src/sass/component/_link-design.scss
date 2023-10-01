@@ -2,8 +2,8 @@
 
 //////////
 /// MAIN HOME PAGE [1ST PAGE]
-.main-home__container {
-	.main-home-resource__container .main-home-resource__contents {
+.main__home--container {
+	.main__home__resource--container .main__home__resource--contents {
 		@extend %page-indexes-design;
 
 		header {

@@ -14,8 +14,8 @@
 }
 
 @mixin svg-size($height, $width, $fill: var(--color-accent-900)) {
-	height: $height * 1rem !important;
-	width: $width * 1rem !important;
+	height: $height * 1rem;
+	width: $width * 1rem;
 	fill: $fill;
 }
 

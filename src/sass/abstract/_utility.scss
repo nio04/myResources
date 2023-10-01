@@ -171,11 +171,18 @@
 	transform: translateX(0) !important;
 }
 
-.overlay{
+.overlay {
 	display: none;
-	position: absolute;
-	height: 100%;
-	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
 	z-index: 1;
-	background-color:rgba(128, 128, 128, 0.58);
+	background-color: rgba(128, 128, 128, 0.58);
+	cursor: pointer;
+}
+
+.util-overflow-hidden {
+	overflow: hidden !important;
 }

@@ -1,42 +1,46 @@
 @use '../abstract/' as abs;
-////////////////
-/// MAIN HOME PAGE
-.main-home__container main .sideNav__Btn {
-	@include abs.border(0, --color-transparent);
-	z-index: 5000;
-	top: 2rem;
-	left: 2rem;
+
+// nav btn
+#nav__btn__container--home,
+#nav__btn__container--content {
+	height: auto;
+	width: auto;
+	top: 22;
+	z-index: 200;
+	border: none;
+	cursor: pointer;
+	border-radius: 50%;
+	transform: translateX(-2.6rem) translateY(-3rem) scale(1.1);
+
+	&:focus {
+		outline: none;
+	}
 
 	svg {
-		@include abs.svg-size(4, 4);
-		position: absolute;
-		@include abs.border(0, --color-transparent, 50);
-		outline: 2px solid var(--color-accent-900);
-		outline-offset: 1rem;
-		cursor: pointer;
+		@include abs.svg-size(8, 8);
 	}
 }
+////////////////
+/// MAIN HOME PAGE
+// .main__home--container main .sideNav__Btn {
+// 	@include abs.border(0, --color-transparent);
+// 	z-index: 5000;
+// 	top: 2rem;
+// 	left: 2rem;
+
+// 	svg {
+// 		@include abs.svg-size(4, 4);
+// 		position: absolute;
+// 		@include abs.border(0, --color-transparent, 50);
+// 		outline: 2px solid var(--color-accent-900);
+// 		outline-offset: 1rem;
+// 		cursor: pointer;
+// 	}
+// }
 
 ////////////////
 // CONTENT PAGE [3RD PAGE]
 .content__page--container {
-	.content__nav--btn {
-		height: auto;
-		width: auto;
-		z-index: 200;
-		border: none;
-		cursor: pointer;
-		border-radius: 50%;
-		transform: translateX(-2.6rem) translateY(-3rem) scale(1.1);
-
-		&:focus {
-			outline: none;
-		}
-
-		svg {
-			@include abs.svg-size(8, 8);
-		}
-	}
 	main .float__btn--container {
 		box-sizing: content-box;
 		height: 4rem;

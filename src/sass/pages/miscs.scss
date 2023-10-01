@@ -3,13 +3,13 @@
 @use '../base/' as base;
 @use '../layout/' as layout;
 
-.content-page__container {
-	.nav__container {
-		.main-header-01 {
+.content__page--container {
+	.nav--container {
+		.main__header--01 {
 			font-size: 8rem;
 
 			@include abs.mediaQuery(tab-land) {
-				font-size: 7rem;
+				font-size: 6rem;
 			}
 
 			@include abs.mediaQuery(tab-port) {
@@ -17,7 +17,7 @@
 			}
 
 			@include abs.mediaQuery(mobile) {
-				font-size: 4.2rem;
+				font-size: 3.5rem;
 			}
 
 			@include abs.mediaQuery(mob-small) {
@@ -25,7 +25,8 @@
 			}
 		}
 	}
-.sticky-nav__container {
+
+	.sticky__nav--container {
 		@include abs.mediaQuery(tab-land) {
 			:nth-child(2) {
 				span {

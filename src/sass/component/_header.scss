@@ -2,8 +2,8 @@
 
 ///////////
 /// MAIN HOME PAGE [1ST PAGE]
-.main-home__container {
-	.main-home__header {
+.main__home--container {
+	.main__home--header {
 		display: flex;
 		height: 100vh;
 		width: 90vw;
@@ -44,26 +44,26 @@
 			}
 		}
 	}
-	.main-home-extra-nav__container header h2 {
-		height: 6rem;
-		font-family: var(--font-secondary);
-		font-weight: 600;
-		font-size: 3.6rem;
-		background-color: var(--color-secondary-500);
-		color: var(--color-primary-100);
-		letter-spacing: 0.5rem;
+	// .main-home-extra-nav__container header h2 {
+	// 	height: 6rem;
+	// 	font-family: var(--font-secondary);
+	// 	font-weight: 600;
+	// 	font-size: 3.6rem;
+	// 	background-color: var(--color-secondary-500);
+	// 	color: var(--color-primary-100);
+	// 	letter-spacing: 0.5rem;
 
-		animation-name: dropAndBounce;
-		animation-delay: 0s;
-		animation-duration: 4s;
+	// 	animation-name: dropAndBounce;
+	// 	animation-delay: 0s;
+	// 	animation-duration: 4s;
 
-		@extend %center-me-full;
-		@extend .util-caplock;
-	}
+	// 	@extend %center-me-full;
+	// 	@extend .util-caplock;
+	// }
 
-	.main-home-resource__container
-		.main-home-resource__contents
-		.main-home-resource__header
+	.main__home__resource--container
+		.main__home__resource--contents
+		.main__home__resource--header
 		h2 {
 		margin: 5rem 0;
 		transition: all 0.4s;
