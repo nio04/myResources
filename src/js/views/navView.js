@@ -8,7 +8,7 @@ const overlay = document.querySelector('.overlay');
 const sideNavElementContainer = document.querySelector('.sticky__nav--container');
 const contentPageContainer = document.querySelector('.content__page--container');
 const navDropDownLists = document.querySelector('.nav__el--wrap');
-const navDropDownCloseBtn = document.querySelector('#nav__dd__close--icon');
+const navDropDownCloseBtn = document.querySelector('#nav__close--btn');
 const navigatorTopBtn = document.querySelector('#nav__top--btn');
 const navigatorBottomBtn = document.querySelector('#nav__bottom--btn');
 
@@ -33,7 +33,7 @@ export function initNavBtnManager() {
 				// EXECUTE FUNC WHILE CLICKED ON "NAVIGGATE POST" --CONTENT PAGE
 				showDropDownListMenu();
 			}
-			if (ev.target.closest('#nav__dd__close--icon')) {
+			if (ev.target.closest('#nav__close--btn')) {
 				// CLICKED ON 'CLOSE' BUTTON
 				dropDownListMenuOff();
 			}

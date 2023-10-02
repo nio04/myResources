@@ -1,5 +1,4 @@
 'use strict';
-import { info } from 'autoprefixer';
 import * as navView from './views/navView';
 import icons from 'url:../img/sprite.svg';
 

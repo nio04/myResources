@@ -18,18 +18,18 @@
 }
 
 %stickyNav-postList-list {
-	li:nth-child(even) {
-		border-bottom: 2px solid var(--color-black-replace);
-		border-right: 2px solid var(--color-black-replace);
-	}
 	li:nth-child(odd) {
-		border-left: 2px solid var(--color-black-replace);
-		border-bottom: 2px solid var(--color-black-replace);
-		border-right: 2px solid var(--color-black-replace);
+		border-bottom: 1.4px solid var(--color-black-replace);
+		border-right: 1.4px solid var(--color-black-replace);
 	}
-	li:nth-child(1),
+	li:nth-child(even) {
+		border-left: 1.4px solid var(--color-black-replace);
+		border-bottom: 1.4px solid var(--color-black-replace);
+		border-right: 1.4px solid var(--color-black-replace);
+	}
+	li:nth-child(3),
 	li:nth-child(2) {
-		border-top: 2px solid var(--color-black-replace);
+		border-top: 1.4px solid var(--color-black-replace);
 	}
 }
 

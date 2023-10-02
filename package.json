@@ -10,9 +10,7 @@
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
-	"browserslist": [
-		"> 0.5%, last 2 versions, not dead"
-	],
+	"browserslist": "> 0.5%, last 2 versions, not dead",
 	"devDependencies": {
 		"@parcel/optimizer-cssnano": "^2.9.3",
 		"@parcel/transformer-sass": "^2.9.3",
@@ -29,7 +27,8 @@
 		"@parcel/packager-html": "^2.9.3",
 		"@parcel/packager-svg": "^2.9.3",
 		"prismjs": "^1.29.0",
-		"vscode-css-languageservice": "^6.2.5"
+		"vscode-css-languageservice": "^6.2.5",
+		"autoprefixer": "^10.4.2"
 	},
 	"targets": {
 		"main": {
