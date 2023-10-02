@@ -1,8 +1,12 @@
 'use strict';
+import * as model from './model';
 import * as navView from './views/navView';
+import * as modeView from './views/dayNightView';
+
 import icons from 'url:../img/sprite.svg';
 
 const mainHomeParent = document.querySelector('#main__home--container');
+const contentPageParent = document.querySelector('.content__page--container');
 const navBtnContainer = document.querySelector('#nav__btn--container');
 
 // const mainHomeContainer = document.querySelector('.main-home__container');
@@ -10,7 +14,6 @@ const mainHomeSideNavContainer = document.querySelector('.side-nav__container');
 const mainHomeSideNavBtn = document.querySelector('.sideNav__Btn');
 const mainHomeMainSection = document.querySelector('.main-home-resource__container');
 const overlay = document.querySelector('.overlay');
-const contentPageContainer = document.querySelector('.content__page--container');
 const contentMainHeader = document.querySelector('.nav--container');
 const contentPageIndexes = document.querySelectorAll('.nav--indexes a');
 const contentNavBtn = document.querySelector('.content__nav--btn svg');
@@ -60,8 +63,9 @@ if (mainHomeParent) {
 	navView.initNavBtnManager();
 }
 
-if (contentPageContainer) {
+if (contentPageParent) {
 	navView.initNavBtnManager();
+	modeView.viewChanger(model.getViewModeState());
 }
 
 ////////////////////////
@@ -261,91 +265,91 @@ if (contentPageContainer) {
 // }
 /////////////
 // CONTENT PAGE -- STICKY NAV - DAY/NIGHT MODE CHANGER
-if (contentPageContainer) {
-	const modeChanger = () => {
-		const modeState = document.querySelector(`.mode__changer_btn svg`);
-		const bodyEl = document.querySelector('body');
+// if (contentPageContainer) {
+// 	const modeChanger = () => {
+// 		const modeState = document.querySelector(`.mode__changer_btn svg`);
+// 		const bodyEl = document.querySelector('body');
 
-		const modeChangerManager = (input) => {
-			if (input === 'day') {
-				modeState.classList.remove('night');
-				modeState.classList.add('day');
-				modeState.innerHTML = `<use xlink:href="${icons}#nightMode"></use>`;
-				bodyEl.classList.remove('nightTheme');
-			} else {
-				modeState.classList.remove('day');
-				modeState.classList.add('night');
-				modeState.innerHTML = `<use xlink:href="${icons}#dayMode"></use>`;
-				bodyEl.classList.add('nightTheme');
-			}
-		};
+// 		const modeChangerManager = (input) => {
+// 			if (input === 'day') {
+// 				modeState.classList.remove('night');
+// 				modeState.classList.add('day');
+// 				modeState.innerHTML = `<use xlink:href="${icons}#nightMode"></use>`;
+// 				bodyEl.classList.remove('nightTheme');
+// 			} else {
+// 				modeState.classList.remove('day');
+// 				modeState.classList.add('night');
+// 				modeState.innerHTML = `<use xlink:href="${icons}#dayMode"></use>`;
+// 				bodyEl.classList.add('nightTheme');
+// 			}
+// 		};
 
-		if (modeState.classList.contains('day')) {
-			modeChangerManager('night');
-		} else {
-			modeChangerManager('day');
-		}
-	};
-	contentStickyNavBtn.addEventListener('click', (ev) => {
-		ev.preventDefault();
-		modeChanger();
-	});
-}
+// 		if (modeState.classList.contains('day')) {
+// 			modeChangerManager('night');
+// 		} else {
+// 			modeChangerManager('day');
+// 		}
+// 	};
+// 	contentStickyNavBtn.addEventListener('click', (ev) => {
+// 		ev.preventDefault();
+// 		modeChanger();
+// 	});
+// }
 
 /////////////
 //CONTENT PAGE --SMOOTH SCROLL [TOP, BOTTOM] BUTTON
-if (contentPageContainer) {
-	// TOP BUTTON
-	contentGoTop.addEventListener('click', (ev) => {
-		ev.preventDefault();
-		contentMainHeader.scrollIntoView({ behavior: 'smooth' });
-	});
+// if (contentPageContainer) {
+// 	// TOP BUTTON
+// 	contentGoTop.addEventListener('click', (ev) => {
+// 		ev.preventDefault();
+// 		contentMainHeader.scrollIntoView({ behavior: 'smooth' });
+// 	});
 
-	// BOTTOM BUTTON
-	contentGoBottom.addEventListener('click', (ev) => {
-		ev.preventDefault();
-		contentFooter.scrollIntoView({ behavior: 'smooth' });
-	});
-}
+// 	// BOTTOM BUTTON
+// 	contentGoBottom.addEventListener('click', (ev) => {
+// 		ev.preventDefault();
+// 		contentFooter.scrollIntoView({ behavior: 'smooth' });
+// 	});
+// }
 
 ///////////////////
 // CONTENT PAGE -- center last odd element
-if (contentPageContainer) {
-	// IF OUR INDEX IS ODD
-	const lastEl = contentPageIndexes[contentPageIndexes.length - 1];
-	if (contentPageIndexes.length % 2 !== 0) {
-		lastEl.classList.add('flexbox-grow');
-	}
-}
+// if (contentPageContainer) {
+// 	// IF OUR INDEX IS ODD
+// 	const lastEl = contentPageIndexes[contentPageIndexes.length - 1];
+// 	if (contentPageIndexes.length % 2 !== 0) {
+// 		lastEl.classList.add('flexbox-grow');
+// 	}
+// }
 
 ////////////////
 // CONTENT PAGE --HIDE NAV BUTTON [GO TOP, GO BOTTOM] FROM <HEADER>
-if (contentPageContainer) {
-	const contentNavigatorCallback = ([entries]) => {
-		const showButtonManager = (input) => {
-			if (input === 'show') {
-				contentFloatButtons.forEach((el) => {
-					el.classList.add('noTransform--js');
-					el.classList.remove('show__me--js');
-				});
-			} else {
-				contentFloatButtons.forEach((el) => {
-					el.classList.remove('noTransform--js');
-					el.classList.add('show__me--js');
-				});
-			}
-		};
-		if (entries.isIntersecting) {
-			showButtonManager('show');
-		}
-		if (!entries.isIntersecting) {
-			showButtonManager('hide');
-		}
-	};
-	const contentNavigatorButton = new IntersectionObserver(contentNavigatorCallback, {
-		root: null,
-		threshold: 0,
-	});
+// if (contentPageContainer) {
+// 	const contentNavigatorCallback = ([entries]) => {
+// 		const showButtonManager = (input) => {
+// 			if (input === 'show') {
+// 				contentFloatButtons.forEach((el) => {
+// 					el.classList.add('noTransform--js');
+// 					el.classList.remove('show__me--js');
+// 				});
+// 			} else {
+// 				contentFloatButtons.forEach((el) => {
+// 					el.classList.remove('noTransform--js');
+// 					el.classList.add('show__me--js');
+// 				});
+// 			}
+// 		};
+// 		if (entries.isIntersecting) {
+// 			showButtonManager('show');
+// 		}
+// 		if (!entries.isIntersecting) {
+// 			showButtonManager('hide');
+// 		}
+// 	};
+// 	const contentNavigatorButton = new IntersectionObserver(contentNavigatorCallback, {
+// 		root: null,
+// 		threshold: 0,
+// 	});
 
-	contentNavigatorButton.observe(contentMainSection);
-}
+// 	contentNavigatorButton.observe(contentMainSection);
+// }

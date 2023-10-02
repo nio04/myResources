@@ -25,17 +25,24 @@ export function initNavBtnManager() {
 		// CLICK ON NAVGATION ICON --CONTENT PAGE
 		if (
 			ev.target.closest('#nav__btn__container--content') ||
-			ev.target.closest('.sticky__nav--el')
+			ev.target.closest('.post__navigation--container')
 		) {
 			// SHOW NAVIGATION WHILE CLICKED ON NAV ICON --CONTENT PAGE
 			showNavigation();
+
 			if (ev.target.closest('.sticky__nav--el')) {
 				// EXECUTE FUNC WHILE CLICKED ON "NAVIGGATE POST" --CONTENT PAGE
 				showDropDownListMenu();
 			}
+
 			if (ev.target.closest('#nav__close--btn')) {
 				// CLICKED ON 'CLOSE' BUTTON
 				dropDownListMenuOff();
+			}
+
+			// WHEN CLICKED ON NAVIGATION CLOSE BUTTON
+			if (ev.target.classList.contains('nav__btn__off--icon')) {
+				hideNaviation();
 			}
 		}
 
@@ -46,6 +53,11 @@ export function initNavBtnManager() {
 				hideNaviation();
 			}
 		});
+
+		// if (ev.target.closest('#nav__btn__container--content')) {
+		// 	console.log('xxx');
+		// 	hideNaviation();
+		// }
 	});
 }
 
@@ -98,7 +110,7 @@ function dropDownListMenuOff() {
 
 function generateNavOffIcon() {
 	return `
- <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+ <svg class="nav__btn__off--icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 294.843 294.843" style="enable-background:new 0 0 294.843 294.843;" xml:space="preserve">
 <g>
 	<path d="M147.421,0C66.133,0,0,66.133,0,147.421s66.133,147.421,147.421,147.421c38.287,0,74.567-14.609,102.159-41.136
@@ -148,7 +160,7 @@ function generateNavOffIcon() {
 }
 function generateNavOnIcon() {
 	return `
-  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  <svg class="nav__btn__on--icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 294.843 294.843" style="enable-background:new 0 0 294.843 294.843;" xml:space="preserve">
 <g>
 	<path d="M147.421,0C66.133,0,0,66.133,0,147.421c0,40.968,17.259,80.425,47.351,108.255c2.433,2.25,6.229,2.101,8.479-0.331
