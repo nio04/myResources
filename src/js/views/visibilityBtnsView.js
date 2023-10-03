@@ -2,11 +2,13 @@ const target = document.querySelector('#content__main--section');
 const navBtnContainer = document.querySelector('.content__nav--btn');
 const navigatorBtns = document.querySelectorAll('.float__btn--container');
 
-const btnsIntersection = new IntersectionObserver(navViewIntersection, {
-	root: null,
-	threshold: 0,
-	rootMargin: '-300px',
-});
+(function () {
+	btnsIntersection = new IntersectionObserver(navViewIntersection, {
+		root: null,
+		threshold: 0,
+		rootMargin: '-300px',
+	});
+})();
 
 btnsIntersection.observe(target);
 

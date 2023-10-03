@@ -10,5 +10,10 @@
 		"*.{png,jpg,jpeg,svg,...}": [
 			"@parcel/optimizer-imagemin"
 		]
+	},
+	"transformers": {
+		"*.{js,mjs,jsx,cjs,ts,tsx}": [
+			"@parcel/transformer-js"
+		]
 	}
 }
