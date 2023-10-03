@@ -22,11 +22,5 @@
 	"dependencies": {
 		"prismjs": "^1.29.0",
 		"vscode-css-languageservice": "^6.2.5"
-	},
-	"targets": {
-		"global": {
-			"context": "browser",
-			"outputFormat": "global"
-		}
 	}
 }
