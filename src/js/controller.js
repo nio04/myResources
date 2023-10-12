@@ -1,5 +1,4 @@
 'use strict';
-import Typed from 'typed.js';
 
 import * as model from './model';
 import viewTyped from './views/viewTyped';
