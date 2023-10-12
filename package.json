@@ -21,6 +21,8 @@
 	},
 	"dependencies": {
 		"prismjs": "^1.29.0",
+		"typed.js": "^2.0.16",
+		"typeit": "^8.7.1",
 		"vscode-css-languageservice": "^6.2.5"
 	}
 }

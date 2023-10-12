@@ -1,5 +1,6 @@
 const bodyElement = document.querySelector('body');
 const mainHomeContainer = document.querySelector('#main__home--container');
+const contentpageContainer = document.querySelector('.content__page--container');
 const navBtnContainerHome = document.querySelector('#nav__btn__container--home');
 const navBtnContainerContent = document.querySelector(
 	'#nav__btn__container--content'
@@ -13,6 +14,24 @@ const navigatorTopBtn = document.querySelector('#nav__top--btn');
 const navigatorBottomBtn = document.querySelector('#nav__bottom--btn');
 
 export function initNavBtnManager() {
+	function btnsViewFn([entries]) {
+		if (entries.isIntersecting) {
+			showNavBtn();
+			if (contentPageContainer) showNavigator();
+		} else {
+			hideNavBtn();
+			if (contentPageContainer) hideNavigator();
+		}
+	}
+	const navIntersection = new IntersectionObserver(btnsViewFn, {
+		root: null,
+		threshold: 0,
+		rootMargin: '-200px',
+	});
+
+	// OBSERVER FOR MAIN HOME, CONTENT PAGE --BTNS
+	navIntersection.observe(document.querySelector('#content__main--section'));
+
 	document.addEventListener('click', (ev) => {
 		// CLICK ON NAVGATION ICON --MAIN HOME
 		if (ev.target.closest('#nav__btn__container--home')) {
@@ -53,12 +72,34 @@ export function initNavBtnManager() {
 				hideNaviation();
 			}
 		});
-
-		// if (ev.target.closest('#nav__btn__container--content')) {
-		// 	console.log('xxx');
-		// 	hideNaviation();
-		// }
 	});
+}
+
+function showNavBtn() {
+	if (mainHomeContainer) {
+		navBtnContainerHome.classList.add('util-display-y');
+	} else {
+		navBtnContainerContent.classList.add('util-display-y');
+		console.log('show');
+	}
+}
+
+function hideNavBtn() {
+	if (mainHomeContainer) {
+		navBtnContainerHome.classList.remove('util-display-y');
+	} else {
+		navBtnContainerContent.classList.remove('util-display-y');
+		console.log('hide');
+	}
+}
+
+function showNavigator() {
+	document.querySelector('#nav__top--btn').classList.add('noTransform--js');
+	document.querySelector('#nav__bottom--btn').classList.add('noTransform--js');
+}
+function hideNavigator() {
+	document.querySelector('#nav__top--btn').classList.remove('noTransform--js');
+	document.querySelector('#nav__bottom--btn').classList.remove('noTransform--js');
 }
 
 function hideNaviation() {
