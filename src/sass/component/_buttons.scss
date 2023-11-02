@@ -19,7 +19,7 @@
 	}
 
 	svg {
-		@include abs.svg-size(8, 8);
+		@include abs.svg-size(8, 8, var(--color-accent-900));
 	}
 }
 ////////////////
@@ -43,95 +43,110 @@
 ////////////////
 // CONTENT PAGE [3RD PAGE]
 .content__page--container {
-	main .float__btn--container {
-		box-sizing: content-box;
-		height: 4rem;
-		position: fixed;
-		font-weight: 900;
-		@include abs.border(5, --color-secondary-100);
-		background-color: var(--color-secondary-300);
-		transition: all 0.2s ease-in-out;
-		transform: translateX(200rem);
-		z-index: 10;
-		@extend %center-me-full;
+	main {
+		.float__btn--container {
+			box-sizing: content-box;
+			height: 4rem;
+			position: fixed;
+			font-weight: 900;
+			@include abs.border(5, --color-secondary-100);
+			background-color: var(--color-secondary-300);
+			transition: all 0.2s ease-in-out;
+			transform: translateX(200rem);
+			z-index: 10;
+			@extend %center-me-full;
 
-		&:active,
-		&:focus {
-			transform: scale(0.8);
-		}
-
-		a:link,
-		a:visited {
-			text-decoration: none;
-			display: flex;
-			z-index: 1;
-			color: var(--color-accent-900);
-
-			svg {
-				@include abs.svg-size(2, 2);
-				margin-right: 0.5rem;
-
-				@include abs.mediaQuery(mobile) {
-					margin: 0;
-				}
+			&:active,
+			&:focus {
+				transform: scale(0.8);
 			}
 
-			span {
+			a:link,
+			a:visited {
+				text-decoration: none;
+				display: flex;
+				z-index: 1;
 				color: var(--color-accent-900);
-				font-size: 1.3rem;
-				font-family: var(--font-general);
-				font-weight: 600;
-				text-transform: uppercase;
-				@extend %center-me-full;
 
-				&:hover {
-					animation-name: rainbowZoomIn;
-					animation-delay: 0.1s;
-					animation-duration: 3s;
-					animation-iteration-count: infinite;
+				svg {
+					@include abs.svg-size(2, 2);
+					margin-right: 0.5rem;
+
+					@include abs.mediaQuery(mobile) {
+						margin: 0;
+					}
 				}
 
-				@include abs.mediaQuery(mobile) {
-					display: none;
+				span {
+					color: var(--color-accent-900);
+					font-size: 1.3rem;
+					font-family: var(--font-general);
+					font-weight: 600;
+					text-transform: uppercase;
+					@extend %center-me-full;
+
+					&:hover {
+						animation-name: rainbowZoomIn;
+						animation-delay: 0.1s;
+						animation-duration: 3s;
+						animation-iteration-count: infinite;
+					}
+
+					@include abs.mediaQuery(mobile) {
+						display: none;
+					}
 				}
+			}
+
+			@include abs.mediaQuery(mobile) {
+				height: 5rem;
+				width: 5rem;
+				border-radius: 20%;
+			}
+		}
+		#nav__top--btn {
+			width: 10rem;
+			bottom: 0.5rem;
+			right: 1rem;
+
+			@include abs.mediaQuery(tab-land) {
+				font-weight: 400;
+			}
+
+			@include abs.mediaQuery(mobile) {
+				justify-content: center;
+				width: 8rem;
+				right: -4;
+			}
+		}
+		#nav__bottom--btn {
+			width: 10rem;
+			bottom: 0.5rem;
+			right: 12rem;
+
+			@include abs.mediaQuery(tab-land) {
+				font-weight: 400;
+			}
+
+			@include abs.mediaQuery(mobile) {
+				width: 8rem;
+				justify-content: center;
+				bottom: 0.5rem;
+				right: 9rem;
 			}
 		}
 
-		@include abs.mediaQuery(mobile) {
-			height: 5rem;
-			width: 5rem;
-			border-radius: 20%;
-		}
-	}
-	#nav__top--btn {
-		width: 10rem;
-		bottom: 0.5rem;
-		right: 1rem;
-
-		@include abs.mediaQuery(tab-land) {
-			font-weight: 400;
-		}
-
-		@include abs.mediaQuery(mobile) {
-			justify-content: center;
-			width: 8rem;
-			right: -4;
-		}
-	}
-	#nav__bottom--btn {
-		width: 10rem;
-		bottom: 0.5rem;
-		right: 12rem;
-
-		@include abs.mediaQuery(tab-land) {
-			font-weight: 400;
-		}
-
-		@include abs.mediaQuery(mobile) {
-			width: 8rem;
-			justify-content: center;
-			bottom: 0.5rem;
-			right: 9rem;
+		.contentPage__magic-btn {
+			height: 3rem;
+			width: 6rem;
+			z-index: 2;
+			position: fixed;
+			top: 2rem;
+			right: 2rem;
+			display: block;
+			border: none;
+			background: transparent;
+			cursor: pointer;
 		}
 	}
 }

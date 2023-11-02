@@ -20,49 +20,6 @@
 	}
 }
 
-/////////////
-/// resource home go back button
-.resource-home-container {
-	a {
-		margin-right: auto;
-
-		box-shadow: 1px 4px 12px var(--color-accent);
-		padding: 1rem 4rem;
-		margin-left: 3rem;
-		cursor: pointer;
-		text-decoration: none;
-		color: var(--color-accent);
-		font-size: 2rem;
-		text-transform: uppercase;
-		transition: all 0.4s;
-
-		@include abs.mediaQuery(mobile) {
-			padding: 0.5rem 2rem;
-			margin-left: 0;
-			box-shadow: none;
-			@include abs.border(1, --color-accent);
-		}
-
-		@include abs.mediaQuery(mob-small) {
-			padding: 0.5rem 1rem;
-		}
-
-		&:active {
-			box-shadow: 0px 0px 0px 0px var(--color-accent);
-		}
-
-		&:hover {
-			outline: none;
-			border: none;
-		}
-
-		svg {
-			height: 4rem;
-			width: 4rem;
-		}
-	}
-}
-
 ////////////
 /// CONTENT PAGE [3RD PAGE]
 .content__page--container {

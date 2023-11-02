@@ -1,6 +1,7 @@
 @use 'var';
 @use 'mixin';
 @use 'bp';
+@use 'anim';
 
 .util-border-bottom-double {
 	border-bottom: 3px double var(--color-accent) !important;
@@ -178,9 +179,25 @@
 	left: 0;
 	height: 100vh;
 	width: 100vw;
-	z-index: 1;
+	z-index: 3;
 	background-color: rgba(128, 128, 128, 0.58);
 	cursor: pointer;
+
+	&:after {
+		content: 'made by nishat';
+		font-size: 2rem;
+		color: var(--color-secondary-900);
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		text-transform: uppercase;
+		font-style: italic;
+		padding-right: 1rem;
+		animation-name: rainbowZoomIn;
+		animation-duration: 3s;
+		animation-delay: 0.3s;
+		animation-iteration-count: infinite;
+	}
 }
 
 .util-overflow-hidden {
