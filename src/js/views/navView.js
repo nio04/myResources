@@ -89,7 +89,6 @@ function hideNavBtn() {
 		navBtnContainerHome.classList.remove('util-display-y');
 	} else {
 		navBtnContainerContent.classList.remove('util-display-y');
-		console.log('hide');
 	}
 }
 
