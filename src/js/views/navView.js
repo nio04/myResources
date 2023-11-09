@@ -9,7 +9,7 @@ const overlay = document.querySelector('.overlay');
 const sideNavElementContainer = document.querySelector('.sticky__nav--container');
 const contentPageContainer = document.querySelector('.content__page--container');
 const navDropDownLists = document.querySelector('.nav__el--wrap');
-const navDropDownCloseBtn = document.querySelector('#nav__close--btn');
+const navDropDownCloseBtn = document.querySelector('.nav__el--wrap svg');
 const navigatorTopBtn = document.querySelector('#nav__top--btn');
 const navigatorBottomBtn = document.querySelector('#nav__bottom--btn');
 
@@ -52,12 +52,10 @@ export function initNavBtnManager() {
 			if (ev.target.closest('.sticky__nav--el')) {
 				// EXECUTE FUNC WHILE CLICKED ON "NAVIGGATE POST" --CONTENT PAGE
 				showDropDownListMenu();
-				console.log('el');
 			}
 
-			if (ev.target.closest('#nav__close--btn')) {
+			if (ev.target.closest('.nav__el--wrap')) {
 				// CLICKED ON 'CLOSE' BUTTON
-				console.log('clicked');
 				dropDownListMenuOff();
 			}
 
@@ -147,7 +145,6 @@ function showDropDownListMenu() {
 function dropDownListMenuOff() {
 	navDropDownLists.classList.remove('util-show-element-transform');
 	navDropDownCloseBtn.classList.remove('util-show-element-transform');
-	console.log('run');
 }
 
 function generateNavOffIcon() {
