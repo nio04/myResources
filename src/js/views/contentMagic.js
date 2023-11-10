@@ -17,6 +17,12 @@ const paddingLTRvalue = document.querySelector('.content__padding__ltr');
 const paddingValueTextSet = document.querySelector('.content__padding--value');
 const lineHeightValue = document.querySelector('.content__line-height');
 const lineHeightTextSet = document.querySelector('.content__line-height--value');
+const textAlignemntValue = document.querySelector(
+	'.contentMagic__text-alignment--input'
+);
+const textAlignmentTextSet = document.querySelector(
+	'.content__text-alignment--value'
+);
 
 export function contentMagicHandler() {
 	document.addEventListener('click', (ev) => {
@@ -189,6 +195,27 @@ export function contentMagicHandler() {
 				break;
 		}
 	});
+
+	// TEXT-ALIGNMENT
+	textAlignemntValue.addEventListener('change', (ev) => {
+		const value = ev.target.value;
+		textAlignmentTextSet.textContent = value;
+
+		switch (value) {
+			case 'left':
+				textAlignmentSetter('left');
+				break;
+			case 'right':
+				textAlignmentSetter('right');
+				break;
+			case 'center':
+				textAlignmentSetter('center');
+				break;
+			case 'justify':
+				textAlignmentSetter('justify');
+				break;
+		}
+	});
 }
 
 function fontFamilySetter(family) {
@@ -271,6 +298,13 @@ function lineHeightSetter(value) {
 	const postText = document.querySelectorAll('.content__post');
 
 	postText.forEach((el) => (el.style.lineHeight = `${value}rem`));
+}
+
+// TEXT-ALIGNMENT
+function textAlignmentSetter(value) {
+	const postTexts = document.querySelectorAll('.content__post');
+
+	postTexts.forEach((el) => (el.style.textAlign = value));
 }
 
 // MAGIC APPEARENCE FUNCTIONALITY

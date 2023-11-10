@@ -495,8 +495,8 @@
 	}
 
 	.content__magic {
-		height: 30rem;
-		width: 65rem;
+		height: auto;
+		width: 75rem;
 		display: flex;
 		justify-content: space-around;
 		position: fixed;
@@ -555,7 +555,7 @@
 					}
 				}
 
-				.content__font-size--value {
+				span {
 					padding-left: 1rem;
 					font-weight: 900;
 					font-size: 2rem;
@@ -591,11 +591,18 @@
 				input {
 					cursor: pointer;
 				}
+
+				span {
+					padding-left: 1rem;
+					font-weight: 900;
+					font-size: 2rem;
+				}
 			}
 		}
 		&--misc-section {
 			font-size: 1.6rem;
 			flex: 0 0 33.33%;
+
 			.tab-header--span {
 				padding-left: 1rem;
 				display: inline-block;
@@ -609,23 +616,28 @@
 			figure {
 				margin-top: 3rem;
 				padding: 1rem 0.7rem;
+
 				@include abs.mediaQuery(mobile) {
 					margin-bottom: 3rem;
 				}
 
-				.content__padding--value,
-				.content__line-height--value {
+				span {
 					display: inline;
 					font-weight: 900;
 					font-size: 2rem;
 					padding-left: 0.4rem;
 				}
+
 				input {
 					cursor: pointer;
 
 					@include abs.mediaQuery(mob-small) {
 						width: 80%;
 					}
+				}
+
+				select {
+					cursor: pointer;
 				}
 			}
 		}
