@@ -5,6 +5,7 @@ import viewTyped from './views/viewTyped';
 import * as navView from './views/navView';
 import * as modeView from './views/dayNightView';
 import * as visiblity from './views/visibilityBtnsView';
+import * as contentMagic from './views/contentMagic';
 
 const mainHomeParent = document.querySelector('#main__home--container');
 const contentPageParent = document.querySelector('.content__page--container');
@@ -16,6 +17,7 @@ if (mainHomeParent) {
 if (contentPageParent) {
 	navView.initNavBtnManager();
 	modeView.viewChanger(model.getViewModeState());
+	contentMagic.contentMagicHandler();
 }
 
 // HOT MODULE REPLACEMENT (HMR)

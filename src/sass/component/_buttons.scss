@@ -7,6 +7,7 @@
 	width: auto;
 	display: none;
 	top: 22;
+	left: 0;
 	z-index: 200;
 	border: none;
 	cursor: pointer;
@@ -150,7 +151,7 @@
 		.contentPage__magic-btn {
 			height: 3rem;
 			width: 6rem;
-			z-index: 2;
+			z-index: 5;
 			position: fixed;
 			top: 2rem;
 			right: 2rem;
