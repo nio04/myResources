@@ -20,16 +20,95 @@
   <body id="main__home--container">
     <section class="main__home--container">
       <header class="main__home--header">
-        <video autoplay loop muted plays-inline>
-          <source src="../asset/video/mainHomeHeader.mp4" type="video/mp4">
+        <!-- <video autoplay loop muted plays-inline>
+          <source src="../asset/video/mainHomeHeader.mp4" type="video/mp4"> -->
         </video>
         <h1><span id="typed--primary-header__span"></span></h1>
         <span id="typed--primary-header__span"></span>
       </header>
 
-
       <!-- RESOURCE CONTAINER STARTING -->
       <main class="main__home__resource--container" id="content__main--section">
+
+        <p class="login__reminder">NOT LOGGED IN. <span
+            class="login__reminder--span">LOGIN</span> FIRST TO VIEW CONTENTS
+        </p>
+
+        <form class="form--login util-display-n">
+          <p class="account__counter">3 account found</p>
+          <button class="clear__account--btn">clear all the saved account
+            information</button>
+          <h1 class="form__header"><span class="site-name">my
+              resource</span><span class="login-hint">log in form</span></h1>
+
+          <section class="form__main-action">
+            <label class="form__username--label">username</label>
+            <input type="text" class="form__username--input"
+              placeholder="your username..." required minlength="4"
+              maxlength="12">
+            <label class="form__password--label">password</label>
+            <input type="password" class="form__password--input"
+              placeholder="your  password..." required minlength="4"
+              maxlength="12">
+          </section>
+          <button type="submit" class="form__login--btn">login</button>
+          <p class="signup__reminder">
+            no account created? please <span class="signup--span">sign up
+              first</span>
+          </p>
+        </form>
+
+        <form class="form--signup util-display-n">
+          <button class="signup__login-form--btn">go back to login</button>
+          <button class="signup__close--btn">close form</button>
+          <h1 class="form__header signup__header"><span class="site-name">my
+              resource</span><span class="login-hint">sign up form</span></h1>
+
+          <section class="form__signup--action">
+            <label class="signup__fname--label">*first name</label>
+            <input type="text" class="signup__fname--input"
+              placeholder="enter  first  name..." required minlength="4"
+              maxlength="12">
+            <label class="signup__lname--label">*last name</label>
+            <input type="text" class="signup__lname--input"
+              placeholder="enter last name..." required minlength="4"
+              maxlength="12">
+            <label class="signup__username--label">*username</label>
+            <input type="text" class="signup__username--input"
+              placeholder="enter username..." required minlength="4"
+              maxlength="12">
+            <label class="signup__date--label">enter date of birth</label>
+            <input type="date" class="signup__date--input">
+            <label class="signup__gender--label">gender</label>
+            <input type="radio" value="male" name="form__gender"
+              class="signup__gender--input gender__input--male" id="male"><label
+              for="male">male</label><br>
+            <input type="radio" value="female" name="form__gender"
+              class="signup__gender--input gender__input--female"
+              id="female"><label for="female">female</label><br>
+            <input type="radio" value="other" name="form__gender"
+              class="signup__gender--input gender__input--other"
+              id="other"><label for="other">other</label><br>
+            <label class="occupation__label">occupation</label>
+            <input type="text" class="signup__occupation--input"
+              placeholder="enter occupation...">
+            <label class="signup__password--label">*password</label>
+            <input type="password"
+              class="signup__password--input signup__password--1"
+              placeholder="enter  password..." required minlength="4"
+              maxlength="12">
+            <label class="signup__password-confirm--label">*confirm
+              password</label>
+            <input type="password"
+              class="signup__pasword--input signup__password--2"
+              placeholder="enter password agian..." required minlength="4"
+              maxlength="12">
+          </section>
+          <figure>
+            <button type="submit" class="signup--btn">signup</button>
+          </figure>
+        </form>
+
         <!-- navigation button -->
         <button class="content__nav--btn util-sticky nav__icon--open"
           id="nav__btn__container--home">
@@ -37,7 +116,7 @@
             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 294.843 294.843"
             style="enable-background:new 0 0 294.843 294.843;"
-            xml:space="preserve" class="open">
+            xml:space="preserve" class="open util-display-n">
             <g>
               <path d="M147.421,0C66.133,0,0,66.133,0,147.421c0,40.968,17.259,80.425,47.351,108.255c2.433,2.25,6.229,2.101,8.479-0.331
             		c2.25-2.434,2.102-6.229-0.332-8.479C27.854,221.3,12,185.054,12,147.421C12,72.75,72.75,12,147.421,12
@@ -75,165 +154,176 @@
             </li>
           </ul>
         </nav>
-        <!-- html start -->
-        <section class="main__home__resource--contents" id="html--section">
-          <header class="main__home__resource--header">
-            <h2 id="typed-js__html">html</h2>
-            <!-- <span id="typed--html__span"></span> -->
-          </header>
-          <ul>
-            <li class="item">
-              <a href="html--01-semantics.html" class="item-link first">html
-                semantic tags</a>
-            </li>
-            </li>
-          </ul>
-        </section>
-        <!-- html end -->
 
-        <!-- css start -->
-        <section class="main__home__resource--contents" id="css--section">
-          <header class="main__home__resource--header">
-            <h2 id="typed-js__css">css</h2>
-            <!-- <span id="typed--css__span"></span> -->
-          </header>
-          <ul>
-            <li class="item">
-              <a href="css--01-grid.html" class="item-link">GRID : everything
-                about grid</a>
-            </li>
-            <li class="item">
-              <a href="css--02-flexbox.html" class="item-link">FLEXBOX :
-                everything about
-                flexBox</a>
-            </li>
-          </ul>
-        </section>
-        <!-- css end -->
+        <section class="contents__parent util-display-n">
+          <!-- html start -->
+          <section class="main__home__resource--contents" id="html--section">
+            <header class="main__home__resource--header">
+              <h2 id="typed-js__html">html</h2>
+              <!-- <span id="typed--html__span"></span> -->
+            </header>
+            <ul>
+              <li class="item">
+                <a href="html--01-semantics.html" class="item-link first">html
+                  semantic tags</a>
+              </li>
+              </li>
+            </ul>
+          </section>
+          <!-- html end -->
 
-        <!-- sass start -->
-        <section class="main__home__resource--contents" id="sass--section">
-          <header class="main__home__resource--header">
-            <h2 id="typed-js__sass">sass</h2>
-            <!-- <span id="typed--sass__span"></span> -->
-          </header>
-          <ul>
-            <li class="item">
-              <a href="sass--01-info.html" class="item-link">sass information :
-                everything about
-                sass</a>
-            </li>
-            <li class="item">
-              <a href="sass--02-setup.html" class="item-link">sass : sass setup
-                with parcel</a>
-            </li>
-            <li class="item">
-              <a href="sass--03-arch.html" class="item-link">sass architecture :
-                template</a>
-            </li>
-          </ul>
-        </section>
-        <!-- sass end -->
+          <!-- css start -->
+          <section class="main__home__resource--contents" id="css--section">
+            <header class="main__home__resource--header">
+              <h2 id="typed-js__css">css</h2>
+              <!-- <span id="typed--css__span"></span> -->
+            </header>
+            <ul>
+              <li class="item">
+                <a href="css--01-grid.html" class="item-link">GRID : everything
+                  about grid</a>
+              </li>
+              <li class="item">
+                <a href="css--02-flexbox.html" class="item-link">FLEXBOX :
+                  everything about
+                  flexBox</a>
+              </li>
+            </ul>
+          </section>
+          <!-- css end -->
 
-        <!-- javascript start -->
-        <section class="main__home__resource--contents" id="js--section">
-          <header class="main__home__resource--header">
-            <h2 id="typed-js__js">javaScript</h2>
-            <!-- <span id="typed--js__span"></span> -->
-          </header>
-          <ul>
-            <li class="item">
-              <a href="#" class="item-link">Lorem ipsum dolor sit amet
-                consectetur.</a>
-            </li>
-          </ul>
-        </section>
-        <!-- javascript end -->
+          <!-- sass start -->
+          <section class="main__home__resource--contents" id="sass--section">
+            <header class="main__home__resource--header">
+              <h2 id="typed-js__sass">sass</h2>
+              <!-- <span id="typed--sass__span"></span> -->
+            </header>
+            <ul>
+              <li class="item">
+                <a href="sass--01-info.html" class="item-link">sass information
+                  :
+                  everything about
+                  sass</a>
+              </li>
+              <li class="item">
+                <a href="sass--02-setup.html" class="item-link">sass : sass
+                  setup
+                  with parcel</a>
+              </li>
+              <li class="item">
+                <a href="sass--03-arch.html" class="item-link">sass architecture
+                  :
+                  template</a>
+              </li>
+            </ul>
+          </section>
+          <!-- sass end -->
 
-        <!-- dom start -->
-        <section class="main__home__resource--contents" id="dom--section">
-          <header class="main__home__resource--header">
-            <h2 id="typed-js__dom">dom</h2>
-            <!-- <span id="typed--dom__span"></span> -->
-          </header>
-          <ul>
-            <li class="item">
-              <a href="dom--01-createEl.html" class="item-link">create html
-                element</a>
-            </li>
-            <li class="item">
-              <a href="dom--02-delete.html" class="item-link">delete html
-                element</a>
-            </li>
-            <li class="item">
-              <a href="dom--03-attribute.html" class="item-link">attribute read
-                from html</a>
-            </li>
-            <li class="item">
-              <a href="dom--04-setCSS.html" class="item-link">css style set</a>
-            </li>
-            <li class="item">
-              <a href="dom--05-readCSS.html" class="item-link">css style read
-                and set</a>
-            </li>
-            <li class="item">
-              <a href="dom--06-cssClass.html" class="item-link">css class
-                manipulation</a>
-            </li>
-          </ul>
-        </section>
-        <!-- dom end -->
+          <!-- javascript start -->
+          <section class="main__home__resource--contents" id="js--section">
+            <header class="main__home__resource--header">
+              <h2 id="typed-js__js">javaScript</h2>
+              <!-- <span id="typed--js__span"></span> -->
+            </header>
+            <ul>
+              <li class="item">
+                <a href="#" class="item-link">Lorem ipsum dolor sit amet
+                  consectetur.</a>
+              </li>
+            </ul>
+          </section>
+          <!-- javascript end -->
 
-        <!-- git start -->
-        <section class="main__home__resource--contents" id="git--section">
-          <header class="main__home__resource--header">
-            <h2 id="typed-js__git">git</h2>
-            <!-- <span id="typed--git__span"></span> -->
-          </header>
-          <ul>
-            <li class="item">
-              <a href="git--01-fundamental.html" class="item-link">fundamental :
-                basics,
-                staging, commiting, branch
-              </a>
-            </li>
-            <li class="item">
-              <a href="git--02-merge.html" class="item-link">merging :
-                everything about git
-                merging</a>
-            </li>
-            <li class="item">
-              <a href="git--03-diff.html" class="item-link">diff : find the
-                differnce</a>
-            </li>
-            <li class="item">
-              <a href="git--04-stash.html" class="item-link">stash : everything
-                about stash
-                change</a>
-            </li>
-            <li class="item">
-              <a href="git--05-resetRestore.html" class="item-link">git -- time
-                travel - reset -
-                restore - revert</a>
-            </li>
-          </ul>
-        </section>
-        <!-- git end -->
+          <!-- dom start -->
+          <section class="main__home__resource--contents" id="dom--section">
+            <header class="main__home__resource--header">
+              <h2 id="typed-js__dom">dom</h2>
+              <!-- <span id="typed--dom__span"></span> -->
+            </header>
+            <ul>
+              <li class="item">
+                <a href="dom--01-createEl.html" class="item-link">create html
+                  element</a>
+              </li>
+              <li class="item">
+                <a href="dom--02-delete.html" class="item-link">delete html
+                  element</a>
+              </li>
+              <li class="item">
+                <a href="dom--03-attribute.html" class="item-link">attribute
+                  read
+                  from html</a>
+              </li>
+              <li class="item">
+                <a href="dom--04-setCSS.html" class="item-link">css style
+                  set</a>
+              </li>
+              <li class="item">
+                <a href="dom--05-readCSS.html" class="item-link">css style read
+                  and set</a>
+              </li>
+              <li class="item">
+                <a href="dom--06-cssClass.html" class="item-link">css class
+                  manipulation</a>
+              </li>
+            </ul>
+          </section>
+          <!-- dom end -->
 
-        <!-- miscs start -->
-        <section class="main__home__resource--contents" id="miscs--section">
-          <header class="main__home__resource--header">
-            <h2 id="typed-js__miscs">miscs</h2>
-            <!-- <span id="typed--miscs__span"></span> -->
-          </header>
-          <ul>
-            <li class="item">
-              <a href="miscs-01-markdown.html" class="item-link">markdown :
-                everything related</a>
-            </li>
-          </ul>
+          <!-- git start -->
+          <section class="main__home__resource--contents" id="git--section">
+            <header class="main__home__resource--header">
+              <h2 id="typed-js__git">git</h2>
+              <!-- <span id="typed--git__span"></span> -->
+            </header>
+            <ul>
+              <li class="item">
+                <a href="git--01-fundamental.html" class="item-link">fundamental
+                  :
+                  basics,
+                  staging, commiting, branch
+                </a>
+              </li>
+              <li class="item">
+                <a href="git--02-merge.html" class="item-link">merging :
+                  everything about git
+                  merging</a>
+              </li>
+              <li class="item">
+                <a href="git--03-diff.html" class="item-link">diff : find the
+                  differnce</a>
+              </li>
+              <li class="item">
+                <a href="git--04-stash.html" class="item-link">stash :
+                  everything
+                  about stash
+                  change</a>
+              </li>
+              <li class="item">
+                <a href="git--05-resetRestore.html" class="item-link">git --
+                  time
+                  travel - reset -
+                  restore - revert</a>
+              </li>
+            </ul>
+          </section>
+          <!-- git end -->
+
+          <!-- miscs start -->
+          <section class="main__home__resource--contents" id="miscs--section">
+            <header class="main__home__resource--header">
+              <h2 id="typed-js__miscs">miscs</h2>
+              <!-- <span id="typed--miscs__span"></span> -->
+            </header>
+            <ul>
+              <li class="item">
+                <a href="miscs-01-markdown.html" class="item-link">markdown :
+                  everything related</a>
+              </li>
+            </ul>
+          </section>
+          <!-- miscs end -->
         </section>
-        <!-- miscs end -->
       </main>
       <footer></footer>
       </div>
