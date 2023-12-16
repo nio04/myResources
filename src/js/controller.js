@@ -6,6 +6,7 @@ import * as navView from './views/navView';
 import * as modeView from './views/dayNightView';
 import * as visiblity from './views/visibilityBtnsView';
 import * as contentMagic from './views/contentMagic';
+import * as accountView from './views/accountView';
 
 const mainHomeParent = document.querySelector('#main__home--container');
 const contentPageParent = document.querySelector('.content__page--container');
@@ -18,6 +19,7 @@ if (contentPageParent) {
 	navView.initNavBtnManager();
 	modeView.viewChanger(model.getViewModeState());
 	contentMagic.contentMagicHandler();
+	accountView.accountPasswordHandle();
 }
 
 // HOT MODULE REPLACEMENT (HMR)
