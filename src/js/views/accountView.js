@@ -1,9 +1,30 @@
-import * as accountPassword from '../accountPassword';
+// import * as accountPassword from '../accountPassword';
 
 const accountPasswordShow = document.querySelector('.accountPassword__show');
 const passwordShowBtn = document.querySelector('.acc__btn--show');
 const showButton = document.querySelector('#acc__btn--show');
+const retryPasswordBtn = document.querySelector('#retry-password');
 let buttonEl;
+
+const accountPassword = {
+	gmail: 'niopai318200204',
+	wpsAcc: 'Nio3108200204',
+	github: 'niopai318200204',
+	vivaldi: 'nio3108200204',
+	microsoft: 'niopai3108200204',
+	abbaGmail: 'nizamuddinkrishi3108200204',
+	abbaMiAcc: 'nio3108200204',
+	nishatMiAcc: 'nio@3108200204',
+	xda: 'niopai3108200204',
+	gameGuardian: 'niopai3108200204',
+	fb: 'niopai7415963',
+	ammaFb: '7415963',
+	bkash: '20020',
+	mega: '3108200204',
+	momGmail: 'shanazvai3108200204',
+	momMiAcc: 'Shanaz3108200204',
+	abbaFb: 'niopai3108200204',
+};
 
 // CONSTANT PASSWORD
 const password = 3108200204;
@@ -13,7 +34,21 @@ const passwordPrompt = (subject = '') => {
 	return prompt(`enter The password to view ${subject}`);
 };
 
-// RETRY PASSWORD --WHEN NOT MATCHED
+// PASSWORD MATCH
+const passwordMatched = (parentEl, mainPassword) => {
+	parentEl.innerText = mainPassword;
+	parentEl.classList.add('password-match', 'password-general');
+	parentEl.classList.remove('invalid-password');
+};
+
+// PASSWORD MATCHED NOT
+const passwordmatchedNot = (parentEl) => {
+	parentEl.innerText = `password did not matched`;
+	parentEl.classList.add('invalid-password', 'password-general');
+	retryPasswordBtnGenerate(parentEl);
+};
+
+// RE-TRY BUTTON GENERATING
 const retryPasswordBtnGenerate = (parent) => {
 	buttonEl = document.createElement('button');
 	buttonEl.classList.add('retry__password--btn');
@@ -22,37 +57,66 @@ const retryPasswordBtnGenerate = (parent) => {
 	parent.append(buttonEl);
 };
 
+// DELETE RETRY BUTTON
+const deleteRetryBtn = () => {
+	if (buttonEl) buttonEl.remove();
+};
+
+// CHECK PASSWORD ON RE-TRY OPERATION
+function checkPasswordMatchRETRY(parentElClass, parentEl) {
+	// OUR TARGET CLASS ALWAYS THE SECOND
+	// ELEMENT. SO, WE MANUALLY SELECT IT
+	const prompt = passwordPrompt([parentEl][1]);
+	if (!prompt) return;
+
+	if (Number(prompt) === password) {
+		// WHEN PROMPT PASSWORD MATCHED
+		const acc = [
+			'gmail',
+			'wpsAcc',
+			'github',
+			'vivaldi',
+			'microsoft',
+			'abbaGmail',
+			'abbaMiAcc',
+			'nishatMiAcc',
+			'xda',
+			'gameGuardian',
+			'fb',
+			'ammaFb',
+			'bkash',
+			'mega',
+			'momGmail',
+			'momMiAcc',
+			'abbaFb',
+		];
+		const parent = [...parentElClass];
+		acc.forEach((element) => {
+			if (element === parent[1]) {
+				passwordMatched(parentEl, accountPassword[element]);
+			}
+		});
+	} else {
+		// WHEN PROMPT PASSWORD MATCHED NOT
+		passwordmatchedNot(parentEl);
+	}
+}
+
 /////
 // PASSWORD MATCHER
 ////
-const validatePassword = (passwordPrompt, parentEl, mainPassword, target) => {
-	// console.log(target);
-
-	// if (!passwordPrompt) return;
+const validatePassword = (passwordPrompt, parentEl, mainPassword) => {
+	if (!passwordPrompt) return;
 
 	if (Number(passwordPrompt) === password) {
 		// MATCHED PASSWORD
-		parentEl.innerText = mainPassword;
-		parentEl.classList.add('password-match', 'password-general');
+		passwordMatched(parentEl, mainPassword);
 
 		// REMOVE RE-TRY BUTTON
-		if (buttonEl) {
-			buttonEl.remove();
-		}
-	}
-	// else if (passwordPrompt.length === 0) {
-	// 	// parentEl.innerHTML = `no password were found`;
-	// 	// parentEl.classList.add('no-password-found', 'password-general');
-	// 	// retryPasswordBtnGenerate(parentEl);
-
-	// 	parentEl.innerText = `no password were found`;
-	// 	retryPasswordBtnGenerate(parentEl);
-	// }
-	else {
-		// parentEl.innerHTML = `password did not matched`;
-		parentEl.innerText = `password did not matched`;
-		parentEl.classList.add('invalid-password', 'password-general');
-		retryPasswordBtnGenerate(parentEl);
+		deleteRetryBtn();
+	} else {
+		// PASSWORD MATCHED NOT
+		passwordmatchedNot(parentEl);
 	}
 };
 
@@ -61,9 +125,14 @@ const validatePassword = (passwordPrompt, parentEl, mainPassword, target) => {
 //////////////
 export const accountPasswordHandle = () => {
 	document.addEventListener('click', (ev) => {
-		// RE-TRY PASSWORD
+		// RE-TRY BUTTON PASSWORD PRESSED
 		if (ev.target.id === 'retry-password') {
-			validatePassword(passwordPrompt(), ev.target.parentElement, '', ev);
+			// INVOKE RE-TRY FUNCTION,
+			// WHEN RE-TRY BUTTON PRESSED
+			checkPasswordMatchRETRY(
+				ev.target.parentElement.classList,
+				ev.target.parentElement
+			);
 		}
 
 		// G-MAIL
@@ -71,7 +140,7 @@ export const accountPasswordHandle = () => {
 			validatePassword(
 				passwordPrompt('gmail'),
 				ev.target.parentElement,
-				accountPassword.gmail()
+				accountPassword.gmail
 			);
 		}
 		// WPS
@@ -79,7 +148,7 @@ export const accountPasswordHandle = () => {
 			validatePassword(
 				passwordPrompt('wps'),
 				ev.target.parentElement,
-				accountPassword.wpsAcc()
+				accountPassword.wpsAcc
 			);
 		}
 
@@ -88,7 +157,7 @@ export const accountPasswordHandle = () => {
 			validatePassword(
 				passwordPrompt('github'),
 				ev.target.parentElement,
-				accountPassword.github()
+				accountPassword.github
 			);
 		}
 
@@ -97,8 +166,7 @@ export const accountPasswordHandle = () => {
 			validatePassword(
 				passwordPrompt('vivaldi'),
 				ev.target.parentElement,
-				accountPassword.vivaldi(),
-				ev
+				accountPassword.vivaldi
 			);
 		}
 		// MICROSOFT
@@ -106,7 +174,7 @@ export const accountPasswordHandle = () => {
 			validatePassword(
 				passwordPrompt('microsoft'),
 				ev.target.parentElement,
-				accountPassword.microsoft()
+				accountPassword.microsoft
 			);
 		}
 		// ABBA G-MAIL
@@ -114,7 +182,7 @@ export const accountPasswordHandle = () => {
 			validatePassword(
 				passwordPrompt('abbaGmail'),
 				ev.target.parentElement,
-				accountPassword.abbaGmail()
+				accountPassword.abbaGmail
 			);
 		}
 		// ABBA MI  ACOUNT
@@ -122,7 +190,7 @@ export const accountPasswordHandle = () => {
 			validatePassword(
 				passwordPrompt('abbaMiAcc'),
 				ev.target.parentElement,
-				accountPassword.abbaMiAcc()
+				accountPassword.abbaMiAcc
 			);
 		}
 		// NISHAT MI  ACOUNT
@@ -130,7 +198,7 @@ export const accountPasswordHandle = () => {
 			validatePassword(
 				passwordPrompt('nishatMiAcc'),
 				ev.target.parentElement,
-				accountPassword.nishatMiAcc()
+				accountPassword.nishatMiAcc
 			);
 		}
 		// xda
@@ -138,7 +206,7 @@ export const accountPasswordHandle = () => {
 			validatePassword(
 				passwordPrompt('xda'),
 				ev.target.parentElement,
-				accountPassword.xda()
+				accountPassword.xda
 			);
 		}
 		// GAME-GUARDDIAN
@@ -146,7 +214,7 @@ export const accountPasswordHandle = () => {
 			validatePassword(
 				passwordPrompt('gameGuardian'),
 				ev.target.parentElement,
-				accountPassword.gameGuardian()
+				accountPassword.gameGuardian
 			);
 		}
 		// FACEBOOK
@@ -154,7 +222,7 @@ export const accountPasswordHandle = () => {
 			validatePassword(
 				passwordPrompt('fb'),
 				ev.target.parentElement,
-				accountPassword.fb()
+				accountPassword.fb
 			);
 		}
 		// AMMA-FACEBOOK
@@ -162,7 +230,7 @@ export const accountPasswordHandle = () => {
 			validatePassword(
 				passwordPrompt('ammaFb'),
 				ev.target.parentElement,
-				accountPassword.ammaFb()
+				accountPassword.ammaFb
 			);
 		}
 		// bkash
@@ -170,7 +238,7 @@ export const accountPasswordHandle = () => {
 			validatePassword(
 				passwordPrompt('bkash'),
 				ev.target.parentElement,
-				accountPassword.bkash()
+				accountPassword.bkash
 			);
 		}
 		// mega
@@ -178,7 +246,7 @@ export const accountPasswordHandle = () => {
 			validatePassword(
 				passwordPrompt('mega'),
 				ev.target.parentElement,
-				accountPassword.mega()
+				accountPassword.mega
 			);
 		}
 		// mom g-mail
@@ -186,7 +254,7 @@ export const accountPasswordHandle = () => {
 			validatePassword(
 				passwordPrompt('momGmail'),
 				ev.target.parentElement,
-				accountPassword.momGmail()
+				accountPassword.momGmail
 			);
 		}
 		// mom mi acount
@@ -194,7 +262,7 @@ export const accountPasswordHandle = () => {
 			validatePassword(
 				passwordPrompt('momMiAcc'),
 				ev.target.parentElement,
-				accountPassword.momMiAcc()
+				accountPassword.momMiAcc
 			);
 		}
 		// abba fb
@@ -202,7 +270,7 @@ export const accountPasswordHandle = () => {
 			validatePassword(
 				passwordPrompt('abbaFb'),
 				ev.target.parentElement,
-				accountPassword.abbaFb()
+				accountPassword.abbaFb
 			);
 		}
 	});
