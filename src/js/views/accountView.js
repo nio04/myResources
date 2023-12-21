@@ -39,6 +39,32 @@ const passwordMatched = (parentEl, mainPassword) => {
 	parentEl.innerText = mainPassword;
 	parentEl.classList.add('password-match', 'password-general');
 	parentEl.classList.remove('invalid-password');
+
+	// REMOVE CLASSES TO PREVENT CALLING
+	// PASSWORD PROMPT WHEN CLICKED IN
+	// SUCCESS PASSWORD
+	const acc = [
+		'gmail',
+		'wpsAcc',
+		'github',
+		'vivaldi',
+		'microsoft',
+		'abbaGmail',
+		'abbaMiAcc',
+		'nishatMiAcc',
+		'xda',
+		'gameGuardian',
+		'fb',
+		'ammaFb',
+		'bkash',
+		'mega',
+		'momGmail',
+		'momMiAcc',
+		'abbaFb',
+	];
+	acc.forEach((el) => {
+		parentEl.classList.remove(el);
+	});
 };
 
 // PASSWORD MATCHED NOT
