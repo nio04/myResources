@@ -546,6 +546,10 @@
               represents a fraction of the available space in the parent
               container</p>
           </article>
+          <article class="content__area--container">
+            <h3>auto</h3>
+            <p class="content__post">width will only occupy its content size</p>
+          </article>
         </section>
 
         <section id="index-keywords" class="util-margin-bottom-high">
@@ -556,7 +560,7 @@
             <h3>information about track</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces">
-                grid-template-column : repeat(3, 1fr);
+                grid-template-columns: repeat(3, 1fr);
               </code>
             </pre>
 
@@ -570,7 +574,7 @@
             <h3>repeat() </h3>
             <pre>
               <code class="language-css match-braces rainbow-braces">
-                grid-template-column : repeat(3, 1fr);
+                grid-template-columns: repeat(3, 1fr);
               </code>
             </pre>
 
@@ -583,7 +587,7 @@
             <h3>min-content</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces">
-                grid-template-row : repeat(3, min-content)
+                grid-template-rows: repeat(3, min-content)
               </code>
             </pre>
 
@@ -603,7 +607,7 @@
             <h3>max-content</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
-                  grid-template-column : repeat(3, max-content);
+                  grid-template-columns: repeat(3, max-content);
               </code>
             </pre>
 
@@ -624,7 +628,7 @@
             <h3>minmax()</h3>
             <pre>
               <code class="language-css brace-selected rainbow-braces match-braces">
-                grid-template-column : repeat(min-content, minmax(10rem, 1fr));
+                grid-template-columns: repeat(min-content, minmax(10rem, 1fr));
                 </code>
             </pre>
 
@@ -641,7 +645,7 @@
             <h3>auto-fill</h3>
             <pre>
               <code class="language-css brace-selected rainbow-braces match-braces">
-                  grid-template-column : repeat(auto-fill, 5rem);
+                  grid-template-columns: repeat(auto-fill, 5rem);
                 </code>
             </pre>
 
@@ -658,7 +662,7 @@
             <h3>auto-fit</h3>
             <pre>
               <code class="language-css brace-selected rainbow-braces match-braces">
-                grid-template-column : repeat(auto-fit, 5rem);
+                grid-template-columns: repeat(auto-fit, 5rem);
               </code>
             </pre>
 
@@ -683,7 +687,7 @@
             <h3>row side defining</h3>
             <pre>
               <code class="language-css brace-selected rainbow-braces match-braces">
-                grid-template-row : [define row size]
+                grid-template-rows: [define row size]
               </code>
             </pre>
             <p class="content__post">define how many <span
@@ -695,7 +699,7 @@
             <h3 class="util-margin-top">naming template</h3>
             <pre>
               <code class="language-css brace-selected rainbow-braces match-braces">
-                  grid-template-row : [first-start] 1fr [first-end second-start] 10rem [second-end];
+                  grid-template-rows: [first-start] 1fr [first-end second-start] 10rem [second-end];
                 </code>
             </pre>
             <p class="content__post">naming grid template rows</p>
@@ -736,7 +740,7 @@
             <h3>column side defining</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
-                grid-template-column : [define column size];
+                grid-template-columns: [define column size];
               </code>
             </pre>
             <p class="content__post">define how many <span
@@ -783,10 +787,9 @@
             </pre>
             <p class="content__post">shorthand property for
               <span class="post__code">row-gap</span> and <span
-                class="post__code">column gap. <span class="post__code">[column
-                  gap]</span> define the gap between two column. same apply for
-                row side
-              </span>
+                class="post__code">column gap.</span> [column
+              gap] define the gap between two column. same apply for
+              row side
             </p>
           </article>
 
@@ -826,6 +829,71 @@
             <p class="content__post">define width for implicit tracks for <span
                 class="post__code">column side</span> </p>
           </article>
+
+          <article
+            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom">
+            <h3 class="util-margin-top">naming grid lines</h3>
+            <pre>
+              <code class="language-css match-braces rainbow-braces brace-hover">
+                .container{
+                grid-template-rows: [header-start] 200px [header-end main-start] 1fr [main-end
+                footer-start] 300px [footer-end]
+                grid-template-columns: repeat(3, [col-start] 1fr [col-end]) 200px [grid-end]
+                }
+
+                .header{
+                grid-column : col-start 1 / grid-end;
+                grid-row: header-start / header-end;
+                }
+                .main{
+                grid-column: col-start 1 / grid-end;
+                grid-row: main-start / main-end;
+                }
+                .footer{
+                grid-column: col-start 1 / grid-end;
+                grid-row: footer-start / footer-end;
+                }
+                </code>
+            </pre>
+            <p class="content__post">only one thing to note, when we name grid
+              line inside repeat(). with the naming,
+              there will be a number by sequence. format (col-start 1 or
+              col-start-5 or col-end 7)</p>
+          </article>
+
+          <article
+            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom">
+            <h3 class="util-margin-top">naming grid area</h3>
+            <pre>
+              <code class="language-css match-braces rainbow-braces brace-hover">
+                .container{
+                grid-template-areas: "head head"
+                                     "box  box  box  side"
+                                     "main main main side"
+                                     "main main main side"
+                                     "foot foot foot foot";
+                }
+
+                .header{
+                grid-area: head;
+                }
+                .box{
+                grid-area: box;
+                }
+                .sidebar{
+                grid-area: side;
+                }
+                . main{
+                grid-area: main;
+                }
+                .footer{
+                grid-area: foot;
+                }
+              </code>
+            </pre>
+          </article>
+
+
         </section>
 
         <section id="index-childrenItems" class="util-margin-bottom-high">
@@ -890,7 +958,7 @@
             <h3>explaining useful template</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
-                grid-template-column : repeat(auto-fit, minmax(min-content, 25rem));
+                grid-template-columns: repeat(auto-fit, minmax(min-content, 25rem));
                 </code>
             </pre>
             <p class="content__post">intially, if the parent container has
@@ -910,6 +978,16 @@
                 grid-template-columns : repeat(auto-fit, minmax(250px, 1fr));
               </code>
             </pre>
+
+            <p class="content__post"> if the container size keeps decreasing as
+              first column can not keep the cells in first column... then it
+              creates a new row. it creates a new row, hence container size
+              keeps decreasing and our content have minimum space specified.
+              <br>
+              <br>
+              since new rows are created, we can style those implicit rows by
+              <span class="post__code">grid-auto-rows</span>
+            </p>
           </article>
 
           <article class="content__area--container util-margin-top">
