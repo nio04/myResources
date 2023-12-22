@@ -547,10 +547,9 @@
               </code>
             </pre>
             <p class="content__post">
-              controls flex direction flow. defaultly, its row. but when its set
-              to column, then
-              the main-axis become align-content and cross-axis become
-              justify-content
+              controls direction flow. when its set to column, then <span
+                class="post__code">align-items -> main-axis</span> and <span
+                class="post__code">justify-content -> cross axis</span>
             </p>
           </article>
 
@@ -563,7 +562,10 @@
               </code>
             </pre>
             <p class="content__post">
-              defines contents wrap behavior
+              if <span class="post__code">flex-wrap</span> property is set to
+              <spa class="post__code">wrap</spa>
+              then, when the children width exceeded parent container width, the
+              children items will be in new line
             </p>
           </article>
 
@@ -577,7 +579,8 @@
             </pre>
 
             <p class="content__post">
-              defines content flow on main-axis or horizontal side
+              defines children alignment on <span class="post__code">main-axis
+                (horizontal) </span>
             </p>
           </article>
 
@@ -591,7 +594,8 @@
             </pre>
 
             <p class="content__post">
-              defines content flow on cross-axis or verticle side
+              defines children alignment on <span class="post__code">cross-axis
+                (verticle)</span>
             </p>
           </article>
 
@@ -605,9 +609,9 @@
             </pre>
 
             <p class="content__post">
-              this property only applied, if the contents in multi-line. works
-              in cross axis
-              (y) - between row gap
+              controls the alignment of children in <span
+                class="post__code">cross axis</span>, when there is
+              enough space in parent container
             </p>
           </article>
 
@@ -620,7 +624,8 @@
             </pre>
 
             <p class="content__post">
-              this property set gap between children items
+              this property set gap between children items. apply gap only
+              between children items, not the outer of the children items
             </p>
           </article>
         </section>
@@ -637,9 +642,19 @@
             </pre>
 
             <p class="content__post">
-              default 0. give permission to particular child to have increase
-              its size according
-              to the flex-grow property
+              default is 0. add the ability to grow as much as possible within
+              the container. it calculate
+              the width of specific element relation to other items width.
+              <br>
+              <br>
+              suppose, first item have <span class="post__code">flex-grow:
+                1;</span> the second item have <span
+                class="post__code">flex-grow: 2;</span> so, the second item will
+              be twice larger relation to first one.
+              <br>
+              <br>
+              <span class="post__code">flex: 1;</span> means, <span
+                class="post__code">flex-grow: 1;</span>
             </p>
           </article>
 
@@ -652,9 +667,14 @@
               </code>
             </pre>
             <p class="content__post">
-              default 0. give permission to particular child to have decrease
-              its size according
-              to the flex-shrink property
+              default is 1. when a specific element is allowed to shrink down,
+              then when viewport width are decreasing, that specific element
+              also keeps decreasing its width.
+              <br>
+              <br>
+              but! if we dont want it to shrink down its specific width, then we
+              specify its <span class="post__code">flex-shrink : 0;</span> then
+              its width never get shrink down
             </p>
           </article>
 
@@ -667,8 +687,7 @@
                 </code>
             </pre>
             <p class="content__post">
-              defines the default size of an element before the remaining space
-              is distributed
+              default is auto. it define the width of the specific element
             </p>
           </article>
 
@@ -694,9 +713,7 @@
               </code>
             </pre>
             <p class="content__post">
-              default is probably all to 0. set any higher positive numbers to
-              mess up the order
-              system
+              default value is 0 for all the child items
             </p>
           </article>
 
@@ -708,7 +725,8 @@
                 </code>
             </pre>
             <p class="content__post">
-              override parent container's align-items property for per selected
+              override parent container's <span
+                class="post__code">align-items</span> property for specific
               children
             </p>
           </article>

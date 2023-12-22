@@ -542,12 +542,29 @@
           <h2>unit</h2>
           <article class="content__area--container">
             <h3>fr</h3>
-            <p class="content__post">portion of the remaining space</p>
+            <p class="content__post"><span class="post__code">fr</span> unit
+              represents a fraction of the available space in the parent
+              container</p>
           </article>
         </section>
 
         <section id="index-keywords" class="util-margin-bottom-high">
           <h2>keyword</h2>
+
+          <article
+            class="content__area--container util-padding-bottom util-border-bottom-double">
+            <h3>information about track</h3>
+            <pre>
+              <code class="language-css match-braces rainbow-braces">
+                grid-template-column : repeat(3, 1fr);
+              </code>
+            </pre>
+
+            <p class="content__post">in css grid, <span
+                class="post__code">track</span> means a full column side or a
+              full row side. in above example, there are 3 column track</p>
+          </article>
+
           <article
             class="content__area--container util-padding-bottom util-border-bottom-double">
             <h3>repeat() </h3>
@@ -558,7 +575,7 @@
             </pre>
 
             <p class="content__post">repeat <span class="post__code">1fr</span>
-              in row side for 3 times</p>
+              in column side for 3 times</p>
           </article>
 
           <article
@@ -575,6 +592,8 @@
               <li class="list">row flexible</li>
               <li class="list">makes line break</li>
               <li class="list">may overflow</li>
+              <li class="list">when define in a template-row, the max size of
+                element content of that row, become the actual row size</li>
             </ul>
             </p>
           </article>
@@ -593,6 +612,9 @@
               <li class="list">column flexible</li>
               <li class="list">makes no line break</li>
               <li class="list">no overflow</li>
+              <li class="list">when define in a template-column, the max size of
+                element content of that column, become the actual column size
+              </li>
             </ul>
             </p>
           </article>
@@ -607,13 +629,10 @@
             </pre>
 
             <p class="content__post">
-              minmax(first, second)
-              usually used in column side. if the container have enough space,
-              children items
-              will have [second] size. and when the parent container size keeps
-              decreasing, the
-              children items size will never be less than the
-              [first] size.
+              if the track size have enough space to fit its content, it will
+              use the SECOND size. if the container
+              size keep decreasing, then the track size will also keep
+              decreasing, but it will never be less than the FIRST size
             </p>
           </article>
 
@@ -627,11 +646,11 @@
             </pre>
 
             <p class="content__post">
-              used in column side. depends on the provided size, if the
-              container
-              have extra space than more empty coulmns will be created to fill
-              up the full
-              width. i think, its best to ignore this property
+              depends on the provided size, if the container have extra space,
+              then more <span class="code__post">empty coulmns</span> will be
+              created to fill up the full width of the container. this makes the
+              grid alignment management poor-er as empty columns fill the
+              remaining space
             </p>
           </article>
 
@@ -644,8 +663,15 @@
             </pre>
 
             <p class="content__post">
-              used in column side. with provided size, the children items try
-              to fit per row
+              depends on the provided size, if the container have enough space,
+              then more <span class="post__code">empty columns</span> will be
+              created to fill up the full width of the container (just like
+              AUTO-FILL) but it will auto collapse the newly created columns as
+              it was never created!
+              <br>
+              <br>
+              BEST for LAYOUT. because, hence its auto collapse the newly
+              created coumns, the grid can have alignment properties effect
             </p>
           </article>
         </section>
@@ -661,7 +687,7 @@
               </code>
             </pre>
             <p class="content__post">define how many <span
-                class="post__code">row</span> needed</p>
+                class="post__code">row</span> to be generated</p>
           </article>
 
           <article
@@ -683,7 +709,11 @@
                   justify-items : stretch[default] center | end | start;
               </code>
             </pre>
-            <p class="content__post"><span class="post__code">main axis</span>
+            <p class="content__post">make each cell a container. then depends on
+              the provided property, it controls
+              the element position in <span class="post__code">x axis
+                (horizontal)</span>
+
             </p>
           </article>
 
@@ -696,8 +726,9 @@
                 </code>
             </pre>
             <p class="content__post">when the total size of grid is less
-              than the container size... then this this property works for <span
-                class="post__code">main axis (x)</span></p>
+              than the container size... then this property align the grid in
+              <span class="post__code">main axis (horizontal)</span>
+            </p>
           </article>
 
           <article
@@ -709,7 +740,7 @@
               </code>
             </pre>
             <p class="content__post">define how many <span
-                class="post__code">column</span> needed
+                class="post__code">column</span> to be generated
             </p>
           </article>
 
@@ -721,9 +752,10 @@
                   align-items : stretch [default] | start | end | center | baseline;
               </code>
             </pre>
-            <p class="content__post">apply effect on <span
-                class="post__code">cross axis / verticle
-                side</span></p>
+            <p class="content__post">make each cell a container. then depends on
+              the provided property, it controls the element position in <span
+                class="post__code">y axis (verticle)</span>
+            </p>
           </article>
 
           <article
@@ -735,8 +767,9 @@
               </code>
             </pre>
             <p class="content__post">when the total size of grid is less
-              than the container size... then this this property works for <span
-                class="post__code">cross axis (y)</span></p>
+              than the container size... then this property align the grid for
+              <span class="post__code">cross axis (verticle)</span>
+            </p>
           </article>
 
           <article
@@ -750,8 +783,23 @@
             </pre>
             <p class="content__post">shorthand property for
               <span class="post__code">row-gap</span> and <span
-                class="post__code">column gap
+                class="post__code">column gap. <span class="post__code">[column
+                  gap]</span> define the gap between two column. same apply for
+                row side
               </span>
+            </p>
+          </article>
+
+          <article class="content__area--container util-margin-top">
+            <h3 class="util-margin-top">grid-auto-flow</h3>
+            <pre>
+              <code class="language-css match-braces rainbow-braces brace-hover">
+                grid-auto-flow : row[default] | column | row dense | column dense
+              </code>
+            </pre>
+            <p class="content__post">when set to COLUMN, implicit grid
+              tracks will be added as column. then the cell order also get
+              messed up
             </p>
           </article>
 
@@ -763,7 +811,7 @@
                   grid-auto-rows : [size];
               </code>
             </pre>
-            <p class="content__post">define height for implicit cell for <span
+            <p class="content__post">define height for implicit tracks for <span
                 class="post__code">row side</span></p>
           </article>
 
@@ -775,22 +823,8 @@
                    grid-auto-columns : [size];
                 </code>
             </pre>
-            <p class="content__post">define width for implicit cell for <span
-                class="post__code">column side </span></p>
-          </article>
-
-          <article class="content__area--container util-margin-top">
-            <h3 class="util-margin-top">grid-auto-flow</h3>
-            <pre>
-              <code class="language-css match-braces rainbow-braces brace-hover">
-                  grid-auto-flow : row[default] | column | row dense | column dense
-                </code>
-            </pre>
-            <p class="content__post">shorthand for <span
-                class="post__code">grid-auto-row</span>
-              property and
-              <span class="post__code">grid-auto-columns</span> property
-            </p>
+            <p class="content__post">define width for implicit tracks for <span
+                class="post__code">column side</span> </p>
           </article>
         </section>
 
@@ -833,7 +867,7 @@
             </pre>
             <p class="content__post">override parent container <span
                 class="post__code">justify
-                items</span> [main-axis] definition</p>
+                items</span> [main-axis] property</p>
           </article>
 
           <article class="content__area--container util-margin-top">
@@ -844,8 +878,8 @@
                 </code>
             </pre>
             <p class="content__post">override parent container <span
-                class="code-expalin--code">align-items</span> [cross-axis]
-              definition</p>
+                class="post__code">align-items</span> [cross-axis]
+              property</p>
           </article>
         </section>
 
@@ -860,12 +894,11 @@
                 </code>
             </pre>
             <p class="content__post">intially, if the parent container has
-              enough space, the
-              elements will defaultly have 25rem && as the container size
-              decrease & the
-              elements can not have 25rem... it will simply apply <span
-                class="post__code">min-content</span> which means, contents will
-              have <span class="post__code">flexible row size</span>
+              enough space, then the columns will have 25rem. if the
+              container size decrease & the column tracks can not have 25rem...
+              it will apply <span class="post__code">min-content</span> effect.
+              which means, contents will have <span class="post__code">flexible
+                row size</span>
             </p>
           </article>
 
