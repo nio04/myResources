@@ -1,0 +1,18 @@
+// ALL CSS CONTENT PAGE DESIGN TABLE
+@use '../abstract/' as abs;
+@use '../base/' as base;
+@use '../layout/' as layout;
+
+.content__page--container {
+	.nav__container {
+		// PAGE: 01
+		.main__header--01 {
+			// MQ
+		}
+
+		// PAGE: 02
+		.main__header--02 {
+			// MQ
+		}
+	}
+}
