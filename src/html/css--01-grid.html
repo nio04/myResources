@@ -23,18 +23,68 @@
     <div class="content__page--container">
       <header class="nav--container">
         <h1 class="main__header--01">everything about grid</h1>
-        <svg>
+        <!-- <svg>
           <use xlink:href="../asset/svg/zSprite.svg#grid"></use>
-        </svg>
+        </svg> -->
 
-        <h2 class="section">section</h2>
-        <nav class="nav--indexes">
-          <a href="#index-unit">unit</a>
-          <a href="#index-keywords">keywords</a>
-          <a href="#index-parentContainer">parent container</a>
-          <a href="#index-childrenItems">children container</a>
-          <a href="#index-miscs">miscs</a>
-        </nav>
+        <section class="posts">
+          <ul id="css__post--1">
+            <li class="post">
+              <a href="#index-unit" class="post__item">unit</a>
+              <a href="#index-fr" class="post__item">fr</a>
+              <a href="#index-auto" class="post__item">auto</a>
+            </li>
+
+            <li class="post">
+              <a href="#index-keywords" class="post__item">keywords</a>
+              <a href="#index-tracks" class="post__item">information about
+                tracks</a>
+              <a href="#index-repeat" class="post__item">repeat</a>
+              <a href="#index-mincontent" class="post__item">min content</a>
+              <a href="#index-maxcontent" class="post__item">max content</a>
+              <a href="#index-minmax" class="post__item">minmax</a>
+              <a href="#index-autofill" class="post__item">auto fill</a>
+              <a href="#index-autofit" class="post__item">auto fit</a>
+            </li>
+
+            <li class="post">
+              <a href="#index-parentContainer" class="post__item">parent
+                container</a>
+              <a href="#index-rowside" class="post__item">row side</a>
+              <a href="#index-naming" class="post__item">naming template</a><a
+                href="#index-justifyitems" class="post__item">justify
+                items</a><a href="#index-justifycontent"
+                class="post__item">justify content</a><a
+                href="#index-columnside" class="post__item">column side</a><a
+                href="#index-alignitems" class="post__item"></a><a
+                href="#index-aligncontent" class="post__item">align
+                content</a><a href="#index-gap" class="post__item">gap</a><a
+                href="index-autoflow" class="post__item">auto flow</a><a
+                href="#index-autorows" class="post__item">auto rows</a><a
+                href="#index-autocolumns" class="post__item">auto columns</a><a
+                href="#index-naminggridline" class="post__item">naming grid
+                line</a><a href="#index-naminggridarea"
+                class="post__item">naming grid area</a>
+            </li>
+
+            <li class="post">
+              <a href="#index-childrenItems" class="post__item">children
+                items</a>
+              <a href="#index-gridrow" class="post__item">grid row</a><a
+                href="#index-gridcolumn" class="post__item">grid column</a><a
+                href="#index-justifyself" class="post__item">justify self</a><a
+                href="#index-alignself" class="post__item">align self</a>
+            </li>
+            <li class="post">
+              <a href="#index-miscs" class="post__item">miscs</a>
+              <a href="#index-template" class="post__item">explain famous
+                template</a>
+              <a href="#index-snippet1" class="post__item">famous snippet
+                1</a><a href="#index-snippet2" class="post__item">famous snippet
+                2</a>
+            </li>
+          </ul>
+        </section>
       </header>
 
       <!-- navigation button -->
@@ -207,13 +257,13 @@
         <!-- STORY BEGINS -->
         <section id="index-unit" class="util-margin-bottom-high">
           <h2>unit</h2>
-          <article class="content__area--container">
+          <article class="content__area--container" id="index-fr">
             <h3>fr</h3>
             <p class="content__post"><span class="post__code">fr</span> unit
               represents a fraction of the available space in the parent
               container</p>
           </article>
-          <article class="content__area--container">
+          <article class="content__area--container" id="index-auto">
             <h3>auto</h3>
             <p class="content__post">width will only occupy its content size</p>
           </article>
@@ -223,7 +273,8 @@
           <h2>keyword</h2>
 
           <article
-            class="content__area--container util-padding-bottom util-border-bottom-double">
+            class="content__area--container util-padding-bottom util-border-bottom-double"
+            id="index-tracks">
             <h3>information about track</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces">
@@ -237,7 +288,8 @@
           </article>
 
           <article
-            class="content__area--container util-padding-bottom util-border-bottom-double">
+            class="content__area--container util-padding-bottom util-border-bottom-double"
+            id="index-repeat">
             <h3>repeat() </h3>
             <pre>
               <code class="language-css match-braces rainbow-braces">
@@ -250,7 +302,8 @@
           </article>
 
           <article
-            class="content__area--container util-padding-bottom util-margin-top util-border-bottom-double">
+            class="content__area--container util-padding-bottom util-margin-top util-border-bottom-double"
+            id="index-mincontent">
             <h3>min-content</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces">
@@ -270,7 +323,8 @@
           </article>
 
           <article
-            class="content__area--container util-padding-bottom util-margin-top util-border-bottom-double">
+            class="content__area--container util-padding-bottom util-margin-top util-border-bottom-double"
+            id="index-maxcontent">
             <h3>max-content</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
@@ -291,7 +345,8 @@
           </article>
 
           <article
-            class="content__area--container util-padding-bottom util-margin-top util-border-bottom-double">
+            class="content__area--container util-padding-bottom util-margin-top util-border-bottom-double"
+            id="index-minmax">
             <h3>minmax()</h3>
             <pre>
               <code class="language-css brace-selected rainbow-braces match-braces">
@@ -308,7 +363,8 @@
           </article>
 
           <article
-            class="content__area--container util-padding-bottom util-margin-top util-border-bottom-double">
+            class="content__area--container util-padding-bottom util-margin-top util-border-bottom-double"
+            id="index-autofill">
             <h3>auto-fill</h3>
             <pre>
               <code class="language-css brace-selected rainbow-braces match-braces">
@@ -325,7 +381,8 @@
             </p>
           </article>
 
-          <article class="content__area--container util-margin-top">
+          <article class="content__area--container util-margin-top"
+            id="index-autofit">
             <h3>auto-fit</h3>
             <pre>
               <code class="language-css brace-selected rainbow-braces match-braces">
@@ -350,7 +407,8 @@
         <section id="index-parentContainer" class="util-margin-bottom-high">
           <h2>parent container</h2>
           <article
-            class="content__area--container util-border-bottom-double util-padding-bottom">
+            class="content__area--container util-border-bottom-double util-padding-bottom"
+            id="index-rowside">
             <h3>row side defining</h3>
             <pre>
               <code class="language-css brace-selected rainbow-braces match-braces">
@@ -362,7 +420,8 @@
           </article>
 
           <article
-            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-naming">
             <h3 class="util-margin-top">naming template</h3>
             <pre>
               <code class="language-css brace-selected rainbow-braces match-braces">
@@ -373,7 +432,8 @@
           </article>
 
           <article
-            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-justifyitems">
             <h3 class="util-margin-top">justify-items</h3>
             <pre>
               <code class="language-css brace-selected rainbow-braces match-braces">
@@ -389,7 +449,8 @@
           </article>
 
           <article
-            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-justifycontent">
             <h3 class="util-margin-top">justify-content</h3>
             <pre>
               <code class="language-css brace-selected rainbow-braces match-braces">
@@ -403,7 +464,8 @@
           </article>
 
           <article
-            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-columnside">
             <h3>column side defining</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
@@ -416,7 +478,8 @@
           </article>
 
           <article
-            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-alignitems">
             <h3 class="util-margin-top">align-items</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
@@ -430,7 +493,8 @@
           </article>
 
           <article
-            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-aligncontent">
             <h3 class="util-margin-top">align-content</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
@@ -444,7 +508,8 @@
           </article>
 
           <article
-            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-gap">
             <h3 class="util-center">other properties for parent container</h3>
             <h3>gap</h3>
             <pre>
@@ -460,7 +525,8 @@
             </p>
           </article>
 
-          <article class="content__area--container util-margin-top">
+          <article class="content__area--container util-margin-top"
+            id="index-autoflow">
             <h3 class="util-margin-top">grid-auto-flow</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
@@ -474,7 +540,8 @@
           </article>
 
           <article
-            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-autorows">
             <h3 class="util-margin-top">grid-auto-row</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
@@ -486,7 +553,8 @@
           </article>
 
           <article
-            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-autocolumns">
             <h3 class="util-margin-top">grid-auto-columns</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
@@ -498,7 +566,8 @@
           </article>
 
           <article
-            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-naminggridline">
             <h3 class="util-margin-top">naming grid lines</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
@@ -529,7 +598,8 @@
           </article>
 
           <article
-            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-naminggridarea">
             <h3 class="util-margin-top">naming grid area</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
@@ -566,7 +636,8 @@
         <section id="index-childrenItems" class="util-margin-bottom-high">
           <h2>children items</h2>
           <article
-            class="content__area--container util-border-bottom-double util-padding-bottom">
+            class="content__area--container util-border-bottom-double util-padding-bottom"
+            id="index-gridrow">
             <br>
             <h3>grid-row</h3>
             <pre>
@@ -580,7 +651,8 @@
           </article>
 
           <article
-            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-gridcolumn">
             <h3 class="util-margin-top">grid-column</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
@@ -593,7 +665,8 @@
           </article>
 
           <article
-            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-justifyself">
             <h3 class="util-margin-top">justify-self</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
@@ -605,7 +678,8 @@
                 items</span> [main-axis] property</p>
           </article>
 
-          <article class="content__area--container util-margin-top">
+          <article class="content__area--container util-margin-top"
+            id="index-alignself">
             <h3 class="util-margin-top">align-self</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
@@ -621,7 +695,8 @@
         <section id="index-miscs">
           <h2> miscs</h2>
           <article
-            class="content__area--container util-border-bottom-double util-padding-bottom">
+            class="content__area--container util-border-bottom-double util-padding-bottom"
+            id="index-template">
             <h3>explaining useful template</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
@@ -638,7 +713,8 @@
           </article>
 
           <article
-            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content__area--container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-snippet1">
             <h3>famous snippets</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces brace-hover">
@@ -657,7 +733,8 @@
             </p>
           </article>
 
-          <article class="content__area--container util-margin-top">
+          <article class="content__area--container util-margin-top"
+            id="index-snippet2">
             <h3>famous snippets</h3>
             <pre>
               <code class="language-css match-braces rainbow-braces">
