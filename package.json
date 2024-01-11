@@ -19,9 +19,11 @@
 		"@parcel/transformer-js": "^2.9.3",
 		"@parcel/transformer-sass": "^2.9.3",
 		"@parcel/transformer-webmanifest": "^2.9.3",
-		"parcel": "^2.9.3"
+		"parcel": "^2.9.3",
+		"svgo": "^3.2.0"
 	},
 	"dependencies": {
+		"@swc/helpers": "^0.5.3",
 		"prismjs": "^1.29.0",
 		"typed.js": "^2.0.16",
 		"typeit": "^8.7.1",
