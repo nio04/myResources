@@ -20,16 +20,34 @@
   <body id="top-side">
     <div class="content__page--container">
       <header class="nav--container">
-        <h1 class="main__header--03">read write html attribute</h1>
+        <h1 class="main__header--03">html attribute read write</h1>
 
-        <h2 class="section">section</h2>
-        <nav class="nav--indexes">
-          <a href="#index-targetStandard">target standard attribute only</a>
-          <a href="#index-targetStandardNonStandard">target standard &
-            nonStandard attribute</a>
-          <a href="#index-rwDataSet">read/write dataSet attribute</a>
-          <a href="#index-delete">delete attribute</a>
-        </nav>
+        <section class="posts">
+          <ul id="dom__post--3">
+            <li class="post"><a href="#index-standardattribute"
+                class="post__item">target standard attribute</a></li>
+            <li class="post">
+              <a href="#index-standardnonstandard" class="post__item">target
+                standard & non-standard</a>
+              <a href="#index-standardnonstandardread" class="post__item">target
+                standard & non-standard read only</a>
+              <a href="#index-standardnonstandardwrite"
+                class="post__item">target standard & non-standard write only</a>
+            </li>
+            <li class="post">
+              <a href="#index-datasetattribute" class="post__item">target
+                dataset attribute</a>
+              <a href="#index-datasetattributeread" class="post__item">dataset
+                attribute read only</a>
+              <a href="#index-datasetattributewrite" class="post__item">dataset
+                attribute write only</a>
+            </li>
+            <li class="post">
+              <a href="#index-deleteattribute" class="post__item">delete
+                attribute</a>
+            </li>
+          </ul>
+        </section>
       </header>
 
       <!-- navigation button -->
@@ -202,7 +220,7 @@
 
 
 
-        <section id="index-targetStandard" class="util-margin-bottom-high">
+        <section id="index-standardattribute" class="util-margin-bottom-high">
           <h2> standard attribute property</h2>
           <article class="content-area__container">
             <h3>target standard attribute</h3>
@@ -218,11 +236,11 @@
           </article>
         </section>
 
-        <section id="index-targetStandardNonStandard"
-          class="util-margin-bottom-high">
+        <section id="index-standardnonstandard" class="util-margin-bottom-high">
           <h2>standard - non-standard attribute -- r/w</h2>
           <article
-            class="content-area__container util-border-bottom-double util-padding-bottom">
+            class="content-area__container util-border-bottom-double util-padding-bottom"
+            id="index-standardnonstandardread">
             <h3>target standard & non-standard attribute for read only</h3>
             <pre>
               <code class="util-no-cap language-js match-braces rainbow-braces">
@@ -236,7 +254,8 @@
             </p>
           </article>
 
-          <article class="content-area__container util-margin-top">
+          <article class="content-area__container util-margin-top"
+            id="index-standardnonstandardwrite">
             <h3>target standard & non-standard attribute for write only</h3>
             <pre>
               <code class="util-no-cap language-js match-braces rainbow-braces">
@@ -251,9 +270,10 @@
           </article>
         </section>
 
-        <section id="index-rwDataSet" class="util-margin-bottom-high">
+        <section id="index-datasetattribute" class="util-margin-bottom-high">
           <h2>data-set attribute -- r/w</h2>
-          <article class="content-area__container">
+          <article class="content-area__container"
+            id="index-datasetattributeread">
             <h3>target dataset attribute --read only</h3>
             <pre>
               <code class="util-no-cap language-js match-braces rainbow-braces">
@@ -270,7 +290,8 @@
             </p>
 
           </article>
-          <article class="content-area__container">
+          <article class="content-area__container"
+            id="index-datasetattributewrite">
             <h3>target dataset attribute --write only</h3>
             <pre>
               <code class="util-no-cap language-js match-braces rainbow-braces">
@@ -289,7 +310,8 @@
           </article>
         </section>
 
-        <section id="index-delete" class="util-margin-bottom-high">
+        <section id="index-delete" class="util-margin-bottom-high"
+          id="index-deleteattribute">
           <h2>delete attribute</h2>
           <article class="content-area__container">
             <h3>delete attribute</h3>

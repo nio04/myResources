@@ -22,11 +22,19 @@
       <header class="nav--container">
         <h1 class="main__header--05">read write css styles</h1>
 
-        <h2 class="section">section</h2>
-        <nav class="nav--indexes">
-          <a href="#content-index-read">read css class</a>
-          <a href="#content-index-write">wrte css class </a>
-        </nav>
+        <section class="posts">
+          <ul id="dom__post--5">
+            <li class="post"><a href="#index-readcss" class="post__item">read
+                css style</a><a href="#index-readinlinecss"
+                class="post__item">read inline css style</a><a
+                href="#index-readnoninlinecss" class="post__item">read non
+                inline css style</a></li>
+            <li class="post"><a href="#index-writecss" class="post__item">write
+                css</a><a href="#index-writeinlinecss" class="post__item">write
+                css as inline </a><a href="#index-writerootcss"
+                class="post__item">write css in root</a></li>
+          </ul>
+        </section>
       </header>
 
       <!-- navigation button -->
@@ -198,10 +206,11 @@
 
 
 
-        <section id="content-index-read" class="util-margin-bottom-high">
+        <section id="index-readcss" class="util-margin-bottom-high">
           <h2>read css styles </h2>
           <article
-            class="content-area__container util-border-bottom-double util-padding-bottom">
+            class="content-area__container util-border-bottom-double util-padding-bottom"
+            id="index-readinlinecss">
             <h3>read inline css styles </h3>
             <pre>
               <code class="util-no-cap language-js match-braces rainbow-braces">
@@ -214,7 +223,8 @@
             </p>
           </article>
 
-          <article class="content-area__container util-margin-top">
+          <article class="content-area__container util-margin-top"
+            id="index-readnoninlinecss">
             <h3>read non-inline css styles</h3>
             <pre>
               <code class="util-no-cap language-js match-braces rainbow-braces">
@@ -228,10 +238,12 @@
           </article>
         </section>
 
-        <section id="content-index-write" class="util-margin-bottom-high">
+        <section id="content-index-write" class="util-margin-bottom-high"
+          id="index-writecss">
           <h2>write css styles </h2>
           <article
-            class="content-area__container util-border-bottom-double util-padding-bottom">
+            class="content-area__container util-border-bottom-double util-padding-bottom"
+            id="writeinlinecss">
             <h3>write inline css styles </h3>
             <pre>
               <code class="util-no-cap language-js match-braces rainbow-braces">
@@ -244,7 +256,8 @@
             </p>
           </article>
 
-          <article class="content-area__container util-margin-top">
+          <article class="content-area__container util-margin-top"
+            id="index-writerootcss">
             <h3>write :root element from css styles</h3>
             <pre>
               <code class="util-no-cap language-js match-braces rainbow-braces">
