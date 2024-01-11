@@ -219,4 +219,12 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(max-content, 6rem));
 	}
+
+	///////////////
+	/// MISCS --1
+	//////////////
+	#miscs__post--1 {
+		display: grid;
+		grid-template-columns: repeat(4, max-content);
+	}
 }
