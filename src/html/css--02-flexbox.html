@@ -23,15 +23,33 @@
     <div class="content__page--container">
       <header class="nav--container">
         <h1 class="main__header--02">everything about flexbox</h1>
-        <svg>
+        <!-- <svg>
           <use xlink:href="../asset/svg/zSprite.svg#flexbox"></use>
-        </svg>
-        <h2 class="section">section</h2>
+        </svg> -->
 
-        <nav class="nav--indexes indexes--02">
-          <a href="#content-index-parent">parent container</a>
-          <a href="#content-index-children">children container</a>
-        </nav>
+        <section class="posts">
+          <ul id="css__post--2">
+            <li class="post">
+              <a href="#index-parentcontainer" class="post__item">parent
+                container</a><a href="#index-flexdirection"
+                class="post__item">flex direction</a><a href="#index-flexwrap"
+                class="post__item">flex wrap</a><a href="#inex-justifycontent"
+                class="post__item">justify content</a><a
+                href="#index-alignitems" class="post__item">align items</a><a
+                href="#index-aligncontent" class="post__item">align
+                content</a><a href="#index-gap" class="post__item">gap</a>
+            </li>
+            <li class="post">
+              <a href="#index-childrenitems" class="post__item">children
+                items</a><a href="#index-flexgrow" class="post__item">flex
+                grow</a><a href="#index-flexshrink" class="post__item">flex
+                shrink</a><a href="#index-flexbasis" class="post__item">flex
+                basis</a><a href="#index-flex" class="post__item">flex</a><a
+                href="#index-order" class="post__item">order</a><a
+                href="#index-alignself" class="post__item">align self</a>
+            </li>
+          </ul>
+        </section>
       </header>
 
       <!-- navigation button -->
@@ -202,10 +220,11 @@
         </section>
 
 
-        <section id="content-index-parent" class="util-margin-bottom-high">
+        <section id="index-parentcontainer" class="util-margin-bottom-high">
           <h2>parent container</h2>
           <article
-            class="content-area__container util-border-bottom-double util-padding-bottom">
+            class="content-area__container util-border-bottom-double util-padding-bottom"
+            id="index-flexdirection">
             <h3>flex-direction</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
@@ -220,7 +239,8 @@
           </article>
 
           <article
-            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-flexwrap">
             <h3>flex-wrap</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
@@ -236,7 +256,8 @@
           </article>
 
           <article
-            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-justifycontent">
             <h3>justify-content</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
@@ -251,7 +272,8 @@
           </article>
 
           <article
-            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-alignitems">
             <h3>align-items</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
@@ -266,7 +288,8 @@
           </article>
 
           <article
-            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-aligncontent">
             <h3>align-content</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
@@ -281,7 +304,8 @@
             </p>
           </article>
 
-          <article class="content-area__container util-margin-top">
+          <article class="content-area__container util-margin-top"
+            id="index-gap">
             <h3>gap</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
@@ -296,10 +320,12 @@
           </article>
         </section>
 
-        <section id="content-index-children" class="util-margin-bottom-high">
+        <section id="content-index-children" class="util-margin-bottom-high"
+          id="index-childrenitems">
           <h2>children items</h2>
           <article
-            class="content-area__container  util-border-bottom-double util-padding-bottom">
+            class="content-area__container  util-border-bottom-double util-padding-bottom"
+            id="index-flexgrow">
             <h3>flex-grow</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
@@ -325,7 +351,8 @@
           </article>
 
           <article
-            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-flexshrink">
             <h3>flex-shrink</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
@@ -345,7 +372,8 @@
           </article>
 
           <article
-            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-flexbasis">
             <h3>flex-basis</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
@@ -358,7 +386,8 @@
           </article>
 
           <article
-            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-flex">
             <h3>flex</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
@@ -371,7 +400,8 @@
           </article>
 
           <article
-            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-order">
             <h3>order</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
@@ -383,7 +413,8 @@
             </p>
           </article>
 
-          <article class="content-area__container util-margin-top">
+          <article class="content-area__container util-margin-top"
+            id="index-alignself">
             <h3>align-self</h3>
             <pre>
               <code class="language-css rainbow-braces match-braces">
