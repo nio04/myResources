@@ -2,7 +2,7 @@ const navBtn = document.querySelector('.content__nav--btn');
 const navigatorTopBtn = document.querySelector('#nav__top--btn');
 const navigatorBottomBtn = document.querySelector('#nav__bottom--btn');
 const overlay = document.querySelector('.overlay');
-const magicButton = document.querySelector('.contentPage__magic-btn');
+const magicButton = document.querySelector('.contentPage__magic-btn svg');
 const magicOptionsContainer = document.querySelector('.content__magic');
 
 //FOR MAGIC

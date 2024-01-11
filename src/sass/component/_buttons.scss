@@ -149,25 +149,28 @@
 		}
 
 		.contentPage__magic-btn {
-			height: 3rem;
-			width: 6rem;
-			z-index: 5;
-			position: fixed;
-			top: 2rem;
-			right: 2rem;
-			display: block;
-			border: none;
-			fill: var(--color-accent-900);
-			background: transparent;
-			cursor: pointer;
+			svg {
+				height: 5rem;
+				width: 6rem;
+				z-index: 5;
+				position: fixed;
+				top: 2rem;
+				right: 2rem;
+				display: block;
+				border: none;
+				fill: var(--color-accent-900);
+				background: transparent;
+				cursor: pointer;
+				transform: translateX(100vh);
+				transition: all 0.5s;
 
-			&:hover {
-				fill: var(--color-accent-500);
-			}
+				&:hover {
+					fill: var(--color-accent-500);
+				}
 
-			&:active {
-				height: 2.6rem;
-				width: 5.6rem;
+				&:active {
+					transform: scale(0.95);
+				}
 			}
 		}
 	}
