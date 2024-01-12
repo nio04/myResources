@@ -4,23 +4,27 @@
 
 // CONTENT-PAGE POST-INDEXES
 .posts {
+	justify-self: center;
+	align-self: center;
+
 	width: 100vw;
 	max-width: 100vw;
-	height: auto;
+	height: 100%;
 
 	/////////////////
 	/// GENERAL
 	////////////////
 	ul {
 		width: 90vw;
-		max-width: 90vw;
+		height: 100%;
+
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(8rem, 12rem));
+		grid-template-columns: repeat(auto-fit, minmax(min-content, 10rem));
 		grid-template-rows: repeat(2, minmax(auto, min-content));
 		grid-auto-flow: dense;
 		justify-content: space-around;
 		align-items: center;
-		gap: 2.6rem;
+		gap: 2rem;
 
 		margin: 0 auto;
 		list-style: none;
@@ -28,6 +32,16 @@
 		background-color: var(--color-primary-200);
 		border: 1px solid black;
 		border-radius: 0.5rem;
+
+		@include abs.mq(md) {
+			gap: 1rem;
+			padding: 1rem;
+		}
+
+		@include abs.mq(sm) {
+			gap: 0.4rem;
+			padding: 0.4rem;
+		}
 
 		.post {
 			&__item:link,
@@ -41,6 +55,14 @@
 				transition: all 0.6s;
 				padding: 0 2rem 0.5rem 1rem;
 				background-color: var(--color-secondary-300);
+
+				&:not(:last-child) {
+					margin-bottom: 0.5rem;
+				}
+
+				@include abs.mq(sm) {
+					font-size: 1rem;
+				}
 
 				&:first-child,
 				&:last-child {
@@ -60,17 +82,18 @@
 	// CSS --01
 	/////////////
 	#css__post--1 {
-		width: 95vw;
-		max-width: 95vw;
-		height: 60vh;
-		max-height: 60vh;
+		width: 90vw;
 
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(min-content, 20rem));
 		justify-content: space-around;
-		gap: 1rem;
 		padding: 0;
 		margin: 0 auto;
+
+		@include abs.mq(md) {
+			width: 98vw;
+			grid-template-columns: repeat(5, 1fr);
+		}
 
 		.post {
 			&__item:link,
@@ -98,28 +121,59 @@
 				grid-row: 2/-1;
 				align-self: self-start;
 				overflow-x: scroll;
+
+				@include abs.mq(md) {
+					grid-column: 1/3;
+					grid-row: 2/3;
+
+					height: 70%;
+					align-self: self-end;
+				}
 			}
 
 			&:nth-child(3) {
 				height: 50%;
 
-				grid-column: 2/4;
+				grid-column: 2/3;
 				grid-row: 1/-1;
-				justify-self: stretch;
+				justify-self: center;
 				align-self: center;
 
 				overflow-y: scroll;
+
+				@include abs.mq(md) {
+					grid-column: 2/4;
+					grid-row: 1/-1;
+
+					align-self: self-start;
+					justify-self: stretch;
+				}
 			}
 
 			&:nth-child(4) {
-				grid-column: 4/5;
+				grid-column: 3/4;
 				grid-row: 1/2;
+
+				@include abs.mq(md) {
+					grid-column: 4/6;
+				}
+
+				@include abs.mq(sm) {
+					height: 60%;
+					overflow-y: scroll;
+				}
 			}
 
 			&:nth-child(5) {
-				grid-column: 4/5;
+				grid-column: 3/4;
 				grid-row: 2/-1;
 				align-self: center;
+
+				@include abs.mq(md) {
+					grid-column: 4/ 6;
+					height: 70%;
+					overflow-y: scroll;
+				}
 			}
 		}
 	}
@@ -370,5 +424,9 @@
 				}
 			}
 		}
+	}
+
+	#html__post--1 {
+		grid-template-columns: repeat(auto-fit, minmax(min-content, 7rem));
 	}
 }

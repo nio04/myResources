@@ -1,16 +1,31 @@
 @use '../abstract/' as abs;
 
 .content__page--container .list__wrap--container {
+	font-size: inherit;
 	display: block;
 	margin-left: 10rem;
 
-	&:not(:last-child) {
-		margin-bottom: 4rem;
+	@include abs.mq(lg) {
+		margin-left: 6rem;
 	}
 
 	.list {
 		padding-left: 2rem;
 		line-height: 3;
 		color: var(--color-accent-900);
+
+		@include abs.mq(lg) {
+			font-size: 2.4rem;
+			line-height: 2;
+		}
+		@include abs.mq(md) {
+			font-size: 2rem;
+			padding-left: 1rem;
+			padding-right: 2rem;
+		}
+
+		@include abs.mq(sm) {
+			font-size: 1.7rem;
+		}
 	}
 }

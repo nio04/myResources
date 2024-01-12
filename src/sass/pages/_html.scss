@@ -7,17 +7,25 @@
 		.main__header--01 {
 			font-size: 5rem;
 
-			@include abs.mediaQuery(tab-land) {
-				font-size: 4.1rem;
+			@include abs.mq(xxl) {
+				font-size: 6.5rem;
 			}
-			@include abs.mediaQuery(tab-port) {
-				font-size: 3.2rem;
+
+			@include abs.mq(xl) {
+				font-size: 4rem;
 			}
-			@include abs.mediaQuery(mobile) {
-				font-size: 2.6rem;
-			}
-			@include abs.mediaQuery(mob-small) {
+			@include abs.mq(lg) {
 				font-size: 3rem;
+			}
+			@include abs.mq(md) {
+				font-size: 2rem;
+			}
+			@include abs.mq(sm) {
+				font-size: 1.6rem;
+				letter-spacing: -1px;
+			}
+			@include abs.mq(xs) {
+				font-size: 1.1rem;
 			}
 		}
 	}

@@ -10,16 +10,24 @@
 .content__page--container {
 	main section {
 		font-size: 3rem;
+		margin-bottom: 15rem;
+
+		@include bp.mq(md) {
+			margin-bottom: 10rem;
+		}
+		@include bp.mq(xs) {
+			margin-bottom: 7rem;
+		}
 
 		article {
 			margin-top: 1.5rem;
-			padding: 1.5rem;
-			margin-left: 7rem;
-			display: block;
+			margin-bottom: 15rem;
 
-			@include bp.mediaQuery(tab-port) {
-				margin-left: 6rem;
-				padding: 1.1rem;
+			@include bp.mq(md) {
+				margin-bottom: 10rem;
+			}
+			@include bp.mq(sm) {
+				margin-bottom: 7rem;
 			}
 		}
 
@@ -27,17 +35,26 @@
 			display: block;
 			position: relative;
 			color: var(--color-black-replace);
-			padding: 0rem 15rem 1rem 5rem;
-			margin-top: 3rem;
-			line-height: 7rem;
-			font-size: 3.4rem;
+			padding: 0 3rem;
+			line-height: 2.5;
+			font-size: 3rem;
 			font-family: var(--font-content);
 			font-weight: 400;
 			word-spacing: 0.5rem;
 
-			@include bp.mediaQuery(tab-port) {
-				margin-left: 0;
-				padding: 2rem;
+			@include bp.mq(lg) {
+				font-size: 2.4rem;
+				line-height: 2;
+			}
+			@include bp.mq(md) {
+				font-size: 2rem;
+				padding: 0 1.6rem;
+			}
+
+			@include bp.mq(sm) {
+				line-height: 1.8;
+				padding: 0 1rem;
+				font-size: 1.7rem;
 			}
 
 			.post__code {

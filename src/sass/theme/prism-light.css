@@ -54,6 +54,27 @@ pre[class*='language-'] {
 	hyphens: none;
 }
 
+@media only screen and (max-width: 91em) {
+	code[class*='language-'],
+	pre[class*='language-'] {
+		font-size: 1.5rem;
+	}
+}
+@media only screen and (max-width: 67em) {
+	code[class*='language-'],
+	pre[class*='language-'] {
+		font-size: 1.3rem;
+		line-height: 2.7rem;
+	}
+}
+@media only screen and (max-width: 44em) {
+	code[class*='language-'],
+	pre[class*='language-'] {
+		font-size: 1.1rem;
+		line-height: 2.4rem;
+	}
+}
+
 pre[class*='language-']::-moz-selection,
 pre[class*='language-'] ::-moz-selection,
 code[class*='language-']::-moz-selection,
@@ -76,6 +97,13 @@ pre[class*='language-'] {
 	margin: 0.5em 0;
 	overflow: auto;
 	border-radius: 0.3em;
+}
+
+@media only screen and (max-width: 44em) {
+	pre[class*='language-'] {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
 }
 
 :not(pre) > code[class*='language-'],
@@ -172,6 +200,17 @@ pre[class*='language-'].line-numbers {
 	position: relative;
 	padding-left: 6rem;
 	counter-reset: linenumber;
+}
+
+@media only screen and (max-width: 67em) {
+	pre[class*='language-'].line-numbers {
+		padding-left: 4rem;
+	}
+}
+@media only screen and (max-width: 44em) {
+	pre[class*='language-'].line-numbers {
+		padding-left: 3rem;
+	}
 }
 
 pre[class*='language-'].line-numbers > code {
@@ -503,9 +542,31 @@ pre[class*='language-'].line-numbers > code {
 div.code-toolbar {
 	position: relative;
 	/* width: 85rem; */
-	max-width: 90%;
-	width: 90%;
+	width: 85vw;
 	margin-left: 7rem;
+}
+@media only screen and (max-width: 91em) {
+	div.code-toolbar {
+		margin-left: 4rem;
+	}
+}
+@media only screen and (max-width: 67em) {
+	div.code-toolbar {
+		width: 94vw;
+		margin-left: 1.5rem;
+	}
+}
+@media only screen and (max-width: 44em) {
+	div.code-toolbar {
+		width: 96vw;
+		margin-left: 1.2rem;
+	}
+}
+@media only screen and (max-width: 22em) {
+	div.code-toolbar {
+		width: 110vw;
+		margin-left: 1rem;
+	}
 }
 
 div.code-toolbar > .toolbar {
@@ -517,10 +578,28 @@ div.code-toolbar > .toolbar {
 	opacity: 0;
 }
 
-@media only screen and (width <=30.625em) {
+@media only screen and (max-width: 115em) {
 	div.code-toolbar > .toolbar {
-		top: 1.4em;
-		right: 1.3em;
+		top: 0em;
+		right: 2em;
+	}
+}
+@media only screen and (max-width: 44em) {
+	div.code-toolbar > .toolbar {
+		top: 0;
+		right: 6.5rem;
+	}
+}
+@media only screen and (max-width: 22em) {
+	div.code-toolbar > .toolbar {
+		top: 0;
+		right: 7rem;
+	}
+}
+@media only screen and (max-width: 29.5em) {
+	div.code-toolbar > .toolbar {
+		top: 0;
+		right: 11rem;
 	}
 }
 
@@ -567,6 +646,14 @@ div.code-toolbar > .toolbar > .toolbar-item > span {
 	background: rgba(224, 224, 224, 0.2);
 	box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
 	border-radius: 0.5em;
+}
+
+@media only screen and (max-width: 44em) {
+	div.code-toolbar > .toolbar > .toolbar-item > a,
+	div.code-toolbar > .toolbar > .toolbar-item > button,
+	div.code-toolbar > .toolbar > .toolbar-item > span {
+		padding: 0.4rem;
+	}
 }
 
 div.code-toolbar > .toolbar > .toolbar-item > a:hover,

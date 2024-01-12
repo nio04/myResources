@@ -13,27 +13,25 @@ html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
 
-	scroll-behavior: smooth;
+	// @include abs.mediaQuery(big-desk) {
+	// 	font-size: 75%; //12px
+	// }
 
-	@include abs.mediaQuery(big-desk) {
-		font-size: 75%; //12px
-	}
+	// @include abs.mediaQuery(tab-land) {
+	// 	font-size: 56%; //9px
+	// }
 
-	@include abs.mediaQuery(tab-land) {
-		font-size: 56%; //9px
-	}
+	// @include abs.mediaQuery(tab-port) {
+	// 	font-size: 50%; //8px
+	// }
 
-	@include abs.mediaQuery(tab-port) {
-		font-size: 50%; //8px
-	}
+	// @include abs.mediaQuery(mobile) {
+	// 	font-size: 43%; //7px
+	// }
 
-	@include abs.mediaQuery(mobile) {
-		font-size: 43%; //7px
-	}
-
-	@include abs.mediaQuery(mob-small) {
-		font-size: 31%; //5px
-	}
+	// @include abs.mediaQuery(mob-small) {
+	// 	font-size: 31%; //5px
+	// }
 }
 
 body {
@@ -42,5 +40,6 @@ body {
 	background-color: var(--color-primary-50);
 	font-family: var(--font-general);
 	font-weight: 400;
+	line-height: 1.6;
 	overflow-x: hidden;
 }
