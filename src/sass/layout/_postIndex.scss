@@ -16,7 +16,7 @@
 		max-width: 90vw;
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(8rem, 12rem));
-		justify-content: center;
+		justify-content: space-around;
 		align-items: center;
 		gap: 2.6rem;
 
@@ -37,6 +37,7 @@
 				font-size: 1.4rem;
 				font-weight: 600;
 				transition: all 0.6s;
+				padding: 0 2rem 0.5rem 1rem;
 				background-color: var(--color-secondary-300);
 
 				&:first-child,
@@ -226,5 +227,143 @@
 	#miscs__post--1 {
 		display: grid;
 		grid-template-columns: repeat(4, max-content);
+	}
+
+	//////////////////
+	/// GIT --1
+	////////////////
+	#git__post--1 {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(max-content, 10rem));
+		grid-template-rows: repeat(2, minmax(min-content, 5rem));
+
+		.post {
+			&__item:link,
+			&__link:visited {
+				&:nth-child(1) {
+					font-weight: 900;
+					padding-bottom: 1rem;
+					border-bottom: 1px solid red;
+				}
+			}
+			&:nth-child(2) {
+				height: 80%;
+				overflow-y: scroll;
+			}
+			&:nth-child(3) {
+				grid-column: 1/2;
+				grid-row: 2/3;
+			}
+			&:nth-child(4) {
+				grid-column: 3/5;
+				grid-row: 1/-1;
+
+				height: 60%;
+				overflow-y: scroll;
+			}
+			&:nth-child(5) {
+				grid-column: 2/3;
+				grid-row: 2/3;
+				align-self: self-start;
+
+				.post__item:link,
+				.post__link:visited {
+					font-weight: 900;
+					padding-bottom: 1rem;
+					border-bottom: none;
+				}
+			}
+			&:nth-child(6) {
+				grid-column: 2/3;
+				grid-row: 2/3;
+				align-self: self-end;
+
+				.post__item:link,
+				.post__link:visited {
+					font-weight: 900;
+					padding-bottom: 1rem;
+					border-bottom: none;
+				}
+			}
+		}
+	}
+
+	////////////
+	/// GIT --2
+	/////////////
+	#git__post--2 {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(max-content, 6rem));
+
+		.post {
+			&:nth-child(2) {
+				.post__item:link,
+				.post__item:visited {
+					&:first-child {
+						font-weight: 900;
+						padding-bottom: 1rem;
+						border-bottom: 1px solid red;
+					}
+				}
+			}
+		}
+	}
+
+	//////////////
+	/// GIT --3
+	//////////////
+	#git__post--3 {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(max-content, 6rem));
+		gap: 3rem;
+
+		.post {
+			&:nth-child(2) {
+				.post__item:link,
+				.post__item:visited {
+					&:first-child {
+						font-weight: 900;
+						padding-bottom: 1rem;
+						border-bottom: 1px solid red;
+					}
+				}
+			}
+		}
+	}
+
+	//////////////
+	/// GIT --4
+	//////////////
+	#git__post--4 {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(max-content, 4rem));
+		gap: 3rem;
+	}
+
+	///////////
+	/// GIT --5
+	////////////
+	#git__post--5 {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(max-content, 5rem));
+		gap: 2rem;
+
+		.post {
+			.post__item:link,
+			.post__item:visited {
+				&:first-child {
+					font-weight: 900;
+					padding-bottom: 1rem;
+					border-bottom: 1px solid red;
+				}
+			}
+
+			&:nth-child(1) {
+				.post__item:link,
+				.post__item:visited {
+					border: none;
+				}
+			}
+		}
 	}
 }

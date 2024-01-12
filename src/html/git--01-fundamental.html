@@ -23,20 +23,47 @@
     <div class="content__page--container">
       <header class="nav--container">
         <h1 class="main__header--01">git : basic, staging,commit, branch</h1>
-        <svg>
+        <!-- <svg>
           <use xlink:href="../asset/svg/zSprite.svg#git"></use>
-        </svg>
+        </svg> -->
 
-
-        <h2 class="section">section</h2>
-        <nav class="nav--indexes">
-          <a href="#content-index-veryBasic">very basic</a>
-          <a href="#content-index-staging">staging</a>
-          <a href="#content-index-commit">committing</a>
-          <a href="#content-index-branch">branch</a>
-          <a href="#content-index-gitaInformation">git information</a>
-          <a href="#content-index-normalGitFlow">normal git flowing </a>
-        </nav>
+        <sdection class="posts">
+          <ul id="git__post--1">
+            <li class="post"><a href="#index-basic"
+                class="post__item">basic</a><a href="#index-enablegit"
+                class="post__item">enable git</a><a href="#index-status"
+                class="post__item">status check</a><a href="#index-log"
+                class="post__item">log chacking</a></li>
+            <li class="post"><a href="#index-staging"
+                class="post__item">staging</a><a href="#index-stageafile"
+                class="post__item">stage a file</a><a
+                href="#index-stagemultiplefile" class="post__item">stage
+                multiple file</a><a href="#index-stageallfile"
+                class="post__item">stage all file</a><a
+                href="#index-stagecommit" class="post__item">stage and
+                commit</a></li>
+            <li class="post"><a href="#index-commit"
+                class="post__item">commit</a><a href="#index-commitfile"
+                class="post__item">commit file</a><a
+                href="#index-stagecommitshort" class="post__item">stage commit
+                shortcut</a></li>
+            <li class="post"><a href="#index-branch"
+                class="post__item">branch</a><a href="#index-createbranch"
+                class="post__item">create a branch</a> <a
+                href="#index-viewallbranch" class="post__item">view all
+                branch</a><a href="#index-switchbranch"
+                class="post__item">switch
+                branch</a><a href="#index-deletebranchnoforce"
+                class="post__item">delete branch not forcing</a><a
+                href="#index-deletebranchforcing" class="post__item">delete
+                branch forcing</a> <a href="#index-renamebranch"
+                class="post__item">rename branch</a></li>
+            <li class="post"><a href="#index-gitinformation"
+                class="post__item">git information</a></li>
+            <li class="post"><a href="#index-gitflow" class="post__item">normal
+                git flowing</a></li>
+          </ul>
+        </sdection>
       </header>
 
       <!-- navigation button -->
@@ -206,10 +233,11 @@
 
 
 
-        <section id="content-index-veryBasic" class="util-margin-bottom-high">
+        <section id="index-basic" class="util-margin-bottom-high">
           <h2>very basic</h2>
           <article
-            class="content-area__container util-border-bottom-double util-padding-bottom">
+            class="content-area__container util-border-bottom-double util-padding-bottom"
+            id="index-enablegit">
             <h3>enable git</h3>
             <pre>
               <code class="language-git">
@@ -219,7 +247,8 @@
           </article>
 
           <article
-            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-status">
             <h3>status checking git</h3>
             <pre>
               <code class="language-git">
@@ -228,7 +257,8 @@
             </pre>
           </article>
 
-          <article class="content-area__container util-margin-top">
+          <article class="content-area__container util-margin-top"
+            id="index-log">
             <h3>log checking git</h3>
             <pre>
               <code class="language-git">
@@ -240,10 +270,12 @@
           </article>
         </section>
 
-        <section id="content-index-staging" class="util-margin-bottom-high">
+        <section id="content-index-staging" class="util-margin-bottom-high"
+          id="index-staging">
           <h2>staging </h2>
           <article
-            class="content-area__container util-border-bottom-double util-padding-bottom">
+            class="content-area__container util-border-bottom-double util-padding-bottom"
+            id="index-stageafile">
             <h3>stage a file</h3>
             <pre>
               <code class="language-git">
@@ -253,7 +285,8 @@
           </article>
 
           <article
-            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-stagemultiplefile">
             <h3>stage multiple file</h3>
             <pre>
               <code class="language-git">
@@ -263,7 +296,8 @@
           </article>
 
           <article
-            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-stageallfile">
             <h3>stage all files</h3>
             <pre>
               <code class="language-git">
@@ -272,7 +306,8 @@
             </pre>
           </article>
 
-          <article class="content-area__container util-margin-top">
+          <article class="content-area__container util-margin-top"
+            id="index-stagecommit">
             <h3>stage and commit : shortcut</h3>
             <pre>
               <code class="language-git">
@@ -286,10 +321,12 @@
           </article>
         </section>
 
-        <section id="content-index-commit" class="util-margin-bottom-high">
+        <section id="content-index-commit" class="util-margin-bottom-high"
+          id="index-commit">
           <h2>commit</h2>
           <article
-            class="content-area__container util-border-bottom-double util-padding-bottom">
+            class="content-area__container util-border-bottom-double util-padding-bottom"
+            id="index-commitfile">
             <h3>commit file</h3>
             <pre>
               <code class="language-git">
@@ -298,7 +335,8 @@
             </pre>
           </article>
 
-          <article class="content-area__container util-margin-top">
+          <article class="content-area__container util-margin-top"
+            id="index-stagecommitshort">
             <h3>stage and commit : shortcut</h3>
             <pre>
               <code class="language-git">
@@ -308,10 +346,12 @@
           </article>
         </section>
 
-        <section id="content-index-branch" class="util-margin-bottom-high">
+        <section id="content-index-branch" class="util-margin-bottom-high"
+          id="index-branch">
           <h2>branch</h2>
           <article
-            class="content-area__container util-border-bottom-double util-padding-bottom">
+            class="content-area__container util-border-bottom-double util-padding-bottom"
+            id="index-createbranch">
             <h3>create branch</h3>
             <pre>
               <code class="language-git">
@@ -321,7 +361,8 @@
           </article>
 
           <article
-            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-viewallbranch">
             <h3>view all braches</h3>
             <pre>
               <code class="language-git">
@@ -331,7 +372,8 @@
           </article>
 
           <article
-            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-switchbranch">
             <h3>switching branch</h3>
             <pre>
               <code class="language-git">
@@ -341,7 +383,8 @@
           </article>
 
           <article
-            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-deletebranchnoforce">
             <h3>delete branch : not forcing</h3>
             <pre>
               <code class="language-git">
@@ -355,7 +398,8 @@
           </article>
 
           <article
-            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-deletebranchforcing">
             <h3>delete branch : forcing</h3>
             <pre>
               <code class="language-git">
@@ -368,7 +412,8 @@
           </article>
 
           <article
-            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-renamebranch">
             <h3>rename branch</h3>
             <pre>
               <code class="language-git">
@@ -394,7 +439,7 @@
         </section>
 
         <section id="content-index-gitaInformation"
-          class="util-margin-bottom-high">
+          class="util-margin-bottom-high" id="index-gitinformation">
           <h2>git information</h2>
           <ul class="list__wrap--container">
             <li class="list"><span class="post__code">HEAD</span> refers to the
@@ -404,7 +449,7 @@
         </section>
 
         <section id="content-index-normalGitFlow"
-          class="util-margin-bottom-high">
+          class="util-margin-bottom-high" id="index-gitflow">
           <h2>normal git flowing</h2>
           <p class="content__post">
           <ul class="list__wrap--container">

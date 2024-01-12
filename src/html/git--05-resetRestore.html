@@ -22,17 +22,28 @@
       <header class="nav--container">
         <h1 class="main__header--05">git -- travel - reset - restore - revert
         </h1>
-        <svg>
+        <!-- <svg>
           <use xlink:href="../asset/svg/zSprite.svg#git"></use>
-        </svg>
+        </svg> -->
 
-        <h2 class="section">section</h2>
-        <nav class="nav--indexes">
-          <a href="#content-index-travel">time machine</a>
-          <a href="#content-index-restore">restore</a>
-          <a href="#content-index-reset">reset</a>
-          <a href="#content-index-revert">revert</a>
-        </nav>
+        <section class="posts">
+          <ul id="git__post--5">
+            <li class="post"><a href="#index-timetravel" class="post__item">time
+                travel</a></li>
+            <li class="post"><a href="#index-restore" class="post__item">git
+                restore</a><a href="#index-unstagedlastcommit"
+                class="post__item">unstaged to last commit</a><a
+                href="#index-stageunstaged" class="post__item">unstaged a stage
+                file</a></li>
+            <li class="post"><a href="#index-reset" class="post__item">git
+                reset</a><a href="#index-gitreset" class="post__item">git
+                reset</a><a href="#index-resethard" class="post__item">reset
+                hard</a></li>
+            <li class="post"><a href="#index-revert" class="post__item">git
+                revert</a><a href="#index-gitrevert" class="post__item">git
+                revert</a></li>
+          </ul>
+        </section>
       </header>
 
       <!-- navigation button -->
@@ -375,8 +386,8 @@
 
 
 
-        <section id="content-index-travel" class="util-margin-bottom-high">
-          <h2>stash : operation</h2>
+        <section id="index-timetravel" class="util-margin-bottom-high">
+          <h2>time travel</h2>
           <article class="content-area__container">
             <h3> time travel</h3>
             <pre>
@@ -407,10 +418,11 @@
           </article>
         </section>
 
-        <section id="content-index-restore" class="util-margin-bottom-high">
+        <section id="index-restore" class="util-margin-bottom-high">
           <h2>git restore</h2>
           <article
-            class="content-area__container util-border-bottom-double util-padding-bottom">
+            class="content-area__container util-border-bottom-double util-padding-bottom"
+            id="index-unstagedlastcommit">
             <h3>unsatged :: last commit</h3>
             <pre>
               <code class="language-git match-braces rainbow-braces">
@@ -426,7 +438,8 @@
             </p>
           </article>
 
-          <article class="content-area__container util-margin-top">
+          <article class="content-area__container util-margin-top"
+            id="index-stageunstaged">
             <h3>staged :: unstaged</h3>
             <pre>
               <code class="language-git match-braces rainbow-braces">
@@ -439,10 +452,11 @@
           </article>
         </section>
 
-        <section id="content-index-reset" class="util-margin-bottom-high">
+        <section id="index-reset" class="util-margin-bottom-high">
           <h2>git reset</h2>
           <article
-            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom">
+            class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom"
+            id="index-gitreset">
             <h3>git reset</h3>
             <pre>
               <code class="language-git match-braces rainbow-braces">
@@ -469,7 +483,8 @@
             </p>
           </article>
 
-          <article class="content-area__container util-margin-top">
+          <article class="content-area__container util-margin-top"
+            id="index-resethard">
             <h3>git reset --hard</h3>
             <pre>
               <code class="language-git match-braces rainbow-braces">
@@ -493,9 +508,9 @@
           </article>
         </section>
 
-        <section id="content-index-revert" class="util-margin-bottom-high">
+        <section id="index-revert" class="util-margin-bottom-high">
           <h2>git revert</h2>
-          <article class="content-area__container">
+          <article class="content-area__container" id="index-gitrevert">
             <h3>git revert</h3>
             <pre>
               <code class="language-git match-braces rainbow-braces">
