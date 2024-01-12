@@ -23,17 +23,22 @@
     <div class="content__page--container">
       <header class="nav--container">
         <h1 class="main__header--02">git : basic, staging,commit, branch</h1>
-        <svg>
+        <!-- <svg>
           <use xlink:href="../asset/svg/zSprite.svg#git"></use>
-        </svg>
+        </svg> -->
 
-        <h2 class="section">section</h2>
-        <nav class="nav--indexes">
-          <a href="#content-index-veryBasic">fast - forward</a>
-          <a href="#content-index-nonFastForwardNonConflict">non : fast -
-            forward [non : conflict]</a>
-          <a href="#content-index-conflict">non : fast-forward [conflict]</a>
-        </nav>
+        <section class="posts">
+          <ul id="git__post--2">
+            <li class="post"><a href="#index-mergefastforward"
+                class="post__item">merge fast forward</a></li>
+            <li class="post"><a href="#index-mergenonfastforward"
+                class="post__item">merge non fast forward</a><a
+                href="#index-mergenonfastforwardnoconflict"
+                class="post__item">merge non fast forward --no-conflict</a><a
+                href="#index-mergenonfastforwardconflict"
+                class="post__item">merge non fast forward --conflict</a></li>
+          </ul>
+        </section>
       </header>
 
       <!-- navigation button -->
@@ -203,7 +208,8 @@
         </section>
 
 
-        <section id="content-index-veryBasic" class="util-margin-bottom-high">
+        <section id="content-index-veryBasic" class="util-margin-bottom-high"
+          id="index-mergefastforward">
           <h2>MERGING : fast-forward</h2>
           <article class="content-area__container">
             <h3>fast-forward merge</h3>
@@ -235,10 +241,12 @@
           </article>
         </section>
 
-        <section id="content-index-nonFastForwardNonConflict">
+        <section id="content-index-nonFastForwardNonConflict"
+          id="index-mergenonfastforward">
           <h2>MERGING : non - fast-forward</h2>
           <article
-            class="content-area__container util-border-bottom-double util-padding-bottom">
+            class="content-area__container util-border-bottom-double util-padding-bottom"
+            id="index-mergenonfastforwardnoconflict">
             <h3 class=" util-center">non : fast-forward merge :: [no-conflict]
             </h3>
             <pre>
@@ -273,7 +281,8 @@
           </article>
 
           <article id="content-index-conflict"
-            class="content-area__container util-margin-top">
+            class="content-area__container util-margin-top"
+            id="index-mergenonfastforwardconflict">
             <h3 class=" util-center">non : fast-forward merge :: [conflict]</h3>
             <pre>
               <code class="language-git">

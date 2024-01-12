@@ -23,24 +23,26 @@
     <div class="content__page--container">
       <header class="nav--container">
         <h1 class="main__header--03">everything about git diff</h1>
-        <svg>
+        <!-- <svg>
           <use xlink:href="../asset/svg/zSprite.svg#git"></use>
-        </svg>
+        </svg> -->
 
-
-        <h2 class="section">section</h2>
-        <nav class="nav--indexes indexes--03">
-          <a href="#content-index-diffInformation">diff information</a>
-          <a href="#content-index-unstagedToLastCommit">unstaged :: last
-            commit</a>
-          <a href="#content-index-stagedToLastCommit">staged :: last commit</a>
-          <a href="#content-index-specificFileToLastCommit">specific file on
-            unstaged & staged ::
-            last commit</a>
-          <a href="#content-index-branchToLastCommit">accross braches :: last
-            commit</a>
-          <a href="#content-index-Commits">accross commits</a>
-        </nav>
+        <section class="posts">
+          <ul id="git__post--3">
+            <li class="post"><a href="#index-diffinformation"
+                class="post__item">diff information</a></li>
+            <li class="post"><a href="#index-diffoperation"
+                class="post__item">diff operation</a><a
+                href="#index-diffunstagedlastcommit" class="post__item">unstaged
+                to last commit</a><a href="#index-diffstagedlastcommit"
+                class="post__item">staged to last commit</a><a
+                href="#index-diffspecificfile" class="post__item">diff in
+                specific file</a><a href="#index-diffbranch"
+                class="post__item">diff for branches</a><a
+                href="#index-diffcommithash" class="post__item">diff for commit
+                hash</a></li>
+          </ul>
+        </section>
       </header>
 
       <!-- navigation button -->
@@ -209,8 +211,7 @@
           </section>
         </section>
 
-        <section class="util-margin-bottom-high"
-          id="content-index-diffInformation">
+        <section class="util-margin-bottom-high" id="index-diffInformation">
           <h2>diff : information</h2>
           <article class="content-area__container">
             <h3>diff : important information</h3>
@@ -230,11 +231,11 @@
           </article>
         </section>
 
-        <section class="util-margin-bottom-high"
-          id="content-index-unstagedToLastCommit">
+        <section class="util-margin-bottom-high" id="index-diffoperation">
           <h2>diff : operation</h2>
           <article
-            class="content-area__container util-border-bottom-double util-padding-bottom">
+            class="content-area__container util-border-bottom-double util-padding-bottom"
+            id="index-diffunstagedlastcommit">
             <h3>unstaged :: last commit</h3>
             <pre>
               <code class="language-git">
@@ -248,7 +249,7 @@
 
           <article
             class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom"
-            id="content-index-stagedToLastCommit">
+            id="index-diffstagedlastcommit">
             <h3>staged :: last commit</h3>
             <pre>
               <code class="language-git">
@@ -263,7 +264,7 @@
 
           <article
             class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom"
-            id="content-index-specificFileToLastCommit">
+            id="index-diffspecificfile">
             <h3>see changes in a specific file</h3>
             <pre>
               <code class="language-git">
@@ -278,7 +279,7 @@
 
           <article
             class="content-area__container util-margin-top util-border-bottom-double util-padding-bottom"
-            id="content-index-branchToLastCommit">
+            id="index-diffbranch">
             <h3>diff for branches</h3>
             <pre>
               <code class="language-git">
@@ -302,7 +303,7 @@
           </article>
 
           <article class="content-area__container util-margin-top"
-            id="content-index-Commits">
+            id="index-diffcommithash">
             <h3>diff for commit hash</h3>
             <pre>
               <code class="language-git">
