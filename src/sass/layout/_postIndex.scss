@@ -65,10 +65,17 @@
 				@include abs.mq(sm) {
 					font-size: 1rem;
 				}
+				@include abs.mq(xs) {
+					font-size: 0.8rem;
+				}
 
 				&:first-child,
 				&:last-child {
 					padding: 1rem;
+
+					@include abs.mq(sm) {
+						padding: 0.6rem;
+					}
 				}
 			}
 
@@ -490,7 +497,20 @@
 		}
 	}
 
+	/////////////
+	/// HTML --1
+	/////////////
 	#html__post--1 {
 		grid-template-columns: repeat(auto-fit, minmax(min-content, 7rem));
+	}
+
+	////////////
+	/// ACCOUNT INFORMATION
+	////////////
+
+	#account__information {
+		@include abs.mq(sm) {
+			grid-template-columns: repeat(auto-fit, minmax(4rem, 6rem));
+		}
 	}
 }
