@@ -670,30 +670,21 @@
 		}
 
 		nav {
+			width: 95vw;
 			@extend %page-indexes-design;
-			padding: 2rem 6rem;
-
-			@include abs.mediaQuery(tab-port) {
-				padding: 0.6rem 2rem;
-			}
+			// padding: 2rem 6rem;
 
 			ul {
+				width: 95vw;
+				max-width: 95vw;
+
 				display: grid;
-				grid-template-columns: repeat(2, 1fr);
+				grid-template-columns: repeat(auto-fit, minmax(min-content, 25rem));
+				justify-content: space-around;
 				gap: 1.3rem;
 
-				@include abs.mediaQuery(tab-land) {
-					grid-template-columns: repeat(2, minmax(27rem, 1fr));
-				}
-
-				@include abs.mediaQuery(tab-port) {
-					grid-template-columns: 1fr;
-					grid-row-gap: 3rem;
-				}
-
-				@include abs.mediaQuery(mobile) {
-					grid-template-columns: 1fr;
-					grid-row-gap: 3rem;
+				@include abs.mq(md) {
+					gap: 1rem;
 				}
 
 				li {

@@ -73,6 +73,10 @@
 
 			&:not(:last-child) {
 				margin-bottom: 1rem;
+
+				@include bp.mq(md) {
+					margin-bottom: 0rem;
+				}
 			}
 
 			&:hover {
@@ -93,14 +97,19 @@
 				text-transform: capitalize;
 				font-family: var(--font-tertiary);
 				font-weight: 400;
-				font-size: 2rem;
+				font-size: 1.8rem;
 				cursor: pointer;
 				line-height: 1.2;
 				transition: all 0.4s;
 
-				@include bp.mediaQuery(mobile) {
-					font-size: 2.5rem;
-					font-weight: 400;
+				@include bp.mq(lg) {
+					font-size: 1.4rem;
+					line-height: 1;
+				}
+
+				@include bp.mq(md) {
+					font-size: 1.1rem;
+					line-height: 1;
 				}
 			}
 

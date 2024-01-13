@@ -275,11 +275,11 @@
 			animation-delay: 0.1s;
 
 			@include abs.mq(md) {
-				font-size: 3rem;
+				font-size: 2rem;
 			}
 
 			@include abs.mq(xs) {
-				font-size: 2rem;
+				font-size: 1.6rem;
 			}
 		}
 	}
