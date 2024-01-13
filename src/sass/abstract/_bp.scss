@@ -2,12 +2,13 @@
 
 /*
 ****** breakPoint for media query
-0[?320] -400px   -> mob-small
-400     -600px   -> mobile
-600     -900px   -> tab-port
-900     -1200px  -> tab-land
-1200    -1800px  -> laptop normal [developing stage]
-1800px+         -> big desktop
+1220px(120em+)  -> extra extra large device(min-width)
+1150px(115em)   -> extra large device  (max-width)
+910px(91em)     -> large device  (max-width)
+670px(67em)     -> medium device  (max-width)
+440px(44em)     -> small device  (max-width)
+295px(29.5em)   -> extra small device  (max-width)
+220px(22em)     -> extra extra small device  (max-width)
 
 
 ****** PICTURE RESOLUTIONS
@@ -23,7 +24,7 @@ MOB-SMALL  -> 320 X 108
 */
 
 @mixin mediaQuery($bp) {
-	@if $bp == big-desk {
+	@if $bp == big-desktop {
 		@media only screen and (min-width: var.$bp-largest) {
 			@content;
 		}
@@ -53,3 +54,59 @@ MOB-SMALL  -> 320 X 108
 		}
 	}
 }
+@mixin mq($bp) {
+	@if $bp == xxl {
+		//1200px
+		@media only screen and (min-width: var.$xxl) {
+			@content;
+		}
+	} @else if $bp == xl {
+		//1150px
+		@media only screen and (max-width: var.$xl) {
+			@content;
+		}
+	} @else if $bp == lg {
+		//910px
+		@media only screen and (max-width: var.$lg) {
+			@content;
+		}
+	} @else if $bp == md {
+		//670px
+		@media only screen and (max-width: var.$md) {
+			@content;
+		}
+	} @else if $bp == sm {
+		//440px
+		@media only screen and (max-width: var.$sm) {
+			@content;
+		}
+	} @else if $bp == xs {
+		//295px
+		@media only screen and (max-width: var.$xs) {
+			@content;
+		}
+	} @else if $bp == xxs {
+		//220px
+		@media only screen and (max-width: var.$xxs) {
+			@content;
+		}
+	}
+}
+
+// @mixin mq($min: null, $max: null) {
+// 	@if $min != null and $max != null {
+// 		@media only screen and (min: $min) and (max: $max) {
+// 			@content;
+// 		}
+// 	} @else if $min != null {
+// 		@media only screen and (min: $min) {
+// 			@content;
+// 		}
+// 	} @else if $max != null {
+// 		@media only screen and (max: $max) {
+// 			@content;
+// 		}
+// 	} @else {
+// 		@content;
+// 	}
+// }

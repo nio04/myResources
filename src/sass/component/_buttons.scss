@@ -61,8 +61,12 @@
 			background-color: var(--color-secondary-300);
 			transition: all 0.2s ease-in-out;
 			transform: translateX(200rem);
-			z-index: 10;
+			z-index: 100;
 			@extend %center-me-full;
+
+			@include abs.mq(md) {
+				border-radius: 1rem;
+			}
 
 			&:active,
 			&:focus {
@@ -104,16 +108,10 @@
 						animation-iteration-count: infinite;
 					}
 
-					@include abs.mediaQuery(mobile) {
+					@include abs.mq(md) {
 						display: none;
 					}
 				}
-			}
-
-			@include abs.mediaQuery(mobile) {
-				height: 5rem;
-				width: 5rem;
-				border-radius: 20%;
 			}
 		}
 		#nav__top--btn {
@@ -121,14 +119,12 @@
 			bottom: 0.5rem;
 			right: 1rem;
 
-			@include abs.mediaQuery(tab-land) {
-				font-weight: 400;
+			@include abs.mq(md) {
+				width: 5rem;
 			}
 
-			@include abs.mediaQuery(mobile) {
-				justify-content: center;
-				width: 8rem;
-				right: -4;
+			@include abs.mq(sm) {
+				width: 3.4rem;
 			}
 		}
 		#nav__bottom--btn {
@@ -136,38 +132,50 @@
 			bottom: 0.5rem;
 			right: 12rem;
 
-			@include abs.mediaQuery(tab-land) {
-				font-weight: 400;
+			@include abs.mq(md) {
+				width: 5rem;
+				right: 5.2em;
 			}
 
-			@include abs.mediaQuery(mobile) {
-				width: 8rem;
-				justify-content: center;
-				bottom: 0.5rem;
-				right: 9rem;
+			@include abs.mq(sm) {
+				width: 3.4rem;
+				right: 5rem;
 			}
 		}
 
 		.contentPage__magic-btn {
-			height: 3rem;
-			width: 6rem;
-			z-index: 5;
-			position: fixed;
-			top: 2rem;
-			right: 2rem;
-			display: block;
-			border: none;
-			fill: var(--color-accent-900);
-			background: transparent;
-			cursor: pointer;
+			svg {
+				height: 6rem;
+				width: 6rem;
+				z-index: 5;
+				position: fixed;
+				top: 2rem;
+				right: 2rem;
+				display: block;
+				border: none;
+				fill: var(--color-accent-900);
+				background: transparent;
+				cursor: pointer;
+				transform: translateX(100vh);
+				transition: all 0.5s;
 
-			&:hover {
-				fill: var(--color-accent-500);
-			}
+				@include abs.mq(md) {
+					height: 4.5rem;
+					width: 4.5rem;
+				}
 
-			&:active {
-				height: 2.6rem;
-				width: 5.6rem;
+				@include abs.mq(sm) {
+					top: 1rem;
+					right: 1rem;
+				}
+
+				&:hover {
+					fill: var(--color-accent-500);
+				}
+
+				&:active {
+					transform: scale(0.95);
+				}
 			}
 		}
 	}

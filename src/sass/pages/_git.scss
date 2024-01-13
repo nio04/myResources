@@ -1,0 +1,19 @@
+@use '../abstract/' as abs;
+@use '../base/' as base;
+@use '../layout/' as layout;
+
+.content__page--container {
+	.nav--container {
+		.main__header--04 {
+			@include abs.mq(xxs) {
+				font-size: 0.9rem;
+			}
+		}
+
+		.main__header--05 {
+			@include abs.mq(xxs) {
+				font-size: 1rem;
+			}
+		}
+	}
+}

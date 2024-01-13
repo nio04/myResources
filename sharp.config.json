@@ -1,0 +1,20 @@
+{
+	"jpeg": {
+		"quality": 75,
+		"optimiseCoding": true
+	},
+	"png": {
+		"compressionLevel": 8,
+		"palette": true,
+		"quality": 60,
+		"effort": 3,
+		"colors": 256
+	},
+	"gif": {
+		"resuse": true,
+		"colors": 256,
+		"effort": 1,
+		"loop": 0,
+		"delay": [0, 1]
+	}
+}

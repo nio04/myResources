@@ -1,6 +1,7 @@
 const target = document.querySelector('#content__main--section');
 const navBtnContainer = document.querySelector('.content__nav--btn');
 const navigatorBtns = document.querySelectorAll('.float__btn--container');
+const magicBtn = document.querySelector('.contentPage__magic-btn svg');
 
 const btnsIntersection = new IntersectionObserver(navViewIntersection, {
 	root: null,
@@ -16,11 +17,15 @@ function navViewIntersection([entries]) {
 		navBtnContainer.classList.add('util-display-y');
 		// SHOW NAVIGATROR [TOP, BOTTOM] BUTTON
 		showNavigatorBtns();
+		// for magic btn
+		magicBtn.classList.add('util-show-element-transform');
 	} else {
 		// HIDE NAVIGATOR BUTTON
 		navBtnContainer.classList.remove('util-display-y');
 		// HIDE NAVIGATROR [TOP, BOTTOM] BUTTON
 		hideNavigatorBtns();
+		// for magic btn
+		magicBtn.classList.remove('util-show-element-transform');
 	}
 }
 

@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" sizes="16x16"
       href="../asset/favico/favicon-16x16.png">
     <link rel="manifest" href="../asset/favico/site.webmanifest">
-    <link rel="stylesheet" href="../sass/pages/dom.scss">
+    <link rel="stylesheet" href="../sass/pages/_dom.scss">
     <link rel="stylesheet" href="../sass/theme/prism-light.css">
     <script src="../js/prism.js" defer></script>
     <script type="module" src="../js/controller.js" defer></script>
@@ -20,150 +20,67 @@
   <body id="top-side">
     <div class="content__page--container">
       <header class="nav--container">
-        <h1 class="main__header--03">read write html attribute</h1>
+        <h1 class="main__header--03">html attribute read write</h1>
 
-        <h2 class="section">section</h2>
-        <nav class="nav--indexes">
-          <a href="#index-targetStandard">target standard attribute only</a>
-          <a href="#index-targetStandardNonStandard">target standard &
-            nonStandard attribute</a>
-          <a href="#index-rwDataSet">read/write dataSet attribute</a>
-          <a href="#index-delete">delete attribute</a>
-        </nav>
+        <svg>
+          <use xlink:href="../asset/svg/zSprite.svg#dom"></use>
+        </svg>
+
+        <section class="posts">
+          <ul id="dom__post--3">
+            <li class="post"><a href="#index-standardattribute"
+                class="post__item">target standard attribute</a></li>
+            <li class="post">
+              <a href="#index-standardnonstandard" class="post__item">target
+                standard & non-standard</a>
+              <a href="#index-standardnonstandardread" class="post__item">target
+                standard & non-standard read only</a>
+              <a href="#index-standardnonstandardwrite"
+                class="post__item">target standard & non-standard write only</a>
+            </li>
+            <li class="post">
+              <a href="#index-datasetattribute" class="post__item">target
+                dataset attribute</a>
+              <a href="#index-datasetattributeread" class="post__item">dataset
+                attribute read only</a>
+              <a href="#index-datasetattributewrite" class="post__item">dataset
+                attribute write only</a>
+            </li>
+            <li class="post">
+              <a href="#index-deleteattribute" class="post__item">delete
+                attribute</a>
+            </li>
+          </ul>
+        </section>
       </header>
 
       <!-- navigation button -->
       <button class="content__nav--btn util-sticky nav__icon--open"
         id="nav__btn__container--content">
-        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          viewBox="0 0 294.843 294.843"
-          style="enable-background:new 0 0 294.843 294.843;"
-          xml:space="preserve" class="open">
-          <g>
-            <path d="M147.421,0C66.133,0,0,66.133,0,147.421c0,40.968,17.259,80.425,47.351,108.255c2.433,2.25,6.229,2.101,8.479-0.331
-            		c2.25-2.434,2.102-6.229-0.332-8.479C27.854,221.3,12,185.054,12,147.421C12,72.75,72.75,12,147.421,12
-            		s135.421,60.75,135.421,135.421s-60.75,135.421-135.421,135.421c-3.313,0-6,2.687-6,6s2.687,6,6,6
-            		c81.289,0,147.421-66.133,147.421-147.421S228.71,0,147.421,0z" />
-            <path
-              d="M84.185,90.185h126.473c3.313,0,6-2.687,6-6s-2.687-6-6-6H84.185c-3.313,0-6,2.687-6,6S80.872,90.185,84.185,90.185z" />
-            <path
-              d="M84.185,153.421h126.473c3.313,0,6-2.687,6-6s-2.687-6-6-6H84.185c-3.313,0-6,2.687-6,6S80.872,153.421,84.185,153.421z" />
-            <path d="M216.658,210.658c0-3.313-2.687-6-6-6H84.185c-3.313,0-6,2.687-6,6s2.687,6,6,6h126.473
-            		C213.971,216.658,216.658,213.971,216.658,210.658z" />
+        <svg class="open">
+          <use xlink:href="../asset/svg/zSprite.svg#nav-open"></use>
         </svg>
       </button>
 
       <nav class="sticky__nav--container">
         <section class="sticky__nav--el post__navigation--container">
           <span>navigate posts</span>
-          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            viewBox="0 0 490.4 490.4"
-            style="enable-background:new 0 0 490.4 490.4;" xml:space="preserve"
-            class="arrowDown" id="dropdownMenu__btn">
-            <g>
-              <g>
-                <path
-                  d="M490.4,245.2C490.4,110,380.4,0,245.2,0S0,110,0,245.2s110,245.2,245.2,245.2S490.4,380.4,490.4,245.2z M24.5,245.2
-                  			c0-121.7,99-220.7,220.7-220.7s220.7,99,220.7,220.7s-99,220.7-220.7,220.7S24.5,366.9,24.5,245.2z" />
-                <path d="M253.9,360.4l68.9-68.9c4.8-4.8,4.8-12.5,0-17.3s-12.5-4.8-17.3,0l-48,48V138.7c0-6.8-5.5-12.3-12.3-12.3
-                  			s-12.3,5.5-12.3,12.3v183.4l-48-48c-4.8-4.8-12.5-4.8-17.3,0s-4.8,12.5,0,17.3l68.9,68.9c2.4,2.4,5.5,3.6,8.7,3.6
-                  			S251.5,362.8,253.9,360.4z" />
-              </g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
+          <svg class="arrowDown" id="dropdownMenu__btn">
+            <use xlink:href="../asset/svg/zSprite.svg#arrow-down"></use>
           </svg>
 
 
+
           <ul class="nav__el--wrap">
-            <svg id="nav__close--btn" version="1.1" id="Capa_1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              viewBox="0 0 294.843 294.843"
-              style="enable-background:new 0 0 294.843 294.843;"
-              xml:space="preserve" id="nav__close--btn">
-              <g>
-                <path d="M147.421,0C66.133,0,0,66.133,0,147.421s66.133,147.421,147.421,147.421c38.287,0,74.567-14.609,102.159-41.136
-                                  		c2.389-2.296,2.464-6.095,0.167-8.483c-2.295-2.388-6.093-2.464-8.483-0.167c-25.345,24.367-58.672,37.786-93.842,37.786
-                                  		C72.75,282.843,12,222.093,12,147.421S72.75,12,147.421,12s135.421,60.75,135.421,135.421c0,16.842-3.052,33.273-9.071,48.835
-                                  		c-1.195,3.091,0.341,6.565,3.432,7.761c3.092,1.193,6.565-0.341,7.761-3.432c6.555-16.949,9.879-34.836,9.879-53.165
-                                  		C294.843,66.133,228.71,0,147.421,0z" />
-                <path
-                  d="M167.619,160.134c-2.37-2.319-6.168-2.277-8.485,0.09c-2.318,2.368-2.277,6.167,0.09,8.485l47.236,46.236
-                                  		c1.168,1.143,2.683,1.712,4.197,1.712c1.557,0,3.113-0.603,4.288-1.803c2.318-2.368,2.277-6.167-0.09-8.485L167.619,160.134z" />
-                <path
-                  d="M125.178,133.663c1.171,1.171,2.707,1.757,4.243,1.757s3.071-0.586,4.243-1.757c2.343-2.343,2.343-6.142,0-8.485
-                                  		L88.428,79.942c-2.343-2.343-6.143-2.343-8.485,0c-2.343,2.343-2.343,6.142,0,8.485L125.178,133.663z" />
-                <path
-                  d="M214.9,79.942c-2.343-2.343-6.143-2.343-8.485,0L79.942,206.415c-2.343,2.343-2.343,6.142,0,8.485
-                                  		c1.171,1.171,2.707,1.757,4.243,1.757s3.071-0.586,4.243-1.757L214.9,88.428C217.243,86.084,217.243,82.286,214.9,79.942z" />
-              </g>
-              <g>
-              </g>
-              <g>
-              </g>
-              <g>
-              </g>
-              <g>
-              </g>
-              <g>
-              </g>
-              <g>
-              </g>
-              <g>
-              </g>
-              <g>
-              </g>
-              <g>
-              </g>
-              <g>
-              </g>
-              <g>
-              </g>
-              <g>
-              </g>
-              <g>
-              </g>
-              <g>
-              </g>
-              <g>
-              </g>
+
+            <svg id="nav__close--btn">
+              <use xlink:href="../asset/svg/zSprite.svg#nav-close"></use>
             </svg>
+
             <li class="nav__item"><a href="index.html#html--section">navigate to
                 html</a>
             </li>
-            <li class="nav__item link-active"><a
-                href="index.html#css--section">navigate to
+            <li class="nav__item "><a href="index.html#css--section">navigate to
                 css</a>
             </li>
             <li class="nav__item"><a href="index.html#sass--section">navigate to
@@ -171,7 +88,9 @@
             </li>
             <li class="nav__item"><a href="index.html#js--section">navigate to
                 javascript</a></li>
-            <li class="nav__item"><a href="index.html#dom--section">navigate to
+            <li class="nav__item link-active"><a
+                href="index.html#dom--section">navigate
+                to
                 dom</a>
             </li>
             <li class="nav__item"><a href="index.html#git--section">navigate to
@@ -186,13 +105,8 @@
           <span>change mode</span>
           <div class="view__changer__btn--container night--icon">
             <svg id="view__changer--btn" class="day__mode__icon--off"
-              height="512" viewBox="0 0 24 24" width="512"
-              xmlns="http://www.w3.org/2000/svg" class="day"
-              id="mode__changer--btn">
-              <g id="Layer_2" data-name="Layer 2">
-                <path
-                  d="m12 22.75a10.75 10.75 0 0 1 -1.085-21.45.754.754 0 0 1 .7.332.746.746 0 0 1 .033.774 7.387 7.387 0 0 0 -.898 3.594 7.021 7.021 0 0 0 6.75 7.25 6.385 6.385 0 0 0 4.021-1.436.75.75 0 0 1 1.218.615 10.713 10.713 0 0 1 -10.739 10.321zm-2.261-19.724a9.252 9.252 0 1 0 11.317 10.868 7.771 7.771 0 0 1 -3.556.856 8.521 8.521 0 0 1 -8.25-8.75 9.045 9.045 0 0 1 .489-2.974z" />
-              </g>
+              class="day" id="mode__changer--btn">
+              <use xlink:href="../asset/svg/zSprite.svg#night-mode"></use>
             </svg>
           </div>
         </section>
@@ -201,22 +115,12 @@
           <a href="index.html">
             <span>main home</span>
             <svg>
-              <use xlink:href="../asset/sprite.svg#main__home"></use>
+              <use xlink:href="../asset/svg/zSprite.svg#home"></use>
             </svg>
           </a>
         </section>
 
-        <section class="stcky__nav--el">
-          <button>reserved</button>
-        </section>
 
-        <section class="stcky__nav--el">
-          <button>reserved</button>
-        </section>
-
-        <section class="stcky__nav--el">
-          <button>reserved</button>
-        </section>
       </nav>
       <div class="overlay"></div>
 
@@ -226,15 +130,8 @@
         <!-- adding hover [go to top] button -->
         <button class="float__btn--container" id="nav__top--btn">
           <a href="#top-side">
-            <svg enable-background="new 0 0 512 512" viewBox="0 0 512 512"
-              xmlns="http://www.w3.org/2000/svg">
-              <g id="_x30_7_Arrow_Up">
-                <g>
-                  <path
-                    d="m255.002 505.976h2.145c36.463 0 66.131-29.668 66.131-66.131v-206.932l29.575 29.569c25.841 25.853 67.677 25.85 93.515 0l.017-.017c25.845-25.833 25.849-67.695-.012-93.532l-143.671-143.592c-25.785-25.762-67.735-25.756-93.509.017l-143.574 143.58c-25.853 25.841-25.85 67.677 0 93.515 25.824 25.824 67.712 25.851 93.55-.035l29.703-29.744v207.171c-.001 36.463 29.667 66.131 66.13 66.131zm-112.679-260.38c-16.516 16.54-43.32 16.574-59.871.023-16.511-16.511-16.572-43.275 0-59.848l143.574-143.58c16.496-16.496 43.345-16.491 59.842-.006l143.673 143.591c16.518 16.494 16.584 43.281.012 59.853l-.017.017c-15.985 15.997-43.863 15.997-59.848 0l-49.896-49.89c-3.418-3.412-8.521-4.441-12.974-2.581-4.447 1.843-7.347 6.185-7.347 10.998v235.67c0 23.338-18.984 42.322-42.322 42.322h-2.145c-23.338 0-42.322-18.984-42.322-42.322v-235.942c0-4.819-2.901-9.161-7.353-10.998-1.471-.61-3.017-.907-4.551-.907-3.098 0-6.144 1.209-8.423 3.493z" />
-                </g>
-              </g>
-              <g id="Layer_1" />
+            <svg>
+              <use xlink:href="../asset/svg/zSprite.svg#go-top"></use>
             </svg>
             <span class="navigator__btn">top</span>
           </a>
@@ -242,184 +139,17 @@
         <!-- adding hover [go to bottom] button -->
         <button class="float__btn--container" id="nav__bottom--btn">
           <a href="#bottom-side">
-            <svg enable-background="new 0 0 512 512" viewBox="0 0 512 512"
-              xmlns="http://www.w3.org/2000/svg">
-              <g id="_x30_9_Arrow_Down">
-                <g>
-                  <path
-                    d="m257.001 6.022h-2.151c-36.469 0-66.137 29.668-66.137 66.131v206.926l-29.563-29.563c-25.785-25.774-67.753-25.779-93.538.017-25.84 25.828-25.856 67.689.012 93.532l143.678 143.585c25.781 25.769 67.717 25.774 93.503-.012l143.574-143.58c25.857-25.833 25.861-67.677 0-93.515-25.812-25.824-67.724-25.851-93.561.035l-29.691 29.744v-207.169c-.001-36.463-29.669-66.131-66.126-66.131zm112.673 260.38c16.514-16.55 43.32-16.562 59.871-.023s16.551 43.308 0 59.848l-143.574 143.58c-16.508 16.496-43.351 16.502-59.836.006l-143.678-143.593c-16.534-16.51-16.563-43.314-.012-59.853l.012-.017c16.501-16.489 43.351-16.497 59.859 0l49.885 49.89c3.418 3.412 8.533 4.435 12.974 2.581 4.441-1.843 7.347-6.185 7.347-10.998v-235.67c0-23.338 18.984-42.322 42.328-42.322h2.151c23.332 0 42.316 18.984 42.316 42.322v235.943c0 4.819 2.906 9.161 7.359 10.998 4.429 1.837 9.579.82 12.974-2.587z" />
-                </g>
-              </g>
-              <g id="Layer_1" />
+            <svg>
+              <use xlink:href="../asset/svg/zSprite.svg#go-down"></use>
             </svg>
             <span class="navigator__btn">bottom</span>
           </a>
         </button>
 
-        <button class="float__btn--container contentPage__magic-btn">
-          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            viewBox="0 0 512.002 512.002"
-            style="enable-background:new 0 0 512.002 512.002;"
-            xml:space="preserve">
-            <g>
-              <g>
-                <path
-                  d="M288.265,380.223l-6.303-1.278c-12.911-2.617-22.944-12.651-25.562-25.562l-1.278-6.304
-          			c-1.474-7.264-7.678-12.338-15.091-12.338s-13.617,5.073-15.091,12.339l-1.278,6.303c-2.617,12.911-12.651,22.945-25.562,25.562
-          			l-6.303,1.279c-7.264,1.473-12.339,7.678-12.339,15.091c0,7.412,5.074,13.617,12.339,15.091l6.303,1.278
-          			c12.911,2.617,22.945,12.651,25.562,25.562l1.278,6.304c1.474,7.264,7.678,12.338,15.091,12.338s13.617-5.073,15.091-12.338
-          			l1.278-6.304c2.617-12.911,12.651-22.945,25.562-25.562l6.303-1.278c7.264-1.473,12.339-7.678,12.339-15.091
-          			C300.604,387.903,295.53,381.696,288.265,380.223z M285.368,395.452c-0.031,0.011-0.073,0.022-0.127,0.034l-6.303,1.278
-          			c-18.918,3.836-33.62,18.538-37.456,37.456l-1.278,6.303c-0.011,0.054-0.021,0.095-0.031,0.127c-0.082,0.018-0.197,0.018-0.279,0
-          			c-0.009-0.03-0.021-0.072-0.031-0.127l-1.278-6.304c-3.836-18.918-18.538-33.621-37.457-37.456l-6.303-1.278
-          			c-0.054-0.011-0.095-0.022-0.127-0.031c-0.018-0.082-0.018-0.197,0-0.279c0.03-0.01,0.072-0.021,0.127-0.031l6.303-1.279
-          			c18.919-3.835,33.621-18.538,37.457-37.456l1.278-6.303c0.011-0.054,0.022-0.096,0.031-0.127c0.082-0.018,0.197-0.018,0.279,0
-          			c0.009,0.03,0.021,0.072,0.031,0.127l1.278,6.303c3.836,18.918,18.538,33.621,37.456,37.456l6.303,1.278
-          			c0.054,0.011,0.095,0.022,0.127,0.031C285.386,395.255,285.386,395.37,285.368,395.452z" />
-              </g>
-            </g>
-            <g>
-              <g>
-                <path d="M391.298,407.923c-4.203,0-7.611,3.408-7.611,7.611v20.609c0,4.203,3.408,7.611,7.611,7.611s7.611-3.408,7.611-7.611
-          			v-20.609C398.909,411.331,395.501,407.923,391.298,407.923z" />
-              </g>
-            </g>
-            <g>
-              <g>
-                <path d="M391.298,463.406c-4.203,0-7.611,3.408-7.611,7.611v20.609c0,4.203,3.408,7.611,7.611,7.611s7.611-3.408,7.611-7.611
-          			v-20.609C398.909,466.814,395.501,463.406,391.298,463.406z" />
-              </g>
-            </g>
-            <g>
-              <g>
-                <path
-                  d="M429.345,445.968h-20.609c-4.203,0-7.611,3.408-7.611,7.611c0,4.203,3.408,7.611,7.611,7.611h20.609
-          			c4.203,0,7.611-3.408,7.611-7.611C436.956,449.376,433.548,445.968,429.345,445.968z" />
-              </g>
-            </g>
-            <g>
-              <g>
-                <path
-                  d="M373.861,445.968h-20.609c-4.203,0-7.611,3.408-7.611,7.611c0,4.203,3.408,7.611,7.611,7.611h20.609
-          			c4.203,0,7.611-3.408,7.611-7.611C381.472,449.376,378.064,445.968,373.861,445.968z" />
-              </g>
-            </g>
-            <g>
-              <g>
-                <path d="M45.657,312.019c-4.203,0-7.611,3.408-7.611,7.611v20.609c0,4.204,3.408,7.611,7.611,7.611s7.611-3.408,7.611-7.611
-          			v-20.609C53.268,315.427,49.861,312.019,45.657,312.019z" />
-              </g>
-            </g>
-            <g>
-              <g>
-                <path d="M45.657,367.503c-4.203,0-7.611,3.408-7.611,7.611v20.609c0,4.204,3.408,7.611,7.611,7.611s7.611-3.408,7.611-7.611
-          			v-20.609C53.268,370.911,49.861,367.503,45.657,367.503z" />
-              </g>
-            </g>
-            <g>
-              <g>
-                <path
-                  d="M83.704,350.066H63.095c-4.204,0-7.611,3.408-7.611,7.611s3.408,7.611,7.611,7.611h20.609
-          			c4.203,0,7.611-3.408,7.611-7.611S87.907,350.066,83.704,350.066z" />
-              </g>
-            </g>
-            <g>
-              <g>
-                <path d="M28.22,350.066H7.611c-4.204,0-7.611,3.408-7.611,7.611s3.408,7.611,7.611,7.611H28.22c4.204,0,7.611-3.408,7.611-7.611
-          			S32.423,350.066,28.22,350.066z" />
-              </g>
-            </g>
-            <g>
-              <g>
-                <path d="M392.284,14.471c-4.203,0-7.611,3.408-7.611,7.611v20.609c0,4.203,3.408,7.611,7.611,7.611s7.611-3.408,7.611-7.611
-          			V22.083C399.896,17.879,396.488,14.471,392.284,14.471z" />
-              </g>
-            </g>
-            <g>
-              <g>
-                <path d="M392.284,69.955c-4.203,0-7.611,3.408-7.611,7.611v20.609c0,4.203,3.408,7.61,7.611,7.61s7.611-3.408,7.611-7.611V77.567
-          			C399.896,73.363,396.488,69.955,392.284,69.955z" />
-              </g>
-            </g>
-            <g>
-              <g>
-                <path
-                  d="M430.331,52.517h-20.609c-4.204,0-7.611,3.408-7.611,7.611c0,4.203,3.408,7.611,7.611,7.611h20.609
-          			c4.204,0,7.611-3.408,7.611-7.611C437.942,55.925,434.534,52.517,430.331,52.517z" />
-              </g>
-            </g>
-            <g>
-              <g>
-                <path
-                  d="M374.847,52.517h-20.609c-4.204,0-7.611,3.408-7.611,7.611c0,4.203,3.408,7.611,7.611,7.611h20.609
-          			c4.203,0,7.611-3.408,7.611-7.611C382.458,55.925,379.051,52.517,374.847,52.517z" />
-              </g>
-            </g>
-            <g>
-              <g>
-                <path
-                  d="M290.164,118.881l-30.171-6.117c-26.793-5.432-47.616-26.255-53.048-53.048l-6.117-30.17
-          			c-2.035-10.038-10.283-16.782-20.525-16.782c-10.241,0-18.491,6.745-20.526,16.782l-6.117,30.17
-          			c-5.432,26.793-26.255,47.616-53.048,53.048l-30.17,6.117c-10.038,2.035-16.782,10.284-16.782,20.525
-          			c0,10.242,6.745,18.491,16.782,20.525l30.17,6.116c26.793,5.432,47.616,26.255,53.048,53.048l6.117,30.17
-          			c2.035,10.038,10.284,16.782,20.526,16.782s18.49-6.745,20.525-16.782l6.117-30.17c5.432-26.793,26.255-47.617,53.048-53.048
-          			l30.171-6.116c10.038-2.035,16.782-10.284,16.782-20.525C306.946,129.166,300.202,120.917,290.164,118.881z M287.14,145.013
-          			l-30.17,6.117c-32.801,6.65-58.293,32.141-64.943,64.943l-6.117,30.17c-0.863,4.253-4.509,4.584-5.606,4.584
-          			s-4.744-0.331-5.606-4.584l-6.117-30.17c-6.65-32.801-32.141-58.293-64.943-64.943l-30.17-6.117
-          			c-4.253-0.863-4.584-4.509-4.584-5.606s0.331-4.744,4.584-5.607l30.17-6.116c32.801-6.65,58.293-32.142,64.943-64.942l6.117-30.17
-          			c0.863-4.253,4.509-4.584,5.606-4.584s4.743,0.331,5.606,4.584l6.117,30.17c6.65,32.801,32.142,58.293,64.943,64.942l30.17,6.116
-          			c4.253,0.863,4.584,4.509,4.584,5.607C291.724,140.505,291.393,144.151,287.14,145.013z" />
-              </g>
-            </g>
-            <g>
-              <g>
-                <path
-                  d="M497.698,231.343l-23.17-4.698c-19.88-4.031-35.33-19.48-39.36-39.36l-4.698-23.17
-          			c-1.707-8.421-8.901-14.303-17.493-14.303c-8.593,0-15.787,5.882-17.494,14.303l-4.698,23.17
-          			c-4.03,19.88-19.479,35.329-39.36,39.36l-23.17,4.698c-8.421,1.707-14.303,8.901-14.303,17.494
-          			c0,8.593,5.881,15.786,14.303,17.494l23.17,4.698c19.88,4.03,35.33,19.48,39.36,39.359l4.698,23.17
-          			c1.708,8.421,8.901,14.303,17.495,14.303c8.593,0,15.786-5.882,17.493-14.303l4.698-23.17c4.03-19.88,19.48-35.329,39.36-39.359
-          			l23.17-4.698c8.421-1.708,14.303-8.901,14.303-17.494C512.002,240.244,506.119,233.051,497.698,231.343z M494.672,251.411
-          			l-23.17,4.698c-25.887,5.249-46.006,25.367-51.254,51.254l-4.698,23.17c-0.283,1.396-1.149,2.105-2.575,2.105
-          			c-1.426,0-2.292-0.708-2.575-2.105l-4.698-23.17c-5.248-25.888-25.367-46.006-51.254-51.254l-23.17-4.698
-          			c-1.396-0.283-2.105-1.15-2.105-2.575s0.708-2.292,2.105-2.575l23.17-4.698c25.888-5.249,46.006-25.367,51.254-51.254l4.698-23.17
-          			c0.283-1.396,1.15-2.105,2.575-2.105c1.425,0,2.292,0.708,2.575,2.105l4.698,23.17c5.249,25.887,25.367,46.006,51.254,51.254
-          			l23.17,4.698c1.396,0.283,2.105,1.15,2.105,2.575S496.07,251.128,494.672,251.411z" />
-              </g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
+        <button class="contentPage__magic-btn">
+          <svg>
+            <use xlink:href="../asset/svg/zSprite.svg#content-magic"></use>
           </svg>
-
         </button>
 
         <section class="content__magic inactive">
@@ -486,9 +216,9 @@
 
 
 
-        <section id="index-targetStandard" class="util-margin-bottom-high">
+        <section id="index-standardattribute" class="util-margin-bottom-high">
           <h2> standard attribute property</h2>
-          <article class="content-area__container">
+          <article class="content__area--container">
             <h3>target standard attribute</h3>
             <pre>
               <code class="util-no-cap language-js match-braces rainbow-braces">
@@ -502,11 +232,11 @@
           </article>
         </section>
 
-        <section id="index-targetStandardNonStandard"
-          class="util-margin-bottom-high">
+        <section id="index-standardnonstandard" class="util-margin-bottom-high">
           <h2>standard - non-standard attribute -- r/w</h2>
           <article
-            class="content-area__container util-border-bottom-double util-padding-bottom">
+            class="content__area--container uti--border-bottom-double util-padding-bottom"
+            id="index-standardnonstandardread">
             <h3>target standard & non-standard attribute for read only</h3>
             <pre>
               <code class="util-no-cap language-js match-braces rainbow-braces">
@@ -520,7 +250,8 @@
             </p>
           </article>
 
-          <article class="content-area__container util-margin-top">
+          <article class="content__area--container uti--margin-top"
+            id="index-standardnonstandardwrite">
             <h3>target standard & non-standard attribute for write only</h3>
             <pre>
               <code class="util-no-cap language-js match-braces rainbow-braces">
@@ -535,9 +266,10 @@
           </article>
         </section>
 
-        <section id="index-rwDataSet" class="util-margin-bottom-high">
+        <section id="index-datasetattribute" class="util-margin-bottom-high">
           <h2>data-set attribute -- r/w</h2>
-          <article class="content-area__container">
+          <article class="content__area--container" --
+            id="index-datasetattributeread">
             <h3>target dataset attribute --read only</h3>
             <pre>
               <code class="util-no-cap language-js match-braces rainbow-braces">
@@ -554,7 +286,8 @@
             </p>
 
           </article>
-          <article class="content-area__container">
+          <article class="content__area--container" --
+            id="index-datasetattributewrite">
             <h3>target dataset attribute --write only</h3>
             <pre>
               <code class="util-no-cap language-js match-braces rainbow-braces">
@@ -573,10 +306,11 @@
           </article>
         </section>
 
-        <section id="index-delete" class="util-margin-bottom-high">
+        <section id="index-delete" class="util-margin-bottom-high"
+          id="index-deleteattribute">
           <h2>delete attribute</h2>
-          <article class="content-area__container">
-            <h3>delete attribute</h3>
+          <article class="content__area--container">
+            -- <h3>delete attribute</h3>
             <pre>
               <code class="util-no-cap language-js match-braces rainbow-braces">
                 const target = document.querySelector("parentElementClassName")
@@ -619,22 +353,7 @@
               <a href="dom--06-cssClass.html" class="item-link">css class
                 manipulation</a>
             </li>
-            <li class="item">
-              <a href="#" class="item-link">Lorem ipsum dolor sit amet
-                consectetur.</a>
-            </li>
-            <li class="item">
-              <a href="#" class="item-link">Lorem ipsum dolor sit amet
-                consectetur.</a>
-            </li>
-            <li class="item">
-              <a href="#" class="item-link">Lorem ipsum dolor sit amet
-                consectetur.</a>
-            </li>
-            <li class="item">
-              <a href="#" class="item-link">Lorem ipsum dolor sit amet
-                consectetur.</a>
-            </li>
+
           </ul>
         </nav>
     </div>
