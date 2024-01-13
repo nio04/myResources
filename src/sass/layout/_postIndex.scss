@@ -184,19 +184,17 @@
 	// CSS --2
 	///////////////
 	#css__post--2 {
-		width: 95vw;
-		max-width: 95vw;
-		height: 60vh;
-		max-height: 60vh;
-
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 2rem;
+		grid-template-columns: repeat(auto-fit, minmax(max-content, 15rem));
 
+		@include abs.mq(sm) {
+			grid-template-columns: repeat(auto-fit, minmax(min-content, 12rem));
+		}
 		.post {
-			height: 60%;
-			overflow-y: scroll;
-
+			@include abs.mq(xxs) {
+				height: 80%;
+				overflow-y: scroll;
+			}
 			&__item:link,
 			&__item:visited {
 				padding: 0.3rem 1rem;
