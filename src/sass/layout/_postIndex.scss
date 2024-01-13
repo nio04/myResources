@@ -504,6 +504,63 @@
 		grid-template-columns: repeat(auto-fit, minmax(min-content, 7rem));
 	}
 
+	///////////////
+	/// js javascript
+	//////////////
+	///
+
+	///////////////
+	/// js -1
+	/////////////
+
+	#js__post--1 {
+		grid-template-columns: repeat(auto-fit, minmax(max-content, 7rem));
+
+		@include abs.mq(sm) {
+			grid-template-columns: repeat(auto-fit, minmax(min-content, 12rem));
+		}
+
+		.post {
+			height: 85%;
+			overflow-y: scroll;
+
+			&__item:link,
+			&__item:visited {
+				&:first-child {
+					font-weight: 900;
+					padding-bottom: 1rem;
+					border-bottom: 1px solid red;
+				}
+			}
+		}
+	}
+
+	///////////////
+	/// js -2
+	///////////////
+
+	#js__post--2 {
+		grid-template-columns: repeat(auto-fit, minmax(max-content, 7rem));
+		gap: 0;
+
+		@include abs.mq(sm) {
+			grid-template-columns: repeat(auto-fit, minmax(min-content, 15rem));
+		}
+
+		.post {
+			height: 80%;
+			overflow-y: scroll;
+
+			&__item:link,
+			&__item:visited {
+				&:first-child {
+					font-weight: 900;
+					padding-bottom: 1rem;
+					border-bottom: 1px solid red;
+				}
+			}
+		}
+	}
 	////////////
 	/// ACCOUNT INFORMATION
 	////////////

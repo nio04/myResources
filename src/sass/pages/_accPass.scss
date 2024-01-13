@@ -3,6 +3,25 @@
 @use '../base/' as base;
 @use '../layout/' as layout;
 
+.content__page--container {
+	main section article {
+		padding: 0 5rem;
+
+		@include abs.mq(sm) {
+			padding: 0 2rem;
+		}
+
+		@include abs.mq(xs) {
+			padding: 0 0.3rem;
+		}
+
+		.account__holder {
+			@include abs.mq(xs) {
+				font-size: 1.3rem;
+			}
+		}
+	}
+}
 #acc__btn--show {
 	margin-left: 5rem;
 	padding: 0.6rem 1.4rem;
@@ -15,6 +34,15 @@
 	color: black;
 	transition: all 0.4s;
 	cursor: pointer;
+
+	@include abs.mq(sm) {
+		margin-left: 2rem;
+		font-size: 1.4rem;
+	}
+	@include abs.mq(xs) {
+		margin-left: 1rem;
+		font-size: 1.1rem;
+	}
 
 	&:hover {
 		background-color: #716060;
