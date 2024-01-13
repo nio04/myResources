@@ -29,20 +29,19 @@
 		.main__header--02 {
 			font-size: 7rem;
 
-			@include abs.mediaQuery(tab-land) {
-				font-size: 6rem;
+			@include abs.mq(lg) {
+				font-size: 5rem;
 			}
 
-			@include abs.mediaQuery(tab-port) {
-				font-size: 4.5rem;
-			}
-
-			@include abs.mediaQuery(mobile) {
-				font-size: 3.6rem;
-			}
-
-			@include abs.mediaQuery(mob-small) {
+			@include abs.mq(md) {
 				font-size: 4rem;
+			}
+			@include abs.mq(md) {
+				font-size: 2rem;
+			}
+
+			@include abs.mq(xxs) {
+				font-size: 1.5rem;
 			}
 		}
 	}

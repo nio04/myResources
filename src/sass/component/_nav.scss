@@ -655,10 +655,18 @@
 			padding: 1.5rem 0;
 			margin-bottom: 3rem;
 			text-transform: uppercase;
-			word-spacing: 2.5rem;
-			letter-spacing: 0.5rem;
+			word-spacing: 2.5;
 			background-color: var(--color-secondary-200);
 			@extend %center-me-full;
+
+			@include abs.mq(md) {
+				word-spacing: 1;
+				font-size: 2rem;
+			}
+
+			@include abs.mq(sm) {
+				font-size: 1.4rem;
+			}
 		}
 
 		nav {
