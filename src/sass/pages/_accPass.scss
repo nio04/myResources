@@ -5,20 +5,10 @@
 
 .content__page--container {
 	main section article {
-		padding: 0 5rem;
-
-		@include abs.mq(sm) {
-			padding: 0 2rem;
-		}
-
-		@include abs.mq(xs) {
-			padding: 0 0.3rem;
-		}
+		padding: clamp(2.5rem, 5vw, 6rem);
 
 		.account__holder {
-			@include abs.mq(xs) {
-				font-size: 1.3rem;
-			}
+			font-size: clamp(1.2rem, 6vw, 5rem);
 		}
 	}
 }

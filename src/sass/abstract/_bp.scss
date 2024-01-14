@@ -2,26 +2,48 @@
 
 /*
 ****** breakPoint for media query
-1220px(120em+)  -> extra extra large device(min-width)
-1150px(115em)   -> extra large device  (max-width)
-910px(91em)     -> large device  (max-width)
-670px(67em)     -> medium device  (max-width)
-440px(44em)     -> small device  (max-width)
-295px(29.5em)   -> extra small device  (max-width)
-220px(22em)     -> extra extra small device  (max-width)
+1150px(71.875em)   -> extra large device  (max-width)
+910px(56.875em)    -> large device  (max-width)
+670px(41.875em)    -> medium device  (max-width)
+440px(27.5em)      -> small device  (max-width)
+295px(18.4375em)   -> extra small device  (max-width)
+220px(1.375em)     -> extra extra small device  (max-width)
 
-
-****** PICTURE RESOLUTIONS
-[ *****combine this 2 in one {871 X 196 }
-LAPTOP     -> 1168 X 220
-TAB-LAND   -> 871 X 196
-]
-[ *****combine this 3 in one { 400 X 150 }
-TAB-PORT   -> 576 X 176
-MOBILE     -> 400 X 150
-MOB-SMALL  -> 320 X 108
-]
 */
+
+@mixin mq($bp) {
+	@if $bp == xl {
+		//910px - 1149px
+		@media only screen and (max-width: var.$xl) {
+			@content;
+		}
+	} @else if $bp == lg {
+		//670px - 909px
+		@media only screen and (max-width: var.$lg) {
+			@content;
+		}
+	} @else if $bp == md {
+		//440px - 669px
+		@media only screen and (max-width: var.$md) {
+			@content;
+		}
+	} @else if $bp == sm {
+		//295px - 439px
+		@media only screen and (max-width: var.$sm) {
+			@content;
+		}
+	} @else if $bp == xs {
+		//220px - 294px
+		@media only screen and (max-width: var.$xs) {
+			@content;
+		}
+	} @else if $bp == xxs {
+		//0px - 219px
+		@media only screen and (max-width: var.$xxs) {
+			@content;
+		}
+	}
+}
 
 @mixin mediaQuery($bp) {
 	@if $bp == big-desktop {
@@ -50,39 +72,6 @@ MOB-SMALL  -> 320 X 108
 
 	@if $bp == mob-small {
 		@media only screen and (max-width: var.$bp-small-extra) {
-			@content;
-		}
-	}
-}
-@mixin mq($bp) {
-	@if $bp == xl {
-		//1150px
-		@media only screen and (max-width: var.$xl) {
-			@content;
-		}
-	} @else if $bp == lg {
-		//910px
-		@media only screen and (max-width: var.$lg) {
-			@content;
-		}
-	} @else if $bp == md {
-		//670px
-		@media only screen and (max-width: var.$md) {
-			@content;
-		}
-	} @else if $bp == sm {
-		//440px
-		@media only screen and (max-width: var.$sm) {
-			@content;
-		}
-	} @else if $bp == xs {
-		//295px
-		@media only screen and (max-width: var.$xs) {
-			@content;
-		}
-	} @else if $bp == xxs {
-		//220px
-		@media only screen and (max-width: var.$xxs) {
 			@content;
 		}
 	}

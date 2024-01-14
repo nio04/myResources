@@ -134,12 +134,12 @@
 
 			@include abs.mq(md) {
 				width: 5rem;
-				right: 5.2em;
+				right: 4em;
 			}
 
 			@include abs.mq(sm) {
 				width: 3.4rem;
-				right: 5rem;
+				right: 5.5rem;
 			}
 		}
 

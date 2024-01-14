@@ -70,8 +70,8 @@ pre[class*='language-'] {
 @media only screen and (max-width: 44em) {
 	code[class*='language-'],
 	pre[class*='language-'] {
-		font-size: 1.1rem;
-		line-height: 2.4rem;
+		/* font-size: 1.1rem; */
+		line-height: 2.2;
 	}
 }
 
@@ -95,6 +95,8 @@ code[class*='language-'] ::selection {
 pre[class*='language-'] {
 	padding: 3rem;
 	margin: 0.5em 0;
+	margin-right: 12vw;
+	margin-left: 2vw;
 	overflow: auto;
 	border-radius: 0.3em;
 }

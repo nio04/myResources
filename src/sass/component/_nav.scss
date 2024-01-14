@@ -672,14 +672,10 @@
 		nav {
 			width: 95vw;
 			@extend %page-indexes-design;
-			// padding: 2rem 6rem;
 
 			ul {
-				width: 95vw;
-				max-width: 95vw;
-
 				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(min-content, 25rem));
+				grid-template-columns: repeat(auto-fit, minmax(min-content, 35rem));
 				justify-content: space-around;
 				gap: 1.3rem;
 
@@ -695,9 +691,11 @@
 
 					a:link {
 						color: var(--color-accent-900);
+						letter-spacing: 0;
 					}
 					a:visited {
 						color: var(--color-visited);
+						letter-spacing: 0;
 					}
 				}
 			}

@@ -10,8 +10,27 @@
 
 html {
 	box-sizing: border-box;
-	font-size: 62.5% !important;
+	font-size: 62.5%; //1rem = 10px;
 	scroll-behavior: smooth;
+
+	@include abs.mq(xl) {
+		font-size: 56.25%; //9px
+	}
+	@include abs.mq(lg) {
+		font-size: 46.875%; //7.5px
+	}
+	@include abs.mq(md) {
+		font-size: 42.5%; //6.8px
+	}
+	@include abs.mq(sm) {
+		font-size: 37.5%; //6px
+	}
+	@include abs.mq(xs) {
+		font-size: 35%; //5.6px
+	}
+	@include abs.mq(xxs) {
+		font-size: 31.25%; //5px
+	}
 }
 
 body {
