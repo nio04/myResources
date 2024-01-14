@@ -55,12 +55,7 @@ MOB-SMALL  -> 320 X 108
 	}
 }
 @mixin mq($bp) {
-	@if $bp == xxl {
-		//1200px
-		@media only screen and (min-width: var.$xxl) {
-			@content;
-		}
-	} @else if $bp == xl {
+	@if $bp == xl {
 		//1150px
 		@media only screen and (max-width: var.$xl) {
 			@content;
