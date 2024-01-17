@@ -3,6 +3,7 @@
 import * as model from './model';
 import viewTyped from './views/viewTyped';
 import * as navView from './views/navView';
+import * as resVideo from './views/responsiveVideo';
 import * as modeView from './views/dayNightView';
 import * as visiblity from './views/visibilityBtnsView';
 import * as contentMagic from './views/contentMagic';
@@ -13,6 +14,7 @@ const contentPageParent = document.querySelector('.content__page--container');
 
 if (mainHomeParent) {
 	navView.initNavBtnManager();
+	resVideo.videoResponsive();
 }
 
 if (contentPageParent) {

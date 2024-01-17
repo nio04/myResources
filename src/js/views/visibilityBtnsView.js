@@ -1,3 +1,4 @@
+const contentPage = document.querySelector('.content__page--container');
 const target = document.querySelector('#content__main--section');
 const navBtnContainer = document.querySelector('.content__nav--btn');
 const navigatorBtns = document.querySelectorAll('.float__btn--container');
@@ -9,7 +10,7 @@ const btnsIntersection = new IntersectionObserver(navViewIntersection, {
 	rootMargin: '-300px',
 });
 
-btnsIntersection.observe(target);
+if (contentPage) btnsIntersection.observe(target);
 
 function navViewIntersection([entries]) {
 	if (entries.isIntersecting) {
