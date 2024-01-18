@@ -3,6 +3,14 @@
 @use 'bp';
 @use 'anim';
 
+// HOME-PAGE
+.util-oneItem {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: calc(100% - 2rem);
+}
+
 .util-border-bottom-double {
 	border-bottom: 3px double var(--color-accent) !important;
 }

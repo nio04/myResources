@@ -65,14 +65,15 @@
 			&__header {
 				width: 100%;
 				margin-bottom: 5rem;
-				color: var(--color-white);
+				color: var(--color-secondary-300);
+				text-shadow: 3px 2px 4px var(--color-secondary-200);
 				font-family: var(--font-primary);
 				font-weight: 600;
 				font-size: clamp(6rem, 10vw, 7rem);
 				letter-spacing: -2;
 				text-transform: uppercase;
 				text-align: center;
-				border-bottom: 2px dashed #fff;
+				border-bottom: 5px double var(--color-secondary-500);
 			}
 		}
 	}

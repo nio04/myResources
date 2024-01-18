@@ -13,6 +13,9 @@ html {
 	font-size: 62.5%; //1rem = 10px;
 	scroll-behavior: smooth;
 
+	// for firefox
+	scrollbar-color: var(--color-secondary-600) transparent;
+
 	@include abs.mq(xl) {
 		font-size: 56.25%; //9px
 	}

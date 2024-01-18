@@ -21,35 +21,6 @@
 		position: relative;
 		padding-bottom: 10rem;
 
-		&::before {
-			// content: '';
-			background-image: url('../../asset/gif/mainHomeResourceBackground.gif');
-			background-repeat: repeat;
-			background-position: center;
-			background-size: cover;
-			height: 122%;
-			width: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-			margin-top: -18rem;
-			// margin-top: -24rem;
-			// clip-path: polygon(0 6.2%, 100% 2.8%, 100% 100%, 0 100%);
-
-			// @include abs.mediaQuery(tab-land) {
-			// 	margin-top: -25rem;
-			// }
-			@include abs.mediaQuery(tab-port) {
-				margin-top: -22rem;
-			}
-			@include abs.mediaQuery(mobile) {
-				margin-top: -45rem;
-			}
-			@include abs.mediaQuery(mob-small) {
-				margin-top: -66rem;
-			}
-		}
-
 		@include abs.mediaQuery(tab-port) {
 			grid-template-columns: 1fr;
 			gap: 5rem;
