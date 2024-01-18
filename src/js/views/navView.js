@@ -1,7 +1,7 @@
 const bodyElement = document.querySelector('body');
 const mainHomeContainer = document.querySelector('#main__home--container');
 const contentpageContainer = document.querySelector('.content__page--container');
-const navBtnContainerHome = document.querySelector('#nav__btn__container--home');
+const navBtnContainerHome = document.querySelector('.nav__btn');
 const navBtnContainerContent = document.querySelector(
 	'#nav__btn__container--content'
 );

@@ -1,7 +1,7 @@
 @use '../abstract/' as abs;
 
 // nav btn
-#nav__btn__container--home,
+#nav__btn--home,
 #nav__btn__container--content {
 	height: auto;
 	width: auto;
@@ -19,7 +19,7 @@
 		outline: none;
 	}
 }
-#nav__btn__container--home {
+#nav__btn--home {
 	svg {
 		@include abs.svg-size(8, 8, var(--color-white));
 	}

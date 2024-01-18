@@ -3,7 +3,7 @@
 @use '../base/reset';
 @use '../component/' as compo;
 
-.main__home--container {
+.mainhome {
 	display: grid;
 	grid-template-rows: 100vh 1fr;
 	gap: 6rem;
@@ -14,11 +14,12 @@
 		grid-template-rows: 100vh 1fr;
 	}
 
-	.main__home__resource--container {
+	&__main {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 2rem;
 		position: relative;
+		padding-bottom: 10rem;
 
 		&::before {
 			// content: '';
@@ -54,9 +55,9 @@
 			gap: 5rem;
 		}
 
-		.main__home__resource--contents {
+		.mainhome__section {
 			z-index: 2;
-			margin-top: 20rem;
+			// margin-top: 20rem;
 		}
 	}
 }

@@ -18,63 +18,74 @@
   </head>
 
   <body id="main__home--container">
-    <section class="main__home--container">
-      <header class="main__home--header">
+    <section class="mainhome">
+      <header class="mainhome__header">
+        <!-- header  background -->
         <section class="mainhome__header__background">
           <video autoplay loop muted plays-inline
+            class="mainhome__header__background__video"
             poster="../asset/image/mainHomeHeaderBG.jpg?as=avif" async>
             <source src="../asset/video/mainHomeHeader_1080.mp4"
               type="video/mp4">
           </video>
         </section>
-        <h1><span id="typed--primary-header__span"></span></h1>
-        <span id="typed--primary-header__span"></span>
+        <h1><span class="mainhome__header__span"
+            id="typed--primary-header__span"></span></h1>
+        <span class="mainhome__header__span"
+          id="typed--primary-header__span"></span>
       </header>
 
 
       <!-- RESOURCE CONTAINER STARTING -->
-      <main class="main__home__resource--container" id="content__main--section">
+      <main class="mainhome__main" id="content__main--section">
         <!-- navigation button -->
-        <button class="content__nav--btn util-sticky nav__icon--open"
-          id="nav__btn__container--home">
+        <button class="nav__btn util-sticky nav__icon--open"
+          id="nav__btn--home">
           <svg class="open">
             <use xlink:href="../asset/svg/zSprite.svg#nav-open"></use>
           </svg>
         </button>
         <div class="overlay"></div>
 
-        <nav class="sticky__nav--container">
-          <ul>
-            <li class="mainHome__side-nav__links"><a
-                href="#html--section"><span>html</span></a>
+        <!-- navigation -->
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__list__item nav__mainhome"><a
+                class="navigation__list__item__link"
+                href="#html--section">html</a>
             </li>
-            <li class="mainHome__side-nav__links"><a
-                href="#css--section"><span>css</span></a></li>
-            <li class="mainHome__side-nav__links"><a
-                href="#sass--section"><span>sass</span></a>
+            <li class="navigation__list__item nav__mainhome"><a
+                class="navigation__list__item__link"
+                href="#css--section">css</a></li>
+            <li class="navigation__list__item nav__mainhome"><a
+                class="navigation__list__item__link"
+                href="#sass--section">sass</a>
             </li>
-            <li class="mainHome__side-nav__links"><a
-                href="#js--section"><span>javaScript</span></a>
+            <li class="navigation__list__item nav__mainhome"><a
+                class="navigation__list__item__link"
+                href="#js--section">javaScript</a>
             </li>
-            <li class="mainHome__side-nav__links"><a
-                href="#dom--section"><span>dom</span></a></li>
-            <li class="mainHome__side-nav__links"><a
-                href="#git--section"><span>git</span></a></li>
-            <li class="mainHome__side-nav__links"><a
-                href="#miscs--section"><span>miscs</span></a>
+            <li class="navigation__list__item nav__mainhome"><a
+                class="navigation__list__item__link" href="#dom--section">dom
+            </li>
+            <li class="navigation__list__item nav__mainhome"><a
+                class="navigation__list__item__link"
+                href="#git--section">git</a></li>
+            <li class="navigation__list__item nav__mainhome"><a
+                class="navigation__list__item__link"
+                href="#miscs--section">miscs</a>
             </li>
           </ul>
         </nav>
+
         <!-- html start -->
-        <section class="main__home__resource--contents" id="html--section">
-          <header class="main__home__resource--header">
-            <h2 id="typed-js__html">html</h2>
-            <!-- <span id="typed--html__span"></span> -->
-          </header>
-          <ul>
-            <li class="item">
-              <a href="html--01-semantics.html" class="item-link first">html
-                semantic tags</a>
+        <section class="mainhome__section" id="html--section">
+          <h2 class="mainhome__section__header util-h2">html</h2>
+          <ul class="list">
+            <li class="list__item">
+              <h3 class="content__header util-h3"><a
+                  href="html--01-semantics.html" class="list__item__link">html
+                  semantic tags</a></h3>
             </li>
             </li>
           </ul>
@@ -82,168 +93,217 @@
         <!-- html end -->
 
         <!-- css start -->
-        <section class="main__home__resource--contents" id="css--section">
-          <header class="main__home__resource--header">
-            <h2 id="typed-js__css">css</h2>
-            <!-- <span id="typed--css__span"></span> -->
-          </header>
-          <ul>
-            <li class="item">
-              <a href="css--01-grid.html" class="item-link">GRID : everything
-                about grid</a>
+        <section class="mainhome__section" id="css--section">
+          <h2 class="mainhome__section__header util-h2">css</h2>
+          <ul class="list">
+            <li class="list__item">
+              <h3 class="content__header util-h3"><a href="css--01-grid.html"
+                  class="list__item__link">grid</a></h3>
+              <ul class="content">
+                <li class="content__item">unit</li>
+                <li class="content__item">keyword</li>
+                <li class="content__item">parent container</li>
+                <li class="content__item">children items</li>
+                <li class="content__item">miscs</li>
+              </ul>
             </li>
-            <li class="item">
-              <a href="css--02-flexbox.html" class="item-link">FLEXBOX :
-                everything about flexBox</a>
+            <li class="list__item">
+              <h3 class="content__header util-h3"><a href="css--02-flexbox.html"
+                  class="list__item__link">flexbox</a></h3>
+              <ul class="content">
+                <li class="content__item">parent container</li>
+                <li class="content__item">children items</li>
+              </ul>
             </li>
           </ul>
         </section>
         <!-- css end -->
 
         <!-- sass start -->
-        <section class="main__home__resource--contents" id="sass--section">
-          <header class="main__home__resource--header">
-            <h2 id="typed-js__sass">sass</h2>
-            <!-- <span id="typed--sass__span"></span> -->
-          </header>
-          <ul>
-            <li class="item">
-              <a href="sass--01-info.html" class="item-link">sass information :
-                everything about
-                sass</a>
+        <section class="mainhome__section" id="sass--section">
+          <h2 class="mainhome__section__header util-h2">sass</h2>
+          <ul class="list">
+            <li class="list__item">
+              <h3 class="content__header util-h3"><a href="sass--01-setup.html"
+                  class="list__item__link">setup with parcel-js</a></h3>
             </li>
-            <li class="item">
-              <a href="sass--02-setup.html" class="item-link">sass : sass setup
-                with parcel</a>
-            </li>
-            <li class="item">
-              <a href="sass--03-arch.html" class="item-link">sass architecture :
-                template</a>
+            <li class="list__item">
+              <h3 class="content__header util-h3"><a href="sass--02-arch.html"
+                  class="list__item__link">architecture</a></h3>
             </li>
           </ul>
         </section>
         <!-- sass end -->
 
         <!-- javascript start -->
-        <section class="main__home__resource--contents" id="js--section">
-          <header class="main__home__resource--header">
-            <h2 id="typed-js__js">javaScript</h2>
-            <!-- <span id="typed--js__span"></span> -->
-          </header>
-          <ul>
-            <li class="item">
-              <a href="js--01-destructureArrayObject.html"
-                class="item-link">DE-STRUCTURE: array && object</a>
+        <section class="mainhome__section" id="js--section">
+          <h2 class="mainhome__section__header util-h2">javaScript</h2>
+          <ul class="list">
+            <li class="list__item">
+              <h3 class="content__header util-h3"><a
+                  href="js--01-destructureArrayObject.html"
+                  class="list__item__link">de-structure</a></h3>
+              <ul class="content">
+                <li class="content__item">array destructure</li>
+                <li class="content__item">object destructure</li>
+              </ul>
             </li>
-            <li class="item">
-              <a href="js--02-es6SpreadRest.html" class="item-link">ES6 : spread
-                & rest</a>
+            <li class="list__item">
+              <h3 class="content__header util-h3"><a
+                  href="js--02-es6SpreadRest.html"
+                  class="list__item__link">spread rest</a></h3>
+              <ul class="content">
+                <li class="content__item">spread operator</li>
+                <li class="content__item">rest parameter</li>
+              </ul>
             </li>
           </ul>
         </section>
         <!-- javascript end -->
 
         <!-- dom start -->
-        <section class="main__home__resource--contents" id="dom--section">
-          <header class="main__home__resource--header">
-            <h2 id="typed-js__dom">dom</h2>
-            <!-- <span id="typed--dom__span"></span> -->
-          </header>
-          <ul>
-            <li class="item">
-              <a href="dom--01-createEl.html" class="item-link">create html
-                element</a>
+        <section class="mainhome__section" id="dom--section">
+          <h2 class="mainhome__section__header util-h2">dom</h2>
+          <ul class="list">
+            <li class="list__item">
+              <h3 class="content__header util-h3"><a
+                  href="dom--01-createEl.html" class="list__item__link">create
+                  and insert element</a></h3>
+              <ul class="content">
+                <li class="content__item">target parent</li>
+                <li class="content__item">create ingredients</li>
+                <li class="content__item">insert to parent</li>
+              </ul>
             </li>
-            <li class="item">
-              <a href="dom--02-delete.html" class="item-link">delete html
-                element</a>
+            <li class="list__item">
+              <h3 class="content__header util-h3"><a href="dom--02-delete.html"
+                  class="list__item__link">delete html
+                  element</a></h3>
             </li>
-            <li class="item">
-              <a href="dom--03-attribute.html" class="item-link">attribute read
-                from html</a>
+            <li class="list__item">
+              <h3 class="content__header util-h3"><a
+                  href="dom--03-attribute.html" class="list__item__link">html
+                  attribute read write</a></h3>
+              <ul class="content">
+                <li class="content__item">target standard attribute</li>
+                <li class="content__item">target standard and non standard
+                  attribute</li>
+                <li class="content__item">target dataset attribute</li>
+                <li class="content__item">delete attribute</li>
+              </ul>
             </li>
-            <li class="item">
-              <a href="dom--04-setCSS.html" class="item-link">css style set</a>
+            <li class="list__item">
+              <h3 class="content__header util-h3"><a href="dom--04-setCSS.html"
+                  class="list__item__link">set css style</a></h3>
             </li>
-            <li class="item">
-              <a href="dom--05-readCSS.html" class="item-link">css style read
-                and set</a>
+            <li class="list__item">
+              <h3 class="content__header util-h3"><a href="dom--04-setCSS.html"
+                  class="list__item__link">css
+                  style read and write</a></h3>
+              <ul class="content">
+                <li class="content__item">read css style</li>
+                <li class="content__item">write css style</li>
+              </ul>
             </li>
-            <li class="item">
-              <a href="dom--06-cssClass.html" class="item-link">css class
-                manipulation</a>
+            <li class="list__item">
+              <h3 class="content__header util-h3"><a
+                  href="dom--06-cssClass.html" class="list__item__link">css
+                  class manipulation</a></h3>
+              <ul class="content">
+                <li class="content__item">add css class</li>
+                <li class="content__item">remove css class</li>
+                <li class="content__item">toggle css class</li>
+                <li class="content__item">check exisiting css class</li>
+                <li class="content__item">override css class</li>
+              </ul>
             </li>
           </ul>
         </section>
         <!-- dom end -->
 
         <!-- git start -->
-        <section class="main__home__resource--contents" id="git--section">
-          <header class="main__home__resource--header">
-            <h2 id="typed-js__git">git</h2>
-            <!-- <span id="typed--git__span"></span> -->
-          </header>
-          <ul>
-            <li class="item">
-              <a href="git--01-fundamental.html" class="item-link">fundamental :
-                basics,
-                staging, commiting, branch
-              </a>
+        <section class="mainhome__section" id="git--section">
+          <h2 class="mainhome__section__header util-h2">git</h2>
+          <ul class="list">
+            <li class="list__item">
+              <h3 class="content__header util-h3"><a
+                  href="git--01-fundamental.html"
+                  class="list__item__link">fundamental</a></h3>
+              <ul class="content">
+                <li class="content__item">basic</li>
+                <li class="content__item">staging</li>
+                <li class="content__item">commit</li>
+                <li class="content__item">branch</li>
+                <li class="content__item">git information</li>
+                <li class="content__item">git flow</li>
+              </ul>
             </li>
-            <li class="item">
-              <a href="git--02-merge.html" class="item-link">merging :
-                everything about git
-                merging</a>
+            <li class="list__item">
+              <h3 class="content__header util-h3"><a href="git--02-merge.html"
+                  class="list__item__link">merge</a></h3>
+              <ul class="content">
+                <li class="content__item">fast forward</li>
+                <li class="content__item">non fast forward</li>
+              </ul>
             </li>
-            <li class="item">
-              <a href="git--03-diff.html" class="item-link">diff : find the
-                differnce</a>
+            <li class="list__item">
+              <h3 class="content__header util-h3"><a href="git--03-diff.html"
+                  class="list__item__link">diff</a></h3>
+              <ul class="content">
+                <li class="content__item">information</li>
+                <li class="content__item">different operation</li>
+              </ul>
             </li>
-            <li class="item">
-              <a href="git--04-stash.html" class="item-link">stash : everything
-                about stash
-                change</a>
+            <li class="list__item">
+              <h3 class="content__header util-h3"><a href="git--04-stash.html"
+                  class="list__item__link">stash</a></h3>
+              <ul class="content">
+                <li class="content__item">information</li>
+                <li class="content__item">operation</li>
+              </ul>
             </li>
-            <li class="item">
-              <a href="git--05-resetRestore.html" class="item-link">git -- time
-                travel - reset -
-                restore - revert</a>
+            <li class="list__item">
+              <h3 class="content__header util-h3"><a
+                  href="git--05-resetRestore.html"
+                  class="list__item__link">advanced</a></h3>
+              <ul class="content">
+                <li class="content__item">time travel</li>
+                <li class="content__item">reset</li>
+                <li class="content__item">restore</li>
+                <li class="content__item">revert</li>
+              </ul>
             </li>
           </ul>
         </section>
         <!-- git end -->
 
         <!-- miscs start -->
-        <section class="main__home__resource--contents" id="miscs--section">
-          <header class="main__home__resource--header">
-            <h2 id="typed-js__miscs">miscs</h2>
-            <!-- <span id="typed--miscs__span"></span> -->
-          </header>
-          <ul>
-            <li class="item">
-              <a href="miscs-01-markdown.html" class="item-link">markdown :
-                everything related</a>
+        <section class="mainhome__section" id="miscs--section">
+          <h2 class="mainhome__section__header util-h2">miscs</h2>
+          <ul class="list">
+            <li class="list__item">
+              <h3 class="content__header util-h3"><a
+                  href="miscs-01-markdown.html"
+                  class="list__item__link">markdown</a></h3>
             </li>
           </ul>
         </section>
         <!-- miscs end -->
 
         <!-- accountinformation start -->
-        <section class="main__home__resource--contents" id="miscs--section">
-          <header class="main__home__resource--header">
-            <h2 id="typed-js__miscs">account info</h2>
-            <!-- <span id="typed--miscs__span"></span> -->
-          </header>
-          <ul>
-            <li class="item">
-              <a href="accInfo.html" class="item-link">all the account
-                information</a>
+        <section class="mainhome__section" id="miscs--section">
+          <h2 class="mainhome__section__header util-h2">account info</h2>
+          <ul class="list">
+            <li class="list__item">
+              <h3 class="content__header util-h3"><a href="accInfo.html"
+                  class="list__item__link">all the account
+                  information</a></h3>
             </li>
           </ul>
         </section>
         <!-- account information end -->
       </main>
-      </div>
+    </section>
 
   </body>
 

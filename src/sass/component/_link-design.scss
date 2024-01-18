@@ -1,25 +1,5 @@
 @use '../abstract/' as abs;
 
-//////////
-/// MAIN HOME PAGE [1ST PAGE]
-.main__home--container {
-	.main__home__resource--container .main__home__resource--contents {
-		@extend %page-indexes-design;
-
-		header {
-			animation-name: slideToLeft;
-			animation-duration: 0.7s;
-			animation-delay: 2.2s;
-
-			a:link {
-				animation-name: dropAndBounce;
-				animation-duration: 2s;
-				animation-delay: 0.2s;
-			}
-		}
-	}
-}
-
 ////////////
 /// CONTENT PAGE [3RD PAGE]
 .content__page--container {

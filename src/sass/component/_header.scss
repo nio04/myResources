@@ -2,16 +2,17 @@
 
 ///////////
 /// MAIN HOME PAGE [1ST PAGE]
-.main__home--container {
+.mainhome {
 	position: relative;
 
-	.main__home--header {
-		.mainhome__header__background {
+	&__header {
+		&__background {
+			// HEADER VIDEO BACKGROUND
 			width: 100%;
 			height: auto;
 			overflow: hidden;
 
-			video {
+			&__video {
 				position: absolute;
 				top: 50%;
 				left: 50%;
@@ -24,7 +25,7 @@
 			}
 		}
 
-		span {
+		&__span {
 			height: 80vh;
 			color: var(--color-black);
 			text-transform: uppercase;
@@ -59,39 +60,21 @@
 		}
 	}
 
-	.main__home__resource--container
-		.main__home__resource--contents
-		.main__home__resource--header
-		h2 {
-		margin: 5rem 0;
-		transition: all 0.4s;
-		color: var(--color-white);
-		font-family: var(--font-primary);
-		font-weight: 600;
-		font-size: 8rem;
-		letter-spacing: -2;
-		text-transform: uppercase;
-		text-align: center;
-		transition: all 0.8s;
-		height: 10rem;
-		width: 100%;
-		display: inline-block;
-		text-align: center;
-		@extend %center-me-vertical;
-
-		&:hover {
-			// background-color: var(--color-secondary-300);
+	&__main {
+		.mainhome__section {
+			&__header {
+				width: 100%;
+				margin-bottom: 5rem;
+				color: var(--color-white);
+				font-family: var(--font-primary);
+				font-weight: 600;
+				font-size: clamp(6rem, 10vw, 7rem);
+				letter-spacing: -2;
+				text-transform: uppercase;
+				text-align: center;
+				border-bottom: 2px dashed #fff;
+			}
 		}
-
-		&:active {
-			transform: scale(0.9);
-		}
-
-		&:active {
-			transform: translateY(2rem);
-		}
-	}
-	span {
 	}
 }
 
