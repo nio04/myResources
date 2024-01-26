@@ -21,7 +21,7 @@
 }
 #nav__btn--home {
 	svg {
-		@include abs.svg-size(8, 8, var(--color-white));
+		@include abs.svg-size(8, 8, var(--color-secondary-400));
 	}
 }
 
