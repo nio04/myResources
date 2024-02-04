@@ -8,11 +8,11 @@
 			padding: 2rem 4rem;
 			border-radius: 1.2rem;
 
-			animation-name: box-shadow-anim;
-			animation-duration: 5s;
-			animation-delay: 0;
-			animation-iteration-count: infinite;
-			animation-direction: alternate;
+			// animation-name: box-shadow-anim;
+			// animation-duration: 5s;
+			// animation-delay: 0;
+			// animation-iteration-count: infinite;
+			// animation-direction: alternate;
 
 			@extend %card-gradient-bg;
 
@@ -40,7 +40,7 @@
 					.content {
 						min-height: 70%;
 						display: grid;
-						grid-template-columns: repeat(auto-fit, minmax(min-content, 23rem));
+						grid-template-columns: repeat(auto-fit, minmax(min-content, 22rem));
 						justify-content: space-around;
 						align-content: center;
 						gap: 1rem;
@@ -51,12 +51,15 @@
 						padding-bottom: 1rem;
 
 						&__item {
+							display: flex;
+							justify-content: center;
+							align-items: center;
 							color: var(--color-primary-300);
 							padding: 1.3rem;
 							font-size: 2.3rem;
 							border: 2px ridge var(--color-secondary-800);
 							background-color: var(--color-secondary-900);
-							clip-path: polygon(7% 7%, 100% 0, 92% 94%, 0 100%);
+							clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0 100%);
 						}
 					}
 
@@ -67,7 +70,7 @@
 					}
 
 					&__link:hover {
-						letter-spacing: 3px;
+						letter-spacing: 1px;
 
 						animation-name: borderLtoR;
 						animation-duration: 1.5s;

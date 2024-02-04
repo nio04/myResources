@@ -21,6 +21,14 @@
 		position: relative;
 		padding-bottom: 10rem;
 
+		// MAINHOME MAIN SECTION animation
+		&--anim{
+			animation-name: slideToLeft;
+			animation-duration: 1.3s;
+			animation-delay: .5s;
+			animation-timing-function: linear;
+		}
+
 		@include abs.mediaQuery(tab-port) {
 			grid-template-columns: 1fr;
 			gap: 5rem;
