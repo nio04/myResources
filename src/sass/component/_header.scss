@@ -25,9 +25,13 @@
 			}
 		}
 
-		&__span {
-			height: 80vh;
-			color: var(--color-black);
+		&__title{
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: var(--color-white);
+			text-align: center;
 			text-transform: uppercase;
 			text-shadow: -7px 7px 10px var(--color-secondary-500);
 			font-size: 7.41rem;
@@ -35,9 +39,9 @@
 			font-weight: 600;
 			letter-spacing: -3;
 			word-spacing: 1rem;
-			display: table-cell;
-			vertical-align: middle;
-			z-index: 1;
+			// display: table-cell;
+			// vertical-align: middle;
+			// z-index: 1;
 			// @extend %center-me-full;
 
 			// animation-name: moveAndJump;

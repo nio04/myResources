@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
     <link rel="apple-touch-icon" sizes="180x180"
       href="../asset/favico/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32"
@@ -20,7 +21,8 @@
   <body id="top-side">
     <div class="content__page--container">
       <header class="nav--container">
-        <h1 class="main__header--06">css classList manipulate</h1>
+        <h1 class="main__header--06" id="dom--06">css classList
+          manipulate</h1>
 
         <svg>
           <use xlink:href="../asset/svg/zSprite.svg#dom"></use>
@@ -29,13 +31,17 @@
 
         <section class="posts">
           <ul id="dom__post--6">
-            <li class="post"><a href="#index-add" class="post__item">add css
+            <li class="post"><a href="#index-add"
+                class="post__item">add css
                 class</a></li>
-            <li class="post"><a href="#index-remove" class="post__item">remove
+            <li class="post"><a href="#index-remove"
+                class="post__item">remove
                 css class</a></li>
-            <li class="post"><a href="#index-toggle" class="post__item">toggle
+            <li class="post"><a href="#index-toggle"
+                class="post__item">toggle
                 class</a></li>
-            <li class="post"><a href="#index-existance" class="post__item">check
+            <li class="post"><a href="#index-existance"
+                class="post__item">check
                 existance class</a></li>
             <li class="post"><a href="#index-override"
                 class="post__item">override class</a></li>
@@ -55,45 +61,55 @@
         <section class="sticky__nav--el post__navigation--container">
           <span>navigate posts</span>
           <svg class="arrowDown" id="dropdownMenu__btn">
-            <use xlink:href="../asset/svg/zSprite.svg#arrow-down"></use>
+            <use xlink:href="../asset/svg/zSprite.svg#arrow-down">
+            </use>
           </svg>
 
           <ul class="nav__el--wrap">
 
             <svg id="nav__close--btn">
-              <use xlink:href="../asset/svg/zSprite.svg#nav-close"></use>
+              <use xlink:href="../asset/svg/zSprite.svg#nav-close">
+              </use>
             </svg>
 
-            <li class="nav__item"><a href="index.html#html--section">navigate to
+            <li class="nav__item"><a
+                href="index.html#html--section">navigate to
                 html</a>
             </li>
-            <li class="nav__item "><a href="index.html#css--section">navigate to
+            <li class="nav__item "><a
+                href="index.html#css--section">navigate to
                 css</a>
             </li>
-            <li class="nav__item"><a href="index.html#sass--section">navigate to
+            <li class="nav__item"><a
+                href="index.html#sass--section">navigate to
                 sass</a>
             </li>
-            <li class="nav__item"><a href="index.html#js--section">navigate to
+            <li class="nav__item"><a
+                href="index.html#js--section">navigate to
                 javascript</a></li>
             <li class="nav__item link-active"><a
                 href="index.html#dom--section">navigate
                 to
                 dom</a>
             </li>
-            <li class="nav__item"><a href="index.html#git--section">navigate to
+            <li class="nav__item"><a
+                href="index.html#git--section">navigate to
                 git</a>
             </li>
-            <li class="nav__item"><a href="index.html#miscs--section">navigate
+            <li class="nav__item"><a
+                href="index.html#miscs--section">navigate
                 to
                 miscs</a></li>
           </ul>
         </section>
-        <section class="sticky__nav--el" id="view__changer--container">
+        <section class="sticky__nav--el"
+          id="view__changer--container">
           <span>change mode</span>
           <div class="view__changer__btn--container night--icon">
             <svg id="view__changer--btn" class="day__mode__icon--off"
               class="day" id="mode__changer--btn">
-              <use xlink:href="../asset/svg/zSprite.svg#night-mode"></use>
+              <use xlink:href="../asset/svg/zSprite.svg#night-mode">
+              </use>
             </svg>
           </div>
         </section>
@@ -112,7 +128,8 @@
       <div class="overlay"></div>
 
       <!-- main post -->
-      <main class="line-numbers util-margin-top-high util-margin-bottom-high"
+      <main
+        class="line-numbers util-margin-top-high util-margin-bottom-high"
         id="content__main--section">
         <!-- adding hover [go to top] button -->
         <button class="float__btn--container" id="nav__top--btn">
@@ -127,7 +144,8 @@
         <button class="float__btn--container" id="nav__bottom--btn">
           <a href="#bottom-side">
             <svg>
-              <use xlink:href="../asset/svg/zSprite.svg#go-down"></use>
+              <use xlink:href="../asset/svg/zSprite.svg#go-down">
+              </use>
             </svg>
             <span class="navigator__btn">bottom</span>
           </a>
@@ -135,7 +153,8 @@
 
         <button class="contentPage__magic-btn">
           <svg>
-            <use xlink:href="../asset/svg/zSprite.svg#content-magic"></use>
+            <use xlink:href="../asset/svg/zSprite.svg#content-magic">
+            </use>
           </svg>
         </button>
 
@@ -152,13 +171,16 @@
                 <option value="6">6.Roboto Mono</option>
               </select>
             </figure>
-            <figure>Font Size <span class="content__font-size--value">3</span>
-              <input type="range" min="1" max="5" class="content-font--input">
+            <figure>Font Size <span
+                class="content__font-size--value">3</span>
+              <input type="range" min="1" max="5"
+                class="content-font--input">
             </figure>
           </section>
           <section class="content__magic--color-section"><span
               class="tab-header--span">color section</span>
-            <figure>Font Color : <select class="contentMagic__color-input">
+            <figure>Font Color : <select
+                class="contentMagic__color-input">
                 <option>select a text color</option>
                 <option value="red">1.Red</option>
                 <option value="green">2.Green</option>
@@ -182,11 +204,13 @@
               class="tab-header--span">miscs section</span>
             <figure>padding (left-right) <span
                 class="content__padding--value">3</span>
-              <input type="range" min="1" max="5" class="content__padding__ltr">
+              <input type="range" min="1" max="5"
+                class="content__padding__ltr">
             </figure>
             <figure>line height <span
                 class="content__line-height--value">3</span>
-              <input type="range" min="1" max="5" class="content__line-height">
+              <input type="range" min="1" max="5"
+                class="content__line-height">
             </figure>
             <figure>
               text-alignment : <span
@@ -247,7 +271,8 @@
             </pre>
             <p class="content__post">
               <br>
-              if specifies class exist, then remove it, but if it does not exist
+              if specifies class exist, then remove it, but if it does
+              not exist
               then add it
             </p>
           </article>
@@ -280,39 +305,47 @@
               </code>
             </pre>
             <p class="content__post">
-              override all previous css classes with spcified new class
+              override all previous css classes with spcified new
+              class
             </p>
           </article>
         </section>
       </main>
 
       <!-- all the other DOM posts -->
-      <footer class="contentpage__indexes--container util-margin-top-high"
+      <footer
+        class="contentpage__indexes--container util-margin-top-high"
         id="bottom-side">
         <h4>dom indexes</h4>
         <nav>
           <ul>
             <li class="item ">
-              <a href="dom--01-createEl.html" class="item-link">create html
+              <a href="dom--01-createEl.html" class="item-link">create
+                html
                 element</a>
             </li>
             <li class="item">
-              <a href="dom--02-delete.html" class="item-link">delete html
+              <a href="dom--02-delete.html" class="item-link">delete
+                html
                 element</a>
             </li>
             <li class="item">
-              <a href="dom--03-attribute.html" class="item-link">attribute read
+              <a href="dom--03-attribute.html"
+                class="item-link">attribute read
                 from html</a>
             </li>
             <li class="item">
-              <a href="dom--04-setCSS.html" class="item-link">css style set</a>
+              <a href="dom--04-setCSS.html" class="item-link">css
+                style set</a>
             </li>
             <li class="item">
-              <a href="dom--05-readCSS.html" class="item-link">css style read
+              <a href="dom--05-readCSS.html" class="item-link">css
+                style read
                 and set</a>
             </li>
             <li class="item link-active">
-              <a href="dom--06-cssClass.html" class="item-link">css class
+              <a href="dom--06-cssClass.html" class="item-link">css
+                class
                 manipulation</a>
             </li>
 

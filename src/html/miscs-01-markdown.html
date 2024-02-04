@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
     <link rel="apple-touch-icon" sizes="180x180"
       href="../asset/favico/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32"
@@ -20,7 +21,8 @@
   <body id="top-side">
     <div class="content__page--container">
       <header class="nav--container">
-        <h1 class="main__header--01">markdown syntax guide</h1>
+        <h1 class="main__header--01" id="miscs--01">markdown syntax
+          guide</h1>
 
         <svg>
           <use xlink:href="../asset/svg/zSprite.svg#markdown"></use>
@@ -28,21 +30,28 @@
 
         <section class="posts">
           <ul id="miscs__post--1">
-            <li class="post"><a href="#index-escape" class="post__item">escape
+            <li class="post"><a href="#index-escape"
+                class="post__item">escape
                 special character</a></li>
             <li class="post"><a href="#index-heading"
                 class="post__item">heading</a></li>
-            <li class="post"><a href="#index-textformat" class="post__item">text
+            <li class="post"><a href="#index-textformat"
+                class="post__item">text
                 formatting</a></li>
-            <li class="post"><a href="#index-ul" class="post__item">unorder
+            <li class="post"><a href="#index-ul"
+                class="post__item">unorder
                 list</a></li>
-            <li class="post"><a href="#index-ol" class="post__item">order
+            <li class="post"><a href="#index-ol"
+                class="post__item">order
                 list</a></li>
-            <li class="post"><a href="#index-incode" class="post__item">inline
+            <li class="post"><a href="#index-incode"
+                class="post__item">inline
                 code</a></li>
-            <li class="post"><a href="#index-link" class="post__item">link
+            <li class="post"><a href="#index-link"
+                class="post__item">link
                 [href, image]</a></li>
-            <li class="post"><a href="#index-github" class="post__item">github
+            <li class="post"><a href="#index-github"
+                class="post__item">github
                 special</a></li>
           </ul>
         </section>
@@ -60,29 +69,37 @@
         <section class="sticky__nav--el post__navigation--container">
           <span>navigate posts</span>
           <svg class="arrowDown" id="dropdownMenu__btn">
-            <use xlink:href="../asset/svg/zSprite.svg#arrow-down"></use>
+            <use xlink:href="../asset/svg/zSprite.svg#arrow-down">
+            </use>
           </svg>
 
           <ul class="nav__el--wrap">
             <svg id="nav__close--btn">
-              <use xlink:href="../asset/svg/zSprite.svg#nav-close"></use>
+              <use xlink:href="../asset/svg/zSprite.svg#nav-close">
+              </use>
             </svg>
 
-            <li class="nav__item"><a href="index.html#html--section">navigate to
+            <li class="nav__item"><a
+                href="index.html#html--section">navigate to
                 html</a>
             </li>
-            <li class="nav__item "><a href="index.html#css--section">navigate to
+            <li class="nav__item "><a
+                href="index.html#css--section">navigate to
                 css</a>
             </li>
-            <li class="nav__item"><a href="index.html#sass--section">navigate to
+            <li class="nav__item"><a
+                href="index.html#sass--section">navigate to
                 sass</a>
             </li>
-            <li class="nav__item"><a href="index.html#js--section">navigate to
+            <li class="nav__item"><a
+                href="index.html#js--section">navigate to
                 javascript</a></li>
-            <li class="nav__item"><a href="index.html#dom--section">navigate to
+            <li class="nav__item"><a
+                href="index.html#dom--section">navigate to
                 dom</a>
             </li>
-            <li class="nav__item"><a href="index.html#git--section">navigate to
+            <li class="nav__item"><a
+                href="index.html#git--section">navigate to
                 git</a>
             </li>
             <li class="nav__item link-active"><a
@@ -92,12 +109,14 @@
           </ul>
         </section>
 
-        <section class="sticky__nav--el" id="view__changer--container">
+        <section class="sticky__nav--el"
+          id="view__changer--container">
           <span>change mode</span>
           <div class="view__changer__btn--container night--icon">
             <svg id="view__changer--btn" class="day__mode__icon--off"
               class="day" id="mode__changer--btn">
-              <use xlink:href="../asset/svg/zSprite.svg#night-mode"></use>
+              <use xlink:href="../asset/svg/zSprite.svg#night-mode">
+              </use>
             </svg>
           </div>
         </section>
@@ -116,7 +135,8 @@
       <div class="overlay"></div>
 
       <!-- main post -->
-      <main class=" line-numbers util-margin-bottom-high util-margin-top-high"
+      <main
+        class=" line-numbers util-margin-bottom-high util-margin-top-high"
         id="content__main--section">
         <!-- adding hover [go to top] button -->
         <button class="float__btn--container" id="nav__top--btn">
@@ -131,7 +151,8 @@
         <button class="float__btn--container" id="nav__bottom--btn">
           <a href="#bottom-side">
             <svg>
-              <use xlink:href="../asset/svg/zSprite.svg#go-down"></use>
+              <use xlink:href="../asset/svg/zSprite.svg#go-down">
+              </use>
             </svg>
             <span class="navigator__btn">bottom</span>
           </a>
@@ -139,7 +160,8 @@
 
         <button class="contentPage__magic-btn">
           <svg>
-            <use xlink:href="../asset/svg/zSprite.svg#content-magic"></use>
+            <use xlink:href="../asset/svg/zSprite.svg#content-magic">
+            </use>
           </svg>
         </button>
 
@@ -156,13 +178,16 @@
                 <option value="6">6.Roboto Mono</option>
               </select>
             </figure>
-            <figure>Font Size <span class="content__font-size--value">3</span>
-              <input type="range" min="1" max="5" class="content-font--input">
+            <figure>Font Size <span
+                class="content__font-size--value">3</span>
+              <input type="range" min="1" max="5"
+                class="content-font--input">
             </figure>
           </section>
           <section class="content__magic--color-section"><span
               class="tab-header--span">color section</span>
-            <figure>Font Color : <select class="contentMagic__color-input">
+            <figure>Font Color : <select
+                class="contentMagic__color-input">
                 <option>select a text color</option>
                 <option value="red">1.Red</option>
                 <option value="green">2.Green</option>
@@ -186,11 +211,13 @@
               class="tab-header--span">miscs section</span>
             <figure>padding (left-right) <span
                 class="content__padding--value">3</span>
-              <input type="range" min="1" max="5" class="content__padding__ltr">
+              <input type="range" min="1" max="5"
+                class="content__padding__ltr">
             </figure>
             <figure>line height <span
                 class="content__line-height--value">3</span>
-              <input type="range" min="1" max="5" class="content__line-height">
+              <input type="range" min="1" max="5"
+                class="content__line-height">
             </figure>
             <figure>
               text-alignment : <span
@@ -242,7 +269,8 @@
           </article>
         </section>
 
-        <section id="index-textFormat" class="util-margin-bottom-high">
+        <section id="index-textFormat"
+          class="util-margin-bottom-high">
           <h2>format typhography</h2>
           <pre>
             <code class="language-md match-braces rainbow-braces">
@@ -282,7 +310,8 @@
             <p class="content__post">
               specifiy unorder list items by " - " [space]
               <br>
-              specifiy nested unorder list items by [tab]- [space] [content]
+              specifiy nested unorder list items by [tab]- [space]
+              [content]
             </p>
           </article>
         </section>
@@ -336,7 +365,8 @@
               specify <span class="util-bold">image</span> by
               "![imageType](absoluteLink)"
               <br>
-              Note : "imageType" for image, is just like "alt" attribute for
+              Note : "imageType" for image, is just like "alt"
+              attribute for
               image
             </p>
           </article>

@@ -4,7 +4,8 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
     <link rel="apple-touch-icon" sizes="180x180"
       href="../asset/favico/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32"
@@ -22,7 +23,8 @@
   <body id="top-side">
     <div class="content__page--container">
       <header class="nav--container">
-        <h1 class="main__header--03">everything about git diff</h1>
+        <h1 class="main__header--03" id="git--03">everything about git
+          diff</h1>
         <svg>
           <use xlink:href="../asset/svg/zSprite.svg#git"></use>
         </svg>
@@ -33,13 +35,17 @@
                 class="post__item">diff information</a></li>
             <li class="post"><a href="#index-diffoperation"
                 class="post__item">diff operation</a><a
-                href="#index-diffunstagedlastcommit" class="post__item">unstaged
-                to last commit</a><a href="#index-diffstagedlastcommit"
+                href="#index-diffunstagedlastcommit"
+                class="post__item">unstaged
+                to last commit</a><a
+                href="#index-diffstagedlastcommit"
                 class="post__item">staged to last commit</a><a
-                href="#index-diffspecificfile" class="post__item">diff in
+                href="#index-diffspecificfile" class="post__item">diff
+                in
                 specific file</a><a href="#index-diffbranch"
                 class="post__item">diff for branches</a><a
-                href="#index-diffcommithash" class="post__item">diff for commit
+                href="#index-diffcommithash" class="post__item">diff
+                for commit
                 hash</a></li>
           </ul>
         </section>
@@ -57,26 +63,33 @@
         <section class="sticky__nav--el post__navigation--container">
           <span>navigate posts</span>
           <svg class="arrowDown" id="dropdownMenu__btn">
-            <use xlink:href="../asset/svg/zSprite.svg#arrow-down"></use>
+            <use xlink:href="../asset/svg/zSprite.svg#arrow-down">
+            </use>
           </svg>
 
           <ul class="nav__el--wrap">
             <svg id="nav__close--btn">
-              <use xlink:href="../asset/svg/zSprite.svg#nav-close"></use>
+              <use xlink:href="../asset/svg/zSprite.svg#nav-close">
+              </use>
             </svg>
 
-            <li class="nav__item"><a href="index.html#html--section">navigate to
+            <li class="nav__item"><a
+                href="index.html#html--section">navigate to
                 html</a>
             </li>
-            <li class="nav__item"><a href="index.html#css--section">navigate to
+            <li class="nav__item"><a
+                href="index.html#css--section">navigate to
                 css</a>
             </li>
-            <li class="nav__item"><a href="index.html#sass--section">navigate to
+            <li class="nav__item"><a
+                href="index.html#sass--section">navigate to
                 sass</a>
             </li>
-            <li class="nav__item"><a href="index.html#js--section">navigate to
+            <li class="nav__item"><a
+                href="index.html#js--section">navigate to
                 javascript</a></li>
-            <li class="nav__item"><a href="index.html#dom--section">navigate to
+            <li class="nav__item"><a
+                href="index.html#dom--section">navigate to
                 dom</a>
             </li>
             <li class="nav__item link-active"><a
@@ -84,17 +97,20 @@
                 to
                 git</a>
             </li>
-            <li class="nav__item"><a href="index.html#miscs--section">navigate
+            <li class="nav__item"><a
+                href="index.html#miscs--section">navigate
                 to
                 miscs</a></li>
           </ul>
         </section>
-        <section class="sticky__nav--el" id="view__changer--container">
+        <section class="sticky__nav--el"
+          id="view__changer--container">
           <span>change mode</span>
           <div class="view__changer__btn--container night--icon">
             <svg id="view__changer--btn" class="day__mode__icon--off"
               class="day" id="mode__changer--btn">
-              <use xlink:href="../asset/svg/zSprite.svg#night-mode"></use>
+              <use xlink:href="../asset/svg/zSprite.svg#night-mode">
+              </use>
             </svg>
           </div>
         </section>
@@ -113,7 +129,8 @@
       <div class="overlay"></div>
 
 
-      <main class=" line-numbers util-margin-bottom-high util-margin-top-high"
+      <main
+        class=" line-numbers util-margin-bottom-high util-margin-top-high"
         id="content__main--section">
         <!-- adding hover [go to top] button -->
         <button class="float__btn--container" id="nav__top--btn">
@@ -128,7 +145,8 @@
         <button class="float__btn--container" id="nav__bottom--btn">
           <a href="#bottom-side">
             <svg>
-              <use xlink:href="../asset/svg/zSprite.svg#go-down"></use>
+              <use xlink:href="../asset/svg/zSprite.svg#go-down">
+              </use>
             </svg>
             <span class="navigator__btn">bottom</span>
           </a>
@@ -136,7 +154,8 @@
 
         <button class="contentPage__magic-btn">
           <svg>
-            <use xlink:href="../asset/svg/zSprite.svg#content-magic"></use>
+            <use xlink:href="../asset/svg/zSprite.svg#content-magic">
+            </use>
           </svg>
         </button>
 
@@ -153,13 +172,16 @@
                 <option value="6">6.Roboto Mono</option>
               </select>
             </figure>
-            <figure>Font Size <span class="content__font-size--value">3</span>
-              <input type="range" min="1" max="5" class="content-font--input">
+            <figure>Font Size <span
+                class="content__font-size--value">3</span>
+              <input type="range" min="1" max="5"
+                class="content-font--input">
             </figure>
           </section>
           <section class="content__magic--color-section"><span
               class="tab-header--span">color section</span>
-            <figure>Font Color : <select class="contentMagic__color-input">
+            <figure>Font Color : <select
+                class="contentMagic__color-input">
                 <option>select a text color</option>
                 <option value="red">1.Red</option>
                 <option value="green">2.Green</option>
@@ -183,11 +205,13 @@
               class="tab-header--span">miscs section</span>
             <figure>padding (left-right) <span
                 class="content__padding--value">3</span>
-              <input type="range" min="1" max="5" class="content__padding__ltr">
+              <input type="range" min="1" max="5"
+                class="content__padding__ltr">
             </figure>
             <figure>line height <span
                 class="content__line-height--value">3</span>
-              <input type="range" min="1" max="5" class="content__line-height">
+              <input type="range" min="1" max="5"
+                class="content__line-height">
             </figure>
             <figure>
               text-alignment : <span
@@ -202,27 +226,33 @@
           </section>
         </section>
 
-        <section class="util-margin-bottom-high" id="index-diffInformation">
+        <section class="util-margin-bottom-high"
+          id="index-diffInformation">
           <h2>diff : information</h2>
           <article class="content__area--container">
             <h3>diff : important information</h3>
             <p class="content__post">
-              by <span class="post__code">git diff</span> command, we can see
+              by <span class="post__code">git diff</span> command, we
+              can see
               various
-              types of differences from our working file from different
+              types of differences from our working file from
+              different
               timeline.
               <br>
               <br>
-              <span class="post__code">----</span> old file content [file name =
+              <span class="post__code">----</span> old file content
+              [file name =
               a]
               <br>
-              <span class="post__code">++++</span> new file content [file name =
+              <span class="post__code">++++</span> new file content
+              [file name =
               b]
             </p>
           </article>
         </section>
 
-        <section class="util-margin-bottom-high" id="index-diffoperation">
+        <section class="util-margin-bottom-high"
+          id="index-diffoperation">
           <h2>diff : operation</h2>
           <article
             class="content__area--container util-border-bottom-double util-padding-bottom"
@@ -248,7 +278,8 @@
               </code>
             </pre>
             <p class="content__post">
-              compare codes from last commit to current staged and unstaged
+              compare codes from last commit to current staged and
+              unstaged
               works
             </p>
           </article>
@@ -263,7 +294,8 @@
               </code>
             </pre>
             <p class="content__post">
-              comapre code from last commit to staged and unstaged area for a
+              comapre code from last commit to staged and unstaged
+              area for a
               specific file
             </p>
           </article>
@@ -280,14 +312,17 @@
             <p class="content__post">
               ORDER MATTERS!!! [only works for commited changes]
               <br>
-              if conflict exist, [first branch] content will have (-) sign &&
+              if conflict exist, [first branch] content will have (-)
+              sign &&
               [second branch]
               changes will have (+) sign
               <br>
               <br>
-              if no conflict exist, content from <span class="post__code">second
+              if no conflict exist, content from <span
+                class="post__code">second
                 branch</span> which
-              does not exist in <span class="post__code">first branch</span>
+              does not exist in <span class="post__code">first
+                branch</span>
               will have (+) sign.
               meaning, we dont have these (+) sign contents
             </p>
@@ -302,16 +337,19 @@
             </code>
             </pre>
             <p class="content__post">
-              ORDER MATTERS!!! [first commit] will be like a book, where we will
+              ORDER MATTERS!!! [first commit] will be like a book,
+              where we will
               compare our
               changes to [second commit hash]
               <span class="util-split-bottom-low"></span>
               <span class="util-margin-bottom"></span>
-              if some changes does not exist in [second commit] comparing from
+              if some changes does not exist in [second commit]
+              comparing from
               [first commit] they
               will be shown as (-) sign
               <span class="util-margin-bottom"></span>
-              if some content doe not exist in [first commit] comparing from
+              if some content doe not exist in [first commit]
+              comparing from
               [second commit] they
               will be shown as (+) sign
             </p>
@@ -320,33 +358,39 @@
       </main>
 
       <!-- indexes -->
-      <footer class="contentpage__indexes--container util-margin-top-high"
+      <footer
+        class="contentpage__indexes--container util-margin-top-high"
         id="bottom-side">
         <h4>git indexes</h4>
         <nav>
           <ul>
             <li class="item">
-              <a href="git--01-fundamental.html" class="item-link">FUNDAMENTAL :
+              <a href="git--01-fundamental.html"
+                class="item-link">FUNDAMENTAL :
                 basics,
                 staging, commiting, branch
               </a>
             </li>
             <li class="item">
-              <a href="git--02-merge.html" class="item-link">MERGEING :
+              <a href="git--02-merge.html" class="item-link">MERGEING
+                :
                 everything about git
                 merging</a>
             </li>
             <li class="item link-active">
-              <a href="git--03-diff.html" class="item-link">DIFF : find the
+              <a href="git--03-diff.html" class="item-link">DIFF :
+                find the
                 differnce</a>
             </li>
             <li class="item">
-              <a href="git--04-stash.html" class="item-link">STASH : everything
+              <a href="git--04-stash.html" class="item-link">STASH :
+                everything
                 about stash
                 changes</a>
             </li>
             <li class="item">
-              <a href="git--05-resetRestore.html" class="item-link">git -- time
+              <a href="git--05-resetRestore.html"
+                class="item-link">git -- time
                 travel - reset -
                 restore - revert</a>
             </li>
