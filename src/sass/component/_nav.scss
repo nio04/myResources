@@ -676,12 +676,15 @@
 
 		nav {
 			width: 95vw;
+			min-height: 30vh;
 			@extend %page-indexes-design;
 
 			ul {
 				display: grid;
 				grid-template-columns: repeat(auto-fit, minmax(min-content, 35rem));
 				justify-content: space-around;
+				justify-items: center;
+				align-items: center;
 				gap: 1.3rem;
 
 				@include abs.mq(md) {
@@ -695,6 +698,8 @@
 					transition: all 0.4s;
 
 					a:link {
+						text-decoration: none;
+						font-size: 1.8rem;
 						color: var(--color-accent-900);
 						letter-spacing: 0;
 					}
