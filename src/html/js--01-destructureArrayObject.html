@@ -1,333 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="../asset/favico/apple-touch-icon.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="../asset/favico/favicon-32x32.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="../asset/favico/favicon-16x16.png" />
+		<link rel="manifest" href="../asset/favico/site.webmanifest" />
+		<link rel="stylesheet" href="../sass/pages/_js.scss" />
+		<link rel="stylesheet" href="../sass/theme/prism-light.css" />
+		<script src="../js/prism.js" defer></script>
+		<script type="module" src="../js/controller.js" defer></script>
+		<title>JS : de-structure array-object</title>
+	</head>
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport"
-      content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="180x180"
-      href="../asset/favico/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32"
-      href="../asset/favico/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16"
-      href="../asset/favico/favicon-16x16.png">
-    <link rel="manifest" href="../asset/favico/site.webmanifest">
-    <link rel="stylesheet" href="../sass/pages/_js.scss" />
-    <link rel="stylesheet" href="../sass/theme/prism-light.css">
-    <script src="../js/prism.js" defer></script>
-    <script type="module" src="../js/controller.js" defer></script>
-    <title>JS : de-structure array-object</title>
-  </head>
+	<body id="top-side">
+		<div class="content__page--container">
+			<header class="nav--container">
+				<h1 class="main__header--01" id="js--01">
+					DE-STRUCTURE : ARRAY and OBJECT
+				</h1>
 
-  <body id="top-side">
-    <div class="content__page--container">
-      <header class="nav--container">
-        <h1 class="main__header--01" id="js--01">DE-STRUCTURE : ARRAY
-          and OBJECT</h1>
+				<svg>
+					<use xlink:href="../asset/svg/zSprite.svg#js"></use>
+				</svg>
 
-        <svg>
-          <use xlink:href="../asset/svg/zSprite.svg#js"></use>
-        </svg>
+				<section class="posts">
+					<ul id="js__post--1">
+						<li class="post">
+							<a href="#index-arrdestructure" class="post__item"
+								>array destructure</a
+							><a href="#index-basicarrdestructure" class="post__item"
+								>basic array destructuring</a
+							><a href="#index-defaultvalue" class="post__item"
+								>default value</a
+							><a href="#index-skippingitems" class="post__item"
+								>Skipping items</a
+							><a href="#index-swappingvariables" class="post__item"
+								>swapping vzzariables</a
+							><a href="#index-restpattern" class="post__item"
+								>rest patten</a
+							><a href="#index-nestedarraydestructuring" class="post__item"
+								>nested array destructuring </a
+							><a href="#index-destructurefuncparam" class="post__item"
+								>destructuring function paramter</a
+							><a href="#index-usewithiterable" class="post__item"
+								>use with iterable</a
+							><a href="#index-destructurestring" class="post__item"
+								>destructuring string</a
+							>
+						</li>
+						<li class="post">
+							<a href="#index-objectdestructure" class="post__item"
+								>object destructure</a
+							><a href="#index-basicdestructure" class="post__item"
+								>basic destructure</a
+							><a href="#index-renamevariable" class="post__item"
+								>rename variable</a
+							><a href="#index-defaultvalue" class="post__item"
+								>default value</a
+							><a href="index-nestedobjectdestructure" class="post__item"
+								>nested object destructure</a
+							><a href="#index-functionparamdestructure" class="post__item"
+								>function parameter destructure</a
+							><a href="#index-restpatterndestructure" class="post__item"
+								>rest pattern destructuring</a
+							>
+						</li>
+					</ul>
+				</section>
+			</header>
 
-        <section class="posts">
-          <ul id="js__post--1">
-            <li class="post"><a href="#index-arrdestructure"
-                class="post__item">array destructure</a><a
-                href="#index-basicarrdestructure"
-                class="post__item">basic array
-                destructuring</a><a href="#index-defaultvalue"
-                class="post__item">default value</a><a
-                href="#index-skippingitems"
-                class="post__item">Skipping
-                items</a><a href="#index-swappingvariables"
-                class="post__item">swapping vzzariables</a><a
-                href="#index-restpattern" class="post__item">rest
-                patten</a><a href="#index-nestedarraydestructuring"
-                class="post__item">nested
-                array destructuring
-              </a><a href="#index-destructurefuncparam"
-                class="post__item">destructuring function
-                paramter</a><a href="#index-usewithiterable"
-                class="post__item">use with
-                iterable</a><a href="#index-destructurestring"
-                class="post__item">destructuring string</a></li>
-            <li class="post"><a href="#index-objectdestructure"
-                class="post__item">object destructure</a><a
-                href="#index-basicdestructure"
-                class="post__item">basic
-                destructure</a><a href="#index-renamevariable"
-                class="post__item">rename variable</a><a
-                href="#index-defaultvalue" class="post__item">default
-                value</a><a href="index-nestedobjectdestructure"
-                class="post__item">nested object destructure</a><a
-                href="#index-functionparamdestructure"
-                class="post__item">function parameter
-                destructure</a><a href="#index-restpatterndestructure"
-                class="post__item">rest
-                pattern destructuring</a></li>
-          </ul>
-        </section>
+			<!-- navigation button -->
+			<button
+				class="content__nav--btn util-sticky nav__icon--open"
+				id="nav__btn__container--content">
+				<svg class="open">
+					<use xlink:href="../asset/svg/zSprite.svg#nav-open"></use>
+				</svg>
+			</button>
 
-      </header>
+			<nav class="sticky__nav--container">
+				<section class="sticky__nav--el post__navigation--container">
+					<span>navigate posts</span>
+					<svg class="arrowDown" id="dropdownMenu__btn">
+						<use xlink:href="../asset/svg/zSprite.svg#arrow-down"></use>
+					</svg>
 
-      <!-- navigation button -->
-      <button class="content__nav--btn util-sticky nav__icon--open"
-        id="nav__btn__container--content">
-        <svg class="open">
-          <use xlink:href="../asset/svg/zSprite.svg#nav-open"></use>
-        </svg>
-      </button>
+					<ul class="nav__el--wrap">
+						<svg id="nav__close--btn">
+							<use xlink:href="../asset/svg/zSprite.svg#nav-close"></use>
+						</svg>
 
-      <nav class="sticky__nav--container">
-        <section class="sticky__nav--el post__navigation--container">
-          <span>navigate posts</span>
-          <svg class="arrowDown" id="dropdownMenu__btn">
-            <use xlink:href="../asset/svg/zSprite.svg#arrow-down">
-            </use>
-          </svg>
+						<li class="nav__item">
+							<a href="index.html#html--section">navigate to html</a>
+						</li>
+						<li class="nav__item">
+							<a href="index.html#css--section">navigate to css</a>
+						</li>
+						<li class="nav__item">
+							<a href="index.html#sass--section">navigate to sass</a>
+						</li>
+						<li class="nav__item link-active">
+							<a href="index.html#js--section">navigate to javascript</a>
+						</li>
+						<li class="nav__item">
+							<a href="index.html#dom--section">navigate to dom</a>
+						</li>
+						<li class="nav__item">
+							<a href="index.html#git--section">navigate to git</a>
+						</li>
+						<li class="nav__item">
+							<a href="index.html#miscs--section">navigate to miscs</a>
+						</li>
+					</ul>
+				</section>
 
-          <ul class="nav__el--wrap">
-            <svg id="nav__close--btn">
-              <use xlink:href="../asset/svg/zSprite.svg#nav-close">
-              </use>
-            </svg>
+				<section class="sticky__nav--el" id="view__changer--container">
+					<span>change mode</span>
+					<div class="view__changer__btn--container night--icon">
+						<svg
+							id="view__changer--btn"
+							class="day__mode__icon--off"
+							class="day"
+							id="mode__changer--btn">
+							<use xlink:href="../asset/svg/zSprite.svg#night-mode"></use>
+						</svg>
+					</div>
+				</section>
 
-            <li class="nav__item"><a
-                href="index.html#html--section">navigate to
-                html</a>
-            </li>
-            <li class="nav__item"><a
-                href="index.html#css--section">navigate to
-                css</a>
-            </li>
-            <li class="nav__item"><a
-                href="index.html#sass--section">navigate to
-                sass</a>
-            </li>
-            <li class="nav__item link-active"><a
-                href="index.html#js--section">navigate to
-                javascript</a></li>
-            <li class="nav__item"><a
-                href="index.html#dom--section">navigate to
-                dom</a>
-            </li>
-            <li class="nav__item"><a
-                href="index.html#git--section">navigate to
-                git</a>
-            </li>
-            <li class="nav__item"><a
-                href="index.html#miscs--section">navigate
-                to
-                miscs</a></li>
-          </ul>
-        </section>
+				<section class="sticky__nav--el">
+					<a href="index.html">
+						<span>main home</span>
+						<svg>
+							<use xlink:href="../asset/svg/zSprite.svg#home"></use>
+						</svg>
+					</a>
+				</section>
+			</nav>
+			<div class="overlay"></div>
 
-        <section class="sticky__nav--el"
-          id="view__changer--container">
-          <span>change mode</span>
-          <div class="view__changer__btn--container night--icon">
-            <svg id="view__changer--btn" class="day__mode__icon--off"
-              class="day" id="mode__changer--btn">
-              <use xlink:href="../asset/svg/zSprite.svg#night-mode">
-              </use>
-            </svg>
-          </div>
-        </section>
+			<!-- main post -->
+			<main
+				class="line-numbers util-margin-bottom-high util-margin-top-high"
+				id="content__main--section">
+				<!-- OVERLAY [GO TOP] BUTTON -->
+				<button class="float__btn--container" id="nav__top--btn">
+					<a href="#top-side">
+						<svg>
+							<use xlink:href="../asset/svg/zSprite.svg#go-top"></use>
+						</svg>
+						<span class="navigator__btn">top</span>
+					</a>
+				</button>
+				<!-- adding hover [go to bottom] button -->
+				<button class="float__btn--container" id="nav__bottom--btn">
+					<a href="#bottom-side">
+						<svg>
+							<use xlink:href="../asset/svg/zSprite.svg#go-down"></use>
+						</svg>
+						<span class="navigator__btn">bottom</span>
+					</a>
+				</button>
 
-        <section class="sticky__nav--el">
-          <a href="index.html">
-            <span>main home</span>
-            <svg>
-              <use xlink:href="../asset/svg/zSprite.svg#home"></use>
-            </svg>
-          </a>
-        </section>
+				<button class="contentPage__magic-btn">
+					<svg>
+						<use xlink:href="../asset/svg/zSprite.svg#content-magic"></use>
+					</svg>
+				</button>
 
+				<!-- MAGIC BUTTON CONTENTS -->
+				<section class="content__magic inactive">
+					<section class="content__magic--font-section">
+						<span class="tab-header--span">font section</span>
+						<figure>
+							font family :
+							<select class="font-family--input">
+								<option value="">set a custom font</option>
+								<option value="1">1.Roboto</option>
+								<option value="2">2.Open Sans</option>
+								<option value="3">3.Roboto Condensed</option>
+								<option value="4">4.Bitter</option>
+								<option value="5">5.Cinzel</option>
+								<option value="6">6.Roboto Mono</option>
+							</select>
+						</figure>
+						<figure>
+							Font Size <span class="content__font-size--value">3</span>
+							<input
+								type="range"
+								min="1"
+								max="5"
+								class="content-font--input" />
+						</figure>
+					</section>
+					<section class="content__magic--color-section">
+						<span class="tab-header--span">color section</span>
+						<figure>
+							Font Color :
+							<select class="contentMagic__color-input">
+								<option>select a text color</option>
+								<option value="red">1.Red</option>
+								<option value="green">2.Green</option>
+								<option value="blue">3.Blue</option>
+								<option value="yellow">4.Yellow</option>
+								<option value="white">5.White</option>
+								<option value="pink">6.Pink</option>
+							</select>
+						</figure>
+						<figure>
+							Background Color :
+							<select class="contentMagic__background-color-input">
+								<option value="">select a background color</option>
+								<option value="red">1.Red</option>
+								<option value="green">2.Green</option>
+								<option value="blue">3.Blue</option>
+								<option value="yellow">4.Yellow</option>
+								<option value="pink">5.Pink</option>
+								<option value="black">6.Black</option>
+							</select>
+						</figure>
+					</section>
+					<section class="content__magic--misc-section">
+						<span class="tab-header--span">miscs section</span>
+						<figure>
+							padding (left-right)
+							<span class="content__padding--value">3</span>
+							<input
+								type="range"
+								min="1"
+								max="5"
+								class="content__padding__ltr" />
+						</figure>
+						<figure>
+							line height
+							<span class="content__line-height--value">3</span>
+							<input
+								type="range"
+								min="1"
+								max="5"
+								class="content__line-height" />
+						</figure>
+						<figure>
+							text-alignment :
+							<span class="content__text-alignment--value">ltr</span>
+							<select class="contentMagic__text-alignment--input">
+								<option value="left">left</option>
+								<option value="right">right</option>
+								<option value="center">center</option>
+								<option value="justify">justify</option>
+							</select>
+						</figure>
+					</section>
+				</section>
 
-      </nav>
-      <div class="overlay"></div>
-
-      <!-- main post -->
-      <main
-        class="line-numbers util-margin-bottom-high util-margin-top-high"
-        id="content__main--section">
-
-        <!-- OVERLAY [GO TOP] BUTTON -->
-        <button class="float__btn--container" id="nav__top--btn">
-          <a href="#top-side">
-            <svg>
-              <use xlink:href="../asset/svg/zSprite.svg#go-top"></use>
-            </svg>
-            <span class="navigator__btn">top</span>
-          </a>
-        </button>
-        <!-- adding hover [go to bottom] button -->
-        <button class="float__btn--container" id="nav__bottom--btn">
-          <a href="#bottom-side">
-            <svg>
-              <use xlink:href="../asset/svg/zSprite.svg#go-down">
-              </use>
-            </svg>
-            <span class="navigator__btn">bottom</span>
-          </a>
-        </button>
-
-        <button class="contentPage__magic-btn">
-          <svg>
-            <use xlink:href="../asset/svg/zSprite.svg#content-magic">
-            </use>
-          </svg>
-        </button>
-
-        <!-- MAGIC BUTTON CONTENTS -->
-        <section class="content__magic inactive">
-          <section class="content__magic--font-section"><span
-              class="tab-header--span">font section</span>
-            <figure>font family : <select class="font-family--input">
-                <option value="">set a custom font</option>
-                <option value="1">1.Roboto</option>
-                <option value="2">2.Open Sans</option>
-                <option value="3">3.Roboto Condensed</option>
-                <option value="4">4.Bitter</option>
-                <option value="5">5.Cinzel</option>
-                <option value="6">6.Roboto Mono</option>
-              </select>
-            </figure>
-            <figure>Font Size <span
-                class="content__font-size--value">3</span>
-              <input type="range" min="1" max="5"
-                class="content-font--input">
-            </figure>
-          </section>
-          <section class="content__magic--color-section"><span
-              class="tab-header--span">color section</span>
-            <figure>Font Color : <select
-                class="contentMagic__color-input">
-                <option>select a text color</option>
-                <option value="red">1.Red</option>
-                <option value="green">2.Green</option>
-                <option value="blue">3.Blue</option>
-                <option value="yellow">4.Yellow</option>
-                <option value="white">5.White</option>
-                <option value="pink">6.Pink</option>
-              </select></figure>
-            <figure>Background Color : <select
-                class="contentMagic__background-color-input">
-                <option value="">select a background color</option>
-                <option value="red">1.Red</option>
-                <option value="green">2.Green</option>
-                <option value="blue">3.Blue</option>
-                <option value="yellow">4.Yellow</option>
-                <option value="pink">5.Pink</option>
-                <option value="black">6.Black</option>
-              </select></figure>
-          </section>
-          <section class="content__magic--misc-section"><span
-              class="tab-header--span">miscs section</span>
-            <figure>padding (left-right) <span
-                class="content__padding--value">3</span>
-              <input type="range" min="1" max="5"
-                class="content__padding__ltr">
-            </figure>
-            <figure>line height <span
-                class="content__line-height--value">3</span>
-              <input type="range" min="1" max="5"
-                class="content__line-height">
-            </figure>
-            <figure>
-              text-alignment : <span
-                class="content__text-alignment--value">ltr</span>
-              <select class="contentMagic__text-alignment--input">
-                <option value="left">left</option>
-                <option value="right">right</option>
-                <option value="center">center</option>
-                <option value="justify">justify</option>
-              </select>
-            </figure>
-          </section>
-        </section>
-
-
-        <!-- MAIN POSTS -->
-        <section id="array-destructure"
-          class="util-margin-bottom-high">
-          <h2> array destructure</h2>
-          <article class="content__area--container">
-            <h3>Basic Array Destructuring</h3>
-            <pre>
+				<!-- MAIN POSTS -->
+				<section id="array-destructure" class="util-margin-bottom-high">
+					<h2>array destructure</h2>
+					<article class="content__area--container">
+						<h3>Basic Array Destructuring</h3>
+						<pre>
               <code class="language-js match-braces rainbow-braces">
                 let fruits = ['Apple', 'Banana'];
                 let [fruit1, fruit2] = fruits;
               </code>
             </pre>
-          </article>
+					</article>
 
-          <article class="content__area--container">
-            <h3>Default Values</h3>
-            <pre>
+					<article class="content__area--container">
+						<h3>Default Values</h3>
+						<pre>
               <code class="language-js match-braces rainbow-braces">
                 let [fruit1, fruit2 = 'Mango'] = ['Apple'];
               </code>
             </pre>
-            <p class="content__post">
-              When the unpacked value is <span
-                class="post__code">undefined</span>, a default value
-              can be
-              assigned
-            </p>
-          </article>
+						<p class="content__post">
+							When the unpacked value is
+							<span class="post__code">undefined</span>, a default value
+							can be assigned
+						</p>
+					</article>
 
-          <article class="content__area--container">
-            <h3>Skipping Items</h3>
-            <pre>
+					<article class="content__area--container">
+						<h3>Skipping Items</h3>
+						<pre>
               <code class="language-js match-braces rainbow-braces">
                  let [fruit1, , fruit3] = ['Apple', 'Banana', 'Grapes'];
               </code>
             </pre>
-            <p class="content__post">
-              we can skip values that are not needed... by using
-              commas
-            </p>
-          </article>
+						<p class="content__post">
+							we can skip values that are not needed... by using commas
+						</p>
+					</article>
 
-          <article class="content__area--container">
-            <h3>Swapping Variables</h3>
-            <pre>
+					<article class="content__area--container">
+						<h3>Swapping Variables</h3>
+						<pre>
               <code class="language-js match-braces rainbow-braces">
               let a = 1, b = 2;
               [b, a] = [a, b];
               </code>
             </pre>
-          </article>
+					</article>
 
-          <article class="content__area--container">
-            <h3>Rest Pattern</h3>
-            <pre>
+					<article class="content__area--container">
+						<h3>Rest Pattern</h3>
+						<pre>
               <code class="language-js match-braces rainbow-braces">
                 let [fruit1, ...otherFruits] = ['Apple', 'Banana', 'Grapes', 'Mango'];
               </code>
             </pre>
-            <p class="content__post">
-              Use <span class="post__code">rest pattern</span> to
-              capture the
-              rest of the elements into a new array.
-            </p>
-          </article>
+						<p class="content__post">
+							Use <span class="post__code">rest pattern</span> to capture
+							the rest of the elements into a new array.
+						</p>
+					</article>
 
-          <article class="content__area--container">
-            <h3>Nested Array Destructuring</h3>
-            <pre>
+					<article class="content__area--container">
+						<h3>Nested Array Destructuring</h3>
+						<pre>
               <code class="language-js match-braces rainbow-braces">
                 let colors = ['red', ['green', 'lightgreen'], 'blue'];
                 let [color1, [color2]] = colors;
               </code>
             </pre>
-          </article>
+					</article>
 
-          <article class="content__area--container">
-            <h3>Destructuring Function Parameters</h3>
-            <pre>
+					<article class="content__area--container">
+						<h3>Destructuring Function Parameters</h3>
+						<pre>
               <code class="language-js match-braces rainbow-braces">
               function describeFruit([fruit, color]) {
                 console.log(`${fruit} is ${color}.`);
@@ -336,35 +351,34 @@
               describeFruit(['Mango', 'yellow']); // Mango is yellow.
               </code>
             </pre>
-          </article>
+					</article>
 
-          <article class="content__area--container">
-            <h3>Use with Iterables</h3>
-            <pre>
+					<article class="content__area--container">
+						<h3>Use with Iterables</h3>
+						<pre>
               <code class="language-js match-braces rainbow-braces">
                 let [a, b, c] = 'abc';
               </code>
             </pre>
-          </article>
+					</article>
 
-          <article class="content__area--container">
-            <h3>Destructuring with Strings</h3>
-            <pre>
+					<article class="content__area--container">
+						<h3>Destructuring with Strings</h3>
+						<pre>
               <code class="language-js match-braces rainbow-braces">
                 let [char1, char2] = 'hi';
               </code>
             </pre>
-          </article>
-        </section>
+					</article>
+				</section>
 
-        <section id="object-destructure"
-          class="util-margin-bottom-high">
-          <h2>object destructure</h2>
+				<section id="object-destructure" class="util-margin-bottom-high">
+					<h2>object destructure</h2>
 
-          <article
-            class="content__area--container util-padding-bottom util-border-bottom-double">
-            <h3>Basic Destructuring</h3>
-            <pre>
+					<article
+						class="content__area--container util-padding-bottom util-border-bottom-double">
+						<h3>Basic Destructuring</h3>
+						<pre>
               <code class="language-js match-braces rainbow-braces">
                 const person = {
                   name: 'John',
@@ -376,16 +390,16 @@
               </code>
             </pre>
 
-            <p class="content__post">can extract multiple properties
-              from an
-              object and assign them to variables
-              with the same names as the properties</p>
-          </article>
+						<p class="content__post">
+							can extract multiple properties from an object and assign
+							them to variables with the same names as the properties
+						</p>
+					</article>
 
-          <article
-            class="content__area--container util-padding-bottom util-border-bottom-double">
-            <h3>Renaming Variables</h3>
-            <pre>
+					<article
+						class="content__area--container util-padding-bottom util-border-bottom-double">
+						<h3>Renaming Variables</h3>
+						<pre>
               <code class="language-js match-braces rainbow-braces">
                 const person = {
                   name: 'John',
@@ -397,17 +411,17 @@
               </code>
             </pre>
 
-            <p class="content__post">can extract multiple properties
-              from an
-              Assign properties to variables with different names, we
-              can do so
-              by providing a new variable name</p>
-          </article>
+						<p class="content__post">
+							can extract multiple properties from an Assign properties to
+							variables with different names, we can do so by providing a
+							new variable name
+						</p>
+					</article>
 
-          <article
-            class="content__area--container util-padding-bottom util-border-bottom-double">
-            <h3>Default Values</h3>
-            <pre>
+					<article
+						class="content__area--container util-padding-bottom util-border-bottom-double">
+						<h3>Default Values</h3>
+						<pre>
               <code class="language-js match-braces rainbow-braces">
                 const person = {
                   name: 'John',
@@ -419,17 +433,17 @@
               </code>
             </pre>
 
-            <p class="content__post">can assign default values that
-              will be used
-              if the property is <span class="post__code">not
-                found</span> on
-              the object.</p>
-          </article>
+						<p class="content__post">
+							can assign default values that will be used if the property
+							is
+							<span class="post__code">not found</span> on the object.
+						</p>
+					</article>
 
-          <article
-            class="content__area--container util-padding-bottom util-border-bottom-double">
-            <h3>Nested Object Destructuring</h3>
-            <pre>
+					<article
+						class="content__area--container util-padding-bottom util-border-bottom-double">
+						<h3>Nested Object Destructuring</h3>
+						<pre>
               <code class="language-js match-braces rainbow-braces">
                 const person = {
                   name: 'John',
@@ -447,12 +461,12 @@
                 } = person;
               </code>
             </pre>
-          </article>
+					</article>
 
-          <article
-            class="content__area--container util-padding-bottom util-border-bottom-double">
-            <h3>Function Parameter Destructuring</h3>
-            <pre>
+					<article
+						class="content__area--container util-padding-bottom util-border-bottom-double">
+						<h3>Function Parameter Destructuring</h3>
+						<pre>
               <code class="language-js match-braces rainbow-braces">
                 function greet({ name, age }) {
                   console.log(`Hello, my name is ${name} and I am ${age} years old.`);
@@ -467,17 +481,16 @@
               </code>
             </pre>
 
-            <p class="content__post">Destructure objects right in
-              function
-              parameters. This can be especially useful when dealing
-              with
-              options objects.</p>
-          </article>
+						<p class="content__post">
+							Destructure objects right in function parameters. This can be
+							especially useful when dealing with options objects.
+						</p>
+					</article>
 
-          <article
-            class="content__area--container util-padding-bottom util-border-bottom-double">
-            <h3>REST Pattern with Destructuring</h3>
-            <pre>
+					<article
+						class="content__area--container util-padding-bottom util-border-bottom-double">
+						<h3>REST Pattern with Destructuring</h3>
+						<pre>
               <code class="language-js match-braces rainbow-braces">
                 const person = {
                   name: 'John',
@@ -492,36 +505,37 @@
               </code>
             </pre>
 
-            <p class="content__post">Rest properties collect the
-              remaining
-              enumerable property keys that are not
-              already picked off by the destructuring pattern.</p>
-          </article>
+						<p class="content__post">
+							Rest properties collect the remaining enumerable property
+							keys that are not already picked off by the destructuring
+							pattern.
+						</p>
+					</article>
+				</section>
+			</main>
 
-        </section>
-      </main>
-
-      <!-- FOOTER POSTS INDEXES -->
-      <footer
-        class="contentpage__indexes--container util-margin-top-high"
-        id="bottom-side">
-        <h4>JAVASCRIPT indexes</h4>
-        <nav>
-          <ul>
-            <li class="item link-active">
-              <a href="js--01-destructureArrayObject.html"
-                class="item-link">destructure
-                array and object</a>
-            </li>
-            <li class="item">
-              <a href="js--02-es6SpreadRest.html"
-                class="item-link">spread
-                operator and rest paramter</a>
-            </li>
-          </ul>
-        </nav>
-      </footer>
-    </div>
-  </body>
-
+			<!-- FOOTER POSTS INDEXES -->
+			<footer
+				class="contentpage__indexes--container util-margin-top-high"
+				id="bottom-side">
+				<h4>JAVASCRIPT indexes</h4>
+				<nav>
+					<ul>
+						<li class="item link-active">
+							<a
+								href="js--01-destructureArrayObject.html"
+								class="item-link"
+								>destructure array and object</a
+							>
+						</li>
+						<li class="item">
+							<a href="js--02-es6SpreadRest.html" class="item-link"
+								>spread operator and rest paramter</a
+							>
+						</li>
+					</ul>
+				</nav>
+			</footer>
+		</div>
+	</body>
 </html>
