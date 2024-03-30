@@ -1,4 +1,4 @@
-@use '../abstract/' as abs;
+@use "../abstract/" as abs;
 
 //////////
 ///
@@ -21,7 +21,7 @@
 				height: 50rem;
 				width: 35vw;
 				margin-top: 6rem;
-				background-color: var(--color-secondary-200);
+				background-color: var(--color-secondary-900);
 				list-style-type: none;
 				overflow: scroll;
 
@@ -31,13 +31,13 @@
 					@include abs.border(1, --color-black-replace);
 
 					&::before {
-						content: '';
+						content: "";
 						height: 100%;
 						width: 0%;
 						position: absolute;
 						left: 0;
 						top: 0;
-						background-color: var(--color-primary-400);
+						background-color: var(--color-secondary-950);
 						transition: width 0.3s ease-out;
 						z-index: 1;
 					}
@@ -47,13 +47,13 @@
 					}
 
 					&::after {
-						content: '';
+						content: "";
 						height: 100%;
 						width: 0%;
 						position: absolute;
 						right: 0;
 						top: 0;
-						background-color: var(--color-primary-400);
+						background-color: var(--color-secondary-950);
 						transition: width 0.3s ease-out;
 						z-index: 1;
 					}
@@ -65,37 +65,25 @@
 					&:hover {
 						background-color: var(--color-primary-300);
 						color: var(--color-black);
+						text-transform: uppercase;
 					}
 
 					&__link:link,
 					&__link:visited {
 						text-decoration: none;
 						font-size: 2.1rem;
+						color: var(--color-secondary-500);
 						display: flex;
 						justify-content: center;
 						align-items: center;
 						height: 10rem;
 						width: 100%;
+						position: relative;
+						z-index: 2;
 
-						// span {
-						// 	display: flex;
-						// 	justify-content: center;
-						// 	align-items: center;
-						// 	width: 100%;
-						// 	height: 100%;
-						// 	text-align: center;
-						// 	padding: 5px 0;
-						// 	text-transform: uppercase;
-						// 	color: var(--color-accent-900);
-						// 	z-index: 2;
-						// 	transition: all 0.4s;
-						// 	&:active {
-						// 		transform: scale(0.8);
-						// 	}
-						// 	&:hover {
-						// 		font-size: 4rem;
-						// 	}
-						// }
+						@include abs.mediaQuery(tab-port) {
+							text-transform: uppercase;
+						}
 					}
 				}
 			}
@@ -291,7 +279,7 @@
 		top: 10rem;
 		left: 2.5rem;
 		padding: 5rem;
-		background-color: var(--color-secondary-200);
+		background-color: var(--color-secondary-700);
 		transition: all 0.7s;
 		transform: translateX(-150vw);
 		z-index: 100;
@@ -321,7 +309,7 @@
 			max-height: 12rem;
 			padding: 0 2rem;
 			outline: 1px solid var(--color-accent-900);
-			background-color: var(--color-secondary-300);
+			background-color: var(--color-secondary-500);
 			color: var(--color-black-replace);
 			font-weight: 900;
 			transition: all 0.4s;
@@ -346,7 +334,7 @@
 			}
 
 			&:hover {
-				background-color: var(--color-primary-200);
+				background-color: var(--color-secondary-600);
 				outline-offset: 1rem;
 			}
 
@@ -377,7 +365,7 @@
 				z-index: 1;
 
 				&:hover {
-					color: var(--color-accent-400);
+					color: var(--color-primary-50);
 				}
 
 				&:active {
@@ -392,17 +380,25 @@
 
 			.night--icon {
 				z-index: 1;
+				transform: translateY(5px);
 			}
 
 			svg {
 				z-index: 1;
 			}
 
+			.arrowDown {
+				transform: translateY(5px);
+			}
+
 			a:link,
 			a:visited {
 				text-decoration: none;
 				color: var(--color--accent-900);
-				@extend %center-me-full;
+
+				display: flex;
+				justify-content: center;
+				align-items: baseline;
 			}
 		}
 		.nav__el--wrap {
@@ -413,7 +409,7 @@
 			top: -8;
 			display: flex;
 			flex-wrap: wrap;
-			background-color: var(--color-primary-50);
+			background-color: var(--color-secondary-600);
 			overflow: auto;
 			transition: all 0.5s;
 			padding: 6rem 2rem;
@@ -489,7 +485,7 @@
 					height: 100%;
 					width: 100%;
 					text-decoration: none;
-					color: var(--color-accent-800);
+					color: var(--color-black);
 					font-size: 1.9rem;
 					text-transform: uppercase;
 					text-align: center;
@@ -681,7 +677,10 @@
 
 			ul {
 				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(min-content, 35rem));
+				grid-template-columns: repeat(
+					auto-fit,
+					minmax(min-content, 35rem)
+				);
 				justify-content: space-around;
 				justify-items: center;
 				align-items: center;

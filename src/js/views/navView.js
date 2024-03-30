@@ -1,17 +1,23 @@
-const bodyElement = document.querySelector('body');
-const mainHomeContainer = document.querySelector('#main__home--container');
-const contentpageContainer = document.querySelector('.content__page--container');
-const navBtnContainerHome = document.querySelector('.nav__btn');
-const navBtnContainerContent = document.querySelector(
-	'#nav__btn__container--content'
+const bodyElement = document.querySelector("body");
+const mainHomeContainer = document.querySelector("#main__home--container");
+const contentpageContainer = document.querySelector(
+	".content__page--container"
 );
-const overlay = document.querySelector('.overlay');
-const sideNavElementContainer = document.querySelector('.sticky__nav--container');
-const contentPageContainer = document.querySelector('.content__page--container');
-const navDropDownLists = document.querySelector('.nav__el--wrap');
-const navDropDownCloseBtn = document.querySelector('.nav__el--wrap svg');
-const navigatorTopBtn = document.querySelector('#nav__top--btn');
-const navigatorBottomBtn = document.querySelector('#nav__bottom--btn');
+const navBtnContainerHome = document.querySelector(".nav__btn");
+const navBtnContainerContent = document.querySelector(
+	"#nav__btn__container--content"
+);
+const overlay = document.querySelector(".overlay");
+const sideNavElementContainer = document.querySelector(
+	".sticky__nav--container"
+);
+const contentPageContainer = document.querySelector(
+	".content__page--container"
+);
+const navDropDownLists = document.querySelector(".nav__el--wrap");
+const navDropDownCloseBtn = document.querySelector(".nav__el--wrap svg");
+const navigatorTopBtn = document.querySelector("#nav__top--btn");
+const navigatorBottomBtn = document.querySelector("#nav__bottom--btn");
 
 export function initNavBtnManager() {
 	function btnsViewFn([entries]) {
@@ -26,49 +32,54 @@ export function initNavBtnManager() {
 	const navIntersection = new IntersectionObserver(btnsViewFn, {
 		root: null,
 		threshold: 0,
-		rootMargin: '-200px',
+		rootMargin: "-200px",
 	});
 
 	// OBSERVER FOR MAIN HOME, CONTENT PAGE --BTNS
-	navIntersection.observe(document.querySelector('#content__main--section'));
+	navIntersection.observe(
+		document.querySelector("#content__main--section")
+	);
 
-	document.addEventListener('click', (ev) => {
+	document.addEventListener("click", (ev) => {
 		// CLICK ON NAVGATION ICON --MAIN HOME
-		if (ev.target.closest('#nav__btn__container--home')) {
-			if (navBtnContainerHome.classList.contains('nav__icon--open')) {
+		if (ev.target.closest("#nav__btn--home")) {
+			console.log("helo");
+			if (navBtnContainerHome.classList.contains("nav__icon--open")) {
 				showNavigation();
-			} else if (!navBtnContainerHome.classList.contains('nav__icon--open')) {
+			} else if (
+				!navBtnContainerHome.classList.contains("nav__icon--open")
+			) {
 				hideNaviation();
 			}
 		}
 		// CLICK ON NAVGATION ICON --CONTENT PAGE
 		if (
-			ev.target.closest('#nav__btn__container--content') ||
-			ev.target.closest('.post__navigation--container')
+			ev.target.closest("#nav__btn__container--content") ||
+			ev.target.closest(".post__navigation--container")
 		) {
 			// SHOW NAVIGATION WHILE CLICKED ON NAV ICON --CONTENT PAGE
 			showNavigation();
 
-			if (ev.target.closest('.sticky__nav--el')) {
+			if (ev.target.closest(".sticky__nav--el")) {
 				// EXECUTE FUNC WHILE CLICKED ON "NAVIGGATE POST" --CONTENT PAGE
 				showDropDownListMenu();
 			}
 
-			if (ev.target.closest('.nav__el--wrap')) {
+			if (ev.target.closest(".nav__el--wrap")) {
 				// CLICKED ON 'CLOSE' BUTTON
 				dropDownListMenuOff();
 			}
 
 			// WHEN CLICKED ON NAVIGATION CLOSE BUTTON
-			if (ev.target.classList.contains('nav__btn__off--icon')) {
+			if (ev.target.classList.contains("nav__btn__off--icon")) {
 				hideNaviation();
 			}
 		}
 
-		overlay.addEventListener('click', () => hideNaviation());
+		overlay.addEventListener("click", () => hideNaviation());
 
-		document.addEventListener('keydown', (ev) => {
-			if (ev.key === 'Escape') {
+		document.addEventListener("keydown", (ev) => {
+			if (ev.key === "Escape") {
 				hideNaviation();
 			}
 		});
@@ -77,44 +88,52 @@ export function initNavBtnManager() {
 
 function showNavBtn() {
 	if (mainHomeContainer) {
-		navBtnContainerHome.classList.add('util-display-y');
+		navBtnContainerHome.classList.add("util-display-y");
 	} else {
-		navBtnContainerContent.classList.add('util-display-y');
+		navBtnContainerContent.classList.add("util-display-y");
 	}
 }
 
 function hideNavBtn() {
 	if (mainHomeContainer) {
-		navBtnContainerHome.classList.remove('util-display-y');
+		navBtnContainerHome.classList.remove("util-display-y");
 	} else {
-		navBtnContainerContent.classList.remove('util-display-y');
+		navBtnContainerContent.classList.remove("util-display-y");
 	}
 }
 
 function showNavigator() {
-	document.querySelector('#nav__top--btn').classList.add('noTransform--js');
-	document.querySelector('#nav__bottom--btn').classList.add('noTransform--js');
+	document
+		.querySelector("#nav__top--btn")
+		.classList.add("noTransform--js");
+	document
+		.querySelector("#nav__bottom--btn")
+		.classList.add("noTransform--js");
 }
 function hideNavigator() {
-	document.querySelector('#nav__top--btn').classList.remove('noTransform--js');
-	document.querySelector('#nav__bottom--btn').classList.remove('noTransform--js');
+	document
+		.querySelector("#nav__top--btn")
+		.classList.remove("noTransform--js");
+	document
+		.querySelector("#nav__bottom--btn")
+		.classList.remove("noTransform--js");
 }
 
 function hideNaviation() {
-	bodyElement.classList.remove('util-overflow-hidden');
-	sideNavElementContainer.classList.remove('util-show-element-transform');
-	overlay.classList.remove('util-display-y');
+	bodyElement.classList.remove("util-overflow-hidden");
+	sideNavElementContainer.classList.remove("util-show-element-transform");
+	overlay.classList.remove("util-display-y");
 
 	if (mainHomeContainer) {
-		navBtnContainerHome.classList.add('nav__icon--open');
+		navBtnContainerHome.classList.add("nav__icon--open");
 		navBtnContainerHome.innerHTML = generateNavOnIcon();
 	} else if (contentPageContainer) {
-		navBtnContainerContent.classList.add('nav__icon--open');
+		navBtnContainerContent.classList.add("nav__icon--open");
 		navBtnContainerContent.innerHTML = generateNavOnIcon();
 
 		// SHOW NAVIGATOR [GO TOP, GO BOTTOM] BUTTON
-		navigatorTopBtn.classList.remove('util-display-n');
-		navigatorBottomBtn.classList.remove('util-display-n');
+		navigatorTopBtn.classList.remove("util-display-n");
+		navigatorBottomBtn.classList.remove("util-display-n");
 
 		// AUTO CLOSE DROP DOWN MENU WHILE CLOSINGG NAVIGATION
 		dropDownListMenuOff();
@@ -122,29 +141,29 @@ function hideNaviation() {
 }
 
 function showNavigation() {
-	bodyElement.classList.add('util-overflow-hidden');
-	overlay.classList.add('util-display-y');
-	sideNavElementContainer.classList.add('util-show-element-transform');
+	bodyElement.classList.add("util-overflow-hidden");
+	overlay.classList.add("util-display-y");
+	sideNavElementContainer.classList.add("util-show-element-transform");
 
 	if (mainHomeContainer) {
-		navBtnContainerHome.classList.remove('nav__icon--open');
+		navBtnContainerHome.classList.remove("nav__icon--open");
 		navBtnContainerHome.innerHTML = generateNavOffIcon();
 	} else if (contentPageContainer) {
-		navBtnContainerContent.classList.remove('nav__icon--open');
+		navBtnContainerContent.classList.remove("nav__icon--open");
 		navBtnContainerContent.innerHTML = generateNavOffIcon();
 		// 	HIDE NAVIAGTOR [GO TOP, GO BOTTOM] BUTTON
-		navigatorTopBtn.classList.add('util-display-n');
-		navigatorBottomBtn.classList.add('util-display-n');
+		navigatorTopBtn.classList.add("util-display-n");
+		navigatorBottomBtn.classList.add("util-display-n");
 	}
 }
 
 function showDropDownListMenu() {
-	navDropDownLists.classList.add('util-show-element-transform');
-	navDropDownCloseBtn.classList.add('util-show-element-transform');
+	navDropDownLists.classList.add("util-show-element-transform");
+	navDropDownCloseBtn.classList.add("util-show-element-transform");
 }
 function dropDownListMenuOff() {
-	navDropDownLists.classList.remove('util-show-element-transform');
-	navDropDownCloseBtn.classList.remove('util-show-element-transform');
+	navDropDownLists.classList.remove("util-show-element-transform");
+	navDropDownCloseBtn.classList.remove("util-show-element-transform");
 }
 
 function generateNavOffIcon() {
