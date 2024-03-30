@@ -1,4 +1,4 @@
-@use '../abstract/' as abs;
+@use "../abstract/" as abs;
 
 ///////////
 /// MAIN HOME PAGE [1ST PAGE]
@@ -6,6 +6,8 @@
 	position: relative;
 
 	&__header {
+		background-color: var(--color-secondary-900);
+		min-width: 115vw;
 		&__background {
 			// HEADER VIDEO BACKGROUND
 			width: 100%;
@@ -25,7 +27,7 @@
 			}
 		}
 
-		&__title{
+		&__title {
 			height: 100vh;
 			display: flex;
 			justify-content: center;

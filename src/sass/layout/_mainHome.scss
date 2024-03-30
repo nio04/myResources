@@ -1,32 +1,39 @@
 // first PAGE
-@use '../abstract/' as abs;
-@use '../base/reset';
-@use '../component/' as compo;
+@use "../abstract/" as abs;
+@use "../base/reset";
+@use "../component/" as compo;
 
 .mainhome {
 	display: grid;
 	grid-template-rows: 100vh 1fr;
 	gap: 6rem;
-
 	position: relative;
+	background-color: var(--color-secondary-700);
+	min-width: 115vw;
 
-	@include abs.mediaQuery(tab-port) {
-		grid-template-rows: 100vh 1fr;
-	}
+	// @include abs.mediaQuery(tab-port) {
+	// 	grid-template-rows: 100vh 1fr;
+	// }
 
 	&__main {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 2rem;
+		align-items: start;
 		position: relative;
 		padding-bottom: 10rem;
+		background-color: var(--color-secondary-700);
 
 		// MAINHOME MAIN SECTION animation
-		&--anim{
-			animation-name: slideToLeft;
-			animation-duration: 2s;
-			animation-delay: .5s;
-			animation-timing-function: linear;
+		&--anim {
+			// animation-name: slideToLeft;
+			// animation-duration: 2s;
+			// animation-delay: 0.5s;
+			// animation-timing-function: linear;
+		}
+
+		@include abs.mediaQuery(tab-land) {
+			margin: 0 4rem;
 		}
 
 		@include abs.mediaQuery(tab-port) {
@@ -36,7 +43,6 @@
 
 		.mainhome__section {
 			z-index: 2;
-			// margin-top: 20rem;
 		}
 	}
 }
