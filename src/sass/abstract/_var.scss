@@ -1,10 +1,10 @@
 :root {
-	--font-primary: 'Arvo', serif; //300, 400 600
-	--font-secondary: 'Hahmlet', serif; //500, 700
-	--font-tertiary: 'Oxanium', sans-serif; // 400, 500, 600
-	--font-content: 'Exo 2', sans-serif; //200, 400, 600, 900
-	--font-code: 'Source Code Pro', monospace; //600
-	--font-general: 'Pathway Extreme', sans-serif; //200, 400, 600
+	--font-primary: "Arvo", serif; //300, 400 600
+	--font-secondary: "Hahmlet", serif; //500, 700
+	--font-tertiary: "Oxanium", sans-serif; // 400, 500, 600
+	--font-content: "Exo 2", sans-serif; //200, 400, 600, 900
+	--font-code: "Source Code Pro", monospace; //600
+	--font-general: "Pathway Extreme", sans-serif; //200, 400, 600
 
 	// NEUTRAL
 	--color-primary-50: #fafafa;
@@ -49,6 +49,8 @@
 	--color-visited: #b91c1c;
 
 	--color-black-replace: #000;
+
+	--color-overlay: #b9b9b9;
 
 	///////////////////
 	// DARK MODE COLOR
