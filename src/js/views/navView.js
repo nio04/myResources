@@ -137,6 +137,10 @@ function hideNaviation() {
 
 		// AUTO CLOSE DROP DOWN MENU WHILE CLOSINGG NAVIGATION
 		dropDownListMenuOff();
+
+		document
+			.querySelector(".contentPage__magic-btn")
+			.classList.remove("util-display-n");
 	}
 }
 
@@ -154,6 +158,9 @@ function showNavigation() {
 		// 	HIDE NAVIAGTOR [GO TOP, GO BOTTOM] BUTTON
 		navigatorTopBtn.classList.add("util-display-n");
 		navigatorBottomBtn.classList.add("util-display-n");
+		document
+			.querySelector(".contentPage__magic-btn")
+			.classList.add("util-display-n");
 	}
 }
 
