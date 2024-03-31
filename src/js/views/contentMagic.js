@@ -334,6 +334,7 @@ function hideMagicOptionsContainer() {
 	magicOptionsContainer.classList.add("inactive");
 	overlay.classList.remove("util-display-y");
 	document.body.style.overflow = "auto";
+	magicButton.style.fill = "black";
 	hideBtns();
 }
 
