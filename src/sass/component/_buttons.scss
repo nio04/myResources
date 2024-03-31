@@ -1,4 +1,4 @@
-@use '../abstract/' as abs;
+@use "../abstract/" as abs;
 
 // nav btn
 #nav__btn--home,
@@ -51,6 +51,9 @@
 ////////////////
 // CONTENT PAGE [3RD PAGE]
 .content__page--container {
+	.nav__btn__off--icon {
+		transform: rotate(180deg);
+	}
 	main {
 		.float__btn--container {
 			box-sizing: content-box;

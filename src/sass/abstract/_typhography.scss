@@ -42,30 +42,9 @@
 			font-weight: 400;
 			word-spacing: 0.5rem;
 
-			// @include bp.mq(lg) {
-			// 	font-size: 2.4rem;
-			// 	line-height: 2;
-			// 	padding-right: 30rem;
-			// }
-			// @include bp.mq(md) {
-			// 	font-size: 2rem;
-			// 	padding-right: 15rem;
-			// }
-
-			// @include bp.mq(sm) {
-			// 	line-height: 2;
-			// 	padding-left: 2rem;
-			// 	padding-right: 8rem;
-			// 	font-size: 1.7rem;
-			// }
-			// @include bp.mq(xs) {
-			// 	padding-left: 1rem;
-			// 	padding-right: 4rem;
-			// 	line-height: 2.2;
-			// }
-			// @include bp.mq(xxs) {
-			// 	padding: 0 1rem;
-			// }
+			@include bp.mq(sm) {
+				padding: 0 0.8em;
+			}
 
 			.post__code {
 				font-family: var(--font-code);

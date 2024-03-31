@@ -280,12 +280,16 @@ function fontColorSetter(color) {
 function backgroundColorSetter(color) {
 	const h2BG = document.querySelectorAll("h2");
 	const h4BG = document.querySelectorAll("h4");
+	const postIndex = document.querySelector(".posts ul");
+	const postIndexesList = document.querySelectorAll(".posts ul li a");
 	const postCodeBG = document.querySelectorAll(".post__code");
 	const navigatorBG = document.querySelectorAll(".float__btn--container");
 	const magicBtnBG = document.querySelector(".contentPage__magic-btn");
 	document.body.style.backgroundColor = color;
 	h2BG.forEach((el) => (el.style.backgroundColor = color));
 	h4BG.forEach((el) => (el.style.backgroundColor = color));
+	postIndex.style.backgroundColor = color;
+	postIndexesList.forEach((li) => (li.style.backgroundColor = color));
 	postCodeBG.forEach((el) => (el.style.backgroundColor = color));
 	navigatorBG.forEach((el) => (el.style.backgroundColor = color));
 	navigatorBG.forEach((el) => (el.style.border = `5px solid ${color}`));
