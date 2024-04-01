@@ -23,7 +23,8 @@
 
 		.post {
 			text-align: center;
-			width: 80%;
+			transition: all 0.4s;
+
 			&__item:link,
 			&__item:visited {
 				display: block;
@@ -54,10 +55,10 @@
 			}
 
 			&__item:hover {
-				color: var(--color-accent-400);
+				color: var(--color-primary-300);
 				background-color: var(--color-secondary-600);
-				text-transform: uppercase;
 				padding-left: 1rem;
+				letter-spacing: 1px;
 			}
 		}
 	}

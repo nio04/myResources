@@ -11,6 +11,10 @@
 	height: calc(100% - 2rem);
 }
 
+.post__item--header {
+	border-bottom: 2px solid var(--color-red);
+}
+
 .util-border-bottom-double {
 	border-bottom: 3px double var(--color-accent) !important;
 }

@@ -8,6 +8,7 @@ import * as modeView from "./views/dayNightView";
 import * as visiblity from "./views/visibilityBtnsView";
 import * as contentMagic from "./views/contentMagic";
 import * as accountView from "./views/accountView";
+import * as fontFamilyView from "./views/fontView";
 import typeItView from "./views/typeItView";
 import animateView from "./views/animateVIew";
 
@@ -26,6 +27,7 @@ if (contentPageParent) {
 	modeView.viewChanger(model.getViewModeState());
 	contentMagic.contentMagicHandler();
 	accountView.accountPasswordHandle();
+	fontFamilyView.fontFamilyControl;
 }
 
 // HOT MODULE REPLACEMENT (HMR)

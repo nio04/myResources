@@ -1,3 +1,5 @@
+import { selectedFont } from "./fontView";
+
 const navBtn = document.querySelector(".content__nav--btn");
 const navigatorTopBtn = document.querySelector("#nav__top--btn");
 const navigatorBottomBtn = document.querySelector("#nav__bottom--btn");
@@ -48,33 +50,36 @@ export function contentMagicHandler() {
 	});
 
 	// FONT FAMILY
-	fontFamilyValue.addEventListener("change", (ev) => {
-		const value = ev.target.value;
+	fontFamilyValue.addEventListener("change", () =>
+		fontFamilySetter(selectedFont)
+	);
+	// fontFamilyValue.addEventListener("change", (ev) => {
+	// 	const value = ev.target.value;
 
-		switch (value) {
-			case "1":
-				fontFamilySetter("Roboto");
-				break;
-			case "2":
-				fontFamilySetter("Open Sans");
-				break;
-			case "3":
-				fontFamilySetter("Roboto Condensed");
-				break;
-			case "4":
-				fontFamilySetter("Bitter");
-				break;
-			case "5":
-				fontFamilySetter("Cinzel");
-				break;
-			case "6":
-				fontFamilySetter("Roboto Mono");
-				break;
+	// 	switch (value) {
+	// 		case "1":
+	// 			fontFamilySetter("Roboto");
+	// 			break;
+	// 		case "2":
+	// 			fontFamilySetter("Open Sans");
+	// 			break;
+	// 		case "3":
+	// 			fontFamilySetter("Roboto Condensed");
+	// 			break;
+	// 		case "4":
+	// 			fontFamilySetter("Bitter");
+	// 			break;
+	// 		case "5":
+	// 			fontFamilySetter("Cinzel");
+	// 			break;
+	// 		case "6":
+	// 			fontFamilySetter("Roboto Mono");
+	// 			break;
 
-			default:
-				break;
-		}
-	});
+	// 		default:
+	// 			break;
+	// 	}
+	// });
 
 	// FONT SIZE
 	fontSizeValue.addEventListener("change", (ev) => {

@@ -208,6 +208,10 @@
 				line-height: 1.2;
 				transition: all 0.4s;
 
+				&:hover {
+					letter-spacing: 1px;
+				}
+
 				&:visited {
 					color: var(--color-visited);
 					letter-spacing: 0;
