@@ -1,0 +1,67 @@
+@use "../abstract/" as abs;
+
+// MAGIC CONTENT
+%magicContent-section {
+	font-size: 2rem;
+	border-right: 2px solid red;
+
+	.tab-header--span {
+		font-weight: 900;
+		font-family: var(--font-secondary);
+		padding-left: 1rem;
+		display: inline-block;
+		width: 100%;
+		padding-bottom: 1rem;
+		border-bottom: 1px solid red;
+	}
+}
+
+%content__magic {
+	height: 60%;
+	width: 75vw;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	position: fixed;
+	top: 9rem;
+	right: 5rem;
+	text-transform: uppercase;
+	background-color: var(--color-primary-200);
+	padding: 1rem;
+	border-radius: 1.3rem;
+	box-shadow: 0 2px 2px 4px rgba(0, 0, 0, 0.2);
+	z-index: 5;
+	transition: all 0.6s;
+	transform: translateX(200vw);
+	overflow-y: scroll;
+
+	@include abs.mq(md) {
+		grid-template-columns: 1fr;
+	}
+
+	figure {
+		margin-top: 2rem;
+		padding-left: 1.2rem;
+	}
+
+	.content__magic--font-section {
+		@extend %magicContent-section;
+
+		@include abs.mq(md) {
+			border: none;
+		}
+	}
+	.content__magic--color-section {
+		@extend %magicContent-section;
+
+		@include abs.mq(md) {
+			border: none;
+		}
+	}
+	.content__magic--misc-section {
+		font-size: 2rem;
+
+		@extend %magicContent-section;
+
+		border-right: none;
+	}
+}

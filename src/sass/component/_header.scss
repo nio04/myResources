@@ -1,30 +1,12 @@
 @use "../abstract/" as abs;
 
 ///////////
-/// MAIN HOME PAGE [1ST PAGE]
+/// MAIN HOME PAGE
 .mainhome {
 	position: relative;
 
 	&__header {
 		background-color: var(--color-secondary-900);
-		&__background {
-			// HEADER VIDEO BACKGROUND
-			width: 100%;
-			height: auto;
-			overflow: hidden;
-
-			&__video {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				min-width: 100%;
-				min-height: 100%;
-				width: auto;
-				height: auto;
-				z-index: -100;
-				transform: translate(-50%, -50%);
-			}
-		}
 
 		&__title {
 			height: 100vh;
@@ -40,28 +22,6 @@
 			font-weight: 600;
 			letter-spacing: -3;
 			word-spacing: 1rem;
-			// display: table-cell;
-			// vertical-align: middle;
-			// z-index: 1;
-			// @extend %center-me-full;
-
-			// animation-name: moveAndJump;
-			// animation-delay: 0.2s;
-			// animation-duration: 3s;
-			// animation-fill-mode: both;
-
-			// @include abs.mediaQuery(tab-land) {
-			// 	font-size: 6.3rem;
-			// }
-			// @include abs.mediaQuery(tab-port) {
-			// 	font-size: 5rem;
-			// }
-			// @include abs.mediaQuery(mobile) {
-			// 	font-size: 4rem;
-			// }
-			// @include abs.mediaQuery(mob-small) {
-			// 	font-size: 4.7rem;
-			// }
 		}
 	}
 

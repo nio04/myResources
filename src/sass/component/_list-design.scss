@@ -1,28 +1,13 @@
-@use '../abstract/' as abs;
+@use "../abstract/" as abs;
 
 .content__page--container .list__wrap--container {
 	display: block;
 	margin: 6rem 0 4rem 10vw;
 
 	.list {
-		// margin: 0 10rem 0 1rem;
 		padding-left: 1rem;
 		padding-right: 18vw;
 		line-height: 2.5;
 		color: var(--color-accent-900);
-
-		// @include abs.mq(lg) {
-		// 	font-size: 2.4rem;
-		// 	line-height: 2;
-		// }
-		// @include abs.mq(md) {
-		// 	font-size: 2rem;
-		// 	padding-left: 1rem;
-		// 	padding-right: 2rem;
-		// }
-
-		// @include abs.mq(sm) {
-		// 	font-size: 1.7rem;
-		// }
 	}
 }

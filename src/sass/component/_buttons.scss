@@ -30,31 +30,16 @@
 		@include abs.svg-size(8, 8, var(--color-accent-900));
 	}
 }
-////////////////
-/// MAIN HOME PAGE
-// .main__home--container main .sideNav__Btn {
-// 	@include abs.border(0, --color-transparent);
-// 	z-index: 5000;
-// 	top: 2rem;
-// 	left: 2rem;
-
-// 	svg {
-// 		@include abs.svg-size(4, 4);
-// 		position: absolute;
-// 		@include abs.border(0, --color-transparent, 50);
-// 		outline: 2px solid var(--color-accent-900);
-// 		outline-offset: 1rem;
-// 		cursor: pointer;
-// 	}
-// }
 
 ////////////////
-// CONTENT PAGE [3RD PAGE]
+// CONTENT PAGE
 .content__page--container {
+	// SIDE-NAV BTN
 	.nav__btn__off--icon {
 		transform: rotate(180deg);
 	}
 	main {
+		// BOTTOM FLOAT NAV BTN
 		.float__btn--container {
 			box-sizing: content-box;
 			height: 4rem;
@@ -117,6 +102,7 @@
 				}
 			}
 		}
+
 		#nav__top--btn {
 			width: 10rem;
 			bottom: 0.5rem;
@@ -130,6 +116,7 @@
 				width: 3.4rem;
 			}
 		}
+
 		#nav__bottom--btn {
 			width: 10rem;
 			bottom: 0.5rem;
@@ -145,7 +132,7 @@
 				right: 5.5rem;
 			}
 		}
-
+		// MAGIC BTN
 		.contentPage__magic-btn {
 			svg {
 				height: 6rem;

@@ -1,0 +1,64 @@
+@use "../abstract/" as abs;
+
+%post-index-content-page--general {
+	ul {
+		width: 90%;
+		height: 100%;
+
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(max-content, 25rem));
+		justify-content: space-around;
+		align-content: center;
+		align-items: center;
+		justify-items: center;
+		gap: 2rem;
+
+		margin: 0 auto;
+		list-style: none;
+		padding: 2.7rem;
+		background-color: var(--color-primary-200);
+		border: 1px solid black;
+		border-radius: 0.5rem;
+		background-color: var(--color-primary-50);
+
+		.post {
+			text-align: center;
+			width: 80%;
+			&__item:link,
+			&__item:visited {
+				display: block;
+				color: var(--color-accent-900);
+				text-decoration: none;
+				font-family: var(--font-tertiary);
+				font-size: 1.4rem;
+				font-weight: 600;
+				transition: all 0.6s;
+				padding: 0 2rem 0.5rem 1rem;
+				background-color: var(--color-secondary-300);
+
+				&:not(:last-child) {
+					margin-bottom: 0.5rem;
+				}
+
+				@include abs.mq(sm) {
+					font-size: 1rem;
+				}
+				@include abs.mq(xs) {
+					font-size: 0.8rem;
+				}
+
+				&:first-child,
+				&:last-child {
+					padding: 1rem 2rem;
+				}
+			}
+
+			&__item:hover {
+				color: var(--color-accent-400);
+				background-color: var(--color-secondary-600);
+				text-transform: uppercase;
+				padding-left: 1rem;
+			}
+		}
+	}
+}

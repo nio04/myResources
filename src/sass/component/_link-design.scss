@@ -1,11 +1,12 @@
-@use '../abstract/' as abs;
+@use "../abstract/" as abs;
 
 ////////////
-/// CONTENT PAGE [3RD PAGE]
+/// CONTENT PAGE
 .content__page--container {
 	.nav--container {
 		.nav--indexes {
 			@extend %postIndexes-list-border;
+
 			a:link {
 				flex: 0 0 50%;
 				text-transform: uppercase;
@@ -21,29 +22,6 @@
 					opacity: 0.6;
 					color: var(--color-secondary-600);
 				}
-
-				// &::after {
-				// 	content: '';
-				// 	display: inline-block;
-				// 	background-color: var(--color-accent-900);
-				// 	margin-left: 1rem;
-				// 	height: 2rem;
-				// 	width: 2rem;
-				// 	-webkit-mask-image: url('../../asset/svg/pointRight.svg');
-				// 	-webkit-mask-size: cover;
-				// 	mask-image: url('../../asset/svg/pointRight.svg');
-				// 	mask-size: cover;
-				// 	transition: all 0.6s;
-
-				// 	@include abs.mediaQuery(tab-port) {
-				// 		display: none;
-				// 	}
-				// }
-
-				// &:hover::after {
-				// 	background-color: var(--color-secondary-400);
-				// 	margin-left: 2rem;
-				// }
 
 				span {
 					letter-spacing: 0;
@@ -64,5 +42,15 @@
 				}
 			}
 		}
+	}
+	a:link {
+		text-decoration: none;
+		font-size: 1.8rem;
+		color: var(--color-accent-900);
+		letter-spacing: 0;
+	}
+	a:visited {
+		color: var(--color-visited);
+		letter-spacing: 0;
 	}
 }
