@@ -30,12 +30,12 @@ cyan      #2aa198
 green     #859900
 */
 
-code[class*='language-'],
-pre[class*='language-'] {
+code[class*="language-"],
+pre[class*="language-"] {
 	color: black;
 	background: none;
 	text-shadow: 0 1px white;
-	font-family: Fira Code, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-family: var(--font-code);
 	font-size: 0.8em;
 	text-align: left;
 	white-space: pre;
@@ -55,44 +55,44 @@ pre[class*='language-'] {
 }
 
 @media only screen and (max-width: 91em) {
-	code[class*='language-'],
-	pre[class*='language-'] {
+	code[class*="language-"],
+	pre[class*="language-"] {
 		font-size: 1.5rem;
 	}
 }
 @media only screen and (max-width: 67em) {
-	code[class*='language-'],
-	pre[class*='language-'] {
+	code[class*="language-"],
+	pre[class*="language-"] {
 		font-size: 1.3rem;
 		line-height: 2.7rem;
 	}
 }
 @media only screen and (max-width: 44em) {
-	code[class*='language-'],
-	pre[class*='language-'] {
+	code[class*="language-"],
+	pre[class*="language-"] {
 		/* font-size: 1.1rem; */
 		line-height: 2.2;
 	}
 }
 
-pre[class*='language-']::-moz-selection,
-pre[class*='language-'] ::-moz-selection,
-code[class*='language-']::-moz-selection,
-code[class*='language-'] ::-moz-selection {
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection {
 	background: #073642;
 	/* base02 */
 }
 
-pre[class*='language-']::selection,
-pre[class*='language-'] ::selection,
-code[class*='language-']::selection,
-code[class*='language-'] ::selection {
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
 	background: #c0bebe;
 	/* base02 */
 }
 
 /* Code blocks */
-pre[class*='language-'] {
+pre[class*="language-"] {
 	padding: 3rem;
 	margin: 0.5em 0;
 	margin-right: 12vw;
@@ -102,19 +102,19 @@ pre[class*='language-'] {
 }
 
 @media only screen and (max-width: 44em) {
-	pre[class*='language-'] {
+	pre[class*="language-"] {
 		padding-top: 1rem;
 		padding-bottom: 1rem;
 	}
 }
 
-:not(pre) > code[class*='language-'],
-pre[class*='language-'] {
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
 	background-color: #e7e7e7;
 }
 
 /* Inline code */
-:not(pre) > code[class*='language-'] {
+:not(pre) > code[class*="language-"] {
 	padding: 0.1em;
 	border-radius: 0.3em;
 }
@@ -198,24 +198,24 @@ pre[class*='language-'] {
 	cursor: help;
 }
 
-pre[class*='language-'].line-numbers {
+pre[class*="language-"].line-numbers {
 	position: relative;
 	padding-left: 6rem;
 	counter-reset: linenumber;
 }
 
 @media only screen and (max-width: 67em) {
-	pre[class*='language-'].line-numbers {
+	pre[class*="language-"].line-numbers {
 		padding-left: 4rem;
 	}
 }
 @media only screen and (max-width: 44em) {
-	pre[class*='language-'].line-numbers {
+	pre[class*="language-"].line-numbers {
 		padding-left: 3rem;
 	}
 }
 
-pre[class*='language-'].line-numbers > code {
+pre[class*="language-"].line-numbers > code {
 	position: relative;
 	white-space: inherit;
 }
@@ -282,7 +282,7 @@ pre[class*='language-'].line-numbers > code {
 
 .prism-previewer:before,
 .prism-previewer:after {
-	content: '';
+	content: "";
 	position: absolute;
 	pointer-events: none;
 }
@@ -294,7 +294,8 @@ pre[class*='language-'].line-numbers > code {
 	bottom: -5px;
 	border-radius: 10px;
 	border: 5px solid #fff;
-	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75);
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset,
+		0 0 10px rgba(0, 0, 0, 0.75);
 }
 
 .prism-previewer:after {
@@ -384,7 +385,8 @@ pre[class*='language-'].line-numbers > code {
 	bottom: -5px;
 	border-radius: 10px;
 	border: 5px solid #fff;
-	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75);
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset,
+		0 0 10px rgba(0, 0, 0, 0.75);
 }
 
 .prism-previewer-color {

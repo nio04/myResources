@@ -40,18 +40,6 @@ link same: ALEO, LORA, INTER
 
 function fontCollection() {
 	// SERIF
-	const aleoReg = new FontFace(
-		"Aleo",
-		"url(https://fonts.gstatic.com/s/aleo/v14/c4mv1nF8G8_swA3J0Q.woff2)",
-		{ weight: "400" }
-	);
-	const aleoBold = new FontFace(
-		"Aleo",
-		"url(https://fonts.gstatic.com/s/aleo/v14/c4mv1nF8G8_swA3J0Q.woff2)",
-		{
-			weight: "600",
-		}
-	);
 	const cardoReg = new FontFace(
 		"Cardo",
 		"url(https://fonts.gstatic.com/s/cardo/v19/wlp_gwjKBV1pqhv43IE.woff2)",
@@ -186,8 +174,6 @@ function fontCollection() {
 	);
 
 	return [
-		aleoReg,
-		aleoBold,
 		cardoReg,
 		cardoBold,
 		loraReg,

@@ -83,6 +83,7 @@
 			transition: all 0.4s ease-in-out;
 			z-index: 1;
 			color: var(--color-accent-800);
+			font-family: var(--font-general);
 
 			&:hover {
 				color: var(--color-primary-50);
