@@ -106,30 +106,11 @@ export function contentMagicHandler() {
 	});
 
 	// FONT COLOR
-	fontColorValue.addEventListener("change", (ev) => {
-		const value = ev.target.value;
-
-		switch (value) {
-			case "red":
-				fontColorSetter("red");
-				break;
-			case "green":
-				fontColorSetter("green");
-				break;
-			case "blue":
-				fontColorSetter("blue");
-				break;
-			case "yellow":
-				fontColorSetter("yellow");
-				break;
-			case "white":
-				fontColorSetter("white");
-				break;
-			case "pink":
-				fontColorSetter("pink");
-				break;
-		}
-	});
+	document
+		.querySelector("#custom-text-color")
+		.addEventListener("change", (ev) => {
+			fontColorSetter(ev.target.value);
+		});
 
 	// BACKGROUND COLOR
 	backgroundColorValue.addEventListener("change", (ev) => {
