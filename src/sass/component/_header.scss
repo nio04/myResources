@@ -16,11 +16,11 @@
 			color: var(--color-white);
 			text-align: center;
 			text-transform: uppercase;
-			text-shadow: -7px 7px 10px var(--color-secondary-500);
+			text-shadow: -3px 3px 3px var(--color-secondary-500);
 			font-size: 7.41rem;
 			font-family: var(--font-primary);
 			font-weight: 600;
-			letter-spacing: -3;
+			letter-spacing: -8;
 			word-spacing: 1rem;
 		}
 	}
@@ -31,11 +31,11 @@
 				width: 100%;
 				margin-bottom: 5rem;
 				color: var(--color-secondary-300);
-				text-shadow: 3px 2px 4px var(--color-secondary-200);
+				text-shadow: 2px 2px 1px var(--color-secondary-100);
 				font-family: var(--font-primary);
 				font-weight: 600;
 				font-size: clamp(6rem, 10vw, 7rem);
-				letter-spacing: -2;
+				letter-spacing: -3;
 				text-transform: uppercase;
 				text-align: center;
 				border-bottom: 5px double var(--color-secondary-500);
@@ -214,7 +214,7 @@
 			font-size: clamp(1.2rem, 4vw, 4rem);
 			font-family: var(--font-secondary);
 			font-weight: 700;
-			letter-spacing: -1;
+			letter-spacing: -3;
 			word-spacing: 1rem;
 			@extend %center-me-full;
 
@@ -227,7 +227,9 @@
 		font-size: clamp(2rem, 6vw, 3.5rem);
 		font-family: var(--font-tertiary);
 		font-weight: 600;
-		letter-spacing: -1;
+		letter-spacing: -2.5;
+		word-spacing: 1rem;
+		text-transform: uppercase;
 		padding-left: 1.2rem;
 		-webkit-background-clip: text;
 		background-clip: text;

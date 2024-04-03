@@ -43,11 +43,18 @@
 			}
 		}
 	}
+
 	a:link {
+		font-family: var(--font-content-link);
 		text-decoration: none;
 		font-size: 1.8rem;
 		color: var(--color-accent-900);
 		letter-spacing: 0;
+		transition: all 0.4s;
+	}
+	a:hover {
+		outline: 2px groove #ff000022;
+		outline-offset: 0.8rem;
 	}
 	a:visited {
 		color: var(--color-visited);

@@ -36,13 +36,15 @@
 			position: relative;
 			color: var(--color-black-replace);
 			padding: 0 15vw 0 3vw;
-			line-height: 2.2;
-			font-size: 3rem;
+			line-height: 2;
+			font-size: 2.7rem;
 			font-family: var(--font-content);
 			font-weight: 400;
 			word-spacing: 0.5rem;
+			max-width: 75ch;
+			word-wrap: break-word;
 
-			@include bp.mq(sm) {
+			@include bp.mq(md) {
 				padding: 0 0.8em;
 			}
 
@@ -51,7 +53,7 @@
 				font-weight: 600;
 				background-color: var(--color-secondary-200);
 				@include mixin.border(0, --color-transparent, 4);
-				color: var(--color-accent-600);
+				color: var(--color-accent-900);
 				padding: 0 0.8rem;
 				white-space: nowrap;
 			}
