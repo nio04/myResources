@@ -113,31 +113,11 @@ export function contentMagicHandler() {
 		});
 
 	// BACKGROUND COLOR
-	backgroundColorValue.addEventListener("change", (ev) => {
-		const value = ev.target.value;
-		console.log(value);
-
-		switch (value) {
-			case "red":
-				backgroundColorSetter("red");
-				break;
-			case "yellow":
-				backgroundColorSetter("yellow");
-				break;
-			case "green":
-				backgroundColorSetter("green");
-				break;
-			case "blue":
-				backgroundColorSetter("blue");
-				break;
-			case "pink":
-				backgroundColorSetter("pink");
-				break;
-			case "black":
-				backgroundColorSetter("black");
-				break;
-		}
-	});
+	document
+		.querySelector("#custom-bg-color")
+		.addEventListener("change", (ev) =>
+			backgroundColorSetter(ev.target.value)
+		);
 
 	// PADDING LEFT-RIGHT
 	paddingLTRvalue.addEventListener("change", (ev) => {
