@@ -20,7 +20,9 @@ const lineHeightTextSet = document.querySelector(
 const textAlignmentTextSet = document.querySelector(
 	".content__text-alignment--value"
 );
-
+const fontWeightTextSet = document.querySelector(
+	".content__font-weight--value"
+);
 // HANDLER
 export function contentMagicHandler() {
 	document.addEventListener("click", (ev) => {
@@ -126,6 +128,25 @@ function setCustomStyle(styles, styleValue) {
 				);
 			},
 		},
+		fontWeight: {
+			fontWeightMethod() {
+				fontWeightTextSet.textContent = styleValue;
+
+				h1Texts.forEach((h1) => (h1.style.fontWeight = styleValue));
+				h2Texts.forEach((h2) => (h2.style.fontWeight = styleValue));
+				h3Texts.forEach((h3) => (h3.style.fontWeight = styleValue));
+				h4Texts.forEach((h4) => (h4.style.fontWeight = styleValue));
+				linkTexts.forEach((link) => (link.style.fontWeight = styleValue));
+				navigatorTexts.forEach(
+					(nav) => (nav.style.fontWeight = styleValue)
+				);
+				postCodeTexts.forEach(
+					(code) => (code.style.fontWeight = styleValue)
+				);
+				listTexts.forEach((list) => (list.style.fontWeight = styleValue));
+				postTexts.forEach((post) => (post.style.fontWeight = styleValue));
+			},
+		},
 		lineHeight: {
 			lineHeightMethod() {
 				lineHeightTextSet.textContent = styleValue;
@@ -147,6 +168,7 @@ function setCustomStyle(styles, styleValue) {
 	if (styles === "color") style.textColor.textColorMethod();
 	if (styles === "bgColor") style.backgroundColor.bgColorMethod();
 	if (styles === "fontFamily") style.fontFamily.fontFamilyMethod();
+	if (styles === "fontWeight") style.fontWeight.fontWeightMethod();
 	if (styles === "padding") style.padding.paddingMethod();
 	if (styles === "fontSize") style.fontSize.fontSizeMethod();
 	if (styles === "lineHeight") style.lineHeight.lineHeightMethod();
@@ -162,6 +184,8 @@ document.addEventListener("change", (ev) => {
 		setCustomStyle("fontSize", ev.target.value);
 	if (ev.target.className === "font-family--input")
 		setCustomStyle("fontFamily", ev.target.value);
+	if (ev.target.id === "custom-font-weight")
+		setCustomStyle("fontWeight", ev.target.value);
 	if (ev.target.id === "custom-text-color")
 		setCustomStyle("color", ev.target.value);
 	if (ev.target.id === "custom-bg-color")
