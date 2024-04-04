@@ -8,32 +8,20 @@ const magicButton = document.querySelector(".contentPage__magic-btn svg");
 const magicOptionsContainer = document.querySelector(".content__magic");
 
 //FOR MAGIC
-const fontFamilyValue = document.querySelector(".font-family--input");
-const fontSizeValue = document.querySelector(".content-font--input");
 const fontSizeTextSet = document.querySelector(
 	".content__font-size--value"
 );
-const fontColorValue = document.querySelector(
-	".contentMagic__color-input"
-);
-const backgroundColorValue = document.querySelector(
-	".contentMagic__background-color-input"
-);
-const paddingLTRvalue = document.querySelector(".content__padding__ltr");
 const paddingValueTextSet = document.querySelector(
 	".content__padding--value"
 );
-const lineHeightValue = document.querySelector(".content__line-height");
 const lineHeightTextSet = document.querySelector(
 	".content__line-height--value"
-);
-const textAlignemntValue = document.querySelector(
-	".contentMagic__text-alignment--input"
 );
 const textAlignmentTextSet = document.querySelector(
 	".content__text-alignment--value"
 );
 
+// HANDLER
 export function contentMagicHandler() {
 	document.addEventListener("click", (ev) => {
 		if (ev.target.closest(".contentPage__magic-btn")) {
@@ -48,242 +36,143 @@ export function contentMagicHandler() {
 			hideMagicOptionsContainer();
 		}
 	});
-
-	// FONT FAMILY
-	fontFamilyValue.addEventListener("change", () =>
-		fontFamilySetter(selectedFont)
-	);
-	// fontFamilyValue.addEventListener("change", (ev) => {
-	// 	const value = ev.target.value;
-
-	// 	switch (value) {
-	// 		case "1":
-	// 			fontFamilySetter("Roboto");
-	// 			break;
-	// 		case "2":
-	// 			fontFamilySetter("Open Sans");
-	// 			break;
-	// 		case "3":
-	// 			fontFamilySetter("Roboto Condensed");
-	// 			break;
-	// 		case "4":
-	// 			fontFamilySetter("Bitter");
-	// 			break;
-	// 		case "5":
-	// 			fontFamilySetter("Cinzel");
-	// 			break;
-	// 		case "6":
-	// 			fontFamilySetter("Roboto Mono");
-	// 			break;
-
-	// 		default:
-	// 			break;
-	// 	}
-	// });
-
-	// FONT SIZE
-	fontSizeValue.addEventListener("change", (ev) => {
-		const value = ev.target.value;
-		fontSizeTextSet.textContent = value;
-
-		switch (value) {
-			case "1":
-				fontSizeSetter("1.8");
-				break;
-			case "2":
-				fontSizeSetter("2.4");
-				break;
-			case "3":
-				fontSizeSetter("3");
-				break;
-			case "4":
-				fontSizeSetter("3.8");
-				break;
-			case "5":
-				fontSizeSetter("4.3");
-				break;
-		}
-	});
-
-	// FONT COLOR
-	document
-		.querySelector("#custom-text-color")
-		.addEventListener("change", (ev) => {
-			fontColorSetter(ev.target.value);
-		});
-
-	// BACKGROUND COLOR
-	document
-		.querySelector("#custom-bg-color")
-		.addEventListener("change", (ev) =>
-			backgroundColorSetter(ev.target.value)
-		);
-
-	// PADDING LEFT-RIGHT
-	paddingLTRvalue.addEventListener("change", (ev) => {
-		const value = ev.target.value;
-		paddingValueTextSet.textContent = value;
-
-		switch (value) {
-			case "1":
-				paddingLTRsetter("1");
-				break;
-			case "2":
-				paddingLTRsetter("2");
-				break;
-			case "3":
-				paddingLTRsetter("4");
-				break;
-			case "4":
-				paddingLTRsetter("6");
-				break;
-			case "5":
-				paddingLTRsetter("8");
-				break;
-
-			default:
-				break;
-		}
-	});
-
-	// LINE-HEIGHT
-	lineHeightValue.addEventListener("change", (ev) => {
-		const value = ev.target.value;
-		lineHeightTextSet.textContent = value;
-
-		switch (value) {
-			case "1":
-				lineHeightSetter("6");
-				break;
-			case "2":
-				lineHeightSetter("9");
-				break;
-			case "3":
-				lineHeightSetter("11");
-				break;
-			case "4":
-				lineHeightSetter("13");
-				break;
-			case "5":
-				lineHeightSetter("15");
-				break;
-		}
-	});
-
-	// TEXT-ALIGNMENT
-	textAlignemntValue.addEventListener("change", (ev) => {
-		const value = ev.target.value;
-		textAlignmentTextSet.textContent = value;
-
-		switch (value) {
-			case "left":
-				textAlignmentSetter("left");
-				break;
-			case "right":
-				textAlignmentSetter("right");
-				break;
-			case "center":
-				textAlignmentSetter("center");
-				break;
-			case "justify":
-				textAlignmentSetter("justify");
-				break;
-		}
-	});
 }
 
-function fontFamilySetter(family) {
+////////////////
+// SETTER FUNCTION STARTS
+function setCustomStyle(styles, styleValue) {
 	const h1Texts = document.querySelectorAll("h1");
 	const h2Texts = document.querySelectorAll("h2");
 	const h3Texts = document.querySelectorAll("h3");
 	const h4Texts = document.querySelectorAll("h4");
 	const linkTexts = document.querySelectorAll("a");
 	const navigatorTexts = document.querySelectorAll(".navigator__btn");
-	const postCodeText = document.querySelectorAll(".post__code");
+	const postCodeTexts = document.querySelectorAll(".post__code");
 	const listTexts = document.querySelectorAll(".list");
-	const postText = document.querySelectorAll(".content__post");
-
-	h1Texts.forEach((el) => (el.style.fontFamily = family));
-	h2Texts.forEach((el) => (el.style.fontFamily = family));
-	h3Texts.forEach((el) => (el.style.fontFamily = family));
-	h4Texts.forEach((el) => (el.style.fontFamily = family));
-	linkTexts.forEach((el) => (el.style.fontFamily = family));
-	navigatorTexts.forEach((el) => (el.style.fontFamily = family));
-	postCodeText.forEach((el) => (el.style.fontFamily = family));
-	listTexts.forEach((el) => (el.style.fontFamily = family));
-	postText.forEach((el) => (el.style.fontFamily = family));
-}
-
-// FONT SIZE
-function fontSizeSetter(size) {
-	const contentPost = document.querySelectorAll(".content__post");
-	console.log(size);
-
-	contentPost.forEach((el) => (el.style.fontSize = `${size}rem`));
-}
-
-// FONT COLOR
-function fontColorSetter(color) {
-	const h2Texts = document.querySelectorAll("h2");
-	const h3Texts = document.querySelectorAll("h3");
-	const h4Texts = document.querySelectorAll("h4");
-	const linkTexts = document.querySelectorAll("a");
-	const navigatorTexts = document.querySelectorAll(".navigator__btn");
 	const postTexts = document.querySelectorAll(".content__post");
-	const postCodeText = document.querySelectorAll(".post__code");
-	const listTexts = document.querySelectorAll(".list");
-	h2Texts.forEach((el) => (el.style.color = color));
-	h3Texts.forEach((el) => (el.style.color = color));
-	h4Texts.forEach((el) => (el.style.color = color));
-	linkTexts.forEach((el) => (el.style.color = color));
-	navigatorTexts.forEach((el) => (el.style.color = color));
-	postTexts.forEach((el) => (el.style.color = color));
-	postCodeText.forEach((el) => (el.style.color = color));
-	listTexts.forEach((el) => (el.style.color = color));
-}
-
-// BACKGROUND COLOR
-function backgroundColorSetter(color) {
-	const h2BG = document.querySelectorAll("h2");
-	const h4BG = document.querySelectorAll("h4");
 	const postIndex = document.querySelector(".posts ul");
 	const postIndexesList = document.querySelectorAll(".posts ul li a");
-	const postCodeBG = document.querySelectorAll(".post__code");
 	const navigatorBG = document.querySelectorAll(".float__btn--container");
 	const magicBtnBG = document.querySelector(".contentPage__magic-btn");
-	document.body.style.backgroundColor = color;
-	h2BG.forEach((el) => (el.style.backgroundColor = color));
-	h4BG.forEach((el) => (el.style.backgroundColor = color));
-	postIndex.style.backgroundColor = color;
-	postIndexesList.forEach((li) => (li.style.backgroundColor = color));
-	postCodeBG.forEach((el) => (el.style.backgroundColor = color));
-	navigatorBG.forEach((el) => (el.style.backgroundColor = color));
-	navigatorBG.forEach((el) => (el.style.border = `5px solid ${color}`));
-	magicBtnBG.style.backgroundColor = "transparent";
-	magicBtnBG.style.border = "none";
-}
-
-// PADDING SETTER
-function paddingLTRsetter(value) {
 	const navigationBtn = document.querySelector(".content__nav--btn");
-	document.body.style.paddingLeft = `${value}rem`;
-	document.body.style.paddingRight = `${value}rem`;
-	navigationBtn.style.padding = "none";
+
+	const style = {
+		textColor: {
+			textColorMethod() {
+				h1Texts.forEach((h1) => (h1.style.color = styleValue));
+				h2Texts.forEach((h2) => (h2.style.color = styleValue));
+				h3Texts.forEach((h3) => (h3.style.color = styleValue));
+				h4Texts.forEach((h4) => (h4.style.color = styleValue));
+				linkTexts.forEach((link) => (link.style.color = styleValue));
+				navigatorTexts.forEach((nav) => (nav.style.color = styleValue));
+				postCodeTexts.forEach((code) => (code.style.color = styleValue));
+				listTexts.forEach((list) => (list.style.color = styleValue));
+				postTexts.forEach((post) => (post.style.color = styleValue));
+			},
+		},
+		backgroundColor: {
+			bgColorMethod() {
+				h2Texts.forEach((h2) => (h2.style.backgroundColor = styleValue));
+				h4Texts.forEach((h4) => (h4.style.backgroundColor = styleValue));
+				postIndexesList.forEach(
+					(list) => (list.style.backgroundColor = styleValue)
+				);
+				postCodeTexts.forEach(
+					(code) => (code.style.backgroundColor = styleValue)
+				);
+				navigatorBG.forEach((nav) => {
+					nav.style.backgroundColor = styleValue;
+					nav.style.border = `5px solid ${styleValue}`;
+				});
+				magicBtnBG.style.backgroundColor = "transparent";
+				magicBtnBG.style.border = "none";
+				postIndex.style.backgroundColor = styleValue;
+				document.body.style.backgroundColor = styleValue;
+			},
+		},
+		fontFamily: {
+			fontFamilyMethod() {
+				h1Texts.forEach((h1) => (h1.style.fontFamily = styleValue));
+				h2Texts.forEach((h2) => (h2.style.fontFamily = styleValue));
+				h3Texts.forEach((h3) => (h3.style.fontFamily = styleValue));
+				h4Texts.forEach((h4) => (h4.style.fontFamily = styleValue));
+				linkTexts.forEach((link) => (link.style.fontFamily = styleValue));
+				navigatorTexts.forEach(
+					(nav) => (nav.style.fontFamily = styleValue)
+				);
+				postCodeTexts.forEach(
+					(code) => (code.style.fontFamily = styleValue)
+				);
+				listTexts.forEach((list) => (list.style.fontFamily = styleValue));
+				postTexts.forEach((post) => (post.style.fontFamily = styleValue));
+			},
+		},
+		padding: {
+			paddingMethod() {
+				paddingValueTextSet.textContent = styleValue;
+
+				navigationBtn.style.padding = "none";
+				document.body.style.paddingLeft = `${styleValue}rem`;
+				document.body.style.paddingRight = `${styleValue}rem`;
+			},
+		},
+		fontSize: {
+			fontSizeMethod() {
+				fontSizeTextSet.textContent = styleValue;
+
+				postTexts.forEach(
+					(post) =>
+						(post.style.fontSize = `${Number(styleValue) * 1.3}rem`)
+				);
+			},
+		},
+		lineHeight: {
+			lineHeightMethod() {
+				lineHeightTextSet.textContent = styleValue;
+
+				postTexts.forEach(
+					(post) =>
+						(post.style.lineHeight = `${Number(styleValue) * 3}rem`)
+				);
+			},
+		},
+		textAlignment: {
+			textAlignMethod() {
+				textAlignmentTextSet.textContent = styleValue;
+
+				postTexts.forEach((post) => (post.style.textAlign = styleValue));
+			},
+		},
+	};
+	if (styles === "color") style.textColor.textColorMethod();
+	if (styles === "bgColor") style.backgroundColor.bgColorMethod();
+	if (styles === "fontFamily") style.fontFamily.fontFamilyMethod();
+	if (styles === "padding") style.padding.paddingMethod();
+	if (styles === "fontSize") style.fontSize.fontSizeMethod();
+	if (styles === "lineHeight") style.lineHeight.lineHeightMethod();
+	if (styles === "textAlign") style.textAlignment.textAlignMethod();
 }
 
-// LINE-HEIGHT
-function lineHeightSetter(value) {
-	const postText = document.querySelectorAll(".content__post");
+// SETTER FUNCTION ENDS
+/////////////
 
-	postText.forEach((el) => (el.style.lineHeight = `${value}rem`));
-}
-
-// TEXT-ALIGNMENT
-function textAlignmentSetter(value) {
-	const postTexts = document.querySelectorAll(".content__post");
-
-	postTexts.forEach((el) => (el.style.textAlign = value));
-}
+// EVENT-DELEGATION
+document.addEventListener("change", (ev) => {
+	if (ev.target.className === "content-font--input")
+		setCustomStyle("fontSize", ev.target.value);
+	if (ev.target.className === "font-family--input")
+		setCustomStyle("fontFamily", ev.target.value);
+	if (ev.target.id === "custom-text-color")
+		setCustomStyle("color", ev.target.value);
+	if (ev.target.id === "custom-bg-color")
+		setCustomStyle("bgColor", ev.target.value);
+	if (ev.target.className === "content__padding__ltr")
+		setCustomStyle("padding", ev.target.value);
+	if (ev.target.className === "content__line-height")
+		setCustomStyle("lineHeight", ev.target.value);
+	if (ev.target.className === "contentMagic__text-alignment--input")
+		setCustomStyle("textAlign", ev.target.value);
+});
 
 // MAGIC APPEARENCE FUNCTIONALITY
 function showMagicOptionsContainer() {
